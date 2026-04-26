@@ -1,0 +1,14 @@
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+.pytest_cache/
+.env
+.DS_Store
+*.egg-info/
+
+# WAL sidecars — the .db itself IS committed
+data/inventory.db-journal
+data/inventory.db-wal
+data/inventory.db-shm

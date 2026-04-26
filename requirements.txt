@@ -1,0 +1,2 @@
+# Runtime deps. Pin everything with == per PROJECT.md.
+# (No runtime deps yet — db.py is stdlib-only. Populated as build order proceeds.)
