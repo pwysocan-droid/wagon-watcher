@@ -48,6 +48,14 @@ DEFAULT_QUERY: dict[str, str] = {
 # consistent prices, so this strategy is deterministic.
 COUNTS_FOR_UNION: tuple[str, ...] = ("12", "24")
 
+# Defensive floor for the union strategy. The E450S4+WGN national pool has
+# been ≥34 since recon. Below this, the most likely explanation is that
+# MBUSA has changed the backend so count=12 and count=24 now return
+# overlapping records — we'd silently lose half the dataset. Failing loud
+# inside the scraper is cheaper than letting the reconciler's 50% health
+# check catch it after one bad run is already logged.
+EXPECTED_MIN_POOL = 25
+
 
 @dataclass
 class ParsedRecord:
@@ -196,6 +204,16 @@ def fetch_all(
 
     assert base_response is not None  # COUNTS_FOR_UNION is non-empty
     records = list(by_vin.values())
+
+    if len(records) < EXPECTED_MIN_POOL:
+        raise RuntimeError(
+            f"fetch_all returned {len(records)} records, below expected "
+            f"minimum {EXPECTED_MIN_POOL}. The two calls "
+            f"(count={', count='.join(COUNTS_FOR_UNION)}) may now return "
+            f"overlapping records — verify the union strategy is still "
+            f"disjoint. Aborting before reconcile."
+        )
+
     base_response["result"]["pagedVehicles"]["records"] = records
     base_response["result"]["pagedVehicles"]["paging"] = {
         "totalCount": len(records),  # corrected — API's totalCount is unreliable

@@ -229,15 +229,44 @@ def test_fetch_all_live_dedupes_overlapping_vins(monkeypatch):
             "success": True,
         }
 
+    # Total ≥ EXPECTED_MIN_POOL so the sanity check passes.
     responses = iter([
-        make_response([shared, "A1", "A2"]),
-        make_response([shared, "B1", "B2", "B3"]),
+        make_response([shared] + [f"A{i}" for i in range(13)]),
+        make_response([shared] + [f"B{i}" for i in range(15)]),
     ])
     monkeypatch.setattr("scrape._fetch_page", lambda q: next(responses))
 
     out = fetch_all()
-    vins = [r["vin"] for r in out["result"]["pagedVehicles"]["records"]]
-    assert sorted(vins) == sorted([shared, "A1", "A2", "B1", "B2", "B3"])
+    vins = {r["vin"] for r in out["result"]["pagedVehicles"]["records"]}
+    expected = {shared} | {f"A{i}" for i in range(13)} | {f"B{i}" for i in range(15)}
+    assert vins == expected
+    assert len(vins) == 29  # not 30 — shared appears once
+
+
+def test_fetch_all_aborts_below_expected_min_pool(monkeypatch):
+    """If the union produces fewer than EXPECTED_MIN_POOL records, raise.
+
+    Defends against the silent failure where MBUSA changes the backend so
+    count=12 and count=24 return overlapping records — we'd quietly lose
+    half the dataset. Per CODE_REVIEW.md TODO 1.
+    """
+    from scrape import EXPECTED_MIN_POOL
+    monkeypatch.delenv("DRY_RUN", raising=False)
+
+    # Both calls return the SAME 12 records — total union = 12, < 25.
+    same_vins = [{"vin": f"V{i:017d}"} for i in range(12)]
+    response = {
+        "result": {"pagedVehicles": {
+            "records": same_vins,
+            "paging": {"totalCount": 53, "currentOffset": 0, "currentCount": 12},
+        }, "facets": {}},
+        "status": {"code": 200},
+        "success": True,
+    }
+    monkeypatch.setattr("scrape._fetch_page", lambda q: response)
+
+    with pytest.raises(RuntimeError, match=f"below expected minimum {EXPECTED_MIN_POOL}"):
+        fetch_all()
 
 
 def test_save_snapshot_filename_format(tmp_path, payload):

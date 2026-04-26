@@ -127,6 +127,13 @@ def reconcile(
     """
     if dry_run is None:
         dry_run = os.environ.get("DRY_RUN") == "1"
+    # observed_at provenance: a single timestamp is reused for all DB writes
+    # in this run (listings.first_seen/last_seen, price_history.observed_at,
+    # runs.started_at). Callers should pass `now` from when the API response
+    # was received — run.py captures it just before fetch_all() so receive
+    # time and write time stay close. The datetime.now() fallback exists for
+    # tests; in production it would be write-time, which drifts if reconcile
+    # is slow.
     started_at = now or datetime.now(timezone.utc)
     found = len(parsed_records)
 
