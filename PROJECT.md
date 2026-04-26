@@ -39,17 +39,21 @@ mapped.
 &zip=90210
 ```
 
-**Important API quirks (discovered the hard way during recon):**
+**Important API quirks (verified 2026-04-26 by direct probing — supersedes
+original recon, which got both `count` and `start` wrong):**
 
-- `count` is hard-capped at 12. `count=50` returns 500 server error;
-  `count=100` returns 400 bad request. The watcher MUST paginate.
-- `withFilters=true` is required. `withFilters=false` returns 400
-  bad request. The endpoint always returns facets alongside records.
-- `start=0` and `start=1` both work for the first page. Use `start=1`
-  for safety; subsequent pages = `start=13`, `start=25`, etc.
-- The full national pool of E450S4 wagons (~34) requires 3 paginated
-  calls per poll. At 30-min polling, that's 6 requests/hour — well
-  within polite limits.
+- `count` is **NOT** hard-capped at 12. `count=24` works fine. `count=30+`
+  silently returns truncated results.
+- `start` is **NOT** an offset. Different `start` values return disjoint
+  12-record windows; `start>=12` returns 0 records. Original recon's
+  "next page = start + count" rule does not work.
+- `paging.totalCount` is unreliable — reports 53 wagons but the
+  modelDesignation facet says only 34 E450S4 listings exist.
+- `withFilters=true` is required. `withFilters=false` returns 400.
+- **The workaround:** make TWO calls per poll, union by VIN —
+  `count=12, start=1` and `count=24, start=1` together return ~36 unique
+  VINs (deterministic across 3-run stability check). 4 requests/hour at
+  30-min polling. See `fixtures/endpoint_notes.md` for full details.
 
 ## Response structure (confirmed)
 

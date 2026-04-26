@@ -25,10 +25,8 @@ RAW_SNAPSHOTS = ROOT / "raw_snapshots"
 
 ENDPOINT = "https://nafta-service.mbusa.com/api/inv/v1/en_us/used/vehicles/search"
 USER_AGENT = "mb-wagon-watcher/1.0 (personal research; pwysocan@gmail.com)"
-PAGE_SIZE = 12
 
 DEFAULT_QUERY: dict[str, str] = {
-    "count": "12",
     "distance": "ANY",
     "invType": "cpo",
     "class": "E",
@@ -36,9 +34,19 @@ DEFAULT_QUERY: dict[str, str] = {
     "bodyStyleId": "WGN",
     "resvOnly": "false",
     "sortBy": "distance-asc",
+    "start": "1",
     "withFilters": "true",
     "zip": "90210",
 }
+
+# Per recon 2026-04-26: the API does NOT support offset-style pagination via
+# `start`. Different `start` values return disjoint windows; `start>=12`
+# returns 0 records. The `count` parameter, however, is not capped at 12 as
+# original recon claimed — `count=24` works. count=12 and count=24 (both with
+# start=1) return DISJOINT sets of records that, when unioned, cover the full
+# filtered pool. Three consecutive runs returned the same 36 VINs with
+# consistent prices, so this strategy is deterministic.
+COUNTS_FOR_UNION: tuple[str, ...] = ("12", "24")
 
 
 @dataclass
@@ -148,10 +156,9 @@ def parse_response(payload: dict) -> tuple[list[ParsedRecord], dict]:
     return [parse_record(r) for r in paged["records"]], paged["paging"]
 
 
-def _fetch_page(start: int, query: dict[str, str]) -> dict:
-    """Hit the live endpoint for one page. Real HTTP — only outside DRY_RUN."""
-    params = {**query, "start": str(start)}
-    url = ENDPOINT + "?" + urlencode(params)
+def _fetch_page(query: dict[str, str]) -> dict:
+    """Hit the live endpoint with the given full query. Real HTTP."""
+    url = ENDPOINT + "?" + urlencode(query)
     req = Request(url, headers={"Accept": "application/json", "User-Agent": USER_AGENT})
     with urlopen(req, timeout=30) as resp:  # noqa: S310 — known endpoint
         if resp.status != 200:
@@ -163,41 +170,39 @@ def fetch_all(
     query: dict[str, str] | None = None,
     dry_run: bool | None = None,
 ) -> dict:
-    """Walk all pages and return a single merged response payload.
+    """Fetch the full filtered pool by unioning two API calls.
 
-    DRY_RUN=1 (env or explicit arg) reads fixtures/sample_response.json.
+    Live mode: makes len(COUNTS_FOR_UNION) calls (count=12, count=24), unions
+    by VIN, and returns a synthetic single-payload response with the union as
+    `records` and a corrected `paging` block (the API's own totalCount lies).
+
+    DRY_RUN=1 (env or arg) reads fixtures/sample_response.json instead.
     """
     if dry_run is None:
         dry_run = os.environ.get("DRY_RUN") == "1"
     if dry_run:
         return json.loads(FIXTURE.read_text())
 
-    if query is None:
-        query = DEFAULT_QUERY
+    base_query = {**(query or DEFAULT_QUERY)}
 
-    first = _fetch_page(1, query)
-    paging = first["result"]["pagedVehicles"]["paging"]
-    total = paging.get("totalCount", 0)
+    by_vin: dict[str, dict] = {}
+    base_response: dict | None = None
+    for count in COUNTS_FOR_UNION:
+        response = _fetch_page({**base_query, "count": count})
+        if base_response is None:
+            base_response = response
+        for r in response["result"]["pagedVehicles"]["records"]:
+            by_vin[r["vin"]] = r
 
-    records: list[dict] = list(first["result"]["pagedVehicles"]["records"])
-    next_start = 1 + len(records)
-
-    while len(records) < total:
-        page = _fetch_page(next_start, query)
-        page_records = page["result"]["pagedVehicles"]["records"]
-        if not page_records:
-            break
-        records.extend(page_records)
-        next_start += len(page_records)
-
-    merged = first
-    merged["result"]["pagedVehicles"]["records"] = records
-    merged["result"]["pagedVehicles"]["paging"] = {
-        "totalCount": total,
+    assert base_response is not None  # COUNTS_FOR_UNION is non-empty
+    records = list(by_vin.values())
+    base_response["result"]["pagedVehicles"]["records"] = records
+    base_response["result"]["pagedVehicles"]["paging"] = {
+        "totalCount": len(records),  # corrected — API's totalCount is unreliable
         "currentOffset": 0,
         "currentCount": len(records),
     }
-    return merged
+    return base_response
 
 
 def save_snapshot(

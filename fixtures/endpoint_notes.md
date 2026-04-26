@@ -38,8 +38,8 @@ sorted by distance from Beverly Hills (90210), 12 per page.
 | `invType` | yes | `cpo` | `cpo` = Certified Pre-Owned. |
 | `zip` | yes | `90210` | Buyer ZIP for distance calculation. |
 | `distance` | yes | `ANY` | Radius. `ANY` = nationwide. Numeric (`50`, `100`, `500`, `1000`) also accepted. |
-| `count` | yes | `12` | Page size. **HARD CAP AT 12.** Higher values return 500. |
-| `start` | yes | `1` | Pagination cursor (1-indexed). Next page = `start + count`. `start=0` also works for first page. |
+| `count` | yes | `12` | Records to return. NOT capped at 12 — `count=24` works. `count=30+` returns truncated/anomalous results (see "Pagination" below). |
+| `start` | yes | `1` | Misnomer — does NOT behave as an offset. Different `start` values return *disjoint* 12-record windows; values ≥12 return 0 records. Use `start=1` always; vary `count` instead. |
 | `sortBy` | yes | `distance-asc` | Sort order. `distance-asc` is the safe default. |
 | `resvOnly` | yes | `false` | When `true`, returns only reservation-required vehicles. We want `false`. |
 | `withFilters` | yes | `true` | **Required.** `false` returns 400. Response always includes facets. |
@@ -48,17 +48,39 @@ sorted by distance from Beverly Hills (90210), 12 per page.
 
 ---
 
-## Pagination
+## Pagination — the API doesn't actually paginate
 
-Offset-based, 1-indexed. Walk the full pool with sequential calls:
+**Important — this contradicts the original recon notes.** Re-verified
+2026-04-26 by direct probing: the API does NOT support offset-style
+pagination via `start`. Original recon assumed `start=13`, `start=25`
+would give pages 2 and 3; in reality both return zero records.
 
-- Call 1: `start=1&count=12` → records 1–12
-- Call 2: `start=13&count=12` → records 13–24
-- Call 3: `start=25&count=12` → records 25–34
-- Continue until `result.pagedVehicles.paging.totalCount` is reached
+What the API actually does:
 
-For E450S4+WGN, the national pool was 34 cars on 2026-04-25, requiring
-3 paginated calls per poll. At 30-min polling = 6 requests/hour total.
+- `start=1, count=12` → some 12 VINs (set A).
+- `start=2, count=12` → a *different* 12 VINs (set B). **Zero overlap with A.**
+- `start>=12, count=12` → **0 records.**
+- `start=1, count=24` → 24 VINs (set C). **C ⊃ B; C ∩ A = ∅.**
+- `start=1, count=30+` → fewer records than asked (returns are truncated
+  in a non-obvious way; assume broken).
+
+The `result.pagedVehicles.paging.totalCount` field is also unreliable —
+it reports 53 even when the modelDesignation facet says only 34 E450S4
+listings exist.
+
+### The workaround: union strategy
+
+To cover the full filtered pool (~36 unique VINs for E450S4+WGN), the
+watcher makes **two calls per poll**, both with `start=1`:
+
+1. `count=12, start=1` → set A (12 VINs)
+2. `count=24, start=1` → set C (24 VINs, disjoint from A)
+
+Union by VIN, dedupe → ~36 VINs. Verified deterministic across 3
+consecutive polls (same VINs, same prices).
+
+At 30-min polling, that's 4 requests/hour total — still well within
+polite limits.
 
 ---
 
@@ -172,9 +194,11 @@ Color codes from `facets.color`:
 ## Known fragility
 
 The API returns non-200 status codes for:
-- `count > 12` → 500 Server Error
 - `withFilters=false` → 400 Bad Request
-- `sortBy=price-asc` (untested; may also fail — use `distance-asc`)
+
+(`count > 12` does NOT actually return 500 — the original recon claim was
+wrong. `count=24` returns 24 records cleanly. `count=30+` quietly returns
+fewer records than requested with no error code.)
 
 The watcher should treat any 4xx/5xx response as an abort signal:
 log the failure to the `runs` table, send a high-priority alert, and

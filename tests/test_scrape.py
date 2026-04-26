@@ -165,6 +165,81 @@ def test_fetch_all_respects_env_var(monkeypatch, payload):
     assert out == payload
 
 
+def test_fetch_all_live_unions_two_count_responses(monkeypatch):
+    """Live mode makes two calls (count=12, count=24) and unions by VIN.
+
+    The MBUSA API doesn't paginate offset-style; this is the workaround
+    documented in fixtures/endpoint_notes.md (recon 2026-04-26).
+    """
+    monkeypatch.delenv("DRY_RUN", raising=False)
+
+    def make_response(vins: list[str]) -> dict:
+        return {
+            "result": {"pagedVehicles": {
+                "records": [{"vin": v} for v in vins],
+                "paging": {"totalCount": 53, "currentOffset": 0,
+                           "currentCount": len(vins)},
+            }, "facets": {}},
+            "status": {"code": 200, "ok": True, "tmstmp": "0", "traceId": "x"},
+            "messages": [],
+            "success": True,
+        }
+
+    # The two calls return disjoint VIN sets (mirrors observed API behavior).
+    response_for_count = {
+        "12": make_response([f"VIN_A_{i}" for i in range(12)]),
+        "24": make_response([f"VIN_B_{i}" for i in range(24)]),
+    }
+    calls: list[str] = []
+
+    def mock_fetch(query):
+        count = query["count"]
+        calls.append(count)
+        return response_for_count[count]
+
+    monkeypatch.setattr("scrape._fetch_page", mock_fetch)
+
+    out = fetch_all()
+    assert calls == ["12", "24"]
+
+    records = out["result"]["pagedVehicles"]["records"]
+    vins = {r["vin"] for r in records}
+    assert vins == ({f"VIN_A_{i}" for i in range(12)}
+                    | {f"VIN_B_{i}" for i in range(24)})
+    assert len(records) == 36
+
+    paging = out["result"]["pagedVehicles"]["paging"]
+    assert paging["totalCount"] == 36          # corrected from API's lying 53
+    assert paging["currentCount"] == 36
+
+
+def test_fetch_all_live_dedupes_overlapping_vins(monkeypatch):
+    """If the two calls share a VIN, it appears once in the union."""
+    monkeypatch.delenv("DRY_RUN", raising=False)
+    shared = "SHARED_VIN_0000001"
+
+    def make_response(vins):
+        return {
+            "result": {"pagedVehicles": {
+                "records": [{"vin": v} for v in vins],
+                "paging": {"totalCount": 99, "currentOffset": 0,
+                           "currentCount": len(vins)},
+            }, "facets": {}},
+            "status": {"code": 200},
+            "success": True,
+        }
+
+    responses = iter([
+        make_response([shared, "A1", "A2"]),
+        make_response([shared, "B1", "B2", "B3"]),
+    ])
+    monkeypatch.setattr("scrape._fetch_page", lambda q: next(responses))
+
+    out = fetch_all()
+    vins = [r["vin"] for r in out["result"]["pagedVehicles"]["records"]]
+    assert sorted(vins) == sorted([shared, "A1", "A2", "B1", "B2", "B3"])
+
+
 def test_save_snapshot_filename_format(tmp_path, payload):
     when = datetime(2026, 4, 26, 12, 30, 45, tzinfo=timezone.utc)
     out = save_snapshot(payload, when=when, out_dir=tmp_path)
