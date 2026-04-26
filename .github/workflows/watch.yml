@@ -1,0 +1,59 @@
+name: watch
+
+on:
+  schedule:
+    - cron: '*/30 * * * *'   # every 30 minutes (UTC)
+  workflow_dispatch:
+
+concurrency:
+  group: watch
+  cancel-in-progress: false
+
+permissions:
+  contents: write   # required for the workflow to push state changes back
+
+jobs:
+  watch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+
+      - name: Install runtime dependencies
+        run: pip install --quiet -r requirements.txt
+
+      - name: Run watcher (scrape + reconcile)
+        id: run
+        continue-on-error: true
+        run: python run.py
+
+      - name: Configure git for self-commit
+        if: always()
+        run: |
+          git config user.name  'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+
+      - name: Commit and push state
+        if: always()
+        run: |
+          MSG=$(cat .run-commit-msg.txt 2>/dev/null || echo "data: <unknown> [run failed before commit message was written]")
+          git add data/inventory.db data/latest.json raw_snapshots/
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "$MSG"
+            # Defensive: another commit may have landed during this run.
+            # Rebase on top, then push. `|| true` so a no-op rebase doesn't fail.
+            git pull --rebase --autostash origin main || true
+            git push
+          fi
+
+      - name: Surface abort as job failure
+        if: steps.run.outcome == 'failure'
+        run: |
+          echo "::error::Watcher aborted — see the latest commit message for the reason."
+          exit 1
