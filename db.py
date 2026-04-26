@@ -2,11 +2,18 @@
 from __future__ import annotations
 
 import sqlite3
+from datetime import datetime
 from pathlib import Path
 
 ROOT = Path(__file__).parent
 DB_PATH = ROOT / "data" / "inventory.db"
 MIGRATIONS_DIR = ROOT / "migrations"
+
+# Python 3.12 deprecated the default datetime adapter. Register an explicit
+# ISO-8601 adapter to keep timestamps readable in the .db file and silence the
+# DeprecationWarning. We don't register a converter — TIMESTAMP columns read
+# back as ISO strings, which is what callers compare and serialize.
+sqlite3.register_adapter(datetime, lambda v: v.isoformat())
 
 
 def connect(db_path: Path | str = DB_PATH) -> sqlite3.Connection:
