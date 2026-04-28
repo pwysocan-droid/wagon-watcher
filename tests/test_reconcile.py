@@ -330,6 +330,71 @@ def test_dry_run_env_var(monkeypatch, conn):
     assert conn.execute("SELECT COUNT(*) FROM listings").fetchone()[0] == 0
 
 
+# ---- API-anomaly defenses (price=None, prior price=0) -------------------
+
+def test_new_listing_with_no_price_skips_price_history(conn):
+    """A new VIN observed during an API anomaly (price=None) gets a
+    listings row but no price_history row. The next poll with a real
+    price will start tracking normally."""
+    r = _record("V_NEW_NO_PRICE___", mbusa_price=None)
+    reconcile([r], conn, now=T0)
+
+    assert conn.execute("SELECT COUNT(*) FROM listings").fetchone()[0] == 1
+    assert conn.execute(
+        "SELECT COUNT(*) FROM price_history WHERE vin=?",
+        (r.vin,),
+    ).fetchone()[0] == 0
+
+
+def test_existing_listing_with_no_price_skips_price_history(conn):
+    """If an established VIN gets a None price on a poll, skip the price
+    insert — don't pollute price_history with NULL or 0."""
+    r = _record("V________________1", mbusa_price=70000)
+    reconcile([r], conn, now=T0)
+
+    bad = replace(r, mbusa_price=None)
+    reconcile([bad], conn, now=T0 + timedelta(hours=1))
+
+    history_count = conn.execute(
+        "SELECT COUNT(*) FROM price_history WHERE vin=?", (r.vin,),
+    ).fetchone()[0]
+    assert history_count == 1  # only the original
+
+
+def test_recovery_from_zero_prior_counts_change_but_no_event(conn):
+    """If a prior price_history row is 0 (legacy anomaly) and a new poll
+    brings a real price, count it as a change for runs.changed_count but
+    don't emit a price_change event (pct from 0 baseline is meaningless)."""
+    # Seed an anomalous row directly.
+    r = _record("V________________1", mbusa_price=70000)
+    reconcile([r], conn, now=T0)
+    conn.execute(
+        "INSERT INTO price_history (vin, observed_at, price, mileage) "
+        "VALUES (?, ?, 0, 15000)",
+        (r.vin, T0 + timedelta(minutes=30)),
+    )
+    conn.commit()
+
+    calls = []
+    import reconcile as recon_mod
+
+    def fake(**kw):
+        calls.append(kw)
+        return True
+
+    monkeypatch_send = recon_mod.notify.send
+    recon_mod.notify.send = fake
+    try:
+        result = reconcile([r], conn, now=T0 + timedelta(hours=1))
+    finally:
+        recon_mod.notify.send = monkeypatch_send
+
+    # No price_change event from the bogus 0 baseline → no Tier 1 alert
+    assert not any(c.get("event_type") == "price_drop_major" for c in calls)
+    # But changed_count > 0 — the recovery IS DB-level activity worth logging
+    assert result["stats"]["changed_count"] >= 1
+
+
 # ---- Tier 1 notification call sites (step 5) ----------------------------
 
 def _capture_notify_calls(monkeypatch):

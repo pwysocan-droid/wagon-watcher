@@ -60,10 +60,13 @@ def _percentile_midrank(target_price: int, all_prices: list[int]) -> int:
 
 def _fetch_target(conn: sqlite3.Connection, vin: str) -> sqlite3.Row | None:
     """Returns row with (vin, year, trim, mileage_first_seen, current_price)
-    for the target VIN, or None if the VIN isn't tracked or has no price."""
+    for the target VIN, or None if the VIN isn't tracked or has no price.
+
+    The price>0 filter skips API anomaly rows — see digest._list_drops
+    for context."""
     return conn.execute(
         "SELECT l.vin, l.year, l.trim, l.mileage_first_seen, "
-        "       (SELECT price FROM price_history WHERE vin = l.vin "
+        "       (SELECT price FROM price_history WHERE vin = l.vin AND price > 0 "
         "        ORDER BY observed_at DESC, id DESC LIMIT 1) AS current_price "
         "FROM listings l WHERE l.vin = ?",
         (vin,),
@@ -78,10 +81,11 @@ def _fetch_comp_prices(
     """Return current prices for active+reappeared listings matching the comp window.
 
     Includes the target itself (it's part of its own population for ranking).
-    Excludes 'gone' listings (stale data) and any with a NULL current_price.
+    Excludes 'gone' listings (stale data), NULL prices, and zero/negative
+    prices (API anomaly rows).
     """
     rows = conn.execute(
-        "SELECT (SELECT price FROM price_history WHERE vin = l.vin "
+        "SELECT (SELECT price FROM price_history WHERE vin = l.vin AND price > 0 "
         "        ORDER BY observed_at DESC, id DESC LIMIT 1) AS current_price "
         "FROM listings l "
         "WHERE l.status IN ('active', 'reappeared') "

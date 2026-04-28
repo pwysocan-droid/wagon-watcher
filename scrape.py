@@ -123,13 +123,20 @@ def parse_record(record: dict) -> ParsedRecord:
     images = uva.get("images") or []
     option_list = uva.get("optionList") or []
 
+    # Defensive: the API has been observed returning msrp=0 transiently
+    # (10 records on the 2026-04-26 21:59 poll). CPO wagons are never $0,
+    # so treat 0/negative as missing and let downstream code skip pricing
+    # operations until the API recovers on a later poll.
+    raw_msrp = _to_int(record.get("msrp"))
+    mbusa_price = raw_msrp if (raw_msrp is not None and raw_msrp > 0) else None
+
     return ParsedRecord(
         vin=record["vin"],
         year=_to_int(record.get("year")),
         model=record.get("modelName"),
         trim=record.get("modelId"),
         body_style=record.get("bodyStyleId"),
-        mbusa_price=_to_int(record.get("msrp")),
+        mbusa_price=mbusa_price,
         mileage=_to_int(uva.get("mileage")),
         exterior_color=paint.get("name"),
         exterior_color_code=record.get("exteriorMetaColor"),

@@ -142,6 +142,22 @@ def test_parse_record_mileage_is_int_not_float(raw_records):
     assert isinstance(p.mileage, int)
 
 
+def test_parse_record_treats_zero_msrp_as_missing():
+    """The MBUSA API has been observed returning msrp=0 transiently.
+    CPO wagons are never $0; treat as None so downstream code skips
+    pricing operations until the API recovers."""
+    raw = {"vin": "ZERO_PRICE_______", "msrp": 0, "usedVehicleAttributes": {"mileage": 12000}}
+    p = parse_record(raw)
+    assert p.mbusa_price is None
+    assert p.mileage == 12000  # unrelated fields still parse
+
+
+def test_parse_record_treats_negative_msrp_as_missing():
+    raw = {"vin": "NEG_PRICE________", "msrp": -1, "usedVehicleAttributes": {}}
+    p = parse_record(raw)
+    assert p.mbusa_price is None
+
+
 def test_parse_record_handles_dealer_with_no_address():
     raw = {
         "vin": "TESTVIN0000000002",

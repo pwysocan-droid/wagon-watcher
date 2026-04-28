@@ -307,10 +307,16 @@ def reconcile(
         if existing_row is None:
             # New listing
             _insert_listing(conn, record, started_at)
-            _insert_price_history(
-                conn, record.vin, started_at,
-                record.mbusa_price, record.mileage,
-            )
+            # Skip the initial price_history row if the API didn't give us a
+            # price (or returned 0 — which scrape.py already mapped to None
+            # since CPO wagons are never $0). The next poll with a real price
+            # will populate price_history, and from then on the diff path
+            # works normally.
+            if record.mbusa_price is not None and record.mileage is not None:
+                _insert_price_history(
+                    conn, record.vin, started_at,
+                    record.mbusa_price, record.mileage,
+                )
             events.append({"type": "new", "vin": record.vin, "record": record})
             new_count += 1
 
@@ -353,7 +359,14 @@ def reconcile(
             updates["dealer_state"] = record.dealer_state
             changed_count += 1
 
-        # Price / mileage change → append to price_history
+        # Price / mileage change → append to price_history. Skip entirely
+        # when the current scrape's price is missing/zero (API anomaly) —
+        # we'd rather lose one data point than pollute price_history with
+        # a row that future LAG comparisons read as a 100% drop.
+        if record.mbusa_price is None or record.mileage is None:
+            _update_listing(conn, record.vin, updates)
+            continue
+
         last = _last_price_row(conn, record.vin)
         price_changed = last is None or last["price"] != record.mbusa_price
         mileage_changed = last is None or last["mileage"] != record.mileage
@@ -364,12 +377,20 @@ def reconcile(
                 record.mbusa_price, record.mileage,
             )
             if last is not None:
-                if price_changed and last["price"] and record.mbusa_price is not None:
-                    pct = (record.mbusa_price - last["price"]) / last["price"]
+                # The percentage-change calc requires a non-zero baseline.
+                # A prior price of 0 (anomaly) would yield −∞ or 100% drop;
+                # treat it as "recovered, count the change but skip the
+                # event" — pct is meaningless from a 0 baseline.
+                prior_price = last["price"]
+                if (
+                    price_changed
+                    and prior_price is not None and prior_price > 0
+                ):
+                    pct = (record.mbusa_price - prior_price) / prior_price
                     events.append({
                         "type": "price_change",
                         "vin": record.vin,
-                        "old_price": last["price"],
+                        "old_price": prior_price,
                         "new_price": record.mbusa_price,
                         "pct_change": pct,  # negative = drop
                         "record": record,
@@ -377,11 +398,15 @@ def reconcile(
                     changed_count += 1
                     # Tier 1: price drop ≥7%
                     if pct <= PRICE_DROP_TIER1_THRESHOLD:
-                        _notify_price_drop_major(conn, record, last["price"], pct)
+                        _notify_price_drop_major(conn, record, prior_price, pct)
+                elif price_changed:
+                    # Recovery from a zero/missing prior price. Count the
+                    # change so runs.changed_count reflects DB-level activity,
+                    # but don't fire any event.
+                    changed_count += 1
                 if (
                     mileage_changed
                     and last["mileage"] is not None
-                    and record.mileage is not None
                     and record.mileage < last["mileage"]
                 ):
                     events.append({
