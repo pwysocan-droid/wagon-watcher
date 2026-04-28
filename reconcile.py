@@ -24,6 +24,7 @@ from typing import Any
 
 import fairprice
 import notify
+import vin_decode
 from scrape import ParsedRecord
 
 PRICE_DROP_TIER1_THRESHOLD = -0.07  # ≥7% drop fires Tier 1
@@ -38,10 +39,16 @@ _LISTING_COLUMNS = (
     "year", "model", "trim", "body_style",
     "exterior_color", "interior_color", "mileage_first_seen",
     "photo_url", "listing_url", "options_json", "vin_decode_json",
+    "distance_miles",
 )
 
 
 def _insert_listing(conn: sqlite3.Connection, r: ParsedRecord, now: datetime) -> None:
+    """Insert a fresh listing. NHTSA decode is best-effort and runs once per
+    VIN ever — failures store NULL and the listing tracks normally without."""
+    decoded = vin_decode.decode(r.vin)
+    decoded_json = json.dumps(decoded) if decoded is not None else None
+
     conn.execute(
         f"INSERT INTO listings ({', '.join(_LISTING_COLUMNS)}) "
         f"VALUES ({', '.join('?' * len(_LISTING_COLUMNS))})",
@@ -51,7 +58,8 @@ def _insert_listing(conn: sqlite3.Connection, r: ParsedRecord, now: datetime) ->
             r.year, r.model, r.trim, r.body_style,
             r.exterior_color, r.interior_color, r.mileage,
             r.photo_url, None,  # listing_url: TODO once MBUSA URL pattern is confirmed
-            r.options_json, None,  # vin_decode_json: filled by step 7
+            r.options_json, decoded_json,
+            r.dealer_distance_miles,
         ),
     )
 

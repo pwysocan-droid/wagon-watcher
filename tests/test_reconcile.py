@@ -649,3 +649,82 @@ def test_gone_only_fires_once_not_each_subsequent_poll(monkeypatch, conn):
     reconcile(rs[1:], conn, now=T0 + timedelta(hours=3))
 
     assert not any(c.get("event_type") == "gone" for c in calls)
+
+
+# ---- step 7: VIN decode and distance_miles wiring -------------------------
+
+def test_distance_miles_persisted_on_first_sight(conn):
+    """ParsedRecord.dealer_distance_miles flows into listings.distance_miles."""
+    r = _record("V________________1", dealer_distance_miles=9.7)
+    reconcile([r], conn, now=T0)
+
+    row = conn.execute(
+        "SELECT distance_miles FROM listings WHERE vin = ?", (r.vin,),
+    ).fetchone()
+    assert row["distance_miles"] == pytest.approx(9.7)
+
+
+def test_distance_miles_handles_none(conn):
+    """If the API didn't give a distance, store NULL — never crash."""
+    r = _record("V________________1", dealer_distance_miles=None)
+    reconcile([r], conn, now=T0)
+
+    row = conn.execute(
+        "SELECT distance_miles FROM listings WHERE vin = ?", (r.vin,),
+    ).fetchone()
+    assert row["distance_miles"] is None
+
+
+def test_vin_decode_called_on_first_sight_and_stored(monkeypatch, conn):
+    """New listing → vin_decode.decode called once, result cached as JSON."""
+    import reconcile as recon_mod
+    decoded = {"Count": 1, "Results": [{"Variable": "Make", "Value": "MB"}]}
+    calls = []
+
+    def fake_decode(vin, **kw):
+        calls.append(vin)
+        return decoded
+
+    monkeypatch.setattr(recon_mod.vin_decode, "decode", fake_decode)
+
+    r = _record("V________________1")
+    reconcile([r], conn, now=T0)
+
+    assert calls == [r.vin]
+    row = conn.execute(
+        "SELECT vin_decode_json FROM listings WHERE vin = ?", (r.vin,),
+    ).fetchone()
+    import json
+    assert json.loads(row["vin_decode_json"]) == decoded
+
+
+def test_vin_decode_failure_does_not_block_reconcile(monkeypatch, conn):
+    """When NHTSA returns None (network failure, bad VIN, anything),
+    the listing still inserts with NULL vin_decode_json."""
+    import reconcile as recon_mod
+    monkeypatch.setattr(recon_mod.vin_decode, "decode", lambda vin, **kw: None)
+
+    r = _record("V________________1")
+    reconcile([r], conn, now=T0)
+
+    row = conn.execute(
+        "SELECT vin, vin_decode_json FROM listings WHERE vin = ?", (r.vin,),
+    ).fetchone()
+    assert row["vin"] == r.vin
+    assert row["vin_decode_json"] is None
+
+
+def test_vin_decode_only_called_for_new_listings(monkeypatch, conn):
+    """Existing VINs don't re-decode — first-sight is once, forever."""
+    import reconcile as recon_mod
+    calls = []
+    monkeypatch.setattr(
+        recon_mod.vin_decode, "decode",
+        lambda vin, **kw: (calls.append(vin), None)[1],
+    )
+    r = _record("V________________1")
+    reconcile([r], conn, now=T0)
+    reconcile([r], conn, now=T0 + timedelta(hours=1))
+    reconcile([r], conn, now=T0 + timedelta(hours=2))
+
+    assert calls == [r.vin]  # one call total, not three

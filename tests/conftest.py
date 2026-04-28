@@ -16,3 +16,12 @@ def _suppress_pushover(monkeypatch, tmp_path_factory):
     monkeypatch.setenv("PUSHOVER_ENABLED", "false")
     import notify
     monkeypatch.setattr(notify, "ALERTS_DIR", tmp_path_factory.mktemp("alerts"))
+
+
+@pytest.fixture(autouse=True)
+def _mock_vin_decode(monkeypatch):
+    """Default every test to a no-op vin_decode.decode so reconcile tests
+    that insert new listings don't hit the NHTSA API. Tests that specifically
+    exercise the decode wiring override this with their own monkeypatch."""
+    import vin_decode
+    monkeypatch.setattr(vin_decode, "decode", lambda vin, **kw: None)

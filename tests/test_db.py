@@ -254,3 +254,20 @@ def test_watchlist_seed_down_migration_removes_row(conn):
         "SELECT name FROM sqlite_master WHERE type='table'"
     )}
     assert "watchlist" in tables
+
+
+# ---- migration 005: distance_miles column ---------------------------------
+
+def test_distance_miles_column_exists(conn):
+    migrate(conn)
+    cols = {r[1] for r in conn.execute("PRAGMA table_info(listings)")}
+    assert "distance_miles" in cols
+
+
+def test_distance_miles_down_migration_drops_column(conn):
+    migrate(conn)
+    migrate(conn, target=4)  # rolls back distance_miles only
+    cols = {r[1] for r in conn.execute("PRAGMA table_info(listings)")}
+    assert "distance_miles" not in cols
+    # fair_price columns still there
+    assert "fair_price_pct" in cols
