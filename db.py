@@ -35,6 +35,12 @@ def current_version(conn: sqlite3.Connection) -> int:
     return row["v"] or 0
 
 
+def latest_version() -> int:
+    """Highest migration version present on disk. Tests use this so they
+    don't need updating each time a new migration lands."""
+    return max((v for v, _, _ in _list_migrations()), default=0)
+
+
 def _list_migrations() -> list[tuple[int, Path, Path]]:
     out: list[tuple[int, Path, Path]] = []
     for up in sorted(MIGRATIONS_DIR.glob("*.up.sql")):
