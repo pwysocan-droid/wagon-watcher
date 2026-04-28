@@ -85,6 +85,88 @@ def test_latest_json_has_generated_at(tmp_path):
     conn.close()
 
 
+def test_latest_json_has_kpis_block(tmp_path):
+    """Dashboard payload must include KPIs even on an empty DB."""
+    conn = connect(tmp_path / "test.db")
+    migrate(conn)
+    out = write_latest_json(conn, tmp_path / "latest.json")
+    data = json.loads(out.read_text())
+    kpis = data["kpis"]
+    assert kpis["national_pool"] == 0
+    assert kpis["within_criteria"] == 0
+    assert kpis["median_asking"] is None
+    assert kpis["tier1_alerts_7d"] == 0
+    conn.close()
+
+
+def test_latest_json_per_listing_dashboard_fields(tmp_path):
+    """Each listing carries the fields the dashboard renders."""
+    from datetime import timezone as _tz, datetime as _dt
+    conn = connect(tmp_path / "test.db")
+    migrate(conn)
+
+    from reconcile import reconcile
+    rs = [_record(f"V{i:017d}", year=2025, mileage=15000, mbusa_price=70000)
+          for i in range(3)]
+    reconcile(rs, conn, now=_dt(2026, 4, 28, tzinfo=_tz.utc))
+
+    out = write_latest_json(conn, tmp_path / "latest.json")
+    data = json.loads(out.read_text())
+    listing = data["listings"][0]
+
+    # Old fields preserved
+    assert listing["vin"]
+    assert listing["status"] == "active"
+    # New fields for dashboard rendering
+    assert listing["current_price"] == 70000
+    assert "days_on_lot" in listing
+    assert "is_watchlist_match" in listing
+    assert "tier1_count" in listing
+    assert listing["mbusa_listing_url"].endswith(listing["vin"])
+    conn.close()
+
+
+def test_latest_json_within_criteria_kpi_uses_watchlist(tmp_path):
+    """A listing matching the seeded watchlist increments within_criteria."""
+    from datetime import timezone as _tz, datetime as _dt
+    conn = connect(tmp_path / "test.db")
+    migrate(conn)
+
+    from reconcile import reconcile
+    # Seed spec: trim=E450S4, body=WGN, year≥2024, mileage≤15000, max_price=68000
+    matching = _record("V________________1",
+                       year=2025, mileage=10000, mbusa_price=65000)
+    not_matching = _record("V________________2",
+                           year=2023, mileage=10000, mbusa_price=65000)
+    reconcile([matching, not_matching], conn,
+              now=_dt(2026, 4, 28, tzinfo=_tz.utc))
+
+    out = write_latest_json(conn, tmp_path / "latest.json")
+    data = json.loads(out.read_text())
+    assert data["kpis"]["within_criteria"] == 1
+    by_vin = {l["vin"]: l for l in data["listings"]}
+    assert by_vin["V________________1"]["is_watchlist_match"] is True
+    assert by_vin["V________________2"]["is_watchlist_match"] is False
+    conn.close()
+
+
+def test_latest_json_median_asking_kpi(tmp_path):
+    """KPI's median_asking is the median of current prices."""
+    from datetime import timezone as _tz, datetime as _dt
+    conn = connect(tmp_path / "test.db")
+    migrate(conn)
+
+    from reconcile import reconcile
+    prices = [60000, 65000, 70000, 75000, 80000]
+    rs = [_record(f"V{i:017d}", mbusa_price=p) for i, p in enumerate(prices)]
+    reconcile(rs, conn, now=_dt(2026, 4, 28, tzinfo=_tz.utc))
+
+    out = write_latest_json(conn, tmp_path / "latest.json")
+    data = json.loads(out.read_text())
+    assert data["kpis"]["median_asking"] == 70000  # middle of [60,65,70,75,80]
+    conn.close()
+
+
 # ---- main() in DRY_RUN ---------------------------------------------------
 
 def test_main_dry_run_rolls_back(monkeypatch, tmp_path):
