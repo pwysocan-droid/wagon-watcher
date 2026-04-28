@@ -45,7 +45,7 @@ jobs:
         if: always()
         run: |
           MSG=$(cat .run-commit-msg.txt 2>/dev/null || echo "data: <unknown> [run failed before commit message was written]")
-          git add data/inventory.db data/latest.json raw_snapshots/
+          git add data/inventory.db data/latest.json raw_snapshots/ alerts/
           if git diff --cached --quiet; then
             echo "No changes to commit"
           else
