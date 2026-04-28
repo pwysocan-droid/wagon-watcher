@@ -209,3 +209,127 @@ def test_title_and_body_truncated_to_pushover_limits(monkeypatch, conn):
     )
     assert len(captured["payload"]["title"]) == 250
     assert len(captured["payload"]["message"]) == 1024
+
+
+# ---- alert log (alerts/YYYY-MM-DD.md) ------------------------------------
+
+def test_alert_log_first_entry_creates_file_with_header(monkeypatch, tmp_path, conn):
+    """First successful Pushover send of the day creates alerts/YYYY-MM-DD.md
+    with a `# Alerts — DATE` header followed by the entry."""
+    monkeypatch.setenv("PUSHOVER_ENABLED", "true")
+    monkeypatch.setenv("PUSHOVER_USER_KEY", "u")
+    monkeypatch.setenv("PUSHOVER_API_TOKEN", "t")
+    monkeypatch.setattr(notify, "ALERTS_DIR", tmp_path)
+    monkeypatch.setattr("notify._post", lambda p: (True, '{"status":1}'))
+
+    notify.send(
+        tier=1, event_type="watchlist_match",
+        title="Watchlist hit", body="...",
+        vin="W1KLH6FB6SA153938",
+        url="https://www.keyes.mercedesdealer.com",
+        year_trim="2025 E 450 4MATIC All-Terrain",
+        details={"Asking": "$65,895", "Mileage": "13,418"},
+        conn=conn,
+    )
+
+    files = list(tmp_path.glob("*.md"))
+    assert len(files) == 1
+    text = files[0].read_text()
+    assert text.startswith("# Alerts — ")
+    assert "Tier 1 · watchlist_match" in text
+    assert "**2025 E 450 4MATIC All-Terrain**" in text
+    assert "[W1KLH6FB6SA153938](https://www.keyes.mercedesdealer.com)" in text
+    assert "- Asking: $65,895" in text
+    assert "- Mileage: 13,418" in text
+
+
+def test_alert_log_second_entry_appends_with_hairline(monkeypatch, tmp_path, conn):
+    """Second send on the same day appends to the same file with a `---`
+    hairline between entries."""
+    monkeypatch.setenv("PUSHOVER_ENABLED", "true")
+    monkeypatch.setenv("PUSHOVER_USER_KEY", "u")
+    monkeypatch.setenv("PUSHOVER_API_TOKEN", "t")
+    monkeypatch.setattr(notify, "ALERTS_DIR", tmp_path)
+    monkeypatch.setattr("notify._post", lambda p: (True, '{"status":1}'))
+
+    notify.send(tier=1, event_type="watchlist_match", title="t", body="b",
+                vin="V_______________1", conn=conn)
+    notify.send(tier=1, event_type="price_drop_major", title="t2", body="b2",
+                vin="V_______________2", conn=conn)
+
+    files = list(tmp_path.glob("*.md"))
+    assert len(files) == 1
+    text = files[0].read_text()
+    assert text.count("# Alerts — ") == 1   # header appears once
+    assert "\n---\n" in text                  # hairline between entries
+    assert "V_______________1" in text
+    assert "V_______________2" in text
+    # First entry's marker comes before second's
+    assert text.index("V_______________1") < text.index("V_______________2")
+
+
+def test_alert_log_skipped_in_dry_run(monkeypatch, tmp_path, conn):
+    """When PUSHOVER_ENABLED=false the notification is dry-run; no alert
+    log file is written even though the audit DB row IS written."""
+    monkeypatch.setenv("PUSHOVER_ENABLED", "false")
+    monkeypatch.setattr(notify, "ALERTS_DIR", tmp_path)
+
+    notify.send(tier=1, event_type="watchlist_match",
+                title="t", body="b", vin="V_______________1", conn=conn)
+    conn.commit()
+
+    assert list(tmp_path.glob("*.md")) == []
+    # But the DB row IS there
+    rows = conn.execute("SELECT COUNT(*) FROM notifications").fetchone()[0]
+    assert rows == 1
+
+
+def test_alert_log_skipped_on_failed_post(monkeypatch, tmp_path, conn):
+    """A 4xx/5xx Pushover response does NOT write to the alert log; the DB
+    row captures the failure with success=0."""
+    monkeypatch.setenv("PUSHOVER_ENABLED", "true")
+    monkeypatch.setenv("PUSHOVER_USER_KEY", "u")
+    monkeypatch.setenv("PUSHOVER_API_TOKEN", "t")
+    monkeypatch.setattr(notify, "ALERTS_DIR", tmp_path)
+    monkeypatch.setattr("notify._post", lambda p: (False, '{"errors":["bad token"]}'))
+
+    notify.send(tier=1, event_type="watchlist_match",
+                title="t", body="b", vin="V_______________1", conn=conn)
+    conn.commit()
+
+    assert list(tmp_path.glob("*.md")) == []
+    row = conn.execute("SELECT success FROM notifications").fetchone()
+    assert row["success"] == 0
+
+
+def test_alert_log_section_marker_format(monkeypatch, tmp_path, conn):
+    """Verify the SBB-style section marker format: § HH:MM:SS UTC · Tier N · event_type"""
+    monkeypatch.setenv("PUSHOVER_ENABLED", "true")
+    monkeypatch.setenv("PUSHOVER_USER_KEY", "u")
+    monkeypatch.setenv("PUSHOVER_API_TOKEN", "t")
+    monkeypatch.setattr(notify, "ALERTS_DIR", tmp_path)
+    monkeypatch.setattr("notify._post", lambda p: (True, '{"status":1}'))
+
+    notify.send(tier=2, event_type="dealer_change",
+                title="t", body="b", vin="V_______________1", conn=conn)
+
+    text = list(tmp_path.glob("*.md"))[0].read_text()
+    import re
+    # § HH:MM:SS UTC · Tier 2 · dealer_change
+    assert re.search(r"§ \d{2}:\d{2}:\d{2} UTC · Tier 2 · dealer_change", text)
+
+
+def test_alert_log_vin_renders_unlinked_when_no_url(monkeypatch, tmp_path, conn):
+    """If url is None, the VIN is still rendered, just unlinked (as code-style)."""
+    monkeypatch.setenv("PUSHOVER_ENABLED", "true")
+    monkeypatch.setenv("PUSHOVER_USER_KEY", "u")
+    monkeypatch.setenv("PUSHOVER_API_TOKEN", "t")
+    monkeypatch.setattr(notify, "ALERTS_DIR", tmp_path)
+    monkeypatch.setattr("notify._post", lambda p: (True, '{"status":1}'))
+
+    notify.send(tier=1, event_type="watchlist_match",
+                title="t", body="b", vin="V_______________1",
+                url=None, conn=conn)
+
+    text = list(tmp_path.glob("*.md"))[0].read_text()
+    assert "`V_______________1`" in text  # backticks, not markdown link

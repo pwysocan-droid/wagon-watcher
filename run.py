@@ -96,14 +96,18 @@ def main(
         # fire from inside reconcile.py). Priority-2 with retry/expire so the
         # alert re-fires every 30 seconds for up to an hour until acked.
         if result["status"] == "aborted":
+            reason = result.get("aborted_reason") or "unknown"
+            details = {
+                "Tripped at": started_at.isoformat(timespec="seconds"),
+                "Reason": reason,
+                "Effect": "No listings were modified. The runs row was logged.",
+            }
             notify.send(
                 tier=1, event_type="scraper_aborted",
                 title="WAGON-WATCHER ABORTED",
-                body=(
-                    f"Health check tripped at {started_at.isoformat(timespec='seconds')}.\n"
-                    f"Reason: {result.get('aborted_reason') or 'unknown'}\n"
-                    f"No listings were modified. The runs row was logged."
-                ),
+                body="\n".join(f"{k}: {v}" for k, v in details.items()),
+                year_trim="health-check failure",
+                details=details,
                 conn=conn,
             )
             conn.commit()

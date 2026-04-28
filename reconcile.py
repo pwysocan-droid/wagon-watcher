@@ -184,20 +184,47 @@ def _percentile_line(conn, vin: str) -> str:
     return fairprice.format_percentile(pct, tier)
 
 
+def _year_trim_line(record: ParsedRecord) -> str:
+    """e.g. '2025 E 450 4MATIC All-Terrain'."""
+    parts = [str(record.year)] if record.year else []
+    parts.append(record.model or record.trim or "")
+    return " ".join(p for p in parts if p)
+
+
+def _dealer_line(record: ParsedRecord) -> str:
+    name = record.dealer_name or "—"
+    state = record.dealer_state or "?"
+    if record.dealer_distance_miles is not None:
+        return f"{name} ({state} · {record.dealer_distance_miles:.0f} mi from 90210)"
+    return f"{name} ({state})"
+
+
+def _money(n: int | None) -> str:
+    return f"${n:,}" if n is not None else "—"
+
+
+def _miles(n: int | None) -> str:
+    return f"{n:,}" if n is not None else "—"
+
+
 def _notify_watchlist_match(conn, record: ParsedRecord, labels: list[str]) -> None:
+    details = {
+        "Asking": _money(record.mbusa_price),
+        "Mileage": _miles(record.mileage),
+        "Dealer": _dealer_line(record),
+        "Color": f"{record.exterior_color or '?'} / {record.interior_color or '?'}",
+        "Fair price": _percentile_line(conn, record.vin),
+        "Body": f"Matches: {', '.join(labels)}",
+    }
     notify.send(
         tier=1, event_type="watchlist_match",
         title=f"Watchlist hit: {_format_listing_line(record)}",
-        body=(
-            f"VIN {record.vin}\n"
-            f"{record.exterior_color or '?'} / {record.interior_color or '?'}\n"
-            f"{record.dealer_state or '?'}, {record.dealer_distance_miles or '?'} mi away\n"
-            f"{_percentile_line(conn, record.vin)}\n"
-            f"Matches: {', '.join(labels)}"
-        ),
+        body="\n".join(f"{k}: {v}" for k, v in details.items()),
         vin=record.vin,
         url=record.dealer_site_url,
         image_url=record.photo_url,
+        year_trim=_year_trim_line(record),
+        details=details,
         conn=conn,
     )
 
@@ -205,35 +232,44 @@ def _notify_watchlist_match(conn, record: ParsedRecord, labels: list[str]) -> No
 def _notify_price_drop_major(conn, record: ParsedRecord, old_price: int, pct: float) -> None:
     drop_pct = abs(pct) * 100
     delta = (record.mbusa_price or 0) - old_price
+    details = {
+        "Was": _money(old_price),
+        "Now": f"**{_money(record.mbusa_price)}**",
+        "Δ": f"{delta:+,} ({pct:+.2%})",
+        "Mileage": _miles(record.mileage),
+        "Dealer": _dealer_line(record),
+        "Fair price": _percentile_line(conn, record.vin),
+    }
     notify.send(
         tier=1, event_type="price_drop_major",
         title=f"Price drop {drop_pct:.1f}%: {_format_listing_line(record)}",
-        body=(
-            f"VIN {record.vin}\n"
-            f"Was ${old_price:,} → now ${record.mbusa_price:,} ({delta:+,})\n"
-            f"{record.dealer_name or '?'} ({record.dealer_state or '?'})\n"
-            f"{_percentile_line(conn, record.vin)}"
-        ),
+        body="\n".join(f"{k}: {v}" for k, v in details.items()),
         vin=record.vin,
         url=record.dealer_site_url,
         image_url=record.photo_url,
+        year_trim=_year_trim_line(record),
+        details=details,
         conn=conn,
     )
 
 
 def _notify_reappeared(conn, record: ParsedRecord) -> None:
+    details = {
+        "Asking": _money(record.mbusa_price),
+        "Mileage": _miles(record.mileage),
+        "Dealer": _dealer_line(record),
+        "Fair price": _percentile_line(conn, record.vin),
+        "Body": "Was 'gone'; relisted on this poll.",
+    }
     notify.send(
         tier=1, event_type="reappeared",
         title=f"Reappeared: {_format_listing_line(record)}",
-        body=(
-            f"VIN {record.vin}\n"
-            f"Was 'gone'; relisted at {record.dealer_name or '?'} "
-            f"({record.dealer_state or '?'}, {record.dealer_distance_miles or '?'} mi)\n"
-            f"{_percentile_line(conn, record.vin)}"
-        ),
+        body="\n".join(f"{k}: {v}" for k, v in details.items()),
         vin=record.vin,
         url=record.dealer_site_url,
         image_url=record.photo_url,
+        year_trim=_year_trim_line(record),
+        details=details,
         conn=conn,
     )
 

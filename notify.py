@@ -22,11 +22,15 @@ import os
 import sqlite3
 import sys
 from datetime import datetime, timezone
+from pathlib import Path
 from urllib.error import HTTPError, URLError
 from urllib.parse import urlencode
 from urllib.request import Request, urlopen
 
 from db import connect
+
+ROOT = Path(__file__).parent
+ALERTS_DIR = ROOT / "alerts"
 
 PUSHOVER_API = "https://api.pushover.net/1/messages.json"
 TIMEOUT_S = 10
@@ -111,6 +115,72 @@ def _log(
     )
 
 
+def _format_alert_entry(
+    *,
+    sent_at: datetime,
+    tier: int,
+    event_type: str,
+    vin: str | None,
+    year_trim: str | None,
+    url: str | None,
+    details: dict[str, str] | None,
+) -> str:
+    """Render one alert entry in the project's typographic style."""
+    lines = [f"§ {sent_at:%H:%M:%S UTC} · Tier {tier} · {event_type}"]
+
+    if vin:
+        vin_part = f"[{vin}]({url})" if url else f"`{vin}`"
+        if year_trim:
+            lines.append(f"**{year_trim}** · {vin_part}")
+        else:
+            lines.append(vin_part)
+    elif year_trim:
+        lines.append(f"**{year_trim}**")
+
+    if details:
+        for label, value in details.items():
+            lines.append(f"- {label}: {value}")
+
+    return "\n".join(lines) + "\n"
+
+
+def _append_alert_log(
+    *,
+    sent_at: datetime,
+    tier: int,
+    event_type: str,
+    vin: str | None,
+    year_trim: str | None,
+    url: str | None,
+    details: dict[str, str] | None,
+    out_dir: Path | None = None,
+) -> Path:
+    """Append a markdown record of this alert to alerts/YYYY-MM-DD.md.
+
+    Lazy-create with header on first alert of the day. Hairline rule
+    between entries. Committed alongside the rest of the run output by
+    the existing workflow's `git add .` pattern — no workflow changes.
+    """
+    out_dir = out_dir or ALERTS_DIR
+    out_dir.mkdir(parents=True, exist_ok=True)
+    date_str = sent_at.strftime("%Y-%m-%d")
+    log_path = out_dir / f"{date_str}.md"
+
+    is_new = not log_path.exists()
+    entry = _format_alert_entry(
+        sent_at=sent_at, tier=tier, event_type=event_type,
+        vin=vin, year_trim=year_trim, url=url, details=details,
+    )
+
+    with log_path.open("a") as f:
+        if is_new:
+            f.write(f"# Alerts — {date_str}\n\n")
+        else:
+            f.write("\n---\n\n")
+        f.write(entry)
+    return log_path
+
+
 def send(
     tier: int,
     event_type: str,
@@ -120,6 +190,8 @@ def send(
     vin: str | None = None,
     url: str | None = None,
     image_url: str | None = None,
+    year_trim: str | None = None,
+    details: dict[str, str] | None = None,
     conn: sqlite3.Connection | None = None,
 ) -> bool:
     """Send a Pushover notification and write an audit row.
@@ -184,15 +256,26 @@ def send(
             payload["attachment_url"] = image_url
 
         ok, response_text = _post(payload)
+        sent_at = datetime.now(timezone.utc)
         _log(
             conn, tier=tier, event_type=event_type, vin=vin,
             title=title, body=body, url=url,
             pushover_priority=priority,
             pushover_response=response_text[:8192],  # cap audit log size
-            success=ok,
+            success=ok, sent_at=sent_at,
         )
         if own_conn:
             conn.commit()
+
+        # Mirror to alerts/YYYY-MM-DD.md only on a successful Pushover send.
+        # The DB row already captures dry-runs and failures; the markdown
+        # log is the "alerts that actually reached the user's phone" record.
+        if ok:
+            _append_alert_log(
+                sent_at=sent_at, tier=tier, event_type=event_type,
+                vin=vin, year_trim=year_trim, url=url, details=details,
+            )
+
         return ok
     finally:
         if own_conn:
