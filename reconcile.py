@@ -22,6 +22,7 @@ import sqlite3
 from datetime import datetime, timezone
 from typing import Any
 
+import fairprice
 import notify
 from scrape import ParsedRecord
 
@@ -175,6 +176,14 @@ def _format_listing_line(r: ParsedRecord) -> str:
     return f"{yr} {r.trim or '?'} · {price} · {miles} · {dealer}"
 
 
+def _percentile_line(conn, vin: str) -> str:
+    """Inline-compute fair price for a VIN at notification time. New listings
+    haven't been picked up by the nightly fairprice job yet, so cached values
+    are stale or NULL — recomputing here costs ~1ms at 36 listings."""
+    pct, tier = fairprice.compute_percentile(conn, vin)
+    return fairprice.format_percentile(pct, tier)
+
+
 def _notify_watchlist_match(conn, record: ParsedRecord, labels: list[str]) -> None:
     notify.send(
         tier=1, event_type="watchlist_match",
@@ -183,6 +192,7 @@ def _notify_watchlist_match(conn, record: ParsedRecord, labels: list[str]) -> No
             f"VIN {record.vin}\n"
             f"{record.exterior_color or '?'} / {record.interior_color or '?'}\n"
             f"{record.dealer_state or '?'}, {record.dealer_distance_miles or '?'} mi away\n"
+            f"{_percentile_line(conn, record.vin)}\n"
             f"Matches: {', '.join(labels)}"
         ),
         vin=record.vin,
@@ -201,7 +211,8 @@ def _notify_price_drop_major(conn, record: ParsedRecord, old_price: int, pct: fl
         body=(
             f"VIN {record.vin}\n"
             f"Was ${old_price:,} → now ${record.mbusa_price:,} ({delta:+,})\n"
-            f"{record.dealer_name or '?'} ({record.dealer_state or '?'})"
+            f"{record.dealer_name or '?'} ({record.dealer_state or '?'})\n"
+            f"{_percentile_line(conn, record.vin)}"
         ),
         vin=record.vin,
         url=record.dealer_site_url,
@@ -217,7 +228,8 @@ def _notify_reappeared(conn, record: ParsedRecord) -> None:
         body=(
             f"VIN {record.vin}\n"
             f"Was 'gone'; relisted at {record.dealer_name or '?'} "
-            f"({record.dealer_state or '?'}, {record.dealer_distance_miles or '?'} mi)"
+            f"({record.dealer_state or '?'}, {record.dealer_distance_miles or '?'} mi)\n"
+            f"{_percentile_line(conn, record.vin)}"
         ),
         vin=record.vin,
         url=record.dealer_site_url,
