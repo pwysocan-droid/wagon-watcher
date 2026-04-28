@@ -256,6 +256,39 @@ to step 5. Do not skip ahead.
 
 ---
 
+## TODO 4 (deferred, not blocking) — Bump GitHub Actions versions
+
+**Where:** `.github/workflows/watch.yml`
+
+**Why:** GitHub Actions runners flagged a Node.js 20 deprecation
+warning during run #16 (2026-04-27). The actions currently using
+Node 20: `actions/checkout@v4` and `actions/setup-python@v5`. Node
+20 will be removed from runners on 2026-09-16.
+
+**Status:** non-blocking. The warning is informational, not an
+error. Runs continue to succeed. The wagon-watcher project will
+likely be archived (after the wagon purchase) before the
+2026-09-16 hard deadline.
+
+**What to do:** the next time the workflow file is touched for any
+reason (e.g., adding the notification step), bump the action
+versions. Specifically:
+
+- `actions/checkout@v4` → `actions/checkout@v5`
+- `actions/setup-python@v5` → `actions/setup-python@v6`
+
+(Both `@v5` and `@v6` exist as of 2026-04 and have already migrated
+to Node 24.)
+
+Do NOT make a dedicated commit just for this. Bundle with the next
+substantive workflow change.
+
+**Anti-pattern:** setting `FORCE_JAVASCRIPT_ACTIONS_TO_NODE24=true`
+as a workaround. That's a Band-Aid that masks the real issue.
+Bumping the action versions is the correct fix.
+
+---
+
 ## Suggested commit message for the TODO 1 fix
 
 ```

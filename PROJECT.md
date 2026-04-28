@@ -59,10 +59,10 @@ original recon, which got both `count` and `start` wrong):**
 
 Top-level shape:
 ```
-result.pagedVehicles.records[]      — the vehicles array
-result.pagedVehicles.paging         — { totalCount, currentOffset, currentCount }
-result.facets                       — aggregations (color, dealer, year, etc.)
-status.code                         — 200 on success
+result.pagedVehicles.records[]      ← the vehicles array
+result.pagedVehicles.paging         ← { totalCount, currentOffset, currentCount }
+result.facets                       ← aggregations (color, dealer, year, etc.)
+status.code                         ← 200 on success
 ```
 
 Per-vehicle field mapping (the parser needs this).
@@ -116,7 +116,7 @@ in the response.
 ├── scrape.py                      # fetches + parses; pure function, no DB writes
 ├── reconcile.py                   # diffs scrape output against DB state
 ├── db.py                          # schema, migrations, helpers
-├── notify.py                      # Pushover/Discord/ntfy dispatcher
+├── notify.py                      # Pushover dispatcher
 ├── digest.py                      # weekly markdown summary generator
 ├── fairprice.py                   # percentile-rank scoring
 ├── data/
@@ -217,24 +217,59 @@ nonzero so the workflow fails visibly. Do NOT write the bad data to the DB.
 
 ## Notification rules
 
-Tier 1 (push to phone, loud sound):
-- New listing matching any active `watchlist` entry
-- Price drop ≥7% on any active listing
-- Reappeared VIN (was `gone`, now back)
-- Scraper aborted (health check failed)
+**Channel: Pushover.** Single channel, single API. Confirmed
+2026-04-27. Setup details in the section below.
 
-Tier 2 (Discord channel, no sound):
+Tier 1 (Pushover priority 1 or 2, bypasses quiet hours):
+- New listing matching any active `watchlist` entry → priority 1
+- Price drop ≥7% on any active listing → priority 1
+- Reappeared VIN (was `gone`, now back) → priority 1
+- Scraper aborted (health check failed) → **priority 2**, with
+  `retry=30, expire=3600` so it re-alerts every 30 seconds for up
+  to one hour until acknowledged
+
+Tier 2 (Pushover priority 0, normal):
 - Any new listing
 - Price drop 3–7%
 - Same VIN, new dealer (intra-network transfer)
 - Mileage decreased on existing VIN (data anomaly worth knowing)
 
-Tier 3 (digest only, no real-time):
+Tier 3 (Pushover priority -2, silent — appears in app history but
+no notification fires):
 - VIN went `gone` (i.e., probably sold)
 - Price drop <3%
 
-Notification payload includes: lead photo, asking price, percentile rank from
-`fairprice.py`, days listed, dealer name + state, and a deep link to the listing.
+Notification payload includes: lead photo (Pushover supports image
+attachments natively), asking price, percentile rank from
+`fairprice.py`, days listed, dealer name + state, and a deep link
+to the listing.
+
+### Pushover setup (one-time)
+
+1. Create account at https://pushover.net (free 30-day trial,
+   then $5 one-time per platform license — iOS app required)
+2. Install the iOS app and log in to confirm device
+3. From the dashboard, create an Application/API Token named
+   `wagon-watcher`. Optionally upload a small icon.
+4. Two strings needed by the watcher:
+   - **User key** (top of dashboard, 30 chars, identifies you)
+   - **Application API token** (30 chars, identifies the app)
+5. Add both to GitHub Actions secrets:
+   - `PUSHOVER_USER_KEY`
+   - `PUSHOVER_API_TOKEN`
+6. Do NOT add to `.env` — the watcher only ever runs in CI
+
+### Why Pushover over alternatives
+
+Considered and rejected at 2026-04-27: Discord webhook (free but
+requires Discord client), ntfy.sh (free but no iOS-native
+priority mapping), email (too slow), SMS (carrier-throttled).
+
+Pushover wins on: sub-second median delivery latency, true
+priority levels that map to OS-level iOS behavior, native image
+attachment support, persistent notification history, per-device
+quiet-hours configuration, emergency-priority retry-loop for
+critical failures (the scraper-aborted case).
 
 ## Fair-price scoring (`fairprice.py`)
 
@@ -505,7 +540,7 @@ used correctly, tabular alignment that renders cleanly on GitHub,
 right-aligned numerics. Footnote-style annotations for dealer
 notes. Metadata footer with run timestamp and snapshot ID.
 
-**Notification embeds (Discord / Pushover):** strip to essentials.
+**Notification embeds (Pushover):** strip to essentials.
 Lead photo, single line of price + miles + dealer + percentile-rank.
 SBB Red appears only for Tier 1 alerts.
 
