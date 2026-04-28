@@ -501,12 +501,151 @@ def test_reappeared_fires_tier1(monkeypatch, conn):
 
 
 def test_gone_does_not_fire_tier1(monkeypatch, conn):
-    """A VIN going 'gone' is Tier 3 (digest-only), not Tier 1."""
+    """A VIN going 'gone' is Tier 3 (silent), not Tier 1."""
     calls = _capture_notify_calls(monkeypatch)
     rs = [_record(f"V{i:017d}") for i in range(10)]
     reconcile(rs, conn, now=T0)
     reconcile(rs[1:], conn, now=T0 + timedelta(hours=1))  # rs[0] marked gone
 
-    # No Tier 1 'gone' event should fire (Tier 3 wiring is step 9).
     assert not any(c.get("tier") == 1 and "gone" in str(c.get("event_type", ""))
                    for c in calls)
+
+
+# ---- Tier 2 / Tier 3 routing (step 9) ------------------------------------
+
+def test_new_listing_fires_tier2_when_not_watchlist_match(monkeypatch, conn):
+    """A new listing that does NOT match the watchlist still fires a
+    Tier 2 'new_listing' alert."""
+    calls = _capture_notify_calls(monkeypatch)
+    over_budget = _record("V________________1",
+                          year=2025, mileage=10000, mbusa_price=72000)  # > 68k cap
+    reconcile([over_budget], conn, now=T0)
+
+    new_calls = [c for c in calls if c.get("event_type") == "new_listing"]
+    assert len(new_calls) == 1
+    assert new_calls[0]["tier"] == 2
+
+
+def test_new_listing_suppressed_when_watchlist_match_fired(monkeypatch, conn):
+    """A new listing that matches watchlist (Tier 1) does NOT also fire
+    Tier 2 — avoid stacking two alerts for the same VIN/poll."""
+    calls = _capture_notify_calls(monkeypatch)
+    matching = _record("V________________1",
+                       year=2025, mileage=10000, mbusa_price=65000)
+    reconcile([matching], conn, now=T0)
+
+    types = {c.get("event_type") for c in calls}
+    assert "watchlist_match" in types
+    assert "new_listing" not in types
+
+
+def test_price_drop_in_3_to_7_pct_fires_tier2(monkeypatch, conn):
+    """A 5% drop should fire Tier 2 price_drop_minor, not Tier 1, not Tier 3."""
+    r = _record("V________________1", mbusa_price=70000)
+    reconcile([r], conn, now=T0)
+
+    calls = _capture_notify_calls(monkeypatch)
+    cheaper = replace(r, mbusa_price=66500)  # -5%
+    reconcile([cheaper], conn, now=T0 + timedelta(hours=1))
+
+    types = [c.get("event_type") for c in calls]
+    assert "price_drop_minor" in types
+    assert "price_drop_major" not in types
+    assert "price_drop_silent" not in types
+
+
+def test_price_drop_under_3_pct_fires_tier3_silent(monkeypatch, conn):
+    """A 1% drop should fire Tier 3 price_drop_silent."""
+    r = _record("V________________1", mbusa_price=70000)
+    reconcile([r], conn, now=T0)
+
+    calls = _capture_notify_calls(monkeypatch)
+    cheaper = replace(r, mbusa_price=69300)  # -1%
+    reconcile([cheaper], conn, now=T0 + timedelta(hours=1))
+
+    silent = [c for c in calls if c.get("event_type") == "price_drop_silent"]
+    assert len(silent) == 1
+    assert silent[0]["tier"] == 3
+    # No Tier 2 from this same drop
+    assert not any(c.get("event_type") == "price_drop_minor" for c in calls)
+
+
+def test_price_drop_over_7_pct_fires_only_tier1(monkeypatch, conn):
+    """A 10% drop fires only Tier 1 (price_drop_major); not Tier 2/3 too."""
+    r = _record("V________________1", mbusa_price=70000)
+    reconcile([r], conn, now=T0)
+
+    calls = _capture_notify_calls(monkeypatch)
+    cheaper = replace(r, mbusa_price=63000)  # -10%
+    reconcile([cheaper], conn, now=T0 + timedelta(hours=1))
+
+    drop_types = [c.get("event_type") for c in calls
+                  if c.get("event_type", "").startswith("price_drop_")]
+    assert drop_types == ["price_drop_major"]
+
+
+def test_price_increase_no_notification(monkeypatch, conn):
+    """A price INCREASE never fires any tier of price-drop alert."""
+    r = _record("V________________1", mbusa_price=70000)
+    reconcile([r], conn, now=T0)
+
+    calls = _capture_notify_calls(monkeypatch)
+    pricier = replace(r, mbusa_price=75000)
+    reconcile([pricier], conn, now=T0 + timedelta(hours=1))
+
+    drops = [c for c in calls if "price_drop" in c.get("event_type", "")]
+    assert drops == []
+
+
+def test_dealer_change_fires_tier2(monkeypatch, conn):
+    r = _record("V________________1",
+                dealer_name="Keyes European, LLC", dealer_zip="91401")
+    reconcile([r], conn, now=T0)
+
+    calls = _capture_notify_calls(monkeypatch)
+    moved = replace(r, dealer_name="Mercedes-Benz of Valencia", dealer_zip="91355")
+    reconcile([moved], conn, now=T0 + timedelta(hours=1))
+
+    dealer_calls = [c for c in calls if c.get("event_type") == "dealer_change"]
+    assert len(dealer_calls) == 1
+    assert dealer_calls[0]["tier"] == 2
+
+
+def test_mileage_decrease_fires_tier2(monkeypatch, conn):
+    r = _record("V________________1", mileage=20000)
+    reconcile([r], conn, now=T0)
+
+    calls = _capture_notify_calls(monkeypatch)
+    fewer = replace(r, mileage=15000)
+    reconcile([fewer], conn, now=T0 + timedelta(hours=1))
+
+    mileage_calls = [c for c in calls if c.get("event_type") == "mileage_anomaly"]
+    assert len(mileage_calls) == 1
+    assert mileage_calls[0]["tier"] == 2
+
+
+def test_gone_fires_tier3_silent(monkeypatch, conn):
+    """A vanished VIN fires Tier 3 silent."""
+    rs = [_record(f"V{i:017d}") for i in range(10)]
+    reconcile(rs, conn, now=T0)
+
+    calls = _capture_notify_calls(monkeypatch)
+    reconcile(rs[1:], conn, now=T0 + timedelta(hours=1))  # rs[0] marked gone
+
+    gone_calls = [c for c in calls if c.get("event_type") == "gone"]
+    assert len(gone_calls) == 1
+    assert gone_calls[0]["tier"] == 3
+    assert gone_calls[0]["vin"] == rs[0].vin
+
+
+def test_gone_only_fires_once_not_each_subsequent_poll(monkeypatch, conn):
+    """Once 'gone', the VIN doesn't re-fire Tier 3 on every poll thereafter."""
+    rs = [_record(f"V{i:017d}") for i in range(10)]
+    reconcile(rs, conn, now=T0)
+    reconcile(rs[1:], conn, now=T0 + timedelta(hours=1))  # rs[0] gone (Tier 3 fires)
+
+    calls = _capture_notify_calls(monkeypatch)
+    reconcile(rs[1:], conn, now=T0 + timedelta(hours=2))
+    reconcile(rs[1:], conn, now=T0 + timedelta(hours=3))
+
+    assert not any(c.get("event_type") == "gone" for c in calls)

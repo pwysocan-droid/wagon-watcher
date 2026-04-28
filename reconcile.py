@@ -27,6 +27,7 @@ import notify
 from scrape import ParsedRecord
 
 PRICE_DROP_TIER1_THRESHOLD = -0.07  # ≥7% drop fires Tier 1
+PRICE_DROP_TIER2_THRESHOLD = -0.03  # 3-7% drop fires Tier 2 (Tier 1 takes precedence)
 
 
 # ---- Listings I/O --------------------------------------------------------
@@ -274,6 +275,140 @@ def _notify_reappeared(conn, record: ParsedRecord) -> None:
     )
 
 
+# ---- Tier 2 (Pushover priority 0) ----------------------------------------
+
+def _notify_new_listing_t2(conn, record: ParsedRecord) -> None:
+    """Fires for ANY new listing. Suppressed if a Tier 1 watchlist_match
+    already fired for this VIN in the same poll — see the call site."""
+    details = {
+        "Asking": _money(record.mbusa_price),
+        "Mileage": _miles(record.mileage),
+        "Dealer": _dealer_line(record),
+        "Color": f"{record.exterior_color or '?'} / {record.interior_color or '?'}",
+        "Fair price": _percentile_line(conn, record.vin),
+    }
+    notify.send(
+        tier=2, event_type="new_listing",
+        title=f"New: {_format_listing_line(record)}",
+        body="\n".join(f"{k}: {v}" for k, v in details.items()),
+        vin=record.vin, url=record.dealer_site_url, image_url=record.photo_url,
+        year_trim=_year_trim_line(record),
+        details=details,
+        conn=conn,
+    )
+
+
+def _notify_price_drop_minor_t2(
+    conn, record: ParsedRecord, old_price: int, pct: float,
+) -> None:
+    """3-7% drop. Tier 1 (-≥7%) takes precedence at the call site."""
+    drop_pct = abs(pct) * 100
+    delta = (record.mbusa_price or 0) - old_price
+    details = {
+        "Was": _money(old_price),
+        "Now": _money(record.mbusa_price),
+        "Δ": f"{delta:+,} ({pct:+.2%})",
+        "Dealer": _dealer_line(record),
+        "Fair price": _percentile_line(conn, record.vin),
+    }
+    notify.send(
+        tier=2, event_type="price_drop_minor",
+        title=f"Price drop {drop_pct:.1f}%: {_format_listing_line(record)}",
+        body="\n".join(f"{k}: {v}" for k, v in details.items()),
+        vin=record.vin, url=record.dealer_site_url, image_url=record.photo_url,
+        year_trim=_year_trim_line(record),
+        details=details,
+        conn=conn,
+    )
+
+
+def _notify_dealer_change_t2(
+    conn, record: ParsedRecord, old_dealer: str | None,
+) -> None:
+    details = {
+        "From": old_dealer or "—",
+        "To": _dealer_line(record),
+        "Asking": _money(record.mbusa_price),
+        "Body": "Same VIN at a new dealer (intra-network transfer).",
+    }
+    notify.send(
+        tier=2, event_type="dealer_change",
+        title=f"Dealer change: {_format_listing_line(record)}",
+        body="\n".join(f"{k}: {v}" for k, v in details.items()),
+        vin=record.vin, url=record.dealer_site_url, image_url=record.photo_url,
+        year_trim=_year_trim_line(record),
+        details=details,
+        conn=conn,
+    )
+
+
+def _notify_mileage_anomaly_t2(
+    conn, record: ParsedRecord, old_mileage: int,
+) -> None:
+    details = {
+        "Was": _miles(old_mileage),
+        "Now": _miles(record.mileage),
+        "Δ": f"{(record.mileage or 0) - old_mileage:+,} mi",
+        "Dealer": _dealer_line(record),
+        "Body": "Mileage decreased on existing VIN — data anomaly worth knowing.",
+    }
+    notify.send(
+        tier=2, event_type="mileage_anomaly",
+        title=f"Mileage anomaly: {_format_listing_line(record)}",
+        body="\n".join(f"{k}: {v}" for k, v in details.items()),
+        vin=record.vin, url=record.dealer_site_url, image_url=record.photo_url,
+        year_trim=_year_trim_line(record),
+        details=details,
+        conn=conn,
+    )
+
+
+# ---- Tier 3 (Pushover priority -2, silent in app history) ----------------
+
+def _notify_gone_t3(conn, gone_row: dict) -> None:
+    """A 'sold or de-listed' VIN. Silent — appears in Pushover history but
+    no notification fires. Useful for the buying-decision audit trail."""
+    last_known = (
+        f"{gone_row.get('year') or '?'} {gone_row.get('trim') or '?'}"
+    )
+    details = {
+        "Last dealer": gone_row.get("dealer_name") or "—",
+        "Body": "VIN no longer in the active inventory feed.",
+    }
+    notify.send(
+        tier=3, event_type="gone",
+        title=f"Gone: {last_known} · {gone_row['vin']}",
+        body="\n".join(f"{k}: {v}" for k, v in details.items()),
+        vin=gone_row["vin"],
+        year_trim=last_known,
+        details=details,
+        conn=conn,
+    )
+
+
+def _notify_price_drop_silent_t3(
+    conn, record: ParsedRecord, old_price: int, pct: float,
+) -> None:
+    """Sub-3% drop. Pushover priority -2 — appears in history, no alert."""
+    drop_pct = abs(pct) * 100
+    delta = (record.mbusa_price or 0) - old_price
+    details = {
+        "Was": _money(old_price),
+        "Now": _money(record.mbusa_price),
+        "Δ": f"{delta:+,} ({pct:+.2%})",
+        "Dealer": _dealer_line(record),
+    }
+    notify.send(
+        tier=3, event_type="price_drop_silent",
+        title=f"Price drop {drop_pct:.2f}%: {_format_listing_line(record)}",
+        body="\n".join(f"{k}: {v}" for k, v in details.items()),
+        vin=record.vin, url=record.dealer_site_url, image_url=record.photo_url,
+        year_trim=_year_trim_line(record),
+        details=details,
+        conn=conn,
+    )
+
+
 # ---- Reconcile -----------------------------------------------------------
 
 def reconcile(
@@ -364,6 +499,12 @@ def reconcile(
                     "record": record, "labels": labels,
                 })
                 _notify_watchlist_match(conn, record, labels)
+            else:
+                # Tier 2: any new listing that didn't already trigger Tier 1.
+                # Skipping when watchlist matched avoids stacking two alerts
+                # for the same VIN on the same poll — Tier 1 is louder and
+                # already conveys the news.
+                _notify_new_listing_t2(conn, record)
             continue
 
         # Existing — collect updates
@@ -383,10 +524,11 @@ def reconcile(
 
         # Dealer change (intra-network transfer)
         if existing_row["dealer_name"] != record.dealer_name:
+            old_dealer = existing_row["dealer_name"]
             events.append({
                 "type": "dealer_change",
                 "vin": record.vin,
-                "old_dealer_name": existing_row["dealer_name"],
+                "old_dealer_name": old_dealer,
                 "new_dealer_name": record.dealer_name,
                 "record": record,
             })
@@ -394,6 +536,8 @@ def reconcile(
             updates["dealer_zip"] = record.dealer_zip
             updates["dealer_state"] = record.dealer_state
             changed_count += 1
+            # Tier 2: dealer changed for the same VIN.
+            _notify_dealer_change_t2(conn, record, old_dealer)
 
         # Price / mileage change → append to price_history. Skip entirely
         # when the current scrape's price is missing/zero (API anomaly) —
@@ -432,9 +576,15 @@ def reconcile(
                         "record": record,
                     })
                     changed_count += 1
-                    # Tier 1: price drop ≥7%
+                    # Tiered routing for price drops. Mutually exclusive
+                    # branches — a 10% drop fires Tier 1, not Tier 1+2+3.
                     if pct <= PRICE_DROP_TIER1_THRESHOLD:
                         _notify_price_drop_major(conn, record, prior_price, pct)
+                    elif pct <= PRICE_DROP_TIER2_THRESHOLD:
+                        _notify_price_drop_minor_t2(conn, record, prior_price, pct)
+                    elif pct < 0:
+                        _notify_price_drop_silent_t3(conn, record, prior_price, pct)
+                    # pct >= 0 (increase or flat): no notification
                 elif price_changed:
                     # Recovery from a zero/missing prior price. Count the
                     # change so runs.changed_count reflects DB-level activity,
@@ -445,14 +595,18 @@ def reconcile(
                     and last["mileage"] is not None
                     and record.mileage < last["mileage"]
                 ):
+                    old_mileage = last["mileage"]
                     events.append({
                         "type": "mileage_decrease",
                         "vin": record.vin,
-                        "old_mileage": last["mileage"],
+                        "old_mileage": old_mileage,
                         "new_mileage": record.mileage,
                         "record": record,
                     })
                     changed_count += 1
+                    # Tier 2: mileage went down — likely an odometer correction
+                    # or data anomaly. Worth knowing about either way.
+                    _notify_mileage_anomaly_t2(conn, record, old_mileage)
 
         _update_listing(conn, record.vin, updates)
 
@@ -463,8 +617,12 @@ def reconcile(
         if row["status"] == "gone":
             continue
         _update_listing(conn, vin, {"status": "gone", "gone_at": started_at})
-        events.append({"type": "gone", "vin": vin, "old_record": dict(row)})
+        gone_row = dict(row)
+        events.append({"type": "gone", "vin": vin, "old_record": gone_row})
         gone_count += 1
+        # Tier 3: silent record in Pushover history. Useful for the
+        # buying-decision audit trail without interrupting the user.
+        _notify_gone_t3(conn, gone_row)
 
     finished_at = datetime.now(timezone.utc)
     duration_ms = _ms(started_at, finished_at)
