@@ -30,3 +30,7 @@ yarn-error.log*
 # TypeScript
 *.tsbuildinfo
 next-env.d.ts
+
+# Vercel project link (machine-local, contains team + project IDs)
+.vercel/
+.vercel
