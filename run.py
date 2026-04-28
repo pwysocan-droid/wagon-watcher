@@ -22,6 +22,7 @@ import json
 from datetime import datetime, timezone
 from pathlib import Path
 
+import notify
 from db import DB_PATH, connect, migrate
 from reconcile import reconcile
 from scrape import RAW_SNAPSHOTS, fetch_all, parse_response, save_snapshot
@@ -90,6 +91,22 @@ def main(
         migrate(conn)
         result = reconcile(parsed, conn, now=started_at)
         write_latest_json(conn, latest_json)
+
+        # Tier 1: scraper_aborted (the fourth Tier 1 case — the other three
+        # fire from inside reconcile.py). Priority-2 with retry/expire so the
+        # alert re-fires every 30 seconds for up to an hour until acked.
+        if result["status"] == "aborted":
+            notify.send(
+                tier=1, event_type="scraper_aborted",
+                title="WAGON-WATCHER ABORTED",
+                body=(
+                    f"Health check tripped at {started_at.isoformat(timespec='seconds')}.\n"
+                    f"Reason: {result.get('aborted_reason') or 'unknown'}\n"
+                    f"No listings were modified. The runs row was logged."
+                ),
+                conn=conn,
+            )
+            conn.commit()
     finally:
         conn.close()
 
