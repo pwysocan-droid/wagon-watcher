@@ -38,6 +38,28 @@ MIN_REASONABLE_PRICE = 30_000
 MAX_REASONABLE_PRICE = 200_000
 
 
+def candidate_urls(vin: str, dealer_url: str) -> list[str]:
+    """URL patterns to try in order, most-specific first.
+
+    Most dealer.com-template sites accept VIN-search URLs that pre-filter
+    to one listing — those are far more likely to put the VIN string in
+    the initial HTML than the dealer's homepage. Falls back to the
+    homepage as a last resort.
+
+    Examples (the prefixes vary by dealer template; we try the common ones):
+      - https://www.example.com/inventory/used-Mercedes-Benz?vin=W1KLH...
+      - https://www.example.com/inventory/?search=W1KLH...
+      - https://www.example.com/  (homepage; works on a few simple sites)
+    """
+    base = dealer_url.rstrip("/")
+    return [
+        f"{base}/inventory/used-Mercedes-Benz?vin={vin}",
+        f"{base}/inventory/?search={vin}",
+        f"{base}/used/?vin={vin}",
+        base,
+    ]
+
+
 def _fetch_impl(url: str, timeout: float = TIMEOUT_S) -> str | None:
     """Fetch a URL and return the body, or None on any failure."""
     if not url:
@@ -87,13 +109,28 @@ def _extract_price_near_vin(html: str, vin: str) -> int | None:
 
 def _check_impl(vin: str, dealer_url: str) -> tuple[int | None, str | None]:
     """Real implementation. Tests call this directly to bypass the
-    conftest autouse mock on `check`."""
+    conftest autouse mock on `check`.
+
+    Tries each candidate URL in order until one returns a body that
+    actually contains the VIN. Returns the price + the URL that worked
+    (so listings.dealer_site_url reflects what was scraped, not just the
+    homepage we started from). If no candidate yields a VIN match, returns
+    (None, dealer_url) — the homepage is preserved as a "best we tried"
+    record."""
     if not dealer_url or not vin:
         return None, None
-    html = fetch(dealer_url)
-    if html is None:
-        return None, dealer_url
-    return _extract_price_near_vin(html, vin), dealer_url
+
+    for candidate in candidate_urls(vin, dealer_url):
+        html = fetch(candidate)
+        if html is None:
+            continue
+        if vin not in html:
+            continue
+        price = _extract_price_near_vin(html, vin)
+        return price, candidate
+
+    # No candidate found the VIN. Return the homepage URL as the placeholder.
+    return None, dealer_url
 
 
 def check(vin: str, dealer_url: str) -> tuple[int | None, str | None]:

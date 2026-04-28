@@ -124,8 +124,37 @@ def test_check_returns_none_url_on_failed_fetch(monkeypatch):
 
 
 def test_check_returns_price_when_extractor_succeeds(monkeypatch):
+    """Returns the URL that actually contained the VIN — multi-URL logic
+    walks candidates until one's body contains the VIN string."""
     html = f"<div>{VIN}</div><div>$67,500</div>"
     monkeypatch.setattr(dealer_site, "fetch", lambda url, timeout=10: html)
-    price, url = dealer_site._check_impl(VIN,"https://example.com")
+    price, url = dealer_site._check_impl(VIN, "https://example.com")
     assert price == 67_500
+    # First candidate URL the multi-pattern walker tries — which the fake
+    # `fetch` returns matching HTML for, so it stops there.
+    assert url == "https://example.com/inventory/used-Mercedes-Benz?vin=" + VIN
+
+
+def test_check_falls_through_to_next_pattern_if_vin_missing(monkeypatch):
+    """If the first URL's body doesn't contain the VIN, try the next."""
+    calls = []
+
+    def stub_fetch(url, timeout=10):
+        calls.append(url)
+        # First URL returns body without VIN; second returns matching HTML.
+        if "search=" in url:
+            return f"<div>{VIN}</div><div>$67,500</div>"
+        return "<html>no vin here</html>"
+
+    monkeypatch.setattr(dealer_site, "fetch", stub_fetch)
+    price, url = dealer_site._check_impl(VIN, "https://example.com")
+    assert price == 67_500
+    assert "search=" in url
+    assert len(calls) >= 2  # walked past the first
+
+
+def test_check_returns_homepage_when_no_candidate_finds_vin(monkeypatch):
+    monkeypatch.setattr(dealer_site, "fetch", lambda url, timeout=10: "<html>no</html>")
+    price, url = dealer_site._check_impl(VIN, "https://example.com")
+    assert price is None
     assert url == "https://example.com"

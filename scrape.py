@@ -26,6 +26,17 @@ RAW_SNAPSHOTS = ROOT / "raw_snapshots"
 ENDPOINT = "https://nafta-service.mbusa.com/api/inv/v1/en_us/used/vehicles/search"
 USER_AGENT = "mb-wagon-watcher/1.0 (personal research; pwysocan@gmail.com)"
 
+# Probed 2026-04-28: MBUSA's portal serves a Next-style SPA at this path.
+# The HTML body is JS-rendered (returns 200 for any VIN string) but the URL
+# is a valid clickable target — opens the right listing in a browser when
+# the VIN is in current inventory. Honors PROJECT.md's "VIN as canonical
+# link" rule across notifications, the alert log, and the weekly digest.
+MBUSA_LISTING_URL_TEMPLATE = "https://www.mbusa.com/en/cpo/inventory/details/{vin}"
+
+
+def mbusa_listing_url(vin: str) -> str:
+    return MBUSA_LISTING_URL_TEMPLATE.format(vin=vin)
+
 DEFAULT_QUERY: dict[str, str] = {
     "distance": "ANY",
     "invType": "cpo",

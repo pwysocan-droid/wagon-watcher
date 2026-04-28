@@ -28,6 +28,7 @@ from pathlib import Path
 from statistics import median
 
 from db import connect, migrate
+from scrape import mbusa_listing_url
 
 ROOT = Path(__file__).parent
 DIGEST_DIR = ROOT / "digest"
@@ -247,7 +248,8 @@ def _price_drops_table(conn: sqlite3.Connection, start: datetime, end: datetime)
     for d in enriched:
         lines.append(
             f"| {d['year'] or '—'} | {_shortdealer(d['dealer'])} | "
-            f"`{d['vin']}` | {_money(d['old_price'])} | "
+            f"[`{d['vin']}`]({mbusa_listing_url(d['vin'])}) | "
+            f"{_money(d['old_price'])} | "
             f"**{_money(d['new_price'])}** | **{_signed_pct(d['pct'])}** |"
         )
     return "\n".join(lines)
@@ -286,7 +288,8 @@ def _stalest_listings(conn: sqlite3.Connection, when: datetime, limit: int = 5) 
         days = (when - first_seen).days
         lines.append(
             f"| **{days}** | {r['year'] or '—'} | "
-            f"{_shortdealer(r['dealer_name'])} | `{r['vin']}` | "
+            f"{_shortdealer(r['dealer_name'])} | "
+            f"[`{r['vin']}`]({mbusa_listing_url(r['vin'])}) | "
             f"{_money(r['asking'])} | {r['drop_count'] or 0} |"
         )
     return "\n".join(lines)

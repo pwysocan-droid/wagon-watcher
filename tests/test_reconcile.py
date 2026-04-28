@@ -849,7 +849,8 @@ def test_cross_source_dealer_lower_no_alert(monkeypatch, conn):
 
 
 def test_cross_source_only_on_first_sight(monkeypatch, conn):
-    """Existing VINs don't re-fetch the dealer site each poll."""
+    """Existing VINs don't re-fetch the dealer site on every poll. The
+    weekly-recheck path runs separately with a 7-day floor."""
     import reconcile as recon_mod
     calls = []
     monkeypatch.setattr(
@@ -863,3 +864,136 @@ def test_cross_source_only_on_first_sight(monkeypatch, conn):
     reconcile([r], conn, now=T0 + timedelta(hours=2))
 
     assert calls == [r.vin]  # one fetch total, not three
+
+
+# ---- listing_url (MBUSA per-VIN canonical) -------------------------------
+
+def test_listing_url_populated_on_insert(conn):
+    r = _record("V________________1")
+    reconcile([r], conn, now=T0)
+
+    row = conn.execute(
+        "SELECT listing_url FROM listings WHERE vin = ?", (r.vin,),
+    ).fetchone()
+    assert row["listing_url"] == f"https://www.mbusa.com/en/cpo/inventory/details/{r.vin}"
+
+
+# ---- Weekly dealer-site recheck -----------------------------------------
+
+def test_weekly_recheck_skips_recent_listings(monkeypatch, conn):
+    """A listing checked yesterday should NOT be rechecked today."""
+    import reconcile as recon_mod
+
+    # First sight: dealer_site.check is called inside _insert_listing.
+    monkeypatch.setattr(
+        recon_mod.dealer_site, "check",
+        lambda vin, url: (50_000, url),
+    )
+    r = _record("V________________1", dealer_site_url="https://example.com")
+    reconcile([r], conn, now=T0)
+
+    # Now monkeypatch with a recorder for the recheck path.
+    calls = []
+    monkeypatch.setattr(
+        recon_mod.dealer_site, "check",
+        lambda vin, url: (calls.append(vin), (50_000, url))[1],
+    )
+    # Re-poll 1 day later — still within 7-day floor.
+    reconcile([r], conn, now=T0 + timedelta(days=1))
+    assert calls == []  # not yet stale
+
+
+def test_weekly_recheck_processes_stale_listings(monkeypatch, conn):
+    """A listing checked 8+ days ago should be rechecked."""
+    import reconcile as recon_mod
+
+    monkeypatch.setattr(
+        recon_mod.dealer_site, "check",
+        lambda vin, url: (50_000, url),
+    )
+    r = _record("V________________1", dealer_site_url="https://example.com")
+    reconcile([r], conn, now=T0)
+
+    calls = []
+    monkeypatch.setattr(
+        recon_mod.dealer_site, "check",
+        lambda vin, url: (calls.append((vin, url)), (50_500, url))[1],
+    )
+    reconcile([r], conn, now=T0 + timedelta(days=8))
+    assert (r.vin, "https://example.com") in calls
+
+    row = conn.execute(
+        "SELECT dealer_site_price FROM listings WHERE vin = ?", (r.vin,),
+    ).fetchone()
+    assert row["dealer_site_price"] == 50_500
+
+
+def test_weekly_recheck_caps_at_per_poll_limit(monkeypatch, conn):
+    """At most DEALER_SITE_RECHECKS_PER_POLL listings are rechecked per poll
+    even when many are stale — politeness."""
+    import reconcile as recon_mod
+
+    monkeypatch.setattr(
+        recon_mod.dealer_site, "check",
+        lambda vin, url: (50_000, url),
+    )
+    rs = [_record(f"V{i:017d}", dealer_site_url="https://example.com") for i in range(10)]
+    reconcile(rs, conn, now=T0)
+
+    calls = []
+    monkeypatch.setattr(
+        recon_mod.dealer_site, "check",
+        lambda vin, url: (calls.append(vin), (None, url))[1],
+    )
+    reconcile(rs, conn, now=T0 + timedelta(days=8))
+
+    assert len(calls) == recon_mod.DEALER_SITE_RECHECKS_PER_POLL
+
+
+def test_weekly_recheck_fires_tier1_on_new_discrepancy(monkeypatch, conn):
+    """Recheck reveals dealer-site price now exceeds MBUSA — Tier 1 fires."""
+    import reconcile as recon_mod
+
+    monkeypatch.setattr(
+        recon_mod.dealer_site, "check",
+        lambda vin, url: (60_000, url),  # initial: dealer matches MBUSA
+    )
+    r = _record("V________________1", mbusa_price=60_000,
+                dealer_site_url="https://example.com")
+    reconcile([r], conn, now=T0)
+
+    notify_calls = _capture_notify_calls(monkeypatch)
+    monkeypatch.setattr(
+        recon_mod.dealer_site, "check",
+        lambda vin, url: (62_500, url),  # dealer now $2,500 above MBUSA
+    )
+    reconcile([r], conn, now=T0 + timedelta(days=8))
+
+    cross = [c for c in notify_calls if c.get("event_type") == "cross_source_discrepancy"]
+    assert len(cross) == 1
+    assert cross[0]["tier"] == 1
+
+
+def test_weekly_recheck_skips_listings_without_dealer_url(monkeypatch, conn):
+    """A listing whose dealer_site_url is NULL is unrescheckable — skip."""
+    import reconcile as recon_mod
+    calls = []
+    monkeypatch.setattr(
+        recon_mod.dealer_site, "check",
+        lambda vin, url: (calls.append(vin), (None, url))[1],
+    )
+    # Insert a listing manually without dealer_site_url
+    conn.execute(
+        "INSERT INTO listings (vin, first_seen, last_seen, status, "
+        "year, trim, body_style, mileage_first_seen) "
+        "VALUES ('NO_URL___________', ?, ?, 'active', 2025, 'E450S4', 'WGN', 15000)",
+        (T0, T0),
+    )
+    conn.execute(
+        "INSERT INTO price_history (vin, observed_at, price, mileage) "
+        "VALUES ('NO_URL___________', ?, 65000, 15000)", (T0,),
+    )
+    conn.commit()
+
+    reconcile([_record("X________________1")], conn, now=T0 + timedelta(days=8))
+    assert "NO_URL___________" not in calls

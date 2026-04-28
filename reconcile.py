@@ -19,14 +19,14 @@ from __future__ import annotations
 import json
 import os
 import sqlite3
-from datetime import datetime, timezone
+from datetime import datetime, timedelta, timezone
 from typing import Any
 
 import dealer_site
 import fairprice
 import notify
 import vin_decode
-from scrape import ParsedRecord
+from scrape import ParsedRecord, mbusa_listing_url
 
 PRICE_DROP_TIER1_THRESHOLD = -0.07  # ≥7% drop fires Tier 1
 PRICE_DROP_TIER2_THRESHOLD = -0.03  # 3-7% drop fires Tier 2 (Tier 1 takes precedence)
@@ -35,6 +35,10 @@ PRICE_DROP_TIER2_THRESHOLD = -0.03  # 3-7% drop fires Tier 2 (Tier 1 takes prece
 # to clear BOTH a dollar floor AND a percent floor below.
 CROSS_SOURCE_DOLLAR_THRESHOLD = 1_500   # ≥$1,500 spread → Tier 1
 CROSS_SOURCE_PCT_THRESHOLD = 0.02       # ≥2% spread → Tier 1
+
+# Weekly cadence cap for dealer-site rechecks (per PROJECT.md politeness).
+DEALER_SITE_RECHECK_AGE = timedelta(days=7)
+DEALER_SITE_RECHECKS_PER_POLL = 2  # spread the load over multiple polls
 
 
 # ---- Listings I/O --------------------------------------------------------
@@ -69,7 +73,7 @@ def _insert_listing(conn: sqlite3.Connection, r: ParsedRecord, now: datetime) ->
             r.dealer_name, r.dealer_zip, r.dealer_state,
             r.year, r.model, r.trim, r.body_style,
             r.exterior_color, r.interior_color, r.mileage,
-            r.photo_url, None,  # listing_url: TODO once MBUSA URL pattern is confirmed
+            r.photo_url, mbusa_listing_url(r.vin),
             r.options_json, decoded_json,
             r.dealer_distance_miles,
             dealer_site_price, dealer_site_url, now,
@@ -148,6 +152,103 @@ def _insert_run(
          gone_count, reappeared_count, duration_ms, status, error_message),
     )
     return cur.lastrowid
+
+
+def _recheck_stale_dealer_sites(
+    conn: sqlite3.Connection, now: datetime, limit: int = DEALER_SITE_RECHECKS_PER_POLL,
+) -> list[dict]:
+    """Refresh `dealer_site_price` for up to `limit` listings whose
+    last check was ≥7 days ago (or NULL for legacy rows). Listings that
+    cross the cross-source spread threshold on a recheck fire Tier 1.
+
+    Politeness cap: at most `limit` per poll. With 36 listings and a
+    7-day cycle, ~5 rechecks/day → at limit=2 we cover 96/day in the
+    worst case, comfortably within the cycle without hammering anyone.
+    """
+    threshold = now - DEALER_SITE_RECHECK_AGE
+    rows = conn.execute(
+        "SELECT vin, dealer_name, dealer_site_url, dealer_site_price "
+        "FROM listings "
+        "WHERE status IN ('active', 'reappeared') "
+        "  AND dealer_site_url IS NOT NULL "
+        "  AND (dealer_site_checked_at IS NULL OR dealer_site_checked_at < ?) "
+        "ORDER BY COALESCE(dealer_site_checked_at, '1970-01-01') ASC "
+        "LIMIT ?",
+        (threshold.isoformat(), limit),
+    ).fetchall()
+
+    events: list[dict] = []
+    for row in rows:
+        vin = row["vin"]
+        url = row["dealer_site_url"]
+        new_price, fetched_url = dealer_site.check(vin, url)
+
+        conn.execute(
+            "UPDATE listings SET dealer_site_price = ?, dealer_site_url = ?, "
+            "  dealer_site_checked_at = ? WHERE vin = ?",
+            (new_price, fetched_url, now, vin),
+        )
+
+        # Look up MBUSA price for the spread comparison. Use the most recent
+        # price_history row — the same source notifications use elsewhere.
+        latest = conn.execute(
+            "SELECT price FROM price_history WHERE vin = ? AND price > 0 "
+            "ORDER BY observed_at DESC, id DESC LIMIT 1",
+            (vin,),
+        ).fetchone()
+        if (
+            new_price is not None
+            and latest is not None
+            and latest["price"] > 0
+        ):
+            spread = new_price - latest["price"]
+            spread_pct = spread / latest["price"]
+            if (
+                spread >= CROSS_SOURCE_DOLLAR_THRESHOLD
+                or spread_pct >= CROSS_SOURCE_PCT_THRESHOLD
+            ):
+                # Synthesize a minimal record for the notification.
+                # Most fields aren't needed for the cross-source helper —
+                # it primarily uses vin, mbusa_price, dealer info.
+                listing = conn.execute(
+                    "SELECT year, model, trim, body_style, exterior_color, "
+                    "interior_color, dealer_name, dealer_state, distance_miles, "
+                    "photo_url FROM listings WHERE vin = ?",
+                    (vin,),
+                ).fetchone()
+                synth = ParsedRecord(
+                    vin=vin,
+                    year=listing["year"],
+                    model=listing["model"],
+                    trim=listing["trim"],
+                    body_style=listing["body_style"],
+                    mbusa_price=latest["price"],
+                    mileage=None,
+                    exterior_color=listing["exterior_color"],
+                    exterior_color_code=None,
+                    interior_color=listing["interior_color"],
+                    engine=None,
+                    is_certified=None,
+                    dealer_id=None,
+                    dealer_name=listing["dealer_name"],
+                    dealer_zip=None,
+                    dealer_state=listing["dealer_state"],
+                    dealer_distance_miles=listing["distance_miles"],
+                    dealer_site_url=fetched_url,
+                    photo_url=listing["photo_url"],
+                    stock_id=None,
+                    options_json=None,
+                )
+                _notify_cross_source_discrepancy(
+                    conn, synth, new_price, fetched_url, spread, spread_pct,
+                )
+                events.append({
+                    "type": "cross_source_discrepancy", "vin": vin,
+                    "old_price": latest["price"], "new_price": new_price,
+                    "spread": spread, "spread_pct": spread_pct,
+                })
+
+    return events
 
 
 def _last_successful_count(conn: sqlite3.Connection) -> int | None:
@@ -261,7 +362,7 @@ def _notify_watchlist_match(conn, record: ParsedRecord, labels: list[str]) -> No
         title=f"Watchlist hit: {_format_listing_line(record)}",
         body="\n".join(f"{k}: {v}" for k, v in details.items()),
         vin=record.vin,
-        url=record.dealer_site_url,
+        url=mbusa_listing_url(record.vin),
         image_url=record.photo_url,
         year_trim=_year_trim_line(record),
         details=details,
@@ -285,7 +386,7 @@ def _notify_price_drop_major(conn, record: ParsedRecord, old_price: int, pct: fl
         title=f"Price drop {drop_pct:.1f}%: {_format_listing_line(record)}",
         body="\n".join(f"{k}: {v}" for k, v in details.items()),
         vin=record.vin,
-        url=record.dealer_site_url,
+        url=mbusa_listing_url(record.vin),
         image_url=record.photo_url,
         year_trim=_year_trim_line(record),
         details=details,
@@ -306,7 +407,7 @@ def _notify_reappeared(conn, record: ParsedRecord) -> None:
         title=f"Reappeared: {_format_listing_line(record)}",
         body="\n".join(f"{k}: {v}" for k, v in details.items()),
         vin=record.vin,
-        url=record.dealer_site_url,
+        url=mbusa_listing_url(record.vin),
         image_url=record.photo_url,
         year_trim=_year_trim_line(record),
         details=details,
@@ -333,6 +434,7 @@ def _notify_cross_source_discrepancy(
         "Dealer site": _money(dealer_site_price),
         "Spread": f"+{_money(spread).lstrip('$')} (+{spread_pct:.2%})",
         "Dealer": _dealer_line(record),
+        "Verify at": dealer_site_url or record.dealer_site_url or "—",
         "Body": "Same VIN, two prices. Use the lower (MBUSA) when negotiating.",
     }
     notify.send(
@@ -340,7 +442,7 @@ def _notify_cross_source_discrepancy(
         title=f"Cross-source spread {_money(spread)}: {_format_listing_line(record)}",
         body="\n".join(f"{k}: {v}" for k, v in details.items()),
         vin=record.vin,
-        url=dealer_site_url or record.dealer_site_url,
+        url=mbusa_listing_url(record.vin),
         image_url=record.photo_url,
         year_trim=_year_trim_line(record),
         details=details,
@@ -364,7 +466,7 @@ def _notify_new_listing_t2(conn, record: ParsedRecord) -> None:
         tier=2, event_type="new_listing",
         title=f"New: {_format_listing_line(record)}",
         body="\n".join(f"{k}: {v}" for k, v in details.items()),
-        vin=record.vin, url=record.dealer_site_url, image_url=record.photo_url,
+        vin=record.vin, url=mbusa_listing_url(record.vin), image_url=record.photo_url,
         year_trim=_year_trim_line(record),
         details=details,
         conn=conn,
@@ -388,7 +490,7 @@ def _notify_price_drop_minor_t2(
         tier=2, event_type="price_drop_minor",
         title=f"Price drop {drop_pct:.1f}%: {_format_listing_line(record)}",
         body="\n".join(f"{k}: {v}" for k, v in details.items()),
-        vin=record.vin, url=record.dealer_site_url, image_url=record.photo_url,
+        vin=record.vin, url=mbusa_listing_url(record.vin), image_url=record.photo_url,
         year_trim=_year_trim_line(record),
         details=details,
         conn=conn,
@@ -408,7 +510,7 @@ def _notify_dealer_change_t2(
         tier=2, event_type="dealer_change",
         title=f"Dealer change: {_format_listing_line(record)}",
         body="\n".join(f"{k}: {v}" for k, v in details.items()),
-        vin=record.vin, url=record.dealer_site_url, image_url=record.photo_url,
+        vin=record.vin, url=mbusa_listing_url(record.vin), image_url=record.photo_url,
         year_trim=_year_trim_line(record),
         details=details,
         conn=conn,
@@ -429,7 +531,7 @@ def _notify_mileage_anomaly_t2(
         tier=2, event_type="mileage_anomaly",
         title=f"Mileage anomaly: {_format_listing_line(record)}",
         body="\n".join(f"{k}: {v}" for k, v in details.items()),
-        vin=record.vin, url=record.dealer_site_url, image_url=record.photo_url,
+        vin=record.vin, url=mbusa_listing_url(record.vin), image_url=record.photo_url,
         year_trim=_year_trim_line(record),
         details=details,
         conn=conn,
@@ -453,6 +555,7 @@ def _notify_gone_t3(conn, gone_row: dict) -> None:
         title=f"Gone: {last_known} · {gone_row['vin']}",
         body="\n".join(f"{k}: {v}" for k, v in details.items()),
         vin=gone_row["vin"],
+        url=mbusa_listing_url(gone_row["vin"]),
         year_trim=last_known,
         details=details,
         conn=conn,
@@ -475,7 +578,7 @@ def _notify_price_drop_silent_t3(
         tier=3, event_type="price_drop_silent",
         title=f"Price drop {drop_pct:.2f}%: {_format_listing_line(record)}",
         body="\n".join(f"{k}: {v}" for k, v in details.items()),
-        vin=record.vin, url=record.dealer_site_url, image_url=record.photo_url,
+        vin=record.vin, url=mbusa_listing_url(record.vin), image_url=record.photo_url,
         year_trim=_year_trim_line(record),
         details=details,
         conn=conn,
@@ -682,6 +785,14 @@ def reconcile(
                     _notify_mileage_anomaly_t2(conn, record, old_mileage)
 
         _update_listing(conn, record.vin, updates)
+
+    # Weekly dealer-site recheck (politeness cap: DEALER_SITE_RECHECKS_PER_POLL).
+    # Per PROJECT.md: dealer-site fetch on first sight + once per week. The
+    # first-sight branch happens in _insert_listing above; this handles the
+    # weekly cadence. Failures store NULL silently. Discrepancy hits fire
+    # Tier 1 cross-source alerts.
+    recheck_events = _recheck_stale_dealer_sites(conn, started_at)
+    events.extend(recheck_events)
 
     # Vanished VINs → 'gone'
     for vin, row in existing.items():
