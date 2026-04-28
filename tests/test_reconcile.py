@@ -728,3 +728,138 @@ def test_vin_decode_only_called_for_new_listings(monkeypatch, conn):
     reconcile([r], conn, now=T0 + timedelta(hours=2))
 
     assert calls == [r.vin]  # one call total, not three
+
+
+# ---- step 10: cross-source price discrepancy ---------------------------
+
+def test_cross_source_data_persisted_on_first_sight(monkeypatch, conn):
+    """When dealer_site.check returns a price, all three new columns get filled."""
+    import reconcile as recon_mod
+    monkeypatch.setattr(
+        recon_mod.dealer_site, "check",
+        lambda vin, url: (67_500, "https://example.com"),
+    )
+
+    r = _record("V________________1",
+                mbusa_price=65000, dealer_site_url="https://example.com")
+    reconcile([r], conn, now=T0)
+
+    row = conn.execute(
+        "SELECT dealer_site_price, dealer_site_url, dealer_site_checked_at "
+        "FROM listings WHERE vin = ?", (r.vin,),
+    ).fetchone()
+    assert row["dealer_site_price"] == 67_500
+    assert row["dealer_site_url"] == "https://example.com"
+    assert row["dealer_site_checked_at"] is not None
+
+
+def test_cross_source_failure_stores_null_price_and_does_not_alert(monkeypatch, conn):
+    """When the extractor returns None for price, no alert fires and the
+    listing tracks normally with NULL price."""
+    import reconcile as recon_mod
+    monkeypatch.setattr(
+        recon_mod.dealer_site, "check",
+        lambda vin, url: (None, "https://example.com"),
+    )
+    calls = _capture_notify_calls(monkeypatch)
+
+    r = _record("V________________1", mbusa_price=65000,
+                dealer_site_url="https://example.com")
+    reconcile([r], conn, now=T0)
+
+    assert not any(c.get("event_type") == "cross_source_discrepancy"
+                   for c in calls)
+    row = conn.execute(
+        "SELECT dealer_site_price FROM listings WHERE vin = ?", (r.vin,),
+    ).fetchone()
+    assert row["dealer_site_price"] is None
+
+
+def test_cross_source_dollar_threshold_fires_tier1(monkeypatch, conn):
+    """Dealer site at $66,800 vs MBUSA at $65,000 = $1,800 spread (≥$1,500)
+    → fires Tier 1 cross_source_discrepancy."""
+    import reconcile as recon_mod
+    monkeypatch.setattr(
+        recon_mod.dealer_site, "check",
+        lambda vin, url: (66_800, "https://example.com"),
+    )
+    calls = _capture_notify_calls(monkeypatch)
+
+    r = _record("V________________1", mbusa_price=65_000,
+                dealer_site_url="https://example.com")
+    reconcile([r], conn, now=T0)
+
+    cross = [c for c in calls if c.get("event_type") == "cross_source_discrepancy"]
+    assert len(cross) == 1
+    assert cross[0]["tier"] == 1
+
+
+def test_cross_source_pct_threshold_fires_tier1(monkeypatch, conn):
+    """Dealer site at $66,400 vs MBUSA at $65,000 = $1,400 (<$1,500) but
+    2.15% (≥2%) — pct threshold fires alone."""
+    import reconcile as recon_mod
+    monkeypatch.setattr(
+        recon_mod.dealer_site, "check",
+        lambda vin, url: (66_400, "https://example.com"),
+    )
+    calls = _capture_notify_calls(monkeypatch)
+
+    r = _record("V________________1", mbusa_price=65_000,
+                dealer_site_url="https://example.com")
+    reconcile([r], conn, now=T0)
+
+    cross = [c for c in calls if c.get("event_type") == "cross_source_discrepancy"]
+    assert len(cross) == 1
+
+
+def test_cross_source_below_thresholds_no_alert(monkeypatch, conn):
+    """Spread under both thresholds (e.g. $500 / 0.7%) doesn't alert."""
+    import reconcile as recon_mod
+    monkeypatch.setattr(
+        recon_mod.dealer_site, "check",
+        lambda vin, url: (65_500, "https://example.com"),
+    )
+    calls = _capture_notify_calls(monkeypatch)
+
+    r = _record("V________________1", mbusa_price=65_000,
+                dealer_site_url="https://example.com")
+    reconcile([r], conn, now=T0)
+
+    assert not any(c.get("event_type") == "cross_source_discrepancy"
+                   for c in calls)
+
+
+def test_cross_source_dealer_lower_no_alert(monkeypatch, conn):
+    """If the dealer's site is CHEAPER than MBUSA (negative spread), no alert.
+    The Feb 11 lesson is dealer-site-HIGHER → leverage. Dealer-site-lower
+    just means the dealer hasn't synced; nothing to negotiate with."""
+    import reconcile as recon_mod
+    monkeypatch.setattr(
+        recon_mod.dealer_site, "check",
+        lambda vin, url: (60_000, "https://example.com"),
+    )
+    calls = _capture_notify_calls(monkeypatch)
+
+    r = _record("V________________1", mbusa_price=65_000,
+                dealer_site_url="https://example.com")
+    reconcile([r], conn, now=T0)
+
+    assert not any(c.get("event_type") == "cross_source_discrepancy"
+                   for c in calls)
+
+
+def test_cross_source_only_on_first_sight(monkeypatch, conn):
+    """Existing VINs don't re-fetch the dealer site each poll."""
+    import reconcile as recon_mod
+    calls = []
+    monkeypatch.setattr(
+        recon_mod.dealer_site, "check",
+        lambda vin, url: (calls.append(vin), (None, url))[1],
+    )
+
+    r = _record("V________________1", dealer_site_url="https://example.com")
+    reconcile([r], conn, now=T0)
+    reconcile([r], conn, now=T0 + timedelta(hours=1))
+    reconcile([r], conn, now=T0 + timedelta(hours=2))
+
+    assert calls == [r.vin]  # one fetch total, not three

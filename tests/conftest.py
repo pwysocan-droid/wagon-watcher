@@ -25,3 +25,12 @@ def _mock_vin_decode(monkeypatch):
     exercise the decode wiring override this with their own monkeypatch."""
     import vin_decode
     monkeypatch.setattr(vin_decode, "decode", lambda vin, **kw: None)
+
+
+@pytest.fixture(autouse=True)
+def _mock_dealer_site(monkeypatch):
+    """Default every test to a no-op dealer_site.check so reconcile tests
+    don't hit external dealer websites. Tests that exercise the cross-source
+    wiring override with their own monkeypatch."""
+    import dealer_site
+    monkeypatch.setattr(dealer_site, "check", lambda vin, url: (None, url))

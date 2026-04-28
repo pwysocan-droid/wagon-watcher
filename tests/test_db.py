@@ -271,3 +271,24 @@ def test_distance_miles_down_migration_drops_column(conn):
     assert "distance_miles" not in cols
     # fair_price columns still there
     assert "fair_price_pct" in cols
+
+
+# ---- migration 006: cross-source columns ----------------------------------
+
+def test_cross_source_columns_exist(conn):
+    migrate(conn)
+    cols = {r[1] for r in conn.execute("PRAGMA table_info(listings)")}
+    assert "dealer_site_price" in cols
+    assert "dealer_site_url" in cols
+    assert "dealer_site_checked_at" in cols
+
+
+def test_cross_source_down_migration_drops_only_those(conn):
+    migrate(conn)
+    migrate(conn, target=5)
+    cols = {r[1] for r in conn.execute("PRAGMA table_info(listings)")}
+    assert "dealer_site_price" not in cols
+    assert "dealer_site_url" not in cols
+    assert "dealer_site_checked_at" not in cols
+    # distance_miles (from migration 005) still there
+    assert "distance_miles" in cols

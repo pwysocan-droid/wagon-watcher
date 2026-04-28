@@ -22,6 +22,7 @@ import sqlite3
 from datetime import datetime, timezone
 from typing import Any
 
+import dealer_site
 import fairprice
 import notify
 import vin_decode
@@ -29,6 +30,11 @@ from scrape import ParsedRecord
 
 PRICE_DROP_TIER1_THRESHOLD = -0.07  # ≥7% drop fires Tier 1
 PRICE_DROP_TIER2_THRESHOLD = -0.03  # 3-7% drop fires Tier 2 (Tier 1 takes precedence)
+
+# Cross-source discrepancy thresholds (Tier 1). The dealer-site price has
+# to clear BOTH a dollar floor AND a percent floor below.
+CROSS_SOURCE_DOLLAR_THRESHOLD = 1_500   # ≥$1,500 spread → Tier 1
+CROSS_SOURCE_PCT_THRESHOLD = 0.02       # ≥2% spread → Tier 1
 
 
 # ---- Listings I/O --------------------------------------------------------
@@ -40,14 +46,20 @@ _LISTING_COLUMNS = (
     "exterior_color", "interior_color", "mileage_first_seen",
     "photo_url", "listing_url", "options_json", "vin_decode_json",
     "distance_miles",
+    "dealer_site_price", "dealer_site_url", "dealer_site_checked_at",
 )
 
 
 def _insert_listing(conn: sqlite3.Connection, r: ParsedRecord, now: datetime) -> None:
-    """Insert a fresh listing. NHTSA decode is best-effort and runs once per
-    VIN ever — failures store NULL and the listing tracks normally without."""
+    """Insert a fresh listing. NHTSA decode + dealer-site cross-check are
+    best-effort and run once per VIN ever — failures store NULL and the
+    listing tracks normally without them."""
     decoded = vin_decode.decode(r.vin)
     decoded_json = json.dumps(decoded) if decoded is not None else None
+
+    # Cross-source price check on first sight (per PROJECT.md politeness:
+    # only on first sight + weekly thereafter — weekly recheck not yet built).
+    dealer_site_price, dealer_site_url = dealer_site.check(r.vin, r.dealer_site_url)
 
     conn.execute(
         f"INSERT INTO listings ({', '.join(_LISTING_COLUMNS)}) "
@@ -60,8 +72,27 @@ def _insert_listing(conn: sqlite3.Connection, r: ParsedRecord, now: datetime) ->
             r.photo_url, None,  # listing_url: TODO once MBUSA URL pattern is confirmed
             r.options_json, decoded_json,
             r.dealer_distance_miles,
+            dealer_site_price, dealer_site_url, now,
         ),
     )
+
+    # Tier 1 cross-source alert: dealer's own site asks meaningfully more
+    # than MBUSA's portal. Per PROJECT.md the Feb 2026 case was $3,000 /
+    # ~4% — strongest negotiation leverage available.
+    if (
+        dealer_site_price is not None
+        and r.mbusa_price is not None
+        and r.mbusa_price > 0
+    ):
+        spread = dealer_site_price - r.mbusa_price
+        spread_pct = spread / r.mbusa_price
+        if (
+            spread >= CROSS_SOURCE_DOLLAR_THRESHOLD
+            or spread_pct >= CROSS_SOURCE_PCT_THRESHOLD
+        ):
+            _notify_cross_source_discrepancy(
+                conn, r, dealer_site_price, dealer_site_url, spread, spread_pct,
+            )
 
 
 def _update_listing(conn: sqlite3.Connection, vin: str, fields: dict[str, Any]) -> None:
@@ -276,6 +307,40 @@ def _notify_reappeared(conn, record: ParsedRecord) -> None:
         body="\n".join(f"{k}: {v}" for k, v in details.items()),
         vin=record.vin,
         url=record.dealer_site_url,
+        image_url=record.photo_url,
+        year_trim=_year_trim_line(record),
+        details=details,
+        conn=conn,
+    )
+
+
+# ---- Tier 1 cross-source discrepancy (the Feb 11 lesson) ------------------
+
+def _notify_cross_source_discrepancy(
+    conn,
+    record: ParsedRecord,
+    dealer_site_price: int,
+    dealer_site_url: str | None,
+    spread: int,
+    spread_pct: float,
+) -> None:
+    """Tier 1 alert: dealer's own site lists this VIN at meaningfully MORE
+    than MBUSA's portal. The dealer can't defend the gap because it's their
+    own brand's inventory system contradicting them — strongest negotiation
+    leverage available. Per PROJECT.md, the Feb 2026 case was $3,000 / ~4%."""
+    details = {
+        "MBUSA portal": _money(record.mbusa_price),
+        "Dealer site": _money(dealer_site_price),
+        "Spread": f"+{_money(spread).lstrip('$')} (+{spread_pct:.2%})",
+        "Dealer": _dealer_line(record),
+        "Body": "Same VIN, two prices. Use the lower (MBUSA) when negotiating.",
+    }
+    notify.send(
+        tier=1, event_type="cross_source_discrepancy",
+        title=f"Cross-source spread {_money(spread)}: {_format_listing_line(record)}",
+        body="\n".join(f"{k}: {v}" for k, v in details.items()),
+        vin=record.vin,
+        url=dealer_site_url or record.dealer_site_url,
         image_url=record.photo_url,
         year_trim=_year_trim_line(record),
         details=details,
