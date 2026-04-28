@@ -1,8 +1,14 @@
 """Diff scrape output against the DB. Writes listings, price_history, runs.
 
-Pure-ish: takes a DB connection (caller controls lifecycle). Honors DRY_RUN by
-rolling back the transaction at the end. Emits a list of events for notify.py
-to route — does NOT dispatch notifications itself.
+Takes a DB connection (caller controls lifecycle). Honors DRY_RUN by rolling
+back the transaction at the end.
+
+Step 5: wires Tier 1 notifications via `notify.send()` for three event types:
+  - watchlist_match (new listing matches an active watchlist spec)
+  - price_drop_major (existing VIN's price dropped ≥7%)
+  - reappeared      (VIN was 'gone', now back)
+
+The fourth Tier 1 case — scraper_aborted — fires from run.py instead.
 
 Per PROJECT.md "Health check": refuses to write if listings_found == 0 OR
 listings_found < 0.5 * <last successful run's count>. On abort, writes a
@@ -10,12 +16,16 @@ runs row with status='aborted' and emits an 'aborted' event.
 """
 from __future__ import annotations
 
+import json
 import os
 import sqlite3
 from datetime import datetime, timezone
 from typing import Any
 
+import notify
 from scrape import ParsedRecord
+
+PRICE_DROP_TIER1_THRESHOLD = -0.07  # ≥7% drop fires Tier 1
 
 
 # ---- Listings I/O --------------------------------------------------------
@@ -107,6 +117,115 @@ def _last_successful_count(conn: sqlite3.Connection) -> int | None:
     return row["listings_found"] if row else None
 
 
+# ---- Watchlist matching --------------------------------------------------
+
+def _matches_spec(record: ParsedRecord, spec: dict) -> bool:
+    """AND-within-row evaluation of a watchlist spec against a parsed record.
+
+    Recognized keys: trim, body_style, min_year, max_year, min_mileage,
+    max_mileage, min_price, max_price_all_in. Unknown keys are ignored
+    (forward-compatible). A None value on the record fails the constraint
+    rather than passing it — defensive.
+    """
+    if "trim" in spec and record.trim != spec["trim"]:
+        return False
+    if "body_style" in spec and record.body_style != spec["body_style"]:
+        return False
+    if "min_year" in spec and (record.year is None or record.year < spec["min_year"]):
+        return False
+    if "max_year" in spec and (record.year is None or record.year > spec["max_year"]):
+        return False
+    if "min_mileage" in spec and (record.mileage is None or record.mileage < spec["min_mileage"]):
+        return False
+    if "max_mileage" in spec and (record.mileage is None or record.mileage > spec["max_mileage"]):
+        return False
+    if "min_price" in spec and (record.mbusa_price is None or record.mbusa_price < spec["min_price"]):
+        return False
+    if "max_price_all_in" in spec and (record.mbusa_price is None or record.mbusa_price > spec["max_price_all_in"]):
+        return False
+    return True
+
+
+def _matching_watchlist_labels(conn: sqlite3.Connection, record: ParsedRecord) -> list[str]:
+    """Return labels of all active watchlist rows the record matches.
+    OR-across-rows: any active 'spec' row matching is a hit."""
+    rows = conn.execute(
+        "SELECT spec_json, label FROM watchlist "
+        "WHERE active = 1 AND kind = 'spec'"
+    ).fetchall()
+    matches = []
+    for row in rows:
+        try:
+            spec = json.loads(row["spec_json"])
+        except (TypeError, json.JSONDecodeError):
+            continue  # malformed spec — skip rather than crash reconcile
+        if _matches_spec(record, spec):
+            matches.append(row["label"])
+    return matches
+
+
+# ---- Notification payload builders --------------------------------------
+
+def _format_listing_line(r: ParsedRecord) -> str:
+    """Single-line summary used in notification titles/bodies."""
+    price = f"${r.mbusa_price:,}" if r.mbusa_price else "$?"
+    miles = f"{r.mileage:,} mi" if r.mileage is not None else "? mi"
+    yr = r.year or "?"
+    dealer = r.dealer_name or "unknown dealer"
+    return f"{yr} {r.trim or '?'} · {price} · {miles} · {dealer}"
+
+
+def _notify_watchlist_match(conn, record: ParsedRecord, labels: list[str]) -> None:
+    notify.send(
+        tier=1, event_type="watchlist_match",
+        title=f"Watchlist hit: {_format_listing_line(record)}",
+        body=(
+            f"VIN {record.vin}\n"
+            f"{record.exterior_color or '?'} / {record.interior_color or '?'}\n"
+            f"{record.dealer_state or '?'}, {record.dealer_distance_miles or '?'} mi away\n"
+            f"Matches: {', '.join(labels)}"
+        ),
+        vin=record.vin,
+        url=record.dealer_site_url,
+        image_url=record.photo_url,
+        conn=conn,
+    )
+
+
+def _notify_price_drop_major(conn, record: ParsedRecord, old_price: int, pct: float) -> None:
+    drop_pct = abs(pct) * 100
+    delta = (record.mbusa_price or 0) - old_price
+    notify.send(
+        tier=1, event_type="price_drop_major",
+        title=f"Price drop {drop_pct:.1f}%: {_format_listing_line(record)}",
+        body=(
+            f"VIN {record.vin}\n"
+            f"Was ${old_price:,} → now ${record.mbusa_price:,} ({delta:+,})\n"
+            f"{record.dealer_name or '?'} ({record.dealer_state or '?'})"
+        ),
+        vin=record.vin,
+        url=record.dealer_site_url,
+        image_url=record.photo_url,
+        conn=conn,
+    )
+
+
+def _notify_reappeared(conn, record: ParsedRecord) -> None:
+    notify.send(
+        tier=1, event_type="reappeared",
+        title=f"Reappeared: {_format_listing_line(record)}",
+        body=(
+            f"VIN {record.vin}\n"
+            f"Was 'gone'; relisted at {record.dealer_name or '?'} "
+            f"({record.dealer_state or '?'}, {record.dealer_distance_miles or '?'} mi)"
+        ),
+        vin=record.vin,
+        url=record.dealer_site_url,
+        image_url=record.photo_url,
+        conn=conn,
+    )
+
+
 # ---- Reconcile -----------------------------------------------------------
 
 def reconcile(
@@ -182,6 +301,15 @@ def reconcile(
             )
             events.append({"type": "new", "vin": record.vin, "record": record})
             new_count += 1
+
+            # Tier 1: watchlist match. Fire only on the first sighting.
+            labels = _matching_watchlist_labels(conn, record)
+            if labels:
+                events.append({
+                    "type": "watchlist_match", "vin": record.vin,
+                    "record": record, "labels": labels,
+                })
+                _notify_watchlist_match(conn, record, labels)
             continue
 
         # Existing — collect updates
@@ -193,6 +321,8 @@ def reconcile(
             updates["gone_at"] = None
             events.append({"type": "reappeared", "vin": record.vin, "record": record})
             reappeared_count += 1
+            # Tier 1: reappeared VIN.
+            _notify_reappeared(conn, record)
         elif existing_row["status"] == "reappeared":
             # Promote on next sighting so the alert doesn't fire forever
             updates["status"] = "active"
@@ -233,6 +363,9 @@ def reconcile(
                         "record": record,
                     })
                     changed_count += 1
+                    # Tier 1: price drop ≥7%
+                    if pct <= PRICE_DROP_TIER1_THRESHOLD:
+                        _notify_price_drop_major(conn, record, last["price"], pct)
                 if (
                     mileage_changed
                     and last["mileage"] is not None

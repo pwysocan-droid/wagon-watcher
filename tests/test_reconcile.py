@@ -328,3 +328,120 @@ def test_dry_run_env_var(monkeypatch, conn):
     r = _record("V00000000000000001")
     reconcile([r], conn, now=T0)
     assert conn.execute("SELECT COUNT(*) FROM listings").fetchone()[0] == 0
+
+
+# ---- Tier 1 notification call sites (step 5) ----------------------------
+
+def _capture_notify_calls(monkeypatch):
+    """Replace reconcile.notify.send with a recorder; return the list."""
+    calls: list[dict] = []
+
+    def fake(**kw):
+        calls.append(kw)
+        return True
+
+    monkeypatch.setattr("reconcile.notify.send", fake)
+    return calls
+
+
+def test_watchlist_match_fires_tier1_notification(monkeypatch, conn):
+    """A NEW listing matching the seeded watchlist spec triggers exactly one
+    tier=1 watchlist_match notification.
+
+    The seed (per migration 003): trim=E450S4, body=WGN, year≥2024,
+    mileage≤15000, max_price_all_in=68000.
+    """
+    calls = _capture_notify_calls(monkeypatch)
+
+    matching = _record("V00000000000000001",
+                       year=2025, mileage=10000, mbusa_price=65000)
+    too_old = _record("V00000000000000002",
+                      year=2023, mileage=10000, mbusa_price=65000)
+    too_pricey = _record("V00000000000000003",
+                         year=2025, mileage=10000, mbusa_price=70000)
+    reconcile([matching, too_old, too_pricey], conn, now=T0)
+
+    watchlist_calls = [c for c in calls if c.get("event_type") == "watchlist_match"]
+    assert len(watchlist_calls) == 1
+    assert watchlist_calls[0]["tier"] == 1
+    assert watchlist_calls[0]["vin"] == "V00000000000000001"
+
+
+def test_watchlist_match_only_on_new_not_repeat_sightings(monkeypatch, conn):
+    """A VIN that already exists in listings doesn't re-fire watchlist_match
+    on subsequent runs. Tier 1 should fire once per new VIN, not once per poll."""
+    calls = _capture_notify_calls(monkeypatch)
+    matching = _record("V00000000000000001",
+                       year=2025, mileage=10000, mbusa_price=65000)
+
+    reconcile([matching], conn, now=T0)
+    reconcile([matching], conn, now=T0 + timedelta(hours=1))
+
+    watchlist_calls = [c for c in calls if c.get("event_type") == "watchlist_match"]
+    assert len(watchlist_calls) == 1
+
+
+def test_price_drop_at_threshold_fires_tier1(monkeypatch, conn):
+    """A price drop ≥7% fires Tier 1 price_drop_major. 7.14% is enough."""
+    r = _record("V00000000000000001", mbusa_price=70000)
+    reconcile([r], conn, now=T0)
+
+    calls = _capture_notify_calls(monkeypatch)
+    cheaper = replace(r, mbusa_price=65000)  # -7.14%
+    reconcile([cheaper], conn, now=T0 + timedelta(hours=1))
+
+    drops = [c for c in calls if c.get("event_type") == "price_drop_major"]
+    assert len(drops) == 1
+    assert drops[0]["tier"] == 1
+    assert drops[0]["vin"] == "V00000000000000001"
+
+
+def test_price_drop_below_threshold_no_tier1(monkeypatch, conn):
+    """A 5% drop does not fire Tier 1 price_drop_major (becomes Tier 2 in step 9)."""
+    r = _record("V00000000000000001", mbusa_price=70000)
+    reconcile([r], conn, now=T0)
+
+    calls = _capture_notify_calls(monkeypatch)
+    smaller = replace(r, mbusa_price=66500)  # -5%
+    reconcile([smaller], conn, now=T0 + timedelta(hours=1))
+
+    assert not any(c.get("event_type") == "price_drop_major" for c in calls)
+
+
+def test_price_increase_no_tier1(monkeypatch, conn):
+    """A price INCREASE doesn't fire price_drop_major regardless of magnitude."""
+    r = _record("V00000000000000001", mbusa_price=70000)
+    reconcile([r], conn, now=T0)
+
+    calls = _capture_notify_calls(monkeypatch)
+    pricier = replace(r, mbusa_price=80000)  # +14%
+    reconcile([pricier], conn, now=T0 + timedelta(hours=1))
+
+    assert not any(c.get("event_type") == "price_drop_major" for c in calls)
+
+
+def test_reappeared_fires_tier1(monkeypatch, conn):
+    """A VIN that was 'gone' and shows up again fires Tier 1 reappeared."""
+    rs = [_record(f"V{i:017d}") for i in range(10)]
+    reconcile(rs, conn, now=T0)
+    reconcile(rs[1:], conn, now=T0 + timedelta(hours=1))  # rs[0] marked gone
+
+    calls = _capture_notify_calls(monkeypatch)
+    reconcile(rs, conn, now=T0 + timedelta(hours=2))  # rs[0] reappears
+
+    reapp = [c for c in calls if c.get("event_type") == "reappeared"]
+    assert len(reapp) == 1
+    assert reapp[0]["tier"] == 1
+    assert reapp[0]["vin"] == rs[0].vin
+
+
+def test_gone_does_not_fire_tier1(monkeypatch, conn):
+    """A VIN going 'gone' is Tier 3 (digest-only), not Tier 1."""
+    calls = _capture_notify_calls(monkeypatch)
+    rs = [_record(f"V{i:017d}") for i in range(10)]
+    reconcile(rs, conn, now=T0)
+    reconcile(rs[1:], conn, now=T0 + timedelta(hours=1))  # rs[0] marked gone
+
+    # No Tier 1 'gone' event should fire (Tier 3 wiring is step 9).
+    assert not any(c.get("tier") == 1 and "gone" in str(c.get("event_type", ""))
+                   for c in calls)
