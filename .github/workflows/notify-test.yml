@@ -1,0 +1,38 @@
+name: notify-test
+
+# Manual-trigger only. Sends one real Pushover notification with title
+# "wagon-watcher integration test". Use this once after merging step 5
+# to confirm the notification path works end-to-end.
+#
+#   gh workflow run notify-test.yml -R pwysocan-droid/wagon-watcher
+#
+# The workflow does NOT push anything to the repo. It only sends a test
+# notification and exits. The audit row written to the notifications table
+# is discarded along with the runner.
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 2
+    steps:
+      - uses: actions/checkout@v5
+
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.13'
+
+      - name: Install runtime dependencies
+        run: pip install --quiet -r requirements.txt
+
+      - name: Send test Pushover notification
+        env:
+          PUSHOVER_USER_KEY: ${{ secrets.PUSHOVER_USER_KEY }}
+          PUSHOVER_API_TOKEN: ${{ secrets.PUSHOVER_API_TOKEN }}
+          PUSHOVER_ENABLED: "true"
+        run: python notify.py --test
