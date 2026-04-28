@@ -1,0 +1,62 @@
+name: fairprice
+
+# Nightly recompute of fair_price_pct + fair_price_tier on listings, per
+# PROJECT.md "Run nightly via a separate workflow step". The 30-min watch
+# cron does NOT run this — keeps the per-poll path fast and isolates this
+# work to one O(N²) sweep per night.
+#
+# Why nightly: the comp pool only changes when a listing is added, dropped,
+# or its price is updated. At 30-min polling on a 36-car national pool,
+# fresh percentiles are useful but not urgent enough to justify recomputing
+# every poll. New listings get a freshly-computed percentile inline at
+# notification time anyway (see reconcile._percentile_line).
+
+on:
+  schedule:
+    - cron: '0 7 * * *'   # 07:00 UTC daily (00:00 PDT / 23:00 PST)
+  workflow_dispatch:
+
+concurrency:
+  group: fairprice
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  recompute:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v5
+
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.13'
+
+      - name: Install runtime dependencies
+        run: pip install --quiet -r requirements.txt
+
+      - name: Recompute percentiles
+        id: run
+        run: |
+          MSG=$(python fairprice.py)
+          echo "$MSG"
+          echo "msg=$MSG" >> "$GITHUB_OUTPUT"
+
+      - name: Configure git for self-commit
+        run: |
+          git config user.name  'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+
+      - name: Commit and push state
+        run: |
+          git add data/inventory.db
+          if git diff --cached --quiet; then
+            echo "No DB changes to commit"
+          else
+            git commit -m "${{ steps.run.outputs.msg }}"
+            # Defensive: the watch cron may have committed during this run.
+            git pull --rebase --autostash origin main || true
+            git push
+          fi
