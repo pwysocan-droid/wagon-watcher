@@ -15,3 +15,4 @@ data/inventory.db-shm
 
 # Transient state file written by run.py for the GHA workflow to pick up
 .run-commit-msg.txt
+.vercel

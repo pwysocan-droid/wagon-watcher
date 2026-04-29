@@ -1,0 +1,574 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>wagon-watcher · v2 ticker</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;400;500;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
+<style>
+/* PROJECT.md design system + v2 extensions per HANDOFF_dashboard_v2.md */
+:root {
+  --bg: #0a0a0a;
+  --fg: #f0ede8;
+  --muted: #888888;
+  --rule: #222222;
+  --signal: #EB0000;       /* SBB Red — only for the loudest signals */
+  --soft-crimson: #B84444; /* price-move signals */
+  --grey-soft: #555555;    /* flat / no-change */
+  --row-active: rgba(240, 237, 232, 0.025);
+  --row-hover: rgba(240, 237, 232, 0.06);
+
+  --font-sans: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: 'JetBrains Mono', 'IBM Plex Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0; padding: 0;
+  background: var(--bg);
+  color: var(--fg);
+  font-family: var(--font-sans);
+  font-feature-settings: "tnum", "zero", "ss01", "cv11";
+  font-size: 14px; line-height: 1.5; letter-spacing: -0.005em;
+  -webkit-font-smoothing: antialiased;
+}
+
+a { color: inherit; text-decoration: none; }
+
+main { max-width: 1280px; margin: 0 auto; padding: 32px; }
+
+/* ---- header ---- */
+header {
+  display: flex; justify-content: space-between; align-items: flex-start;
+  padding-bottom: 24px; border-bottom: 1px solid var(--fg);
+}
+.brand-marker {
+  font-family: var(--font-mono); font-size: 10px;
+  letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted);
+  margin-bottom: 8px;
+}
+.brand-light { font-size: 28px; font-weight: 200; letter-spacing: -0.02em; line-height: 1; }
+.brand-heavy { font-size: 28px; font-weight: 700; letter-spacing: -0.02em; line-height: 1; margin-top: 4px; }
+.meta {
+  text-align: right; font-family: var(--font-mono); font-size: 10px;
+  color: var(--muted); line-height: 1.7; font-feature-settings: "tnum";
+}
+.meta a { border-bottom: 1px solid currentColor; }
+
+/* ---- stat row ---- */
+.stats {
+  display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px;
+  margin: 32px 0; padding-bottom: 32px; border-bottom: 1px solid var(--rule);
+}
+.stat-label {
+  font-family: var(--font-mono); font-size: 10px;
+  letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted);
+  margin-bottom: 12px;
+}
+.stat-value {
+  font-family: var(--font-sans); font-weight: 100;
+  font-size: 64px; line-height: 0.95; letter-spacing: -0.04em;
+  font-feature-settings: "tnum", "ss01";
+}
+.stat-sub { font-family: var(--font-mono); font-size: 10px; color: var(--muted); margin-top: 6px; }
+.stat-watchlist .stat-label, .stat-watchlist .stat-value { color: var(--signal); }
+
+/* ---- section bar ---- */
+.section-bar {
+  display: flex; justify-content: space-between; align-items: baseline;
+  margin-bottom: 16px;
+}
+.section-marker {
+  font-family: var(--font-mono); font-size: 10px;
+  letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted);
+}
+.period-toggle {
+  font-family: var(--font-mono); font-size: 10px;
+  letter-spacing: 0.05em; color: var(--muted); display: flex; gap: 14px;
+}
+.period-toggle button {
+  background: none; border: none; padding: 0;
+  font: inherit; color: inherit; cursor: pointer;
+  letter-spacing: inherit; text-transform: uppercase;
+}
+.period-toggle button.active { color: var(--fg); border-bottom: 1px solid var(--fg); }
+.period-toggle button:hover { color: var(--fg); }
+
+/* ---- table ---- */
+table.ticker {
+  width: 100%; border-collapse: collapse;
+  font-family: var(--font-mono); font-size: 11px;
+  font-feature-settings: "tnum", "zero";
+}
+table.ticker thead tr { border-bottom: 1px solid var(--fg); }
+table.ticker th {
+  text-align: left; padding: 10px 8px;
+  font-size: 9px; font-weight: 500; letter-spacing: 0.1em;
+  text-transform: uppercase; color: var(--muted);
+}
+table.ticker th.num { text-align: right; }
+table.ticker tbody tr {
+  border-bottom: 1px solid var(--rule);
+  transition: background 0.12s;
+}
+table.ticker tbody tr.active { background: var(--row-active); }
+table.ticker tbody tr.active td { padding: 11px 8px; }
+table.ticker tbody tr:not(.active) td { padding: 9px 8px; }
+table.ticker tbody tr:hover { background: var(--row-hover); }
+
+td.num { text-align: right; }
+td.greyed, tr.greyed td { color: var(--muted); }
+
+.vin-link {
+  font-family: var(--font-mono);
+  border-bottom: 1px solid currentColor;
+  letter-spacing: -0.01em;
+}
+.watchlist-flag {
+  font-size: 0.7em; vertical-align: super;
+  color: var(--signal); margin-left: 2px; font-weight: 700;
+}
+
+/* ---- triangle indicators (CSS borders, no SVG) ---- */
+.tri { display: inline-block; vertical-align: middle; margin-right: 4px; }
+.tri-down {
+  width: 0; height: 0;
+  border-left: 4px solid transparent; border-right: 4px solid transparent;
+  border-top: 6px solid var(--soft-crimson);
+}
+.tri-up {
+  width: 0; height: 0;
+  border-left: 4px solid transparent; border-right: 4px solid transparent;
+  border-bottom: 6px solid var(--fg);
+}
+.tri-flat {
+  display: inline-block; width: 8px; height: 1px;
+  background: var(--grey-soft); margin: 0 4px 3px 0;
+}
+
+/* ---- price cell two-line ---- */
+.asking-cell { line-height: 1.2; }
+.asking-cell .now { font-weight: 700; font-size: 12px; }
+.asking-cell .delta { font-size: 10px; color: var(--muted); margin-top: 2px; }
+.asking-cell .delta.down { color: var(--soft-crimson); }
+.asking-cell .delta.up { color: var(--fg); }
+
+/* ---- percentile tab ---- */
+.pct-tab {
+  display: inline-block; padding: 2px 6px;
+  border: 1px solid var(--rule); border-radius: 0;
+  font-family: var(--font-mono); font-size: 10px;
+  letter-spacing: -0.01em;
+}
+.pct-tab.deal { border-color: var(--signal); color: var(--signal); font-weight: 700; }
+
+/* ---- sparkline ---- */
+.spark { display: block; }
+
+/* ---- footer marginalia ---- */
+.legend {
+  margin-top: 32px; padding-top: 16px; border-top: 1px solid var(--rule);
+  display: grid; grid-template-columns: 1fr 1fr; gap: 32px;
+  font-family: var(--font-mono); font-size: 10px; color: var(--muted); line-height: 1.7;
+}
+.legend h3 {
+  font-size: 10px; font-weight: 500; letter-spacing: 0.1em;
+  text-transform: uppercase; color: var(--fg); margin: 0 0 8px;
+}
+.legend dt { display: inline-block; color: var(--fg); margin-right: 6px; }
+
+footer.foot {
+  margin-top: 32px; padding-top: 16px; border-top: 1px solid var(--rule);
+  display: flex; justify-content: space-between;
+  font-family: var(--font-mono); font-size: 9px;
+  color: #555; letter-spacing: 0.05em;
+}
+
+.collapsed-row td {
+  font-family: var(--font-mono); font-size: 10px;
+  color: var(--muted); text-align: center; font-style: italic;
+}
+
+.loading, .error {
+  font-family: var(--font-mono); color: var(--muted);
+  font-size: 12px; padding: 32px 0; text-align: center;
+}
+.error { color: var(--soft-crimson); }
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <div>
+      <div class="brand-marker">mb-wagon-watcher / v2 ticker</div>
+      <div class="brand-light">Inventory</div>
+      <div class="brand-heavy">E450 4MATIC All-Terrain</div>
+    </div>
+    <div class="meta">
+      <div id="meta-ts">—</div>
+      <div id="meta-count">— listings</div>
+      <div><a href="/" id="meta-v1">↗ v1 dashboard</a></div>
+    </div>
+  </header>
+
+  <section class="stats" id="stats">
+    <div>
+      <div class="stat-label">National pool</div>
+      <div class="stat-value" id="stat-pool">—</div>
+      <div class="stat-sub" id="stat-pool-sub">&nbsp;</div>
+    </div>
+    <div>
+      <div class="stat-label">Movers today</div>
+      <div class="stat-value" id="stat-movers">—</div>
+      <div class="stat-sub" id="stat-movers-sub">&nbsp;</div>
+    </div>
+    <div>
+      <div class="stat-label">Avg drop today</div>
+      <div class="stat-value" id="stat-drop">—</div>
+      <div class="stat-sub" id="stat-drop-sub">&nbsp;</div>
+    </div>
+    <div class="stat-watchlist">
+      <div class="stat-label">Watchlist matches</div>
+      <div class="stat-value" id="stat-watch">—</div>
+      <div class="stat-sub" id="stat-watch-sub">&nbsp;</div>
+    </div>
+  </section>
+
+  <div class="section-bar">
+    <div class="section-marker" id="section-label">§ Movers · sorted by abs(delta) DESC</div>
+    <div class="period-toggle" id="period-toggle">
+      <button data-period="today" class="active">Today</button>
+      <button data-period="7d">7d</button>
+      <button data-period="30d">30d</button>
+      <button data-period="all">All</button>
+    </div>
+  </div>
+
+  <table class="ticker" id="ticker-table">
+    <thead>
+      <tr>
+        <th>VIN</th>
+        <th>Yr · Dealer · Color</th>
+        <th class="num">Miles</th>
+        <th>30d</th>
+        <th class="num">Asking · Δ</th>
+        <th class="num">Pct</th>
+        <th class="num">Seen</th>
+      </tr>
+    </thead>
+    <tbody id="ticker-body">
+      <tr><td colspan="7" class="loading">Loading inventory…</td></tr>
+    </tbody>
+  </table>
+
+  <div class="legend">
+    <div>
+      <h3>Reading the row</h3>
+      <div><dt>▼</dt> price down today  ·  <dt>△</dt> up  ·  <dt>─</dt> flat</div>
+      <div><dt>¹</dt> watchlist match (red)</div>
+      <div><dt>Pct</dt> fair-price percentile (lower = cheaper). Sub-20 boxed in red.</div>
+      <div><dt>30d</dt> sparkline of last 30 days of observations.</div>
+    </div>
+    <div>
+      <h3>Period toggle</h3>
+      <div>Today — abs(Δ vs start of UTC day)</div>
+      <div>7d / 30d — abs(Δ vs that many days back)</div>
+      <div>All — abs(Δ vs first observation)</div>
+      <div>Static rows are collapsed below movers.</div>
+    </div>
+  </div>
+
+  <footer class="foot">
+    <div>raw.githubusercontent.com/pwysocan-droid/wagon-watcher/main/data/</div>
+    <div>mb-wagon-watcher · v2 ticker</div>
+  </footer>
+</main>
+
+<script>
+"use strict";
+
+const RAW_BASE = "https://raw.githubusercontent.com/pwysocan-droid/wagon-watcher/main";
+const URL_LATEST = `${RAW_BASE}/data/latest.json`;
+const URL_HISTORY = `${RAW_BASE}/data/price_history.json`;
+
+// ---- helpers --------------------------------------------------------------
+
+const fmtMoney = (n) => n == null ? "—" : `$${n.toLocaleString("en-US")}`;
+const fmtKMoney = (n) => n == null ? "—" : `$${(n / 1000).toFixed(1)}k`;
+const fmtMiles = (n) => n == null ? "—" : n.toLocaleString("en-US");
+const fmtPct = (p) => p == null ? "—" : `${(p * 100).toFixed(2)}%`;
+const fmtDistance = (d) => d == null ? "—" : `${Math.round(d).toLocaleString("en-US")} mi`;
+const fmtTimestamp = (iso) => {
+  const d = new Date(iso);
+  return d.toISOString().replace("T", " ").slice(0, 19) + " UTC";
+};
+
+function shortDealer(name, max = 22) {
+  if (!name) return "—";
+  name = name.replace("Mercedes-Benz of ", "MB ").replace(", LLC", "").replace(", Ltd.", "");
+  return name.length <= max ? name : name.slice(0, max - 1) + "…";
+}
+
+// ---- delta computation ---------------------------------------------------
+
+function todayStartUTC() {
+  const d = new Date();
+  d.setUTCHours(0, 0, 0, 0);
+  return d.toISOString();
+}
+
+function nDaysAgoISO(n) {
+  return new Date(Date.now() - n * 86400000).toISOString();
+}
+
+function priceAtOrBefore(observations, asOfISO) {
+  // observations sorted ASC by observed_at. Find the last with observed_at < asOfISO.
+  let result = null;
+  for (const o of observations) {
+    if (o.observed_at < asOfISO) result = o;
+    else break;
+  }
+  return result;
+}
+
+function computeDelta(observations, current_price, period) {
+  if (!observations || observations.length === 0 || current_price == null) {
+    return { delta: 0, pct: 0, hasMove: false };
+  }
+  let asOf;
+  if (period === "today") asOf = todayStartUTC();
+  else if (period === "7d") asOf = nDaysAgoISO(7);
+  else if (period === "30d") asOf = nDaysAgoISO(30);
+  else if (period === "all") {
+    const first = observations[0];
+    if (!first || first.price <= 0) return { delta: 0, pct: 0, hasMove: false };
+    const delta = current_price - first.price;
+    return { delta, pct: delta / first.price, hasMove: delta !== 0 };
+  } else asOf = todayStartUTC();
+
+  const prior = priceAtOrBefore(observations, asOf);
+  if (!prior || prior.price <= 0) return { delta: 0, pct: 0, hasMove: false };
+  const delta = current_price - prior.price;
+  return { delta, pct: delta / prior.price, hasMove: delta !== 0 };
+}
+
+// ---- sparkline -----------------------------------------------------------
+
+function sparkline(observations) {
+  if (!observations || observations.length < 2) {
+    return `<svg class="spark" width="60" height="14" viewBox="0 0 60 14"><line x1="0" y1="7" x2="60" y2="7" stroke="${'#555'}" stroke-width="1"/></svg>`;
+  }
+  // Filter to last 30 days
+  const cutoff = nDaysAgoISO(30);
+  const obs = observations.filter(o => o.observed_at >= cutoff && o.price > 0);
+  if (obs.length < 2) {
+    return `<svg class="spark" width="60" height="14" viewBox="0 0 60 14"><line x1="0" y1="7" x2="60" y2="7" stroke="${'#555'}" stroke-width="1"/></svg>`;
+  }
+  const prices = obs.map(o => o.price);
+  const min = Math.min(...prices), max = Math.max(...prices);
+  const range = max - min || 1;
+  const t0 = new Date(obs[0].observed_at).getTime();
+  const t1 = new Date(obs[obs.length - 1].observed_at).getTime();
+  const tRange = (t1 - t0) || 1;
+  const points = obs.map(o => {
+    const x = ((new Date(o.observed_at).getTime() - t0) / tRange) * 60;
+    const y = 14 - ((o.price - min) / range) * 14;
+    return `${x.toFixed(1)},${y.toFixed(1)}`;
+  }).join(" ");
+
+  const opening = obs[0].price;
+  const current = obs[obs.length - 1].price;
+  const stroke = current < opening ? "#B84444" : (current > opening ? "#f0ede8" : "#555");
+  return `<svg class="spark" width="60" height="14" viewBox="0 0 60 14"><polyline fill="none" stroke="${stroke}" stroke-width="1" points="${points}"/></svg>`;
+}
+
+// ---- triangle for delta indicator ----------------------------------------
+
+function deltaIndicator(delta) {
+  if (delta < 0) return `<span class="tri tri-down" aria-label="down"></span>`;
+  if (delta > 0) return `<span class="tri tri-up" aria-label="up"></span>`;
+  return `<span class="tri-flat" aria-label="flat"></span>`;
+}
+
+// ---- main render ---------------------------------------------------------
+
+let state = {
+  listings: [],
+  history: {},
+  period: "today",
+};
+
+async function load() {
+  try {
+    const [latestRes, historyRes] = await Promise.all([
+      fetch(URL_LATEST, { cache: "no-store" }),
+      fetch(URL_HISTORY, { cache: "no-store" }),
+    ]);
+    if (!latestRes.ok) throw new Error("latest.json: " + latestRes.status);
+    if (!historyRes.ok) throw new Error("price_history.json: " + historyRes.status);
+    const latest = await latestRes.json();
+    const history = await historyRes.json();
+    state.listings = latest.listings || [];
+    state.history = history.vins || {};
+    state.generated_at = latest.generated_at;
+    state.kpis = latest.kpis;
+    return true;
+  } catch (e) {
+    document.getElementById("ticker-body").innerHTML =
+      `<tr><td colspan="7" class="error">Failed to load: ${e.message}</td></tr>`;
+    return false;
+  }
+}
+
+function isOutOfCriteria(listing) {
+  // greyed if NOT a watchlist match AND year < 2024 OR mileage > 15000
+  if (listing.is_watchlist_match) return false;
+  if ((listing.year ?? 0) < 2024) return true;
+  if ((listing.mileage_first_seen ?? 0) > 15000) return true;
+  return false;
+}
+
+function renderRow(listing, period) {
+  const histRec = state.history[listing.vin];
+  const observations = histRec ? histRec.observations : [];
+  const current = listing.current_price;
+  const { delta, pct, hasMove } = computeDelta(observations, current, period);
+
+  const greyed = isOutOfCriteria(listing);
+  const trClass = [hasMove ? "active" : "", greyed ? "greyed" : ""].filter(Boolean).join(" ");
+
+  const watchlistFlag = listing.is_watchlist_match ? `<sup class="watchlist-flag">¹</sup>` : "";
+  const dealer = shortDealer(listing.dealer_name);
+  const color = listing.exterior_color || "—";
+  const yrDealer = `${listing.year ?? "—"} · ${dealer}, ${listing.dealer_state ?? "?"} · ${color}`;
+
+  const deltaCls = delta > 0 ? "up" : (delta < 0 ? "down" : "");
+  const deltaTxt = hasMove
+    ? `${deltaIndicator(delta)}${delta > 0 ? "+" : "−"}$${Math.abs(delta).toLocaleString("en-US")} / ${(delta > 0 ? "+" : "−")}${(Math.abs(pct) * 100).toFixed(2)}%`
+    : `<span class="tri-flat"></span>—`;
+
+  const pctTab = listing.fair_price_pct != null
+    ? `<span class="pct-tab ${listing.fair_price_pct < 20 ? "deal" : ""}">${listing.fair_price_pct}</span>`
+    : `<span class="pct-tab">—</span>`;
+
+  return `
+    <tr class="${trClass}">
+      <td><a class="vin-link" href="${listing.mbusa_listing_url}" target="_blank" rel="noreferrer">${listing.vin}</a>${watchlistFlag}</td>
+      <td>${yrDealer}</td>
+      <td class="num">${fmtMiles(listing.mileage_first_seen)}</td>
+      <td>${sparkline(observations)}</td>
+      <td class="num">
+        <div class="asking-cell">
+          <div class="now">${fmtMoney(current)}</div>
+          <div class="delta ${deltaCls}">${deltaTxt}</div>
+        </div>
+      </td>
+      <td class="num">${pctTab}</td>
+      <td class="num">${listing.days_on_lot ?? "—"}</td>
+    </tr>
+  `;
+}
+
+function render() {
+  // Sort by abs(delta_pct) for the active period.
+  const enriched = state.listings.map(l => {
+    const obs = (state.history[l.vin] || {}).observations || [];
+    const d = computeDelta(obs, l.current_price, state.period);
+    return { listing: l, delta: d };
+  });
+
+  enriched.sort((a, b) => Math.abs(b.delta.pct) - Math.abs(a.delta.pct));
+
+  const movers = enriched.filter(e => e.delta.hasMove);
+  const statics = enriched.filter(e => !e.delta.hasMove);
+
+  // Today's stats
+  const todayMovers = state.listings.map(l => {
+    const obs = (state.history[l.vin] || {}).observations || [];
+    return computeDelta(obs, l.current_price, "today");
+  });
+  const todayMovingCount = todayMovers.filter(m => m.hasMove).length;
+  const todayDownCount = todayMovers.filter(m => m.delta < 0).length;
+  const todayUpCount = todayMovers.filter(m => m.delta > 0).length;
+  const todayDownPcts = todayMovers.filter(m => m.delta < 0).map(m => m.pct);
+  const avgDropPct = todayDownPcts.length
+    ? todayDownPcts.reduce((a, b) => a + b, 0) / todayDownPcts.length
+    : null;
+
+  const watchlistCount = state.listings.filter(l => l.is_watchlist_match).length;
+
+  // Header meta
+  document.getElementById("meta-ts").textContent = state.generated_at ? fmtTimestamp(state.generated_at) : "—";
+  document.getElementById("meta-count").textContent = `${state.listings.length} listings`;
+
+  // Stat tiles
+  document.getElementById("stat-pool").textContent = state.listings.length;
+  document.getElementById("stat-movers").textContent = todayMovingCount;
+  document.getElementById("stat-movers-sub").textContent = todayMovingCount > 0
+    ? `${todayDownCount} down · ${todayUpCount} up`
+    : "quiet day so far.";
+  document.getElementById("stat-drop").textContent = avgDropPct != null
+    ? `${(avgDropPct * 100).toFixed(2)}%`
+    : "—";
+  document.getElementById("stat-drop-sub").textContent = avgDropPct != null
+    ? `${todayDownPcts.length} down-mover${todayDownPcts.length === 1 ? "" : "s"}`
+    : "";
+  document.getElementById("stat-watch").textContent = watchlistCount;
+  document.getElementById("stat-watch-sub").textContent = watchlistCount > 0
+    ? `tap ¹ to view`
+    : "none today";
+
+  // Section label
+  const periodLabel = ({ today: "Today", "7d": "7-day", "30d": "30-day", all: "All-time" })[state.period] || "Today";
+  document.getElementById("section-label").textContent =
+    `§ Movers · sorted by abs(${periodLabel} Δ) DESC`;
+
+  // Render movers, then collapsed static count
+  const tbody = document.getElementById("ticker-body");
+  let html = movers.map(e => renderRow(e.listing, state.period)).join("");
+  if (statics.length > 0) {
+    html += `<tr class="collapsed-row"><td colspan="7">… ${statics.length} static listing${statics.length === 1 ? "" : "s"} (no ${periodLabel.toLowerCase()} move)</td></tr>`;
+  }
+  if (html === "") {
+    html = `<tr><td colspan="7" class="loading">No data — possibly the watcher hasn't observed enough history yet.</td></tr>`;
+  }
+  tbody.innerHTML = html;
+}
+
+function setPeriod(p, pushUrl = true) {
+  state.period = p;
+  document.querySelectorAll(".period-toggle button").forEach(b => {
+    b.classList.toggle("active", b.dataset.period === p);
+  });
+  if (pushUrl) {
+    const url = new URL(window.location.href);
+    if (p === "today") url.searchParams.delete("period");
+    else url.searchParams.set("period", p);
+    history.replaceState({}, "", url.toString());
+  }
+  render();
+}
+
+document.querySelectorAll(".period-toggle button").forEach(b => {
+  b.addEventListener("click", () => setPeriod(b.dataset.period));
+});
+
+(async () => {
+  // Read initial period from URL
+  const params = new URLSearchParams(window.location.search);
+  const initialPeriod = params.get("period") || "today";
+  state.period = initialPeriod;
+  document.querySelectorAll(".period-toggle button").forEach(b => {
+    b.classList.toggle("active", b.dataset.period === initialPeriod);
+  });
+
+  if (await load()) {
+    render();
+  }
+})();
+</script>
+</body>
+</html>
