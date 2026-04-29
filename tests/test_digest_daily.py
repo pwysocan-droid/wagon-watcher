@@ -94,6 +94,9 @@ def test_movers_section_sorted_and_capped(conn):
         66_500,  # -5.00%
     ]
     moved = [replace(rs[i], mbusa_price=p) for i, p in enumerate(new_prices)]
+    # Two-poll confirmation under the stabilization filter — first poll
+    # stashes pending, second confirms and writes price_history.
+    reconcile(moved, conn, now=yesterday - timedelta(minutes=30))
     reconcile(moved, conn, now=yesterday)
 
     md = digest_daily._section_movers(conn, NOW)

@@ -192,8 +192,12 @@ def test_price_history_single_vin_three_observations_correct_stats(tmp_path):
     t0 = _dt(2026, 4, 1, tzinfo=_tz.utc)
     r = _record("V________________1", mbusa_price=70_000)
     reconcile([r], conn, now=t0)
+    # Each price change requires 2 confirming polls under the stabilization
+    # filter (HANDOFF: defends against the MBUSA flap pattern).
     reconcile([replace(r, mbusa_price=68_000)], conn, now=t0 + _td(days=2))
+    reconcile([replace(r, mbusa_price=68_000)], conn, now=t0 + _td(days=2, hours=1))
     reconcile([replace(r, mbusa_price=65_000)], conn, now=t0 + _td(days=4))
+    reconcile([replace(r, mbusa_price=65_000)], conn, now=t0 + _td(days=4, hours=1))
 
     out = write_price_history_json(conn, tmp_path / "price_history.json")
     data = json.loads(out.read_text())

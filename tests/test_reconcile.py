@@ -111,7 +111,8 @@ def test_price_drop_emits_event_and_appends_history(conn):
     reconcile([r], conn, now=T0)
 
     cheaper = replace(r, mbusa_price=65000)
-    result = reconcile([cheaper], conn, now=T0 + timedelta(hours=1))
+    reconcile([cheaper], conn, now=T0 + timedelta(hours=1))  # stash pending
+    result = reconcile([cheaper], conn, now=T0 + timedelta(hours=2))  # confirm
 
     assert result["stats"]["changed_count"] == 1
     [evt] = [e for e in result["events"] if e["type"] == "price_change"]
@@ -139,7 +140,8 @@ def test_mileage_decrease_emits_event(conn):
     r = _record("V00000000000000001", mileage=20000)
     reconcile([r], conn, now=T0)
     fewer = replace(r, mileage=15000)
-    result = reconcile([fewer], conn, now=T0 + timedelta(hours=1))
+    reconcile([fewer], conn, now=T0 + timedelta(hours=1))  # stash pending
+    result = reconcile([fewer], conn, now=T0 + timedelta(hours=2))  # confirm
     types = {e["type"] for e in result["events"]}
     assert "mileage_decrease" in types
 
@@ -148,7 +150,8 @@ def test_mileage_increase_no_event(conn):
     r = _record("V00000000000000001", mileage=15000)
     reconcile([r], conn, now=T0)
     more = replace(r, mileage=15500)
-    result = reconcile([more], conn, now=T0 + timedelta(hours=1))
+    reconcile([more], conn, now=T0 + timedelta(hours=1))  # stash pending
+    result = reconcile([more], conn, now=T0 + timedelta(hours=2))  # confirm
     # mileage going up is normal — no special event
     types = {e["type"] for e in result["events"]}
     assert "mileage_decrease" not in types
@@ -361,6 +364,87 @@ def test_existing_listing_with_no_price_skips_price_history(conn):
     assert history_count == 1  # only the original
 
 
+def test_stabilization_suppresses_a_b_a_flap(conn):
+    """The MBUSA flap (A → B → A → B → A) must NOT generate price_history
+    rows for B. The first observation A is recorded; subsequent B/A flaps
+    are filtered. price_history stays at [A] for the run sequence."""
+    r_a = _record("V________________1", mbusa_price=70_000)
+    r_b = replace(r_a, mbusa_price=68_000)
+
+    reconcile([r_a], conn, now=T0)                            # insert A
+    reconcile([r_b], conn, now=T0 + timedelta(hours=1))       # B pending
+    reconcile([r_a], conn, now=T0 + timedelta(hours=2))       # back to A → clear pending
+    reconcile([r_b], conn, now=T0 + timedelta(hours=3))       # B pending again
+    reconcile([r_a], conn, now=T0 + timedelta(hours=4))       # back to A → clear pending
+
+    history = conn.execute(
+        "SELECT price FROM price_history WHERE vin = ? ORDER BY observed_at, id",
+        (r_a.vin,),
+    ).fetchall()
+    assert [h["price"] for h in history] == [70_000]  # only the original
+
+
+def test_stabilization_confirms_real_change_on_second_consecutive_poll(conn):
+    """A genuine price change is recorded once the new value has been
+    observed for 2 polls in a row."""
+    r_a = _record("V________________1", mbusa_price=70_000)
+    r_b = replace(r_a, mbusa_price=65_000)
+
+    reconcile([r_a], conn, now=T0)                          # insert A
+    reconcile([r_b], conn, now=T0 + timedelta(hours=1))     # B pending
+    reconcile([r_b], conn, now=T0 + timedelta(hours=2))     # B confirmed → insert
+
+    history = conn.execute(
+        "SELECT price FROM price_history WHERE vin = ? ORDER BY observed_at, id",
+        (r_a.vin,),
+    ).fetchall()
+    assert [h["price"] for h in history] == [70_000, 65_000]
+
+
+def test_stabilization_pending_replaced_by_third_unique_value(conn):
+    """If pending is B and a new C arrives (≠A, ≠B), pending → C. Neither
+    B nor C ever lands in history until something is observed twice."""
+    r_a = _record("V________________1", mbusa_price=70_000)
+    r_b = replace(r_a, mbusa_price=68_000)
+    r_c = replace(r_a, mbusa_price=65_000)
+
+    reconcile([r_a], conn, now=T0)
+    reconcile([r_b], conn, now=T0 + timedelta(hours=1))   # B pending
+    reconcile([r_c], conn, now=T0 + timedelta(hours=2))   # C overwrites pending
+    reconcile([r_c], conn, now=T0 + timedelta(hours=3))   # C confirmed
+
+    history = conn.execute(
+        "SELECT price FROM price_history WHERE vin = ? ORDER BY observed_at, id",
+        (r_a.vin,),
+    ).fetchall()
+    assert [h["price"] for h in history] == [70_000, 65_000]
+
+
+def test_stabilization_state_visible_on_listings_row(conn):
+    """The pending_* columns reflect the current pending observation."""
+    r_a = _record("V________________1", mbusa_price=70_000)
+    r_b = replace(r_a, mbusa_price=68_000)
+
+    reconcile([r_a], conn, now=T0)
+    reconcile([r_b], conn, now=T0 + timedelta(hours=1))   # B pending
+
+    row = conn.execute(
+        "SELECT pending_price, pending_mileage FROM listings WHERE vin = ?",
+        (r_a.vin,),
+    ).fetchone()
+    assert row["pending_price"] == 68_000
+    assert row["pending_mileage"] == 15_000  # _record default
+
+    # Reverting back to A clears pending without inserting
+    reconcile([r_a], conn, now=T0 + timedelta(hours=2))
+    row = conn.execute(
+        "SELECT pending_price, pending_mileage FROM listings WHERE vin = ?",
+        (r_a.vin,),
+    ).fetchone()
+    assert row["pending_price"] is None
+    assert row["pending_mileage"] is None
+
+
 def test_recovery_from_zero_prior_counts_change_but_no_event(conn):
     """If a prior price_history row is 0 (legacy anomaly) and a new poll
     brings a real price, count it as a change for runs.changed_count but
@@ -385,7 +469,11 @@ def test_recovery_from_zero_prior_counts_change_but_no_event(conn):
     monkeypatch_send = recon_mod.notify.send
     recon_mod.notify.send = fake
     try:
-        result = reconcile([r], conn, now=T0 + timedelta(hours=1))
+        # Two-poll confirmation under the stabilization filter: $70k
+        # observed once after the 0-row stashes pending; second observation
+        # confirms and triggers the recovery branch.
+        reconcile([r], conn, now=T0 + timedelta(hours=1))
+        result = reconcile([r], conn, now=T0 + timedelta(hours=2))
     finally:
         recon_mod.notify.send = monkeypatch_send
 
@@ -453,7 +541,8 @@ def test_price_drop_at_threshold_fires_tier1(monkeypatch, conn):
 
     calls = _capture_notify_calls(monkeypatch)
     cheaper = replace(r, mbusa_price=65000)  # -7.14%
-    reconcile([cheaper], conn, now=T0 + timedelta(hours=1))
+    reconcile([cheaper], conn, now=T0 + timedelta(hours=1))  # stash pending
+    reconcile([cheaper], conn, now=T0 + timedelta(hours=2))  # confirm
 
     drops = [c for c in calls if c.get("event_type") == "price_drop_major"]
     assert len(drops) == 1
@@ -468,7 +557,8 @@ def test_price_drop_below_threshold_no_tier1(monkeypatch, conn):
 
     calls = _capture_notify_calls(monkeypatch)
     smaller = replace(r, mbusa_price=66500)  # -5%
-    reconcile([smaller], conn, now=T0 + timedelta(hours=1))
+    reconcile([smaller], conn, now=T0 + timedelta(hours=1))  # stash pending
+    reconcile([smaller], conn, now=T0 + timedelta(hours=2))  # confirm
 
     assert not any(c.get("event_type") == "price_drop_major" for c in calls)
 
@@ -480,7 +570,8 @@ def test_price_increase_no_tier1(monkeypatch, conn):
 
     calls = _capture_notify_calls(monkeypatch)
     pricier = replace(r, mbusa_price=80000)  # +14%
-    reconcile([pricier], conn, now=T0 + timedelta(hours=1))
+    reconcile([pricier], conn, now=T0 + timedelta(hours=1))  # stash pending
+    reconcile([pricier], conn, now=T0 + timedelta(hours=2))  # confirm
 
     assert not any(c.get("event_type") == "price_drop_major" for c in calls)
 
@@ -546,7 +637,8 @@ def test_price_drop_in_3_to_7_pct_fires_tier2(monkeypatch, conn):
 
     calls = _capture_notify_calls(monkeypatch)
     cheaper = replace(r, mbusa_price=66500)  # -5%
-    reconcile([cheaper], conn, now=T0 + timedelta(hours=1))
+    reconcile([cheaper], conn, now=T0 + timedelta(hours=1))  # stash pending
+    reconcile([cheaper], conn, now=T0 + timedelta(hours=2))  # confirm
 
     types = [c.get("event_type") for c in calls]
     assert "price_drop_minor" in types
@@ -561,7 +653,8 @@ def test_price_drop_under_3_pct_fires_tier3_silent(monkeypatch, conn):
 
     calls = _capture_notify_calls(monkeypatch)
     cheaper = replace(r, mbusa_price=69300)  # -1%
-    reconcile([cheaper], conn, now=T0 + timedelta(hours=1))
+    reconcile([cheaper], conn, now=T0 + timedelta(hours=1))  # stash pending
+    reconcile([cheaper], conn, now=T0 + timedelta(hours=2))  # confirm
 
     silent = [c for c in calls if c.get("event_type") == "price_drop_silent"]
     assert len(silent) == 1
@@ -577,7 +670,8 @@ def test_price_drop_over_7_pct_fires_only_tier1(monkeypatch, conn):
 
     calls = _capture_notify_calls(monkeypatch)
     cheaper = replace(r, mbusa_price=63000)  # -10%
-    reconcile([cheaper], conn, now=T0 + timedelta(hours=1))
+    reconcile([cheaper], conn, now=T0 + timedelta(hours=1))  # stash pending
+    reconcile([cheaper], conn, now=T0 + timedelta(hours=2))  # confirm
 
     drop_types = [c.get("event_type") for c in calls
                   if c.get("event_type", "").startswith("price_drop_")]
@@ -591,7 +685,8 @@ def test_price_increase_no_notification(monkeypatch, conn):
 
     calls = _capture_notify_calls(monkeypatch)
     pricier = replace(r, mbusa_price=75000)
-    reconcile([pricier], conn, now=T0 + timedelta(hours=1))
+    reconcile([pricier], conn, now=T0 + timedelta(hours=1))  # stash pending
+    reconcile([pricier], conn, now=T0 + timedelta(hours=2))  # confirm
 
     drops = [c for c in calls if "price_drop" in c.get("event_type", "")]
     assert drops == []
@@ -617,7 +712,8 @@ def test_mileage_decrease_fires_tier2(monkeypatch, conn):
 
     calls = _capture_notify_calls(monkeypatch)
     fewer = replace(r, mileage=15000)
-    reconcile([fewer], conn, now=T0 + timedelta(hours=1))
+    reconcile([fewer], conn, now=T0 + timedelta(hours=1))  # stash pending
+    reconcile([fewer], conn, now=T0 + timedelta(hours=2))  # confirm
 
     mileage_calls = [c for c in calls if c.get("event_type") == "mileage_anomaly"]
     assert len(mileage_calls) == 1

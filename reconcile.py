@@ -127,6 +127,63 @@ def _last_price_row(conn: sqlite3.Connection, vin: str) -> sqlite3.Row | None:
     ).fetchone()
 
 
+def _stabilize_observation(
+    conn: sqlite3.Connection,
+    vin: str,
+    new_price: int,
+    new_mileage: int,
+    last: sqlite3.Row | None,
+    now: datetime,
+) -> bool:
+    """Two-in-a-row stabilization filter on price_history inserts.
+
+    Returns True if (new_price, new_mileage) should be appended to
+    price_history; False if it should be held as pending. Updates the
+    listings row's pending_* columns as a side effect.
+
+    Rule (per the MBUSA flap discovered 2026-04-28/29):
+      - matches confirmed last_history → no-op, clear pending if any
+      - matches pending → confirm, clear pending, return True
+      - differs from both → stash as pending, return False
+    """
+    listing = conn.execute(
+        "SELECT pending_price, pending_mileage FROM listings WHERE vin = ?",
+        (vin,),
+    ).fetchone()
+    pending_price = listing["pending_price"] if listing else None
+    pending_mileage = listing["pending_mileage"] if listing else None
+
+    last_price = last["price"] if last else None
+    last_mileage = last["mileage"] if last else None
+
+    # Same as confirmed history → no flap, clear pending and skip insert.
+    if (new_price, new_mileage) == (last_price, last_mileage):
+        if pending_price is not None or pending_mileage is not None:
+            _update_listing(conn, vin, {
+                "pending_price": None,
+                "pending_mileage": None,
+                "pending_observed_at": None,
+            })
+        return False
+
+    # Same as pending → confirmed by 2nd consecutive observation. Insert.
+    if (new_price, new_mileage) == (pending_price, pending_mileage):
+        _update_listing(conn, vin, {
+            "pending_price": None,
+            "pending_mileage": None,
+            "pending_observed_at": None,
+        })
+        return True
+
+    # Different from both → unconfirmed. Stash as pending; don't insert.
+    _update_listing(conn, vin, {
+        "pending_price": new_price,
+        "pending_mileage": new_mileage,
+        "pending_observed_at": now,
+    })
+    return False
+
+
 # ---- runs I/O ------------------------------------------------------------
 
 def _insert_run(
@@ -727,7 +784,17 @@ def reconcile(
         price_changed = last is None or last["price"] != record.mbusa_price
         mileage_changed = last is None or last["mileage"] != record.mileage
 
-        if price_changed or mileage_changed:
+        # Stabilization: only confirm a (price, mileage) change after the
+        # new value has been seen for 2 consecutive polls. Defends against
+        # the MBUSA flap where the API returns one of two values per poll.
+        # The first observation of a new value is held as pending; a second
+        # matching observation confirms and writes price_history.
+        confirmed = _stabilize_observation(
+            conn, record.vin,
+            record.mbusa_price, record.mileage, last, started_at,
+        )
+
+        if confirmed and (price_changed or mileage_changed):
             _insert_price_history(
                 conn, record.vin, started_at,
                 record.mbusa_price, record.mileage,
