@@ -396,20 +396,13 @@ function deltaIndicator(delta) {
   return `<span class="tri-flat" aria-label="flat"></span>`;
 }
 
-// Filter for the MBUSA flap pattern that survived in pre-stabilization
-// data: if the current price equals the price two observations ago, the
-// most recent change was a revert. Don't list as a mover. (Future data
-// won't have this pattern thanks to the backend stabilization filter,
-// but legacy price_history rows still do.)
-function isCurrentPriceReverted(observations, currentPrice) {
-  if (!observations || observations.length < 3) return false;
-  const last = observations[observations.length - 1];
-  const middle = observations[observations.length - 2];
-  const priorPrior = observations[observations.length - 3];
-  if (last.price !== currentPrice) return false;
-  if (middle.price === currentPrice) return false;  // not a real flip
-  return priorPrior.price === currentPrice;
-}
+// (No revert filter. computeDelta uses priceAtOrBefore(today_start) as
+// the baseline and naturally returns delta=0 for VINs that ended up at
+// their pre-today price — that's the only correct "reverted" signal.
+// An earlier filter checked observations[-3] === currentPrice, which
+// over-suppressed legitimate dips when the price had been flapping —
+// e.g., Cary's [67680, 65980, 67680, 65980] with current=65980 is a
+// real -$1,700 mover vs. the pre-today $67,680 baseline, not a revert.)
 
 // ---- main render ---------------------------------------------------------
 
@@ -500,13 +493,8 @@ function render() {
 
   enriched.sort((a, b) => Math.abs(b.delta.pct) - Math.abs(a.delta.pct));
 
-  const isReverted = (e) => {
-    const obs = (state.history[e.listing.vin] || {}).observations || [];
-    return isCurrentPriceReverted(obs, e.listing.current_price);
-  };
-
-  const movers = enriched.filter(e => e.delta.hasMove && !isReverted(e));
-  const statics = enriched.filter(e => !e.delta.hasMove || isReverted(e));
+  const movers = enriched.filter(e => e.delta.hasMove);
+  const statics = enriched.filter(e => !e.delta.hasMove);
 
   // Today's stats
   const todayMovers = state.listings.map(l => {
