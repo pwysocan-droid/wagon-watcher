@@ -1,0 +1,56 @@
+name: digest-daily
+
+# Daily digest. Cron at 12:00 UTC = 05:00 PT (PDT) / 04:00 PT (PST).
+# Per HANDOFF_daily_digest.md, accepting the seasonal one-hour drift —
+# GitHub Actions doesn't support timezone-aware crons.
+#
+# Writes digest/daily/<YYYY-MM-DD>.md and digest/daily/LATEST.md, then
+# commits both back to main. The LATEST.md path is the stable phone-
+# readable URL:
+#   https://github.com/pwysocan-droid/wagon-watcher/blob/main/digest/daily/LATEST.md
+
+on:
+  schedule:
+    - cron: '0 12 * * *'   # 12:00 UTC daily
+  workflow_dispatch:
+
+concurrency:
+  group: digest-daily
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  digest:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v5
+
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.13'
+
+      - name: Install runtime dependencies
+        run: pip install --quiet -r requirements.txt
+
+      - name: Generate daily digest
+        run: python digest_daily.py
+
+      - name: Configure git for self-commit
+        run: |
+          git config user.name  'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+
+      - name: Commit and push digest
+        run: |
+          ISO_DATE=$(date -u +%Y-%m-%d)
+          git add digest/daily/
+          if git diff --cached --quiet; then
+            echo "No daily digest changes to commit"
+          else
+            git commit -m "digest: daily $ISO_DATE"
+            git pull --rebase --autostash origin main || true
+            git push
+          fi
