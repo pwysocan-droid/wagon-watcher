@@ -1,0 +1,1131 @@
+{
+  "generated_at": "2026-04-29T13:49:31.611923+00:00",
+  "schema_version": 1,
+  "vins": {
+    "W1KZH6AB2NB028936": {
+      "year": 2022,
+      "trim": "E450S4",
+      "dealer": "Mercedes-Benz of St. Paul",
+      "first_seen_at": "2026-04-26T15:50:37.492543+00:00",
+      "current_price": 47717,
+      "current_mileage": 55037,
+      "status": "gone",
+      "observations": [
+        {
+          "observed_at": "2026-04-26T15:50:37.492543+00:00",
+          "price": 47717,
+          "mileage": 55037
+        }
+      ],
+      "stats": {
+        "all_time_low": 47717,
+        "all_time_high": 47717,
+        "total_drop_pct": 0.0,
+        "n_observations": 1,
+        "days_observed": 2
+      }
+    },
+    "W1KLH6FB9SA136356": {
+      "year": 2025,
+      "trim": "E450S4",
+      "dealer": "Mercedes-Benz of Creve Coeur",
+      "first_seen_at": "2026-04-26T15:50:37.492543+00:00",
+      "current_price": 73000,
+      "current_mileage": 3130,
+      "status": "gone",
+      "observations": [
+        {
+          "observed_at": "2026-04-26T15:50:37.492543+00:00",
+          "price": 73000,
+          "mileage": 3130
+        }
+      ],
+      "stats": {
+        "all_time_low": 73000,
+        "all_time_high": 73000,
+        "total_drop_pct": 0.0,
+        "n_observations": 1,
+        "days_observed": 2
+      }
+    },
+    "W1KZH6AB4PB149504": {
+      "year": 2023,
+      "trim": "E450S4",
+      "dealer": "Mercedes-Benz of Collierville",
+      "first_seen_at": "2026-04-26T15:50:37.492543+00:00",
+      "current_price": 63750,
+      "current_mileage": 20635,
+      "status": "active",
+      "observations": [
+        {
+          "observed_at": "2026-04-26T15:50:37.492543+00:00",
+          "price": 63750,
+          "mileage": 20635
+        }
+      ],
+      "stats": {
+        "all_time_low": 63750,
+        "all_time_high": 63750,
+        "total_drop_pct": 0.0,
+        "n_observations": 1,
+        "days_observed": 2
+      }
+    },
+    "W1KLH6FB5SA102804": {
+      "year": 2025,
+      "trim": "E450S4",
+      "dealer": "Mercedes-Benz of Sycamore",
+      "first_seen_at": "2026-04-26T15:50:37.492543+00:00",
+      "current_price": 68491,
+      "current_mileage": 7937,
+      "status": "active",
+      "observations": [
+        {
+          "observed_at": "2026-04-26T15:50:37.492543+00:00",
+          "price": 68691,
+          "mileage": 7937
+        },
+        {
+          "observed_at": "2026-04-28T17:09:04.838821+00:00",
+          "price": 68491,
+          "mileage": 7937
+        },
+        {
+          "observed_at": "2026-04-28T19:00:07.148935+00:00",
+          "price": 68691,
+          "mileage": 7937
+        },
+        {
+          "observed_at": "2026-04-28T20:20:38.219570+00:00",
+          "price": 68491,
+          "mileage": 7937
+        },
+        {
+          "observed_at": "2026-04-28T21:35:14.675184+00:00",
+          "price": 68691,
+          "mileage": 7937
+        },
+        {
+          "observed_at": "2026-04-29T05:38:32.386924+00:00",
+          "price": 68491,
+          "mileage": 7937
+        }
+      ],
+      "stats": {
+        "all_time_low": 68491,
+        "all_time_high": 68691,
+        "total_drop_pct": -0.29,
+        "n_observations": 6,
+        "days_observed": 2
+      }
+    },
+    "W1KLH6FB3SA087476": {
+      "year": 2025,
+      "trim": "E450S4",
+      "dealer": "Mercedes-Benz of Hoffman Estates",
+      "first_seen_at": "2026-04-26T15:50:37.492543+00:00",
+      "current_price": 75999,
+      "current_mileage": 1732,
+      "status": "active",
+      "observations": [
+        {
+          "observed_at": "2026-04-26T15:50:37.492543+00:00",
+          "price": 75999,
+          "mileage": 1732
+        }
+      ],
+      "stats": {
+        "all_time_low": 75999,
+        "all_time_high": 75999,
+        "total_drop_pct": 0.0,
+        "n_observations": 1,
+        "days_observed": 2
+      }
+    },
+    "W1KZH6AB6PB140805": {
+      "year": 2023,
+      "trim": "E450S4",
+      "dealer": "Mercedes-Benz of Elmbrook",
+      "first_seen_at": "2026-04-26T15:50:37.492543+00:00",
+      "current_price": 60995,
+      "current_mileage": 28009,
+      "status": "active",
+      "observations": [
+        {
+          "observed_at": "2026-04-26T15:50:37.492543+00:00",
+          "price": 60995,
+          "mileage": 28009
+        }
+      ],
+      "stats": {
+        "all_time_low": 60995,
+        "all_time_high": 60995,
+        "total_drop_pct": 0.0,
+        "n_observations": 1,
+        "days_observed": 2
+      }
+    },
+    "W1KLH6FB9SA129598": {
+      "year": 2025,
+      "trim": "E450S4",
+      "dealer": "Mercedes-Benz of Chicago",
+      "first_seen_at": "2026-04-26T15:50:37.492543+00:00",
+      "current_price": 61516,
+      "current_mileage": 11877,
+      "status": "active",
+      "observations": [
+        {
+          "observed_at": "2026-04-26T15:50:37.492543+00:00",
+          "price": 61516,
+          "mileage": 11877
+        }
+      ],
+      "stats": {
+        "all_time_low": 61516,
+        "all_time_high": 61516,
+        "total_drop_pct": 0.0,
+        "n_observations": 1,
+        "days_observed": 2
+      }
+    },
+    "W1KLH6FB6SA144852": {
+      "year": 2025,
+      "trim": "E450S4",
+      "dealer": "Mercedes-Benz of Birmingham",
+      "first_seen_at": "2026-04-26T15:50:37.492543+00:00",
+      "current_price": 63998,
+      "current_mileage": 19059,
+      "status": "active",
+      "observations": [
+        {
+          "observed_at": "2026-04-26T15:50:37.492543+00:00",
+          "price": 64998,
+          "mileage": 19059
+        },
+        {
+          "observed_at": "2026-04-29T10:22:02.386002+00:00",
+          "price": 63998,
+          "mileage": 19059
+        }
+      ],
+      "stats": {
+        "all_time_low": 63998,
+        "all_time_high": 64998,
+        "total_drop_pct": -1.54,
+        "n_observations": 2,
+        "days_observed": 2
+      }
+    },
+    "W1KLH6FB1RA068693": {
+      "year": 2024,
+      "trim": "E450S4",
+      "dealer": "Mercedes-Benz of Louisville",
+      "first_seen_at": "2026-04-26T15:50:37.492543+00:00",
+      "current_price": 65559,
+      "current_mileage": 21850,
+      "status": "active",
+      "observations": [
+        {
+          "observed_at": "2026-04-26T15:50:37.492543+00:00",
+          "price": 65559,
+          "mileage": 21850
+        }
+      ],
+      "stats": {
+        "all_time_low": 65559,
+        "all_time_high": 65559,
+        "total_drop_pct": 0.0,
+        "n_observations": 1,
+        "days_observed": 2
+      }
+    },
+    "W1KLH6FB1SA099139": {
+      "year": 2025,
+      "trim": "E450S4",
+      "dealer": "Mercedes-Benz of Okemos",
+      "first_seen_at": "2026-04-26T15:50:37.492543+00:00",
+      "current_price": 66500,
+      "current_mileage": 14319,
+      "status": "active",
+      "observations": [
+        {
+          "observed_at": "2026-04-26T15:50:37.492543+00:00",
+          "price": 66500,
+          "mileage": 14319
+        }
+      ],
+      "stats": {
+        "all_time_low": 66500,
+        "all_time_high": 66500,
+        "total_drop_pct": 0.0,
+        "n_observations": 1,
+        "days_observed": 2
+      }
+    },
+    "W1KLH6FB5RA004561": {
+      "year": 2024,
+      "trim": "E450S4",
+      "dealer": "Mercedes-Benz of Columbus",
+      "first_seen_at": "2026-04-26T15:50:37.492543+00:00",
+      "current_price": 74690,
+      "current_mileage": 3520,
+      "status": "active",
+      "observations": [
+        {
+          "observed_at": "2026-04-26T15:50:37.492543+00:00",
+          "price": 74690,
+          "mileage": 3520
+        }
+      ],
+      "stats": {
+        "all_time_low": 74690,
+        "all_time_high": 74690,
+        "total_drop_pct": 0.0,
+        "n_observations": 1,
+        "days_observed": 2
+      }
+    },
+    "W1KLH6FB2SA128504": {
+      "year": 2025,
+      "trim": "E450S4",
+      "dealer": "R B M of Atlanta, Inc.",
+      "first_seen_at": "2026-04-26T15:50:37.492543+00:00",
+      "current_price": 75340,
+      "current_mileage": 8725,
+      "status": "active",
+      "observations": [
+        {
+          "observed_at": "2026-04-26T15:50:37.492543+00:00",
+          "price": 75340,
+          "mileage": 8725
+        }
+      ],
+      "stats": {
+        "all_time_low": 75340,
+        "all_time_high": 75340,
+        "total_drop_pct": 0.0,
+        "n_observations": 1,
+        "days_observed": 2
+      }
+    },
+    "W1KLH6FB1SA097441": {
+      "year": 2025,
+      "trim": "E450S4",
+      "dealer": "R B M of Atlanta, Inc.",
+      "first_seen_at": "2026-04-26T15:50:37.492543+00:00",
+      "current_price": 76900,
+      "current_mileage": 10663,
+      "status": "active",
+      "observations": [
+        {
+          "observed_at": "2026-04-26T15:50:37.492543+00:00",
+          "price": 76900,
+          "mileage": 10663
+        }
+      ],
+      "stats": {
+        "all_time_low": 76900,
+        "all_time_high": 76900,
+        "total_drop_pct": 0.0,
+        "n_observations": 1,
+        "days_observed": 2
+      }
+    },
+    "W1KZH6AB9PB111931": {
+      "year": 2023,
+      "trim": "E450S4",
+      "dealer": "R B M of Alpharetta",
+      "first_seen_at": "2026-04-26T15:50:37.492543+00:00",
+      "current_price": 65895,
+      "current_mileage": 33771,
+      "status": "active",
+      "observations": [
+        {
+          "observed_at": "2026-04-26T15:50:37.492543+00:00",
+          "price": 65895,
+          "mileage": 33771
+        }
+      ],
+      "stats": {
+        "all_time_low": 65895,
+        "all_time_high": 65895,
+        "total_drop_pct": 0.0,
+        "n_observations": 1,
+        "days_observed": 2
+      }
+    },
+    "W1KLH6FB0SA094790": {
+      "year": 2025,
+      "trim": "E450S4",
+      "dealer": "Vin Devers, Inc.",
+      "first_seen_at": "2026-04-26T15:50:37.492543+00:00",
+      "current_price": 73855,
+      "current_mileage": 10368,
+      "status": "active",
+      "observations": [
+        {
+          "observed_at": "2026-04-26T15:50:37.492543+00:00",
+          "price": 73855,
+          "mileage": 10368
+        }
+      ],
+      "stats": {
+        "all_time_low": 73855,
+        "all_time_high": 73855,
+        "total_drop_pct": 0.0,
+        "n_observations": 1,
+        "days_observed": 2
+      }
+    },
+    "W1KZH6ABXPB111551": {
+      "year": 2023,
+      "trim": "E450S4",
+      "dealer": "Mercedes-Benz of Bloomfield Hills",
+      "first_seen_at": "2026-04-26T15:50:37.492543+00:00",
+      "current_price": 56890,
+      "current_mileage": 30704,
+      "status": "active",
+      "observations": [
+        {
+          "observed_at": "2026-04-26T15:50:37.492543+00:00",
+          "price": 56890,
+          "mileage": 30704
+        }
+      ],
+      "stats": {
+        "all_time_low": 56890,
+        "all_time_high": 56890,
+        "total_drop_pct": 0.0,
+        "n_observations": 1,
+        "days_observed": 2
+      }
+    },
+    "W1KLH6FB4SA147846": {
+      "year": 2025,
+      "trim": "E450S4",
+      "dealer": "Mercedes-Benz of Bloomfield Hills",
+      "first_seen_at": "2026-04-26T15:50:37.492543+00:00",
+      "current_price": 71890,
+      "current_mileage": 14879,
+      "status": "active",
+      "observations": [
+        {
+          "observed_at": "2026-04-26T15:50:37.492543+00:00",
+          "price": 71890,
+          "mileage": 14879
+        }
+      ],
+      "stats": {
+        "all_time_low": 71890,
+        "all_time_high": 71890,
+        "total_drop_pct": 0.0,
+        "n_observations": 1,
+        "days_observed": 2
+      }
+    },
+    "W1KLH6FB9SA129536": {
+      "year": 2025,
+      "trim": "E450S4",
+      "dealer": "Mercedes-Benz of Asheville",
+      "first_seen_at": "2026-04-26T15:50:37.492543+00:00",
+      "current_price": 76937,
+      "current_mileage": 3132,
+      "status": "active",
+      "observations": [
+        {
+          "observed_at": "2026-04-26T15:50:37.492543+00:00",
+          "price": 77437,
+          "mileage": 3132
+        },
+        {
+          "observed_at": "2026-04-28T17:09:04.838821+00:00",
+          "price": 76937,
+          "mileage": 3132
+        },
+        {
+          "observed_at": "2026-04-28T19:00:07.148935+00:00",
+          "price": 77437,
+          "mileage": 3132
+        },
+        {
+          "observed_at": "2026-04-28T20:20:38.219570+00:00",
+          "price": 76937,
+          "mileage": 3132
+        },
+        {
+          "observed_at": "2026-04-28T21:35:14.675184+00:00",
+          "price": 77437,
+          "mileage": 3132
+        },
+        {
+          "observed_at": "2026-04-29T05:38:32.386924+00:00",
+          "price": 76937,
+          "mileage": 3132
+        }
+      ],
+      "stats": {
+        "all_time_low": 76937,
+        "all_time_high": 77437,
+        "total_drop_pct": -0.65,
+        "n_observations": 6,
+        "days_observed": 2
+      }
+    },
+    "W1KLH6FB3SA115082": {
+      "year": 2025,
+      "trim": "E450S4",
+      "dealer": "Crown Eurocars, Inc.",
+      "first_seen_at": "2026-04-26T15:50:37.492543+00:00",
+      "current_price": 72946,
+      "current_mileage": 2053,
+      "status": "active",
+      "observations": [
+        {
+          "observed_at": "2026-04-26T15:50:37.492543+00:00",
+          "price": 72946,
+          "mileage": 2053
+        }
+      ],
+      "stats": {
+        "all_time_low": 72946,
+        "all_time_high": 72946,
+        "total_drop_pct": 0.0,
+        "n_observations": 1,
+        "days_observed": 2
+      }
+    },
+    "W1KLH6FB8SA126109": {
+      "year": 2025,
+      "trim": "E450S4",
+      "dealer": "Critz, Inc.",
+      "first_seen_at": "2026-04-26T15:50:37.492543+00:00",
+      "current_price": 68353,
+      "current_mileage": 4903,
+      "status": "active",
+      "observations": [
+        {
+          "observed_at": "2026-04-26T15:50:37.492543+00:00",
+          "price": 68520,
+          "mileage": 4903
+        },
+        {
+          "observed_at": "2026-04-28T17:09:04.838821+00:00",
+          "price": 68353,
+          "mileage": 4903
+        },
+        {
+          "observed_at": "2026-04-28T19:00:07.148935+00:00",
+          "price": 68520,
+          "mileage": 4903
+        },
+        {
+          "observed_at": "2026-04-28T20:20:38.219570+00:00",
+          "price": 68353,
+          "mileage": 4903
+        },
+        {
+          "observed_at": "2026-04-28T21:35:14.675184+00:00",
+          "price": 68520,
+          "mileage": 4903
+        },
+        {
+          "observed_at": "2026-04-29T05:38:32.386924+00:00",
+          "price": 68353,
+          "mileage": 4903
+        }
+      ],
+      "stats": {
+        "all_time_low": 68353,
+        "all_time_high": 68520,
+        "total_drop_pct": -0.24,
+        "n_observations": 6,
+        "days_observed": 2
+      }
+    },
+    "W1KLH6FB0SA147147": {
+      "year": 2025,
+      "trim": "E450S4",
+      "dealer": "Mercedes-Benz of Cary",
+      "first_seen_at": "2026-04-26T15:50:37.492543+00:00",
+      "current_price": 65980,
+      "current_mileage": 5143,
+      "status": "active",
+      "observations": [
+        {
+          "observed_at": "2026-04-26T15:50:37.492543+00:00",
+          "price": 67680,
+          "mileage": 5143
+        },
+        {
+          "observed_at": "2026-04-29T11:57:15.784091+00:00",
+          "price": 65980,
+          "mileage": 5143
+        }
+      ],
+      "stats": {
+        "all_time_low": 65980,
+        "all_time_high": 67680,
+        "total_drop_pct": -2.51,
+        "n_observations": 2,
+        "days_observed": 2
+      }
+    },
+    "W1KLH6FB8TA207175": {
+      "year": 2026,
+      "trim": "E450S4",
+      "dealer": "Mercedes-Benz of Raleigh",
+      "first_seen_at": "2026-04-26T15:50:37.492543+00:00",
+      "current_price": 79999,
+      "current_mileage": 6902,
+      "status": "active",
+      "observations": [
+        {
+          "observed_at": "2026-04-26T15:50:37.492543+00:00",
+          "price": 79999,
+          "mileage": 6902
+        }
+      ],
+      "stats": {
+        "all_time_low": 79999,
+        "all_time_high": 79999,
+        "total_drop_pct": 0.0,
+        "n_observations": 1,
+        "days_observed": 2
+      }
+    },
+    "W1KLH6FBXSA157314": {
+      "year": 2025,
+      "trim": "E450S4",
+      "dealer": "Mercedes-Benz of Hagerstown",
+      "first_seen_at": "2026-04-26T15:50:37.492543+00:00",
+      "current_price": 68488,
+      "current_mileage": 7061,
+      "status": "active",
+      "observations": [
+        {
+          "observed_at": "2026-04-26T15:50:37.492543+00:00",
+          "price": 68988,
+          "mileage": 7061
+        },
+        {
+          "observed_at": "2026-04-29T10:22:02.386002+00:00",
+          "price": 68488,
+          "mileage": 7061
+        }
+      ],
+      "stats": {
+        "all_time_low": 68488,
+        "all_time_high": 68988,
+        "total_drop_pct": -0.72,
+        "n_observations": 2,
+        "days_observed": 2
+      }
+    },
+    "W1KZH6AB5PB138639": {
+      "year": 2023,
+      "trim": "E450S4",
+      "dealer": "Mercedes-Benz of Tysons Corner",
+      "first_seen_at": "2026-04-26T15:50:37.492543+00:00",
+      "current_price": 62992,
+      "current_mileage": 27644,
+      "status": "active",
+      "observations": [
+        {
+          "observed_at": "2026-04-26T15:50:37.492543+00:00",
+          "price": 62992,
+          "mileage": 27644
+        },
+        {
+          "observed_at": "2026-04-28T17:09:04.838821+00:00",
+          "price": 62792,
+          "mileage": 27644
+        },
+        {
+          "observed_at": "2026-04-28T19:00:07.148935+00:00",
+          "price": 62992,
+          "mileage": 27644
+        },
+        {
+          "observed_at": "2026-04-28T20:20:38.219570+00:00",
+          "price": 62792,
+          "mileage": 27644
+        },
+        {
+          "observed_at": "2026-04-28T21:35:14.675184+00:00",
+          "price": 62992,
+          "mileage": 27644
+        },
+        {
+          "observed_at": "2026-04-29T05:38:32.386924+00:00",
+          "price": 62792,
+          "mileage": 27644
+        },
+        {
+          "observed_at": "2026-04-29T10:22:02.386002+00:00",
+          "price": 62992,
+          "mileage": 27644
+        }
+      ],
+      "stats": {
+        "all_time_low": 62792,
+        "all_time_high": 62992,
+        "total_drop_pct": 0.0,
+        "n_observations": 7,
+        "days_observed": 2
+      }
+    },
+    "W1KZH6AB0PB147894": {
+      "year": 2023,
+      "trim": "E450S4",
+      "dealer": "Euro Motorcars, LLC",
+      "first_seen_at": "2026-04-26T15:50:37.492543+00:00",
+      "current_price": 63680,
+      "current_mileage": 19410,
+      "status": "active",
+      "observations": [
+        {
+          "observed_at": "2026-04-26T15:50:37.492543+00:00",
+          "price": 63680,
+          "mileage": 19410
+        }
+      ],
+      "stats": {
+        "all_time_low": 63680,
+        "all_time_high": 63680,
+        "total_drop_pct": 0.0,
+        "n_observations": 1,
+        "days_observed": 2
+      }
+    },
+    "W1KLH6FB1SA095172": {
+      "year": 2025,
+      "trim": "E450S4",
+      "dealer": "Sun Motor Cars, Inc.",
+      "first_seen_at": "2026-04-26T15:50:37.492543+00:00",
+      "current_price": 70489,
+      "current_mileage": 7975,
+      "status": "active",
+      "observations": [
+        {
+          "observed_at": "2026-04-26T15:50:37.492543+00:00",
+          "price": 70489,
+          "mileage": 7975
+        },
+        {
+          "observed_at": "2026-04-26T23:31:01.171865+00:00",
+          "price": 70489,
+          "mileage": 7975
+        }
+      ],
+      "stats": {
+        "all_time_low": 70489,
+        "all_time_high": 70489,
+        "total_drop_pct": 0.0,
+        "n_observations": 2,
+        "days_observed": 2
+      }
+    },
+    "W1KLH6FB4SA155154": {
+      "year": 2025,
+      "trim": "E450S4",
+      "dealer": "Sun Motor Cars, Inc.",
+      "first_seen_at": "2026-04-26T15:50:37.492543+00:00",
+      "current_price": 70489,
+      "current_mileage": 5351,
+      "status": "active",
+      "observations": [
+        {
+          "observed_at": "2026-04-26T15:50:37.492543+00:00",
+          "price": 70489,
+          "mileage": 5351
+        }
+      ],
+      "stats": {
+        "all_time_low": 70489,
+        "all_time_high": 70489,
+        "total_drop_pct": 0.0,
+        "n_observations": 1,
+        "days_observed": 2
+      }
+    },
+    "W1KLH6FB4SA129881": {
+      "year": 2025,
+      "trim": "E450S4",
+      "dealer": "Mercedes-Benz of Hampton",
+      "first_seen_at": "2026-04-26T15:50:37.492543+00:00",
+      "current_price": 80345,
+      "current_mileage": 6174,
+      "status": "active",
+      "observations": [
+        {
+          "observed_at": "2026-04-26T15:50:37.492543+00:00",
+          "price": 80345,
+          "mileage": 6174
+        },
+        {
+          "observed_at": "2026-04-26T23:31:01.171865+00:00",
+          "price": 80345,
+          "mileage": 6174
+        }
+      ],
+      "stats": {
+        "all_time_low": 80345,
+        "all_time_high": 80345,
+        "total_drop_pct": 0.0,
+        "n_observations": 2,
+        "days_observed": 2
+      }
+    },
+    "W1KZH6AB6MA975384": {
+      "year": 2021,
+      "trim": "E450S4",
+      "dealer": "I.G. Burton & Co., Inc.",
+      "first_seen_at": "2026-04-26T15:50:37.492543+00:00",
+      "current_price": 51500,
+      "current_mileage": 51728,
+      "status": "active",
+      "observations": [
+        {
+          "observed_at": "2026-04-26T15:50:37.492543+00:00",
+          "price": 51500,
+          "mileage": 51728
+        },
+        {
+          "observed_at": "2026-04-26T23:31:01.171865+00:00",
+          "price": 51500,
+          "mileage": 51728
+        }
+      ],
+      "stats": {
+        "all_time_low": 51500,
+        "all_time_high": 51500,
+        "total_drop_pct": 0.0,
+        "n_observations": 2,
+        "days_observed": 2
+      }
+    },
+    "W1KLH6FB5RA054103": {
+      "year": 2024,
+      "trim": "E450S4",
+      "dealer": "Mercedes-Benz of Atlantic City",
+      "first_seen_at": "2026-04-26T15:50:37.492543+00:00",
+      "current_price": 68989,
+      "current_mileage": 13646,
+      "status": "active",
+      "observations": [
+        {
+          "observed_at": "2026-04-26T15:50:37.492543+00:00",
+          "price": 68989,
+          "mileage": 13646
+        },
+        {
+          "observed_at": "2026-04-26T23:31:01.171865+00:00",
+          "price": 68989,
+          "mileage": 13646
+        }
+      ],
+      "stats": {
+        "all_time_low": 68989,
+        "all_time_high": 68989,
+        "total_drop_pct": 0.0,
+        "n_observations": 2,
+        "days_observed": 2
+      }
+    },
+    "W1KZH6ABXNB038310": {
+      "year": 2022,
+      "trim": "E450S4",
+      "dealer": "Mercedes-Benz of Greenwich",
+      "first_seen_at": "2026-04-26T15:50:37.492543+00:00",
+      "current_price": 52850,
+      "current_mileage": 31756,
+      "status": "active",
+      "observations": [
+        {
+          "observed_at": "2026-04-26T15:50:37.492543+00:00",
+          "price": 52850,
+          "mileage": 31756
+        },
+        {
+          "observed_at": "2026-04-26T23:31:01.171865+00:00",
+          "price": 52850,
+          "mileage": 31756
+        }
+      ],
+      "stats": {
+        "all_time_low": 52850,
+        "all_time_high": 52850,
+        "total_drop_pct": 0.0,
+        "n_observations": 2,
+        "days_observed": 2
+      }
+    },
+    "W1KZH6AB4PB111528": {
+      "year": 2023,
+      "trim": "E450S4",
+      "dealer": "Mercedes-Benz of Huntington",
+      "first_seen_at": "2026-04-26T15:50:37.492543+00:00",
+      "current_price": 63952,
+      "current_mileage": 13230,
+      "status": "active",
+      "observations": [
+        {
+          "observed_at": "2026-04-26T15:50:37.492543+00:00",
+          "price": 65000,
+          "mileage": 13230
+        },
+        {
+          "observed_at": "2026-04-26T23:31:01.171865+00:00",
+          "price": 65000,
+          "mileage": 13230
+        },
+        {
+          "observed_at": "2026-04-28T17:09:04.838821+00:00",
+          "price": 63952,
+          "mileage": 13230
+        },
+        {
+          "observed_at": "2026-04-28T19:00:07.148935+00:00",
+          "price": 65000,
+          "mileage": 13230
+        },
+        {
+          "observed_at": "2026-04-28T20:20:38.219570+00:00",
+          "price": 63952,
+          "mileage": 13230
+        },
+        {
+          "observed_at": "2026-04-28T21:35:14.675184+00:00",
+          "price": 65000,
+          "mileage": 13230
+        },
+        {
+          "observed_at": "2026-04-29T05:38:32.386924+00:00",
+          "price": 63952,
+          "mileage": 13230
+        }
+      ],
+      "stats": {
+        "all_time_low": 63952,
+        "all_time_high": 65000,
+        "total_drop_pct": -1.61,
+        "n_observations": 7,
+        "days_observed": 2
+      }
+    },
+    "W1KLH6FB7SA116221": {
+      "year": 2025,
+      "trim": "E450S4",
+      "dealer": "Mercedes-Benz of Huntington",
+      "first_seen_at": "2026-04-26T15:50:37.492543+00:00",
+      "current_price": 75795,
+      "current_mileage": 9194,
+      "status": "active",
+      "observations": [
+        {
+          "observed_at": "2026-04-26T15:50:37.492543+00:00",
+          "price": 75795,
+          "mileage": 9194
+        },
+        {
+          "observed_at": "2026-04-26T23:31:01.171865+00:00",
+          "price": 75795,
+          "mileage": 9194
+        }
+      ],
+      "stats": {
+        "all_time_low": 75795,
+        "all_time_high": 75795,
+        "total_drop_pct": 0.0,
+        "n_observations": 2,
+        "days_observed": 2
+      }
+    },
+    "W1KLH6FB5SA085762": {
+      "year": 2025,
+      "trim": "E450S4",
+      "dealer": "Mercedes-Benz of Smithtown",
+      "first_seen_at": "2026-04-26T15:50:37.492543+00:00",
+      "current_price": 67893,
+      "current_mileage": 5481,
+      "status": "active",
+      "observations": [
+        {
+          "observed_at": "2026-04-26T15:50:37.492543+00:00",
+          "price": 67893,
+          "mileage": 5481
+        },
+        {
+          "observed_at": "2026-04-26T23:31:01.171865+00:00",
+          "price": 67893,
+          "mileage": 5481
+        }
+      ],
+      "stats": {
+        "all_time_low": 67893,
+        "all_time_high": 67893,
+        "total_drop_pct": 0.0,
+        "n_observations": 2,
+        "days_observed": 2
+      }
+    },
+    "W1KZH6AB6PB099916": {
+      "year": 2023,
+      "trim": "E450S4",
+      "dealer": "Mercedes-Benz of Smithtown",
+      "first_seen_at": "2026-04-26T15:50:37.492543+00:00",
+      "current_price": 56733,
+      "current_mileage": 34593,
+      "status": "active",
+      "observations": [
+        {
+          "observed_at": "2026-04-26T15:50:37.492543+00:00",
+          "price": 56733,
+          "mileage": 34593
+        },
+        {
+          "observed_at": "2026-04-26T23:31:01.171865+00:00",
+          "price": 56733,
+          "mileage": 34593
+        }
+      ],
+      "stats": {
+        "all_time_low": 56733,
+        "all_time_high": 56733,
+        "total_drop_pct": 0.0,
+        "n_observations": 2,
+        "days_observed": 2
+      }
+    },
+    "W1KLH6FB5SA139657": {
+      "year": 2025,
+      "trim": "E450S4",
+      "dealer": "New Country Motor Cars, Inc.",
+      "first_seen_at": "2026-04-26T15:50:37.492543+00:00",
+      "current_price": 69997,
+      "current_mileage": 6679,
+      "status": "active",
+      "observations": [
+        {
+          "observed_at": "2026-04-26T15:50:37.492543+00:00",
+          "price": 71997,
+          "mileage": 6679
+        },
+        {
+          "observed_at": "2026-04-26T23:31:01.171865+00:00",
+          "price": 71997,
+          "mileage": 6679
+        },
+        {
+          "observed_at": "2026-04-29T11:57:15.784091+00:00",
+          "price": 69997,
+          "mileage": 6679
+        }
+      ],
+      "stats": {
+        "all_time_low": 69997,
+        "all_time_high": 71997,
+        "total_drop_pct": -2.78,
+        "n_observations": 3,
+        "days_observed": 2
+      }
+    },
+    "W1KLH6FBXSA138665": {
+      "year": 2025,
+      "trim": "E450S4",
+      "dealer": "Mercedes-Benz of Kansas City South",
+      "first_seen_at": "2026-04-28T17:09:04.838821+00:00",
+      "current_price": 73990,
+      "current_mileage": 5562,
+      "status": "gone",
+      "observations": [
+        {
+          "observed_at": "2026-04-28T17:09:04.838821+00:00",
+          "price": 73990,
+          "mileage": 5562
+        }
+      ],
+      "stats": {
+        "all_time_low": 73990,
+        "all_time_high": 73990,
+        "total_drop_pct": 0.0,
+        "n_observations": 1,
+        "days_observed": 0
+      }
+    },
+    "W1KZH6ABXPB138989": {
+      "year": 2023,
+      "trim": "E450S4",
+      "dealer": "New Country Motor Cars, Inc.",
+      "first_seen_at": "2026-04-29T10:22:02.386002+00:00",
+      "current_price": 53997,
+      "current_mileage": 43285,
+      "status": "active",
+      "observations": [
+        {
+          "observed_at": "2026-04-29T10:22:02.386002+00:00",
+          "price": 55000,
+          "mileage": 43285
+        },
+        {
+          "observed_at": "2026-04-29T11:57:15.784091+00:00",
+          "price": 53997,
+          "mileage": 43285
+        }
+      ],
+      "stats": {
+        "all_time_low": 53997,
+        "all_time_high": 55000,
+        "total_drop_pct": -1.82,
+        "n_observations": 2,
+        "days_observed": 0
+      }
+    },
+    "W1KZH6AB2PB147623": {
+      "year": 2023,
+      "trim": "E450S4",
+      "dealer": "Mercedes-Benz of Southampton",
+      "first_seen_at": "2026-04-29T10:22:02.386002+00:00",
+      "current_price": 64122,
+      "current_mileage": 16567,
+      "status": "gone",
+      "observations": [
+        {
+          "observed_at": "2026-04-29T10:22:02.386002+00:00",
+          "price": 64122,
+          "mileage": 16567
+        }
+      ],
+      "stats": {
+        "all_time_low": 64122,
+        "all_time_high": 64122,
+        "total_drop_pct": 0.0,
+        "n_observations": 1,
+        "days_observed": 0
+      }
+    },
+    "W1KLH6FBXRA058115": {
+      "year": 2024,
+      "trim": "E450S4",
+      "dealer": "Mercedes-Benz of Centerville",
+      "first_seen_at": "2026-04-29T11:57:15.784091+00:00",
+      "current_price": 71860,
+      "current_mileage": 8958,
+      "status": "active",
+      "observations": [
+        {
+          "observed_at": "2026-04-29T11:57:15.784091+00:00",
+          "price": 71860,
+          "mileage": 8958
+        }
+      ],
+      "stats": {
+        "all_time_low": 71860,
+        "all_time_high": 71860,
+        "total_drop_pct": 0.0,
+        "n_observations": 1,
+        "days_observed": 0
+      }
+    }
+  }
+}
