@@ -290,9 +290,12 @@ footer.foot {
 <script>
 "use strict";
 
-const RAW_BASE = "https://raw.githubusercontent.com/pwysocan-droid/wagon-watcher/main";
-const URL_LATEST = `${RAW_BASE}/data/latest.json`;
-const URL_HISTORY = `${RAW_BASE}/data/price_history.json`;
+// Same-origin paths via the Vercel rewrite in next.config.mjs (/data/*
+// proxies to raw.githubusercontent.com server-side). raw GH doesn't set
+// CORS headers; routing through the same origin avoids the cross-origin
+// browser block.
+const URL_LATEST = "/data/latest.json";
+const URL_HISTORY = "/data/price_history.json";
 
 // ---- helpers --------------------------------------------------------------
 
