@@ -1,42 +1,13 @@
 {
-  "generated_at": "2026-04-29T13:49:31.609551+00:00",
+  "generated_at": "2026-04-29T15:52:33.778314+00:00",
   "count": 36,
   "kpis": {
     "national_pool": 36,
     "within_criteria": 4,
-    "median_asking": 68420,
-    "tier1_alerts_7d": 11
+    "median_asking": 68123,
+    "tier1_alerts_7d": 12
   },
   "listings": [
-    {
-      "vin": "W1KLH6FBXRA058115",
-      "year": 2024,
-      "model": "E 450 4MATIC All-Terrain",
-      "trim": "E450S4",
-      "body_style": "WGN",
-      "exterior_color": "Polar White",
-      "interior_color": "Tonka Brown/Black leather",
-      "dealer_name": "Mercedes-Benz of Centerville",
-      "dealer_state": "OH",
-      "dealer_zip": "45459",
-      "distance_miles": 1933.9883045206445,
-      "mileage_first_seen": 8958,
-      "photo_url": "https://content.homenetiol.com/2003058/2209910/0x0/223283f0522740369bf98c4d45505f44.jpg",
-      "listing_url": "https://www.mbusa.com/en/cpo/inventory/details/W1KLH6FBXRA058115",
-      "status": "active",
-      "first_seen": "2026-04-29T11:57:15.784091+00:00",
-      "last_seen": "2026-04-29T13:49:27.156980+00:00",
-      "fair_price_pct": null,
-      "fair_price_tier": null,
-      "dealer_site_price": null,
-      "dealer_site_url": "http://www.centerville.mercedesdealer.com",
-      "current_price": 71860,
-      "tier1_count": 0,
-      "is_watchlist_match": false,
-      "watchlist_labels": [],
-      "days_on_lot": 0,
-      "mbusa_listing_url": "https://www.mbusa.com/en/cpo/inventory/details/W1KLH6FBXRA058115"
-    },
     {
       "vin": "W1KZH6ABXPB138989",
       "year": 2023,
@@ -54,17 +25,46 @@
       "listing_url": "https://www.mbusa.com/en/cpo/inventory/details/W1KZH6ABXPB138989",
       "status": "active",
       "first_seen": "2026-04-29T10:22:02.386002+00:00",
-      "last_seen": "2026-04-29T13:49:27.156980+00:00",
+      "last_seen": "2026-04-29T15:52:32.774361+00:00",
       "fair_price_pct": null,
       "fair_price_tier": null,
       "dealer_site_price": null,
       "dealer_site_url": "http://www.newcountry.mercedesdealer.com",
-      "current_price": 53997,
+      "current_price": 55000,
       "tier1_count": 0,
       "is_watchlist_match": false,
       "watchlist_labels": [],
       "days_on_lot": 0,
       "mbusa_listing_url": "https://www.mbusa.com/en/cpo/inventory/details/W1KZH6ABXPB138989"
+    },
+    {
+      "vin": "W1KZH6AB2PB147623",
+      "year": 2023,
+      "model": "E 450 4MATIC All-Terrain Wagon",
+      "trim": "E450S4",
+      "body_style": "WGN",
+      "exterior_color": "Nautical Blue metallic",
+      "interior_color": "Nut Brown/Black MB-Tex Sport",
+      "dealer_name": "Mercedes-Benz of Southampton",
+      "dealer_state": "NY",
+      "dealer_zip": "11968",
+      "distance_miles": 2551.485611506303,
+      "mileage_first_seen": 16567,
+      "photo_url": "https://content.homenetiol.com/2003058/2209910/0x0/1e82925f0012495cbd52d79f91d16a79.jpg",
+      "listing_url": "https://www.mbusa.com/en/cpo/inventory/details/W1KZH6AB2PB147623",
+      "status": "reappeared",
+      "first_seen": "2026-04-29T10:22:02.386002+00:00",
+      "last_seen": "2026-04-29T15:52:32.774361+00:00",
+      "fair_price_pct": null,
+      "fair_price_tier": null,
+      "dealer_site_price": null,
+      "dealer_site_url": "http://www.southampton.mercedesdealer.com",
+      "current_price": 64122,
+      "tier1_count": 1,
+      "is_watchlist_match": false,
+      "watchlist_labels": [],
+      "days_on_lot": 0,
+      "mbusa_listing_url": "https://www.mbusa.com/en/cpo/inventory/details/W1KZH6AB2PB147623"
     },
     {
       "vin": "W1KZH6AB4PB149504",
@@ -83,7 +83,7 @@
       "listing_url": null,
       "status": "active",
       "first_seen": "2026-04-26T15:50:37.492543+00:00",
-      "last_seen": "2026-04-29T13:49:27.156980+00:00",
+      "last_seen": "2026-04-29T15:52:32.774361+00:00",
       "fair_price_pct": 59,
       "fair_price_tier": "strict",
       "dealer_site_price": null,
@@ -92,7 +92,7 @@
       "tier1_count": 0,
       "is_watchlist_match": false,
       "watchlist_labels": [],
-      "days_on_lot": 2,
+      "days_on_lot": 3,
       "mbusa_listing_url": "https://www.mbusa.com/en/cpo/inventory/details/W1KZH6AB4PB149504"
     },
     {
@@ -112,7 +112,7 @@
       "listing_url": null,
       "status": "active",
       "first_seen": "2026-04-26T15:50:37.492543+00:00",
-      "last_seen": "2026-04-29T13:49:27.156980+00:00",
+      "last_seen": "2026-04-29T15:52:32.774361+00:00",
       "fair_price_pct": 30,
       "fair_price_tier": "strict",
       "dealer_site_price": null,
@@ -121,7 +121,7 @@
       "tier1_count": 0,
       "is_watchlist_match": false,
       "watchlist_labels": [],
-      "days_on_lot": 2,
+      "days_on_lot": 3,
       "mbusa_listing_url": "https://www.mbusa.com/en/cpo/inventory/details/W1KLH6FB5SA102804"
     },
     {
@@ -141,7 +141,7 @@
       "listing_url": null,
       "status": "active",
       "first_seen": "2026-04-26T15:50:37.492543+00:00",
-      "last_seen": "2026-04-29T13:49:27.156980+00:00",
+      "last_seen": "2026-04-29T15:52:32.774361+00:00",
       "fair_price_pct": 80,
       "fair_price_tier": "strict",
       "dealer_site_price": null,
@@ -150,7 +150,7 @@
       "tier1_count": 0,
       "is_watchlist_match": false,
       "watchlist_labels": [],
-      "days_on_lot": 2,
+      "days_on_lot": 3,
       "mbusa_listing_url": "https://www.mbusa.com/en/cpo/inventory/details/W1KLH6FB3SA087476"
     },
     {
@@ -170,7 +170,7 @@
       "listing_url": null,
       "status": "active",
       "first_seen": "2026-04-26T15:50:37.492543+00:00",
-      "last_seen": "2026-04-29T13:49:27.156980+00:00",
+      "last_seen": "2026-04-29T15:52:32.774361+00:00",
       "fair_price_pct": 32,
       "fair_price_tier": "strict",
       "dealer_site_price": null,
@@ -179,7 +179,7 @@
       "tier1_count": 0,
       "is_watchlist_match": false,
       "watchlist_labels": [],
-      "days_on_lot": 2,
+      "days_on_lot": 3,
       "mbusa_listing_url": "https://www.mbusa.com/en/cpo/inventory/details/W1KZH6AB6PB140805"
     },
     {
@@ -199,7 +199,7 @@
       "listing_url": null,
       "status": "active",
       "first_seen": "2026-04-26T15:50:37.492543+00:00",
-      "last_seen": "2026-04-29T13:49:27.156980+00:00",
+      "last_seen": "2026-04-29T15:52:32.774361+00:00",
       "fair_price_pct": 2,
       "fair_price_tier": "strict",
       "dealer_site_price": null,
@@ -210,7 +210,7 @@
       "watchlist_labels": [
         "Within criteria.md"
       ],
-      "days_on_lot": 2,
+      "days_on_lot": 3,
       "mbusa_listing_url": "https://www.mbusa.com/en/cpo/inventory/details/W1KLH6FB9SA129598"
     },
     {
@@ -230,7 +230,7 @@
       "listing_url": null,
       "status": "active",
       "first_seen": "2026-04-26T15:50:37.492543+00:00",
-      "last_seen": "2026-04-29T13:49:27.156980+00:00",
+      "last_seen": "2026-04-29T15:52:32.774361+00:00",
       "fair_price_pct": 8,
       "fair_price_tier": "strict",
       "dealer_site_price": null,
@@ -239,7 +239,7 @@
       "tier1_count": 0,
       "is_watchlist_match": false,
       "watchlist_labels": [],
-      "days_on_lot": 2,
+      "days_on_lot": 3,
       "mbusa_listing_url": "https://www.mbusa.com/en/cpo/inventory/details/W1KLH6FB6SA144852"
     },
     {
@@ -259,7 +259,7 @@
       "listing_url": null,
       "status": "active",
       "first_seen": "2026-04-26T15:50:37.492543+00:00",
-      "last_seen": "2026-04-29T13:49:27.156980+00:00",
+      "last_seen": "2026-04-29T15:52:32.774361+00:00",
       "fair_price_pct": 45,
       "fair_price_tier": "strict",
       "dealer_site_price": null,
@@ -268,7 +268,7 @@
       "tier1_count": 0,
       "is_watchlist_match": false,
       "watchlist_labels": [],
-      "days_on_lot": 2,
+      "days_on_lot": 3,
       "mbusa_listing_url": "https://www.mbusa.com/en/cpo/inventory/details/W1KLH6FB1RA068693"
     },
     {
@@ -288,7 +288,7 @@
       "listing_url": null,
       "status": "active",
       "first_seen": "2026-04-26T15:50:37.492543+00:00",
-      "last_seen": "2026-04-29T13:49:27.156980+00:00",
+      "last_seen": "2026-04-29T15:52:32.774361+00:00",
       "fair_price_pct": 14,
       "fair_price_tier": "strict",
       "dealer_site_price": null,
@@ -299,7 +299,7 @@
       "watchlist_labels": [
         "Within criteria.md"
       ],
-      "days_on_lot": 2,
+      "days_on_lot": 3,
       "mbusa_listing_url": "https://www.mbusa.com/en/cpo/inventory/details/W1KLH6FB1SA099139"
     },
     {
@@ -319,7 +319,7 @@
       "listing_url": null,
       "status": "active",
       "first_seen": "2026-04-26T15:50:37.492543+00:00",
-      "last_seen": "2026-04-29T13:49:27.156980+00:00",
+      "last_seen": "2026-04-29T15:52:32.774361+00:00",
       "fair_price_pct": 72,
       "fair_price_tier": "strict",
       "dealer_site_price": null,
@@ -328,7 +328,7 @@
       "tier1_count": 0,
       "is_watchlist_match": false,
       "watchlist_labels": [],
-      "days_on_lot": 2,
+      "days_on_lot": 3,
       "mbusa_listing_url": "https://www.mbusa.com/en/cpo/inventory/details/W1KLH6FB5RA004561"
     },
     {
@@ -348,7 +348,7 @@
       "listing_url": null,
       "status": "active",
       "first_seen": "2026-04-26T15:50:37.492543+00:00",
-      "last_seen": "2026-04-29T13:49:27.156980+00:00",
+      "last_seen": "2026-04-29T15:52:32.774361+00:00",
       "fair_price_pct": 74,
       "fair_price_tier": "strict",
       "dealer_site_price": null,
@@ -357,7 +357,7 @@
       "tier1_count": 3,
       "is_watchlist_match": false,
       "watchlist_labels": [],
-      "days_on_lot": 2,
+      "days_on_lot": 3,
       "mbusa_listing_url": "https://www.mbusa.com/en/cpo/inventory/details/W1KLH6FB2SA128504"
     },
     {
@@ -377,7 +377,7 @@
       "listing_url": null,
       "status": "active",
       "first_seen": "2026-04-26T15:50:37.492543+00:00",
-      "last_seen": "2026-04-29T13:49:27.156980+00:00",
+      "last_seen": "2026-04-29T15:52:32.774361+00:00",
       "fair_price_pct": 86,
       "fair_price_tier": "strict",
       "dealer_site_price": null,
@@ -386,7 +386,7 @@
       "tier1_count": 3,
       "is_watchlist_match": false,
       "watchlist_labels": [],
-      "days_on_lot": 2,
+      "days_on_lot": 3,
       "mbusa_listing_url": "https://www.mbusa.com/en/cpo/inventory/details/W1KLH6FB1SA097441"
     },
     {
@@ -406,7 +406,7 @@
       "listing_url": null,
       "status": "active",
       "first_seen": "2026-04-26T15:50:37.492543+00:00",
-      "last_seen": "2026-04-29T13:49:27.156980+00:00",
+      "last_seen": "2026-04-29T15:52:32.774361+00:00",
       "fair_price_pct": 94,
       "fair_price_tier": "strict",
       "dealer_site_price": null,
@@ -415,7 +415,7 @@
       "tier1_count": 0,
       "is_watchlist_match": false,
       "watchlist_labels": [],
-      "days_on_lot": 2,
+      "days_on_lot": 3,
       "mbusa_listing_url": "https://www.mbusa.com/en/cpo/inventory/details/W1KZH6AB9PB111931"
     },
     {
@@ -435,7 +435,7 @@
       "listing_url": null,
       "status": "active",
       "first_seen": "2026-04-26T15:50:37.492543+00:00",
-      "last_seen": "2026-04-29T13:49:27.156980+00:00",
+      "last_seen": "2026-04-29T15:52:32.774361+00:00",
       "fair_price_pct": 62,
       "fair_price_tier": "strict",
       "dealer_site_price": null,
@@ -444,7 +444,7 @@
       "tier1_count": 0,
       "is_watchlist_match": false,
       "watchlist_labels": [],
-      "days_on_lot": 2,
+      "days_on_lot": 3,
       "mbusa_listing_url": "https://www.mbusa.com/en/cpo/inventory/details/W1KLH6FB0SA094790"
     },
     {
@@ -464,7 +464,7 @@
       "listing_url": null,
       "status": "active",
       "first_seen": "2026-04-26T15:50:37.492543+00:00",
-      "last_seen": "2026-04-29T13:49:27.156980+00:00",
+      "last_seen": "2026-04-29T15:52:32.774361+00:00",
       "fair_price_pct": 28,
       "fair_price_tier": "strict",
       "dealer_site_price": null,
@@ -473,7 +473,7 @@
       "tier1_count": 0,
       "is_watchlist_match": false,
       "watchlist_labels": [],
-      "days_on_lot": 2,
+      "days_on_lot": 3,
       "mbusa_listing_url": "https://www.mbusa.com/en/cpo/inventory/details/W1KZH6ABXPB111551"
     },
     {
@@ -493,7 +493,7 @@
       "listing_url": null,
       "status": "active",
       "first_seen": "2026-04-26T15:50:37.492543+00:00",
-      "last_seen": "2026-04-29T13:49:27.156980+00:00",
+      "last_seen": "2026-04-29T15:52:32.774361+00:00",
       "fair_price_pct": 50,
       "fair_price_tier": "strict",
       "dealer_site_price": null,
@@ -502,7 +502,7 @@
       "tier1_count": 0,
       "is_watchlist_match": false,
       "watchlist_labels": [],
-      "days_on_lot": 2,
+      "days_on_lot": 3,
       "mbusa_listing_url": "https://www.mbusa.com/en/cpo/inventory/details/W1KLH6FB4SA147846"
     },
     {
@@ -522,7 +522,7 @@
       "listing_url": null,
       "status": "active",
       "first_seen": "2026-04-26T15:50:37.492543+00:00",
-      "last_seen": "2026-04-29T13:49:27.156980+00:00",
+      "last_seen": "2026-04-29T15:52:32.774361+00:00",
       "fair_price_pct": 89,
       "fair_price_tier": "strict",
       "dealer_site_price": null,
@@ -531,7 +531,7 @@
       "tier1_count": 0,
       "is_watchlist_match": false,
       "watchlist_labels": [],
-      "days_on_lot": 2,
+      "days_on_lot": 3,
       "mbusa_listing_url": "https://www.mbusa.com/en/cpo/inventory/details/W1KLH6FB9SA129536"
     },
     {
@@ -551,7 +551,7 @@
       "listing_url": null,
       "status": "active",
       "first_seen": "2026-04-26T15:50:37.492543+00:00",
-      "last_seen": "2026-04-29T13:49:27.156980+00:00",
+      "last_seen": "2026-04-29T15:52:32.774361+00:00",
       "fair_price_pct": 50,
       "fair_price_tier": "strict",
       "dealer_site_price": null,
@@ -560,7 +560,7 @@
       "tier1_count": 0,
       "is_watchlist_match": false,
       "watchlist_labels": [],
-      "days_on_lot": 2,
+      "days_on_lot": 3,
       "mbusa_listing_url": "https://www.mbusa.com/en/cpo/inventory/details/W1KLH6FB3SA115082"
     },
     {
@@ -580,7 +580,7 @@
       "listing_url": null,
       "status": "active",
       "first_seen": "2026-04-26T15:50:37.492543+00:00",
-      "last_seen": "2026-04-29T13:49:27.156980+00:00",
+      "last_seen": "2026-04-29T15:52:32.774361+00:00",
       "fair_price_pct": 23,
       "fair_price_tier": "strict",
       "dealer_site_price": null,
@@ -589,7 +589,7 @@
       "tier1_count": 0,
       "is_watchlist_match": false,
       "watchlist_labels": [],
-      "days_on_lot": 2,
+      "days_on_lot": 3,
       "mbusa_listing_url": "https://www.mbusa.com/en/cpo/inventory/details/W1KLH6FB8SA126109"
     },
     {
@@ -609,18 +609,18 @@
       "listing_url": null,
       "status": "active",
       "first_seen": "2026-04-26T15:50:37.492543+00:00",
-      "last_seen": "2026-04-29T13:49:27.156980+00:00",
+      "last_seen": "2026-04-29T15:52:32.774361+00:00",
       "fair_price_pct": 15,
       "fair_price_tier": "strict",
       "dealer_site_price": null,
       "dealer_site_url": null,
-      "current_price": 65980,
+      "current_price": 67680,
       "tier1_count": 0,
       "is_watchlist_match": true,
       "watchlist_labels": [
         "Within criteria.md"
       ],
-      "days_on_lot": 2,
+      "days_on_lot": 3,
       "mbusa_listing_url": "https://www.mbusa.com/en/cpo/inventory/details/W1KLH6FB0SA147147"
     },
     {
@@ -640,7 +640,7 @@
       "listing_url": null,
       "status": "active",
       "first_seen": "2026-04-26T15:50:37.492543+00:00",
-      "last_seen": "2026-04-29T13:49:27.156980+00:00",
+      "last_seen": "2026-04-29T15:52:32.774361+00:00",
       "fair_price_pct": 93,
       "fair_price_tier": "strict",
       "dealer_site_price": null,
@@ -649,7 +649,7 @@
       "tier1_count": 0,
       "is_watchlist_match": false,
       "watchlist_labels": [],
-      "days_on_lot": 2,
+      "days_on_lot": 3,
       "mbusa_listing_url": "https://www.mbusa.com/en/cpo/inventory/details/W1KLH6FB8TA207175"
     },
     {
@@ -669,7 +669,7 @@
       "listing_url": null,
       "status": "active",
       "first_seen": "2026-04-26T15:50:37.492543+00:00",
-      "last_seen": "2026-04-29T13:49:27.156980+00:00",
+      "last_seen": "2026-04-29T15:52:32.774361+00:00",
       "fair_price_pct": 34,
       "fair_price_tier": "strict",
       "dealer_site_price": null,
@@ -678,7 +678,7 @@
       "tier1_count": 0,
       "is_watchlist_match": false,
       "watchlist_labels": [],
-      "days_on_lot": 2,
+      "days_on_lot": 3,
       "mbusa_listing_url": "https://www.mbusa.com/en/cpo/inventory/details/W1KLH6FBXSA157314"
     },
     {
@@ -698,7 +698,7 @@
       "listing_url": null,
       "status": "active",
       "first_seen": "2026-04-26T15:50:37.492543+00:00",
-      "last_seen": "2026-04-29T13:49:27.156980+00:00",
+      "last_seen": "2026-04-29T15:52:32.774361+00:00",
       "fair_price_pct": 41,
       "fair_price_tier": "strict",
       "dealer_site_price": null,
@@ -707,7 +707,7 @@
       "tier1_count": 0,
       "is_watchlist_match": false,
       "watchlist_labels": [],
-      "days_on_lot": 2,
+      "days_on_lot": 3,
       "mbusa_listing_url": "https://www.mbusa.com/en/cpo/inventory/details/W1KZH6AB5PB138639"
     },
     {
@@ -727,7 +727,7 @@
       "listing_url": null,
       "status": "active",
       "first_seen": "2026-04-26T15:50:37.492543+00:00",
-      "last_seen": "2026-04-29T13:49:27.156980+00:00",
+      "last_seen": "2026-04-29T15:52:32.774361+00:00",
       "fair_price_pct": 45,
       "fair_price_tier": "strict",
       "dealer_site_price": null,
@@ -736,7 +736,7 @@
       "tier1_count": 0,
       "is_watchlist_match": false,
       "watchlist_labels": [],
-      "days_on_lot": 2,
+      "days_on_lot": 3,
       "mbusa_listing_url": "https://www.mbusa.com/en/cpo/inventory/details/W1KZH6AB0PB147894"
     },
     {
@@ -756,7 +756,7 @@
       "listing_url": null,
       "status": "active",
       "first_seen": "2026-04-26T15:50:37.492543+00:00",
-      "last_seen": "2026-04-29T13:49:27.156980+00:00",
+      "last_seen": "2026-04-29T15:52:32.774361+00:00",
       "fair_price_pct": 44,
       "fair_price_tier": "strict",
       "dealer_site_price": null,
@@ -765,7 +765,7 @@
       "tier1_count": 0,
       "is_watchlist_match": false,
       "watchlist_labels": [],
-      "days_on_lot": 2,
+      "days_on_lot": 3,
       "mbusa_listing_url": "https://www.mbusa.com/en/cpo/inventory/details/W1KLH6FB1SA095172"
     },
     {
@@ -785,7 +785,7 @@
       "listing_url": null,
       "status": "active",
       "first_seen": "2026-04-26T15:50:37.492543+00:00",
-      "last_seen": "2026-04-29T13:49:27.156980+00:00",
+      "last_seen": "2026-04-29T15:52:32.774361+00:00",
       "fair_price_pct": 42,
       "fair_price_tier": "strict",
       "dealer_site_price": null,
@@ -794,7 +794,7 @@
       "tier1_count": 0,
       "is_watchlist_match": false,
       "watchlist_labels": [],
-      "days_on_lot": 2,
+      "days_on_lot": 3,
       "mbusa_listing_url": "https://www.mbusa.com/en/cpo/inventory/details/W1KLH6FB4SA155154"
     },
     {
@@ -814,7 +814,7 @@
       "listing_url": null,
       "status": "active",
       "first_seen": "2026-04-26T15:50:37.492543+00:00",
-      "last_seen": "2026-04-29T13:49:27.156980+00:00",
+      "last_seen": "2026-04-29T15:52:32.774361+00:00",
       "fair_price_pct": 98,
       "fair_price_tier": "strict",
       "dealer_site_price": null,
@@ -823,7 +823,7 @@
       "tier1_count": 0,
       "is_watchlist_match": false,
       "watchlist_labels": [],
-      "days_on_lot": 2,
+      "days_on_lot": 3,
       "mbusa_listing_url": "https://www.mbusa.com/en/cpo/inventory/details/W1KLH6FB4SA129881"
     },
     {
@@ -843,7 +843,7 @@
       "listing_url": null,
       "status": "active",
       "first_seen": "2026-04-26T15:50:37.492543+00:00",
-      "last_seen": "2026-04-29T13:49:27.156980+00:00",
+      "last_seen": "2026-04-29T15:52:32.774361+00:00",
       "fair_price_pct": 19,
       "fair_price_tier": "loose",
       "dealer_site_price": null,
@@ -852,7 +852,7 @@
       "tier1_count": 0,
       "is_watchlist_match": false,
       "watchlist_labels": [],
-      "days_on_lot": 2,
+      "days_on_lot": 3,
       "mbusa_listing_url": "https://www.mbusa.com/en/cpo/inventory/details/W1KZH6AB6MA975384"
     },
     {
@@ -872,7 +872,7 @@
       "listing_url": null,
       "status": "active",
       "first_seen": "2026-04-26T15:50:37.492543+00:00",
-      "last_seen": "2026-04-29T13:49:27.156980+00:00",
+      "last_seen": "2026-04-29T15:52:32.774361+00:00",
       "fair_price_pct": 50,
       "fair_price_tier": "strict",
       "dealer_site_price": null,
@@ -881,7 +881,7 @@
       "tier1_count": 0,
       "is_watchlist_match": false,
       "watchlist_labels": [],
-      "days_on_lot": 2,
+      "days_on_lot": 3,
       "mbusa_listing_url": "https://www.mbusa.com/en/cpo/inventory/details/W1KLH6FB5RA054103"
     },
     {
@@ -901,7 +901,7 @@
       "listing_url": null,
       "status": "active",
       "first_seen": "2026-04-26T15:50:37.492543+00:00",
-      "last_seen": "2026-04-29T13:49:27.156980+00:00",
+      "last_seen": "2026-04-29T15:52:32.774361+00:00",
       "fair_price_pct": 6,
       "fair_price_tier": "strict",
       "dealer_site_price": null,
@@ -910,7 +910,7 @@
       "tier1_count": 0,
       "is_watchlist_match": false,
       "watchlist_labels": [],
-      "days_on_lot": 2,
+      "days_on_lot": 3,
       "mbusa_listing_url": "https://www.mbusa.com/en/cpo/inventory/details/W1KZH6ABXNB038310"
     },
     {
@@ -930,7 +930,7 @@
       "listing_url": null,
       "status": "active",
       "first_seen": "2026-04-26T15:50:37.492543+00:00",
-      "last_seen": "2026-04-29T13:49:27.156980+00:00",
+      "last_seen": "2026-04-29T15:52:32.774361+00:00",
       "fair_price_pct": 56,
       "fair_price_tier": "strict",
       "dealer_site_price": null,
@@ -939,7 +939,7 @@
       "tier1_count": 0,
       "is_watchlist_match": false,
       "watchlist_labels": [],
-      "days_on_lot": 2,
+      "days_on_lot": 3,
       "mbusa_listing_url": "https://www.mbusa.com/en/cpo/inventory/details/W1KZH6AB4PB111528"
     },
     {
@@ -959,7 +959,7 @@
       "listing_url": null,
       "status": "active",
       "first_seen": "2026-04-26T15:50:37.492543+00:00",
-      "last_seen": "2026-04-29T13:49:27.156980+00:00",
+      "last_seen": "2026-04-29T15:52:32.774361+00:00",
       "fair_price_pct": 78,
       "fair_price_tier": "strict",
       "dealer_site_price": null,
@@ -968,7 +968,7 @@
       "tier1_count": 0,
       "is_watchlist_match": false,
       "watchlist_labels": [],
-      "days_on_lot": 2,
+      "days_on_lot": 3,
       "mbusa_listing_url": "https://www.mbusa.com/en/cpo/inventory/details/W1KLH6FB7SA116221"
     },
     {
@@ -988,7 +988,7 @@
       "listing_url": null,
       "status": "active",
       "first_seen": "2026-04-26T15:50:37.492543+00:00",
-      "last_seen": "2026-04-29T13:49:27.156980+00:00",
+      "last_seen": "2026-04-29T15:52:32.774361+00:00",
       "fair_price_pct": 19,
       "fair_price_tier": "strict",
       "dealer_site_price": null,
@@ -999,7 +999,7 @@
       "watchlist_labels": [
         "Within criteria.md"
       ],
-      "days_on_lot": 2,
+      "days_on_lot": 3,
       "mbusa_listing_url": "https://www.mbusa.com/en/cpo/inventory/details/W1KLH6FB5SA085762"
     },
     {
@@ -1019,7 +1019,7 @@
       "listing_url": null,
       "status": "active",
       "first_seen": "2026-04-26T15:50:37.492543+00:00",
-      "last_seen": "2026-04-29T13:49:27.156980+00:00",
+      "last_seen": "2026-04-29T15:52:32.774361+00:00",
       "fair_price_pct": 19,
       "fair_price_tier": "strict",
       "dealer_site_price": null,
@@ -1028,7 +1028,7 @@
       "tier1_count": 0,
       "is_watchlist_match": false,
       "watchlist_labels": [],
-      "days_on_lot": 2,
+      "days_on_lot": 3,
       "mbusa_listing_url": "https://www.mbusa.com/en/cpo/inventory/details/W1KZH6AB6PB099916"
     },
     {
@@ -1048,16 +1048,16 @@
       "listing_url": null,
       "status": "active",
       "first_seen": "2026-04-26T15:50:37.492543+00:00",
-      "last_seen": "2026-04-29T13:49:27.156980+00:00",
+      "last_seen": "2026-04-29T15:52:32.774361+00:00",
       "fair_price_pct": 52,
       "fair_price_tier": "strict",
       "dealer_site_price": null,
       "dealer_site_url": null,
-      "current_price": 69997,
+      "current_price": 71997,
       "tier1_count": 3,
       "is_watchlist_match": false,
       "watchlist_labels": [],
-      "days_on_lot": 2,
+      "days_on_lot": 3,
       "mbusa_listing_url": "https://www.mbusa.com/en/cpo/inventory/details/W1KLH6FB5SA139657"
     }
   ]
