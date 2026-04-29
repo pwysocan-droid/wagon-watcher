@@ -34,7 +34,13 @@ from scrape import RAW_SNAPSHOTS, ParsedRecord, fetch_all, parse_response, save_
 
 ROOT = Path(__file__).parent
 LATEST_JSON = ROOT / "data" / "latest.json"
+PRICE_HISTORY_JSON = ROOT / "data" / "price_history.json"
 COMMIT_MSG_FILE = ROOT / ".run-commit-msg.txt"
+
+# How far back to keep 'gone' VINs in the price-history export. Active and
+# reappeared VINs are always included regardless of last_seen.
+PRICE_HISTORY_GONE_RETENTION = timedelta(days=30)
+PRICE_HISTORY_SCHEMA_VERSION = 1
 
 def _row_to_parsed_record(row) -> ParsedRecord:
     """Adapter: a listings-table row → a ParsedRecord-shaped object so
@@ -147,6 +153,95 @@ def write_latest_json(conn, out_path: Path) -> Path:
     return out_path
 
 
+def write_price_history_json(conn, out_path: Path) -> Path:
+    """Export per-VIN price-history series to data/price_history.json.
+
+    Per HANDOFF_price_history_export.md: VIN-keyed for O(1) client lookups,
+    one observation per distinct price/mileage row in price_history (already
+    deduped by reconcile), server-computed stats so the browser doesn't
+    redo the math per chart. Gone VINs are kept for 30 days post-vanish,
+    then dropped — file size estimate ≈80 KB at current volume.
+    """
+    now = datetime.now(timezone.utc)
+    cutoff = (now - PRICE_HISTORY_GONE_RETENTION).isoformat()
+
+    listings = conn.execute(
+        "SELECT vin, year, trim, dealer_name, first_seen, last_seen, "
+        "       mileage_first_seen, status "
+        "FROM listings "
+        "WHERE status IN ('active', 'reappeared') "
+        "   OR last_seen >= ?",
+        (cutoff,),
+    ).fetchall()
+
+    payload = {
+        "generated_at": now.isoformat(),
+        "schema_version": PRICE_HISTORY_SCHEMA_VERSION,
+        "vins": {},
+    }
+
+    for row in listings:
+        vin = row["vin"]
+        observations = conn.execute(
+            "SELECT observed_at, price, mileage FROM price_history "
+            "WHERE vin = ? AND price > 0 "
+            "ORDER BY observed_at ASC, id ASC",
+            (vin,),
+        ).fetchall()
+
+        if not observations:
+            continue  # skip VINs without any usable price data
+
+        prices = [o["price"] for o in observations]
+        first_price = prices[0]
+        current_price = prices[-1]
+        current_mileage = observations[-1]["mileage"]
+
+        total_drop_pct = (
+            round((current_price - first_price) / first_price * 100, 2)
+            if first_price > 0 else 0.0
+        )
+
+        first_seen = row["first_seen"]
+        if isinstance(first_seen, str):
+            first_seen_dt = datetime.fromisoformat(first_seen)
+        else:
+            first_seen_dt = first_seen
+        if first_seen_dt.tzinfo is None:
+            first_seen_dt = first_seen_dt.replace(tzinfo=timezone.utc)
+        days_observed = max(0, (now - first_seen_dt).days)
+
+        payload["vins"][vin] = {
+            "year": row["year"],
+            "trim": row["trim"],
+            "dealer": row["dealer_name"],
+            "first_seen_at": first_seen if isinstance(first_seen, str) else first_seen.isoformat(),
+            "current_price": current_price,
+            "current_mileage": current_mileage,
+            "status": row["status"],
+            "observations": [
+                {
+                    "observed_at": o["observed_at"],
+                    "price": o["price"],
+                    "mileage": o["mileage"],
+                }
+                for o in observations
+            ],
+            "stats": {
+                "all_time_low": min(prices),
+                "all_time_high": max(prices),
+                "total_drop_pct": total_drop_pct,
+                "n_observations": len(observations),
+                "days_observed": days_observed,
+            },
+        }
+
+    out_path.parent.mkdir(parents=True, exist_ok=True)
+    with open(out_path, "w") as f:
+        json.dump(payload, f, indent=2, default=str)
+    return out_path
+
+
 def commit_message(result: dict, when: datetime) -> str:
     ts = when.strftime("%Y-%m-%dT%H:%MZ")
     s = result["stats"]
@@ -166,6 +261,7 @@ def main(
     db_path: Path = DB_PATH,
     snapshots_dir: Path = RAW_SNAPSHOTS,
     latest_json: Path = LATEST_JSON,
+    price_history_json: Path = PRICE_HISTORY_JSON,
     commit_msg_file: Path = COMMIT_MSG_FILE,
 ) -> int:
     started_at = datetime.now(timezone.utc)
@@ -179,6 +275,7 @@ def main(
         migrate(conn)
         result = reconcile(parsed, conn, now=started_at)
         write_latest_json(conn, latest_json)
+        write_price_history_json(conn, price_history_json)
 
         # Tier 1: scraper_aborted (the fourth Tier 1 case — the other three
         # fire from inside reconcile.py). Priority-2 with retry/expire so the

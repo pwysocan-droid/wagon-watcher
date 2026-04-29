@@ -4,7 +4,7 @@ from datetime import datetime, timezone
 import pytest
 
 from db import connect, migrate
-from run import commit_message, main, write_latest_json
+from run import commit_message, main, write_latest_json, write_price_history_json
 from scrape import ParsedRecord
 
 
@@ -167,6 +167,89 @@ def test_latest_json_median_asking_kpi(tmp_path):
     conn.close()
 
 
+# ---- write_price_history_json --------------------------------------------
+
+def test_price_history_empty_db_produces_empty_vins(tmp_path):
+    conn = connect(tmp_path / "test.db")
+    migrate(conn)
+    out = write_price_history_json(conn, tmp_path / "price_history.json")
+    data = json.loads(out.read_text())
+    assert data["schema_version"] == 1
+    assert data["vins"] == {}
+    datetime.fromisoformat(data["generated_at"])  # valid ISO
+    conn.close()
+
+
+def test_price_history_single_vin_three_observations_correct_stats(tmp_path):
+    """One VIN, three price drops over time → observations + stats math."""
+    from dataclasses import replace
+    from datetime import timezone as _tz, datetime as _dt, timedelta as _td
+    from reconcile import reconcile
+
+    conn = connect(tmp_path / "test.db")
+    migrate(conn)
+
+    t0 = _dt(2026, 4, 1, tzinfo=_tz.utc)
+    r = _record("V________________1", mbusa_price=70_000)
+    reconcile([r], conn, now=t0)
+    reconcile([replace(r, mbusa_price=68_000)], conn, now=t0 + _td(days=2))
+    reconcile([replace(r, mbusa_price=65_000)], conn, now=t0 + _td(days=4))
+
+    out = write_price_history_json(conn, tmp_path / "price_history.json")
+    data = json.loads(out.read_text())
+
+    rec = data["vins"]["V________________1"]
+    assert len(rec["observations"]) == 3
+    prices = [o["price"] for o in rec["observations"]]
+    assert prices == [70_000, 68_000, 65_000]
+    assert rec["current_price"] == 65_000
+    assert rec["status"] == "active"
+    assert rec["stats"]["all_time_high"] == 70_000
+    assert rec["stats"]["all_time_low"] == 65_000
+    assert rec["stats"]["n_observations"] == 3
+    # (65000 - 70000) / 70000 * 100 ≈ -7.14%
+    assert rec["stats"]["total_drop_pct"] == pytest.approx(-7.14, abs=0.01)
+    conn.close()
+
+
+def test_price_history_excludes_old_gone_vins(tmp_path):
+    """Per HANDOFF retention: gone VINs older than 30 days are dropped from
+    the export. Recent gone VINs and active VINs always make the cut."""
+    from datetime import timezone as _tz, datetime as _dt, timedelta as _td
+    from reconcile import reconcile
+
+    conn = connect(tmp_path / "test.db")
+    migrate(conn)
+
+    long_ago = _dt(2026, 1, 1, tzinfo=_tz.utc)
+    recent = _dt(2026, 4, 20, tzinfo=_tz.utc)
+
+    # Cold-start with 10 listings on 2026-01-01.
+    rs = [_record(f"V{i:017d}", mbusa_price=70_000) for i in range(10)]
+    reconcile(rs, conn, now=long_ago)
+
+    # On 2026-04-20, only listings 5-9 are still there. 0-4 go 'gone'.
+    reconcile(rs[5:], conn, now=recent)
+
+    # Manually back-date the gone VIN's last_seen so it counts as old.
+    conn.execute(
+        "UPDATE listings SET last_seen = ?, gone_at = ? WHERE vin = ?",
+        (long_ago.isoformat(), long_ago.isoformat(), rs[0].vin),
+    )
+    conn.commit()
+
+    out = write_price_history_json(conn, tmp_path / "price_history.json")
+    data = json.loads(out.read_text())
+
+    # rs[0] last_seen long_ago + status='gone' → excluded
+    assert rs[0].vin not in data["vins"]
+    # rs[5..9] still active → included
+    for r in rs[5:]:
+        assert r.vin in data["vins"]
+        assert data["vins"][r.vin]["status"] == "active"
+    conn.close()
+
+
 # ---- main() in DRY_RUN ---------------------------------------------------
 
 def test_main_dry_run_rolls_back(monkeypatch, tmp_path):
@@ -178,7 +261,9 @@ def test_main_dry_run_rolls_back(monkeypatch, tmp_path):
     commit_msg = tmp_path / ".run-commit-msg.txt"
 
     rc = main(db_path=db_path, snapshots_dir=snapshots,
-              latest_json=latest, commit_msg_file=commit_msg)
+              latest_json=latest,
+              price_history_json=tmp_path / "price_history.json",
+              commit_msg_file=commit_msg)
 
     assert rc == 0
     assert db_path.exists()
@@ -208,7 +293,9 @@ def test_main_full_pipeline_writes_to_db(monkeypatch, tmp_path):
     commit_msg = tmp_path / ".run-commit-msg.txt"
 
     rc = main(db_path=db_path, snapshots_dir=snapshots,
-              latest_json=latest, commit_msg_file=commit_msg)
+              latest_json=latest,
+              price_history_json=tmp_path / "price_history.json",
+              commit_msg_file=commit_msg)
 
     assert rc == 0
     assert db_path.exists()
@@ -246,7 +333,9 @@ def test_main_abort_returns_nonzero(monkeypatch, tmp_path):
     # First run: 12 records, status='ok'
     monkeypatch.setattr("run.fetch_all", lambda *a, **kw: fixture_payload)
     rc1 = main(db_path=db_path, snapshots_dir=snapshots,
-               latest_json=latest, commit_msg_file=commit_msg)
+               latest_json=latest,
+               price_history_json=tmp_path / "price_history.json",
+               commit_msg_file=commit_msg)
     assert rc1 == 0
 
     # Second run: empty payload — health check trips
@@ -260,7 +349,9 @@ def test_main_abort_returns_nonzero(monkeypatch, tmp_path):
     monkeypatch.setattr("run.fetch_all", lambda *a, **kw: empty)
 
     rc2 = main(db_path=db_path, snapshots_dir=snapshots,
-               latest_json=latest, commit_msg_file=commit_msg)
+               latest_json=latest,
+               price_history_json=tmp_path / "price_history.json",
+               commit_msg_file=commit_msg)
     assert rc2 == 1
 
     conn = connect(db_path)
