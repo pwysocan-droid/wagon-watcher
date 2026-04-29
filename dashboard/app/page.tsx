@@ -139,6 +139,15 @@ export default async function Page() {
               latest digest →
             </a>
           </div>
+          <div>
+            <a
+              href="/v2"
+              className="vin-link"
+              style={{ borderBottomColor: "currentColor" }}
+            >
+              ↗ v2 ticker
+            </a>
+          </div>
         </div>
       </header>
 
