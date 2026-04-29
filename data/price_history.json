@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-29T18:53:38.496029+00:00",
+  "generated_at": "2026-04-29T20:06:53.298542+00:00",
   "schema_version": 1,
   "vins": {
     "W1KZH6AB2NB028936": {
@@ -547,7 +547,7 @@
       "trim": "E450S4",
       "dealer": "Mercedes-Benz of Cary",
       "first_seen_at": "2026-04-26T15:50:37.492543+00:00",
-      "current_price": 67680,
+      "current_price": 65980,
       "current_mileage": 5143,
       "status": "active",
       "observations": [
@@ -565,13 +565,18 @@
           "observed_at": "2026-04-29T15:52:32.774361+00:00",
           "price": 67680,
           "mileage": 5143
+        },
+        {
+          "observed_at": "2026-04-29T20:06:48.847154+00:00",
+          "price": 65980,
+          "mileage": 5143
         }
       ],
       "stats": {
         "all_time_low": 65980,
         "all_time_high": 67680,
-        "total_drop_pct": 0.0,
-        "n_observations": 3,
+        "total_drop_pct": -2.51,
+        "n_observations": 4,
         "days_observed": 3
       }
     },
@@ -1007,7 +1012,7 @@
       "trim": "E450S4",
       "dealer": "New Country Motor Cars, Inc.",
       "first_seen_at": "2026-04-26T15:50:37.492543+00:00",
-      "current_price": 71997,
+      "current_price": 69997,
       "current_mileage": 6679,
       "status": "active",
       "observations": [
@@ -1030,13 +1035,18 @@
           "observed_at": "2026-04-29T15:52:32.774361+00:00",
           "price": 71997,
           "mileage": 6679
+        },
+        {
+          "observed_at": "2026-04-29T20:06:48.847154+00:00",
+          "price": 69997,
+          "mileage": 6679
         }
       ],
       "stats": {
         "all_time_low": 69997,
         "all_time_high": 71997,
-        "total_drop_pct": 0.0,
-        "n_observations": 4,
+        "total_drop_pct": -2.78,
+        "n_observations": 5,
         "days_observed": 3
       }
     },
@@ -1068,7 +1078,7 @@
       "trim": "E450S4",
       "dealer": "New Country Motor Cars, Inc.",
       "first_seen_at": "2026-04-29T10:22:02.386002+00:00",
-      "current_price": 55000,
+      "current_price": 53997,
       "current_mileage": 43285,
       "status": "active",
       "observations": [
@@ -1086,13 +1096,18 @@
           "observed_at": "2026-04-29T15:52:32.774361+00:00",
           "price": 55000,
           "mileage": 43285
+        },
+        {
+          "observed_at": "2026-04-29T20:06:48.847154+00:00",
+          "price": 53997,
+          "mileage": 43285
         }
       ],
       "stats": {
         "all_time_low": 53997,
         "all_time_high": 55000,
-        "total_drop_pct": 0.0,
-        "n_observations": 3,
+        "total_drop_pct": -1.82,
+        "n_observations": 4,
         "days_observed": 0
       }
     },
@@ -1126,7 +1141,7 @@
       "first_seen_at": "2026-04-29T11:57:15.784091+00:00",
       "current_price": 71860,
       "current_mileage": 8958,
-      "status": "reappeared",
+      "status": "active",
       "observations": [
         {
           "observed_at": "2026-04-29T11:57:15.784091+00:00",
