@@ -56,7 +56,7 @@ def test_empty_db_produces_valid_digest(conn, empty_config_dir):
     assert "**2026-04-30**" in md
     # Empty-state messages
     assert "0 active" in md
-    assert "_No price moves in the last 24 hours._" in md
+    assert "_No price moves vs. start of today (UTC)._" in md
     assert "_No VINs at their all-time low today._" in md
     assert "_No anomalies detected in the last 24h._" in md
     assert "_No active watchlist matches._" in md
@@ -66,26 +66,26 @@ def test_empty_db_produces_valid_digest(conn, empty_config_dir):
 # ---- Test 2: synthetic movers → correct sort + 10-row cap ----------------
 
 def test_movers_section_sorted_and_capped(conn):
-    """12 VINs with varying % moves in last 24h. Movers section shows top 10
-    by absolute %, ordered descending."""
+    """12 VINs whose price changed between yesterday's baseline and today.
+    Movers section shows top 10 by abs % move (current vs pre-today)."""
     from reconcile import reconcile
 
-    yesterday = NOW - timedelta(hours=23)
-    two_days_ago = NOW - timedelta(hours=48)
+    # Yesterday's baseline (well before today_start UTC midnight)
+    yesterday = NOW - timedelta(days=1, hours=12)  # 2026-04-29 00:00 UTC
+    today_morning = NOW - timedelta(hours=4)        # 2026-04-30 08:00 UTC
+    today_just_before = NOW - timedelta(hours=1)    # 2026-04-30 11:00 UTC
 
-    # Cold-start with 12 VINs at $70k two days ago
+    # Cold-start at $70k (yesterday's baseline)
     rs = [_record(f"V{i:017d}", mbusa_price=70_000) for i in range(12)]
-    reconcile(rs, conn, now=two_days_ago)
+    reconcile(rs, conn, now=yesterday)
 
-    # Reconcile each at a different price within the last 24h
-    # Mix of up + down moves of varying %
     new_prices = [
         72_000,  # +2.86%
         67_000,  # -4.29%
-        77_000,  # +10.00% — biggest mover
+        77_000,  # +10.00%
         65_000,  # -7.14%
-        70_500,  # +0.71% — smallest, should be cut
-        69_500,  # -0.71%
+        70_500,  # +0.71% — smallest, cut by top-10
+        69_500,  # -0.71% — smallest, cut by top-10
         80_000,  # +14.29% — biggest
         60_000,  # -14.29% — biggest tied
         71_000,  # +1.43%
@@ -94,26 +94,69 @@ def test_movers_section_sorted_and_capped(conn):
         66_500,  # -5.00%
     ]
     moved = [replace(rs[i], mbusa_price=p) for i, p in enumerate(new_prices)]
-    # Two-poll confirmation under the stabilization filter — first poll
-    # stashes pending, second confirms and writes price_history.
-    reconcile(moved, conn, now=yesterday - timedelta(minutes=30))
-    reconcile(moved, conn, now=yesterday)
+    # Two-poll confirmation under stabilization — both polls land TODAY
+    # (after today_start UTC) so the baseline remains yesterday's $70k.
+    reconcile(moved, conn, now=today_morning)
+    reconcile(moved, conn, now=today_just_before)
 
     md = digest_daily._section_movers(conn, NOW)
     lines = [ln for ln in md.splitlines() if ln.startswith("- ")]
 
-    # Capped at 10
+    # Capped at 10 — the two ±0.71% smallest fall out
     assert len(lines) == 10
-    # First entry has the largest abs %; among 14.29%/-14.29% the order
-    # depends on insertion id but both should appear in the top 2.
+    # The two biggest (±14.29%) lead
     head_text = "\n".join(lines[:2])
     assert "+14.29%" in head_text or "-14.29%" in head_text
 
 
-def test_movers_empty_when_no_24h_changes(conn):
-    """No price changes → empty-state message."""
+def test_movers_empty_when_no_changes_today(conn):
+    """No price changes vs pre-today baseline → empty-state message."""
     md = digest_daily._section_movers(conn, NOW)
-    assert "_No price moves in the last 24 hours._" in md
+    assert "_No price moves vs. start of today (UTC)._" in md
+
+
+def test_movers_excludes_vins_first_seen_today(conn):
+    """A VIN whose first (and only) observation is today has no pre-today
+    baseline. It must NOT appear as a mover even though current_price exists."""
+    from reconcile import reconcile
+
+    today_morning = NOW - timedelta(hours=4)
+    today_just_before = NOW - timedelta(hours=1)
+
+    r = _record("V_NEW_TODAY______", mbusa_price=68_000)
+    # Both polls today — no observation before today_start
+    reconcile([r], conn, now=today_morning)
+    reconcile([r], conn, now=today_just_before)
+
+    md = digest_daily._section_movers(conn, NOW)
+    assert "V_NEW_TODAY______" not in md
+
+
+def test_movers_ignores_intraday_flap(conn):
+    """A VIN that flapped today but ended at its pre-today baseline must
+    NOT show as a mover (this is the Cary case from 2026-04-30)."""
+    from reconcile import reconcile
+
+    yesterday = NOW - timedelta(days=1, hours=12)
+    today_dip_a = NOW - timedelta(hours=8)
+    today_dip_b = NOW - timedelta(hours=7)
+    today_back_a = NOW - timedelta(hours=2)
+    today_back_b = NOW - timedelta(hours=1)
+
+    r = _record("V_CARY___________", mbusa_price=67_680)
+    reconcile([r], conn, now=yesterday)  # baseline $67,680
+
+    dip = replace(r, mbusa_price=65_980)
+    reconcile([dip], conn, now=today_dip_a)
+    reconcile([dip], conn, now=today_dip_b)  # confirms dip
+
+    back = replace(r, mbusa_price=67_680)
+    reconcile([back], conn, now=today_back_a)
+    reconcile([back], conn, now=today_back_b)  # confirms revert to $67,680
+
+    md = digest_daily._section_movers(conn, NOW)
+    # current = $67,680 = pre-today baseline → delta=0 → not a mover
+    assert "V_CARY___________" not in md
 
 
 # ---- Test 3: disqualified VIN → "DISQUALIFIED (reason)" -----------------

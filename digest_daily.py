@@ -195,49 +195,58 @@ def _section_population(conn: sqlite3.Connection, when: datetime, config_dir: Pa
 
 # ---- § Movers ------------------------------------------------------------
 
-def _section_movers(conn: sqlite3.Connection, when: datetime) -> str:
-    cutoff = (when - timedelta(hours=24)).isoformat()
+def _section_movers(conn: sqlite3.Connection, when: datetime, limit: int = 10) -> str:
+    """Movers = VINs whose current price differs from their price as of
+    the start of today's UTC day. Mirrors v2's computeDelta logic.
+
+    The earlier LAG-over-price_history-within-24h approach was wrong for
+    pre-stabilization data: a VIN that flapped (e.g., Cary's
+    [$65,980, $67,680, $65,980] yesterday) generated artifact deltas
+    between consecutive flap rows, surfacing as fake +/− movers even
+    when the price ended back at its starting value.
+
+    priceAtOrBefore(today_start) anchors the baseline to a single point
+    that's stable across the day's intra-day noise. VINs whose first
+    observation is today (no pre-today price) are excluded — we have no
+    baseline to compare against."""
+    today_start = when.replace(hour=0, minute=0, second=0, microsecond=0).isoformat()
     rows = conn.execute(
-        "SELECT * FROM ("
-        "  SELECT vin, observed_at, price, "
-        "         LAG(price) OVER (PARTITION BY vin ORDER BY observed_at, id) AS prev_price "
-        "  FROM price_history WHERE price > 0"
-        ") WHERE observed_at >= ? AND prev_price > 0",
-        (cutoff,),
+        "SELECT l.vin, l.year, l.dealer_name, l.dealer_state, "
+        "       (SELECT price FROM price_history "
+        "        WHERE vin = l.vin AND price > 0 "
+        "        ORDER BY observed_at DESC, id DESC LIMIT 1) AS current_price, "
+        "       (SELECT price FROM price_history "
+        "        WHERE vin = l.vin AND price > 0 AND observed_at < ? "
+        "        ORDER BY observed_at DESC, id DESC LIMIT 1) AS prior_price "
+        "FROM listings l "
+        "WHERE l.status IN ('active', 'reappeared')",
+        (today_start,),
     ).fetchall()
 
-    # Dedupe to one row per VIN — keep the LARGEST absolute % move within
-    # the 24h window. A flippy VIN ($70k → $68k → $70k → $68k) would
-    # otherwise flood the section with redundant lines.
-    by_vin: dict[str, dict] = {}
+    movers = []
     for r in rows:
-        delta = r["price"] - r["prev_price"]
+        if r["current_price"] is None or r["prior_price"] is None:
+            continue  # VIN first seen today → no pre-today baseline
+        delta = r["current_price"] - r["prior_price"]
         if delta == 0:
             continue
-        pct = delta / r["prev_price"]
-        candidate = {
+        movers.append({
             "vin": r["vin"],
             "delta": delta,
-            "pct": pct,
-            "new_price": r["price"],
-        }
-        existing = by_vin.get(r["vin"])
-        if existing is None or abs(pct) > abs(existing["pct"]):
-            by_vin[r["vin"]] = candidate
-
-    movers = sorted(by_vin.values(), key=lambda m: abs(m["pct"]), reverse=True)[:10]
+            "pct": delta / r["prior_price"],
+            "new_price": r["current_price"],
+            "dealer": r["dealer_name"],
+            "state": r["dealer_state"],
+        })
+    movers.sort(key=lambda m: abs(m["pct"]), reverse=True)
+    movers = movers[:limit]
 
     if not movers:
-        return "## § Movers\n\n_No price moves in the last 24 hours._"
+        return "## § Movers\n\n_No price moves vs. start of today (UTC)._"
 
     lines = ["## § Movers", ""]
     for m in movers:
-        meta = conn.execute(
-            "SELECT dealer_name, dealer_state FROM listings WHERE vin = ?",
-            (m["vin"],),
-        ).fetchone()
-        loc = _dealer_loc(meta["dealer_name"] if meta else None,
-                          meta["dealer_state"] if meta else None)
+        loc = _dealer_loc(m["dealer"], m["state"])
         sign_pct = "+" if m["delta"] > 0 else "-"
         lines.append(
             f"- {m['vin']} — {loc} — {_money(m['new_price'])} "
