@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-30T10:22:15.492198+00:00",
+  "generated_at": "2026-04-30T11:56:36.495496+00:00",
   "schema_version": 1,
   "vins": {
     "W1KZH6AB2NB028936": {
@@ -636,7 +636,7 @@
       "trim": "E450S4",
       "dealer": "Mercedes-Benz of Tysons Corner",
       "first_seen_at": "2026-04-26T15:50:37.492543+00:00",
-      "current_price": 62992,
+      "current_price": 62692,
       "current_mileage": 27644,
       "status": "active",
       "observations": [
@@ -674,13 +674,18 @@
           "observed_at": "2026-04-29T10:22:02.386002+00:00",
           "price": 62992,
           "mileage": 27644
+        },
+        {
+          "observed_at": "2026-04-30T11:56:32.224150+00:00",
+          "price": 62692,
+          "mileage": 27644
         }
       ],
       "stats": {
-        "all_time_low": 62792,
+        "all_time_low": 62692,
         "all_time_high": 62992,
-        "total_drop_pct": 0.0,
-        "n_observations": 7,
+        "total_drop_pct": -0.48,
+        "n_observations": 8,
         "days_observed": 3
       }
     },
