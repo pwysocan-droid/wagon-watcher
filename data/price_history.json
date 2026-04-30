@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-30T08:05:17.121340+00:00",
+  "generated_at": "2026-04-30T10:22:15.492198+00:00",
   "schema_version": 1,
   "vins": {
     "W1KZH6AB2NB028936": {
@@ -1080,7 +1080,7 @@
       "first_seen_at": "2026-04-29T10:22:02.386002+00:00",
       "current_price": 53997,
       "current_mileage": 43285,
-      "status": "active",
+      "status": "gone",
       "observations": [
         {
           "observed_at": "2026-04-29T10:22:02.386002+00:00",
@@ -1108,7 +1108,7 @@
         "all_time_high": 55000,
         "total_drop_pct": -1.82,
         "n_observations": 4,
-        "days_observed": 0
+        "days_observed": 1
       }
     },
     "W1KZH6AB2PB147623": {
@@ -1131,7 +1131,7 @@
         "all_time_high": 64122,
         "total_drop_pct": 0.0,
         "n_observations": 1,
-        "days_observed": 0
+        "days_observed": 1
       }
     },
     "W1KLH6FBXRA058115": {
@@ -1152,6 +1152,29 @@
       "stats": {
         "all_time_low": 71860,
         "all_time_high": 71860,
+        "total_drop_pct": 0.0,
+        "n_observations": 1,
+        "days_observed": 0
+      }
+    },
+    "W1KLH6FB2SA151507": {
+      "year": 2025,
+      "trim": "E450S4",
+      "dealer": "Sun Motor Cars, Inc.",
+      "first_seen_at": "2026-04-30T10:22:08.570380+00:00",
+      "current_price": 75489,
+      "current_mileage": 12945,
+      "status": "active",
+      "observations": [
+        {
+          "observed_at": "2026-04-30T10:22:08.570380+00:00",
+          "price": 75489,
+          "mileage": 12945
+        }
+      ],
+      "stats": {
+        "all_time_low": 75489,
+        "all_time_high": 75489,
         "total_drop_pct": 0.0,
         "n_observations": 1,
         "days_observed": 0
