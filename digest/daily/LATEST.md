@@ -2,7 +2,7 @@
 
 **2026-04-30** · 05:00 PT snapshot
 
-`Generated: 2026-04-30T13:53:06Z`
+`Generated: 2026-04-30T14:03:17Z`
 
 ---
 
@@ -14,9 +14,6 @@
 
 ## § Movers
 
-- W1KLH6FB5SA139657 — New Country Motor Car…, CT — $71,997 (+$2,000 / +2.86%)
-- W1KLH6FB0SA147147 — MB Cary, NC — $67,680 (+$1,700 / +2.58%)
-- W1KZH6ABXPB138989 — New Country Motor Car…, CT — $55,000 (+$1,003 / +1.86%)
 - W1KZH6AB5PB138639 — MB Tysons Corner, VA — $62,692 (-$300 / -0.48%)
 
 ---
@@ -56,7 +53,7 @@ _No decisions in queue._  _Add one with: edit `config/decision_queue.json`._
 
 ---
 
-`mb-wagon-watcher · digest_daily.py · 2026-04-30T13:53:06Z`
+`mb-wagon-watcher · digest_daily.py · 2026-04-30T14:03:17Z`
 
 _To annotate a VIN: edit `config/vin_annotations.json`._  
 _To disqualify a VIN: edit `config/disqualified_vins.json`._  
