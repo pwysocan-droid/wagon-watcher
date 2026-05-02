@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-02T08:03:53.562020+00:00",
+  "generated_at": "2026-05-02T09:38:17.783123+00:00",
   "schema_version": 1,
   "vins": {
     "W1KZH6AB2NB028936": {
@@ -8,20 +8,25 @@
       "dealer": "Mercedes-Benz of St. Paul",
       "first_seen_at": "2026-04-26T15:50:37.492543+00:00",
       "current_price": 47717,
-      "current_mileage": 55037,
-      "status": "reappeared",
+      "current_mileage": 55045,
+      "status": "active",
       "observations": [
         {
           "observed_at": "2026-04-26T15:50:37.492543+00:00",
           "price": 47717,
           "mileage": 55037
+        },
+        {
+          "observed_at": "2026-05-02T09:38:14.322919+00:00",
+          "price": 47717,
+          "mileage": 55045
         }
       ],
       "stats": {
         "all_time_low": 47717,
         "all_time_high": 47717,
         "total_drop_pct": 0.0,
-        "n_observations": 1,
+        "n_observations": 2,
         "days_observed": 5
       }
     },
@@ -32,7 +37,7 @@
       "first_seen_at": "2026-04-26T15:50:37.492543+00:00",
       "current_price": 73000,
       "current_mileage": 3130,
-      "status": "reappeared",
+      "status": "active",
       "observations": [
         {
           "observed_at": "2026-04-26T15:50:37.492543+00:00",
@@ -499,7 +504,7 @@
       "trim": "E450S4",
       "dealer": "Critz, Inc.",
       "first_seen_at": "2026-04-26T15:50:37.492543+00:00",
-      "current_price": 68353,
+      "current_price": 67813,
       "current_mileage": 4903,
       "status": "active",
       "observations": [
@@ -532,13 +537,18 @@
           "observed_at": "2026-04-29T05:38:32.386924+00:00",
           "price": 68353,
           "mileage": 4903
+        },
+        {
+          "observed_at": "2026-05-02T09:38:14.322919+00:00",
+          "price": 67813,
+          "mileage": 4903
         }
       ],
       "stats": {
-        "all_time_low": 68353,
+        "all_time_low": 67813,
         "all_time_high": 68520,
-        "total_drop_pct": -0.24,
-        "n_observations": 6,
+        "total_drop_pct": -1.03,
+        "n_observations": 7,
         "days_observed": 5
       }
     },
