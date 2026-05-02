@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-02T06:04:26.343826+00:00",
+  "generated_at": "2026-05-02T08:03:53.562020+00:00",
   "schema_version": 1,
   "vins": {
     "W1KZH6AB2NB028936": {
@@ -9,7 +9,7 @@
       "first_seen_at": "2026-04-26T15:50:37.492543+00:00",
       "current_price": 47717,
       "current_mileage": 55037,
-      "status": "gone",
+      "status": "reappeared",
       "observations": [
         {
           "observed_at": "2026-04-26T15:50:37.492543+00:00",
@@ -32,7 +32,7 @@
       "first_seen_at": "2026-04-26T15:50:37.492543+00:00",
       "current_price": 73000,
       "current_mileage": 3130,
-      "status": "gone",
+      "status": "reappeared",
       "observations": [
         {
           "observed_at": "2026-04-26T15:50:37.492543+00:00",
@@ -1019,7 +1019,7 @@
       "first_seen_at": "2026-04-26T15:50:37.492543+00:00",
       "current_price": 69997,
       "current_mileage": 6679,
-      "status": "active",
+      "status": "gone",
       "observations": [
         {
           "observed_at": "2026-04-26T15:50:37.492543+00:00",
@@ -1085,7 +1085,7 @@
       "first_seen_at": "2026-04-29T10:22:02.386002+00:00",
       "current_price": 53997,
       "current_mileage": 43285,
-      "status": "active",
+      "status": "gone",
       "observations": [
         {
           "observed_at": "2026-04-29T10:22:02.386002+00:00",
@@ -1123,7 +1123,7 @@
       "first_seen_at": "2026-04-29T10:22:02.386002+00:00",
       "current_price": 64122,
       "current_mileage": 16567,
-      "status": "active",
+      "status": "gone",
       "observations": [
         {
           "observed_at": "2026-04-29T10:22:02.386002+00:00",
@@ -1183,6 +1183,29 @@
         "total_drop_pct": 0.0,
         "n_observations": 1,
         "days_observed": 1
+      }
+    },
+    "W1KLH6FB3SA096615": {
+      "year": 2025,
+      "trim": "E450S4",
+      "dealer": "Mercedes-Benz of Sarasota",
+      "first_seen_at": "2026-05-02T08:03:46.292769+00:00",
+      "current_price": 74489,
+      "current_mileage": 1568,
+      "status": "active",
+      "observations": [
+        {
+          "observed_at": "2026-05-02T08:03:46.292769+00:00",
+          "price": 74489,
+          "mileage": 1568
+        }
+      ],
+      "stats": {
+        "all_time_low": 74489,
+        "all_time_high": 74489,
+        "total_drop_pct": 0.0,
+        "n_observations": 1,
+        "days_observed": 0
       }
     }
   }
