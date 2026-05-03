@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-03T07:48:41.125316+00:00",
+  "generated_at": "2026-05-03T09:14:24.720416+00:00",
   "schema_version": 1,
   "vins": {
     "W1KZH6AB2NB028936": {
@@ -35,7 +35,7 @@
       "trim": "E450S4",
       "dealer": "Mercedes-Benz of Creve Coeur",
       "first_seen_at": "2026-04-26T15:50:37.492543+00:00",
-      "current_price": 73000,
+      "current_price": 72500,
       "current_mileage": 3130,
       "status": "active",
       "observations": [
@@ -53,13 +53,18 @@
           "observed_at": "2026-05-03T05:33:10.256180+00:00",
           "price": 73000,
           "mileage": 3130
+        },
+        {
+          "observed_at": "2026-05-03T09:14:21.086580+00:00",
+          "price": 72500,
+          "mileage": 3130
         }
       ],
       "stats": {
         "all_time_low": 72500,
         "all_time_high": 73000,
-        "total_drop_pct": 0.0,
-        "n_observations": 3,
+        "total_drop_pct": -0.68,
+        "n_observations": 4,
         "days_observed": 6
       }
     },
@@ -1082,7 +1087,7 @@
       "first_seen_at": "2026-04-28T17:09:04.838821+00:00",
       "current_price": 73990,
       "current_mileage": 5562,
-      "status": "reappeared",
+      "status": "active",
       "observations": [
         {
           "observed_at": "2026-04-28T17:09:04.838821+00:00",
@@ -1210,8 +1215,8 @@
       "trim": "E450S4",
       "dealer": "Mercedes-Benz of Sarasota",
       "first_seen_at": "2026-05-02T08:03:46.292769+00:00",
-      "current_price": 74489,
-      "current_mileage": 1568,
+      "current_price": 75484,
+      "current_mileage": 1575,
       "status": "active",
       "observations": [
         {
@@ -1228,14 +1233,19 @@
           "observed_at": "2026-05-03T05:33:10.256180+00:00",
           "price": 74489,
           "mileage": 1568
+        },
+        {
+          "observed_at": "2026-05-03T09:14:21.086580+00:00",
+          "price": 75484,
+          "mileage": 1575
         }
       ],
       "stats": {
         "all_time_low": 74489,
         "all_time_high": 75484,
-        "total_drop_pct": 0.0,
-        "n_observations": 3,
-        "days_observed": 0
+        "total_drop_pct": 1.34,
+        "n_observations": 4,
+        "days_observed": 1
       }
     }
   }
