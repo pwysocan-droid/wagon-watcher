@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-04T08:18:29.079813+00:00",
+  "generated_at": "2026-05-04T10:29:59.486679+00:00",
   "schema_version": 1,
   "vins": {
     "W1KZH6AB2NB028936": {
@@ -192,7 +192,7 @@
       "first_seen_at": "2026-04-26T15:50:37.492543+00:00",
       "current_price": 61516,
       "current_mileage": 11877,
-      "status": "active",
+      "status": "gone",
       "observations": [
         {
           "observed_at": "2026-04-26T15:50:37.492543+00:00",
@@ -243,7 +243,7 @@
       "first_seen_at": "2026-04-26T15:50:37.492543+00:00",
       "current_price": 65559,
       "current_mileage": 21850,
-      "status": "active",
+      "status": "gone",
       "observations": [
         {
           "observed_at": "2026-04-26T15:50:37.492543+00:00",
@@ -617,7 +617,7 @@
       "first_seen_at": "2026-04-26T15:50:37.492543+00:00",
       "current_price": 79999,
       "current_mileage": 6902,
-      "status": "active",
+      "status": "gone",
       "observations": [
         {
           "observed_at": "2026-04-26T15:50:37.492543+00:00",
@@ -1054,7 +1054,7 @@
       "first_seen_at": "2026-04-26T15:50:37.492543+00:00",
       "current_price": 69997,
       "current_mileage": 6679,
-      "status": "gone",
+      "status": "reappeared",
       "observations": [
         {
           "observed_at": "2026-04-26T15:50:37.492543+00:00",
@@ -1097,7 +1097,7 @@
       "first_seen_at": "2026-04-28T17:09:04.838821+00:00",
       "current_price": 73990,
       "current_mileage": 5562,
-      "status": "active",
+      "status": "gone",
       "observations": [
         {
           "observed_at": "2026-04-28T17:09:04.838821+00:00",
@@ -1120,7 +1120,7 @@
       "first_seen_at": "2026-04-29T10:22:02.386002+00:00",
       "current_price": 53997,
       "current_mileage": 43285,
-      "status": "gone",
+      "status": "reappeared",
       "observations": [
         {
           "observed_at": "2026-04-29T10:22:02.386002+00:00",
@@ -1148,7 +1148,7 @@
         "all_time_high": 55000,
         "total_drop_pct": -1.82,
         "n_observations": 4,
-        "days_observed": 4
+        "days_observed": 5
       }
     },
     "W1KZH6AB2PB147623": {
@@ -1171,7 +1171,7 @@
         "all_time_high": 64122,
         "total_drop_pct": 0.0,
         "n_observations": 1,
-        "days_observed": 4
+        "days_observed": 5
       }
     },
     "W1KLH6FBXRA058115": {
@@ -1217,7 +1217,7 @@
         "all_time_high": 75489,
         "total_drop_pct": 0.0,
         "n_observations": 1,
-        "days_observed": 3
+        "days_observed": 4
       }
     },
     "W1KLH6FB3SA096615": {
@@ -1256,6 +1256,52 @@
         "total_drop_pct": 1.34,
         "n_observations": 4,
         "days_observed": 2
+      }
+    },
+    "W1KLH6FB6RA026150": {
+      "year": 2024,
+      "trim": "E450S4",
+      "dealer": "Mercedes-Benz of Burlington",
+      "first_seen_at": "2026-05-04T10:29:52.110014+00:00",
+      "current_price": 72998,
+      "current_mileage": 12992,
+      "status": "active",
+      "observations": [
+        {
+          "observed_at": "2026-05-04T10:29:52.110014+00:00",
+          "price": 72998,
+          "mileage": 12992
+        }
+      ],
+      "stats": {
+        "all_time_low": 72998,
+        "all_time_high": 72998,
+        "total_drop_pct": 0.0,
+        "n_observations": 1,
+        "days_observed": 0
+      }
+    },
+    "W1KZH6AB1PB167555": {
+      "year": 2023,
+      "trim": "E450S4",
+      "dealer": "Mercedes-Benz OF Tiverton",
+      "first_seen_at": "2026-05-04T10:29:52.110014+00:00",
+      "current_price": 59916,
+      "current_mileage": 19801,
+      "status": "active",
+      "observations": [
+        {
+          "observed_at": "2026-05-04T10:29:52.110014+00:00",
+          "price": 59916,
+          "mileage": 19801
+        }
+      ],
+      "stats": {
+        "all_time_low": 59916,
+        "all_time_high": 59916,
+        "total_drop_pct": 0.0,
+        "n_observations": 1,
+        "days_observed": 0
       }
     }
   }
