@@ -18,6 +18,11 @@ DIGEST_DIR = ROOT / "digest"
 WEEKLY_RE = re.compile(r"^(\d{4})-W(\d{2})\.md$")
 DAILY_RE = re.compile(r"^\d{4}-\d{2}-\d{2}\.md$")
 
+# Absolute base URL for hrefs. External consumers (LLM clients, scrapers,
+# anything fetching index.json out-of-band) need a fully-qualified URL —
+# relative paths only resolve inside a browser already at /digest.
+BASE_URL = "https://wagon-watcher.vercel.app/digest"
+
 
 def _scan(subdir: str, pattern: re.Pattern[str]) -> list[dict[str, str]]:
     d = DIGEST_DIR / subdir
@@ -26,8 +31,10 @@ def _scan(subdir: str, pattern: re.Pattern[str]) -> list[dict[str, str]]:
     items = []
     for p in d.iterdir():
         if pattern.match(p.name):
-            stem = p.stem
-            items.append({"label": stem, "href": f"{subdir}/{p.name}"})
+            items.append({
+                "label": p.stem,
+                "href": f"{BASE_URL}/{subdir}/{p.name}",
+            })
     items.sort(key=lambda x: x["label"], reverse=True)
     return items
 
@@ -88,19 +95,19 @@ def _render_html(weekly: list[dict[str, str]], daily: list[dict[str, str]]) -> s
     <div class="meta">{now} · {len(weekly)} weekly · {len(daily)} daily</div>
   </header>
   <section>
-    <h2><span>§ Weekly</span><a href="weekly/LATEST.md">LATEST →</a></h2>
+    <h2><span>§ Weekly</span><a href="{BASE_URL}/weekly/LATEST.md">LATEST →</a></h2>
     <ul>
 {rows(weekly)}
     </ul>
   </section>
   <section>
-    <h2><span>§ Daily</span><a href="daily/LATEST.md">LATEST →</a></h2>
+    <h2><span>§ Daily</span><a href="{BASE_URL}/daily/LATEST.md">LATEST →</a></h2>
     <ul>
 {rows(daily)}
     </ul>
   </section>
   <footer>
-    <div><a href="index.json">index.json</a></div>
+    <div><a href="{BASE_URL}/index.json">index.json</a></div>
     <div><a href="https://github.com/pwysocan-droid/wagon-watcher">github</a></div>
   </footer>
 </main>

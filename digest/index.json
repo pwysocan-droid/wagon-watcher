@@ -1,35 +1,35 @@
 {
-  "generated_at": "2026-05-04T20:40:53.224631+00:00",
+  "generated_at": "2026-05-04T20:46:04.678463+00:00",
   "weekly": [
     {
       "label": "2026-W19",
-      "href": "weekly/2026-W19.md"
+      "href": "https://wagon-watcher.vercel.app/digest/weekly/2026-W19.md"
     }
   ],
   "daily": [
     {
       "label": "2026-05-04",
-      "href": "daily/2026-05-04.md"
+      "href": "https://wagon-watcher.vercel.app/digest/daily/2026-05-04.md"
     },
     {
       "label": "2026-05-03",
-      "href": "daily/2026-05-03.md"
+      "href": "https://wagon-watcher.vercel.app/digest/daily/2026-05-03.md"
     },
     {
       "label": "2026-05-02",
-      "href": "daily/2026-05-02.md"
+      "href": "https://wagon-watcher.vercel.app/digest/daily/2026-05-02.md"
     },
     {
       "label": "2026-05-01",
-      "href": "daily/2026-05-01.md"
+      "href": "https://wagon-watcher.vercel.app/digest/daily/2026-05-01.md"
     },
     {
       "label": "2026-04-30",
-      "href": "daily/2026-04-30.md"
+      "href": "https://wagon-watcher.vercel.app/digest/daily/2026-04-30.md"
     },
     {
       "label": "2026-04-29",
-      "href": "daily/2026-04-29.md"
+      "href": "https://wagon-watcher.vercel.app/digest/daily/2026-04-29.md"
     }
   ]
 }
