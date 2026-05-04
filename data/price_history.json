@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-04T10:29:59.486679+00:00",
+  "generated_at": "2026-05-04T12:10:30.448453+00:00",
   "schema_version": 1,
   "vins": {
     "W1KZH6AB2NB028936": {
@@ -494,7 +494,7 @@
     "W1KLH6FB3SA115082": {
       "year": 2025,
       "trim": "E450S4",
-      "dealer": "Crown Eurocars, Inc.",
+      "dealer": "Mercedes-Benz of St. Petersburg",
       "first_seen_at": "2026-04-26T15:50:37.492543+00:00",
       "current_price": 72946,
       "current_mileage": 2053,
@@ -1054,7 +1054,7 @@
       "first_seen_at": "2026-04-26T15:50:37.492543+00:00",
       "current_price": 69997,
       "current_mileage": 6679,
-      "status": "reappeared",
+      "status": "active",
       "observations": [
         {
           "observed_at": "2026-04-26T15:50:37.492543+00:00",
@@ -1120,7 +1120,7 @@
       "first_seen_at": "2026-04-29T10:22:02.386002+00:00",
       "current_price": 53997,
       "current_mileage": 43285,
-      "status": "reappeared",
+      "status": "active",
       "observations": [
         {
           "observed_at": "2026-04-29T10:22:02.386002+00:00",
@@ -1194,7 +1194,7 @@
         "all_time_high": 71860,
         "total_drop_pct": 0.0,
         "n_observations": 1,
-        "days_observed": 4
+        "days_observed": 5
       }
     },
     "W1KLH6FB2SA151507": {
