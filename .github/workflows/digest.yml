@@ -38,6 +38,9 @@ jobs:
           MSG=$(python digest.py)
           echo "$MSG"
 
+      - name: Regenerate digest archive index
+        run: python scripts/generate_digest_index.py
+
       - name: Configure git for self-commit
         run: |
           git config user.name  'github-actions[bot]'

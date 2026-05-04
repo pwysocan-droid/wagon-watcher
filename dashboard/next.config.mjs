@@ -30,6 +30,21 @@ const nextConfig = {
       // requests to raw GH so the dashboard (and external readers) can
       // fetch them without committing the files into dashboard/public/
       // (which would otherwise trigger a Vercel rebuild on every cron).
+      //
+      // The two bare-/digest entries serve the archive index. They have to
+      // come BEFORE the catch-all because /digest/:path* would otherwise
+      // match the empty-path case and proxy to raw GH's directory URL,
+      // which 404s. Order matters — Next.js takes the first match.
+      {
+        source: "/digest",
+        destination:
+          "https://raw.githubusercontent.com/pwysocan-droid/wagon-watcher/main/digest/index.html",
+      },
+      {
+        source: "/digest/",
+        destination:
+          "https://raw.githubusercontent.com/pwysocan-droid/wagon-watcher/main/digest/index.html",
+      },
       {
         source: "/digest/:path*",
         destination:
