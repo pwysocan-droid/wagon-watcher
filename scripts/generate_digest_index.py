@@ -34,6 +34,7 @@ def _scan(subdir: str, pattern: re.Pattern[str]) -> list[dict[str, str]]:
             items.append({
                 "label": p.stem,
                 "href": f"{BASE_URL}/{subdir}/{p.name}",
+                "size_bytes": p.stat().st_size,
             })
     items.sort(key=lambda x: x["label"], reverse=True)
     return items

@@ -1,35 +1,42 @@
 {
-  "generated_at": "2026-05-04T20:46:04.678463+00:00",
+  "generated_at": "2026-05-04T20:52:27.730424+00:00",
   "weekly": [
     {
       "label": "2026-W19",
-      "href": "https://wagon-watcher.vercel.app/digest/weekly/2026-W19.md"
+      "href": "https://wagon-watcher.vercel.app/digest/weekly/2026-W19.md",
+      "size_bytes": 2609
     }
   ],
   "daily": [
     {
       "label": "2026-05-04",
-      "href": "https://wagon-watcher.vercel.app/digest/daily/2026-05-04.md"
+      "href": "https://wagon-watcher.vercel.app/digest/daily/2026-05-04.md",
+      "size_bytes": 1526
     },
     {
       "label": "2026-05-03",
-      "href": "https://wagon-watcher.vercel.app/digest/daily/2026-05-03.md"
+      "href": "https://wagon-watcher.vercel.app/digest/daily/2026-05-03.md",
+      "size_bytes": 1664
     },
     {
       "label": "2026-05-02",
-      "href": "https://wagon-watcher.vercel.app/digest/daily/2026-05-02.md"
+      "href": "https://wagon-watcher.vercel.app/digest/daily/2026-05-02.md",
+      "size_bytes": 1470
     },
     {
       "label": "2026-05-01",
-      "href": "https://wagon-watcher.vercel.app/digest/daily/2026-05-01.md"
+      "href": "https://wagon-watcher.vercel.app/digest/daily/2026-05-01.md",
+      "size_bytes": 1382
     },
     {
       "label": "2026-04-30",
-      "href": "https://wagon-watcher.vercel.app/digest/daily/2026-04-30.md"
+      "href": "https://wagon-watcher.vercel.app/digest/daily/2026-04-30.md",
+      "size_bytes": 1413
     },
     {
       "label": "2026-04-29",
-      "href": "https://wagon-watcher.vercel.app/digest/daily/2026-04-29.md"
+      "href": "https://wagon-watcher.vercel.app/digest/daily/2026-04-29.md",
+      "size_bytes": 2543
     }
   ]
 }
