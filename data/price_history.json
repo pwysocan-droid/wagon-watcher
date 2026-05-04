@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-04T16:26:40.878881+00:00",
+  "generated_at": "2026-05-04T17:58:47.982760+00:00",
   "schema_version": 1,
   "vins": {
     "W1KZH6AB2NB028936": {
@@ -358,7 +358,7 @@
       "first_seen_at": "2026-04-26T15:50:37.492543+00:00",
       "current_price": 65895,
       "current_mileage": 33771,
-      "status": "gone",
+      "status": "reappeared",
       "observations": [
         {
           "observed_at": "2026-04-26T15:50:37.492543+00:00",
@@ -494,7 +494,7 @@
     "W1KLH6FB3SA115082": {
       "year": 2025,
       "trim": "E450S4",
-      "dealer": "Mercedes-Benz of St. Petersburg",
+      "dealer": "Crown Eurocars, Inc.",
       "first_seen_at": "2026-04-26T15:50:37.492543+00:00",
       "current_price": 72946,
       "current_mileage": 2053,
@@ -617,7 +617,7 @@
       "first_seen_at": "2026-04-26T15:50:37.492543+00:00",
       "current_price": 79999,
       "current_mileage": 6902,
-      "status": "gone",
+      "status": "reappeared",
       "observations": [
         {
           "observed_at": "2026-04-26T15:50:37.492543+00:00",
@@ -1026,7 +1026,7 @@
       "first_seen_at": "2026-04-26T15:50:37.492543+00:00",
       "current_price": 56733,
       "current_mileage": 34593,
-      "status": "gone",
+      "status": "reappeared",
       "observations": [
         {
           "observed_at": "2026-04-26T15:50:37.492543+00:00",
@@ -1054,7 +1054,7 @@
       "first_seen_at": "2026-04-26T15:50:37.492543+00:00",
       "current_price": 69997,
       "current_mileage": 6679,
-      "status": "reappeared",
+      "status": "gone",
       "observations": [
         {
           "observed_at": "2026-04-26T15:50:37.492543+00:00",
@@ -1110,7 +1110,7 @@
         "all_time_high": 73990,
         "total_drop_pct": 0.0,
         "n_observations": 1,
-        "days_observed": 5
+        "days_observed": 6
       }
     },
     "W1KZH6ABXPB138989": {
@@ -1120,7 +1120,7 @@
       "first_seen_at": "2026-04-29T10:22:02.386002+00:00",
       "current_price": 52000,
       "current_mileage": 43285,
-      "status": "reappeared",
+      "status": "gone",
       "observations": [
         {
           "observed_at": "2026-04-29T10:22:02.386002+00:00",
@@ -1270,7 +1270,7 @@
       "first_seen_at": "2026-05-04T10:29:52.110014+00:00",
       "current_price": 72998,
       "current_mileage": 12992,
-      "status": "reappeared",
+      "status": "gone",
       "observations": [
         {
           "observed_at": "2026-05-04T10:29:52.110014+00:00",
@@ -1293,7 +1293,7 @@
       "first_seen_at": "2026-05-04T10:29:52.110014+00:00",
       "current_price": 59916,
       "current_mileage": 19801,
-      "status": "reappeared",
+      "status": "gone",
       "observations": [
         {
           "observed_at": "2026-05-04T10:29:52.110014+00:00",
