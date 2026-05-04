@@ -24,6 +24,17 @@ const nextConfig = {
         destination:
           "https://raw.githubusercontent.com/pwysocan-droid/wagon-watcher/main/data/:path*",
       },
+      // /digest/* mirrors /data/* — the watcher writes weekly digests to
+      // digest/weekly/<ISO-week>.md and daily digests to digest/daily/
+      // <YYYY-MM-DD>.md at the repo root. Vercel proxies same-origin
+      // requests to raw GH so the dashboard (and external readers) can
+      // fetch them without committing the files into dashboard/public/
+      // (which would otherwise trigger a Vercel rebuild on every cron).
+      {
+        source: "/digest/:path*",
+        destination:
+          "https://raw.githubusercontent.com/pwysocan-droid/wagon-watcher/main/digest/:path*",
+      },
     ];
   },
 };

@@ -31,7 +31,11 @@ from db import connect, migrate
 from scrape import mbusa_listing_url
 
 ROOT = Path(__file__).parent
-DIGEST_DIR = ROOT / "digest"
+# Weekly digest writes to digest/weekly/ to mirror digest_daily.py's
+# digest/daily/ convention and align with Vercel's /digest/weekly/<file>
+# URL pattern. Files at the old digest/<file> path are no longer updated
+# and were removed in the same commit that introduced this constant.
+DIGEST_DIR = ROOT / "digest" / "weekly"
 
 
 # ---- helpers --------------------------------------------------------------

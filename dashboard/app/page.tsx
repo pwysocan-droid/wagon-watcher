@@ -8,7 +8,7 @@ const REVALIDATE_S = 600;
 const RAW_LATEST_URL =
   "https://raw.githubusercontent.com/pwysocan-droid/wagon-watcher/main/data/latest.json";
 const RAW_DIGEST_URL =
-  "https://raw.githubusercontent.com/pwysocan-droid/wagon-watcher/main/digest/LATEST.md";
+  "https://raw.githubusercontent.com/pwysocan-droid/wagon-watcher/main/digest/weekly/LATEST.md";
 
 async function getInventory(): Promise<Inventory> {
   const res = await fetch(RAW_LATEST_URL, { next: { revalidate: REVALIDATE_S } });
