@@ -18,32 +18,40 @@ DIGEST_DIR = ROOT / "digest"
 WEEKLY_RE = re.compile(r"^(\d{4})-W(\d{2})\.md$")
 DAILY_RE = re.compile(r"^\d{4}-\d{2}-\d{2}\.md$")
 
-# Absolute base URL for hrefs. External consumers (LLM clients, scrapers,
-# anything fetching index.json out-of-band) need a fully-qualified URL —
+# Absolute base URLs. External consumers (LLM clients, scrapers,
+# anything fetching index.json out-of-band) need fully-qualified URLs —
 # relative paths only resolve inside a browser already at /digest.
 BASE_URL = "https://wagon-watcher.vercel.app/digest"
+API_URL = "https://wagon-watcher.vercel.app/api/digest"
+
+# Daily entries are queried by ?date=YYYY-MM-DD; weekly by ?week=YYYY-Www.
+# Keeping the mapping here means the script and the API stay in sync if
+# the routing ever moves.
+_API_PARAM = {"daily": "date", "weekly": "week"}
 
 
-def _scan(subdir: str, pattern: re.Pattern[str]) -> list[dict[str, str]]:
+def _scan(subdir: str, pattern: re.Pattern[str]) -> list[dict[str, object]]:
     d = DIGEST_DIR / subdir
     if not d.exists():
         return []
-    items = []
+    param = _API_PARAM[subdir]
+    items: list[dict[str, object]] = []
     for p in d.iterdir():
         if pattern.match(p.name):
             items.append({
                 "label": p.stem,
                 "href": f"{BASE_URL}/{subdir}/{p.name}",
+                "api_url": f"{API_URL}?{param}={p.stem}",
                 "size_bytes": p.stat().st_size,
             })
-    items.sort(key=lambda x: x["label"], reverse=True)
+    items.sort(key=lambda x: x["label"], reverse=True)  # type: ignore[arg-type,return-value]
     return items
 
 
-def _render_html(weekly: list[dict[str, str]], daily: list[dict[str, str]]) -> str:
+def _render_html(weekly: list[dict[str, object]], daily: list[dict[str, object]]) -> str:
     now = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC")
 
-    def rows(items: list[dict[str, str]]) -> str:
+    def rows(items: list[dict[str, object]]) -> str:
         if not items:
             return '<li class="empty">— none yet —</li>'
         return "\n".join(
