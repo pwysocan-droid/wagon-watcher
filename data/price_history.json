@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-06T18:16:52.193263+00:00",
+  "generated_at": "2026-05-06T20:07:29.993297+00:00",
   "schema_version": 1,
   "vins": {
     "W1KZH6AB2NB028936": {
@@ -358,7 +358,7 @@
       "first_seen_at": "2026-04-26T15:50:37.492543+00:00",
       "current_price": 65895,
       "current_mileage": 33771,
-      "status": "gone",
+      "status": "reappeared",
       "observations": [
         {
           "observed_at": "2026-04-26T15:50:37.492543+00:00",
@@ -1120,7 +1120,7 @@
       "first_seen_at": "2026-04-29T10:22:02.386002+00:00",
       "current_price": 52000,
       "current_mileage": 43285,
-      "status": "active",
+      "status": "gone",
       "observations": [
         {
           "observed_at": "2026-04-29T10:22:02.386002+00:00",
@@ -1270,7 +1270,7 @@
       "first_seen_at": "2026-05-04T10:29:52.110014+00:00",
       "current_price": 72998,
       "current_mileage": 12992,
-      "status": "active",
+      "status": "gone",
       "observations": [
         {
           "observed_at": "2026-05-04T10:29:52.110014+00:00",
@@ -1293,7 +1293,7 @@
       "first_seen_at": "2026-05-04T10:29:52.110014+00:00",
       "current_price": 59916,
       "current_mileage": 19801,
-      "status": "reappeared",
+      "status": "gone",
       "observations": [
         {
           "observed_at": "2026-05-04T10:29:52.110014+00:00",
@@ -1307,6 +1307,52 @@
         "total_drop_pct": 0.0,
         "n_observations": 1,
         "days_observed": 2
+      }
+    },
+    "W1KLH6FB2RA026291": {
+      "year": 2024,
+      "trim": "E450S4",
+      "dealer": "Autohaus On Edens, LLC",
+      "first_seen_at": "2026-05-06T20:07:22.489014+00:00",
+      "current_price": 79984,
+      "current_mileage": 14012,
+      "status": "active",
+      "observations": [
+        {
+          "observed_at": "2026-05-06T20:07:22.489014+00:00",
+          "price": 79984,
+          "mileage": 14012
+        }
+      ],
+      "stats": {
+        "all_time_low": 79984,
+        "all_time_high": 79984,
+        "total_drop_pct": 0.0,
+        "n_observations": 1,
+        "days_observed": 0
+      }
+    },
+    "W1KLH6FB0SA088150": {
+      "year": 2025,
+      "trim": "E450S4",
+      "dealer": "R B M of Alpharetta",
+      "first_seen_at": "2026-05-06T20:07:22.489014+00:00",
+      "current_price": 73984,
+      "current_mileage": 8522,
+      "status": "active",
+      "observations": [
+        {
+          "observed_at": "2026-05-06T20:07:22.489014+00:00",
+          "price": 73984,
+          "mileage": 8522
+        }
+      ],
+      "stats": {
+        "all_time_low": 73984,
+        "all_time_high": 73984,
+        "total_drop_pct": 0.0,
+        "n_observations": 1,
+        "days_observed": 0
       }
     }
   }
