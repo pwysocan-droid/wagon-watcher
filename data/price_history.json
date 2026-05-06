@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-06T22:44:37.629639+00:00",
+  "generated_at": "2026-05-06T23:41:26.514210+00:00",
   "schema_version": 1,
   "vins": {
     "W1KZH6AB2NB028936": {
@@ -213,7 +213,7 @@
       "trim": "E450S4",
       "dealer": "Mercedes-Benz of Birmingham",
       "first_seen_at": "2026-04-26T15:50:37.492543+00:00",
-      "current_price": 63998,
+      "current_price": 62998,
       "current_mileage": 19059,
       "status": "active",
       "observations": [
@@ -226,13 +226,18 @@
           "observed_at": "2026-04-29T10:22:02.386002+00:00",
           "price": 63998,
           "mileage": 19059
+        },
+        {
+          "observed_at": "2026-05-06T23:41:22.792612+00:00",
+          "price": 62998,
+          "mileage": 19059
         }
       ],
       "stats": {
-        "all_time_low": 63998,
+        "all_time_low": 62998,
         "all_time_high": 64998,
-        "total_drop_pct": -1.54,
-        "n_observations": 2,
+        "total_drop_pct": -3.08,
+        "n_observations": 3,
         "days_observed": 10
       }
     },
@@ -312,7 +317,7 @@
       "first_seen_at": "2026-04-26T15:50:37.492543+00:00",
       "current_price": 75340,
       "current_mileage": 8725,
-      "status": "active",
+      "status": "gone",
       "observations": [
         {
           "observed_at": "2026-04-26T15:50:37.492543+00:00",
@@ -1120,7 +1125,7 @@
       "first_seen_at": "2026-04-29T10:22:02.386002+00:00",
       "current_price": 52000,
       "current_mileage": 43285,
-      "status": "gone",
+      "status": "reappeared",
       "observations": [
         {
           "observed_at": "2026-04-29T10:22:02.386002+00:00",
@@ -1270,7 +1275,7 @@
       "first_seen_at": "2026-05-04T10:29:52.110014+00:00",
       "current_price": 72998,
       "current_mileage": 12992,
-      "status": "gone",
+      "status": "reappeared",
       "observations": [
         {
           "observed_at": "2026-05-04T10:29:52.110014+00:00",
@@ -1316,7 +1321,7 @@
       "first_seen_at": "2026-05-06T20:07:22.489014+00:00",
       "current_price": 79984,
       "current_mileage": 14012,
-      "status": "reappeared",
+      "status": "active",
       "observations": [
         {
           "observed_at": "2026-05-06T20:07:22.489014+00:00",
@@ -1339,7 +1344,7 @@
       "first_seen_at": "2026-05-06T20:07:22.489014+00:00",
       "current_price": 73984,
       "current_mileage": 8522,
-      "status": "reappeared",
+      "status": "gone",
       "observations": [
         {
           "observed_at": "2026-05-06T20:07:22.489014+00:00",
