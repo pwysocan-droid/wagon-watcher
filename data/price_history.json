@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-07T12:25:36.924899+00:00",
+  "generated_at": "2026-05-07T15:10:19.533658+00:00",
   "schema_version": 1,
   "vins": {
     "W1KZH6AB2NB028936": {
@@ -503,7 +503,7 @@
       "first_seen_at": "2026-04-26T15:50:37.492543+00:00",
       "current_price": 72946,
       "current_mileage": 2053,
-      "status": "active",
+      "status": "gone",
       "observations": [
         {
           "observed_at": "2026-04-26T15:50:37.492543+00:00",
@@ -899,7 +899,7 @@
       "first_seen_at": "2026-04-26T15:50:37.492543+00:00",
       "current_price": 52850,
       "current_mileage": 31756,
-      "status": "active",
+      "status": "gone",
       "observations": [
         {
           "observed_at": "2026-04-26T15:50:37.492543+00:00",
@@ -1013,7 +1013,7 @@
       "first_seen_at": "2026-04-26T15:50:37.492543+00:00",
       "current_price": 67891,
       "current_mileage": 5499,
-      "status": "gone",
+      "status": "reappeared",
       "observations": [
         {
           "observed_at": "2026-04-26T15:50:37.492543+00:00",
@@ -1079,7 +1079,7 @@
       "first_seen_at": "2026-04-26T15:50:37.492543+00:00",
       "current_price": 69997,
       "current_mileage": 6679,
-      "status": "gone",
+      "status": "reappeared",
       "observations": [
         {
           "observed_at": "2026-04-26T15:50:37.492543+00:00",
@@ -1363,20 +1363,25 @@
       "dealer": "R B M of Alpharetta",
       "first_seen_at": "2026-05-06T20:07:22.489014+00:00",
       "current_price": 73984,
-      "current_mileage": 8522,
+      "current_mileage": 8566,
       "status": "active",
       "observations": [
         {
           "observed_at": "2026-05-06T20:07:22.489014+00:00",
           "price": 73984,
           "mileage": 8522
+        },
+        {
+          "observed_at": "2026-05-07T15:10:13.929955+00:00",
+          "price": 73984,
+          "mileage": 8566
         }
       ],
       "stats": {
         "all_time_low": 73984,
         "all_time_high": 73984,
         "total_drop_pct": 0.0,
-        "n_observations": 1,
+        "n_observations": 2,
         "days_observed": 0
       }
     },
@@ -1398,6 +1403,29 @@
       "stats": {
         "all_time_low": 63882,
         "all_time_high": 63882,
+        "total_drop_pct": 0.0,
+        "n_observations": 1,
+        "days_observed": 0
+      }
+    },
+    "W1KZH6AB3PB156900": {
+      "year": 2023,
+      "trim": "E450S4",
+      "dealer": "Mercedes-Benz of Kansas City",
+      "first_seen_at": "2026-05-07T15:10:13.929955+00:00",
+      "current_price": 65520,
+      "current_mileage": 13854,
+      "status": "active",
+      "observations": [
+        {
+          "observed_at": "2026-05-07T15:10:13.929955+00:00",
+          "price": 65520,
+          "mileage": 13854
+        }
+      ],
+      "stats": {
+        "all_time_low": 65520,
+        "all_time_high": 65520,
         "total_drop_pct": 0.0,
         "n_observations": 1,
         "days_observed": 0
