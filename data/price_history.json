@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-08T07:02:47.671272+00:00",
+  "generated_at": "2026-05-08T08:53:11.477158+00:00",
   "schema_version": 1,
   "vins": {
     "W1KZH6AB2NB028936": {
@@ -524,7 +524,7 @@
       "trim": "E450S4",
       "dealer": "Critz, Inc.",
       "first_seen_at": "2026-04-26T15:50:37.492543+00:00",
-      "current_price": 65519,
+      "current_price": 63915,
       "current_mileage": 4903,
       "status": "active",
       "observations": [
@@ -572,13 +572,18 @@
           "observed_at": "2026-05-07T08:17:36.994717+00:00",
           "price": 65519,
           "mileage": 4903
+        },
+        {
+          "observed_at": "2026-05-08T08:53:07.091617+00:00",
+          "price": 63915,
+          "mileage": 4903
         }
       ],
       "stats": {
-        "all_time_low": 65519,
+        "all_time_low": 63915,
         "all_time_high": 68520,
-        "total_drop_pct": -4.38,
-        "n_observations": 9,
+        "total_drop_pct": -6.72,
+        "n_observations": 10,
         "days_observed": 11
       }
     },
@@ -648,7 +653,7 @@
       "trim": "E450S4",
       "dealer": "Mercedes-Benz of Hagerstown",
       "first_seen_at": "2026-04-26T15:50:37.492543+00:00",
-      "current_price": 73488,
+      "current_price": 68488,
       "current_mileage": 7061,
       "status": "active",
       "observations": [
@@ -666,13 +671,18 @@
           "observed_at": "2026-05-07T10:38:41.994084+00:00",
           "price": 73488,
           "mileage": 7061
+        },
+        {
+          "observed_at": "2026-05-08T08:53:07.091617+00:00",
+          "price": 68488,
+          "mileage": 7061
         }
       ],
       "stats": {
         "all_time_low": 68488,
         "all_time_high": 73488,
-        "total_drop_pct": 6.52,
-        "n_observations": 3,
+        "total_drop_pct": -0.72,
+        "n_observations": 4,
         "days_observed": 11
       }
     },
@@ -1079,7 +1089,7 @@
       "first_seen_at": "2026-04-26T15:50:37.492543+00:00",
       "current_price": 69997,
       "current_mileage": 6679,
-      "status": "reappeared",
+      "status": "active",
       "observations": [
         {
           "observed_at": "2026-04-26T15:50:37.492543+00:00",
@@ -1145,7 +1155,7 @@
       "first_seen_at": "2026-04-29T10:22:02.386002+00:00",
       "current_price": 52000,
       "current_mileage": 43285,
-      "status": "reappeared",
+      "status": "active",
       "observations": [
         {
           "observed_at": "2026-04-29T10:22:02.386002+00:00",
@@ -1285,7 +1295,7 @@
         "all_time_high": 75484,
         "total_drop_pct": 1.34,
         "n_observations": 4,
-        "days_observed": 5
+        "days_observed": 6
       }
     },
     "W1KLH6FB6RA026150": {
@@ -1363,7 +1373,7 @@
       "dealer": "R B M of Alpharetta",
       "first_seen_at": "2026-05-06T20:07:22.489014+00:00",
       "current_price": 73984,
-      "current_mileage": 8566,
+      "current_mileage": 8573,
       "status": "active",
       "observations": [
         {
@@ -1375,13 +1385,18 @@
           "observed_at": "2026-05-07T15:10:13.929955+00:00",
           "price": 73984,
           "mileage": 8566
+        },
+        {
+          "observed_at": "2026-05-08T08:53:07.091617+00:00",
+          "price": 73984,
+          "mileage": 8573
         }
       ],
       "stats": {
         "all_time_low": 73984,
         "all_time_high": 73984,
         "total_drop_pct": 0.0,
-        "n_observations": 2,
+        "n_observations": 3,
         "days_observed": 1
       }
     },
@@ -1405,7 +1420,7 @@
         "all_time_high": 63882,
         "total_drop_pct": 0.0,
         "n_observations": 1,
-        "days_observed": 0
+        "days_observed": 1
       }
     },
     "W1KZH6AB3PB156900": {
@@ -1415,7 +1430,7 @@
       "first_seen_at": "2026-05-07T15:10:13.929955+00:00",
       "current_price": 65520,
       "current_mileage": 13854,
-      "status": "reappeared",
+      "status": "active",
       "observations": [
         {
           "observed_at": "2026-05-07T15:10:13.929955+00:00",
