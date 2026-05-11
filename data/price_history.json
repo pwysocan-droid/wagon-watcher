@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-11T22:46:05.703344+00:00",
+  "generated_at": "2026-05-11T23:49:08.145655+00:00",
   "schema_version": 1,
   "vins": {
     "W1KZH6AB2NB028936": {
@@ -9,7 +9,7 @@
       "first_seen_at": "2026-04-26T15:50:37.492543+00:00",
       "current_price": 47717,
       "current_mileage": 55045,
-      "status": "active",
+      "status": "gone",
       "observations": [
         {
           "observed_at": "2026-04-26T15:50:37.492543+00:00",
@@ -37,7 +37,7 @@
       "first_seen_at": "2026-04-26T15:50:37.492543+00:00",
       "current_price": 72500,
       "current_mileage": 3130,
-      "status": "active",
+      "status": "gone",
       "observations": [
         {
           "observed_at": "2026-04-26T15:50:37.492543+00:00",
@@ -75,7 +75,7 @@
       "first_seen_at": "2026-04-26T15:50:37.492543+00:00",
       "current_price": 63750,
       "current_mileage": 20635,
-      "status": "active",
+      "status": "gone",
       "observations": [
         {
           "observed_at": "2026-04-26T15:50:37.492543+00:00",
@@ -98,7 +98,7 @@
       "first_seen_at": "2026-04-26T15:50:37.492543+00:00",
       "current_price": 68491,
       "current_mileage": 7937,
-      "status": "active",
+      "status": "gone",
       "observations": [
         {
           "observed_at": "2026-04-26T15:50:37.492543+00:00",
@@ -169,7 +169,7 @@
       "first_seen_at": "2026-04-26T15:50:37.492543+00:00",
       "current_price": 60995,
       "current_mileage": 28009,
-      "status": "active",
+      "status": "gone",
       "observations": [
         {
           "observed_at": "2026-04-26T15:50:37.492543+00:00",
@@ -271,7 +271,7 @@
       "first_seen_at": "2026-04-26T15:50:37.492543+00:00",
       "current_price": 66500,
       "current_mileage": 14319,
-      "status": "active",
+      "status": "gone",
       "observations": [
         {
           "observed_at": "2026-04-26T15:50:37.492543+00:00",
@@ -386,7 +386,7 @@
       "first_seen_at": "2026-04-26T15:50:37.492543+00:00",
       "current_price": 73855,
       "current_mileage": 10368,
-      "status": "active",
+      "status": "gone",
       "observations": [
         {
           "observed_at": "2026-04-26T15:50:37.492543+00:00",
@@ -526,7 +526,7 @@
       "first_seen_at": "2026-04-26T15:50:37.492543+00:00",
       "current_price": 63915,
       "current_mileage": 4903,
-      "status": "active",
+      "status": "gone",
       "observations": [
         {
           "observed_at": "2026-04-26T15:50:37.492543+00:00",
@@ -594,7 +594,7 @@
       "first_seen_at": "2026-04-26T15:50:37.492543+00:00",
       "current_price": 65980,
       "current_mileage": 5143,
-      "status": "active",
+      "status": "gone",
       "observations": [
         {
           "observed_at": "2026-04-26T15:50:37.492543+00:00",
@@ -655,7 +655,7 @@
       "first_seen_at": "2026-04-26T15:50:37.492543+00:00",
       "current_price": 68488,
       "current_mileage": 7061,
-      "status": "active",
+      "status": "gone",
       "observations": [
         {
           "observed_at": "2026-04-26T15:50:37.492543+00:00",
@@ -802,7 +802,7 @@
       "first_seen_at": "2026-04-26T15:50:37.492543+00:00",
       "current_price": 70489,
       "current_mileage": 5351,
-      "status": "active",
+      "status": "gone",
       "observations": [
         {
           "observed_at": "2026-04-26T15:50:37.492543+00:00",
@@ -995,7 +995,7 @@
       "first_seen_at": "2026-04-26T15:50:37.492543+00:00",
       "current_price": 75795,
       "current_mileage": 9194,
-      "status": "active",
+      "status": "gone",
       "observations": [
         {
           "observed_at": "2026-04-26T15:50:37.492543+00:00",
@@ -1023,7 +1023,7 @@
       "first_seen_at": "2026-04-26T15:50:37.492543+00:00",
       "current_price": 67891,
       "current_mileage": 5499,
-      "status": "active",
+      "status": "gone",
       "observations": [
         {
           "observed_at": "2026-04-26T15:50:37.492543+00:00",
@@ -1305,7 +1305,7 @@
       "first_seen_at": "2026-05-04T10:29:52.110014+00:00",
       "current_price": 72998,
       "current_mileage": 12992,
-      "status": "gone",
+      "status": "reappeared",
       "observations": [
         {
           "observed_at": "2026-05-04T10:29:52.110014+00:00",
@@ -1430,7 +1430,7 @@
       "first_seen_at": "2026-05-07T15:10:13.929955+00:00",
       "current_price": 65520,
       "current_mileage": 13854,
-      "status": "active",
+      "status": "gone",
       "observations": [
         {
           "observed_at": "2026-05-07T15:10:13.929955+00:00",
@@ -1464,6 +1464,52 @@
       "stats": {
         "all_time_low": 39988,
         "all_time_high": 39988,
+        "total_drop_pct": 0.0,
+        "n_observations": 1,
+        "days_observed": 0
+      }
+    },
+    "W1KZH6AB2MA896486": {
+      "year": 2021,
+      "trim": "E450S4",
+      "dealer": "Quirk Auto Park of Bangor",
+      "first_seen_at": "2026-05-11T23:48:59.600162+00:00",
+      "current_price": 45981,
+      "current_mileage": 65004,
+      "status": "active",
+      "observations": [
+        {
+          "observed_at": "2026-05-11T23:48:59.600162+00:00",
+          "price": 45981,
+          "mileage": 65004
+        }
+      ],
+      "stats": {
+        "all_time_low": 45981,
+        "all_time_high": 45981,
+        "total_drop_pct": 0.0,
+        "n_observations": 1,
+        "days_observed": 0
+      }
+    },
+    "W1KZH6AB5PB133912": {
+      "year": 2023,
+      "trim": "E450S4",
+      "dealer": "Quirk Auto Park of Bangor",
+      "first_seen_at": "2026-05-11T23:48:59.600162+00:00",
+      "current_price": 59981,
+      "current_mileage": 34777,
+      "status": "active",
+      "observations": [
+        {
+          "observed_at": "2026-05-11T23:48:59.600162+00:00",
+          "price": 59981,
+          "mileage": 34777
+        }
+      ],
+      "stats": {
+        "all_time_low": 59981,
+        "all_time_high": 59981,
         "total_drop_pct": 0.0,
         "n_observations": 1,
         "days_observed": 0
