@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-14T06:17:01.509996+00:00",
+  "generated_at": "2026-05-14T09:13:27.695214+00:00",
   "schema_version": 1,
   "vins": {
     "W1KZH6AB2NB028936": {
@@ -9,7 +9,7 @@
       "first_seen_at": "2026-04-26T15:50:37.492543+00:00",
       "current_price": 47717,
       "current_mileage": 55045,
-      "status": "gone",
+      "status": "reappeared",
       "observations": [
         {
           "observed_at": "2026-04-26T15:50:37.492543+00:00",
@@ -1325,7 +1325,7 @@
         "all_time_high": 75484,
         "total_drop_pct": 1.34,
         "n_observations": 4,
-        "days_observed": 11
+        "days_observed": 12
       }
     },
     "W1KLH6FB6RA026150": {
@@ -1455,7 +1455,7 @@
         "all_time_high": 63882,
         "total_drop_pct": -1.82,
         "n_observations": 2,
-        "days_observed": 6
+        "days_observed": 7
       }
     },
     "W1KZH6AB3PB156900": {
@@ -1757,6 +1757,29 @@
           "observed_at": "2026-05-13T09:22:44.161676+00:00",
           "price": 65988,
           "mileage": 25577
+        }
+      ],
+      "stats": {
+        "all_time_low": 65988,
+        "all_time_high": 65988,
+        "total_drop_pct": 0.0,
+        "n_observations": 1,
+        "days_observed": 0
+      }
+    },
+    "W1KLH6FB3SA142248": {
+      "year": 2025,
+      "trim": "E450S4",
+      "dealer": "Mercedes-Benz OF Tiverton",
+      "first_seen_at": "2026-05-14T09:12:41.790440+00:00",
+      "current_price": 65988,
+      "current_mileage": 22826,
+      "status": "active",
+      "observations": [
+        {
+          "observed_at": "2026-05-14T09:12:41.790440+00:00",
+          "price": 65988,
+          "mileage": 22826
         }
       ],
       "stats": {
