@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-15T10:42:40.495333+00:00",
+  "generated_at": "2026-05-15T12:27:34.009086+00:00",
   "schema_version": 1,
   "vins": {
     "W1KZH6AB2NB028936": {
@@ -1118,7 +1118,7 @@
       "dealer": "New Country Motor Cars, Inc.",
       "first_seen_at": "2026-04-26T15:50:37.492543+00:00",
       "current_price": 69997,
-      "current_mileage": 6679,
+      "current_mileage": 6718,
       "status": "active",
       "observations": [
         {
@@ -1145,13 +1145,18 @@
           "observed_at": "2026-04-29T20:06:48.847154+00:00",
           "price": 69997,
           "mileage": 6679
+        },
+        {
+          "observed_at": "2026-05-15T12:27:33.427500+00:00",
+          "price": 69997,
+          "mileage": 6718
         }
       ],
       "stats": {
         "all_time_low": 69997,
         "all_time_high": 71997,
         "total_drop_pct": -2.78,
-        "n_observations": 5,
+        "n_observations": 6,
         "days_observed": 18
       }
     },
@@ -1269,7 +1274,7 @@
         "all_time_high": 71860,
         "total_drop_pct": 0.0,
         "n_observations": 1,
-        "days_observed": 15
+        "days_observed": 16
       }
     },
     "W1KLH6FB2SA151507": {
