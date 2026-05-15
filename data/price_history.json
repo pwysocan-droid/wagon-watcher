@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-15T12:27:34.009086+00:00",
+  "generated_at": "2026-05-15T14:59:23.406003+00:00",
   "schema_version": 1,
   "vins": {
     "W1KZH6AB2NB028936": {
@@ -1798,6 +1798,29 @@
         "total_drop_pct": 0.0,
         "n_observations": 1,
         "days_observed": 1
+      }
+    },
+    "W1KZH6AB5MA902507": {
+      "year": 2021,
+      "trim": "E450S4",
+      "dealer": "Mercedes-Benz of Beaumont",
+      "first_seen_at": "2026-05-15T14:59:18.173961+00:00",
+      "current_price": 38991,
+      "current_mileage": 70700,
+      "status": "active",
+      "observations": [
+        {
+          "observed_at": "2026-05-15T14:59:18.173961+00:00",
+          "price": 38991,
+          "mileage": 70700
+        }
+      ],
+      "stats": {
+        "all_time_low": 38991,
+        "all_time_high": 38991,
+        "total_drop_pct": 0.0,
+        "n_observations": 1,
+        "days_observed": 0
       }
     }
   }
