@@ -2,7 +2,7 @@
 
 **2026-05-18** · 05:00 PT snapshot
 
-`Generated: 2026-05-18T14:02:30Z`
+`Generated: 2026-05-18T15:31:08Z`
 
 ---
 
@@ -56,7 +56,7 @@ _No decisions in queue._  _Add one with: edit `config/decision_queue.json`._
 
 ---
 
-`mb-wagon-watcher · digest_daily.py · 2026-05-18T14:02:30Z`
+`mb-wagon-watcher · digest_daily.py · 2026-05-18T15:31:08Z`
 
 _To annotate a VIN: edit `config/vin_annotations.json`._  
 _To disqualify a VIN: edit `config/disqualified_vins.json`._  
