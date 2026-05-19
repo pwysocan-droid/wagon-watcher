@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-19T10:33:26.023757+00:00",
+  "generated_at": "2026-05-19T13:50:28.168104+00:00",
   "schema_version": 1,
   "vins": {
     "W1KZH6AB2NB028936": {
@@ -1294,7 +1294,7 @@
         "all_time_high": 71860,
         "total_drop_pct": 0.0,
         "n_observations": 1,
-        "days_observed": 19
+        "days_observed": 20
       }
     },
     "W1KLH6FB2SA151507": {
@@ -1551,7 +1551,7 @@
       "first_seen_at": "2026-05-11T23:48:59.600162+00:00",
       "current_price": 45981,
       "current_mileage": 65004,
-      "status": "gone",
+      "status": "reappeared",
       "observations": [
         {
           "observed_at": "2026-05-11T23:48:59.600162+00:00",
@@ -1899,6 +1899,29 @@
         "total_drop_pct": 0.0,
         "n_observations": 1,
         "days_observed": 2
+      }
+    },
+    "W1KZH6ABXNB038274": {
+      "year": 2022,
+      "trim": "E450S4",
+      "dealer": "Mercedes-Benz of St. Louis",
+      "first_seen_at": "2026-05-19T13:50:23.287752+00:00",
+      "current_price": 51015,
+      "current_mileage": 38992,
+      "status": "active",
+      "observations": [
+        {
+          "observed_at": "2026-05-19T13:50:23.287752+00:00",
+          "price": 51015,
+          "mileage": 38992
+        }
+      ],
+      "stats": {
+        "all_time_low": 51015,
+        "all_time_high": 51015,
+        "total_drop_pct": 0.0,
+        "n_observations": 1,
+        "days_observed": 0
       }
     }
   }
