@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-20T11:24:37.918694+00:00",
+  "generated_at": "2026-05-20T14:01:44.177153+00:00",
   "schema_version": 1,
   "vins": {
     "W1KZH6AB2NB028936": {
@@ -37,7 +37,7 @@
       "first_seen_at": "2026-04-26T15:50:37.492543+00:00",
       "current_price": 71500,
       "current_mileage": 3130,
-      "status": "active",
+      "status": "gone",
       "observations": [
         {
           "observed_at": "2026-04-26T15:50:37.492543+00:00",
@@ -160,20 +160,25 @@
       "dealer": "Mercedes-Benz of Hoffman Estates",
       "first_seen_at": "2026-04-26T15:50:37.492543+00:00",
       "current_price": 75999,
-      "current_mileage": 1732,
+      "current_mileage": 1856,
       "status": "active",
       "observations": [
         {
           "observed_at": "2026-04-26T15:50:37.492543+00:00",
           "price": 75999,
           "mileage": 1732
+        },
+        {
+          "observed_at": "2026-05-20T14:01:38.837211+00:00",
+          "price": 75999,
+          "mileage": 1856
         }
       ],
       "stats": {
         "all_time_low": 75999,
         "all_time_high": 75999,
         "total_drop_pct": 0.0,
-        "n_observations": 1,
+        "n_observations": 2,
         "days_observed": 23
       }
     },
@@ -228,7 +233,7 @@
       "trim": "E450S4",
       "dealer": "Mercedes-Benz of Birmingham",
       "first_seen_at": "2026-04-26T15:50:37.492543+00:00",
-      "current_price": 61998,
+      "current_price": 60998,
       "current_mileage": 19059,
       "status": "active",
       "observations": [
@@ -251,13 +256,18 @@
           "observed_at": "2026-05-13T16:37:35.471057+00:00",
           "price": 61998,
           "mileage": 19059
+        },
+        {
+          "observed_at": "2026-05-20T14:01:38.837211+00:00",
+          "price": 60998,
+          "mileage": 19059
         }
       ],
       "stats": {
-        "all_time_low": 61998,
+        "all_time_low": 60998,
         "all_time_high": 64998,
-        "total_drop_pct": -4.62,
-        "n_observations": 4,
+        "total_drop_pct": -6.15,
+        "n_observations": 5,
         "days_observed": 23
       }
     },
@@ -484,7 +494,7 @@
       "dealer": "Mercedes-Benz of Asheville",
       "first_seen_at": "2026-04-26T15:50:37.492543+00:00",
       "current_price": 76937,
-      "current_mileage": 3132,
+      "current_mileage": 3461,
       "status": "active",
       "observations": [
         {
@@ -516,13 +526,18 @@
           "observed_at": "2026-04-29T05:38:32.386924+00:00",
           "price": 76937,
           "mileage": 3132
+        },
+        {
+          "observed_at": "2026-05-20T14:01:38.837211+00:00",
+          "price": 76937,
+          "mileage": 3461
         }
       ],
       "stats": {
         "all_time_low": 76937,
         "all_time_high": 77437,
         "total_drop_pct": -0.65,
-        "n_observations": 6,
+        "n_observations": 7,
         "days_observed": 23
       }
     },
@@ -1208,7 +1223,7 @@
       "trim": "E450S4",
       "dealer": "New Country Motor Cars, Inc.",
       "first_seen_at": "2026-04-29T10:22:02.386002+00:00",
-      "current_price": 51629,
+      "current_price": 49500,
       "current_mileage": 43285,
       "status": "active",
       "observations": [
@@ -1251,13 +1266,18 @@
           "observed_at": "2026-05-20T08:20:28.736167+00:00",
           "price": 51629,
           "mileage": 43285
+        },
+        {
+          "observed_at": "2026-05-20T14:01:38.837211+00:00",
+          "price": 49500,
+          "mileage": 43285
         }
       ],
       "stats": {
-        "all_time_low": 49900,
+        "all_time_low": 49500,
         "all_time_high": 55000,
-        "total_drop_pct": -6.13,
-        "n_observations": 8,
+        "total_drop_pct": -10.0,
+        "n_observations": 9,
         "days_observed": 21
       }
     },
@@ -1304,7 +1324,7 @@
         "all_time_high": 71860,
         "total_drop_pct": 0.0,
         "n_observations": 1,
-        "days_observed": 20
+        "days_observed": 21
       }
     },
     "W1KLH6FB2SA151507": {
@@ -1561,7 +1581,7 @@
       "first_seen_at": "2026-05-11T23:48:59.600162+00:00",
       "current_price": 45981,
       "current_mileage": 65004,
-      "status": "reappeared",
+      "status": "active",
       "observations": [
         {
           "observed_at": "2026-05-11T23:48:59.600162+00:00",
@@ -1607,7 +1627,7 @@
       "first_seen_at": "2026-05-12T19:47:34.248540+00:00",
       "current_price": 61525,
       "current_mileage": 38684,
-      "status": "active",
+      "status": "gone",
       "observations": [
         {
           "observed_at": "2026-05-12T19:47:34.248540+00:00",
@@ -1758,7 +1778,7 @@
       "trim": "E450S4",
       "dealer": "Mercedes-Benz of Charleston",
       "first_seen_at": "2026-05-13T09:22:44.161676+00:00",
-      "current_price": 80794,
+      "current_price": 80595,
       "current_mileage": 4475,
       "status": "active",
       "observations": [
@@ -1781,13 +1801,18 @@
           "observed_at": "2026-05-20T08:20:28.736167+00:00",
           "price": 80794,
           "mileage": 4475
+        },
+        {
+          "observed_at": "2026-05-20T14:01:38.837211+00:00",
+          "price": 80595,
+          "mileage": 4475
         }
       ],
       "stats": {
         "all_time_low": 80595,
         "all_time_high": 80794,
-        "total_drop_pct": 0.0,
-        "n_observations": 4,
+        "total_drop_pct": -0.25,
+        "n_observations": 5,
         "days_observed": 7
       }
     },
@@ -1859,7 +1884,7 @@
       "first_seen_at": "2026-05-14T09:12:41.790440+00:00",
       "current_price": 65988,
       "current_mileage": 22826,
-      "status": "gone",
+      "status": "reappeared",
       "observations": [
         {
           "observed_at": "2026-05-14T09:12:41.790440+00:00",
@@ -1928,7 +1953,7 @@
       "first_seen_at": "2026-05-19T13:50:23.287752+00:00",
       "current_price": 51015,
       "current_mileage": 38992,
-      "status": "reappeared",
+      "status": "active",
       "observations": [
         {
           "observed_at": "2026-05-19T13:50:23.287752+00:00",
@@ -1941,7 +1966,7 @@
         "all_time_high": 51015,
         "total_drop_pct": 0.0,
         "n_observations": 1,
-        "days_observed": 0
+        "days_observed": 1
       }
     }
   }
