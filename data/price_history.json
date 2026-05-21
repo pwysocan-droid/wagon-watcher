@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-20T23:45:36.449733+00:00",
+  "generated_at": "2026-05-21T02:30:21.741186+00:00",
   "schema_version": 1,
   "vins": {
     "W1KZH6AB2NB028936": {
@@ -37,7 +37,7 @@
       "first_seen_at": "2026-04-26T15:50:37.492543+00:00",
       "current_price": 71500,
       "current_mileage": 3130,
-      "status": "reappeared",
+      "status": "active",
       "observations": [
         {
           "observed_at": "2026-04-26T15:50:37.492543+00:00",
@@ -495,7 +495,7 @@
       "first_seen_at": "2026-04-26T15:50:37.492543+00:00",
       "current_price": 76937,
       "current_mileage": 3461,
-      "status": "active",
+      "status": "gone",
       "observations": [
         {
           "observed_at": "2026-04-26T15:50:37.492543+00:00",
@@ -1594,7 +1594,7 @@
         "all_time_high": 45981,
         "total_drop_pct": 0.0,
         "n_observations": 1,
-        "days_observed": 8
+        "days_observed": 9
       }
     },
     "W1KZH6AB5PB133912": {
@@ -1617,7 +1617,7 @@
         "all_time_high": 59981,
         "total_drop_pct": 0.0,
         "n_observations": 1,
-        "days_observed": 8
+        "days_observed": 9
       }
     },
     "W1KZH6AB4PB180428": {
@@ -1627,7 +1627,7 @@
       "first_seen_at": "2026-05-12T19:47:34.248540+00:00",
       "current_price": 61525,
       "current_mileage": 38684,
-      "status": "reappeared",
+      "status": "active",
       "observations": [
         {
           "observed_at": "2026-05-12T19:47:34.248540+00:00",
@@ -1752,7 +1752,7 @@
       "first_seen_at": "2026-05-13T09:22:44.161676+00:00",
       "current_price": 67990,
       "current_mileage": 15355,
-      "status": "active",
+      "status": "gone",
       "observations": [
         {
           "observed_at": "2026-05-13T09:22:44.161676+00:00",
@@ -1884,7 +1884,7 @@
       "first_seen_at": "2026-05-14T09:12:41.790440+00:00",
       "current_price": 65988,
       "current_mileage": 22826,
-      "status": "gone",
+      "status": "reappeared",
       "observations": [
         {
           "observed_at": "2026-05-14T09:12:41.790440+00:00",
