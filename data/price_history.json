@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-21T19:10:01.070377+00:00",
+  "generated_at": "2026-05-21T20:46:25.201909+00:00",
   "schema_version": 1,
   "vins": {
     "W1KZH6AB2NB028936": {
@@ -1058,9 +1058,9 @@
       "trim": "E450S4",
       "dealer": "Mercedes-Benz of Huntington",
       "first_seen_at": "2026-04-26T15:50:37.492543+00:00",
-      "current_price": 75795,
+      "current_price": 73795,
       "current_mileage": 9194,
-      "status": "reappeared",
+      "status": "active",
       "observations": [
         {
           "observed_at": "2026-04-26T15:50:37.492543+00:00",
@@ -1071,13 +1071,18 @@
           "observed_at": "2026-04-26T23:31:01.171865+00:00",
           "price": 75795,
           "mileage": 9194
+        },
+        {
+          "observed_at": "2026-05-21T20:46:24.580500+00:00",
+          "price": 73795,
+          "mileage": 9194
         }
       ],
       "stats": {
-        "all_time_low": 75795,
+        "all_time_low": 73795,
         "all_time_high": 75795,
-        "total_drop_pct": 0.0,
-        "n_observations": 2,
+        "total_drop_pct": -2.64,
+        "n_observations": 3,
         "days_observed": 25
       }
     },
@@ -1459,7 +1464,7 @@
         "all_time_high": 79984,
         "total_drop_pct": 0.0,
         "n_observations": 1,
-        "days_observed": 14
+        "days_observed": 15
       }
     },
     "W1KLH6FB0SA088150": {
@@ -1492,7 +1497,7 @@
         "all_time_high": 73984,
         "total_drop_pct": 0.0,
         "n_observations": 3,
-        "days_observed": 14
+        "days_observed": 15
       }
     },
     "W1KZH6AB5PB124028": {
@@ -1640,7 +1645,7 @@
         "all_time_high": 61525,
         "total_drop_pct": 0.0,
         "n_observations": 1,
-        "days_observed": 8
+        "days_observed": 9
       }
     },
     "W1KLH6FBXSA087524": {
@@ -1663,7 +1668,7 @@
         "all_time_high": 73984,
         "total_drop_pct": 0.0,
         "n_observations": 1,
-        "days_observed": 8
+        "days_observed": 9
       }
     },
     "W1KZH6ABXNB039490": {
@@ -1691,7 +1696,7 @@
         "all_time_high": 50882,
         "total_drop_pct": 1.81,
         "n_observations": 2,
-        "days_observed": 8
+        "days_observed": 9
       }
     },
     "W1KLH6FB2SA109290": {
@@ -1714,7 +1719,7 @@
         "all_time_high": 67998,
         "total_drop_pct": 0.0,
         "n_observations": 1,
-        "days_observed": 8
+        "days_observed": 9
       }
     },
     "W1KLH6FB6SA138629": {
