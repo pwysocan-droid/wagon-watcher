@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-21T02:30:21.741186+00:00",
+  "generated_at": "2026-05-21T06:43:41.664536+00:00",
   "schema_version": 1,
   "vins": {
     "W1KZH6AB2NB028936": {
@@ -37,7 +37,7 @@
       "first_seen_at": "2026-04-26T15:50:37.492543+00:00",
       "current_price": 71500,
       "current_mileage": 3130,
-      "status": "active",
+      "status": "gone",
       "observations": [
         {
           "observed_at": "2026-04-26T15:50:37.492543+00:00",
@@ -161,7 +161,7 @@
       "first_seen_at": "2026-04-26T15:50:37.492543+00:00",
       "current_price": 75999,
       "current_mileage": 1856,
-      "status": "active",
+      "status": "gone",
       "observations": [
         {
           "observed_at": "2026-04-26T15:50:37.492543+00:00",
@@ -235,7 +235,7 @@
       "first_seen_at": "2026-04-26T15:50:37.492543+00:00",
       "current_price": 60998,
       "current_mileage": 19059,
-      "status": "active",
+      "status": "gone",
       "observations": [
         {
           "observed_at": "2026-04-26T15:50:37.492543+00:00",
@@ -495,7 +495,7 @@
       "first_seen_at": "2026-04-26T15:50:37.492543+00:00",
       "current_price": 76937,
       "current_mileage": 3461,
-      "status": "gone",
+      "status": "reappeared",
       "observations": [
         {
           "observed_at": "2026-04-26T15:50:37.492543+00:00",
@@ -1752,7 +1752,7 @@
       "first_seen_at": "2026-05-13T09:22:44.161676+00:00",
       "current_price": 67990,
       "current_mileage": 15355,
-      "status": "gone",
+      "status": "reappeared",
       "observations": [
         {
           "observed_at": "2026-05-13T09:22:44.161676+00:00",
@@ -1884,7 +1884,7 @@
       "first_seen_at": "2026-05-14T09:12:41.790440+00:00",
       "current_price": 65988,
       "current_mileage": 22826,
-      "status": "reappeared",
+      "status": "active",
       "observations": [
         {
           "observed_at": "2026-05-14T09:12:41.790440+00:00",
@@ -1967,6 +1967,29 @@
         "total_drop_pct": 0.0,
         "n_observations": 1,
         "days_observed": 1
+      }
+    },
+    "W1KZH6AB2PB121247": {
+      "year": 2023,
+      "trim": "E450S4",
+      "dealer": "Loeber Motors",
+      "first_seen_at": "2026-05-21T06:43:34.560318+00:00",
+      "current_price": 57988,
+      "current_mileage": 38595,
+      "status": "active",
+      "observations": [
+        {
+          "observed_at": "2026-05-21T06:43:34.560318+00:00",
+          "price": 57988,
+          "mileage": 38595
+        }
+      ],
+      "stats": {
+        "all_time_low": 57988,
+        "all_time_high": 57988,
+        "total_drop_pct": 0.0,
+        "n_observations": 1,
+        "days_observed": 0
       }
     }
   }
