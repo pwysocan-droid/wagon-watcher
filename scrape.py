@@ -59,13 +59,17 @@ DEFAULT_QUERY: dict[str, str] = {
 # consistent prices, so this strategy is deterministic.
 COUNTS_FOR_UNION: tuple[str, ...] = ("12", "24")
 
-# Defensive floor for the union strategy. The E450S4+WGN national pool has
-# been ≥34 since recon. Below this, the most likely explanation is that
-# MBUSA has changed the backend so count=12 and count=24 now return
-# overlapping records — we'd silently lose half the dataset. Failing loud
-# inside the scraper is cheaper than letting the reconciler's 50% health
-# check catch it after one bad run is already logged.
-EXPECTED_MIN_POOL = 25
+# Coarse "endpoint returned almost nothing" tripwire. This is a backstop, not
+# the primary defense: reconcile.py's relative check (abort if found < 0.5 *
+# last successful count) is what catches a real collapse, and it self-adjusts
+# as inventory shifts. This floor only matters when there's no last_count to
+# compare against (e.g. first run on an empty DB). 12 == one count=12 window,
+# so anything below it means even a single call came back broken.
+#
+# Originally 25, set at recon when the national E450S4+WGN pool was ≥34. The
+# CPO wagon market is thin and genuinely fell to 24 by 2026-05-21, which
+# tripped the old floor on healthy data — hence the lower, backstop-only value.
+EXPECTED_MIN_POOL = 12
 
 
 @dataclass

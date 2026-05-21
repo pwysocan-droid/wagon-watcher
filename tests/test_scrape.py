@@ -269,8 +269,8 @@ def test_fetch_all_aborts_below_expected_min_pool(monkeypatch):
     from scrape import EXPECTED_MIN_POOL
     monkeypatch.delenv("DRY_RUN", raising=False)
 
-    # Both calls return the SAME 12 records — total union = 12, < 25.
-    same_vins = [{"vin": f"V{i:017d}"} for i in range(12)]
+    # Both calls return the SAME 10 records — total union = 10, < 12.
+    same_vins = [{"vin": f"V{i:017d}"} for i in range(10)]
     response = {
         "result": {"pagedVehicles": {
             "records": same_vins,
