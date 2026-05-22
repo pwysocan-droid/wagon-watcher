@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-22T02:32:00.894266+00:00",
+  "generated_at": "2026-05-22T06:40:51.850472+00:00",
   "schema_version": 1,
   "vins": {
     "W1KZH6AB2NB028936": {
@@ -1060,7 +1060,7 @@
       "first_seen_at": "2026-04-26T15:50:37.492543+00:00",
       "current_price": 73795,
       "current_mileage": 9194,
-      "status": "active",
+      "status": "gone",
       "observations": [
         {
           "observed_at": "2026-04-26T15:50:37.492543+00:00",
@@ -1757,7 +1757,7 @@
       "first_seen_at": "2026-05-13T09:22:44.161676+00:00",
       "current_price": 67990,
       "current_mileage": 15355,
-      "status": "active",
+      "status": "gone",
       "observations": [
         {
           "observed_at": "2026-05-13T09:22:44.161676+00:00",
@@ -1992,6 +1992,29 @@
       "stats": {
         "all_time_low": 57988,
         "all_time_high": 57988,
+        "total_drop_pct": 0.0,
+        "n_observations": 1,
+        "days_observed": 0
+      }
+    },
+    "W1KZH6AB0PB157745": {
+      "year": 2023,
+      "trim": "E450S4",
+      "dealer": "Sears Imported Autos, Inc.",
+      "first_seen_at": "2026-05-22T06:40:48.360556+00:00",
+      "current_price": 59872,
+      "current_mileage": 28170,
+      "status": "active",
+      "observations": [
+        {
+          "observed_at": "2026-05-22T06:40:48.360556+00:00",
+          "price": 59872,
+          "mileage": 28170
+        }
+      ],
+      "stats": {
+        "all_time_low": 59872,
+        "all_time_high": 59872,
         "total_drop_pct": 0.0,
         "n_observations": 1,
         "days_observed": 0
