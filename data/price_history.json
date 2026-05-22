@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-22T06:40:51.850472+00:00",
+  "generated_at": "2026-05-22T10:17:58.085497+00:00",
   "schema_version": 1,
   "vins": {
     "W1KZH6AB2NB028936": {
@@ -1060,7 +1060,7 @@
       "first_seen_at": "2026-04-26T15:50:37.492543+00:00",
       "current_price": 73795,
       "current_mileage": 9194,
-      "status": "gone",
+      "status": "reappeared",
       "observations": [
         {
           "observed_at": "2026-04-26T15:50:37.492543+00:00",
@@ -1395,7 +1395,7 @@
         "all_time_high": 75484,
         "total_drop_pct": -0.15,
         "n_observations": 5,
-        "days_observed": 19
+        "days_observed": 20
       }
     },
     "W1KLH6FB6RA026150": {
@@ -1525,7 +1525,7 @@
         "all_time_high": 63882,
         "total_drop_pct": -1.82,
         "n_observations": 2,
-        "days_observed": 14
+        "days_observed": 15
       }
     },
     "W1KZH6AB3PB156900": {
@@ -1747,7 +1747,7 @@
         "all_time_high": 82564,
         "total_drop_pct": -5.54,
         "n_observations": 2,
-        "days_observed": 8
+        "days_observed": 9
       }
     },
     "W1KZH6AB2PB172229": {
@@ -1757,7 +1757,7 @@
       "first_seen_at": "2026-05-13T09:22:44.161676+00:00",
       "current_price": 67990,
       "current_mileage": 15355,
-      "status": "gone",
+      "status": "reappeared",
       "observations": [
         {
           "observed_at": "2026-05-13T09:22:44.161676+00:00",
@@ -1775,7 +1775,7 @@
         "all_time_high": 68990,
         "total_drop_pct": -1.45,
         "n_observations": 2,
-        "days_observed": 8
+        "days_observed": 9
       }
     },
     "W1KLH6FB0TA237464": {
@@ -1818,7 +1818,7 @@
         "all_time_high": 80794,
         "total_drop_pct": -0.25,
         "n_observations": 5,
-        "days_observed": 8
+        "days_observed": 9
       }
     },
     "W1KZH6AB2NB082348": {
@@ -1841,7 +1841,7 @@
         "all_time_high": 51900,
         "total_drop_pct": 0.0,
         "n_observations": 1,
-        "days_observed": 8
+        "days_observed": 9
       }
     },
     "W1KLH6FB3SA087512": {
@@ -1879,7 +1879,7 @@
         "all_time_high": 65988,
         "total_drop_pct": 0.0,
         "n_observations": 4,
-        "days_observed": 8
+        "days_observed": 9
       }
     },
     "W1KLH6FB3SA142248": {
@@ -1902,7 +1902,7 @@
         "all_time_high": 65988,
         "total_drop_pct": 0.0,
         "n_observations": 1,
-        "days_observed": 7
+        "days_observed": 8
       }
     },
     "W1KZH6AB5MA902507": {
@@ -1994,7 +1994,7 @@
         "all_time_high": 57988,
         "total_drop_pct": 0.0,
         "n_observations": 1,
-        "days_observed": 0
+        "days_observed": 1
       }
     },
     "W1KZH6AB0PB157745": {
@@ -2015,6 +2015,29 @@
       "stats": {
         "all_time_low": 59872,
         "all_time_high": 59872,
+        "total_drop_pct": 0.0,
+        "n_observations": 1,
+        "days_observed": 0
+      }
+    },
+    "W1KZH6AB5PB165016": {
+      "year": 2023,
+      "trim": "E450S4",
+      "dealer": "Mercedes-Benz of White Plains",
+      "first_seen_at": "2026-05-22T10:17:47.116145+00:00",
+      "current_price": 62445,
+      "current_mileage": 18808,
+      "status": "active",
+      "observations": [
+        {
+          "observed_at": "2026-05-22T10:17:47.116145+00:00",
+          "price": 62445,
+          "mileage": 18808
+        }
+      ],
+      "stats": {
+        "all_time_low": 62445,
+        "all_time_high": 62445,
         "total_drop_pct": 0.0,
         "n_observations": 1,
         "days_observed": 0
