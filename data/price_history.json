@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-26T22:48:40.144115+00:00",
+  "generated_at": "2026-05-26T23:57:42.809926+00:00",
   "schema_version": 1,
   "vins": {
     "W1KZH6AB2NB028936": {
@@ -741,7 +741,7 @@
       "trim": "E450S4",
       "dealer": "Mercedes-Benz of Tysons Corner",
       "first_seen_at": "2026-04-26T15:50:37.492543+00:00",
-      "current_price": 62420,
+      "current_price": 61420,
       "current_mileage": 27644,
       "status": "active",
       "observations": [
@@ -799,13 +799,18 @@
           "observed_at": "2026-05-18T13:00:24.713745+00:00",
           "price": 62420,
           "mileage": 27644
+        },
+        {
+          "observed_at": "2026-05-26T23:57:38.636519+00:00",
+          "price": 61420,
+          "mileage": 27644
         }
       ],
       "stats": {
-        "all_time_low": 62420,
+        "all_time_low": 61420,
         "all_time_high": 63430,
-        "total_drop_pct": -0.91,
-        "n_observations": 11,
+        "total_drop_pct": -2.5,
+        "n_observations": 12,
         "days_observed": 30
       }
     },
@@ -1609,7 +1614,7 @@
         "all_time_high": 45981,
         "total_drop_pct": 0.0,
         "n_observations": 1,
-        "days_observed": 14
+        "days_observed": 15
       }
     },
     "W1KZH6AB5PB133912": {
@@ -1632,7 +1637,7 @@
         "all_time_high": 59981,
         "total_drop_pct": 0.0,
         "n_observations": 1,
-        "days_observed": 14
+        "days_observed": 15
       }
     },
     "W1KZH6AB4PB180428": {
@@ -1927,7 +1932,7 @@
       "first_seen_at": "2026-05-15T14:59:18.173961+00:00",
       "current_price": 38991,
       "current_mileage": 70700,
-      "status": "reappeared",
+      "status": "active",
       "observations": [
         {
           "observed_at": "2026-05-15T14:59:18.173961+00:00",
