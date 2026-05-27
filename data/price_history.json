@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-27T11:32:00.946452+00:00",
+  "generated_at": "2026-05-27T14:56:46.529842+00:00",
   "schema_version": 1,
   "vins": {
     "W1KZH6AB2NB028936": {
@@ -1339,7 +1339,7 @@
         "all_time_high": 71860,
         "total_drop_pct": 0.0,
         "n_observations": 1,
-        "days_observed": 27
+        "days_observed": 28
       }
     },
     "W1KLH6FB2SA151507": {
@@ -1932,7 +1932,7 @@
       "first_seen_at": "2026-05-15T14:59:18.173961+00:00",
       "current_price": 38991,
       "current_mileage": 70700,
-      "status": "reappeared",
+      "status": "active",
       "observations": [
         {
           "observed_at": "2026-05-15T14:59:18.173961+00:00",
@@ -1968,7 +1968,7 @@
         "all_time_high": 63980,
         "total_drop_pct": 0.0,
         "n_observations": 1,
-        "days_observed": 10
+        "days_observed": 11
       }
     },
     "W1KZH6ABXNB038274": {
@@ -1996,7 +1996,7 @@
         "all_time_high": 51022,
         "total_drop_pct": 0.01,
         "n_observations": 2,
-        "days_observed": 7
+        "days_observed": 8
       }
     },
     "W1KZH6AB2PB121247": {
@@ -2091,6 +2091,52 @@
       "stats": {
         "all_time_low": 71492,
         "all_time_high": 71492,
+        "total_drop_pct": 0.0,
+        "n_observations": 1,
+        "days_observed": 0
+      }
+    },
+    "W1KLH6FBXSA142568": {
+      "year": 2025,
+      "trim": "E450S4",
+      "dealer": "Mercedes-Benz of Rochester",
+      "first_seen_at": "2026-05-27T14:56:41.849308+00:00",
+      "current_price": 68995,
+      "current_mileage": 8490,
+      "status": "active",
+      "observations": [
+        {
+          "observed_at": "2026-05-27T14:56:41.849308+00:00",
+          "price": 68995,
+          "mileage": 8490
+        }
+      ],
+      "stats": {
+        "all_time_low": 68995,
+        "all_time_high": 68995,
+        "total_drop_pct": 0.0,
+        "n_observations": 1,
+        "days_observed": 0
+      }
+    },
+    "W1KZH6AB2NB042531": {
+      "year": 2022,
+      "trim": "E450S4",
+      "dealer": "Mercedes-Benz of Manhattan",
+      "first_seen_at": "2026-05-27T14:56:41.849308+00:00",
+      "current_price": 54900,
+      "current_mileage": 23842,
+      "status": "active",
+      "observations": [
+        {
+          "observed_at": "2026-05-27T14:56:41.849308+00:00",
+          "price": 54900,
+          "mileage": 23842
+        }
+      ],
+      "stats": {
+        "all_time_low": 54900,
+        "all_time_high": 54900,
         "total_drop_pct": 0.0,
         "n_observations": 1,
         "days_observed": 0
