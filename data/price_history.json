@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-28T02:11:16.069485+00:00",
+  "generated_at": "2026-05-28T06:35:10.850833+00:00",
   "schema_version": 1,
   "vins": {
     "W1KZH6AB2NB028936": {
@@ -2126,7 +2126,7 @@
       "first_seen_at": "2026-05-27T14:56:41.849308+00:00",
       "current_price": 54900,
       "current_mileage": 23842,
-      "status": "active",
+      "status": "gone",
       "observations": [
         {
           "observed_at": "2026-05-27T14:56:41.849308+00:00",
@@ -2137,6 +2137,29 @@
       "stats": {
         "all_time_low": 54900,
         "all_time_high": 54900,
+        "total_drop_pct": 0.0,
+        "n_observations": 1,
+        "days_observed": 0
+      }
+    },
+    "W1KZH6AB7PB174090": {
+      "year": 2023,
+      "trim": "E450S4",
+      "dealer": "EuroMotorcars Devon, Inc.",
+      "first_seen_at": "2026-05-28T06:35:04.334300+00:00",
+      "current_price": 62980,
+      "current_mileage": 31357,
+      "status": "active",
+      "observations": [
+        {
+          "observed_at": "2026-05-28T06:35:04.334300+00:00",
+          "price": 62980,
+          "mileage": 31357
+        }
+      ],
+      "stats": {
+        "all_time_low": 62980,
+        "all_time_high": 62980,
         "total_drop_pct": 0.0,
         "n_observations": 1,
         "days_observed": 0
