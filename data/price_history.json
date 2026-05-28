@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-28T22:14:51.982247+00:00",
+  "generated_at": "2026-05-28T23:47:43.415145+00:00",
   "schema_version": 1,
   "vins": {
     "W1KZH6AB2NB028936": {
@@ -1550,7 +1550,7 @@
       "first_seen_at": "2026-05-07T15:10:13.929955+00:00",
       "current_price": 65520,
       "current_mileage": 13834,
-      "status": "gone",
+      "status": "reappeared",
       "observations": [
         {
           "observed_at": "2026-05-07T15:10:13.929955+00:00",
@@ -2170,6 +2170,29 @@
       "stats": {
         "all_time_low": 62980,
         "all_time_high": 62980,
+        "total_drop_pct": 0.0,
+        "n_observations": 1,
+        "days_observed": 0
+      }
+    },
+    "W1KLH6FB5SA085731": {
+      "year": 2025,
+      "trim": "E450S4",
+      "dealer": "Mercedes-Benz of Morristown",
+      "first_seen_at": "2026-05-28T23:47:35.071912+00:00",
+      "current_price": 66985,
+      "current_mileage": 2445,
+      "status": "active",
+      "observations": [
+        {
+          "observed_at": "2026-05-28T23:47:35.071912+00:00",
+          "price": 66985,
+          "mileage": 2445
+        }
+      ],
+      "stats": {
+        "all_time_low": 66985,
+        "all_time_high": 66985,
         "total_drop_pct": 0.0,
         "n_observations": 1,
         "days_observed": 0
