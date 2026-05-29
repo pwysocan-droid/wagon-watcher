@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-29T02:14:45.333934+00:00",
+  "generated_at": "2026-05-29T06:36:13.194945+00:00",
   "schema_version": 1,
   "vins": {
     "W1KZH6AB2NB028936": {
@@ -1549,8 +1549,8 @@
       "dealer": "Mercedes-Benz of Kansas City",
       "first_seen_at": "2026-05-07T15:10:13.929955+00:00",
       "current_price": 65520,
-      "current_mileage": 13834,
-      "status": "gone",
+      "current_mileage": 13902,
+      "status": "reappeared",
       "observations": [
         {
           "observed_at": "2026-05-07T15:10:13.929955+00:00",
@@ -1561,13 +1561,18 @@
           "observed_at": "2026-05-16T15:32:43.627367+00:00",
           "price": 65520,
           "mileage": 13834
+        },
+        {
+          "observed_at": "2026-05-29T06:36:12.171903+00:00",
+          "price": 65520,
+          "mileage": 13902
         }
       ],
       "stats": {
         "all_time_low": 65520,
         "all_time_high": 65520,
         "total_drop_pct": 0.0,
-        "n_observations": 2,
+        "n_observations": 3,
         "days_observed": 21
       }
     },
@@ -2172,7 +2177,7 @@
         "all_time_high": 62980,
         "total_drop_pct": 0.0,
         "n_observations": 1,
-        "days_observed": 0
+        "days_observed": 1
       }
     },
     "W1KLH6FB5SA085731": {
@@ -2182,7 +2187,7 @@
       "first_seen_at": "2026-05-28T23:47:35.071912+00:00",
       "current_price": 66985,
       "current_mileage": 2445,
-      "status": "gone",
+      "status": "reappeared",
       "observations": [
         {
           "observed_at": "2026-05-28T23:47:35.071912+00:00",
