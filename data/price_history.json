@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-29T06:36:13.194945+00:00",
+  "generated_at": "2026-05-29T10:38:59.637725+00:00",
   "schema_version": 1,
   "vins": {
     "W1KZH6AB2NB028936": {
@@ -1293,7 +1293,7 @@
         "all_time_high": 55000,
         "total_drop_pct": -10.0,
         "n_observations": 9,
-        "days_observed": 29
+        "days_observed": 30
       }
     },
     "W1KZH6AB2PB147623": {
@@ -1316,7 +1316,7 @@
         "all_time_high": 64122,
         "total_drop_pct": 0.0,
         "n_observations": 1,
-        "days_observed": 29
+        "days_observed": 30
       }
     },
     "W1KLH6FBXRA058115": {
@@ -1362,7 +1362,7 @@
         "all_time_high": 75489,
         "total_drop_pct": 0.0,
         "n_observations": 1,
-        "days_observed": 28
+        "days_observed": 29
       }
     },
     "W1KLH6FB3SA096615": {
@@ -1405,7 +1405,7 @@
         "all_time_high": 75484,
         "total_drop_pct": -0.15,
         "n_observations": 5,
-        "days_observed": 26
+        "days_observed": 27
       }
     },
     "W1KLH6FB6RA026150": {
@@ -1433,7 +1433,7 @@
         "all_time_high": 72998,
         "total_drop_pct": 0.0,
         "n_observations": 2,
-        "days_observed": 24
+        "days_observed": 25
       }
     },
     "W1KZH6AB1PB167555": {
@@ -1456,7 +1456,7 @@
         "all_time_high": 59916,
         "total_drop_pct": 0.0,
         "n_observations": 1,
-        "days_observed": 24
+        "days_observed": 25
       }
     },
     "W1KLH6FB2RA026291": {
@@ -1540,7 +1540,7 @@
         "all_time_high": 63882,
         "total_drop_pct": -1.82,
         "n_observations": 2,
-        "days_observed": 21
+        "days_observed": 22
       }
     },
     "W1KZH6AB3PB156900": {
@@ -1550,7 +1550,7 @@
       "first_seen_at": "2026-05-07T15:10:13.929955+00:00",
       "current_price": 65520,
       "current_mileage": 13902,
-      "status": "reappeared",
+      "status": "active",
       "observations": [
         {
           "observed_at": "2026-05-07T15:10:13.929955+00:00",
@@ -1724,7 +1724,7 @@
       "trim": "E450S4",
       "dealer": "Mercedes-Benz of Fort Pierce",
       "first_seen_at": "2026-05-12T19:47:34.248540+00:00",
-      "current_price": 67999,
+      "current_price": 65995,
       "current_mileage": 12383,
       "status": "active",
       "observations": [
@@ -1737,13 +1737,18 @@
           "observed_at": "2026-05-25T23:57:09.116761+00:00",
           "price": 67999,
           "mileage": 12383
+        },
+        {
+          "observed_at": "2026-05-29T10:38:54.211074+00:00",
+          "price": 65995,
+          "mileage": 12383
         }
       ],
       "stats": {
-        "all_time_low": 67998,
+        "all_time_low": 65995,
         "all_time_high": 67999,
-        "total_drop_pct": 0.0,
-        "n_observations": 2,
+        "total_drop_pct": -2.95,
+        "n_observations": 3,
         "days_observed": 16
       }
     },
@@ -1772,7 +1777,7 @@
         "all_time_high": 82564,
         "total_drop_pct": -5.54,
         "n_observations": 2,
-        "days_observed": 15
+        "days_observed": 16
       }
     },
     "W1KZH6AB2PB172229": {
@@ -1800,7 +1805,7 @@
         "all_time_high": 68990,
         "total_drop_pct": -1.45,
         "n_observations": 2,
-        "days_observed": 15
+        "days_observed": 16
       }
     },
     "W1KLH6FB0TA237464": {
@@ -1843,7 +1848,7 @@
         "all_time_high": 80794,
         "total_drop_pct": -0.25,
         "n_observations": 5,
-        "days_observed": 15
+        "days_observed": 16
       }
     },
     "W1KZH6AB2NB082348": {
@@ -1866,7 +1871,7 @@
         "all_time_high": 51900,
         "total_drop_pct": 0.0,
         "n_observations": 1,
-        "days_observed": 15
+        "days_observed": 16
       }
     },
     "W1KLH6FB3SA087512": {
@@ -1904,7 +1909,7 @@
         "all_time_high": 65988,
         "total_drop_pct": 0.0,
         "n_observations": 4,
-        "days_observed": 15
+        "days_observed": 16
       }
     },
     "W1KLH6FB3SA142248": {
@@ -1927,7 +1932,7 @@
         "all_time_high": 65988,
         "total_drop_pct": 0.0,
         "n_observations": 1,
-        "days_observed": 14
+        "days_observed": 15
       }
     },
     "W1KZH6AB5MA902507": {
@@ -2029,7 +2034,7 @@
         "all_time_high": 57988,
         "total_drop_pct": 0.0,
         "n_observations": 1,
-        "days_observed": 7
+        "days_observed": 8
       }
     },
     "W1KZH6AB0PB157745": {
@@ -2052,7 +2057,7 @@
         "all_time_high": 59872,
         "total_drop_pct": 0.0,
         "n_observations": 1,
-        "days_observed": 6
+        "days_observed": 7
       }
     },
     "W1KZH6AB5PB165016": {
@@ -2080,7 +2085,7 @@
         "all_time_high": 62445,
         "total_drop_pct": -0.8,
         "n_observations": 2,
-        "days_observed": 6
+        "days_observed": 7
       }
     },
     "W1KLH6FB9SA095436": {
@@ -2117,20 +2122,25 @@
       "dealer": "Mercedes-Benz of Rochester",
       "first_seen_at": "2026-05-27T14:56:41.849308+00:00",
       "current_price": 68995,
-      "current_mileage": 8490,
+      "current_mileage": 8484,
       "status": "active",
       "observations": [
         {
           "observed_at": "2026-05-27T14:56:41.849308+00:00",
           "price": 68995,
           "mileage": 8490
+        },
+        {
+          "observed_at": "2026-05-29T10:38:54.211074+00:00",
+          "price": 68995,
+          "mileage": 8484
         }
       ],
       "stats": {
         "all_time_low": 68995,
         "all_time_high": 68995,
         "total_drop_pct": 0.0,
-        "n_observations": 1,
+        "n_observations": 2,
         "days_observed": 1
       }
     },
@@ -2187,7 +2197,7 @@
       "first_seen_at": "2026-05-28T23:47:35.071912+00:00",
       "current_price": 66985,
       "current_mileage": 2445,
-      "status": "reappeared",
+      "status": "active",
       "observations": [
         {
           "observed_at": "2026-05-28T23:47:35.071912+00:00",
@@ -2198,6 +2208,29 @@
       "stats": {
         "all_time_low": 66985,
         "all_time_high": 66985,
+        "total_drop_pct": 0.0,
+        "n_observations": 1,
+        "days_observed": 0
+      }
+    },
+    "W1KLH6FB2SA127188": {
+      "year": 2025,
+      "trim": "E450S4",
+      "dealer": "Mercedes-Benz of Fort Pierce",
+      "first_seen_at": "2026-05-29T10:38:54.211074+00:00",
+      "current_price": 69998,
+      "current_mileage": 6963,
+      "status": "active",
+      "observations": [
+        {
+          "observed_at": "2026-05-29T10:38:54.211074+00:00",
+          "price": 69998,
+          "mileage": 6963
+        }
+      ],
+      "stats": {
+        "all_time_low": 69998,
+        "all_time_high": 69998,
         "total_drop_pct": 0.0,
         "n_observations": 1,
         "days_observed": 0
