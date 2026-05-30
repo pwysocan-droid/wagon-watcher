@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-30T17:05:52.132168+00:00",
+  "generated_at": "2026-05-30T18:35:59.999240+00:00",
   "schema_version": 1,
   "vins": {
     "W1KZH6AB2NB028936": {
@@ -1235,7 +1235,7 @@
         "all_time_high": 73990,
         "total_drop_pct": 0.0,
         "n_observations": 1,
-        "days_observed": 31
+        "days_observed": 32
       }
     },
     "W1KZH6ABXPB138989": {
@@ -1762,7 +1762,7 @@
       "trim": "E450S4",
       "dealer": "Mercedes-Benz of Kingsport",
       "first_seen_at": "2026-05-13T09:22:44.161676+00:00",
-      "current_price": 77990,
+      "current_price": 75986,
       "current_mileage": 2866,
       "status": "active",
       "observations": [
@@ -1775,13 +1775,18 @@
           "observed_at": "2026-05-13T16:37:35.471057+00:00",
           "price": 77990,
           "mileage": 2866
+        },
+        {
+          "observed_at": "2026-05-30T18:35:59.215173+00:00",
+          "price": 75986,
+          "mileage": 2866
         }
       ],
       "stats": {
-        "all_time_low": 77990,
+        "all_time_low": 75986,
         "all_time_high": 82564,
-        "total_drop_pct": -5.54,
-        "n_observations": 2,
+        "total_drop_pct": -7.97,
+        "n_observations": 3,
         "days_observed": 17
       }
     },
@@ -1923,20 +1928,25 @@
       "dealer": "Mercedes-Benz OF Tiverton",
       "first_seen_at": "2026-05-14T09:12:41.790440+00:00",
       "current_price": 65988,
-      "current_mileage": 22826,
+      "current_mileage": 22829,
       "status": "active",
       "observations": [
         {
           "observed_at": "2026-05-14T09:12:41.790440+00:00",
           "price": 65988,
           "mileage": 22826
+        },
+        {
+          "observed_at": "2026-05-30T18:35:59.215173+00:00",
+          "price": 65988,
+          "mileage": 22829
         }
       ],
       "stats": {
         "all_time_low": 65988,
         "all_time_high": 65988,
         "total_drop_pct": 0.0,
-        "n_observations": 1,
+        "n_observations": 2,
         "days_observed": 16
       }
     },
@@ -1975,7 +1985,7 @@
       "first_seen_at": "2026-05-16T14:18:54.645074+00:00",
       "current_price": 63980,
       "current_mileage": 11016,
-      "status": "reappeared",
+      "status": "active",
       "observations": [
         {
           "observed_at": "2026-05-16T14:18:54.645074+00:00",
@@ -2081,7 +2091,7 @@
       "dealer": "Mercedes-Benz of White Plains",
       "first_seen_at": "2026-05-22T10:17:47.116145+00:00",
       "current_price": 61945,
-      "current_mileage": 18808,
+      "current_mileage": 18822,
       "status": "active",
       "observations": [
         {
@@ -2093,13 +2103,18 @@
           "observed_at": "2026-05-22T15:44:49.978492+00:00",
           "price": 61945,
           "mileage": 18808
+        },
+        {
+          "observed_at": "2026-05-30T18:35:59.215173+00:00",
+          "price": 61945,
+          "mileage": 18822
         }
       ],
       "stats": {
         "all_time_low": 61945,
         "all_time_high": 62445,
         "total_drop_pct": -0.8,
-        "n_observations": 2,
+        "n_observations": 3,
         "days_observed": 8
       }
     },
