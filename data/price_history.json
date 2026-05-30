@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-30T01:25:38.683707+00:00",
+  "generated_at": "2026-05-30T05:05:23.183894+00:00",
   "schema_version": 1,
   "vins": {
     "W1KZH6AB2NB028936": {
@@ -1611,7 +1611,7 @@
       "first_seen_at": "2026-05-11T23:48:59.600162+00:00",
       "current_price": 45981,
       "current_mileage": 65004,
-      "status": "gone",
+      "status": "reappeared",
       "observations": [
         {
           "observed_at": "2026-05-11T23:48:59.600162+00:00",
