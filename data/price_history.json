@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-30T15:58:45.480483+00:00",
+  "generated_at": "2026-05-30T17:05:52.132168+00:00",
   "schema_version": 1,
   "vins": {
     "W1KZH6AB2NB028936": {
@@ -1601,7 +1601,7 @@
         "all_time_high": 39988,
         "total_drop_pct": 0.0,
         "n_observations": 1,
-        "days_observed": 18
+        "days_observed": 19
       }
     },
     "W1KZH6AB2MA896486": {
@@ -1731,7 +1731,7 @@
       "first_seen_at": "2026-05-12T19:47:34.248540+00:00",
       "current_price": 65995,
       "current_mileage": 12383,
-      "status": "reappeared",
+      "status": "gone",
       "observations": [
         {
           "observed_at": "2026-05-12T19:47:34.248540+00:00",
@@ -1974,20 +1974,25 @@
       "dealer": "Mercedes-Benz of Cary",
       "first_seen_at": "2026-05-16T14:18:54.645074+00:00",
       "current_price": 63980,
-      "current_mileage": 10985,
-      "status": "gone",
+      "current_mileage": 11016,
+      "status": "reappeared",
       "observations": [
         {
           "observed_at": "2026-05-16T14:18:54.645074+00:00",
           "price": 63980,
           "mileage": 10985
+        },
+        {
+          "observed_at": "2026-05-30T17:05:48.912283+00:00",
+          "price": 63980,
+          "mileage": 11016
         }
       ],
       "stats": {
         "all_time_low": 63980,
         "all_time_high": 63980,
         "total_drop_pct": 0.0,
-        "n_observations": 1,
+        "n_observations": 2,
         "days_observed": 14
       }
     },
@@ -2194,7 +2199,7 @@
       "first_seen_at": "2026-05-28T06:35:04.334300+00:00",
       "current_price": 62980,
       "current_mileage": 31357,
-      "status": "reappeared",
+      "status": "gone",
       "observations": [
         {
           "observed_at": "2026-05-28T06:35:04.334300+00:00",
