@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-03T05:23:17.148373+00:00",
+  "generated_at": "2026-06-03T10:16:18.009988+00:00",
   "schema_version": 1,
   "vins": {
     "W1KZH6AB2NB028936": {
@@ -210,29 +210,6 @@
         "days_observed": 37
       }
     },
-    "W1KLH6FB9SA129598": {
-      "year": 2025,
-      "trim": "E450S4",
-      "dealer": "Mercedes-Benz of Chicago",
-      "first_seen_at": "2026-04-26T15:50:37.492543+00:00",
-      "current_price": 61516,
-      "current_mileage": 11877,
-      "status": "gone",
-      "observations": [
-        {
-          "observed_at": "2026-04-26T15:50:37.492543+00:00",
-          "price": 61516,
-          "mileage": 11877
-        }
-      ],
-      "stats": {
-        "all_time_low": 61516,
-        "all_time_high": 61516,
-        "total_drop_pct": 0.0,
-        "n_observations": 1,
-        "days_observed": 37
-      }
-    },
     "W1KLH6FB6SA144852": {
       "year": 2025,
       "trim": "E450S4",
@@ -273,29 +250,6 @@
         "all_time_high": 64998,
         "total_drop_pct": -6.15,
         "n_observations": 5,
-        "days_observed": 37
-      }
-    },
-    "W1KLH6FB1RA068693": {
-      "year": 2024,
-      "trim": "E450S4",
-      "dealer": "Mercedes-Benz of Louisville",
-      "first_seen_at": "2026-04-26T15:50:37.492543+00:00",
-      "current_price": 65559,
-      "current_mileage": 21850,
-      "status": "gone",
-      "observations": [
-        {
-          "observed_at": "2026-04-26T15:50:37.492543+00:00",
-          "price": 65559,
-          "mileage": 21850
-        }
-      ],
-      "stats": {
-        "all_time_low": 65559,
-        "all_time_high": 65559,
-        "total_drop_pct": 0.0,
-        "n_observations": 1,
         "days_observed": 37
       }
     },
@@ -1257,7 +1211,7 @@
       "first_seen_at": "2026-04-29T11:57:15.784091+00:00",
       "current_price": 71860,
       "current_mileage": 8958,
-      "status": "gone",
+      "status": "reappeared",
       "observations": [
         {
           "observed_at": "2026-04-29T11:57:15.784091+00:00",
@@ -1336,7 +1290,7 @@
         "all_time_high": 75484,
         "total_drop_pct": -0.15,
         "n_observations": 5,
-        "days_observed": 31
+        "days_observed": 32
       }
     },
     "W1KLH6FB6RA026150": {
@@ -1471,7 +1425,7 @@
         "all_time_high": 63882,
         "total_drop_pct": -1.82,
         "n_observations": 2,
-        "days_observed": 26
+        "days_observed": 27
       }
     },
     "W1KZH6AB3PB156900": {
@@ -1713,7 +1667,7 @@
         "all_time_high": 82564,
         "total_drop_pct": -7.97,
         "n_observations": 3,
-        "days_observed": 20
+        "days_observed": 21
       }
     },
     "W1KZH6AB2PB172229": {
@@ -1741,7 +1695,7 @@
         "all_time_high": 68990,
         "total_drop_pct": -1.45,
         "n_observations": 2,
-        "days_observed": 20
+        "days_observed": 21
       }
     },
     "W1KLH6FB0TA237464": {
@@ -1784,7 +1738,7 @@
         "all_time_high": 80794,
         "total_drop_pct": -0.25,
         "n_observations": 5,
-        "days_observed": 20
+        "days_observed": 21
       }
     },
     "W1KZH6AB2NB082348": {
@@ -1807,7 +1761,7 @@
         "all_time_high": 51900,
         "total_drop_pct": 0.0,
         "n_observations": 1,
-        "days_observed": 20
+        "days_observed": 21
       }
     },
     "W1KLH6FB3SA087512": {
@@ -1845,7 +1799,7 @@
         "all_time_high": 65988,
         "total_drop_pct": 0.0,
         "n_observations": 4,
-        "days_observed": 20
+        "days_observed": 21
       }
     },
     "W1KLH6FB3SA142248": {
@@ -1873,7 +1827,7 @@
         "all_time_high": 65988,
         "total_drop_pct": 0.0,
         "n_observations": 2,
-        "days_observed": 19
+        "days_observed": 20
       }
     },
     "W1KZH6AB5MA902507": {
@@ -1985,7 +1939,7 @@
         "all_time_high": 57988,
         "total_drop_pct": 0.0,
         "n_observations": 1,
-        "days_observed": 12
+        "days_observed": 13
       }
     },
     "W1KZH6AB0PB157745": {
@@ -2008,7 +1962,7 @@
         "all_time_high": 59872,
         "total_drop_pct": 0.0,
         "n_observations": 1,
-        "days_observed": 11
+        "days_observed": 12
       }
     },
     "W1KZH6AB5PB165016": {
@@ -2168,7 +2122,7 @@
         "all_time_high": 62980,
         "total_drop_pct": 0.0,
         "n_observations": 3,
-        "days_observed": 5
+        "days_observed": 6
       }
     },
     "W1KLH6FB5SA085731": {
@@ -2178,7 +2132,7 @@
       "first_seen_at": "2026-05-28T23:47:35.071912+00:00",
       "current_price": 66985,
       "current_mileage": 2445,
-      "status": "active",
+      "status": "gone",
       "observations": [
         {
           "observed_at": "2026-05-28T23:47:35.071912+00:00",
@@ -2237,7 +2191,7 @@
         "all_time_high": 65995,
         "total_drop_pct": 0.0,
         "n_observations": 1,
-        "days_observed": 0
+        "days_observed": 1
       }
     }
   }
