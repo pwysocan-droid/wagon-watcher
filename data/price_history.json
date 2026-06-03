@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-03T10:16:18.009988+00:00",
+  "generated_at": "2026-06-03T15:11:38.448660+00:00",
   "schema_version": 1,
   "vins": {
     "W1KZH6AB2NB028936": {
@@ -108,7 +108,7 @@
       "first_seen_at": "2026-04-26T15:50:37.492543+00:00",
       "current_price": 66291,
       "current_mileage": 7937,
-      "status": "gone",
+      "status": "reappeared",
       "observations": [
         {
           "observed_at": "2026-04-26T15:50:37.492543+00:00",
@@ -976,7 +976,7 @@
       "trim": "E450S4",
       "dealer": "Mercedes-Benz of Huntington",
       "first_seen_at": "2026-04-26T15:50:37.492543+00:00",
-      "current_price": 73795,
+      "current_price": 72995,
       "current_mileage": 9194,
       "status": "active",
       "observations": [
@@ -994,13 +994,18 @@
           "observed_at": "2026-05-21T20:46:24.580500+00:00",
           "price": 73795,
           "mileage": 9194
+        },
+        {
+          "observed_at": "2026-06-03T15:11:31.353813+00:00",
+          "price": 72995,
+          "mileage": 9194
         }
       ],
       "stats": {
-        "all_time_low": 73795,
+        "all_time_low": 72995,
         "all_time_high": 75795,
-        "total_drop_pct": -2.64,
-        "n_observations": 3,
+        "total_drop_pct": -3.69,
+        "n_observations": 4,
         "days_observed": 37
       }
     },
@@ -1201,7 +1206,7 @@
         "all_time_high": 55000,
         "total_drop_pct": -10.0,
         "n_observations": 9,
-        "days_observed": 34
+        "days_observed": 35
       }
     },
     "W1KLH6FBXRA058115": {
@@ -1211,7 +1216,7 @@
       "first_seen_at": "2026-04-29T11:57:15.784091+00:00",
       "current_price": 71860,
       "current_mileage": 8958,
-      "status": "reappeared",
+      "status": "active",
       "observations": [
         {
           "observed_at": "2026-04-29T11:57:15.784091+00:00",
@@ -1224,7 +1229,7 @@
         "all_time_high": 71860,
         "total_drop_pct": 0.0,
         "n_observations": 1,
-        "days_observed": 34
+        "days_observed": 35
       }
     },
     "W1KLH6FB2SA151507": {
@@ -1247,7 +1252,7 @@
         "all_time_high": 75489,
         "total_drop_pct": 0.0,
         "n_observations": 1,
-        "days_observed": 33
+        "days_observed": 34
       }
     },
     "W1KLH6FB3SA096615": {
@@ -1318,7 +1323,7 @@
         "all_time_high": 72998,
         "total_drop_pct": 0.0,
         "n_observations": 2,
-        "days_observed": 29
+        "days_observed": 30
       }
     },
     "W1KZH6AB1PB167555": {
@@ -1341,7 +1346,7 @@
         "all_time_high": 59916,
         "total_drop_pct": 0.0,
         "n_observations": 1,
-        "days_observed": 29
+        "days_observed": 30
       }
     },
     "W1KLH6FB2RA026291": {
@@ -1458,7 +1463,7 @@
         "all_time_high": 65520,
         "total_drop_pct": 0.0,
         "n_observations": 3,
-        "days_observed": 26
+        "days_observed": 27
       }
     },
     "W1KZH6JB9LA770026": {
@@ -1855,7 +1860,7 @@
         "all_time_high": 38991,
         "total_drop_pct": -0.51,
         "n_observations": 2,
-        "days_observed": 18
+        "days_observed": 19
       }
     },
     "W1KZH6AB0PB167501": {
@@ -1883,7 +1888,7 @@
         "all_time_high": 63980,
         "total_drop_pct": 0.0,
         "n_observations": 2,
-        "days_observed": 17
+        "days_observed": 18
       }
     },
     "W1KZH6ABXNB038274": {
@@ -1916,7 +1921,7 @@
         "all_time_high": 51022,
         "total_drop_pct": 0.01,
         "n_observations": 3,
-        "days_observed": 14
+        "days_observed": 15
       }
     },
     "W1KZH6AB2PB121247": {
@@ -1995,7 +2000,7 @@
         "all_time_high": 62445,
         "total_drop_pct": -0.8,
         "n_observations": 3,
-        "days_observed": 11
+        "days_observed": 12
       }
     },
     "W1KLH6FB9SA095436": {
@@ -2033,7 +2038,7 @@
         "all_time_high": 71492,
         "total_drop_pct": -2.52,
         "n_observations": 4,
-        "days_observed": 6
+        "days_observed": 7
       }
     },
     "W1KLH6FBXSA142568": {
@@ -2066,7 +2071,7 @@
         "all_time_high": 68995,
         "total_drop_pct": 0.0,
         "n_observations": 3,
-        "days_observed": 6
+        "days_observed": 7
       }
     },
     "W1KZH6AB2NB042531": {
@@ -2089,7 +2094,7 @@
         "all_time_high": 54900,
         "total_drop_pct": 0.0,
         "n_observations": 1,
-        "days_observed": 6
+        "days_observed": 7
       }
     },
     "W1KZH6AB7PB174090": {
@@ -2168,7 +2173,7 @@
         "all_time_high": 69998,
         "total_drop_pct": 0.0,
         "n_observations": 1,
-        "days_observed": 4
+        "days_observed": 5
       }
     },
     "W1KZH6AB6PB179085": {
@@ -2192,6 +2197,52 @@
         "total_drop_pct": 0.0,
         "n_observations": 1,
         "days_observed": 1
+      }
+    },
+    "W1KZH6AB6PB116701": {
+      "year": 2023,
+      "trim": "E450S4",
+      "dealer": "Mercedes-Benz of White Plains",
+      "first_seen_at": "2026-06-03T15:11:31.353813+00:00",
+      "current_price": 61995,
+      "current_mileage": 30016,
+      "status": "active",
+      "observations": [
+        {
+          "observed_at": "2026-06-03T15:11:31.353813+00:00",
+          "price": 61995,
+          "mileage": 30016
+        }
+      ],
+      "stats": {
+        "all_time_low": 61995,
+        "all_time_high": 61995,
+        "total_drop_pct": 0.0,
+        "n_observations": 1,
+        "days_observed": 0
+      }
+    },
+    "W1KZH6AB0NB028692": {
+      "year": 2022,
+      "trim": "E450S4",
+      "dealer": "Mercedes-Benz OF Tiverton",
+      "first_seen_at": "2026-06-03T15:11:31.353813+00:00",
+      "current_price": 48988,
+      "current_mileage": 66721,
+      "status": "active",
+      "observations": [
+        {
+          "observed_at": "2026-06-03T15:11:31.353813+00:00",
+          "price": 48988,
+          "mileage": 66721
+        }
+      ],
+      "stats": {
+        "all_time_low": 48988,
+        "all_time_high": 48988,
+        "total_drop_pct": 0.0,
+        "n_observations": 1,
+        "days_observed": 0
       }
     }
   }
