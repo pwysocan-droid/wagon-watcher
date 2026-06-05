@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-05T02:34:05.249621+00:00",
+  "generated_at": "2026-06-05T06:59:12.733286+00:00",
   "schema_version": 1,
   "vins": {
     "W1KZH6AB2NB028936": {
@@ -1903,7 +1903,7 @@
         "all_time_high": 57988,
         "total_drop_pct": 0.0,
         "n_observations": 1,
-        "days_observed": 14
+        "days_observed": 15
       }
     },
     "W1KZH6AB0PB157745": {
@@ -1926,7 +1926,7 @@
         "all_time_high": 59872,
         "total_drop_pct": 0.0,
         "n_observations": 1,
-        "days_observed": 13
+        "days_observed": 14
       }
     },
     "W1KZH6AB5PB165016": {
@@ -2091,7 +2091,7 @@
         "all_time_high": 62980,
         "total_drop_pct": 0.0,
         "n_observations": 3,
-        "days_observed": 7
+        "days_observed": 8
       }
     },
     "W1KLH6FB5SA085731": {
