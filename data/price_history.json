@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-05T20:21:33.494456+00:00",
+  "generated_at": "2026-06-05T21:53:43.012227+00:00",
   "schema_version": 1,
   "vins": {
     "W1KZH6AB2NB028936": {
@@ -2020,7 +2020,7 @@
       "trim": "E450S4",
       "dealer": "Mercedes-Benz of Rochester",
       "first_seen_at": "2026-05-27T14:56:41.849308+00:00",
-      "current_price": 68995,
+      "current_price": 69995,
       "current_mileage": 8490,
       "status": "active",
       "observations": [
@@ -2038,13 +2038,18 @@
           "observed_at": "2026-05-30T10:21:08.010258+00:00",
           "price": 68995,
           "mileage": 8490
+        },
+        {
+          "observed_at": "2026-06-05T21:53:39.491861+00:00",
+          "price": 69995,
+          "mileage": 8490
         }
       ],
       "stats": {
         "all_time_low": 68995,
-        "all_time_high": 68995,
-        "total_drop_pct": 0.0,
-        "n_observations": 3,
+        "all_time_high": 69995,
+        "total_drop_pct": 1.45,
+        "n_observations": 4,
         "days_observed": 9
       }
     },
@@ -2157,7 +2162,7 @@
       "first_seen_at": "2026-06-02T09:45:32.545915+00:00",
       "current_price": 65995,
       "current_mileage": 10004,
-      "status": "reappeared",
+      "status": "gone",
       "observations": [
         {
           "observed_at": "2026-06-02T09:45:32.545915+00:00",
