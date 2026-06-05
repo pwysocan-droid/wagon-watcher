@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-05T16:26:08.167282+00:00",
+  "generated_at": "2026-06-05T18:20:19.375535+00:00",
   "schema_version": 1,
   "vins": {
     "W1KZH6AB2NB028936": {
@@ -1107,7 +1107,7 @@
         "all_time_high": 73990,
         "total_drop_pct": 0.0,
         "n_observations": 1,
-        "days_observed": 37
+        "days_observed": 38
       }
     },
     "W1KZH6ABXPB138989": {
@@ -1832,7 +1832,7 @@
       "trim": "E450S4",
       "dealer": "Mercedes-Benz of Cary",
       "first_seen_at": "2026-05-16T14:18:54.645074+00:00",
-      "current_price": 63980,
+      "current_price": 63981,
       "current_mileage": 11016,
       "status": "active",
       "observations": [
@@ -1845,13 +1845,18 @@
           "observed_at": "2026-05-30T17:05:48.912283+00:00",
           "price": 63980,
           "mileage": 11016
+        },
+        {
+          "observed_at": "2026-06-05T18:20:15.926356+00:00",
+          "price": 63981,
+          "mileage": 11016
         }
       ],
       "stats": {
         "all_time_low": 63980,
-        "all_time_high": 63980,
+        "all_time_high": 63981,
         "total_drop_pct": 0.0,
-        "n_observations": 2,
+        "n_observations": 3,
         "days_observed": 20
       }
     },
@@ -2152,7 +2157,7 @@
       "first_seen_at": "2026-06-02T09:45:32.545915+00:00",
       "current_price": 65995,
       "current_mileage": 10004,
-      "status": "active",
+      "status": "gone",
       "observations": [
         {
           "observed_at": "2026-06-02T09:45:32.545915+00:00",
