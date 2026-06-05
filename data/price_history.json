@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-05T10:49:09.940706+00:00",
+  "generated_at": "2026-06-05T13:48:49.588533+00:00",
   "schema_version": 1,
   "vins": {
     "W1KZH6AB2NB028936": {
@@ -309,7 +309,7 @@
       "trim": "E450S4",
       "dealer": "R B M of Atlanta, Inc.",
       "first_seen_at": "2026-04-26T15:50:37.492543+00:00",
-      "current_price": 74319,
+      "current_price": 73845,
       "current_mileage": 8725,
       "status": "active",
       "observations": [
@@ -322,13 +322,18 @@
           "observed_at": "2026-05-18T13:00:24.713745+00:00",
           "price": 74319,
           "mileage": 8725
+        },
+        {
+          "observed_at": "2026-06-05T13:48:44.369983+00:00",
+          "price": 73845,
+          "mileage": 8725
         }
       ],
       "stats": {
-        "all_time_low": 74319,
+        "all_time_low": 73845,
         "all_time_high": 75340,
-        "total_drop_pct": -1.36,
-        "n_observations": 2,
+        "total_drop_pct": -1.98,
+        "n_observations": 3,
         "days_observed": 39
       }
     },
@@ -1188,7 +1193,7 @@
         "all_time_high": 71860,
         "total_drop_pct": 0.0,
         "n_observations": 1,
-        "days_observed": 36
+        "days_observed": 37
       }
     },
     "W1KLH6FB2SA151507": {
@@ -2002,7 +2007,7 @@
         "all_time_high": 71492,
         "total_drop_pct": -2.52,
         "n_observations": 4,
-        "days_observed": 8
+        "days_observed": 9
       }
     },
     "W1KLH6FBXSA142568": {
@@ -2146,20 +2151,25 @@
       "dealer": "Mercedes-Benz of Syracuse",
       "first_seen_at": "2026-06-02T09:45:32.545915+00:00",
       "current_price": 65995,
-      "current_mileage": 10003,
+      "current_mileage": 10004,
       "status": "active",
       "observations": [
         {
           "observed_at": "2026-06-02T09:45:32.545915+00:00",
           "price": 65995,
           "mileage": 10003
+        },
+        {
+          "observed_at": "2026-06-05T13:48:44.369983+00:00",
+          "price": 65995,
+          "mileage": 10004
         }
       ],
       "stats": {
         "all_time_low": 65995,
         "all_time_high": 65995,
         "total_drop_pct": 0.0,
-        "n_observations": 1,
+        "n_observations": 2,
         "days_observed": 3
       }
     },
