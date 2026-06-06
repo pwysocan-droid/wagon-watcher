@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-06T12:49:21.588392+00:00",
+  "generated_at": "2026-06-06T14:24:25.980140+00:00",
   "schema_version": 1,
   "vins": {
     "W1KZH6AB2NB028936": {
@@ -1862,7 +1862,7 @@
         "all_time_high": 63981,
         "total_drop_pct": 0.0,
         "n_observations": 3,
-        "days_observed": 20
+        "days_observed": 21
       }
     },
     "W1KZH6ABXNB038274": {
@@ -1895,7 +1895,7 @@
         "all_time_high": 51022,
         "total_drop_pct": 0.01,
         "n_observations": 3,
-        "days_observed": 17
+        "days_observed": 18
       }
     },
     "W1KZH6AB2PB121247": {
@@ -2026,7 +2026,7 @@
       "dealer": "Mercedes-Benz of Rochester",
       "first_seen_at": "2026-05-27T14:56:41.849308+00:00",
       "current_price": 69995,
-      "current_mileage": 8490,
+      "current_mileage": 8492,
       "status": "active",
       "observations": [
         {
@@ -2048,13 +2048,18 @@
           "observed_at": "2026-06-05T21:53:39.491861+00:00",
           "price": 69995,
           "mileage": 8490
+        },
+        {
+          "observed_at": "2026-06-06T14:24:24.417180+00:00",
+          "price": 69995,
+          "mileage": 8492
         }
       ],
       "stats": {
         "all_time_low": 68995,
         "all_time_high": 69995,
         "total_drop_pct": 1.45,
-        "n_observations": 4,
+        "n_observations": 5,
         "days_observed": 9
       }
     },
