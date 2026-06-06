@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-06T17:01:41.393989+00:00",
+  "generated_at": "2026-06-06T18:45:17.109090+00:00",
   "schema_version": 1,
   "vins": {
     "W1KZH6AB2NB028936": {
@@ -1112,7 +1112,7 @@
         "all_time_high": 73990,
         "total_drop_pct": 0.0,
         "n_observations": 1,
-        "days_observed": 38
+        "days_observed": 39
       }
     },
     "W1KZH6ABXPB138989": {
@@ -2222,7 +2222,7 @@
       "dealer": "Mercedes-Benz OF Tiverton",
       "first_seen_at": "2026-06-03T15:11:31.353813+00:00",
       "current_price": 48988,
-      "current_mileage": 66725,
+      "current_mileage": 66721,
       "status": "active",
       "observations": [
         {
@@ -2234,13 +2234,18 @@
           "observed_at": "2026-06-06T15:47:29.053688+00:00",
           "price": 48988,
           "mileage": 66725
+        },
+        {
+          "observed_at": "2026-06-06T18:45:16.229830+00:00",
+          "price": 48988,
+          "mileage": 66721
         }
       ],
       "stats": {
         "all_time_low": 48988,
         "all_time_high": 48988,
         "total_drop_pct": 0.0,
-        "n_observations": 2,
+        "n_observations": 3,
         "days_observed": 3
       }
     },
