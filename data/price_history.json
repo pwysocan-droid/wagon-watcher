@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-07T10:22:09.800269+00:00",
+  "generated_at": "2026-06-07T12:06:34.190119+00:00",
   "schema_version": 1,
   "vins": {
     "W1KZH6AB2NB028936": {
@@ -754,7 +754,7 @@
       "first_seen_at": "2026-04-26T15:50:37.492543+00:00",
       "current_price": 70489,
       "current_mileage": 7975,
-      "status": "reappeared",
+      "status": "active",
       "observations": [
         {
           "observed_at": "2026-04-26T15:50:37.492543+00:00",
@@ -1124,7 +1124,7 @@
         "all_time_high": 71860,
         "total_drop_pct": 0.0,
         "n_observations": 1,
-        "days_observed": 38
+        "days_observed": 39
       }
     },
     "W1KLH6FB2SA151507": {
@@ -1218,7 +1218,7 @@
         "all_time_high": 72998,
         "total_drop_pct": 0.0,
         "n_observations": 2,
-        "days_observed": 33
+        "days_observed": 34
       }
     },
     "W1KZH6AB1PB167555": {
@@ -1241,7 +1241,7 @@
         "all_time_high": 59916,
         "total_drop_pct": 0.0,
         "n_observations": 1,
-        "days_observed": 33
+        "days_observed": 34
       }
     },
     "W1KLH6FB2RA026291": {
@@ -1542,7 +1542,7 @@
       "trim": "E450S4",
       "dealer": "Mercedes-Benz of Kingsport",
       "first_seen_at": "2026-05-13T09:22:44.161676+00:00",
-      "current_price": 75986,
+      "current_price": 74531,
       "current_mileage": 2866,
       "status": "active",
       "observations": [
@@ -1560,13 +1560,18 @@
           "observed_at": "2026-05-30T18:35:59.215173+00:00",
           "price": 75986,
           "mileage": 2866
+        },
+        {
+          "observed_at": "2026-06-07T12:06:28.736369+00:00",
+          "price": 74531,
+          "mileage": 2866
         }
       ],
       "stats": {
-        "all_time_low": 75986,
+        "all_time_low": 74531,
         "all_time_high": 82564,
-        "total_drop_pct": -7.97,
-        "n_observations": 3,
+        "total_drop_pct": -9.73,
+        "n_observations": 4,
         "days_observed": 25
       }
     },
@@ -1915,7 +1920,7 @@
       "first_seen_at": "2026-05-27T11:31:54.751828+00:00",
       "current_price": 69692,
       "current_mileage": 16690,
-      "status": "reappeared",
+      "status": "active",
       "observations": [
         {
           "observed_at": "2026-05-27T11:31:54.751828+00:00",
@@ -1943,7 +1948,7 @@
         "all_time_high": 71492,
         "total_drop_pct": -2.52,
         "n_observations": 4,
-        "days_observed": 10
+        "days_observed": 11
       }
     },
     "W1KLH6FBXSA142568": {
@@ -2098,7 +2103,7 @@
         "all_time_high": 69998,
         "total_drop_pct": 0.0,
         "n_observations": 1,
-        "days_observed": 8
+        "days_observed": 9
       }
     },
     "W1KZH6AB6PB179085": {
@@ -2256,7 +2261,7 @@
         "all_time_high": 75481,
         "total_drop_pct": 0.0,
         "n_observations": 1,
-        "days_observed": 1
+        "days_observed": 2
       }
     }
   }
