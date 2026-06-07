@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-07T03:31:23.041460+00:00",
+  "generated_at": "2026-06-07T07:47:34.289528+00:00",
   "schema_version": 1,
   "vins": {
     "W1KZH6AB2NB028936": {
@@ -487,29 +487,6 @@
         "days_observed": 41
       }
     },
-    "W1KLH6FB3SA115082": {
-      "year": 2025,
-      "trim": "E450S4",
-      "dealer": "Mercedes-Benz of St. Petersburg",
-      "first_seen_at": "2026-04-26T15:50:37.492543+00:00",
-      "current_price": 72946,
-      "current_mileage": 2053,
-      "status": "gone",
-      "observations": [
-        {
-          "observed_at": "2026-04-26T15:50:37.492543+00:00",
-          "price": 72946,
-          "mileage": 2053
-        }
-      ],
-      "stats": {
-        "all_time_low": 72946,
-        "all_time_high": 72946,
-        "total_drop_pct": 0.0,
-        "n_observations": 1,
-        "days_observed": 41
-      }
-    },
     "W1KLH6FB8SA126109": {
       "year": 2025,
       "trim": "E450S4",
@@ -877,34 +854,6 @@
         "days_observed": 41
       }
     },
-    "W1KZH6ABXNB038310": {
-      "year": 2022,
-      "trim": "E450S4",
-      "dealer": "Mercedes-Benz of Greenwich",
-      "first_seen_at": "2026-04-26T15:50:37.492543+00:00",
-      "current_price": 52850,
-      "current_mileage": 31756,
-      "status": "gone",
-      "observations": [
-        {
-          "observed_at": "2026-04-26T15:50:37.492543+00:00",
-          "price": 52850,
-          "mileage": 31756
-        },
-        {
-          "observed_at": "2026-04-26T23:31:01.171865+00:00",
-          "price": 52850,
-          "mileage": 31756
-        }
-      ],
-      "stats": {
-        "all_time_low": 52850,
-        "all_time_high": 52850,
-        "total_drop_pct": 0.0,
-        "n_observations": 2,
-        "days_observed": 41
-      }
-    },
     "W1KZH6AB4PB111528": {
       "year": 2023,
       "trim": "E450S4",
@@ -1090,29 +1039,6 @@
         "total_drop_pct": -2.78,
         "n_observations": 6,
         "days_observed": 41
-      }
-    },
-    "W1KLH6FBXSA138665": {
-      "year": 2025,
-      "trim": "E450S4",
-      "dealer": "Mercedes-Benz of Kansas City South",
-      "first_seen_at": "2026-04-28T17:09:04.838821+00:00",
-      "current_price": 73990,
-      "current_mileage": 5562,
-      "status": "gone",
-      "observations": [
-        {
-          "observed_at": "2026-04-28T17:09:04.838821+00:00",
-          "price": 73990,
-          "mileage": 5562
-        }
-      ],
-      "stats": {
-        "all_time_low": 73990,
-        "all_time_high": 73990,
-        "total_drop_pct": 0.0,
-        "n_observations": 1,
-        "days_observed": 39
       }
     },
     "W1KZH6ABXPB138989": {
@@ -1918,7 +1844,7 @@
         "all_time_high": 57988,
         "total_drop_pct": 0.0,
         "n_observations": 1,
-        "days_observed": 16
+        "days_observed": 17
       }
     },
     "W1KZH6AB0PB157745": {
@@ -1941,7 +1867,7 @@
         "all_time_high": 59872,
         "total_drop_pct": 0.0,
         "n_observations": 1,
-        "days_observed": 15
+        "days_observed": 16
       }
     },
     "W1KZH6AB5PB165016": {
@@ -2126,7 +2052,7 @@
         "all_time_high": 62980,
         "total_drop_pct": 0.0,
         "n_observations": 3,
-        "days_observed": 9
+        "days_observed": 10
       }
     },
     "W1KLH6FB5SA085731": {
@@ -2232,7 +2158,7 @@
       "dealer": "Mercedes-Benz OF Tiverton",
       "first_seen_at": "2026-06-03T15:11:31.353813+00:00",
       "current_price": 48988,
-      "current_mileage": 66721,
+      "current_mileage": 66725,
       "status": "active",
       "observations": [
         {
@@ -2249,13 +2175,18 @@
           "observed_at": "2026-06-06T18:45:16.229830+00:00",
           "price": 48988,
           "mileage": 66721
+        },
+        {
+          "observed_at": "2026-06-07T07:47:33.904653+00:00",
+          "price": 48988,
+          "mileage": 66725
         }
       ],
       "stats": {
         "all_time_low": 48988,
         "all_time_high": 48988,
         "total_drop_pct": 0.0,
-        "n_observations": 3,
+        "n_observations": 4,
         "days_observed": 3
       }
     },
