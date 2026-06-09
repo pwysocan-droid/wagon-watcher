@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-09T05:39:46.219920+00:00",
+  "generated_at": "2026-06-09T09:24:47.610733+00:00",
   "schema_version": 1,
   "vins": {
     "W1KZH6AB2NB028936": {
@@ -344,7 +344,7 @@
       "first_seen_at": "2026-04-26T15:50:37.492543+00:00",
       "current_price": 65777,
       "current_mileage": 33771,
-      "status": "active",
+      "status": "gone",
       "observations": [
         {
           "observed_at": "2026-04-26T15:50:37.492543+00:00",
@@ -1190,7 +1190,7 @@
         "all_time_high": 75484,
         "total_drop_pct": -0.15,
         "n_observations": 5,
-        "days_observed": 37
+        "days_observed": 38
       }
     },
     "W1KLH6FB6RA026150": {
@@ -1325,7 +1325,7 @@
         "all_time_high": 63882,
         "total_drop_pct": -1.82,
         "n_observations": 2,
-        "days_observed": 32
+        "days_observed": 33
       }
     },
     "W1KZH6AB3PB156900": {
@@ -1391,7 +1391,7 @@
       "first_seen_at": "2026-05-11T23:48:59.600162+00:00",
       "current_price": 45981,
       "current_mileage": 65004,
-      "status": "gone",
+      "status": "reappeared",
       "observations": [
         {
           "observed_at": "2026-05-11T23:48:59.600162+00:00",
@@ -1572,7 +1572,7 @@
         "all_time_high": 82564,
         "total_drop_pct": -9.73,
         "n_observations": 4,
-        "days_observed": 26
+        "days_observed": 27
       }
     },
     "W1KZH6AB2PB172229": {
@@ -1600,7 +1600,7 @@
         "all_time_high": 68990,
         "total_drop_pct": -1.45,
         "n_observations": 2,
-        "days_observed": 26
+        "days_observed": 27
       }
     },
     "W1KLH6FB0TA237464": {
@@ -1643,7 +1643,7 @@
         "all_time_high": 80794,
         "total_drop_pct": -0.25,
         "n_observations": 5,
-        "days_observed": 26
+        "days_observed": 27
       }
     },
     "W1KZH6AB2NB082348": {
@@ -1666,7 +1666,7 @@
         "all_time_high": 51900,
         "total_drop_pct": 0.0,
         "n_observations": 1,
-        "days_observed": 26
+        "days_observed": 27
       }
     },
     "W1KLH6FB3SA087512": {
@@ -1704,7 +1704,7 @@
         "all_time_high": 65988,
         "total_drop_pct": 0.0,
         "n_observations": 4,
-        "days_observed": 26
+        "days_observed": 27
       }
     },
     "W1KLH6FB3SA142248": {
@@ -1732,7 +1732,7 @@
         "all_time_high": 65988,
         "total_drop_pct": 0.0,
         "n_observations": 2,
-        "days_observed": 25
+        "days_observed": 26
       }
     },
     "W1KZH6AB5MA902507": {
@@ -1849,7 +1849,7 @@
         "all_time_high": 57988,
         "total_drop_pct": 0.0,
         "n_observations": 1,
-        "days_observed": 18
+        "days_observed": 19
       }
     },
     "W1KZH6AB0PB157745": {
@@ -1872,7 +1872,7 @@
         "all_time_high": 59872,
         "total_drop_pct": 0.0,
         "n_observations": 1,
-        "days_observed": 17
+        "days_observed": 18
       }
     },
     "W1KZH6AB5PB165016": {
@@ -1882,7 +1882,7 @@
       "first_seen_at": "2026-05-22T10:17:47.116145+00:00",
       "current_price": 61945,
       "current_mileage": 18823,
-      "status": "gone",
+      "status": "reappeared",
       "observations": [
         {
           "observed_at": "2026-05-22T10:17:47.116145+00:00",
@@ -2062,7 +2062,7 @@
         "all_time_high": 62980,
         "total_drop_pct": 0.0,
         "n_observations": 3,
-        "days_observed": 11
+        "days_observed": 12
       }
     },
     "W1KLH6FB5SA085731": {
@@ -2290,6 +2290,75 @@
         "total_drop_pct": 0.0,
         "n_observations": 1,
         "days_observed": 1
+      }
+    },
+    "W1KZH6AB6MA921874": {
+      "year": 2021,
+      "trim": "E450S4",
+      "dealer": "Rallye Motors LLC",
+      "first_seen_at": "2026-06-09T09:24:40.409645+00:00",
+      "current_price": 50966,
+      "current_mileage": 43256,
+      "status": "active",
+      "observations": [
+        {
+          "observed_at": "2026-06-09T09:24:40.409645+00:00",
+          "price": 50966,
+          "mileage": 43256
+        }
+      ],
+      "stats": {
+        "all_time_low": 50966,
+        "all_time_high": 50966,
+        "total_drop_pct": 0.0,
+        "n_observations": 1,
+        "days_observed": 0
+      }
+    },
+    "W1KZH6AB4MA975996": {
+      "year": 2021,
+      "trim": "E450S4",
+      "dealer": "New Country Motor Cars, Inc.",
+      "first_seen_at": "2026-06-09T09:24:40.409645+00:00",
+      "current_price": 41000,
+      "current_mileage": 74063,
+      "status": "active",
+      "observations": [
+        {
+          "observed_at": "2026-06-09T09:24:40.409645+00:00",
+          "price": 41000,
+          "mileage": 74063
+        }
+      ],
+      "stats": {
+        "all_time_low": 41000,
+        "all_time_high": 41000,
+        "total_drop_pct": 0.0,
+        "n_observations": 1,
+        "days_observed": 0
+      }
+    },
+    "W1KLH6FB5SA138590": {
+      "year": 2025,
+      "trim": "E450S4",
+      "dealer": "Mercedes-Benz OF Tiverton",
+      "first_seen_at": "2026-06-09T09:24:40.409645+00:00",
+      "current_price": 66988,
+      "current_mileage": 21679,
+      "status": "active",
+      "observations": [
+        {
+          "observed_at": "2026-06-09T09:24:40.409645+00:00",
+          "price": 66988,
+          "mileage": 21679
+        }
+      ],
+      "stats": {
+        "all_time_low": 66988,
+        "all_time_high": 66988,
+        "total_drop_pct": 0.0,
+        "n_observations": 1,
+        "days_observed": 0
       }
     }
   }
