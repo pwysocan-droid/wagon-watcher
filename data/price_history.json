@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-09T17:53:16.183482+00:00",
+  "generated_at": "2026-06-09T19:56:48.770228+00:00",
   "schema_version": 1,
   "vins": {
     "W1KZH6AB2NB028936": {
@@ -1391,7 +1391,7 @@
       "first_seen_at": "2026-05-11T23:48:59.600162+00:00",
       "current_price": 45981,
       "current_mileage": 65004,
-      "status": "gone",
+      "status": "reappeared",
       "observations": [
         {
           "observed_at": "2026-05-11T23:48:59.600162+00:00",
@@ -1450,7 +1450,7 @@
         "all_time_high": 61525,
         "total_drop_pct": 0.0,
         "n_observations": 1,
-        "days_observed": 27
+        "days_observed": 28
       }
     },
     "W1KLH6FBXSA087524": {
@@ -1473,7 +1473,7 @@
         "all_time_high": 73984,
         "total_drop_pct": 0.0,
         "n_observations": 1,
-        "days_observed": 27
+        "days_observed": 28
       }
     },
     "W1KZH6ABXNB039490": {
@@ -1501,7 +1501,7 @@
         "all_time_high": 50882,
         "total_drop_pct": 1.81,
         "n_observations": 2,
-        "days_observed": 27
+        "days_observed": 28
       }
     },
     "W1KLH6FB2SA109290": {
@@ -1534,7 +1534,7 @@
         "all_time_high": 67999,
         "total_drop_pct": -2.95,
         "n_observations": 3,
-        "days_observed": 27
+        "days_observed": 28
       }
     },
     "W1KLH6FB6SA138629": {
@@ -1881,8 +1881,8 @@
       "dealer": "Mercedes-Benz of White Plains",
       "first_seen_at": "2026-05-22T10:17:47.116145+00:00",
       "current_price": 61945,
-      "current_mileage": 18823,
-      "status": "gone",
+      "current_mileage": 18826,
+      "status": "reappeared",
       "observations": [
         {
           "observed_at": "2026-05-22T10:17:47.116145+00:00",
@@ -1903,13 +1903,18 @@
           "observed_at": "2026-06-04T22:05:08.276423+00:00",
           "price": 61945,
           "mileage": 18823
+        },
+        {
+          "observed_at": "2026-06-09T19:56:47.952342+00:00",
+          "price": 61945,
+          "mileage": 18826
         }
       ],
       "stats": {
         "all_time_low": 61945,
         "all_time_high": 62445,
         "total_drop_pct": -0.8,
-        "n_observations": 4,
+        "n_observations": 5,
         "days_observed": 18
       }
     },
