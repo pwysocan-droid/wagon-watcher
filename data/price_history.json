@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-10T17:40:52.871734+00:00",
+  "generated_at": "2026-06-10T20:13:11.407438+00:00",
   "schema_version": 1,
   "vins": {
     "W1KZH6AB2NB028936": {
@@ -1221,29 +1221,6 @@
         "days_observed": 37
       }
     },
-    "W1KZH6AB1PB167555": {
-      "year": 2023,
-      "trim": "E450S4",
-      "dealer": "Mercedes-Benz OF Tiverton",
-      "first_seen_at": "2026-05-04T10:29:52.110014+00:00",
-      "current_price": 59916,
-      "current_mileage": 19801,
-      "status": "gone",
-      "observations": [
-        {
-          "observed_at": "2026-05-04T10:29:52.110014+00:00",
-          "price": 59916,
-          "mileage": 19801
-        }
-      ],
-      "stats": {
-        "all_time_low": 59916,
-        "all_time_high": 59916,
-        "total_drop_pct": 0.0,
-        "n_observations": 1,
-        "days_observed": 37
-      }
-    },
     "W1KLH6FB2RA026291": {
       "year": 2024,
       "trim": "E450S4",
@@ -1264,7 +1241,7 @@
         "all_time_high": 79984,
         "total_drop_pct": 0.0,
         "n_observations": 1,
-        "days_observed": 34
+        "days_observed": 35
       }
     },
     "W1KLH6FB0SA088150": {
@@ -1297,7 +1274,7 @@
         "all_time_high": 73984,
         "total_drop_pct": 0.0,
         "n_observations": 3,
-        "days_observed": 34
+        "days_observed": 35
       }
     },
     "W1KZH6AB5PB124028": {
@@ -1361,29 +1338,6 @@
         "days_observed": 34
       }
     },
-    "W1KZH6JB9LA770026": {
-      "year": 2020,
-      "trim": "E450S4",
-      "dealer": "Mercedes-Benz OF Tiverton",
-      "first_seen_at": "2026-05-11T16:14:44.375032+00:00",
-      "current_price": 39988,
-      "current_mileage": 62339,
-      "status": "gone",
-      "observations": [
-        {
-          "observed_at": "2026-05-11T16:14:44.375032+00:00",
-          "price": 39988,
-          "mileage": 62339
-        }
-      ],
-      "stats": {
-        "all_time_low": 39988,
-        "all_time_high": 39988,
-        "total_drop_pct": 0.0,
-        "n_observations": 1,
-        "days_observed": 30
-      }
-    },
     "W1KZH6AB2MA896486": {
       "year": 2021,
       "trim": "E450S4",
@@ -1391,7 +1345,7 @@
       "first_seen_at": "2026-05-11T23:48:59.600162+00:00",
       "current_price": 45981,
       "current_mileage": 65004,
-      "status": "reappeared",
+      "status": "active",
       "observations": [
         {
           "observed_at": "2026-05-11T23:48:59.600162+00:00",
@@ -1450,7 +1404,7 @@
         "all_time_high": 61525,
         "total_drop_pct": 0.0,
         "n_observations": 1,
-        "days_observed": 28
+        "days_observed": 29
       }
     },
     "W1KLH6FBXSA087524": {
@@ -1473,7 +1427,7 @@
         "all_time_high": 73984,
         "total_drop_pct": 0.0,
         "n_observations": 1,
-        "days_observed": 28
+        "days_observed": 29
       }
     },
     "W1KZH6ABXNB039490": {
@@ -1501,7 +1455,7 @@
         "all_time_high": 50882,
         "total_drop_pct": 1.81,
         "n_observations": 2,
-        "days_observed": 28
+        "days_observed": 29
       }
     },
     "W1KLH6FB2SA109290": {
@@ -1534,7 +1488,7 @@
         "all_time_high": 67999,
         "total_drop_pct": -2.95,
         "n_observations": 3,
-        "days_observed": 28
+        "days_observed": 29
       }
     },
     "W1KLH6FB6SA138629": {
