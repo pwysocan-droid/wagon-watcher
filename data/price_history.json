@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-09T23:12:14.743357+00:00",
+  "generated_at": "2026-06-10T01:34:58.858779+00:00",
   "schema_version": 1,
   "vins": {
     "W1KZH6AB2NB028936": {
@@ -1391,7 +1391,7 @@
       "first_seen_at": "2026-05-11T23:48:59.600162+00:00",
       "current_price": 45981,
       "current_mileage": 65004,
-      "status": "gone",
+      "status": "reappeared",
       "observations": [
         {
           "observed_at": "2026-05-11T23:48:59.600162+00:00",
@@ -1404,7 +1404,7 @@
         "all_time_high": 45981,
         "total_drop_pct": 0.0,
         "n_observations": 1,
-        "days_observed": 28
+        "days_observed": 29
       }
     },
     "W1KZH6AB5PB133912": {
@@ -1427,7 +1427,7 @@
         "all_time_high": 59981,
         "total_drop_pct": 0.0,
         "n_observations": 1,
-        "days_observed": 28
+        "days_observed": 29
       }
     },
     "W1KZH6AB4PB180428": {
@@ -2090,7 +2090,7 @@
         "all_time_high": 66985,
         "total_drop_pct": 0.0,
         "n_observations": 1,
-        "days_observed": 11
+        "days_observed": 12
       }
     },
     "W1KLH6FB2SA127188": {
@@ -2361,6 +2361,29 @@
       "stats": {
         "all_time_low": 66988,
         "all_time_high": 66988,
+        "total_drop_pct": 0.0,
+        "n_observations": 1,
+        "days_observed": 0
+      }
+    },
+    "W1KZH6AB0PB118007": {
+      "year": 2023,
+      "trim": "E450S4",
+      "dealer": "Mercedes-Benz of Durham",
+      "first_seen_at": "2026-06-10T01:34:53.866360+00:00",
+      "current_price": 58367,
+      "current_mileage": 30805,
+      "status": "active",
+      "observations": [
+        {
+          "observed_at": "2026-06-10T01:34:53.866360+00:00",
+          "price": 58367,
+          "mileage": 30805
+        }
+      ],
+      "stats": {
+        "all_time_low": 58367,
+        "all_time_high": 58367,
         "total_drop_pct": 0.0,
         "n_observations": 1,
         "days_observed": 0
