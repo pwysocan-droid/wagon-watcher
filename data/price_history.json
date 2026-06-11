@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-11T11:52:55.225799+00:00",
+  "generated_at": "2026-06-11T15:36:40.934201+00:00",
   "schema_version": 1,
   "vins": {
     "W1KZH6AB2NB028936": {
@@ -819,7 +819,7 @@
       "first_seen_at": "2026-04-29T11:57:15.784091+00:00",
       "current_price": 71860,
       "current_mileage": 8958,
-      "status": "reappeared",
+      "status": "active",
       "observations": [
         {
           "observed_at": "2026-04-29T11:57:15.784091+00:00",
@@ -832,7 +832,7 @@
         "all_time_high": 71860,
         "total_drop_pct": 0.0,
         "n_observations": 1,
-        "days_observed": 42
+        "days_observed": 43
       }
     },
     "W1KLH6FB2SA151507": {
@@ -1048,7 +1048,7 @@
         "all_time_high": 65520,
         "total_drop_pct": 0.0,
         "n_observations": 3,
-        "days_observed": 34
+        "days_observed": 35
       }
     },
     "W1KZH6AB2MA896486": {
@@ -1357,7 +1357,7 @@
       "dealer": "Mercedes-Benz OF Tiverton",
       "first_seen_at": "2026-05-14T09:12:41.790440+00:00",
       "current_price": 65988,
-      "current_mileage": 22829,
+      "current_mileage": 22824,
       "status": "active",
       "observations": [
         {
@@ -1369,13 +1369,18 @@
           "observed_at": "2026-05-30T18:35:59.215173+00:00",
           "price": 65988,
           "mileage": 22829
+        },
+        {
+          "observed_at": "2026-06-11T15:36:36.753843+00:00",
+          "price": 65988,
+          "mileage": 22824
         }
       ],
       "stats": {
         "all_time_low": 65988,
         "all_time_high": 65988,
         "total_drop_pct": 0.0,
-        "n_observations": 2,
+        "n_observations": 3,
         "days_observed": 28
       }
     },
@@ -1404,7 +1409,7 @@
         "all_time_high": 38991,
         "total_drop_pct": -0.51,
         "n_observations": 2,
-        "days_observed": 26
+        "days_observed": 27
       }
     },
     "W1KZH6AB0PB167501": {
@@ -1414,7 +1419,7 @@
       "first_seen_at": "2026-05-16T14:18:54.645074+00:00",
       "current_price": 63981,
       "current_mileage": 11016,
-      "status": "active",
+      "status": "gone",
       "observations": [
         {
           "observed_at": "2026-05-16T14:18:54.645074+00:00",
@@ -1437,7 +1442,7 @@
         "all_time_high": 63981,
         "total_drop_pct": 0.0,
         "n_observations": 3,
-        "days_observed": 25
+        "days_observed": 26
       }
     },
     "W1KZH6ABXNB038274": {
@@ -1470,7 +1475,7 @@
         "all_time_high": 51022,
         "total_drop_pct": 0.01,
         "n_observations": 3,
-        "days_observed": 22
+        "days_observed": 23
       }
     },
     "W1KZH6AB2PB121247": {
@@ -1655,7 +1660,7 @@
         "all_time_high": 69995,
         "total_drop_pct": 1.45,
         "n_observations": 7,
-        "days_observed": 14
+        "days_observed": 15
       }
     },
     "W1KZH6AB2NB042531": {
@@ -1678,7 +1683,7 @@
         "all_time_high": 54900,
         "total_drop_pct": 0.0,
         "n_observations": 1,
-        "days_observed": 14
+        "days_observed": 15
       }
     },
     "W1KZH6AB7PB174090": {
@@ -1813,7 +1818,7 @@
         "all_time_high": 61995,
         "total_drop_pct": 0.0,
         "n_observations": 2,
-        "days_observed": 7
+        "days_observed": 8
       }
     },
     "W1KZH6AB0NB028692": {
@@ -1851,7 +1856,7 @@
         "all_time_high": 48988,
         "total_drop_pct": 0.0,
         "n_observations": 4,
-        "days_observed": 7
+        "days_observed": 8
       }
     },
     "W1KLH6FB0SA134091": {
@@ -1952,20 +1957,25 @@
       "dealer": "Rallye Motors LLC",
       "first_seen_at": "2026-06-09T09:24:40.409645+00:00",
       "current_price": 50966,
-      "current_mileage": 43256,
+      "current_mileage": 43271,
       "status": "active",
       "observations": [
         {
           "observed_at": "2026-06-09T09:24:40.409645+00:00",
           "price": 50966,
           "mileage": 43256
+        },
+        {
+          "observed_at": "2026-06-11T15:36:36.753843+00:00",
+          "price": 50966,
+          "mileage": 43271
         }
       ],
       "stats": {
         "all_time_low": 50966,
         "all_time_high": 50966,
         "total_drop_pct": 0.0,
-        "n_observations": 1,
+        "n_observations": 2,
         "days_observed": 2
       }
     },
@@ -1975,20 +1985,25 @@
       "dealer": "New Country Motor Cars, Inc.",
       "first_seen_at": "2026-06-09T09:24:40.409645+00:00",
       "current_price": 41000,
-      "current_mileage": 74063,
+      "current_mileage": 74217,
       "status": "active",
       "observations": [
         {
           "observed_at": "2026-06-09T09:24:40.409645+00:00",
           "price": 41000,
           "mileage": 74063
+        },
+        {
+          "observed_at": "2026-06-11T15:36:36.753843+00:00",
+          "price": 41000,
+          "mileage": 74217
         }
       ],
       "stats": {
         "all_time_low": 41000,
         "all_time_high": 41000,
         "total_drop_pct": 0.0,
-        "n_observations": 1,
+        "n_observations": 2,
         "days_observed": 2
       }
     },
@@ -2045,7 +2060,7 @@
       "first_seen_at": "2026-06-10T23:53:36.737226+00:00",
       "current_price": 60794,
       "current_mileage": 26972,
-      "status": "reappeared",
+      "status": "active",
       "observations": [
         {
           "observed_at": "2026-06-10T23:53:36.737226+00:00",
@@ -2068,7 +2083,7 @@
       "first_seen_at": "2026-06-10T23:53:36.737226+00:00",
       "current_price": 73681,
       "current_mileage": 6176,
-      "status": "reappeared",
+      "status": "active",
       "observations": [
         {
           "observed_at": "2026-06-10T23:53:36.737226+00:00",
