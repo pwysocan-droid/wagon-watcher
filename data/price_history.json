@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-11T02:44:56.984473+00:00",
+  "generated_at": "2026-06-11T07:22:40.639235+00:00",
   "schema_version": 1,
   "vins": {
     "W1KZH6AB2NB028936": {
@@ -75,29 +75,6 @@
         "all_time_high": 73000,
         "total_drop_pct": -2.05,
         "n_observations": 6,
-        "days_observed": 45
-      }
-    },
-    "W1KZH6AB4PB149504": {
-      "year": 2023,
-      "trim": "E450S4",
-      "dealer": "Mercedes-Benz of Collierville",
-      "first_seen_at": "2026-04-26T15:50:37.492543+00:00",
-      "current_price": 63750,
-      "current_mileage": 20635,
-      "status": "gone",
-      "observations": [
-        {
-          "observed_at": "2026-04-26T15:50:37.492543+00:00",
-          "price": 63750,
-          "mileage": 20635
-        }
-      ],
-      "stats": {
-        "all_time_low": 63750,
-        "all_time_high": 63750,
-        "total_drop_pct": 0.0,
-        "n_observations": 1,
         "days_observed": 45
       }
     },
@@ -192,29 +169,6 @@
         "days_observed": 45
       }
     },
-    "W1KZH6AB6PB140805": {
-      "year": 2023,
-      "trim": "E450S4",
-      "dealer": "Mercedes-Benz of Elmbrook",
-      "first_seen_at": "2026-04-26T15:50:37.492543+00:00",
-      "current_price": 60995,
-      "current_mileage": 28009,
-      "status": "gone",
-      "observations": [
-        {
-          "observed_at": "2026-04-26T15:50:37.492543+00:00",
-          "price": 60995,
-          "mileage": 28009
-        }
-      ],
-      "stats": {
-        "all_time_low": 60995,
-        "all_time_high": 60995,
-        "total_drop_pct": 0.0,
-        "n_observations": 1,
-        "days_observed": 45
-      }
-    },
     "W1KLH6FB6SA144852": {
       "year": 2025,
       "trim": "E450S4",
@@ -255,29 +209,6 @@
         "all_time_high": 64998,
         "total_drop_pct": -6.15,
         "n_observations": 5,
-        "days_observed": 45
-      }
-    },
-    "W1KLH6FB1SA099139": {
-      "year": 2025,
-      "trim": "E450S4",
-      "dealer": "Mercedes-Benz of Okemos",
-      "first_seen_at": "2026-04-26T15:50:37.492543+00:00",
-      "current_price": 66500,
-      "current_mileage": 14319,
-      "status": "gone",
-      "observations": [
-        {
-          "observed_at": "2026-04-26T15:50:37.492543+00:00",
-          "price": 66500,
-          "mileage": 14319
-        }
-      ],
-      "stats": {
-        "all_time_low": 66500,
-        "all_time_high": 66500,
-        "total_drop_pct": 0.0,
-        "n_observations": 1,
         "days_observed": 45
       }
     },
@@ -1585,7 +1516,7 @@
         "all_time_high": 57988,
         "total_drop_pct": 0.0,
         "n_observations": 1,
-        "days_observed": 20
+        "days_observed": 21
       }
     },
     "W1KZH6AB0PB157745": {
@@ -1608,7 +1539,7 @@
         "all_time_high": 59872,
         "total_drop_pct": 0.0,
         "n_observations": 1,
-        "days_observed": 19
+        "days_observed": 20
       }
     },
     "W1KZH6AB5PB165016": {
@@ -1803,7 +1734,7 @@
         "all_time_high": 62980,
         "total_drop_pct": 0.0,
         "n_observations": 3,
-        "days_observed": 13
+        "days_observed": 14
       }
     },
     "W1KLH6FB5SA085731": {
@@ -2091,7 +2022,7 @@
       "first_seen_at": "2026-06-09T09:24:40.409645+00:00",
       "current_price": 66988,
       "current_mileage": 21679,
-      "status": "gone",
+      "status": "reappeared",
       "observations": [
         {
           "observed_at": "2026-06-09T09:24:40.409645+00:00",
@@ -2160,7 +2091,7 @@
       "first_seen_at": "2026-06-10T23:53:36.737226+00:00",
       "current_price": 73681,
       "current_mileage": 6176,
-      "status": "active",
+      "status": "gone",
       "observations": [
         {
           "observed_at": "2026-06-10T23:53:36.737226+00:00",
