@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-12T16:43:29.428777+00:00",
+  "generated_at": "2026-06-12T18:58:19.158456+00:00",
   "schema_version": 1,
   "vins": {
     "W1KZH6AB2NB028936": {
@@ -242,7 +242,7 @@
       "first_seen_at": "2026-04-26T15:50:37.492543+00:00",
       "current_price": 73845,
       "current_mileage": 8725,
-      "status": "active",
+      "status": "gone",
       "observations": [
         {
           "observed_at": "2026-04-26T15:50:37.492543+00:00",
@@ -1577,7 +1577,7 @@
       "trim": "E450S4",
       "dealer": "Mercedes-Benz of Coconut Creek",
       "first_seen_at": "2026-05-27T11:31:54.751828+00:00",
-      "current_price": 69292,
+      "current_price": 68992,
       "current_mileage": 16690,
       "status": "active",
       "observations": [
@@ -1605,13 +1605,18 @@
           "observed_at": "2026-06-07T22:54:39.909404+00:00",
           "price": 69292,
           "mileage": 16690
+        },
+        {
+          "observed_at": "2026-06-12T18:58:14.145893+00:00",
+          "price": 68992,
+          "mileage": 16690
         }
       ],
       "stats": {
-        "all_time_low": 69292,
+        "all_time_low": 68992,
         "all_time_high": 71492,
-        "total_drop_pct": -3.08,
-        "n_observations": 5,
+        "total_drop_pct": -3.5,
+        "n_observations": 6,
         "days_observed": 16
       }
     },
@@ -1917,7 +1922,7 @@
       "first_seen_at": "2026-06-05T10:49:04.947734+00:00",
       "current_price": 75481,
       "current_mileage": 3515,
-      "status": "active",
+      "status": "gone",
       "observations": [
         {
           "observed_at": "2026-06-05T10:49:04.947734+00:00",
