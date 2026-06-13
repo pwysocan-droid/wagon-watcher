@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-13T04:56:39.687831+00:00",
+  "generated_at": "2026-06-13T08:18:01.620899+00:00",
   "schema_version": 1,
   "vins": {
     "W1KZH6AB2NB028936": {
@@ -242,7 +242,7 @@
       "first_seen_at": "2026-04-26T15:50:37.492543+00:00",
       "current_price": 73845,
       "current_mileage": 8725,
-      "status": "reappeared",
+      "status": "gone",
       "observations": [
         {
           "observed_at": "2026-04-26T15:50:37.492543+00:00",
@@ -875,7 +875,7 @@
         "all_time_high": 75484,
         "total_drop_pct": -0.15,
         "n_observations": 5,
-        "days_observed": 41
+        "days_observed": 42
       }
     },
     "W1KLH6FB6RA026150": {
@@ -997,7 +997,7 @@
         "all_time_high": 63882,
         "total_drop_pct": -1.82,
         "n_observations": 2,
-        "days_observed": 36
+        "days_observed": 37
       }
     },
     "W1KZH6AB3PB156900": {
@@ -1040,7 +1040,7 @@
       "first_seen_at": "2026-05-11T23:48:59.600162+00:00",
       "current_price": 45981,
       "current_mileage": 65004,
-      "status": "gone",
+      "status": "reappeared",
       "observations": [
         {
           "observed_at": "2026-05-11T23:48:59.600162+00:00",
@@ -1279,7 +1279,7 @@
       "first_seen_at": "2026-05-13T09:22:44.161676+00:00",
       "current_price": 51900,
       "current_mileage": 37200,
-      "status": "gone",
+      "status": "reappeared",
       "observations": [
         {
           "observed_at": "2026-05-13T09:22:44.161676+00:00",
@@ -1480,7 +1480,7 @@
         "all_time_high": 57988,
         "total_drop_pct": 0.0,
         "n_observations": 1,
-        "days_observed": 22
+        "days_observed": 23
       }
     },
     "W1KZH6AB0PB157745": {
@@ -1503,7 +1503,7 @@
         "all_time_high": 59872,
         "total_drop_pct": 0.0,
         "n_observations": 1,
-        "days_observed": 21
+        "days_observed": 22
       }
     },
     "W1KZH6AB5PB165016": {
@@ -1703,7 +1703,7 @@
         "all_time_high": 62980,
         "total_drop_pct": 0.0,
         "n_observations": 3,
-        "days_observed": 15
+        "days_observed": 16
       }
     },
     "W1KLH6FB5SA085731": {
