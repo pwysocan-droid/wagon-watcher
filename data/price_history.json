@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-14T13:11:11.213744+00:00",
+  "generated_at": "2026-06-14T15:23:08.093288+00:00",
   "schema_version": 1,
   "vins": {
     "W1KZH6AB2NB028936": {
@@ -979,7 +979,7 @@
         "all_time_high": 65520,
         "total_drop_pct": 0.0,
         "n_observations": 3,
-        "days_observed": 37
+        "days_observed": 38
       }
     },
     "W1KZH6AB2MA896486": {
@@ -1345,7 +1345,7 @@
         "all_time_high": 38991,
         "total_drop_pct": -0.51,
         "n_observations": 2,
-        "days_observed": 29
+        "days_observed": 30
       }
     },
     "W1KZH6AB0PB167501": {
@@ -1378,7 +1378,7 @@
         "all_time_high": 63981,
         "total_drop_pct": 0.0,
         "n_observations": 3,
-        "days_observed": 28
+        "days_observed": 29
       }
     },
     "W1KZH6ABXNB038274": {
@@ -1411,7 +1411,7 @@
         "all_time_high": 51022,
         "total_drop_pct": 0.01,
         "n_observations": 3,
-        "days_observed": 25
+        "days_observed": 26
       }
     },
     "W1KZH6AB2PB121247": {
@@ -1601,7 +1601,7 @@
         "all_time_high": 69995,
         "total_drop_pct": 1.45,
         "n_observations": 7,
-        "days_observed": 17
+        "days_observed": 18
       }
     },
     "W1KZH6AB2NB042531": {
@@ -1624,7 +1624,7 @@
         "all_time_high": 54900,
         "total_drop_pct": 0.0,
         "n_observations": 1,
-        "days_observed": 17
+        "days_observed": 18
       }
     },
     "W1KZH6AB7PB174090": {
@@ -1759,7 +1759,7 @@
         "all_time_high": 61995,
         "total_drop_pct": 0.0,
         "n_observations": 2,
-        "days_observed": 10
+        "days_observed": 11
       }
     },
     "W1KZH6AB0NB028692": {
@@ -1802,7 +1802,7 @@
         "all_time_high": 48988,
         "total_drop_pct": 0.0,
         "n_observations": 5,
-        "days_observed": 10
+        "days_observed": 11
       }
     },
     "W1KLH6FB0SA134091": {
@@ -1835,7 +1835,7 @@
       "first_seen_at": "2026-06-04T15:55:18.581517+00:00",
       "current_price": 74413,
       "current_mileage": 6237,
-      "status": "gone",
+      "status": "reappeared",
       "observations": [
         {
           "observed_at": "2026-06-04T15:55:18.581517+00:00",
