@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-14T05:13:54.589477+00:00",
+  "generated_at": "2026-06-14T08:52:38.606874+00:00",
   "schema_version": 1,
   "vins": {
     "W1KZH6AB2NB028936": {
@@ -544,34 +544,6 @@
         "days_observed": 48
       }
     },
-    "W1KLH6FB5RA054103": {
-      "year": 2024,
-      "trim": "E450S4",
-      "dealer": "Mercedes-Benz of Atlantic City",
-      "first_seen_at": "2026-04-26T15:50:37.492543+00:00",
-      "current_price": 68989,
-      "current_mileage": 13646,
-      "status": "gone",
-      "observations": [
-        {
-          "observed_at": "2026-04-26T15:50:37.492543+00:00",
-          "price": 68989,
-          "mileage": 13646
-        },
-        {
-          "observed_at": "2026-04-26T23:31:01.171865+00:00",
-          "price": 68989,
-          "mileage": 13646
-        }
-      ],
-      "stats": {
-        "all_time_low": 68989,
-        "all_time_high": 68989,
-        "total_drop_pct": 0.0,
-        "n_observations": 2,
-        "days_observed": 48
-      }
-    },
     "W1KZH6AB4PB111528": {
       "year": 2023,
       "trim": "E450S4",
@@ -812,29 +784,6 @@
         "days_observed": 45
       }
     },
-    "W1KLH6FB2SA151507": {
-      "year": 2025,
-      "trim": "E450S4",
-      "dealer": "Sun Motor Cars, Inc.",
-      "first_seen_at": "2026-04-30T10:22:08.570380+00:00",
-      "current_price": 75489,
-      "current_mileage": 12945,
-      "status": "gone",
-      "observations": [
-        {
-          "observed_at": "2026-04-30T10:22:08.570380+00:00",
-          "price": 75489,
-          "mileage": 12945
-        }
-      ],
-      "stats": {
-        "all_time_low": 75489,
-        "all_time_high": 75489,
-        "total_drop_pct": 0.0,
-        "n_observations": 1,
-        "days_observed": 44
-      }
-    },
     "W1KLH6FB3SA096615": {
       "year": 2025,
       "trim": "E450S4",
@@ -875,7 +824,7 @@
         "all_time_high": 75484,
         "total_drop_pct": -0.15,
         "n_observations": 5,
-        "days_observed": 42
+        "days_observed": 43
       }
     },
     "W1KLH6FB6RA026150": {
@@ -997,7 +946,7 @@
         "all_time_high": 63882,
         "total_drop_pct": -1.82,
         "n_observations": 2,
-        "days_observed": 37
+        "days_observed": 38
       }
     },
     "W1KZH6AB3PB156900": {
@@ -1234,7 +1183,7 @@
       "trim": "E450S4",
       "dealer": "Mercedes-Benz of Charleston",
       "first_seen_at": "2026-05-13T09:22:44.161676+00:00",
-      "current_price": 80595,
+      "current_price": 79999,
       "current_mileage": 4475,
       "status": "active",
       "observations": [
@@ -1262,13 +1211,18 @@
           "observed_at": "2026-05-20T14:01:38.837211+00:00",
           "price": 80595,
           "mileage": 4475
+        },
+        {
+          "observed_at": "2026-06-14T08:52:36.356465+00:00",
+          "price": 79999,
+          "mileage": 4475
         }
       ],
       "stats": {
-        "all_time_low": 80595,
+        "all_time_low": 79999,
         "all_time_high": 80794,
-        "total_drop_pct": -0.25,
-        "n_observations": 5,
+        "total_drop_pct": -0.98,
+        "n_observations": 6,
         "days_observed": 31
       }
     },
@@ -1480,7 +1434,7 @@
         "all_time_high": 57988,
         "total_drop_pct": 0.0,
         "n_observations": 1,
-        "days_observed": 23
+        "days_observed": 24
       }
     },
     "W1KZH6AB0PB157745": {
@@ -1503,7 +1457,7 @@
         "all_time_high": 59872,
         "total_drop_pct": 0.0,
         "n_observations": 1,
-        "days_observed": 22
+        "days_observed": 23
       }
     },
     "W1KZH6AB5PB165016": {
@@ -1703,7 +1657,7 @@
         "all_time_high": 62980,
         "total_drop_pct": 0.0,
         "n_observations": 3,
-        "days_observed": 16
+        "days_observed": 17
       }
     },
     "W1KLH6FB5SA085731": {
@@ -2163,20 +2117,25 @@
       "dealer": "R B M of Atlanta, Inc.",
       "first_seen_at": "2026-06-13T12:19:58.158781+00:00",
       "current_price": 50987,
-      "current_mileage": 71980,
+      "current_mileage": 71892,
       "status": "active",
       "observations": [
         {
           "observed_at": "2026-06-13T12:19:58.158781+00:00",
           "price": 50987,
           "mileage": 71980
+        },
+        {
+          "observed_at": "2026-06-14T08:52:36.356465+00:00",
+          "price": 50987,
+          "mileage": 71892
         }
       ],
       "stats": {
         "all_time_low": 50987,
         "all_time_high": 50987,
         "total_drop_pct": 0.0,
-        "n_observations": 1,
+        "n_observations": 2,
         "days_observed": 0
       }
     },
