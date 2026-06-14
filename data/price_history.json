@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-14T11:24:18.900105+00:00",
+  "generated_at": "2026-06-14T13:11:11.213744+00:00",
   "schema_version": 1,
   "vins": {
     "W1KZH6AB2NB028936": {
@@ -781,7 +781,7 @@
         "all_time_high": 71860,
         "total_drop_pct": 0.0,
         "n_observations": 1,
-        "days_observed": 45
+        "days_observed": 46
       }
     },
     "W1KLH6FB3SA096615": {
@@ -1548,7 +1548,7 @@
         "all_time_high": 71492,
         "total_drop_pct": -3.5,
         "n_observations": 6,
-        "days_observed": 17
+        "days_observed": 18
       }
     },
     "W1KLH6FBXSA142568": {
@@ -1885,7 +1885,7 @@
       "dealer": "Mercedes-Benz of Sudbury",
       "first_seen_at": "2026-06-07T15:49:27.828337+00:00",
       "current_price": 56998,
-      "current_mileage": 22978,
+      "current_mileage": 22979,
       "status": "active",
       "observations": [
         {
@@ -1897,13 +1897,18 @@
           "observed_at": "2026-06-12T16:43:27.954875+00:00",
           "price": 56998,
           "mileage": 22978
+        },
+        {
+          "observed_at": "2026-06-14T13:11:10.933826+00:00",
+          "price": 56998,
+          "mileage": 22979
         }
       ],
       "stats": {
         "all_time_low": 56998,
         "all_time_high": 57498,
         "total_drop_pct": -0.87,
-        "n_observations": 2,
+        "n_observations": 3,
         "days_observed": 6
       }
     },
@@ -2136,7 +2141,7 @@
         "all_time_high": 50987,
         "total_drop_pct": 0.0,
         "n_observations": 2,
-        "days_observed": 0
+        "days_observed": 1
       }
     },
     "W1KLH6FB8TA215339": {
@@ -2159,7 +2164,7 @@
         "all_time_high": 76491,
         "total_drop_pct": 0.0,
         "n_observations": 1,
-        "days_observed": 0
+        "days_observed": 1
       }
     }
   }
