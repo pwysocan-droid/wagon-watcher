@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-16T16:49:57.008364+00:00",
+  "generated_at": "2026-06-17T15:27:20.106671+00:00",
   "weekly": [
     {
       "label": "2026-W24",
@@ -39,6 +39,12 @@
     }
   ],
   "daily": [
+    {
+      "label": "2026-06-17",
+      "href": "https://wagon-watcher.vercel.app/digest/daily/2026-06-17.md",
+      "api_url": "https://wagon-watcher.vercel.app/api/digest?date=2026-06-17",
+      "size_bytes": 1348
+    },
     {
       "label": "2026-06-16",
       "href": "https://wagon-watcher.vercel.app/digest/daily/2026-06-16.md",
