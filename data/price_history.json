@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-16T23:25:32.717185+00:00",
+  "generated_at": "2026-06-17T01:58:52.680734+00:00",
   "schema_version": 1,
   "vins": {
     "W1KLH6FB9SA136356": {
@@ -55,9 +55,9 @@
       "trim": "E450S4",
       "dealer": "Mercedes-Benz of Sycamore",
       "first_seen_at": "2026-04-26T15:50:37.492543+00:00",
-      "current_price": 66091,
+      "current_price": 65491,
       "current_mileage": 7937,
-      "status": "reappeared",
+      "status": "active",
       "observations": [
         {
           "observed_at": "2026-04-26T15:50:37.492543+00:00",
@@ -103,13 +103,18 @@
           "observed_at": "2026-06-03T19:04:32.554857+00:00",
           "price": 66091,
           "mileage": 7937
+        },
+        {
+          "observed_at": "2026-06-17T01:58:51.392107+00:00",
+          "price": 65491,
+          "mileage": 7937
         }
       ],
       "stats": {
-        "all_time_low": 66091,
+        "all_time_low": 65491,
         "all_time_high": 68691,
-        "total_drop_pct": -3.79,
-        "n_observations": 9,
+        "total_drop_pct": -4.66,
+        "n_observations": 10,
         "days_observed": 51
       }
     },
@@ -694,7 +699,7 @@
       "first_seen_at": "2026-04-29T11:57:15.784091+00:00",
       "current_price": 71860,
       "current_mileage": 8958,
-      "status": "reappeared",
+      "status": "active",
       "observations": [
         {
           "observed_at": "2026-04-29T11:57:15.784091+00:00",
@@ -877,7 +882,7 @@
         "all_time_high": 45981,
         "total_drop_pct": 0.0,
         "n_observations": 1,
-        "days_observed": 35
+        "days_observed": 36
       }
     },
     "W1KZH6AB4PB180428": {
@@ -887,7 +892,7 @@
       "first_seen_at": "2026-05-12T19:47:34.248540+00:00",
       "current_price": 61525,
       "current_mileage": 38684,
-      "status": "reappeared",
+      "status": "active",
       "observations": [
         {
           "observed_at": "2026-05-12T19:47:34.248540+00:00",
@@ -1555,7 +1560,7 @@
         "all_time_high": 66985,
         "total_drop_pct": 0.0,
         "n_observations": 1,
-        "days_observed": 18
+        "days_observed": 19
       }
     },
     "W1KLH6FB2SA127188": {
@@ -1891,7 +1896,7 @@
         "all_time_high": 58367,
         "total_drop_pct": -0.65,
         "n_observations": 2,
-        "days_observed": 6
+        "days_observed": 7
       }
     },
     "W1KZH6AB8PB158593": {
@@ -1914,7 +1919,7 @@
         "all_time_high": 60794,
         "total_drop_pct": 0.0,
         "n_observations": 1,
-        "days_observed": 5
+        "days_observed": 6
       }
     },
     "W1KLH6FB7SA154743": {
@@ -1942,7 +1947,7 @@
         "all_time_high": 73681,
         "total_drop_pct": 0.0,
         "n_observations": 2,
-        "days_observed": 5
+        "days_observed": 6
       }
     },
     "W1KZH6AB6PB162870": {
@@ -1997,7 +2002,7 @@
       "dealer": "R B M of Atlanta, Inc.",
       "first_seen_at": "2026-06-13T12:19:58.158781+00:00",
       "current_price": 50987,
-      "current_mileage": 71892,
+      "current_mileage": 71947,
       "status": "active",
       "observations": [
         {
@@ -2009,13 +2014,18 @@
           "observed_at": "2026-06-14T08:52:36.356465+00:00",
           "price": 50987,
           "mileage": 71892
+        },
+        {
+          "observed_at": "2026-06-17T01:58:51.392107+00:00",
+          "price": 50987,
+          "mileage": 71947
         }
       ],
       "stats": {
         "all_time_low": 50987,
         "all_time_high": 50987,
         "total_drop_pct": 0.0,
-        "n_observations": 2,
+        "n_observations": 3,
         "days_observed": 3
       }
     },
