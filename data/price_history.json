@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-18T00:08:00.628815+00:00",
+  "generated_at": "2026-06-18T05:13:05.027143+00:00",
   "schema_version": 1,
   "vins": {
     "W1KLH6FB9SA136356": {
@@ -426,7 +426,7 @@
       "first_seen_at": "2026-04-26T15:50:37.492543+00:00",
       "current_price": 70489,
       "current_mileage": 7975,
-      "status": "reappeared",
+      "status": "active",
       "observations": [
         {
           "observed_at": "2026-04-26T15:50:37.492543+00:00",
@@ -578,54 +578,6 @@
         "all_time_high": 75795,
         "total_drop_pct": -9.68,
         "n_observations": 5,
-        "days_observed": 52
-      }
-    },
-    "W1KLH6FB5SA139657": {
-      "year": 2025,
-      "trim": "E450S4",
-      "dealer": "New Country Motor Cars, Inc.",
-      "first_seen_at": "2026-04-26T15:50:37.492543+00:00",
-      "current_price": 69997,
-      "current_mileage": 6718,
-      "status": "gone",
-      "observations": [
-        {
-          "observed_at": "2026-04-26T15:50:37.492543+00:00",
-          "price": 71997,
-          "mileage": 6679
-        },
-        {
-          "observed_at": "2026-04-26T23:31:01.171865+00:00",
-          "price": 71997,
-          "mileage": 6679
-        },
-        {
-          "observed_at": "2026-04-29T11:57:15.784091+00:00",
-          "price": 69997,
-          "mileage": 6679
-        },
-        {
-          "observed_at": "2026-04-29T15:52:32.774361+00:00",
-          "price": 71997,
-          "mileage": 6679
-        },
-        {
-          "observed_at": "2026-04-29T20:06:48.847154+00:00",
-          "price": 69997,
-          "mileage": 6679
-        },
-        {
-          "observed_at": "2026-05-15T12:27:33.427500+00:00",
-          "price": 69997,
-          "mileage": 6718
-        }
-      ],
-      "stats": {
-        "all_time_low": 69997,
-        "all_time_high": 71997,
-        "total_drop_pct": -2.78,
-        "n_observations": 6,
         "days_observed": 52
       }
     },
@@ -1390,7 +1342,7 @@
       "first_seen_at": "2026-05-27T11:31:54.751828+00:00",
       "current_price": 68992,
       "current_mileage": 16690,
-      "status": "reappeared",
+      "status": "active",
       "observations": [
         {
           "observed_at": "2026-05-27T11:31:54.751828+00:00",
@@ -1878,7 +1830,7 @@
       "first_seen_at": "2026-06-10T01:34:53.866360+00:00",
       "current_price": 57987,
       "current_mileage": 30805,
-      "status": "reappeared",
+      "status": "active",
       "observations": [
         {
           "observed_at": "2026-06-10T01:34:53.866360+00:00",
@@ -1896,7 +1848,7 @@
         "all_time_high": 58367,
         "total_drop_pct": -0.65,
         "n_observations": 2,
-        "days_observed": 7
+        "days_observed": 8
       }
     },
     "W1KZH6AB8PB158593": {
@@ -1906,7 +1858,7 @@
       "first_seen_at": "2026-06-10T23:53:36.737226+00:00",
       "current_price": 60794,
       "current_mileage": 26972,
-      "status": "reappeared",
+      "status": "active",
       "observations": [
         {
           "observed_at": "2026-06-10T23:53:36.737226+00:00",
@@ -2036,7 +1988,7 @@
       "first_seen_at": "2026-06-13T12:19:58.158781+00:00",
       "current_price": 76491,
       "current_mileage": 5787,
-      "status": "active",
+      "status": "gone",
       "observations": [
         {
           "observed_at": "2026-06-13T12:19:58.158781+00:00",
