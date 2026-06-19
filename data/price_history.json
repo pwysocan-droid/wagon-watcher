@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-19T19:14:15.451431+00:00",
+  "generated_at": "2026-06-19T20:50:42.872641+00:00",
   "schema_version": 1,
   "vins": {
     "W1KLH6FB9SA136356": {
@@ -735,7 +735,7 @@
         "all_time_high": 73984,
         "total_drop_pct": -2.06,
         "n_observations": 4,
-        "days_observed": 43
+        "days_observed": 44
       }
     },
     "W1KZH6AB3PB156900": {
@@ -814,7 +814,7 @@
         "all_time_high": 61525,
         "total_drop_pct": 0.0,
         "n_observations": 1,
-        "days_observed": 37
+        "days_observed": 38
       }
     },
     "W1KLH6FBXSA087524": {
@@ -837,7 +837,7 @@
         "all_time_high": 73984,
         "total_drop_pct": 0.0,
         "n_observations": 1,
-        "days_observed": 37
+        "days_observed": 38
       }
     },
     "W1KZH6ABXNB039490": {
@@ -865,7 +865,7 @@
         "all_time_high": 50882,
         "total_drop_pct": 1.81,
         "n_observations": 2,
-        "days_observed": 37
+        "days_observed": 38
       }
     },
     "W1KLH6FB2SA109290": {
@@ -898,7 +898,7 @@
         "all_time_high": 67999,
         "total_drop_pct": -2.95,
         "n_observations": 3,
-        "days_observed": 37
+        "days_observed": 38
       }
     },
     "W1KLH6FB6SA138629": {
@@ -1825,7 +1825,7 @@
       "first_seen_at": "2026-06-10T23:53:36.737226+00:00",
       "current_price": 60794,
       "current_mileage": 26972,
-      "status": "reappeared",
+      "status": "gone",
       "observations": [
         {
           "observed_at": "2026-06-10T23:53:36.737226+00:00",
@@ -1955,7 +1955,7 @@
       "first_seen_at": "2026-06-13T12:19:58.158781+00:00",
       "current_price": 76491,
       "current_mileage": 5787,
-      "status": "active",
+      "status": "gone",
       "observations": [
         {
           "observed_at": "2026-06-13T12:19:58.158781+00:00",
