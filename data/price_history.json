@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-19T11:59:02.858009+00:00",
+  "generated_at": "2026-06-19T15:21:13.802683+00:00",
   "schema_version": 1,
   "vins": {
     "W1KLH6FB9SA136356": {
@@ -768,7 +768,7 @@
         "all_time_high": 65520,
         "total_drop_pct": 0.0,
         "n_observations": 3,
-        "days_observed": 42
+        "days_observed": 43
       }
     },
     "W1KZH6AB2MA896486": {
@@ -1134,7 +1134,7 @@
         "all_time_high": 38991,
         "total_drop_pct": -0.51,
         "n_observations": 2,
-        "days_observed": 34
+        "days_observed": 35
       }
     },
     "W1KZH6AB0PB167501": {
@@ -1167,7 +1167,7 @@
         "all_time_high": 63981,
         "total_drop_pct": 0.0,
         "n_observations": 3,
-        "days_observed": 33
+        "days_observed": 34
       }
     },
     "W1KZH6ABXNB038274": {
@@ -1200,7 +1200,7 @@
         "all_time_high": 51022,
         "total_drop_pct": 0.01,
         "n_observations": 3,
-        "days_observed": 30
+        "days_observed": 31
       }
     },
     "W1KZH6AB2PB121247": {
@@ -1297,7 +1297,7 @@
       "trim": "E450S4",
       "dealer": "Mercedes-Benz of Coconut Creek",
       "first_seen_at": "2026-05-27T11:31:54.751828+00:00",
-      "current_price": 68992,
+      "current_price": 68493,
       "current_mileage": 16690,
       "status": "active",
       "observations": [
@@ -1330,13 +1330,18 @@
           "observed_at": "2026-06-12T18:58:14.145893+00:00",
           "price": 68992,
           "mileage": 16690
+        },
+        {
+          "observed_at": "2026-06-19T15:21:12.354675+00:00",
+          "price": 68493,
+          "mileage": 16690
         }
       ],
       "stats": {
-        "all_time_low": 68992,
+        "all_time_low": 68493,
         "all_time_high": 71492,
-        "total_drop_pct": -3.5,
-        "n_observations": 6,
+        "total_drop_pct": -4.19,
+        "n_observations": 7,
         "days_observed": 23
       }
     },
@@ -1390,7 +1395,7 @@
         "all_time_high": 69995,
         "total_drop_pct": 1.45,
         "n_observations": 7,
-        "days_observed": 22
+        "days_observed": 23
       }
     },
     "W1KZH6AB2NB042531": {
@@ -1413,7 +1418,7 @@
         "all_time_high": 54900,
         "total_drop_pct": 0.0,
         "n_observations": 1,
-        "days_observed": 22
+        "days_observed": 23
       }
     },
     "W1KZH6AB7PB174090": {
@@ -1548,7 +1553,7 @@
         "all_time_high": 61995,
         "total_drop_pct": 0.0,
         "n_observations": 2,
-        "days_observed": 15
+        "days_observed": 16
       }
     },
     "W1KZH6AB0NB028692": {
@@ -1591,7 +1596,7 @@
         "all_time_high": 48988,
         "total_drop_pct": 0.0,
         "n_observations": 5,
-        "days_observed": 15
+        "days_observed": 16
       }
     },
     "W1KLH6FB0SA134091": {
@@ -1673,7 +1678,7 @@
       "trim": "E450S4",
       "dealer": "Mercedes-Benz of Sudbury",
       "first_seen_at": "2026-06-07T15:49:27.828337+00:00",
-      "current_price": 56998,
+      "current_price": 56498,
       "current_mileage": 22979,
       "status": "active",
       "observations": [
@@ -1691,13 +1696,18 @@
           "observed_at": "2026-06-14T13:11:10.933826+00:00",
           "price": 56998,
           "mileage": 22979
+        },
+        {
+          "observed_at": "2026-06-19T15:21:12.354675+00:00",
+          "price": 56498,
+          "mileage": 22979
         }
       ],
       "stats": {
-        "all_time_low": 56998,
+        "all_time_low": 56498,
         "all_time_high": 57498,
-        "total_drop_pct": -0.87,
-        "n_observations": 3,
+        "total_drop_pct": -1.74,
+        "n_observations": 4,
         "days_observed": 11
       }
     },
@@ -1935,7 +1945,7 @@
         "all_time_high": 50987,
         "total_drop_pct": 0.0,
         "n_observations": 3,
-        "days_observed": 5
+        "days_observed": 6
       }
     },
     "W1KLH6FB8TA215339": {
@@ -1958,7 +1968,7 @@
         "all_time_high": 76491,
         "total_drop_pct": 0.0,
         "n_observations": 1,
-        "days_observed": 5
+        "days_observed": 6
       }
     },
     "W1KLH6FB1SA114903": {
@@ -1981,7 +1991,7 @@
         "all_time_high": 73998,
         "total_drop_pct": 0.0,
         "n_observations": 1,
-        "days_observed": 1
+        "days_observed": 2
       }
     },
     "W1KZH6AB9PB156528": {
