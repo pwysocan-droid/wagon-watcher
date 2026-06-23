@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-23T18:17:58.472540+00:00",
+  "generated_at": "2026-06-23T20:29:41.041301+00:00",
   "schema_version": 1,
   "vins": {
     "W1KLH6FB5SA102804": {
@@ -322,7 +322,7 @@
       "first_seen_at": "2026-04-26T15:50:37.492543+00:00",
       "current_price": 80345,
       "current_mileage": 6174,
-      "status": "gone",
+      "status": "reappeared",
       "observations": [
         {
           "observed_at": "2026-04-26T15:50:37.492543+00:00",
@@ -603,7 +603,7 @@
         "all_time_high": 73984,
         "total_drop_pct": -2.06,
         "n_observations": 4,
-        "days_observed": 47
+        "days_observed": 48
       }
     },
     "W1KZH6AB3PB156900": {
@@ -669,7 +669,7 @@
       "first_seen_at": "2026-05-12T19:47:34.248540+00:00",
       "current_price": 61525,
       "current_mileage": 38684,
-      "status": "gone",
+      "status": "reappeared",
       "observations": [
         {
           "observed_at": "2026-05-12T19:47:34.248540+00:00",
@@ -682,7 +682,7 @@
         "all_time_high": 61525,
         "total_drop_pct": 0.0,
         "n_observations": 1,
-        "days_observed": 41
+        "days_observed": 42
       }
     },
     "W1KLH6FBXSA087524": {
@@ -705,7 +705,7 @@
         "all_time_high": 73984,
         "total_drop_pct": 0.0,
         "n_observations": 1,
-        "days_observed": 41
+        "days_observed": 42
       }
     },
     "W1KZH6ABXNB039490": {
@@ -733,7 +733,7 @@
         "all_time_high": 50882,
         "total_drop_pct": 1.81,
         "n_observations": 2,
-        "days_observed": 41
+        "days_observed": 42
       }
     },
     "W1KLH6FB2SA109290": {
@@ -766,7 +766,7 @@
         "all_time_high": 67999,
         "total_drop_pct": -2.95,
         "n_observations": 3,
-        "days_observed": 41
+        "days_observed": 42
       }
     },
     "W1KLH6FB6SA138629": {
@@ -1964,6 +1964,29 @@
       "stats": {
         "all_time_low": 65998,
         "all_time_high": 65998,
+        "total_drop_pct": 0.0,
+        "n_observations": 1,
+        "days_observed": 0
+      }
+    },
+    "W1KZH6AB8NB035065": {
+      "year": 2022,
+      "trim": "E450S4",
+      "dealer": "Mercedes-Benz of Creve Coeur",
+      "first_seen_at": "2026-06-23T20:29:33.852774+00:00",
+      "current_price": 55035,
+      "current_mileage": 12425,
+      "status": "active",
+      "observations": [
+        {
+          "observed_at": "2026-06-23T20:29:33.852774+00:00",
+          "price": 55035,
+          "mileage": 12425
+        }
+      ],
+      "stats": {
+        "all_time_low": 55035,
+        "all_time_high": 55035,
         "total_drop_pct": 0.0,
         "n_observations": 1,
         "days_observed": 0
