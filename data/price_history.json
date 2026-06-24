@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-24T18:27:59.869631+00:00",
+  "generated_at": "2026-06-24T20:17:05.542374+00:00",
   "schema_version": 1,
   "vins": {
     "W1KLH6FB5SA102804": {
@@ -143,7 +143,7 @@
       "first_seen_at": "2026-04-26T15:50:37.492543+00:00",
       "current_price": 76937,
       "current_mileage": 3461,
-      "status": "reappeared",
+      "status": "active",
       "observations": [
         {
           "observed_at": "2026-04-26T15:50:37.492543+00:00",
@@ -603,7 +603,7 @@
         "all_time_high": 73984,
         "total_drop_pct": -2.06,
         "n_observations": 4,
-        "days_observed": 48
+        "days_observed": 49
       }
     },
     "W1KZH6AB3PB156900": {
@@ -682,7 +682,7 @@
         "all_time_high": 61525,
         "total_drop_pct": 0.0,
         "n_observations": 1,
-        "days_observed": 42
+        "days_observed": 43
       }
     },
     "W1KLH6FBXSA087524": {
@@ -705,7 +705,7 @@
         "all_time_high": 73984,
         "total_drop_pct": 0.0,
         "n_observations": 1,
-        "days_observed": 42
+        "days_observed": 43
       }
     },
     "W1KZH6ABXNB039490": {
@@ -733,7 +733,7 @@
         "all_time_high": 50882,
         "total_drop_pct": 1.81,
         "n_observations": 2,
-        "days_observed": 42
+        "days_observed": 43
       }
     },
     "W1KLH6FB2SA109290": {
@@ -766,7 +766,7 @@
         "all_time_high": 67999,
         "total_drop_pct": -2.95,
         "n_observations": 3,
-        "days_observed": 42
+        "days_observed": 43
       }
     },
     "W1KLH6FB6SA138629": {
@@ -1910,21 +1910,26 @@
       "trim": "E450S4",
       "dealer": "Mercedes-Benz of Pompano",
       "first_seen_at": "2026-06-23T13:36:35.832747+00:00",
-      "current_price": 78491,
-      "current_mileage": 7748,
+      "current_price": 77800,
+      "current_mileage": 7750,
       "status": "active",
       "observations": [
         {
           "observed_at": "2026-06-23T13:36:35.832747+00:00",
           "price": 78491,
           "mileage": 7748
+        },
+        {
+          "observed_at": "2026-06-24T20:17:02.783182+00:00",
+          "price": 77800,
+          "mileage": 7750
         }
       ],
       "stats": {
-        "all_time_low": 78491,
+        "all_time_low": 77800,
         "all_time_high": 78491,
-        "total_drop_pct": 0.0,
-        "n_observations": 1,
+        "total_drop_pct": -0.88,
+        "n_observations": 2,
         "days_observed": 1
       }
     },
@@ -1935,7 +1940,7 @@
       "first_seen_at": "2026-06-23T13:36:35.832747+00:00",
       "current_price": 76390,
       "current_mileage": 2526,
-      "status": "reappeared",
+      "status": "active",
       "observations": [
         {
           "observed_at": "2026-06-23T13:36:35.832747+00:00",
