@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-25T11:11:27.751760+00:00",
+  "generated_at": "2026-06-25T13:32:25.064170+00:00",
   "schema_version": 1,
   "vins": {
     "W1KLH6FB5SA102804": {
@@ -406,7 +406,7 @@
         "all_time_high": 71860,
         "total_drop_pct": 0.0,
         "n_observations": 1,
-        "days_observed": 56
+        "days_observed": 57
       }
     },
     "W1KLH6FB6RA026150": {
@@ -1038,7 +1038,7 @@
         "all_time_high": 71492,
         "total_drop_pct": -4.89,
         "n_observations": 8,
-        "days_observed": 28
+        "days_observed": 29
       }
     },
     "W1KLH6FBXSA142568": {
@@ -1419,7 +1419,7 @@
       "first_seen_at": "2026-06-09T09:24:40.409645+00:00",
       "current_price": 50966,
       "current_mileage": 43271,
-      "status": "gone",
+      "status": "reappeared",
       "observations": [
         {
           "observed_at": "2026-06-09T09:24:40.409645+00:00",
@@ -1656,7 +1656,7 @@
         "all_time_high": 50987,
         "total_drop_pct": 0.0,
         "n_observations": 4,
-        "days_observed": 11
+        "days_observed": 12
       }
     },
     "W1KLH6FB8TA215339": {
@@ -1664,22 +1664,27 @@
       "trim": "E450S4",
       "dealer": "Critz, Inc.",
       "first_seen_at": "2026-06-13T12:19:58.158781+00:00",
-      "current_price": 76491,
+      "current_price": 76484,
       "current_mileage": 5787,
-      "status": "gone",
+      "status": "reappeared",
       "observations": [
         {
           "observed_at": "2026-06-13T12:19:58.158781+00:00",
           "price": 76491,
           "mileage": 5787
+        },
+        {
+          "observed_at": "2026-06-25T13:32:17.968825+00:00",
+          "price": 76484,
+          "mileage": 5787
         }
       ],
       "stats": {
-        "all_time_low": 76491,
+        "all_time_low": 76484,
         "all_time_high": 76491,
-        "total_drop_pct": 0.0,
-        "n_observations": 1,
-        "days_observed": 11
+        "total_drop_pct": -0.01,
+        "n_observations": 2,
+        "days_observed": 12
       }
     },
     "W1KLH6FB1SA114903": {
@@ -1702,7 +1707,7 @@
         "all_time_high": 73998,
         "total_drop_pct": 0.0,
         "n_observations": 1,
-        "days_observed": 7
+        "days_observed": 8
       }
     },
     "W1KZH6AB9PB156528": {
@@ -1796,7 +1801,7 @@
       "first_seen_at": "2026-06-23T13:36:35.832747+00:00",
       "current_price": 65998,
       "current_mileage": 18695,
-      "status": "reappeared",
+      "status": "active",
       "observations": [
         {
           "observed_at": "2026-06-23T13:36:35.832747+00:00",
@@ -1818,20 +1823,25 @@
       "dealer": "Mercedes-Benz of Creve Coeur",
       "first_seen_at": "2026-06-23T20:29:33.852774+00:00",
       "current_price": 55035,
-      "current_mileage": 12425,
+      "current_mileage": 14431,
       "status": "active",
       "observations": [
         {
           "observed_at": "2026-06-23T20:29:33.852774+00:00",
           "price": 55035,
           "mileage": 12425
+        },
+        {
+          "observed_at": "2026-06-25T13:32:17.968825+00:00",
+          "price": 55035,
+          "mileage": 14431
         }
       ],
       "stats": {
         "all_time_low": 55035,
         "all_time_high": 55035,
         "total_drop_pct": 0.0,
-        "n_observations": 1,
+        "n_observations": 2,
         "days_observed": 1
       }
     }
