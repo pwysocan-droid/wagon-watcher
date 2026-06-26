@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-26T10:14:47.391209+00:00",
+  "generated_at": "2026-06-26T12:29:16.139411+00:00",
   "schema_version": 1,
   "vins": {
     "W1KLH6FB5SA102804": {
@@ -393,7 +393,7 @@
       "first_seen_at": "2026-04-29T11:57:15.784091+00:00",
       "current_price": 70937,
       "current_mileage": 8958,
-      "status": "active",
+      "status": "gone",
       "observations": [
         {
           "observed_at": "2026-04-29T11:57:15.784091+00:00",
@@ -411,7 +411,7 @@
         "all_time_high": 71860,
         "total_drop_pct": -1.28,
         "n_observations": 2,
-        "days_observed": 57
+        "days_observed": 58
       }
     },
     "W1KLH6FB6RA026150": {
@@ -444,7 +444,7 @@
         "all_time_high": 72998,
         "total_drop_pct": -0.69,
         "n_observations": 3,
-        "days_observed": 52
+        "days_observed": 53
       }
     },
     "W1KLH6FB0SA088150": {
@@ -548,7 +548,7 @@
       "first_seen_at": "2026-05-12T19:47:34.248540+00:00",
       "current_price": 61525,
       "current_mileage": 38684,
-      "status": "gone",
+      "status": "reappeared",
       "observations": [
         {
           "observed_at": "2026-05-12T19:47:34.248540+00:00",
@@ -962,7 +962,7 @@
         "all_time_high": 62445,
         "total_drop_pct": -0.8,
         "n_observations": 5,
-        "days_observed": 34
+        "days_observed": 35
       }
     },
     "W1KLH6FB9SA095436": {
@@ -1020,7 +1020,7 @@
         "all_time_high": 71492,
         "total_drop_pct": -4.89,
         "n_observations": 8,
-        "days_observed": 29
+        "days_observed": 30
       }
     },
     "W1KLH6FBXSA142568": {
@@ -1175,7 +1175,7 @@
         "all_time_high": 69998,
         "total_drop_pct": 0.0,
         "n_observations": 1,
-        "days_observed": 27
+        "days_observed": 28
       }
     },
     "W1KZH6AB6PB179085": {
@@ -1353,7 +1353,7 @@
         "all_time_high": 75481,
         "total_drop_pct": 0.0,
         "n_observations": 1,
-        "days_observed": 20
+        "days_observed": 21
       }
     },
     "W1KZH6AB4PB144738": {
@@ -1582,7 +1582,7 @@
         "all_time_high": 64998,
         "total_drop_pct": 0.0,
         "n_observations": 1,
-        "days_observed": 13
+        "days_observed": 14
       }
     },
     "W1KZH6AB6PB159273": {
@@ -1605,7 +1605,7 @@
         "all_time_high": 67300,
         "total_drop_pct": 0.0,
         "n_observations": 1,
-        "days_observed": 12
+        "days_observed": 13
       }
     },
     "W1KZH6AB0PB118184": {
@@ -1643,7 +1643,7 @@
         "all_time_high": 50987,
         "total_drop_pct": 0.0,
         "n_observations": 4,
-        "days_observed": 12
+        "days_observed": 13
       }
     },
     "W1KLH6FB8TA215339": {
@@ -1671,7 +1671,7 @@
         "all_time_high": 76491,
         "total_drop_pct": -0.01,
         "n_observations": 2,
-        "days_observed": 12
+        "days_observed": 13
       }
     },
     "W1KLH6FB1SA114903": {
@@ -1694,7 +1694,7 @@
         "all_time_high": 73998,
         "total_drop_pct": 0.0,
         "n_observations": 1,
-        "days_observed": 8
+        "days_observed": 9
       }
     },
     "W1KZH6AB9PB156528": {
@@ -1896,6 +1896,29 @@
       "stats": {
         "all_time_low": 62406,
         "all_time_high": 62406,
+        "total_drop_pct": 0.0,
+        "n_observations": 1,
+        "days_observed": 0
+      }
+    },
+    "W1KZH6AB8PB172252": {
+      "year": 2023,
+      "trim": "E450S4",
+      "dealer": "Mercedes-Benz of Traverse City",
+      "first_seen_at": "2026-06-26T12:29:02.023303+00:00",
+      "current_price": 54981,
+      "current_mileage": 36796,
+      "status": "active",
+      "observations": [
+        {
+          "observed_at": "2026-06-26T12:29:02.023303+00:00",
+          "price": 54981,
+          "mileage": 36796
+        }
+      ],
+      "stats": {
+        "all_time_low": 54981,
+        "all_time_high": 54981,
         "total_drop_pct": 0.0,
         "n_observations": 1,
         "days_observed": 0
