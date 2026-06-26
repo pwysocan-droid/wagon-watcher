@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-26T02:31:01.375783+00:00",
+  "generated_at": "2026-06-26T06:44:48.844054+00:00",
   "schema_version": 1,
   "vins": {
     "W1KLH6FB5SA102804": {
@@ -143,7 +143,7 @@
       "first_seen_at": "2026-04-26T15:50:37.492543+00:00",
       "current_price": 76937,
       "current_mileage": 3461,
-      "status": "active",
+      "status": "gone",
       "observations": [
         {
           "observed_at": "2026-04-26T15:50:37.492543+00:00",
@@ -688,7 +688,7 @@
       "first_seen_at": "2026-05-13T09:22:44.161676+00:00",
       "current_price": 79999,
       "current_mileage": 4475,
-      "status": "active",
+      "status": "gone",
       "observations": [
         {
           "observed_at": "2026-05-13T09:22:44.161676+00:00",
@@ -937,7 +937,7 @@
         "all_time_high": 59872,
         "total_drop_pct": 0.0,
         "n_observations": 1,
-        "days_observed": 34
+        "days_observed": 35
       }
     },
     "W1KZH6AB5PB165016": {
@@ -1147,7 +1147,7 @@
         "all_time_high": 62980,
         "total_drop_pct": 0.0,
         "n_observations": 3,
-        "days_observed": 28
+        "days_observed": 29
       }
     },
     "W1KLH6FB5SA085731": {
@@ -1829,7 +1829,7 @@
       "first_seen_at": "2026-06-23T20:29:33.852774+00:00",
       "current_price": 55035,
       "current_mileage": 14431,
-      "status": "reappeared",
+      "status": "active",
       "observations": [
         {
           "observed_at": "2026-06-23T20:29:33.852774+00:00",
@@ -1857,7 +1857,7 @@
       "first_seen_at": "2026-06-25T22:15:40.447396+00:00",
       "current_price": 68499,
       "current_mileage": 19465,
-      "status": "reappeared",
+      "status": "active",
       "observations": [
         {
           "observed_at": "2026-06-25T22:15:40.447396+00:00",
@@ -1880,7 +1880,7 @@
       "first_seen_at": "2026-06-25T22:15:40.447396+00:00",
       "current_price": 52645,
       "current_mileage": 19566,
-      "status": "reappeared",
+      "status": "active",
       "observations": [
         {
           "observed_at": "2026-06-25T22:15:40.447396+00:00",
@@ -1891,6 +1891,29 @@
       "stats": {
         "all_time_low": 52645,
         "all_time_high": 52645,
+        "total_drop_pct": 0.0,
+        "n_observations": 1,
+        "days_observed": 0
+      }
+    },
+    "W1KZH6AB1PB178619": {
+      "year": 2023,
+      "trim": "E450S4",
+      "dealer": "John Sisson Motors, Inc.",
+      "first_seen_at": "2026-06-26T06:44:05.766174+00:00",
+      "current_price": 62406,
+      "current_mileage": 37188,
+      "status": "active",
+      "observations": [
+        {
+          "observed_at": "2026-06-26T06:44:05.766174+00:00",
+          "price": 62406,
+          "mileage": 37188
+        }
+      ],
+      "stats": {
+        "all_time_low": 62406,
+        "all_time_high": 62406,
         "total_drop_pct": 0.0,
         "n_observations": 1,
         "days_observed": 0
