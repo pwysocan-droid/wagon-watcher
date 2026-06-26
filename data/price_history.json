@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-26T12:29:16.139411+00:00",
+  "generated_at": "2026-06-26T15:10:24.038458+00:00",
   "schema_version": 1,
   "vins": {
     "W1KLH6FB5SA102804": {
@@ -515,7 +515,7 @@
         "all_time_high": 65520,
         "total_drop_pct": 0.0,
         "n_observations": 3,
-        "days_observed": 49
+        "days_observed": 50
       }
     },
     "W1KZH6AB2MA896486": {
@@ -548,7 +548,7 @@
       "first_seen_at": "2026-05-12T19:47:34.248540+00:00",
       "current_price": 61525,
       "current_mileage": 38684,
-      "status": "reappeared",
+      "status": "active",
       "observations": [
         {
           "observed_at": "2026-05-12T19:47:34.248540+00:00",
@@ -830,7 +830,7 @@
         "all_time_high": 38991,
         "total_drop_pct": -0.51,
         "n_observations": 2,
-        "days_observed": 41
+        "days_observed": 42
       }
     },
     "W1KZH6AB0PB167501": {
@@ -863,7 +863,7 @@
         "all_time_high": 63981,
         "total_drop_pct": 0.0,
         "n_observations": 3,
-        "days_observed": 40
+        "days_observed": 41
       }
     },
     "W1KZH6ABXNB038274": {
@@ -896,7 +896,7 @@
         "all_time_high": 51022,
         "total_drop_pct": 0.01,
         "n_observations": 3,
-        "days_observed": 37
+        "days_observed": 38
       }
     },
     "W1KZH6AB0PB157745": {
@@ -1073,7 +1073,7 @@
         "all_time_high": 69995,
         "total_drop_pct": 1.45,
         "n_observations": 7,
-        "days_observed": 29
+        "days_observed": 30
       }
     },
     "W1KZH6AB2NB042531": {
@@ -1096,7 +1096,7 @@
         "all_time_high": 54900,
         "total_drop_pct": 0.0,
         "n_observations": 1,
-        "days_observed": 29
+        "days_observed": 30
       }
     },
     "W1KZH6AB7PB174090": {
@@ -1702,7 +1702,7 @@
       "trim": "E450S4",
       "dealer": "Mercedes-Benz of Lynnfield",
       "first_seen_at": "2026-06-18T09:50:25.148519+00:00",
-      "current_price": 62498,
+      "current_price": 62997,
       "current_mileage": 17737,
       "status": "active",
       "observations": [
@@ -1715,13 +1715,18 @@
           "observed_at": "2026-06-25T11:11:20.114020+00:00",
           "price": 62498,
           "mileage": 17737
+        },
+        {
+          "observed_at": "2026-06-26T15:10:23.434901+00:00",
+          "price": 62997,
+          "mileage": 17737
         }
       ],
       "stats": {
         "all_time_low": 62498,
         "all_time_high": 62998,
-        "total_drop_pct": -0.79,
-        "n_observations": 2,
+        "total_drop_pct": -0.0,
+        "n_observations": 3,
         "days_observed": 8
       }
     },
@@ -1755,7 +1760,7 @@
         "all_time_high": 78491,
         "total_drop_pct": -1.38,
         "n_observations": 3,
-        "days_observed": 2
+        "days_observed": 3
       }
     },
     "W1KLH6FB2SA155265": {
@@ -1778,7 +1783,7 @@
         "all_time_high": 76390,
         "total_drop_pct": 0.0,
         "n_observations": 1,
-        "days_observed": 2
+        "days_observed": 3
       }
     },
     "W1KLH6FB4RA026129": {
@@ -1801,7 +1806,7 @@
         "all_time_high": 65998,
         "total_drop_pct": 0.0,
         "n_observations": 1,
-        "days_observed": 2
+        "days_observed": 3
       }
     },
     "W1KZH6AB8NB035065": {
@@ -1838,20 +1843,25 @@
       "dealer": "Mercedes-Benz of St. Paul",
       "first_seen_at": "2026-06-25T22:15:40.447396+00:00",
       "current_price": 68499,
-      "current_mileage": 19465,
+      "current_mileage": 19473,
       "status": "active",
       "observations": [
         {
           "observed_at": "2026-06-25T22:15:40.447396+00:00",
           "price": 68499,
           "mileage": 19465
+        },
+        {
+          "observed_at": "2026-06-26T15:10:23.434901+00:00",
+          "price": 68499,
+          "mileage": 19473
         }
       ],
       "stats": {
         "all_time_low": 68499,
         "all_time_high": 68499,
         "total_drop_pct": 0.0,
-        "n_observations": 1,
+        "n_observations": 2,
         "days_observed": 0
       }
     },
