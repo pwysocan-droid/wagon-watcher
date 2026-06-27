@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-27T06:22:21.234329+00:00",
+  "generated_at": "2026-06-27T09:09:16.447171+00:00",
   "schema_version": 1,
   "vins": {
     "W1KLH6FB5SA102804": {
@@ -548,7 +548,7 @@
       "first_seen_at": "2026-05-12T19:47:34.248540+00:00",
       "current_price": 61525,
       "current_mileage": 38684,
-      "status": "reappeared",
+      "status": "gone",
       "observations": [
         {
           "observed_at": "2026-05-12T19:47:34.248540+00:00",
@@ -919,7 +919,7 @@
         "all_time_high": 59872,
         "total_drop_pct": 0.0,
         "n_observations": 1,
-        "days_observed": 35
+        "days_observed": 36
       }
     },
     "W1KZH6AB5PB165016": {
@@ -1106,7 +1106,7 @@
         "all_time_high": 62980,
         "total_drop_pct": 0.0,
         "n_observations": 3,
-        "days_observed": 29
+        "days_observed": 30
       }
     },
     "W1KLH6FB5SA085731": {
@@ -1287,7 +1287,7 @@
       "trim": "E450S4",
       "dealer": "R B M of Atlanta, Inc.",
       "first_seen_at": "2026-06-04T15:55:18.581517+00:00",
-      "current_price": 74413,
+      "current_price": 73477,
       "current_mileage": 6237,
       "status": "active",
       "observations": [
@@ -1300,13 +1300,18 @@
           "observed_at": "2026-06-13T16:08:34.949004+00:00",
           "price": 74413,
           "mileage": 6237
+        },
+        {
+          "observed_at": "2026-06-27T09:09:10.286656+00:00",
+          "price": 73477,
+          "mileage": 6237
         }
       ],
       "stats": {
-        "all_time_low": 74413,
+        "all_time_low": 73477,
         "all_time_high": 74984,
-        "total_drop_pct": -0.76,
-        "n_observations": 2,
+        "total_drop_pct": -2.01,
+        "n_observations": 3,
         "days_observed": 22
       }
     },
@@ -1656,21 +1661,26 @@
       "trim": "E450S4",
       "dealer": "Mercedes-Benz of Wichita",
       "first_seen_at": "2026-06-17T12:01:25.514742+00:00",
-      "current_price": 73998,
+      "current_price": 73598,
       "current_mileage": 7394,
-      "status": "reappeared",
+      "status": "active",
       "observations": [
         {
           "observed_at": "2026-06-17T12:01:25.514742+00:00",
           "price": 73998,
           "mileage": 7394
+        },
+        {
+          "observed_at": "2026-06-27T09:09:10.286656+00:00",
+          "price": 73598,
+          "mileage": 7394
         }
       ],
       "stats": {
-        "all_time_low": 73998,
+        "all_time_low": 73598,
         "all_time_high": 73998,
-        "total_drop_pct": 0.0,
-        "n_observations": 1,
+        "total_drop_pct": -0.54,
+        "n_observations": 2,
         "days_observed": 9
       }
     },
@@ -1679,7 +1689,7 @@
       "trim": "E450S4",
       "dealer": "Mercedes-Benz of Lynnfield",
       "first_seen_at": "2026-06-18T09:50:25.148519+00:00",
-      "current_price": 62498,
+      "current_price": 62997,
       "current_mileage": 17737,
       "status": "active",
       "observations": [
@@ -1702,13 +1712,18 @@
           "observed_at": "2026-06-26T22:41:20.917812+00:00",
           "price": 62498,
           "mileage": 17737
+        },
+        {
+          "observed_at": "2026-06-27T09:09:10.286656+00:00",
+          "price": 62997,
+          "mileage": 17737
         }
       ],
       "stats": {
         "all_time_low": 62498,
         "all_time_high": 62998,
-        "total_drop_pct": -0.79,
-        "n_observations": 4,
+        "total_drop_pct": -0.0,
+        "n_observations": 5,
         "days_observed": 8
       }
     },
@@ -1797,7 +1812,7 @@
       "dealer": "Mercedes-Benz of Creve Coeur",
       "first_seen_at": "2026-06-23T20:29:33.852774+00:00",
       "current_price": 55035,
-      "current_mileage": 14431,
+      "current_mileage": 14433,
       "status": "active",
       "observations": [
         {
@@ -1809,13 +1824,18 @@
           "observed_at": "2026-06-25T13:32:17.968825+00:00",
           "price": 55035,
           "mileage": 14431
+        },
+        {
+          "observed_at": "2026-06-27T09:09:10.286656+00:00",
+          "price": 55035,
+          "mileage": 14433
         }
       ],
       "stats": {
         "all_time_low": 55035,
         "all_time_high": 55035,
         "total_drop_pct": 0.0,
-        "n_observations": 2,
+        "n_observations": 3,
         "days_observed": 3
       }
     },
@@ -1825,7 +1845,7 @@
       "dealer": "Mercedes-Benz of St. Paul",
       "first_seen_at": "2026-06-25T22:15:40.447396+00:00",
       "current_price": 68499,
-      "current_mileage": 19465,
+      "current_mileage": 19473,
       "status": "active",
       "observations": [
         {
@@ -1842,13 +1862,18 @@
           "observed_at": "2026-06-26T22:41:20.917812+00:00",
           "price": 68499,
           "mileage": 19465
+        },
+        {
+          "observed_at": "2026-06-27T09:09:10.286656+00:00",
+          "price": 68499,
+          "mileage": 19473
         }
       ],
       "stats": {
         "all_time_low": 68499,
         "all_time_high": 68499,
         "total_drop_pct": 0.0,
-        "n_observations": 3,
+        "n_observations": 4,
         "days_observed": 1
       }
     },
@@ -1881,21 +1906,26 @@
       "dealer": "John Sisson Motors, Inc.",
       "first_seen_at": "2026-06-26T06:44:05.766174+00:00",
       "current_price": 62406,
-      "current_mileage": 37188,
+      "current_mileage": 37194,
       "status": "active",
       "observations": [
         {
           "observed_at": "2026-06-26T06:44:05.766174+00:00",
           "price": 62406,
           "mileage": 37188
+        },
+        {
+          "observed_at": "2026-06-27T09:09:10.286656+00:00",
+          "price": 62406,
+          "mileage": 37194
         }
       ],
       "stats": {
         "all_time_low": 62406,
         "all_time_high": 62406,
         "total_drop_pct": 0.0,
-        "n_observations": 1,
-        "days_observed": 0
+        "n_observations": 2,
+        "days_observed": 1
       }
     },
     "W1KZH6AB8PB172252": {
