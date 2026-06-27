@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-27T12:49:19.440726+00:00",
+  "generated_at": "2026-06-27T14:22:48.807648+00:00",
   "schema_version": 1,
   "vins": {
     "W1KLH6FB5SA102804": {
@@ -393,7 +393,7 @@
       "first_seen_at": "2026-04-29T11:57:15.784091+00:00",
       "current_price": 70937,
       "current_mileage": 8958,
-      "status": "reappeared",
+      "status": "active",
       "observations": [
         {
           "observed_at": "2026-04-29T11:57:15.784091+00:00",
@@ -863,7 +863,7 @@
         "all_time_high": 63981,
         "total_drop_pct": 0.0,
         "n_observations": 3,
-        "days_observed": 41
+        "days_observed": 42
       }
     },
     "W1KZH6ABXNB038274": {
@@ -896,7 +896,7 @@
         "all_time_high": 51022,
         "total_drop_pct": 0.01,
         "n_observations": 3,
-        "days_observed": 38
+        "days_observed": 39
       }
     },
     "W1KZH6AB0PB157745": {
@@ -970,7 +970,7 @@
       "trim": "E450S4",
       "dealer": "Mercedes-Benz of Coconut Creek",
       "first_seen_at": "2026-05-27T11:31:54.751828+00:00",
-      "current_price": 67993,
+      "current_price": 67493,
       "current_mileage": 16690,
       "status": "active",
       "observations": [
@@ -1013,13 +1013,18 @@
           "observed_at": "2026-06-23T16:21:32.202925+00:00",
           "price": 67993,
           "mileage": 16690
+        },
+        {
+          "observed_at": "2026-06-27T14:22:43.621303+00:00",
+          "price": 67493,
+          "mileage": 16690
         }
       ],
       "stats": {
-        "all_time_low": 67993,
+        "all_time_low": 67493,
         "all_time_high": 71492,
-        "total_drop_pct": -4.89,
-        "n_observations": 8,
+        "total_drop_pct": -5.59,
+        "n_observations": 9,
         "days_observed": 31
       }
     },
@@ -1382,7 +1387,7 @@
       "dealer": "Rallye Motors LLC",
       "first_seen_at": "2026-06-09T09:24:40.409645+00:00",
       "current_price": 50966,
-      "current_mileage": 43256,
+      "current_mileage": 43279,
       "status": "active",
       "observations": [
         {
@@ -1399,13 +1404,18 @@
           "observed_at": "2026-06-25T16:16:16.402221+00:00",
           "price": 50966,
           "mileage": 43256
+        },
+        {
+          "observed_at": "2026-06-27T14:22:43.621303+00:00",
+          "price": 50966,
+          "mileage": 43279
         }
       ],
       "stats": {
         "all_time_low": 50966,
         "all_time_high": 50966,
         "total_drop_pct": 0.0,
-        "n_observations": 3,
+        "n_observations": 4,
         "days_observed": 18
       }
     },
@@ -1757,7 +1767,7 @@
         "all_time_high": 78491,
         "total_drop_pct": -1.38,
         "n_observations": 3,
-        "days_observed": 3
+        "days_observed": 4
       }
     },
     "W1KLH6FB2SA155265": {
@@ -1780,7 +1790,7 @@
         "all_time_high": 76390,
         "total_drop_pct": 0.0,
         "n_observations": 1,
-        "days_observed": 3
+        "days_observed": 4
       }
     },
     "W1KLH6FB4RA026129": {
@@ -1803,7 +1813,7 @@
         "all_time_high": 65998,
         "total_drop_pct": 0.0,
         "n_observations": 1,
-        "days_observed": 3
+        "days_observed": 4
       }
     },
     "W1KZH6AB8NB035065": {
