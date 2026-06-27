@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-26T23:55:43.104976+00:00",
+  "generated_at": "2026-06-27T02:31:19.760881+00:00",
   "schema_version": 1,
   "vins": {
     "W1KLH6FB5SA102804": {
@@ -1076,29 +1076,6 @@
         "days_observed": 30
       }
     },
-    "W1KZH6AB2NB042531": {
-      "year": 2022,
-      "trim": "E450S4",
-      "dealer": "Mercedes-Benz of Manhattan",
-      "first_seen_at": "2026-05-27T14:56:41.849308+00:00",
-      "current_price": 54900,
-      "current_mileage": 23842,
-      "status": "gone",
-      "observations": [
-        {
-          "observed_at": "2026-05-27T14:56:41.849308+00:00",
-          "price": 54900,
-          "mileage": 23842
-        }
-      ],
-      "stats": {
-        "all_time_low": 54900,
-        "all_time_high": 54900,
-        "total_drop_pct": 0.0,
-        "n_observations": 1,
-        "days_observed": 30
-      }
-    },
     "W1KZH6AB7PB174090": {
       "year": 2023,
       "trim": "E450S4",
@@ -1508,7 +1485,7 @@
         "all_time_high": 58367,
         "total_drop_pct": -1.23,
         "n_observations": 3,
-        "days_observed": 16
+        "days_observed": 17
       }
     },
     "W1KZH6AB8PB158593": {
