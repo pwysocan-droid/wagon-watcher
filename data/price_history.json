@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-27T02:31:19.760881+00:00",
+  "generated_at": "2026-06-27T06:22:21.234329+00:00",
   "schema_version": 1,
   "vins": {
     "W1KLH6FB5SA102804": {
@@ -393,7 +393,7 @@
       "first_seen_at": "2026-04-29T11:57:15.784091+00:00",
       "current_price": 70937,
       "current_mileage": 8958,
-      "status": "active",
+      "status": "gone",
       "observations": [
         {
           "observed_at": "2026-04-29T11:57:15.784091+00:00",
@@ -548,7 +548,7 @@
       "first_seen_at": "2026-05-12T19:47:34.248540+00:00",
       "current_price": 61525,
       "current_mileage": 38684,
-      "status": "gone",
+      "status": "reappeared",
       "observations": [
         {
           "observed_at": "2026-05-12T19:47:34.248540+00:00",
@@ -1658,7 +1658,7 @@
       "first_seen_at": "2026-06-17T12:01:25.514742+00:00",
       "current_price": 73998,
       "current_mileage": 7394,
-      "status": "gone",
+      "status": "reappeared",
       "observations": [
         {
           "observed_at": "2026-06-17T12:01:25.514742+00:00",
@@ -1859,7 +1859,7 @@
       "first_seen_at": "2026-06-25T22:15:40.447396+00:00",
       "current_price": 52645,
       "current_mileage": 19566,
-      "status": "active",
+      "status": "gone",
       "observations": [
         {
           "observed_at": "2026-06-25T22:15:40.447396+00:00",
@@ -1916,6 +1916,75 @@
       "stats": {
         "all_time_low": 54981,
         "all_time_high": 54981,
+        "total_drop_pct": 0.0,
+        "n_observations": 1,
+        "days_observed": 0
+      }
+    },
+    "WDDZH6JB4LA707531": {
+      "year": 2020,
+      "trim": "E450S4",
+      "dealer": "Mercedes-Benz of Fort Myers",
+      "first_seen_at": "2026-06-27T06:22:12.592619+00:00",
+      "current_price": 42798,
+      "current_mileage": 28441,
+      "status": "active",
+      "observations": [
+        {
+          "observed_at": "2026-06-27T06:22:12.592619+00:00",
+          "price": 42798,
+          "mileage": 28441
+        }
+      ],
+      "stats": {
+        "all_time_low": 42798,
+        "all_time_high": 42798,
+        "total_drop_pct": 0.0,
+        "n_observations": 1,
+        "days_observed": 0
+      }
+    },
+    "W1KZH6AB9MA949345": {
+      "year": 2021,
+      "trim": "E450S4",
+      "dealer": "Tom Masano, Inc.",
+      "first_seen_at": "2026-06-27T06:22:12.592619+00:00",
+      "current_price": 51990,
+      "current_mileage": 18592,
+      "status": "active",
+      "observations": [
+        {
+          "observed_at": "2026-06-27T06:22:12.592619+00:00",
+          "price": 51990,
+          "mileage": 18592
+        }
+      ],
+      "stats": {
+        "all_time_low": 51990,
+        "all_time_high": 51990,
+        "total_drop_pct": 0.0,
+        "n_observations": 1,
+        "days_observed": 0
+      }
+    },
+    "W1KLH6FB8RA026196": {
+      "year": 2024,
+      "trim": "E450S4",
+      "dealer": "Mercedes-Benz OF Tiverton",
+      "first_seen_at": "2026-06-27T06:22:12.592619+00:00",
+      "current_price": 69988,
+      "current_mileage": 25590,
+      "status": "active",
+      "observations": [
+        {
+          "observed_at": "2026-06-27T06:22:12.592619+00:00",
+          "price": 69988,
+          "mileage": 25590
+        }
+      ],
+      "stats": {
+        "all_time_low": 69988,
+        "all_time_high": 69988,
         "total_drop_pct": 0.0,
         "n_observations": 1,
         "days_observed": 0
