@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-29T19:20:26.873553+00:00",
+  "generated_at": "2026-06-29T21:04:57.063305+00:00",
   "schema_version": 1,
   "vins": {
     "W1KLH6FB5SA102804": {
@@ -482,7 +482,7 @@
         "all_time_high": 73984,
         "total_drop_pct": -2.06,
         "n_observations": 4,
-        "days_observed": 53
+        "days_observed": 54
       }
     },
     "W1KZH6AB2MA896486": {
@@ -528,40 +528,7 @@
         "all_time_high": 61525,
         "total_drop_pct": 0.0,
         "n_observations": 1,
-        "days_observed": 47
-      }
-    },
-    "W1KLH6FB2SA109290": {
-      "year": 2025,
-      "trim": "E450S4",
-      "dealer": "Mercedes-Benz of Fort Pierce",
-      "first_seen_at": "2026-05-12T19:47:34.248540+00:00",
-      "current_price": 65995,
-      "current_mileage": 12383,
-      "status": "gone",
-      "observations": [
-        {
-          "observed_at": "2026-05-12T19:47:34.248540+00:00",
-          "price": 67998,
-          "mileage": 12383
-        },
-        {
-          "observed_at": "2026-05-25T23:57:09.116761+00:00",
-          "price": 67999,
-          "mileage": 12383
-        },
-        {
-          "observed_at": "2026-05-29T10:38:54.211074+00:00",
-          "price": 65995,
-          "mileage": 12383
-        }
-      ],
-      "stats": {
-        "all_time_low": 65995,
-        "all_time_high": 67999,
-        "total_drop_pct": -2.95,
-        "n_observations": 3,
-        "days_observed": 47
+        "days_observed": 48
       }
     },
     "W1KLH6FB6SA138629": {
@@ -1023,39 +990,6 @@
         "total_drop_pct": 1.45,
         "n_observations": 7,
         "days_observed": 33
-      }
-    },
-    "W1KZH6AB7PB174090": {
-      "year": 2023,
-      "trim": "E450S4",
-      "dealer": "EuroMotorcars Devon, Inc.",
-      "first_seen_at": "2026-05-28T06:35:04.334300+00:00",
-      "current_price": 62980,
-      "current_mileage": 31357,
-      "status": "gone",
-      "observations": [
-        {
-          "observed_at": "2026-05-28T06:35:04.334300+00:00",
-          "price": 62980,
-          "mileage": 31357
-        },
-        {
-          "observed_at": "2026-05-30T10:21:08.010258+00:00",
-          "price": 62980,
-          "mileage": 31398
-        },
-        {
-          "observed_at": "2026-05-30T15:58:44.325145+00:00",
-          "price": 62980,
-          "mileage": 31357
-        }
-      ],
-      "stats": {
-        "all_time_low": 62980,
-        "all_time_high": 62980,
-        "total_drop_pct": 0.0,
-        "n_observations": 3,
-        "days_observed": 32
       }
     },
     "W1KLH6FB5SA085731": {
@@ -1599,7 +1533,7 @@
       "first_seen_at": "2026-06-13T12:19:58.158781+00:00",
       "current_price": 76484,
       "current_mileage": 5787,
-      "status": "reappeared",
+      "status": "active",
       "observations": [
         {
           "observed_at": "2026-06-13T12:19:58.158781+00:00",
@@ -1805,7 +1739,7 @@
         "all_time_high": 55035,
         "total_drop_pct": 0.0,
         "n_observations": 3,
-        "days_observed": 5
+        "days_observed": 6
       }
     },
     "W1KLH6FB7SA087237": {
@@ -1904,7 +1838,7 @@
       "first_seen_at": "2026-06-26T12:29:02.023303+00:00",
       "current_price": 54981,
       "current_mileage": 36831,
-      "status": "reappeared",
+      "status": "active",
       "observations": [
         {
           "observed_at": "2026-06-26T12:29:02.023303+00:00",
