@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-30T02:31:35.885182+00:00",
+  "generated_at": "2026-06-30T06:48:24.423195+00:00",
   "schema_version": 1,
   "vins": {
     "W1KLH6FB5SA102804": {
@@ -820,7 +820,7 @@
         "all_time_high": 59872,
         "total_drop_pct": 0.0,
         "n_observations": 1,
-        "days_observed": 38
+        "days_observed": 39
       }
     },
     "W1KZH6AB5PB165016": {
@@ -1828,7 +1828,7 @@
         "all_time_high": 62406,
         "total_drop_pct": 0.0,
         "n_observations": 2,
-        "days_observed": 3
+        "days_observed": 4
       }
     },
     "W1KZH6AB8PB172252": {
@@ -1879,7 +1879,7 @@
         "all_time_high": 42798,
         "total_drop_pct": 0.0,
         "n_observations": 1,
-        "days_observed": 2
+        "days_observed": 3
       }
     },
     "W1KZH6AB9MA949345": {
@@ -1907,7 +1907,7 @@
         "all_time_high": 51990,
         "total_drop_pct": -4.79,
         "n_observations": 2,
-        "days_observed": 2
+        "days_observed": 3
       }
     },
     "W1KLH6FB8RA026196": {
@@ -1930,7 +1930,7 @@
         "all_time_high": 69988,
         "total_drop_pct": 0.0,
         "n_observations": 1,
-        "days_observed": 2
+        "days_observed": 3
       }
     },
     "W1KZH6AB4NB031238": {
@@ -1954,6 +1954,52 @@
         "total_drop_pct": 0.0,
         "n_observations": 1,
         "days_observed": 1
+      }
+    },
+    "W1KLH6FBXSA153487": {
+      "year": 2025,
+      "trim": "E450S4",
+      "dealer": "Mercedes-Benz of Wilmington",
+      "first_seen_at": "2026-06-30T06:48:19.942008+00:00",
+      "current_price": 69900,
+      "current_mileage": 9149,
+      "status": "active",
+      "observations": [
+        {
+          "observed_at": "2026-06-30T06:48:19.942008+00:00",
+          "price": 69900,
+          "mileage": 9149
+        }
+      ],
+      "stats": {
+        "all_time_low": 69900,
+        "all_time_high": 69900,
+        "total_drop_pct": 0.0,
+        "n_observations": 1,
+        "days_observed": 0
+      }
+    },
+    "W1KLH6FB8TA283382": {
+      "year": 2026,
+      "trim": "E450S4",
+      "dealer": "Mercedes-Benz of Smithtown",
+      "first_seen_at": "2026-06-30T06:48:19.942008+00:00",
+      "current_price": 79995,
+      "current_mileage": 1265,
+      "status": "active",
+      "observations": [
+        {
+          "observed_at": "2026-06-30T06:48:19.942008+00:00",
+          "price": 79995,
+          "mileage": 1265
+        }
+      ],
+      "stats": {
+        "all_time_low": 79995,
+        "all_time_high": 79995,
+        "total_drop_pct": 0.0,
+        "n_observations": 1,
+        "days_observed": 0
       }
     }
   }
