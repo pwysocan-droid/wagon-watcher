@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-30T17:21:13.586724+00:00",
+  "generated_at": "2026-06-30T19:14:31.715398+00:00",
   "schema_version": 1,
   "vins": {
     "W1KLH6FB5SA102804": {
@@ -2020,6 +2020,29 @@
       "stats": {
         "all_time_low": 74998,
         "all_time_high": 74998,
+        "total_drop_pct": 0.0,
+        "n_observations": 1,
+        "days_observed": 0
+      }
+    },
+    "W1KZH6AB6PB139489": {
+      "year": 2023,
+      "trim": "E450S4",
+      "dealer": "New Country Motor Cars, Inc.",
+      "first_seen_at": "2026-06-30T19:14:28.809888+00:00",
+      "current_price": 60997,
+      "current_mileage": 16944,
+      "status": "active",
+      "observations": [
+        {
+          "observed_at": "2026-06-30T19:14:28.809888+00:00",
+          "price": 60997,
+          "mileage": 16944
+        }
+      ],
+      "stats": {
+        "all_time_low": 60997,
+        "all_time_high": 60997,
         "total_drop_pct": 0.0,
         "n_observations": 1,
         "days_observed": 0
