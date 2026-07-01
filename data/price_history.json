@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-01T22:12:47.839598+00:00",
+  "generated_at": "2026-07-01T23:49:42.550287+00:00",
   "schema_version": 1,
   "vins": {
     "W1KLH6FB5SA102804": {
@@ -393,7 +393,7 @@
       "first_seen_at": "2026-04-29T11:57:15.784091+00:00",
       "current_price": 70937,
       "current_mileage": 8958,
-      "status": "reappeared",
+      "status": "active",
       "observations": [
         {
           "observed_at": "2026-04-29T11:57:15.784091+00:00",
@@ -505,7 +505,7 @@
         "all_time_high": 45981,
         "total_drop_pct": 0.0,
         "n_observations": 1,
-        "days_observed": 50
+        "days_observed": 51
       }
     },
     "W1KZH6AB4PB180428": {
@@ -566,34 +566,6 @@
         "all_time_high": 82564,
         "total_drop_pct": -9.73,
         "n_observations": 4,
-        "days_observed": 49
-      }
-    },
-    "W1KZH6AB2PB172229": {
-      "year": 2023,
-      "trim": "E450S4",
-      "dealer": "Hendrick Motors of Charlotte",
-      "first_seen_at": "2026-05-13T09:22:44.161676+00:00",
-      "current_price": 67990,
-      "current_mileage": 15355,
-      "status": "gone",
-      "observations": [
-        {
-          "observed_at": "2026-05-13T09:22:44.161676+00:00",
-          "price": 68990,
-          "mileage": 15355
-        },
-        {
-          "observed_at": "2026-05-18T13:00:24.713745+00:00",
-          "price": 67990,
-          "mileage": 15355
-        }
-      ],
-      "stats": {
-        "all_time_low": 67990,
-        "all_time_high": 68990,
-        "total_drop_pct": -1.45,
-        "n_observations": 2,
         "days_observed": 49
       }
     },
@@ -770,29 +742,6 @@
         "total_drop_pct": 0.0,
         "n_observations": 3,
         "days_observed": 46
-      }
-    },
-    "W1KZH6AB0PB157745": {
-      "year": 2023,
-      "trim": "E450S4",
-      "dealer": "Sears Imported Autos, Inc.",
-      "first_seen_at": "2026-05-22T06:40:48.360556+00:00",
-      "current_price": 59872,
-      "current_mileage": 28170,
-      "status": "gone",
-      "observations": [
-        {
-          "observed_at": "2026-05-22T06:40:48.360556+00:00",
-          "price": 59872,
-          "mileage": 28170
-        }
-      ],
-      "stats": {
-        "all_time_low": 59872,
-        "all_time_high": 59872,
-        "total_drop_pct": 0.0,
-        "n_observations": 1,
-        "days_observed": 40
       }
     },
     "W1KZH6AB5PB165016": {
@@ -984,7 +933,7 @@
         "all_time_high": 66985,
         "total_drop_pct": 0.0,
         "n_observations": 1,
-        "days_observed": 33
+        "days_observed": 34
       }
     },
     "W1KZH6AB6PB179085": {
@@ -1736,7 +1685,7 @@
         "all_time_high": 68499,
         "total_drop_pct": 0.0,
         "n_observations": 4,
-        "days_observed": 5
+        "days_observed": 6
       }
     },
     "W1KZH6AB1MA992125": {
@@ -1759,7 +1708,7 @@
         "all_time_high": 52645,
         "total_drop_pct": 0.0,
         "n_observations": 1,
-        "days_observed": 5
+        "days_observed": 6
       }
     },
     "W1KZH6AB1PB178619": {
@@ -1880,7 +1829,7 @@
       "dealer": "Mercedes-Benz OF Tiverton",
       "first_seen_at": "2026-06-27T06:22:12.592619+00:00",
       "current_price": 69988,
-      "current_mileage": 25599,
+      "current_mileage": 25590,
       "status": "active",
       "observations": [
         {
@@ -1892,13 +1841,18 @@
           "observed_at": "2026-07-01T20:45:13.474558+00:00",
           "price": 69988,
           "mileage": 25599
+        },
+        {
+          "observed_at": "2026-07-01T23:49:40.320763+00:00",
+          "price": 69988,
+          "mileage": 25590
         }
       ],
       "stats": {
         "all_time_low": 69988,
         "all_time_high": 69988,
         "total_drop_pct": 0.0,
-        "n_observations": 2,
+        "n_observations": 3,
         "days_observed": 4
       }
     },
@@ -1983,7 +1937,7 @@
       "first_seen_at": "2026-06-30T10:26:15.914724+00:00",
       "current_price": 74998,
       "current_mileage": 7136,
-      "status": "reappeared",
+      "status": "active",
       "observations": [
         {
           "observed_at": "2026-06-30T10:26:15.914724+00:00",
