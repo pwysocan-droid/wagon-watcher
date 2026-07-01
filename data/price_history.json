@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-01T03:57:14.296820+00:00",
+  "generated_at": "2026-07-01T08:08:43.638218+00:00",
   "schema_version": 1,
   "vins": {
     "W1KLH6FB5SA102804": {
@@ -454,7 +454,7 @@
       "first_seen_at": "2026-05-06T20:07:22.489014+00:00",
       "current_price": 72460,
       "current_mileage": 8573,
-      "status": "active",
+      "status": "gone",
       "observations": [
         {
           "observed_at": "2026-05-06T20:07:22.489014+00:00",
@@ -739,34 +739,6 @@
         "days_observed": 47
       }
     },
-    "W1KZH6AB5MA902507": {
-      "year": 2021,
-      "trim": "E450S4",
-      "dealer": "Mercedes-Benz of Beaumont",
-      "first_seen_at": "2026-05-15T14:59:18.173961+00:00",
-      "current_price": 38791,
-      "current_mileage": 38351,
-      "status": "gone",
-      "observations": [
-        {
-          "observed_at": "2026-05-15T14:59:18.173961+00:00",
-          "price": 38991,
-          "mileage": 70700
-        },
-        {
-          "observed_at": "2026-05-30T10:21:08.010258+00:00",
-          "price": 38791,
-          "mileage": 38351
-        }
-      ],
-      "stats": {
-        "all_time_low": 38791,
-        "all_time_high": 38991,
-        "total_drop_pct": -0.51,
-        "n_observations": 2,
-        "days_observed": 46
-      }
-    },
     "W1KZH6AB0PB167501": {
       "year": 2023,
       "trim": "E450S4",
@@ -820,7 +792,7 @@
         "all_time_high": 59872,
         "total_drop_pct": 0.0,
         "n_observations": 1,
-        "days_observed": 39
+        "days_observed": 40
       }
     },
     "W1KZH6AB5PB165016": {
@@ -1013,29 +985,6 @@
         "total_drop_pct": 0.0,
         "n_observations": 1,
         "days_observed": 33
-      }
-    },
-    "W1KLH6FB2SA127188": {
-      "year": 2025,
-      "trim": "E450S4",
-      "dealer": "Mercedes-Benz of Fort Pierce",
-      "first_seen_at": "2026-05-29T10:38:54.211074+00:00",
-      "current_price": 69998,
-      "current_mileage": 6963,
-      "status": "gone",
-      "observations": [
-        {
-          "observed_at": "2026-05-29T10:38:54.211074+00:00",
-          "price": 69998,
-          "mileage": 6963
-        }
-      ],
-      "stats": {
-        "all_time_low": 69998,
-        "all_time_high": 69998,
-        "total_drop_pct": 0.0,
-        "n_observations": 1,
-        "days_observed": 32
       }
     },
     "W1KZH6AB6PB179085": {
@@ -1472,7 +1421,7 @@
       "first_seen_at": "2026-06-13T10:42:46.396398+00:00",
       "current_price": 67300,
       "current_mileage": 6589,
-      "status": "active",
+      "status": "gone",
       "observations": [
         {
           "observed_at": "2026-06-13T10:42:46.396398+00:00",
@@ -1533,7 +1482,7 @@
       "first_seen_at": "2026-06-13T12:19:58.158781+00:00",
       "current_price": 76484,
       "current_mileage": 5787,
-      "status": "gone",
+      "status": "reappeared",
       "observations": [
         {
           "observed_at": "2026-06-13T12:19:58.158781+00:00",
@@ -1749,7 +1698,7 @@
       "first_seen_at": "2026-06-25T22:15:40.447396+00:00",
       "current_price": 68499,
       "current_mileage": 19473,
-      "status": "active",
+      "status": "gone",
       "observations": [
         {
           "observed_at": "2026-06-25T22:15:40.447396+00:00",
@@ -1828,7 +1777,7 @@
         "all_time_high": 62406,
         "total_drop_pct": 0.0,
         "n_observations": 2,
-        "days_observed": 4
+        "days_observed": 5
       }
     },
     "W1KZH6AB8PB172252": {
@@ -1838,7 +1787,7 @@
       "first_seen_at": "2026-06-26T12:29:02.023303+00:00",
       "current_price": 54981,
       "current_mileage": 36831,
-      "status": "active",
+      "status": "gone",
       "observations": [
         {
           "observed_at": "2026-06-26T12:29:02.023303+00:00",
@@ -1879,7 +1828,7 @@
         "all_time_high": 42798,
         "total_drop_pct": 0.0,
         "n_observations": 1,
-        "days_observed": 3
+        "days_observed": 4
       }
     },
     "W1KZH6AB9MA949345": {
@@ -1907,7 +1856,7 @@
         "all_time_high": 51990,
         "total_drop_pct": -4.79,
         "n_observations": 2,
-        "days_observed": 3
+        "days_observed": 4
       }
     },
     "W1KLH6FB8RA026196": {
@@ -1930,7 +1879,7 @@
         "all_time_high": 69988,
         "total_drop_pct": 0.0,
         "n_observations": 1,
-        "days_observed": 3
+        "days_observed": 4
       }
     },
     "W1KZH6AB4NB031238": {
@@ -1976,7 +1925,7 @@
         "all_time_high": 69900,
         "total_drop_pct": 0.0,
         "n_observations": 1,
-        "days_observed": 0
+        "days_observed": 1
       }
     },
     "W1KLH6FB8TA283382": {
@@ -1999,7 +1948,7 @@
         "all_time_high": 79995,
         "total_drop_pct": 0.0,
         "n_observations": 1,
-        "days_observed": 0
+        "days_observed": 1
       }
     },
     "W1KLH6FBXSA104094": {
@@ -2032,7 +1981,7 @@
       "first_seen_at": "2026-06-30T19:14:28.809888+00:00",
       "current_price": 60997,
       "current_mileage": 16944,
-      "status": "gone",
+      "status": "reappeared",
       "observations": [
         {
           "observed_at": "2026-06-30T19:14:28.809888+00:00",
@@ -2043,6 +1992,52 @@
       "stats": {
         "all_time_low": 60997,
         "all_time_high": 60997,
+        "total_drop_pct": 0.0,
+        "n_observations": 1,
+        "days_observed": 0
+      }
+    },
+    "W1KLH6FB0RA026242": {
+      "year": 2024,
+      "trim": "E450S4",
+      "dealer": "Mercedes-Benz of North Orlando",
+      "first_seen_at": "2026-07-01T08:08:36.498612+00:00",
+      "current_price": 81411,
+      "current_mileage": 15355,
+      "status": "active",
+      "observations": [
+        {
+          "observed_at": "2026-07-01T08:08:36.498612+00:00",
+          "price": 81411,
+          "mileage": 15355
+        }
+      ],
+      "stats": {
+        "all_time_low": 81411,
+        "all_time_high": 81411,
+        "total_drop_pct": 0.0,
+        "n_observations": 1,
+        "days_observed": 0
+      }
+    },
+    "W1KLH6FB8SA137367": {
+      "year": 2025,
+      "trim": "E450S4",
+      "dealer": "Euro Motorcars, LLC",
+      "first_seen_at": "2026-07-01T08:08:36.498612+00:00",
+      "current_price": 64680,
+      "current_mileage": 7718,
+      "status": "active",
+      "observations": [
+        {
+          "observed_at": "2026-07-01T08:08:36.498612+00:00",
+          "price": 64680,
+          "mileage": 7718
+        }
+      ],
+      "stats": {
+        "all_time_low": 64680,
+        "all_time_high": 64680,
         "total_drop_pct": 0.0,
         "n_observations": 1,
         "days_observed": 0
