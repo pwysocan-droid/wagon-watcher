@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-04T12:40:09.063137+00:00",
+  "generated_at": "2026-07-04T14:23:26.822559+00:00",
   "schema_version": 1,
   "vins": {
     "W1KLH6FB5SA102804": {
@@ -624,7 +624,7 @@
       "first_seen_at": "2026-05-13T09:22:44.161676+00:00",
       "current_price": 51900,
       "current_mileage": 37200,
-      "status": "gone",
+      "status": "reappeared",
       "observations": [
         {
           "observed_at": "2026-05-13T09:22:44.161676+00:00",
@@ -741,7 +741,7 @@
         "all_time_high": 63981,
         "total_drop_pct": 0.0,
         "n_observations": 3,
-        "days_observed": 48
+        "days_observed": 49
       }
     },
     "W1KZH6AB5PB165016": {
@@ -1047,7 +1047,7 @@
       "first_seen_at": "2026-06-04T15:55:18.581517+00:00",
       "current_price": 73477,
       "current_mileage": 6237,
-      "status": "reappeared",
+      "status": "active",
       "observations": [
         {
           "observed_at": "2026-06-04T15:55:18.581517+00:00",
@@ -1615,7 +1615,7 @@
         "all_time_high": 78491,
         "total_drop_pct": -2.55,
         "n_observations": 4,
-        "days_observed": 10
+        "days_observed": 11
       }
     },
     "W1KLH6FB2SA155265": {
@@ -1638,7 +1638,7 @@
         "all_time_high": 76390,
         "total_drop_pct": 0.0,
         "n_observations": 1,
-        "days_observed": 10
+        "days_observed": 11
       }
     },
     "W1KLH6FB4RA026129": {
@@ -1661,7 +1661,7 @@
         "all_time_high": 65998,
         "total_drop_pct": 0.0,
         "n_observations": 1,
-        "days_observed": 10
+        "days_observed": 11
       }
     },
     "W1KZH6AB8NB035065": {
@@ -2036,20 +2036,25 @@
       "dealer": "New Country Motor Cars, Inc.",
       "first_seen_at": "2026-06-30T19:14:28.809888+00:00",
       "current_price": 60997,
-      "current_mileage": 16944,
+      "current_mileage": 16945,
       "status": "active",
       "observations": [
         {
           "observed_at": "2026-06-30T19:14:28.809888+00:00",
           "price": 60997,
           "mileage": 16944
+        },
+        {
+          "observed_at": "2026-07-04T14:23:22.042596+00:00",
+          "price": 60997,
+          "mileage": 16945
         }
       ],
       "stats": {
         "all_time_low": 60997,
         "all_time_high": 60997,
         "total_drop_pct": 0.0,
-        "n_observations": 1,
+        "n_observations": 2,
         "days_observed": 3
       }
     },
