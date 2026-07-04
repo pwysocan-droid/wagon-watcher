@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-04T21:26:12.455167+00:00",
+  "generated_at": "2026-07-04T22:25:36.856906+00:00",
   "schema_version": 1,
   "vins": {
     "W1KLH6FB5SA102804": {
@@ -946,7 +946,7 @@
       "trim": "E450S4",
       "dealer": "Mercedes-Benz of White Plains",
       "first_seen_at": "2026-06-03T15:11:31.353813+00:00",
-      "current_price": 59495,
+      "current_price": 60495,
       "current_mileage": 30033,
       "status": "active",
       "observations": [
@@ -969,13 +969,18 @@
           "observed_at": "2026-07-04T15:38:24.039018+00:00",
           "price": 59495,
           "mileage": 30033
+        },
+        {
+          "observed_at": "2026-07-04T22:25:36.204441+00:00",
+          "price": 60495,
+          "mileage": 30033
         }
       ],
       "stats": {
         "all_time_low": 59495,
         "all_time_high": 61995,
-        "total_drop_pct": -4.03,
-        "n_observations": 4,
+        "total_drop_pct": -2.42,
+        "n_observations": 5,
         "days_observed": 31
       }
     },
@@ -1737,7 +1742,7 @@
         "all_time_high": 68499,
         "total_drop_pct": 0.0,
         "n_observations": 4,
-        "days_observed": 8
+        "days_observed": 9
       }
     },
     "W1KZH6AB1MA992125": {
@@ -1760,7 +1765,7 @@
         "all_time_high": 52645,
         "total_drop_pct": 0.0,
         "n_observations": 1,
-        "days_observed": 8
+        "days_observed": 9
       }
     },
     "W1KZH6AB1PB178619": {
@@ -1902,7 +1907,7 @@
       "first_seen_at": "2026-06-27T06:22:12.592619+00:00",
       "current_price": 69988,
       "current_mileage": 25630,
-      "status": "reappeared",
+      "status": "active",
       "observations": [
         {
           "observed_at": "2026-06-27T06:22:12.592619+00:00",
@@ -2041,7 +2046,7 @@
       "dealer": "New Country Motor Cars, Inc.",
       "first_seen_at": "2026-06-30T19:14:28.809888+00:00",
       "current_price": 60997,
-      "current_mileage": 16945,
+      "current_mileage": 16944,
       "status": "active",
       "observations": [
         {
@@ -2053,13 +2058,18 @@
           "observed_at": "2026-07-04T14:23:22.042596+00:00",
           "price": 60997,
           "mileage": 16945
+        },
+        {
+          "observed_at": "2026-07-04T22:25:36.204441+00:00",
+          "price": 60997,
+          "mileage": 16944
         }
       ],
       "stats": {
         "all_time_low": 60997,
         "all_time_high": 60997,
         "total_drop_pct": 0.0,
-        "n_observations": 2,
+        "n_observations": 3,
         "days_observed": 4
       }
     },
