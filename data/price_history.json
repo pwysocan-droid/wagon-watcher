@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-04T14:23:26.822559+00:00",
+  "generated_at": "2026-07-04T15:38:24.683114+00:00",
   "schema_version": 1,
   "vins": {
     "W1KLH6FB5SA102804": {
@@ -624,7 +624,7 @@
       "first_seen_at": "2026-05-13T09:22:44.161676+00:00",
       "current_price": 51900,
       "current_mileage": 37200,
-      "status": "reappeared",
+      "status": "active",
       "observations": [
         {
           "observed_at": "2026-05-13T09:22:44.161676+00:00",
@@ -910,7 +910,7 @@
         "all_time_high": 69995,
         "total_drop_pct": 1.45,
         "n_observations": 7,
-        "days_observed": 37
+        "days_observed": 38
       }
     },
     "W1KZH6AB6PB179085": {
@@ -946,7 +946,7 @@
       "trim": "E450S4",
       "dealer": "Mercedes-Benz of White Plains",
       "first_seen_at": "2026-06-03T15:11:31.353813+00:00",
-      "current_price": 60495,
+      "current_price": 59495,
       "current_mileage": 30033,
       "status": "active",
       "observations": [
@@ -964,14 +964,19 @@
           "observed_at": "2026-06-23T16:21:32.202925+00:00",
           "price": 60495,
           "mileage": 30033
+        },
+        {
+          "observed_at": "2026-07-04T15:38:24.039018+00:00",
+          "price": 59495,
+          "mileage": 30033
         }
       ],
       "stats": {
-        "all_time_low": 60495,
+        "all_time_low": 59495,
         "all_time_high": 61995,
-        "total_drop_pct": -2.42,
-        "n_observations": 3,
-        "days_observed": 30
+        "total_drop_pct": -4.03,
+        "n_observations": 4,
+        "days_observed": 31
       }
     },
     "W1KZH6AB0NB028692": {
@@ -1014,7 +1019,7 @@
         "all_time_high": 48988,
         "total_drop_pct": 0.0,
         "n_observations": 5,
-        "days_observed": 30
+        "days_observed": 31
       }
     },
     "W1KLH6FB0SA134091": {
