@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-04T09:34:21.577384+00:00",
+  "generated_at": "2026-07-04T11:18:12.421905+00:00",
   "schema_version": 1,
   "vins": {
     "W1KLH6FB5SA102804": {
@@ -444,7 +444,7 @@
         "all_time_high": 72998,
         "total_drop_pct": -0.69,
         "n_observations": 3,
-        "days_observed": 60
+        "days_observed": 61
       }
     },
     "W1KLH6FB0SA088150": {
@@ -784,7 +784,7 @@
         "all_time_high": 62445,
         "total_drop_pct": -0.8,
         "n_observations": 5,
-        "days_observed": 42
+        "days_observed": 43
       }
     },
     "W1KLH6FB9SA095436": {
@@ -938,7 +938,7 @@
         "all_time_high": 65995,
         "total_drop_pct": 0.0,
         "n_observations": 2,
-        "days_observed": 31
+        "days_observed": 32
       }
     },
     "W1KZH6AB6PB116701": {
@@ -1047,7 +1047,7 @@
       "first_seen_at": "2026-06-04T15:55:18.581517+00:00",
       "current_price": 73477,
       "current_mileage": 6237,
-      "status": "reappeared",
+      "status": "gone",
       "observations": [
         {
           "observed_at": "2026-06-04T15:55:18.581517+00:00",
@@ -1093,7 +1093,7 @@
         "all_time_high": 75481,
         "total_drop_pct": 0.0,
         "n_observations": 1,
-        "days_observed": 28
+        "days_observed": 29
       }
     },
     "W1KZH6AB4PB144738": {
@@ -1140,7 +1140,7 @@
       "dealer": "Rallye Motors LLC",
       "first_seen_at": "2026-06-09T09:24:40.409645+00:00",
       "current_price": 50966,
-      "current_mileage": 43279,
+      "current_mileage": 43284,
       "status": "active",
       "observations": [
         {
@@ -1172,13 +1172,18 @@
           "observed_at": "2026-06-28T11:42:36.599050+00:00",
           "price": 50966,
           "mileage": 43279
+        },
+        {
+          "observed_at": "2026-07-04T11:18:07.402663+00:00",
+          "price": 50966,
+          "mileage": 43284
         }
       ],
       "stats": {
         "all_time_low": 50966,
         "all_time_high": 50966,
         "total_drop_pct": 0.0,
-        "n_observations": 6,
+        "n_observations": 7,
         "days_observed": 25
       }
     },
@@ -1342,7 +1347,7 @@
         "all_time_high": 64998,
         "total_drop_pct": 0.0,
         "n_observations": 1,
-        "days_observed": 21
+        "days_observed": 22
       }
     },
     "W1KZH6AB6PB159273": {
@@ -1365,7 +1370,7 @@
         "all_time_high": 67300,
         "total_drop_pct": 0.0,
         "n_observations": 1,
-        "days_observed": 20
+        "days_observed": 21
       }
     },
     "W1KZH6AB0PB118184": {
@@ -1375,7 +1380,7 @@
       "first_seen_at": "2026-06-13T12:19:58.158781+00:00",
       "current_price": 50987,
       "current_mileage": 71982,
-      "status": "gone",
+      "status": "reappeared",
       "observations": [
         {
           "observed_at": "2026-06-13T12:19:58.158781+00:00",
@@ -1567,7 +1572,7 @@
         "all_time_high": 62998,
         "total_drop_pct": -3.97,
         "n_observations": 9,
-        "days_observed": 15
+        "days_observed": 16
       }
     },
     "W1KLH6FB0TA220597": {
@@ -2017,7 +2022,7 @@
         "all_time_high": 74998,
         "total_drop_pct": 0.0,
         "n_observations": 1,
-        "days_observed": 3
+        "days_observed": 4
       }
     },
     "W1KZH6AB6PB139489": {
@@ -2048,7 +2053,7 @@
       "trim": "E450S4",
       "dealer": "Mercedes-Benz of North Orlando",
       "first_seen_at": "2026-07-01T08:08:36.498612+00:00",
-      "current_price": 80411,
+      "current_price": 78411,
       "current_mileage": 15355,
       "status": "active",
       "observations": [
@@ -2061,13 +2066,18 @@
           "observed_at": "2026-07-02T14:35:34.473527+00:00",
           "price": 80411,
           "mileage": 15355
+        },
+        {
+          "observed_at": "2026-07-04T11:18:07.402663+00:00",
+          "price": 78411,
+          "mileage": 15355
         }
       ],
       "stats": {
-        "all_time_low": 80411,
+        "all_time_low": 78411,
         "all_time_high": 81411,
-        "total_drop_pct": -1.23,
-        "n_observations": 2,
+        "total_drop_pct": -3.69,
+        "n_observations": 3,
         "days_observed": 3
       }
     },
