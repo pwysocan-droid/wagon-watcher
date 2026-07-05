@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-04T23:28:48.451562+00:00",
+  "generated_at": "2026-07-05T01:15:03.176905+00:00",
   "schema_version": 1,
   "vins": {
     "W1KLH6FB5SA102804": {
@@ -505,7 +505,7 @@
         "all_time_high": 45981,
         "total_drop_pct": 0.0,
         "n_observations": 1,
-        "days_observed": 53
+        "days_observed": 54
       }
     },
     "W1KZH6AB4PB180428": {
@@ -624,7 +624,7 @@
       "first_seen_at": "2026-05-13T09:22:44.161676+00:00",
       "current_price": 51900,
       "current_mileage": 37200,
-      "status": "reappeared",
+      "status": "gone",
       "observations": [
         {
           "observed_at": "2026-05-13T09:22:44.161676+00:00",
@@ -946,7 +946,7 @@
       "trim": "E450S4",
       "dealer": "Mercedes-Benz of White Plains",
       "first_seen_at": "2026-06-03T15:11:31.353813+00:00",
-      "current_price": 60495,
+      "current_price": 59495,
       "current_mileage": 30033,
       "status": "active",
       "observations": [
@@ -974,13 +974,18 @@
           "observed_at": "2026-07-04T22:25:36.204441+00:00",
           "price": 60495,
           "mileage": 30033
+        },
+        {
+          "observed_at": "2026-07-05T01:15:01.276884+00:00",
+          "price": 59495,
+          "mileage": 30033
         }
       ],
       "stats": {
         "all_time_low": 59495,
         "all_time_high": 61995,
-        "total_drop_pct": -2.42,
-        "n_observations": 5,
+        "total_drop_pct": -4.03,
+        "n_observations": 6,
         "days_observed": 31
       }
     },
@@ -1301,7 +1306,7 @@
         "all_time_high": 60794,
         "total_drop_pct": 0.0,
         "n_observations": 1,
-        "days_observed": 23
+        "days_observed": 24
       }
     },
     "W1KLH6FB7SA154743": {
@@ -1334,7 +1339,7 @@
         "all_time_high": 73681,
         "total_drop_pct": 0.0,
         "n_observations": 3,
-        "days_observed": 23
+        "days_observed": 24
       }
     },
     "W1KZH6AB6PB162870": {
@@ -1390,7 +1395,7 @@
       "first_seen_at": "2026-06-13T12:19:58.158781+00:00",
       "current_price": 50411,
       "current_mileage": 71983,
-      "status": "reappeared",
+      "status": "active",
       "observations": [
         {
           "observed_at": "2026-06-13T12:19:58.158781+00:00",
@@ -2046,7 +2051,7 @@
       "dealer": "New Country Motor Cars, Inc.",
       "first_seen_at": "2026-06-30T19:14:28.809888+00:00",
       "current_price": 60997,
-      "current_mileage": 16944,
+      "current_mileage": 16945,
       "status": "active",
       "observations": [
         {
@@ -2063,13 +2068,18 @@
           "observed_at": "2026-07-04T22:25:36.204441+00:00",
           "price": 60997,
           "mileage": 16944
+        },
+        {
+          "observed_at": "2026-07-05T01:15:01.276884+00:00",
+          "price": 60997,
+          "mileage": 16945
         }
       ],
       "stats": {
         "all_time_low": 60997,
         "all_time_high": 60997,
         "total_drop_pct": 0.0,
-        "n_observations": 3,
+        "n_observations": 4,
         "days_observed": 4
       }
     },
