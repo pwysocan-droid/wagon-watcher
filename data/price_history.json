@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-06T03:19:41.341585+00:00",
+  "generated_at": "2026-07-06T07:59:00.485238+00:00",
   "schema_version": 1,
   "vins": {
     "W1KLH6FB5SA102804": {
@@ -918,34 +918,6 @@
         "days_observed": 39
       }
     },
-    "W1KZH6AB6PB179085": {
-      "year": 2023,
-      "trim": "E450S4",
-      "dealer": "Mercedes-Benz of Syracuse",
-      "first_seen_at": "2026-06-02T09:45:32.545915+00:00",
-      "current_price": 65995,
-      "current_mileage": 10004,
-      "status": "gone",
-      "observations": [
-        {
-          "observed_at": "2026-06-02T09:45:32.545915+00:00",
-          "price": 65995,
-          "mileage": 10003
-        },
-        {
-          "observed_at": "2026-06-05T13:48:44.369983+00:00",
-          "price": 65995,
-          "mileage": 10004
-        }
-      ],
-      "stats": {
-        "all_time_low": 65995,
-        "all_time_high": 65995,
-        "total_drop_pct": 0.0,
-        "n_observations": 2,
-        "days_observed": 33
-      }
-    },
     "W1KZH6AB6PB116701": {
       "year": 2023,
       "trim": "E450S4",
@@ -1077,7 +1049,7 @@
       "first_seen_at": "2026-06-04T15:55:18.581517+00:00",
       "current_price": 73477,
       "current_mileage": 6237,
-      "status": "active",
+      "status": "gone",
       "observations": [
         {
           "observed_at": "2026-06-04T15:55:18.581517+00:00",
@@ -1843,7 +1815,7 @@
         "all_time_high": 62406,
         "total_drop_pct": -1.81,
         "n_observations": 7,
-        "days_observed": 9
+        "days_observed": 10
       }
     },
     "W1KZH6AB8PB172252": {
@@ -1894,7 +1866,7 @@
         "all_time_high": 42798,
         "total_drop_pct": 0.0,
         "n_observations": 1,
-        "days_observed": 8
+        "days_observed": 9
       }
     },
     "W1KZH6AB9MA949345": {
@@ -1922,7 +1894,7 @@
         "all_time_high": 51990,
         "total_drop_pct": -4.79,
         "n_observations": 2,
-        "days_observed": 8
+        "days_observed": 9
       }
     },
     "W1KLH6FB8RA026196": {
@@ -1965,7 +1937,7 @@
         "all_time_high": 69988,
         "total_drop_pct": 0.0,
         "n_observations": 5,
-        "days_observed": 8
+        "days_observed": 9
       }
     },
     "W1KZH6AB4NB031238": {
@@ -2011,7 +1983,7 @@
         "all_time_high": 69900,
         "total_drop_pct": 0.0,
         "n_observations": 1,
-        "days_observed": 5
+        "days_observed": 6
       }
     },
     "W1KLH6FB8TA283382": {
@@ -2039,7 +2011,7 @@
         "all_time_high": 79995,
         "total_drop_pct": -0.64,
         "n_observations": 2,
-        "days_observed": 5
+        "days_observed": 6
       }
     },
     "W1KLH6FBXSA104094": {
