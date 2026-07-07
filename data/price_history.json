@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-07T20:01:16.629008+00:00",
+  "generated_at": "2026-07-07T21:49:25.143833+00:00",
   "schema_version": 1,
   "vins": {
     "W1KLH6FB5SA102804": {
@@ -77,7 +77,7 @@
       "first_seen_at": "2026-04-26T15:50:37.492543+00:00",
       "current_price": 71973,
       "current_mileage": 8725,
-      "status": "gone",
+      "status": "reappeared",
       "observations": [
         {
           "observed_at": "2026-04-26T15:50:37.492543+00:00",
@@ -487,7 +487,7 @@
         "all_time_high": 73984,
         "total_drop_pct": -2.06,
         "n_observations": 4,
-        "days_observed": 61
+        "days_observed": 62
       }
     },
     "W1KZH6AB2MA896486": {
@@ -629,7 +629,7 @@
       "first_seen_at": "2026-05-13T09:22:44.161676+00:00",
       "current_price": 51900,
       "current_mileage": 37200,
-      "status": "active",
+      "status": "gone",
       "observations": [
         {
           "observed_at": "2026-05-13T09:22:44.161676+00:00",
@@ -925,7 +925,7 @@
       "first_seen_at": "2026-06-03T15:11:31.353813+00:00",
       "current_price": 59495,
       "current_mileage": 30033,
-      "status": "active",
+      "status": "gone",
       "observations": [
         {
           "observed_at": "2026-06-03T15:11:31.353813+00:00",
@@ -1143,7 +1143,7 @@
       "first_seen_at": "2026-06-09T09:24:40.409645+00:00",
       "current_price": 50966,
       "current_mileage": 43284,
-      "status": "active",
+      "status": "gone",
       "observations": [
         {
           "observed_at": "2026-06-09T09:24:40.409645+00:00",
@@ -1387,7 +1387,7 @@
       "first_seen_at": "2026-06-13T12:19:58.158781+00:00",
       "current_price": 50411,
       "current_mileage": 71983,
-      "status": "gone",
+      "status": "reappeared",
       "observations": [
         {
           "observed_at": "2026-06-13T12:19:58.158781+00:00",
@@ -1701,7 +1701,7 @@
         "all_time_high": 55035,
         "total_drop_pct": 0.0,
         "n_observations": 3,
-        "days_observed": 13
+        "days_observed": 14
       }
     },
     "W1KLH6FB7SA087237": {
@@ -1947,7 +1947,7 @@
       "first_seen_at": "2026-06-28T16:40:19.702036+00:00",
       "current_price": 54900,
       "current_mileage": 24166,
-      "status": "active",
+      "status": "gone",
       "observations": [
         {
           "observed_at": "2026-06-28T16:40:19.702036+00:00",
@@ -2017,11 +2017,11 @@
     "W1KLH6FBXSA104094": {
       "year": 2025,
       "trim": "E450S4",
-      "dealer": "Mercedes-Benz of Asheville",
+      "dealer": "Mercedes-Benz of Jacksonville",
       "first_seen_at": "2026-06-30T10:26:15.914724+00:00",
       "current_price": 74998,
       "current_mileage": 7136,
-      "status": "gone",
+      "status": "reappeared",
       "observations": [
         {
           "observed_at": "2026-06-30T10:26:15.914724+00:00",
@@ -2129,6 +2129,29 @@
         "total_drop_pct": 0.0,
         "n_observations": 1,
         "days_observed": 6
+      }
+    },
+    "W1KLH6FB5TA256561": {
+      "year": 2026,
+      "trim": "E450S4",
+      "dealer": "Bud Smail Motorcars, Ltd.",
+      "first_seen_at": "2026-07-07T21:49:21.934787+00:00",
+      "current_price": 85965,
+      "current_mileage": 4330,
+      "status": "active",
+      "observations": [
+        {
+          "observed_at": "2026-07-07T21:49:21.934787+00:00",
+          "price": 85965,
+          "mileage": 4330
+        }
+      ],
+      "stats": {
+        "all_time_low": 85965,
+        "all_time_high": 85965,
+        "total_drop_pct": 0.0,
+        "n_observations": 1,
+        "days_observed": 0
       }
     }
   }
