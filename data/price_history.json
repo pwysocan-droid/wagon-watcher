@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-08T07:43:23.272247+00:00",
+  "generated_at": "2026-07-08T10:07:40.500175+00:00",
   "schema_version": 1,
   "vins": {
     "W1KLH6FB5SA102804": {
@@ -571,7 +571,7 @@
         "all_time_high": 82564,
         "total_drop_pct": -9.73,
         "n_observations": 4,
-        "days_observed": 55
+        "days_observed": 56
       }
     },
     "W1KLH6FB0TA237464": {
@@ -619,7 +619,7 @@
         "all_time_high": 80794,
         "total_drop_pct": -0.98,
         "n_observations": 6,
-        "days_observed": 55
+        "days_observed": 56
       }
     },
     "W1KZH6AB2NB082348": {
@@ -629,7 +629,7 @@
       "first_seen_at": "2026-05-13T09:22:44.161676+00:00",
       "current_price": 51900,
       "current_mileage": 37200,
-      "status": "gone",
+      "status": "reappeared",
       "observations": [
         {
           "observed_at": "2026-05-13T09:22:44.161676+00:00",
@@ -642,7 +642,7 @@
         "all_time_high": 51900,
         "total_drop_pct": 0.0,
         "n_observations": 1,
-        "days_observed": 55
+        "days_observed": 56
       }
     },
     "W1KLH6FB3SA087512": {
@@ -680,7 +680,7 @@
         "all_time_high": 65988,
         "total_drop_pct": 0.0,
         "n_observations": 4,
-        "days_observed": 55
+        "days_observed": 56
       }
     },
     "W1KLH6FB3SA142248": {
@@ -713,7 +713,7 @@
         "all_time_high": 65988,
         "total_drop_pct": 0.0,
         "n_observations": 3,
-        "days_observed": 54
+        "days_observed": 55
       }
     },
     "W1KZH6AB0PB167501": {
@@ -1143,7 +1143,7 @@
       "first_seen_at": "2026-06-09T09:24:40.409645+00:00",
       "current_price": 50966,
       "current_mileage": 43284,
-      "status": "reappeared",
+      "status": "gone",
       "observations": [
         {
           "observed_at": "2026-06-09T09:24:40.409645+00:00",
@@ -1186,7 +1186,7 @@
         "all_time_high": 50966,
         "total_drop_pct": 0.0,
         "n_observations": 7,
-        "days_observed": 28
+        "days_observed": 29
       }
     },
     "W1KZH6AB4MA975996": {
@@ -1214,7 +1214,7 @@
         "all_time_high": 41000,
         "total_drop_pct": 0.0,
         "n_observations": 2,
-        "days_observed": 28
+        "days_observed": 29
       }
     },
     "W1KLH6FB5SA138590": {
@@ -1237,7 +1237,7 @@
         "all_time_high": 66988,
         "total_drop_pct": 0.0,
         "n_observations": 1,
-        "days_observed": 28
+        "days_observed": 29
       }
     },
     "W1KZH6AB0PB118007": {
@@ -1589,7 +1589,7 @@
         "all_time_high": 62998,
         "total_drop_pct": -3.97,
         "n_observations": 9,
-        "days_observed": 19
+        "days_observed": 20
       }
     },
     "W1KLH6FB0TA220597": {
@@ -1952,7 +1952,7 @@
       "first_seen_at": "2026-06-28T16:40:19.702036+00:00",
       "current_price": 54900,
       "current_mileage": 24166,
-      "status": "gone",
+      "status": "reappeared",
       "observations": [
         {
           "observed_at": "2026-06-28T16:40:19.702036+00:00",
@@ -2115,7 +2115,7 @@
         "all_time_high": 81411,
         "total_drop_pct": -3.69,
         "n_observations": 3,
-        "days_observed": 6
+        "days_observed": 7
       }
     },
     "W1KLH6FB8SA137367": {
@@ -2138,7 +2138,7 @@
         "all_time_high": 64680,
         "total_drop_pct": 0.0,
         "n_observations": 1,
-        "days_observed": 6
+        "days_observed": 7
       }
     },
     "W1KLH6FB5TA256561": {
@@ -2171,7 +2171,7 @@
       "first_seen_at": "2026-07-08T05:12:10.801567+00:00",
       "current_price": 60690,
       "current_mileage": 29927,
-      "status": "gone",
+      "status": "reappeared",
       "observations": [
         {
           "observed_at": "2026-07-08T05:12:10.801567+00:00",
@@ -2194,7 +2194,7 @@
       "first_seen_at": "2026-07-08T05:12:10.801567+00:00",
       "current_price": 73779,
       "current_mileage": 9191,
-      "status": "gone",
+      "status": "reappeared",
       "observations": [
         {
           "observed_at": "2026-07-08T05:12:10.801567+00:00",
