@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-10T17:15:13.224090+00:00",
+  "generated_at": "2026-07-10T18:55:12.229489+00:00",
   "schema_version": 1,
   "vins": {
     "W1KLH6FB5SA102804": {
@@ -1258,7 +1258,7 @@
       "trim": "E450S4",
       "dealer": "Critz, Inc.",
       "first_seen_at": "2026-06-13T12:19:58.158781+00:00",
-      "current_price": 76427,
+      "current_price": 76248,
       "current_mileage": 5787,
       "status": "active",
       "observations": [
@@ -1296,13 +1296,18 @@
           "observed_at": "2026-07-04T07:20:21.575364+00:00",
           "price": 76427,
           "mileage": 5787
+        },
+        {
+          "observed_at": "2026-07-10T18:55:07.212568+00:00",
+          "price": 76248,
+          "mileage": 5787
         }
       ],
       "stats": {
-        "all_time_low": 76427,
+        "all_time_low": 76248,
         "all_time_high": 76491,
-        "total_drop_pct": -0.08,
-        "n_observations": 7,
+        "total_drop_pct": -0.32,
+        "n_observations": 8,
         "days_observed": 27
       }
     },
