@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-10T10:15:29.828052+00:00",
+  "generated_at": "2026-07-10T12:39:29.176991+00:00",
   "schema_version": 1,
   "vins": {
     "W1KLH6FB5SA102804": {
@@ -277,7 +277,7 @@
       "first_seen_at": "2026-04-29T11:57:15.784091+00:00",
       "current_price": 70937,
       "current_mileage": 8958,
-      "status": "reappeared",
+      "status": "active",
       "observations": [
         {
           "observed_at": "2026-04-29T11:57:15.784091+00:00",
@@ -295,7 +295,7 @@
         "all_time_high": 71860,
         "total_drop_pct": -1.28,
         "n_observations": 2,
-        "days_observed": 71
+        "days_observed": 72
       }
     },
     "W1KLH6FB6RA026150": {
@@ -328,7 +328,7 @@
         "all_time_high": 72998,
         "total_drop_pct": -0.69,
         "n_observations": 3,
-        "days_observed": 66
+        "days_observed": 67
       }
     },
     "W1KLH6FB0SA088150": {
@@ -733,7 +733,7 @@
         "all_time_high": 71492,
         "total_drop_pct": -5.59,
         "n_observations": 11,
-        "days_observed": 43
+        "days_observed": 44
       }
     },
     "W1KZH6AB6PB116701": {
@@ -842,7 +842,7 @@
       "trim": "E450S4",
       "dealer": "R B M of Atlanta, Inc.",
       "first_seen_at": "2026-06-04T15:55:18.581517+00:00",
-      "current_price": 73477,
+      "current_price": 72368,
       "current_mileage": 6237,
       "status": "active",
       "observations": [
@@ -860,13 +860,18 @@
           "observed_at": "2026-06-27T09:09:10.286656+00:00",
           "price": 73477,
           "mileage": 6237
+        },
+        {
+          "observed_at": "2026-07-10T12:38:47.771930+00:00",
+          "price": 72368,
+          "mileage": 6237
         }
       ],
       "stats": {
-        "all_time_low": 73477,
+        "all_time_low": 72368,
         "all_time_high": 74984,
-        "total_drop_pct": -2.01,
-        "n_observations": 3,
+        "total_drop_pct": -3.49,
+        "n_observations": 4,
         "days_observed": 35
       }
     },
@@ -890,7 +895,7 @@
         "all_time_high": 75481,
         "total_drop_pct": 0.0,
         "n_observations": 1,
-        "days_observed": 34
+        "days_observed": 35
       }
     },
     "W1KZH6AB4PB144738": {
@@ -1040,7 +1045,7 @@
       "trim": "E450S4",
       "dealer": "Mercedes-Benz of Durham",
       "first_seen_at": "2026-06-10T01:34:53.866360+00:00",
-      "current_price": 55982,
+      "current_price": 55275,
       "current_mileage": 30805,
       "status": "active",
       "observations": [
@@ -1063,13 +1068,18 @@
           "observed_at": "2026-07-07T22:51:47.577519+00:00",
           "price": 55982,
           "mileage": 30805
+        },
+        {
+          "observed_at": "2026-07-10T12:38:47.771930+00:00",
+          "price": 55275,
+          "mileage": 30805
         }
       ],
       "stats": {
-        "all_time_low": 55982,
+        "all_time_low": 55275,
         "all_time_high": 58367,
-        "total_drop_pct": -4.09,
-        "n_observations": 4,
+        "total_drop_pct": -5.3,
+        "n_observations": 5,
         "days_observed": 30
       }
     },
@@ -1149,7 +1159,7 @@
         "all_time_high": 64998,
         "total_drop_pct": 0.0,
         "n_observations": 1,
-        "days_observed": 27
+        "days_observed": 28
       }
     },
     "W1KZH6AB6PB159273": {
@@ -1177,7 +1187,7 @@
         "all_time_high": 67301,
         "total_drop_pct": 0.0,
         "n_observations": 2,
-        "days_observed": 26
+        "days_observed": 27
       }
     },
     "W1KZH6AB0PB118184": {
@@ -1240,7 +1250,7 @@
         "all_time_high": 50987,
         "total_drop_pct": -1.13,
         "n_observations": 9,
-        "days_observed": 26
+        "days_observed": 27
       }
     },
     "W1KLH6FB8TA215339": {
@@ -1293,7 +1303,7 @@
         "all_time_high": 76491,
         "total_drop_pct": -0.08,
         "n_observations": 7,
-        "days_observed": 26
+        "days_observed": 27
       }
     },
     "W1KLH6FB1SA114903": {
@@ -1321,7 +1331,7 @@
         "all_time_high": 73998,
         "total_drop_pct": -0.54,
         "n_observations": 2,
-        "days_observed": 22
+        "days_observed": 23
       }
     },
     "W1KZH6AB9PB156528": {
@@ -1397,7 +1407,7 @@
       "trim": "E450S4",
       "dealer": "Mercedes-Benz of Pompano",
       "first_seen_at": "2026-06-23T13:36:35.832747+00:00",
-      "current_price": 76491,
+      "current_price": 75991,
       "current_mileage": 7750,
       "status": "active",
       "observations": [
@@ -1420,13 +1430,18 @@
           "observed_at": "2026-07-02T12:02:35.965669+00:00",
           "price": 76491,
           "mileage": 7750
+        },
+        {
+          "observed_at": "2026-07-10T12:38:47.771930+00:00",
+          "price": 75991,
+          "mileage": 7750
         }
       ],
       "stats": {
-        "all_time_low": 76491,
+        "all_time_low": 75991,
         "all_time_high": 78491,
-        "total_drop_pct": -2.55,
-        "n_observations": 4,
+        "total_drop_pct": -3.19,
+        "n_observations": 5,
         "days_observed": 16
       }
     },
@@ -1516,7 +1531,7 @@
       "first_seen_at": "2026-06-25T22:15:40.447396+00:00",
       "current_price": 68499,
       "current_mileage": 19473,
-      "status": "reappeared",
+      "status": "active",
       "observations": [
         {
           "observed_at": "2026-06-25T22:15:40.447396+00:00",
@@ -1648,7 +1663,7 @@
         "all_time_high": 54981,
         "total_drop_pct": 0.0,
         "n_observations": 2,
-        "days_observed": 13
+        "days_observed": 14
       }
     },
     "WDDZH6JB4LA707531": {
@@ -1844,7 +1859,7 @@
         "all_time_high": 74998,
         "total_drop_pct": -0.14,
         "n_observations": 2,
-        "days_observed": 9
+        "days_observed": 10
       }
     },
     "W1KZH6AB6PB139489": {
@@ -1890,7 +1905,7 @@
       "trim": "E450S4",
       "dealer": "Mercedes-Benz of North Orlando",
       "first_seen_at": "2026-07-01T08:08:36.498612+00:00",
-      "current_price": 78411,
+      "current_price": 77411,
       "current_mileage": 15355,
       "status": "active",
       "observations": [
@@ -1908,13 +1923,18 @@
           "observed_at": "2026-07-04T11:18:07.402663+00:00",
           "price": 78411,
           "mileage": 15355
+        },
+        {
+          "observed_at": "2026-07-10T12:38:47.771930+00:00",
+          "price": 77411,
+          "mileage": 15355
         }
       ],
       "stats": {
-        "all_time_low": 78411,
+        "all_time_low": 77411,
         "all_time_high": 81411,
-        "total_drop_pct": -3.69,
-        "n_observations": 3,
+        "total_drop_pct": -4.91,
+        "n_observations": 4,
         "days_observed": 9
       }
     },
@@ -2048,21 +2068,26 @@
       "trim": "E450S4",
       "dealer": "EuroMotorcars Devon, Inc.",
       "first_seen_at": "2026-07-09T21:00:16.097204+00:00",
-      "current_price": 33093,
-      "current_mileage": 54941,
+      "current_price": 43484,
+      "current_mileage": 54945,
       "status": "active",
       "observations": [
         {
           "observed_at": "2026-07-09T21:00:16.097204+00:00",
           "price": 33093,
           "mileage": 54941
+        },
+        {
+          "observed_at": "2026-07-10T12:38:47.771930+00:00",
+          "price": 43484,
+          "mileage": 54945
         }
       ],
       "stats": {
         "all_time_low": 33093,
-        "all_time_high": 33093,
-        "total_drop_pct": 0.0,
-        "n_observations": 1,
+        "all_time_high": 43484,
+        "total_drop_pct": 31.4,
+        "n_observations": 2,
         "days_observed": 0
       }
     },
