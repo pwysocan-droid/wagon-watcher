@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-11T16:24:20.741598+00:00",
+  "generated_at": "2026-07-11T17:27:34.165085+00:00",
   "schema_version": 1,
   "vins": {
     "W1KLH6FB5SA102804": {
@@ -1762,7 +1762,7 @@
         "all_time_high": 54900,
         "total_drop_pct": 0.0,
         "n_observations": 1,
-        "days_observed": 12
+        "days_observed": 13
       }
     },
     "W1KLH6FBXSA153487": {
@@ -2028,7 +2028,7 @@
       "dealer": "Mercedes-Benz of Massapequa",
       "first_seen_at": "2026-07-09T14:34:03.224392+00:00",
       "current_price": 87350,
-      "current_mileage": 6470,
+      "current_mileage": 6474,
       "status": "active",
       "observations": [
         {
@@ -2040,13 +2040,18 @@
           "observed_at": "2026-07-11T15:28:00.043207+00:00",
           "price": 87350,
           "mileage": 6470
+        },
+        {
+          "observed_at": "2026-07-11T17:27:33.766017+00:00",
+          "price": 87350,
+          "mileage": 6474
         }
       ],
       "stats": {
         "all_time_low": 87350,
         "all_time_high": 87350,
         "total_drop_pct": 0.0,
-        "n_observations": 2,
+        "n_observations": 3,
         "days_observed": 2
       }
     },
