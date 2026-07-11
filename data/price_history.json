@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-11T19:38:33.577757+00:00",
+  "generated_at": "2026-07-11T20:38:38.751419+00:00",
   "schema_version": 1,
   "vins": {
     "W1KLH6FB5SA102804": {
@@ -371,7 +371,7 @@
         "all_time_high": 73984,
         "total_drop_pct": -2.06,
         "n_observations": 5,
-        "days_observed": 65
+        "days_observed": 66
       }
     },
     "W1KZH6AB2MA896486": {
@@ -417,7 +417,7 @@
         "all_time_high": 61525,
         "total_drop_pct": 0.0,
         "n_observations": 1,
-        "days_observed": 59
+        "days_observed": 60
       }
     },
     "W1KLH6FB6SA138629": {
@@ -1237,7 +1237,7 @@
       "first_seen_at": "2026-06-13T12:19:58.158781+00:00",
       "current_price": 76248,
       "current_mileage": 5787,
-      "status": "active",
+      "status": "gone",
       "observations": [
         {
           "observed_at": "2026-06-13T12:19:58.158781+00:00",
@@ -1503,7 +1503,7 @@
         "all_time_high": 55035,
         "total_drop_pct": 0.0,
         "n_observations": 3,
-        "days_observed": 17
+        "days_observed": 18
       }
     },
     "W1KLH6FB7SA087237": {
@@ -1950,7 +1950,7 @@
       "first_seen_at": "2026-07-07T21:49:21.934787+00:00",
       "current_price": 77991,
       "current_mileage": 4330,
-      "status": "active",
+      "status": "gone",
       "observations": [
         {
           "observed_at": "2026-07-07T21:49:21.934787+00:00",
@@ -2028,7 +2028,7 @@
       "dealer": "Mercedes-Benz of Massapequa",
       "first_seen_at": "2026-07-09T14:34:03.224392+00:00",
       "current_price": 87350,
-      "current_mileage": 6474,
+      "current_mileage": 6470,
       "status": "active",
       "observations": [
         {
@@ -2045,13 +2045,18 @@
           "observed_at": "2026-07-11T17:27:33.766017+00:00",
           "price": 87350,
           "mileage": 6474
+        },
+        {
+          "observed_at": "2026-07-11T20:38:33.950600+00:00",
+          "price": 87350,
+          "mileage": 6470
         }
       ],
       "stats": {
         "all_time_low": 87350,
         "all_time_high": 87350,
         "total_drop_pct": 0.0,
-        "n_observations": 3,
+        "n_observations": 4,
         "days_observed": 2
       }
     },
