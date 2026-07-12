@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-12T12:11:34.678356+00:00",
+  "generated_at": "2026-07-12T14:02:17.377386+00:00",
   "schema_version": 1,
   "vins": {
     "W1KLH6FB5SA102804": {
@@ -1194,7 +1194,7 @@
         "all_time_high": 50987,
         "total_drop_pct": -1.13,
         "n_observations": 9,
-        "days_observed": 28
+        "days_observed": 29
       }
     },
     "W1KLH6FB8TA215339": {
@@ -1252,7 +1252,7 @@
         "all_time_high": 76491,
         "total_drop_pct": -0.32,
         "n_observations": 8,
-        "days_observed": 28
+        "days_observed": 29
       }
     },
     "W1KLH6FB1SA114903": {
@@ -1391,7 +1391,7 @@
         "all_time_high": 78491,
         "total_drop_pct": -3.19,
         "n_observations": 5,
-        "days_observed": 18
+        "days_observed": 19
       }
     },
     "W1KLH6FB2SA155265": {
@@ -1414,7 +1414,7 @@
         "all_time_high": 76390,
         "total_drop_pct": 0.0,
         "n_observations": 1,
-        "days_observed": 18
+        "days_observed": 19
       }
     },
     "W1KLH6FB4RA026129": {
@@ -1437,7 +1437,7 @@
         "all_time_high": 65998,
         "total_drop_pct": 0.0,
         "n_observations": 1,
-        "days_observed": 18
+        "days_observed": 19
       }
     },
     "W1KZH6AB8NB035065": {
@@ -1612,7 +1612,7 @@
         "all_time_high": 54981,
         "total_drop_pct": 0.0,
         "n_observations": 2,
-        "days_observed": 15
+        "days_observed": 16
       }
     },
     "WDDZH6JB4LA707531": {
