@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-13T21:44:56.515948+00:00",
+  "generated_at": "2026-07-13T22:45:10.427837+00:00",
   "schema_version": 1,
   "vins": {
     "W1KLH6FB5SA102804": {
@@ -1457,7 +1457,7 @@
         "all_time_high": 68499,
         "total_drop_pct": 0.0,
         "n_observations": 4,
-        "days_observed": 17
+        "days_observed": 18
       }
     },
     "W1KZH6AB1MA992125": {
@@ -1480,7 +1480,7 @@
         "all_time_high": 52645,
         "total_drop_pct": 0.0,
         "n_observations": 1,
-        "days_observed": 17
+        "days_observed": 18
       }
     },
     "W1KZH6AB1PB178619": {
@@ -1866,7 +1866,7 @@
       "first_seen_at": "2026-07-07T21:49:21.934787+00:00",
       "current_price": 77991,
       "current_mileage": 4330,
-      "status": "gone",
+      "status": "reappeared",
       "observations": [
         {
           "observed_at": "2026-07-07T21:49:21.934787+00:00",
@@ -1884,7 +1884,7 @@
         "all_time_high": 85965,
         "total_drop_pct": -9.28,
         "n_observations": 2,
-        "days_observed": 5
+        "days_observed": 6
       }
     },
     "W1KZH6AB9PB172132": {
@@ -2099,6 +2099,29 @@
         "total_drop_pct": 0.0,
         "n_observations": 1,
         "days_observed": 2
+      }
+    },
+    "W1KLH6FB2TA196545": {
+      "year": 2026,
+      "trim": "E450S4",
+      "dealer": "Mercedes-Benz of Madison",
+      "first_seen_at": "2026-07-13T22:45:03.922551+00:00",
+      "current_price": 86332,
+      "current_mileage": 5669,
+      "status": "active",
+      "observations": [
+        {
+          "observed_at": "2026-07-13T22:45:03.922551+00:00",
+          "price": 86332,
+          "mileage": 5669
+        }
+      ],
+      "stats": {
+        "all_time_low": 86332,
+        "all_time_high": 86332,
+        "total_drop_pct": 0.0,
+        "n_observations": 1,
+        "days_observed": 0
       }
     }
   }
