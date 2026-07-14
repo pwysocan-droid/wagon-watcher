@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-14T01:29:51.174918+00:00",
+  "generated_at": "2026-07-14T04:28:26.810206+00:00",
   "schema_version": 1,
   "vins": {
     "W1KLH6FB5SA102804": {
@@ -973,7 +973,7 @@
         "all_time_high": 58367,
         "total_drop_pct": -5.3,
         "n_observations": 5,
-        "days_observed": 33
+        "days_observed": 34
       }
     },
     "W1KZH6AB8PB158593": {
