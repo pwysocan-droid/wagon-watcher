@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-15T08:40:07.053985+00:00",
+  "generated_at": "2026-07-15T10:42:20.026271+00:00",
   "schema_version": 1,
   "vins": {
     "W1KLH6FB5SA102804": {
@@ -206,7 +206,7 @@
       "first_seen_at": "2026-04-26T15:50:37.492543+00:00",
       "current_price": 80345,
       "current_mileage": 6174,
-      "status": "reappeared",
+      "status": "active",
       "observations": [
         {
           "observed_at": "2026-04-26T15:50:37.492543+00:00",
@@ -328,7 +328,7 @@
         "all_time_high": 72998,
         "total_drop_pct": -0.69,
         "n_observations": 3,
-        "days_observed": 71
+        "days_observed": 72
       }
     },
     "W1KLH6FB0SA088150": {
@@ -455,7 +455,7 @@
         "all_time_high": 82564,
         "total_drop_pct": -9.73,
         "n_observations": 4,
-        "days_observed": 62
+        "days_observed": 63
       }
     },
     "W1KLH6FB0TA237464": {
@@ -503,7 +503,7 @@
         "all_time_high": 80794,
         "total_drop_pct": -0.98,
         "n_observations": 6,
-        "days_observed": 62
+        "days_observed": 63
       }
     },
     "W1KZH6AB2NB082348": {
@@ -526,7 +526,7 @@
         "all_time_high": 51900,
         "total_drop_pct": 0.0,
         "n_observations": 1,
-        "days_observed": 62
+        "days_observed": 63
       }
     },
     "W1KLH6FB3SA087512": {
@@ -579,7 +579,7 @@
         "all_time_high": 65988,
         "total_drop_pct": -2.27,
         "n_observations": 7,
-        "days_observed": 62
+        "days_observed": 63
       }
     },
     "W1KLH6FB3SA142248": {
@@ -627,7 +627,7 @@
         "all_time_high": 65988,
         "total_drop_pct": -1.52,
         "n_observations": 6,
-        "days_observed": 61
+        "days_observed": 62
       }
     },
     "W1KLH6FB9SA095436": {
@@ -887,7 +887,7 @@
         "all_time_high": 50966,
         "total_drop_pct": 0.0,
         "n_observations": 7,
-        "days_observed": 35
+        "days_observed": 36
       }
     },
     "W1KZH6AB0PB118007": {
@@ -1254,7 +1254,7 @@
         "all_time_high": 62998,
         "total_drop_pct": -5.56,
         "n_observations": 10,
-        "days_observed": 26
+        "days_observed": 27
       }
     },
     "W1KLH6FB0TA220597": {
@@ -1714,7 +1714,7 @@
         "all_time_high": 74998,
         "total_drop_pct": -0.14,
         "n_observations": 2,
-        "days_observed": 14
+        "days_observed": 15
       }
     },
     "W1KZH6AB6PB139489": {
@@ -1722,8 +1722,8 @@
       "trim": "E450S4",
       "dealer": "New Country Motor Cars, Inc.",
       "first_seen_at": "2026-06-30T19:14:28.809888+00:00",
-      "current_price": 60997,
-      "current_mileage": 16945,
+      "current_price": 59997,
+      "current_mileage": 16957,
       "status": "active",
       "observations": [
         {
@@ -1745,13 +1745,18 @@
           "observed_at": "2026-07-05T01:15:01.276884+00:00",
           "price": 60997,
           "mileage": 16945
+        },
+        {
+          "observed_at": "2026-07-15T10:42:16.096175+00:00",
+          "price": 59997,
+          "mileage": 16957
         }
       ],
       "stats": {
-        "all_time_low": 60997,
+        "all_time_low": 59997,
         "all_time_high": 60997,
-        "total_drop_pct": 0.0,
-        "n_observations": 4,
+        "total_drop_pct": -1.64,
+        "n_observations": 5,
         "days_observed": 14
       }
     },
@@ -1940,7 +1945,7 @@
       "first_seen_at": "2026-07-09T21:00:16.097204+00:00",
       "current_price": 43484,
       "current_mileage": 54945,
-      "status": "reappeared",
+      "status": "active",
       "observations": [
         {
           "observed_at": "2026-07-09T21:00:16.097204+00:00",
@@ -1981,7 +1986,7 @@
         "all_time_high": 74110,
         "total_drop_pct": 0.0,
         "n_observations": 1,
-        "days_observed": 4
+        "days_observed": 5
       }
     },
     "W1KLH6FB6SA133396": {
@@ -2004,7 +2009,7 @@
         "all_time_high": 71998,
         "total_drop_pct": 0.0,
         "n_observations": 1,
-        "days_observed": 4
+        "days_observed": 5
       }
     },
     "W1KZH6AB5MA988742": {
@@ -2032,7 +2037,7 @@
         "all_time_high": 48891,
         "total_drop_pct": 0.0,
         "n_observations": 2,
-        "days_observed": 3
+        "days_observed": 4
       }
     },
     "W1KLH6FB3SA129550": {
@@ -2041,21 +2046,26 @@
       "dealer": "Mercedes-Benz of Mount Pleasant",
       "first_seen_at": "2026-07-11T09:04:15.905999+00:00",
       "current_price": 73988,
-      "current_mileage": 15357,
+      "current_mileage": 15430,
       "status": "active",
       "observations": [
         {
           "observed_at": "2026-07-11T09:04:15.905999+00:00",
           "price": 73988,
           "mileage": 15357
+        },
+        {
+          "observed_at": "2026-07-15T10:42:16.096175+00:00",
+          "price": 73988,
+          "mileage": 15430
         }
       ],
       "stats": {
         "all_time_low": 73988,
         "all_time_high": 73988,
         "total_drop_pct": 0.0,
-        "n_observations": 1,
-        "days_observed": 3
+        "n_observations": 2,
+        "days_observed": 4
       }
     },
     "W1KLH6FB2TA196545": {
