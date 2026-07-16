@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-16T21:56:36.271478+00:00",
+  "generated_at": "2026-07-16T22:52:38.298535+00:00",
   "schema_version": 1,
   "vins": {
     "W1KLH6FB5SA102804": {
@@ -77,7 +77,7 @@
       "first_seen_at": "2026-04-26T15:50:37.492543+00:00",
       "current_price": 71973,
       "current_mileage": 8725,
-      "status": "reappeared",
+      "status": "gone",
       "observations": [
         {
           "observed_at": "2026-04-26T15:50:37.492543+00:00",
@@ -745,7 +745,7 @@
       "first_seen_at": "2026-06-04T15:55:18.581517+00:00",
       "current_price": 72368,
       "current_mileage": 6237,
-      "status": "reappeared",
+      "status": "gone",
       "observations": [
         {
           "observed_at": "2026-06-04T15:55:18.581517+00:00",
@@ -966,29 +966,6 @@
         "days_observed": 35
       }
     },
-    "W1KZH6AB6PB162870": {
-      "year": 2023,
-      "trim": "E450S4",
-      "dealer": "Mercedes-Benz of Burlington",
-      "first_seen_at": "2026-06-12T10:46:16.670886+00:00",
-      "current_price": 64998,
-      "current_mileage": 19178,
-      "status": "gone",
-      "observations": [
-        {
-          "observed_at": "2026-06-12T10:46:16.670886+00:00",
-          "price": 64998,
-          "mileage": 19178
-        }
-      ],
-      "stats": {
-        "all_time_low": 64998,
-        "all_time_high": 64998,
-        "total_drop_pct": 0.0,
-        "n_observations": 1,
-        "days_observed": 34
-      }
-    },
     "W1KZH6AB6PB159273": {
       "year": 2023,
       "trim": "E450S4",
@@ -1024,7 +1001,7 @@
       "first_seen_at": "2026-06-13T12:19:58.158781+00:00",
       "current_price": 50411,
       "current_mileage": 71983,
-      "status": "reappeared",
+      "status": "gone",
       "observations": [
         {
           "observed_at": "2026-06-13T12:19:58.158781+00:00",
@@ -1391,7 +1368,7 @@
         "all_time_high": 68499,
         "total_drop_pct": 0.0,
         "n_observations": 4,
-        "days_observed": 20
+        "days_observed": 21
       }
     },
     "W1KZH6AB1MA992125": {
@@ -1414,7 +1391,7 @@
         "all_time_high": 52645,
         "total_drop_pct": 0.0,
         "n_observations": 1,
-        "days_observed": 20
+        "days_observed": 21
       }
     },
     "W1KZH6AB1PB178619": {
@@ -1805,7 +1782,7 @@
       "first_seen_at": "2026-07-07T21:49:21.934787+00:00",
       "current_price": 77991,
       "current_mileage": 4330,
-      "status": "reappeared",
+      "status": "gone",
       "observations": [
         {
           "observed_at": "2026-07-07T21:49:21.934787+00:00",
@@ -2065,7 +2042,7 @@
         "all_time_high": 86332,
         "total_drop_pct": 0.0,
         "n_observations": 1,
-        "days_observed": 2
+        "days_observed": 3
       }
     }
   }
