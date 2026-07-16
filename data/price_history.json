@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-16T10:49:45.239061+00:00",
+  "generated_at": "2026-07-16T12:14:15.151672+00:00",
   "schema_version": 1,
   "vins": {
     "W1KLH6FB5SA102804": {
@@ -295,7 +295,7 @@
         "all_time_high": 71860,
         "total_drop_pct": -1.28,
         "n_observations": 2,
-        "days_observed": 77
+        "days_observed": 78
       }
     },
     "W1KLH6FB6RA026150": {
@@ -372,29 +372,6 @@
         "total_drop_pct": -2.06,
         "n_observations": 5,
         "days_observed": 70
-      }
-    },
-    "W1KZH6AB2MA896486": {
-      "year": 2021,
-      "trim": "E450S4",
-      "dealer": "Quirk Auto Park of Bangor",
-      "first_seen_at": "2026-05-11T23:48:59.600162+00:00",
-      "current_price": 45981,
-      "current_mileage": 65004,
-      "status": "gone",
-      "observations": [
-        {
-          "observed_at": "2026-05-11T23:48:59.600162+00:00",
-          "price": 45981,
-          "mileage": 65004
-        }
-      ],
-      "stats": {
-        "all_time_low": 45981,
-        "all_time_high": 45981,
-        "total_drop_pct": 0.0,
-        "n_observations": 1,
-        "days_observed": 65
       }
     },
     "W1KZH6AB4PB180428": {
@@ -700,7 +677,7 @@
         "all_time_high": 71492,
         "total_drop_pct": -5.59,
         "n_observations": 11,
-        "days_observed": 49
+        "days_observed": 50
       }
     },
     "W1KZH6AB6PB116701": {
@@ -1186,7 +1163,7 @@
         "all_time_high": 73998,
         "total_drop_pct": -0.54,
         "n_observations": 2,
-        "days_observed": 28
+        "days_observed": 29
       }
     },
     "W1KZH6AB9PB156528": {
