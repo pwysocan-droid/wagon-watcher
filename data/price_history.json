@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-16T23:51:18.242969+00:00",
+  "generated_at": "2026-07-17T01:50:17.731774+00:00",
   "schema_version": 1,
   "vins": {
     "W1KLH6FB5SA102804": {
@@ -77,7 +77,7 @@
       "first_seen_at": "2026-04-26T15:50:37.492543+00:00",
       "current_price": 71973,
       "current_mileage": 8725,
-      "status": "gone",
+      "status": "reappeared",
       "observations": [
         {
           "observed_at": "2026-04-26T15:50:37.492543+00:00",
@@ -745,7 +745,7 @@
       "first_seen_at": "2026-06-04T15:55:18.581517+00:00",
       "current_price": 72368,
       "current_mileage": 6237,
-      "status": "gone",
+      "status": "reappeared",
       "observations": [
         {
           "observed_at": "2026-06-04T15:55:18.581517+00:00",
@@ -907,7 +907,7 @@
         "all_time_high": 58367,
         "total_drop_pct": -5.3,
         "n_observations": 5,
-        "days_observed": 36
+        "days_observed": 37
       }
     },
     "W1KZH6AB8PB158593": {
@@ -930,7 +930,7 @@
         "all_time_high": 60794,
         "total_drop_pct": 0.0,
         "n_observations": 1,
-        "days_observed": 35
+        "days_observed": 36
       }
     },
     "W1KLH6FB7SA154743": {
@@ -963,7 +963,7 @@
         "all_time_high": 73681,
         "total_drop_pct": 0.0,
         "n_observations": 3,
-        "days_observed": 35
+        "days_observed": 36
       }
     },
     "W1KZH6AB6PB159273": {
@@ -1001,7 +1001,7 @@
       "first_seen_at": "2026-06-13T12:19:58.158781+00:00",
       "current_price": 50411,
       "current_mileage": 71983,
-      "status": "gone",
+      "status": "reappeared",
       "observations": [
         {
           "observed_at": "2026-06-13T12:19:58.158781+00:00",
@@ -1622,7 +1622,7 @@
       "first_seen_at": "2026-06-30T06:48:19.942008+00:00",
       "current_price": 79482,
       "current_mileage": 1266,
-      "status": "active",
+      "status": "gone",
       "observations": [
         {
           "observed_at": "2026-06-30T06:48:19.942008+00:00",
@@ -1782,7 +1782,7 @@
       "first_seen_at": "2026-07-07T21:49:21.934787+00:00",
       "current_price": 77991,
       "current_mileage": 4330,
-      "status": "gone",
+      "status": "reappeared",
       "observations": [
         {
           "observed_at": "2026-07-07T21:49:21.934787+00:00",
@@ -2043,6 +2043,29 @@
         "total_drop_pct": 0.0,
         "n_observations": 1,
         "days_observed": 3
+      }
+    },
+    "W1KLH6FB4TA207688": {
+      "year": 2026,
+      "trim": "E450S4",
+      "dealer": "Rallye Motors LLC",
+      "first_seen_at": "2026-07-17T01:50:13.403476+00:00",
+      "current_price": 71079,
+      "current_mileage": 5224,
+      "status": "active",
+      "observations": [
+        {
+          "observed_at": "2026-07-17T01:50:13.403476+00:00",
+          "price": 71079,
+          "mileage": 5224
+        }
+      ],
+      "stats": {
+        "all_time_low": 71079,
+        "all_time_high": 71079,
+        "total_drop_pct": 0.0,
+        "n_observations": 1,
+        "days_observed": 0
       }
     }
   }
