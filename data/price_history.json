@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-18T15:44:57.251176+00:00",
+  "generated_at": "2026-07-18T16:44:33.528496+00:00",
   "schema_version": 1,
   "vins": {
     "W1KLH6FB5SA102804": {
@@ -67,7 +67,7 @@
         "all_time_high": 68691,
         "total_drop_pct": -4.66,
         "n_observations": 10,
-        "days_observed": 82
+        "days_observed": 83
       }
     },
     "W1KLH6FB2SA128504": {
@@ -110,7 +110,7 @@
         "all_time_high": 75340,
         "total_drop_pct": -4.47,
         "n_observations": 5,
-        "days_observed": 82
+        "days_observed": 83
       }
     },
     "W1KLH6FB9SA129536": {
@@ -163,7 +163,7 @@
         "all_time_high": 77437,
         "total_drop_pct": -0.65,
         "n_observations": 7,
-        "days_observed": 82
+        "days_observed": 83
       }
     },
     "W1KLH6FB1SA095172": {
@@ -196,7 +196,7 @@
         "all_time_high": 70489,
         "total_drop_pct": -1.42,
         "n_observations": 3,
-        "days_observed": 82
+        "days_observed": 83
       }
     },
     "W1KLH6FB4SA129881": {
@@ -224,7 +224,7 @@
         "all_time_high": 80345,
         "total_drop_pct": 0.0,
         "n_observations": 2,
-        "days_observed": 82
+        "days_observed": 83
       }
     },
     "W1KLH6FB7SA116221": {
@@ -267,7 +267,7 @@
         "all_time_high": 75795,
         "total_drop_pct": -9.68,
         "n_observations": 5,
-        "days_observed": 82
+        "days_observed": 83
       }
     },
     "W1KLH6FBXRA058115": {
@@ -750,7 +750,7 @@
       "first_seen_at": "2026-06-04T15:55:18.581517+00:00",
       "current_price": 72368,
       "current_mileage": 6237,
-      "status": "active",
+      "status": "gone",
       "observations": [
         {
           "observed_at": "2026-06-04T15:55:18.581517+00:00",
@@ -778,7 +778,7 @@
         "all_time_high": 74984,
         "total_drop_pct": -3.49,
         "n_observations": 4,
-        "days_observed": 43
+        "days_observed": 44
       }
     },
     "W1KZH6AB4PB144738": {
@@ -816,7 +816,7 @@
         "all_time_high": 57498,
         "total_drop_pct": -1.74,
         "n_observations": 4,
-        "days_observed": 40
+        "days_observed": 41
       }
     },
     "W1KZH6AB6MA921874": {
@@ -1429,7 +1429,7 @@
       "trim": "E450S4",
       "dealer": "John Sisson Motors, Inc.",
       "first_seen_at": "2026-06-26T06:44:05.766174+00:00",
-      "current_price": 54563,
+      "current_price": 54230,
       "current_mileage": 37194,
       "status": "active",
       "observations": [
@@ -1487,13 +1487,18 @@
           "observed_at": "2026-07-18T11:27:29.250198+00:00",
           "price": 54563,
           "mileage": 37194
+        },
+        {
+          "observed_at": "2026-07-18T16:44:30.859667+00:00",
+          "price": 54230,
+          "mileage": 37194
         }
       ],
       "stats": {
-        "all_time_low": 54563,
+        "all_time_low": 54230,
         "all_time_high": 62406,
-        "total_drop_pct": -12.57,
-        "n_observations": 11,
+        "total_drop_pct": -13.1,
+        "n_observations": 12,
         "days_observed": 22
       }
     },
@@ -1649,7 +1654,7 @@
         "all_time_high": 54900,
         "total_drop_pct": 0.0,
         "n_observations": 3,
-        "days_observed": 19
+        "days_observed": 20
       }
     },
     "W1KLH6FBXSA153487": {
@@ -1737,7 +1742,7 @@
       "dealer": "New Country Motor Cars, Inc.",
       "first_seen_at": "2026-06-30T19:14:28.809888+00:00",
       "current_price": 59997,
-      "current_mileage": 16694,
+      "current_mileage": 16957,
       "status": "active",
       "observations": [
         {
@@ -1789,13 +1794,18 @@
           "observed_at": "2026-07-18T14:43:27.335150+00:00",
           "price": 59997,
           "mileage": 16694
+        },
+        {
+          "observed_at": "2026-07-18T16:44:30.859667+00:00",
+          "price": 59997,
+          "mileage": 16957
         }
       ],
       "stats": {
         "all_time_low": 59997,
         "all_time_high": 60997,
         "total_drop_pct": -1.64,
-        "n_observations": 10,
+        "n_observations": 11,
         "days_observed": 17
       }
     },
