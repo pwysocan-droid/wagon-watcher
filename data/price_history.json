@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-18T11:27:32.747066+00:00",
+  "generated_at": "2026-07-18T12:10:55.487530+00:00",
   "schema_version": 1,
   "vins": {
     "W1KLH6FB5SA102804": {
@@ -295,7 +295,7 @@
         "all_time_high": 71860,
         "total_drop_pct": -1.28,
         "n_observations": 2,
-        "days_observed": 79
+        "days_observed": 80
       }
     },
     "W1KLH6FB6RA026150": {
@@ -682,7 +682,7 @@
         "all_time_high": 71492,
         "total_drop_pct": -5.59,
         "n_observations": 11,
-        "days_observed": 51
+        "days_observed": 52
       }
     },
     "W1KZH6AB6PB116701": {
@@ -1170,7 +1170,7 @@
         "all_time_high": 73998,
         "total_drop_pct": -0.54,
         "n_observations": 2,
-        "days_observed": 30
+        "days_observed": 31
       }
     },
     "W1KZH6AB9PB156528": {
@@ -1737,7 +1737,7 @@
       "dealer": "New Country Motor Cars, Inc.",
       "first_seen_at": "2026-06-30T19:14:28.809888+00:00",
       "current_price": 59997,
-      "current_mileage": 16694,
+      "current_mileage": 16957,
       "status": "active",
       "observations": [
         {
@@ -1779,13 +1779,18 @@
           "observed_at": "2026-07-18T10:09:50.687079+00:00",
           "price": 59997,
           "mileage": 16694
+        },
+        {
+          "observed_at": "2026-07-18T12:10:52.188151+00:00",
+          "price": 59997,
+          "mileage": 16957
         }
       ],
       "stats": {
         "all_time_low": 59997,
         "all_time_high": 60997,
         "total_drop_pct": -1.64,
-        "n_observations": 8,
+        "n_observations": 9,
         "days_observed": 17
       }
     },
