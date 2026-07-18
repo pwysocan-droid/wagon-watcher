@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-18T06:53:32.094747+00:00",
+  "generated_at": "2026-07-18T08:42:59.168000+00:00",
   "schema_version": 1,
   "vins": {
     "W1KLH6FB5SA102804": {
@@ -877,7 +877,7 @@
       "trim": "E450S4",
       "dealer": "Mercedes-Benz of Durham",
       "first_seen_at": "2026-06-10T01:34:53.866360+00:00",
-      "current_price": 54902,
+      "current_price": 55275,
       "current_mileage": 30805,
       "status": "active",
       "observations": [
@@ -910,13 +910,18 @@
           "observed_at": "2026-07-17T18:31:26.468044+00:00",
           "price": 54902,
           "mileage": 30805
+        },
+        {
+          "observed_at": "2026-07-18T08:42:58.806319+00:00",
+          "price": 55275,
+          "mileage": 30805
         }
       ],
       "stats": {
         "all_time_low": 54902,
         "all_time_high": 58367,
-        "total_drop_pct": -5.94,
-        "n_observations": 6,
+        "total_drop_pct": -5.3,
+        "n_observations": 7,
         "days_observed": 38
       }
     },
@@ -1419,7 +1424,7 @@
       "trim": "E450S4",
       "dealer": "John Sisson Motors, Inc.",
       "first_seen_at": "2026-06-26T06:44:05.766174+00:00",
-      "current_price": 54563,
+      "current_price": 55675,
       "current_mileage": 37194,
       "status": "active",
       "observations": [
@@ -1467,13 +1472,18 @@
           "observed_at": "2026-07-17T18:31:26.468044+00:00",
           "price": 54563,
           "mileage": 37194
+        },
+        {
+          "observed_at": "2026-07-18T08:42:58.806319+00:00",
+          "price": 55675,
+          "mileage": 37194
         }
       ],
       "stats": {
         "all_time_low": 54563,
         "all_time_high": 62406,
-        "total_drop_pct": -12.57,
-        "n_observations": 9,
+        "total_drop_pct": -10.79,
+        "n_observations": 10,
         "days_observed": 22
       }
     },
@@ -1604,7 +1614,7 @@
       "trim": "E450S4",
       "dealer": "Mercedes-Benz of Manhattan",
       "first_seen_at": "2026-06-28T16:40:19.702036+00:00",
-      "current_price": 52900,
+      "current_price": 54900,
       "current_mileage": 24166,
       "status": "active",
       "observations": [
@@ -1617,13 +1627,18 @@
           "observed_at": "2026-07-17T18:31:26.468044+00:00",
           "price": 52900,
           "mileage": 24166
+        },
+        {
+          "observed_at": "2026-07-18T08:42:58.806319+00:00",
+          "price": 54900,
+          "mileage": 24166
         }
       ],
       "stats": {
         "all_time_low": 52900,
         "all_time_high": 54900,
-        "total_drop_pct": -3.64,
-        "n_observations": 2,
+        "total_drop_pct": 0.0,
+        "n_observations": 3,
         "days_observed": 19
       }
     },
@@ -1799,7 +1814,7 @@
         "all_time_high": 81411,
         "total_drop_pct": -6.14,
         "n_observations": 5,
-        "days_observed": 16
+        "days_observed": 17
       }
     },
     "W1KLH6FB8SA137367": {
@@ -1822,7 +1837,7 @@
         "all_time_high": 64680,
         "total_drop_pct": 0.0,
         "n_observations": 1,
-        "days_observed": 16
+        "days_observed": 17
       }
     },
     "W1KLH6FB5TA256561": {
