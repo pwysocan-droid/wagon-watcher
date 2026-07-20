@@ -1,75 +1,7 @@
 {
-  "generated_at": "2026-07-20T08:06:03.265499+00:00",
+  "generated_at": "2026-07-20T11:18:46.848230+00:00",
   "schema_version": 1,
   "vins": {
-    "W1KLH6FB5SA102804": {
-      "year": 2025,
-      "trim": "E450S4",
-      "dealer": "Mercedes-Benz of Sycamore",
-      "first_seen_at": "2026-04-26T15:50:37.492543+00:00",
-      "current_price": 65491,
-      "current_mileage": 7937,
-      "status": "gone",
-      "observations": [
-        {
-          "observed_at": "2026-04-26T15:50:37.492543+00:00",
-          "price": 68691,
-          "mileage": 7937
-        },
-        {
-          "observed_at": "2026-04-28T17:09:04.838821+00:00",
-          "price": 68491,
-          "mileage": 7937
-        },
-        {
-          "observed_at": "2026-04-28T19:00:07.148935+00:00",
-          "price": 68691,
-          "mileage": 7937
-        },
-        {
-          "observed_at": "2026-04-28T20:20:38.219570+00:00",
-          "price": 68491,
-          "mileage": 7937
-        },
-        {
-          "observed_at": "2026-04-28T21:35:14.675184+00:00",
-          "price": 68691,
-          "mileage": 7937
-        },
-        {
-          "observed_at": "2026-04-29T05:38:32.386924+00:00",
-          "price": 68491,
-          "mileage": 7937
-        },
-        {
-          "observed_at": "2026-05-13T09:22:44.161676+00:00",
-          "price": 67991,
-          "mileage": 7937
-        },
-        {
-          "observed_at": "2026-05-25T23:57:09.116761+00:00",
-          "price": 66291,
-          "mileage": 7937
-        },
-        {
-          "observed_at": "2026-06-03T19:04:32.554857+00:00",
-          "price": 66091,
-          "mileage": 7937
-        },
-        {
-          "observed_at": "2026-06-17T01:58:51.392107+00:00",
-          "price": 65491,
-          "mileage": 7937
-        }
-      ],
-      "stats": {
-        "all_time_low": 65491,
-        "all_time_high": 68691,
-        "total_drop_pct": -4.66,
-        "n_observations": 10,
-        "days_observed": 84
-      }
-    },
     "W1KLH6FB2SA128504": {
       "year": 2025,
       "trim": "E450S4",
@@ -328,7 +260,7 @@
         "all_time_high": 72998,
         "total_drop_pct": -0.69,
         "n_observations": 3,
-        "days_observed": 76
+        "days_observed": 77
       }
     },
     "W1KLH6FB0SA088150": {
@@ -432,7 +364,7 @@
         "all_time_high": 82564,
         "total_drop_pct": -9.73,
         "n_observations": 4,
-        "days_observed": 67
+        "days_observed": 68
       }
     },
     "W1KLH6FB0TA237464": {
@@ -480,7 +412,7 @@
         "all_time_high": 80794,
         "total_drop_pct": -0.98,
         "n_observations": 6,
-        "days_observed": 67
+        "days_observed": 68
       }
     },
     "W1KZH6AB2NB082348": {
@@ -503,7 +435,7 @@
         "all_time_high": 51900,
         "total_drop_pct": 0.0,
         "n_observations": 1,
-        "days_observed": 67
+        "days_observed": 68
       }
     },
     "W1KLH6FB3SA087512": {
@@ -561,7 +493,7 @@
         "all_time_high": 65988,
         "total_drop_pct": -2.27,
         "n_observations": 8,
-        "days_observed": 67
+        "days_observed": 68
       }
     },
     "W1KLH6FB3SA142248": {
@@ -609,7 +541,7 @@
         "all_time_high": 65988,
         "total_drop_pct": -1.52,
         "n_observations": 6,
-        "days_observed": 66
+        "days_observed": 67
       }
     },
     "W1KLH6FB9SA095436": {
@@ -869,7 +801,7 @@
         "all_time_high": 50966,
         "total_drop_pct": 0.0,
         "n_observations": 7,
-        "days_observed": 40
+        "days_observed": 41
       }
     },
     "W1KZH6AB0PB118007": {
@@ -988,7 +920,7 @@
         "all_time_high": 67301,
         "total_drop_pct": 0.0,
         "n_observations": 2,
-        "days_observed": 36
+        "days_observed": 37
       }
     },
     "W1KZH6AB0PB118184": {
@@ -1220,7 +1152,7 @@
         "all_time_high": 62998,
         "total_drop_pct": -5.56,
         "n_observations": 10,
-        "days_observed": 31
+        "days_observed": 32
       }
     },
     "W1KLH6FB0TA220597": {
@@ -1715,7 +1647,7 @@
         "all_time_high": 74998,
         "total_drop_pct": -0.14,
         "n_observations": 2,
-        "days_observed": 19
+        "days_observed": 20
       }
     },
     "W1KZH6AB6PB139489": {
@@ -1841,7 +1773,7 @@
         "all_time_high": 81411,
         "total_drop_pct": -6.14,
         "n_observations": 5,
-        "days_observed": 18
+        "days_observed": 19
       }
     },
     "W1KLH6FB8SA137367": {
@@ -1864,7 +1796,7 @@
         "all_time_high": 64680,
         "total_drop_pct": 0.0,
         "n_observations": 1,
-        "days_observed": 18
+        "days_observed": 19
       }
     },
     "W1KLH6FB5TA256561": {
@@ -2032,7 +1964,7 @@
         "all_time_high": 74110,
         "total_drop_pct": 0.0,
         "n_observations": 1,
-        "days_observed": 9
+        "days_observed": 10
       }
     },
     "W1KLH6FB6SA133396": {
@@ -2055,7 +1987,7 @@
         "all_time_high": 71998,
         "total_drop_pct": 0.0,
         "n_observations": 1,
-        "days_observed": 9
+        "days_observed": 10
       }
     },
     "W1KZH6AB5MA988742": {
@@ -2088,7 +2020,7 @@
         "all_time_high": 51891,
         "total_drop_pct": 6.14,
         "n_observations": 3,
-        "days_observed": 8
+        "days_observed": 9
       }
     },
     "W1KLH6FB3SA129550": {
@@ -2116,7 +2048,7 @@
         "all_time_high": 73988,
         "total_drop_pct": 0.0,
         "n_observations": 2,
-        "days_observed": 8
+        "days_observed": 9
       }
     },
     "W1KLH6FB2TA196545": {
@@ -2190,7 +2122,7 @@
         "all_time_high": 76815,
         "total_drop_pct": 0.0,
         "n_observations": 2,
-        "days_observed": 2
+        "days_observed": 3
       }
     }
   }
