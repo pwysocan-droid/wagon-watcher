@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-21T05:11:45.331195+00:00",
+  "generated_at": "2026-07-21T07:44:36.551398+00:00",
   "schema_version": 1,
   "vins": {
     "W1KLH6FB2SA128504": {
@@ -9,7 +9,7 @@
       "first_seen_at": "2026-04-26T15:50:37.492543+00:00",
       "current_price": 71973,
       "current_mileage": 8725,
-      "status": "reappeared",
+      "status": "gone",
       "observations": [
         {
           "observed_at": "2026-04-26T15:50:37.492543+00:00",
@@ -156,49 +156,6 @@
         "all_time_high": 80345,
         "total_drop_pct": 0.0,
         "n_observations": 2,
-        "days_observed": 85
-      }
-    },
-    "W1KLH6FB7SA116221": {
-      "year": 2025,
-      "trim": "E450S4",
-      "dealer": "Mercedes-Benz of Huntington",
-      "first_seen_at": "2026-04-26T15:50:37.492543+00:00",
-      "current_price": 68455,
-      "current_mileage": 9194,
-      "status": "gone",
-      "observations": [
-        {
-          "observed_at": "2026-04-26T15:50:37.492543+00:00",
-          "price": 75795,
-          "mileage": 9194
-        },
-        {
-          "observed_at": "2026-04-26T23:31:01.171865+00:00",
-          "price": 75795,
-          "mileage": 9194
-        },
-        {
-          "observed_at": "2026-05-21T20:46:24.580500+00:00",
-          "price": 73795,
-          "mileage": 9194
-        },
-        {
-          "observed_at": "2026-06-03T15:11:31.353813+00:00",
-          "price": 72995,
-          "mileage": 9194
-        },
-        {
-          "observed_at": "2026-06-11T02:44:13.527944+00:00",
-          "price": 68455,
-          "mileage": 9194
-        }
-      ],
-      "stats": {
-        "all_time_low": 68455,
-        "all_time_high": 75795,
-        "total_drop_pct": -9.68,
-        "n_observations": 5,
         "days_observed": 85
       }
     },
@@ -682,7 +639,7 @@
       "first_seen_at": "2026-06-04T15:55:18.581517+00:00",
       "current_price": 72368,
       "current_mileage": 6237,
-      "status": "active",
+      "status": "gone",
       "observations": [
         {
           "observed_at": "2026-06-04T15:55:18.581517+00:00",
@@ -711,44 +668,6 @@
         "total_drop_pct": -3.49,
         "n_observations": 4,
         "days_observed": 46
-      }
-    },
-    "W1KZH6AB4PB144738": {
-      "year": 2023,
-      "trim": "E450S4",
-      "dealer": "Mercedes-Benz of Sudbury",
-      "first_seen_at": "2026-06-07T15:49:27.828337+00:00",
-      "current_price": 56498,
-      "current_mileage": 22979,
-      "status": "gone",
-      "observations": [
-        {
-          "observed_at": "2026-06-07T15:49:27.828337+00:00",
-          "price": 57498,
-          "mileage": 22978
-        },
-        {
-          "observed_at": "2026-06-12T16:43:27.954875+00:00",
-          "price": 56998,
-          "mileage": 22978
-        },
-        {
-          "observed_at": "2026-06-14T13:11:10.933826+00:00",
-          "price": 56998,
-          "mileage": 22979
-        },
-        {
-          "observed_at": "2026-06-19T15:21:12.354675+00:00",
-          "price": 56498,
-          "mileage": 22979
-        }
-      ],
-      "stats": {
-        "all_time_low": 56498,
-        "all_time_high": 57498,
-        "total_drop_pct": -1.74,
-        "n_observations": 4,
-        "days_observed": 43
       }
     },
     "W1KZH6AB6MA921874": {
@@ -930,7 +849,7 @@
       "first_seen_at": "2026-06-13T12:19:58.158781+00:00",
       "current_price": 49907,
       "current_mileage": 71983,
-      "status": "gone",
+      "status": "reappeared",
       "observations": [
         {
           "observed_at": "2026-06-13T12:19:58.158781+00:00",
@@ -1413,7 +1332,7 @@
         "all_time_high": 62406,
         "total_drop_pct": -13.1,
         "n_observations": 12,
-        "days_observed": 24
+        "days_observed": 25
       }
     },
     "W1KZH6AB8PB172252": {
@@ -1464,7 +1383,7 @@
         "all_time_high": 42798,
         "total_drop_pct": 0.0,
         "n_observations": 1,
-        "days_observed": 23
+        "days_observed": 24
       }
     },
     "W1KZH6AB9MA949345": {
@@ -1492,7 +1411,7 @@
         "all_time_high": 51990,
         "total_drop_pct": -4.79,
         "n_observations": 2,
-        "days_observed": 23
+        "days_observed": 24
       }
     },
     "W1KLH6FB8RA026196": {
@@ -1535,7 +1454,7 @@
         "all_time_high": 69988,
         "total_drop_pct": 0.0,
         "n_observations": 5,
-        "days_observed": 23
+        "days_observed": 24
       }
     },
     "W1KZH6AB4NB031238": {
@@ -1591,7 +1510,7 @@
         "all_time_high": 69900,
         "total_drop_pct": 0.0,
         "n_observations": 1,
-        "days_observed": 20
+        "days_observed": 21
       }
     },
     "W1KLH6FB8TA283382": {
@@ -1619,7 +1538,7 @@
         "all_time_high": 79995,
         "total_drop_pct": -0.64,
         "n_observations": 2,
-        "days_observed": 20
+        "days_observed": 21
       }
     },
     "W1KLH6FBXSA104094": {
@@ -1852,7 +1771,7 @@
         "all_time_high": 60690,
         "total_drop_pct": 0.0,
         "n_observations": 2,
-        "days_observed": 12
+        "days_observed": 13
       }
     },
     "W1KLH6FB2SA106048": {
@@ -1875,7 +1794,7 @@
         "all_time_high": 73779,
         "total_drop_pct": 0.0,
         "n_observations": 1,
-        "days_observed": 12
+        "days_observed": 13
       }
     },
     "W1KLH6FB6TA212925": {
@@ -2104,7 +2023,7 @@
       "first_seen_at": "2026-07-17T09:25:50.076226+00:00",
       "current_price": 76815,
       "current_mileage": 12469,
-      "status": "gone",
+      "status": "reappeared",
       "observations": [
         {
           "observed_at": "2026-07-17T09:25:50.076226+00:00",
