@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-22T10:15:26.925965+00:00",
+  "generated_at": "2026-07-22T12:09:54.448739+00:00",
   "schema_version": 1,
   "vins": {
     "W1KLH6FB2SA128504": {
@@ -42,6 +42,29 @@
         "all_time_high": 75340,
         "total_drop_pct": -4.47,
         "n_observations": 5,
+        "days_observed": 86
+      }
+    },
+    "W1KLH6FB1SA097441": {
+      "year": 2025,
+      "trim": "E450S4",
+      "dealer": "R B M of Atlanta, Inc.",
+      "first_seen_at": "2026-04-26T15:50:37.492543+00:00",
+      "current_price": 76900,
+      "current_mileage": 10663,
+      "status": "reappeared",
+      "observations": [
+        {
+          "observed_at": "2026-04-26T15:50:37.492543+00:00",
+          "price": 76900,
+          "mileage": 10663
+        }
+      ],
+      "stats": {
+        "all_time_low": 76900,
+        "all_time_high": 76900,
+        "total_drop_pct": 0.0,
+        "n_observations": 1,
         "days_observed": 86
       }
     },
@@ -184,7 +207,7 @@
         "all_time_high": 71860,
         "total_drop_pct": -1.28,
         "n_observations": 2,
-        "days_observed": 83
+        "days_observed": 84
       }
     },
     "W1KLH6FB6RA026150": {
@@ -217,7 +240,7 @@
         "all_time_high": 72998,
         "total_drop_pct": -0.69,
         "n_observations": 3,
-        "days_observed": 78
+        "days_observed": 79
       }
     },
     "W1KLH6FB0SA088150": {
@@ -571,7 +594,7 @@
         "all_time_high": 71492,
         "total_drop_pct": -5.59,
         "n_observations": 11,
-        "days_observed": 55
+        "days_observed": 56
       }
     },
     "W1KZH6AB6PB116701": {
@@ -839,7 +862,7 @@
         "all_time_high": 67301,
         "total_drop_pct": 0.0,
         "n_observations": 2,
-        "days_observed": 38
+        "days_observed": 39
       }
     },
     "W1KZH6AB0PB118184": {
@@ -849,7 +872,7 @@
       "first_seen_at": "2026-06-13T12:19:58.158781+00:00",
       "current_price": 49907,
       "current_mileage": 71983,
-      "status": "gone",
+      "status": "reappeared",
       "observations": [
         {
           "observed_at": "2026-06-13T12:19:58.158781+00:00",
@@ -1003,7 +1026,7 @@
         "all_time_high": 73998,
         "total_drop_pct": -0.54,
         "n_observations": 2,
-        "days_observed": 34
+        "days_observed": 35
       }
     },
     "W1KZH6AB9PB156528": {
@@ -1081,7 +1104,7 @@
       "first_seen_at": "2026-06-23T13:36:35.832747+00:00",
       "current_price": 75991,
       "current_mileage": 7750,
-      "status": "reappeared",
+      "status": "active",
       "observations": [
         {
           "observed_at": "2026-06-23T13:36:35.832747+00:00",
@@ -1262,7 +1285,7 @@
       "trim": "E450S4",
       "dealer": "John Sisson Motors, Inc.",
       "first_seen_at": "2026-06-26T06:44:05.766174+00:00",
-      "current_price": 54230,
+      "current_price": 53659,
       "current_mileage": 37194,
       "status": "active",
       "observations": [
@@ -1325,13 +1348,18 @@
           "observed_at": "2026-07-18T16:44:30.859667+00:00",
           "price": 54230,
           "mileage": 37194
+        },
+        {
+          "observed_at": "2026-07-22T12:09:48.898568+00:00",
+          "price": 53659,
+          "mileage": 37194
         }
       ],
       "stats": {
-        "all_time_low": 54230,
+        "all_time_low": 53659,
         "all_time_high": 62406,
-        "total_drop_pct": -13.1,
-        "n_observations": 12,
+        "total_drop_pct": -14.02,
+        "n_observations": 13,
         "days_observed": 26
       }
     },
@@ -1566,7 +1594,7 @@
         "all_time_high": 74998,
         "total_drop_pct": -0.14,
         "n_observations": 2,
-        "days_observed": 21
+        "days_observed": 22
       }
     },
     "W1KZH6AB6PB139489": {
