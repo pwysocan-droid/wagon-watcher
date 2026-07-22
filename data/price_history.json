@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-22T12:09:54.448739+00:00",
+  "generated_at": "2026-07-22T14:31:41.440006+00:00",
   "schema_version": 1,
   "vins": {
     "W1KLH6FB2SA128504": {
@@ -50,21 +50,26 @@
       "trim": "E450S4",
       "dealer": "R B M of Atlanta, Inc.",
       "first_seen_at": "2026-04-26T15:50:37.492543+00:00",
-      "current_price": 76900,
-      "current_mileage": 10663,
-      "status": "reappeared",
+      "current_price": 75894,
+      "current_mileage": 13644,
+      "status": "active",
       "observations": [
         {
           "observed_at": "2026-04-26T15:50:37.492543+00:00",
           "price": 76900,
           "mileage": 10663
+        },
+        {
+          "observed_at": "2026-07-22T14:31:37.242847+00:00",
+          "price": 75894,
+          "mileage": 13644
         }
       ],
       "stats": {
-        "all_time_low": 76900,
+        "all_time_low": 75894,
         "all_time_high": 76900,
-        "total_drop_pct": 0.0,
-        "n_observations": 1,
+        "total_drop_pct": -1.31,
+        "n_observations": 2,
         "days_observed": 86
       }
     },
@@ -872,7 +877,7 @@
       "first_seen_at": "2026-06-13T12:19:58.158781+00:00",
       "current_price": 49907,
       "current_mileage": 71983,
-      "status": "reappeared",
+      "status": "active",
       "observations": [
         {
           "observed_at": "2026-06-13T12:19:58.158781+00:00",
@@ -930,7 +935,7 @@
         "all_time_high": 50987,
         "total_drop_pct": -2.12,
         "n_observations": 10,
-        "days_observed": 38
+        "days_observed": 39
       }
     },
     "W1KLH6FB8TA215339": {
@@ -998,7 +1003,7 @@
         "all_time_high": 76491,
         "total_drop_pct": -5.09,
         "n_observations": 10,
-        "days_observed": 38
+        "days_observed": 39
       }
     },
     "W1KLH6FB1SA114903": {
@@ -1102,7 +1107,7 @@
       "trim": "E450S4",
       "dealer": "Mercedes-Benz of Pompano",
       "first_seen_at": "2026-06-23T13:36:35.832747+00:00",
-      "current_price": 75991,
+      "current_price": 75491,
       "current_mileage": 7750,
       "status": "active",
       "observations": [
@@ -1130,14 +1135,19 @@
           "observed_at": "2026-07-10T12:38:47.771930+00:00",
           "price": 75991,
           "mileage": 7750
+        },
+        {
+          "observed_at": "2026-07-22T14:31:37.242847+00:00",
+          "price": 75491,
+          "mileage": 7750
         }
       ],
       "stats": {
-        "all_time_low": 75991,
+        "all_time_low": 75491,
         "all_time_high": 78491,
-        "total_drop_pct": -3.19,
-        "n_observations": 5,
-        "days_observed": 28
+        "total_drop_pct": -3.82,
+        "n_observations": 6,
+        "days_observed": 29
       }
     },
     "W1KLH6FB2SA155265": {
@@ -1160,7 +1170,7 @@
         "all_time_high": 76390,
         "total_drop_pct": 0.0,
         "n_observations": 1,
-        "days_observed": 28
+        "days_observed": 29
       }
     },
     "W1KLH6FB4RA026129": {
@@ -1183,7 +1193,7 @@
         "all_time_high": 65998,
         "total_drop_pct": 0.0,
         "n_observations": 1,
-        "days_observed": 28
+        "days_observed": 29
       }
     },
     "W1KZH6AB8NB035065": {
@@ -1388,7 +1398,7 @@
         "all_time_high": 54981,
         "total_drop_pct": 0.0,
         "n_observations": 2,
-        "days_observed": 25
+        "days_observed": 26
       }
     },
     "WDDZH6JB4LA707531": {
@@ -2070,6 +2080,29 @@
         "total_drop_pct": 0.0,
         "n_observations": 2,
         "days_observed": 5
+      }
+    },
+    "W1KLH6FB9TA207363": {
+      "year": 2026,
+      "trim": "E450S4",
+      "dealer": "Mercedes-Benz of Hanover",
+      "first_seen_at": "2026-07-22T14:31:37.242847+00:00",
+      "current_price": 78293,
+      "current_mileage": 10309,
+      "status": "active",
+      "observations": [
+        {
+          "observed_at": "2026-07-22T14:31:37.242847+00:00",
+          "price": 78293,
+          "mileage": 10309
+        }
+      ],
+      "stats": {
+        "all_time_low": 78293,
+        "all_time_high": 78293,
+        "total_drop_pct": 0.0,
+        "n_observations": 1,
+        "days_observed": 0
       }
     }
   }
