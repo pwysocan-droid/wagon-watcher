@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-22T16:14:27.275673+00:00",
+  "generated_at": "2026-07-22T17:46:53.521831+00:00",
   "schema_version": 1,
   "vins": {
     "W1KLH6FB2SA128504": {
@@ -1107,7 +1107,7 @@
       "trim": "E450S4",
       "dealer": "Mercedes-Benz of Pompano",
       "first_seen_at": "2026-06-23T13:36:35.832747+00:00",
-      "current_price": 75491,
+      "current_price": 75991,
       "current_mileage": 7750,
       "status": "active",
       "observations": [
@@ -1140,13 +1140,18 @@
           "observed_at": "2026-07-22T14:31:37.242847+00:00",
           "price": 75491,
           "mileage": 7750
+        },
+        {
+          "observed_at": "2026-07-22T17:46:52.332038+00:00",
+          "price": 75991,
+          "mileage": 7750
         }
       ],
       "stats": {
         "all_time_low": 75491,
         "all_time_high": 78491,
-        "total_drop_pct": -3.82,
-        "n_observations": 6,
+        "total_drop_pct": -3.19,
+        "n_observations": 7,
         "days_observed": 29
       }
     },
@@ -1525,7 +1530,7 @@
         "all_time_high": 54900,
         "total_drop_pct": 0.0,
         "n_observations": 3,
-        "days_observed": 23
+        "days_observed": 24
       }
     },
     "W1KLH6FBXSA153487": {
