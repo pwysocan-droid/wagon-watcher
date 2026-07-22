@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-22T18:58:19.674349+00:00",
+  "generated_at": "2026-07-22T20:10:36.594932+00:00",
   "schema_version": 1,
   "vins": {
     "W1KLH6FB2SA128504": {
@@ -52,7 +52,7 @@
       "first_seen_at": "2026-04-26T15:50:37.492543+00:00",
       "current_price": 75894,
       "current_mileage": 13644,
-      "status": "reappeared",
+      "status": "active",
       "observations": [
         {
           "observed_at": "2026-04-26T15:50:37.492543+00:00",
@@ -288,7 +288,7 @@
         "all_time_high": 73984,
         "total_drop_pct": -2.06,
         "n_observations": 5,
-        "days_observed": 76
+        "days_observed": 77
       }
     },
     "W1KZH6AB4PB180428": {
@@ -311,7 +311,7 @@
         "all_time_high": 61525,
         "total_drop_pct": 0.0,
         "n_observations": 1,
-        "days_observed": 70
+        "days_observed": 71
       }
     },
     "W1KLH6FB6SA138629": {
@@ -877,7 +877,7 @@
       "first_seen_at": "2026-06-13T12:19:58.158781+00:00",
       "current_price": 49907,
       "current_mileage": 71983,
-      "status": "reappeared",
+      "status": "active",
       "observations": [
         {
           "observed_at": "2026-06-13T12:19:58.158781+00:00",
@@ -1107,7 +1107,7 @@
       "trim": "E450S4",
       "dealer": "Mercedes-Benz of Pompano",
       "first_seen_at": "2026-06-23T13:36:35.832747+00:00",
-      "current_price": 75991,
+      "current_price": 75491,
       "current_mileage": 7750,
       "status": "active",
       "observations": [
@@ -1145,13 +1145,18 @@
           "observed_at": "2026-07-22T17:46:52.332038+00:00",
           "price": 75991,
           "mileage": 7750
+        },
+        {
+          "observed_at": "2026-07-22T20:10:36.038331+00:00",
+          "price": 75491,
+          "mileage": 7750
         }
       ],
       "stats": {
         "all_time_low": 75491,
         "all_time_high": 78491,
-        "total_drop_pct": -3.19,
-        "n_observations": 7,
+        "total_drop_pct": -3.82,
+        "n_observations": 8,
         "days_observed": 29
       }
     },
@@ -1692,7 +1697,7 @@
         "all_time_high": 60997,
         "total_drop_pct": -1.64,
         "n_observations": 13,
-        "days_observed": 21
+        "days_observed": 22
       }
     },
     "W1KLH6FB0RA026242": {
@@ -2094,7 +2099,7 @@
       "first_seen_at": "2026-07-22T14:31:37.242847+00:00",
       "current_price": 78293,
       "current_mileage": 10309,
-      "status": "reappeared",
+      "status": "active",
       "observations": [
         {
           "observed_at": "2026-07-22T14:31:37.242847+00:00",
