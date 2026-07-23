@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-23T01:54:51.481748+00:00",
+  "generated_at": "2026-07-23T05:17:14.053956+00:00",
   "schema_version": 1,
   "vins": {
     "W1KLH6FB2SA128504": {
@@ -882,7 +882,7 @@
       "first_seen_at": "2026-06-13T12:19:58.158781+00:00",
       "current_price": 49907,
       "current_mileage": 71983,
-      "status": "reappeared",
+      "status": "gone",
       "observations": [
         {
           "observed_at": "2026-06-13T12:19:58.158781+00:00",
@@ -1824,7 +1824,7 @@
         "all_time_high": 60690,
         "total_drop_pct": 0.0,
         "n_observations": 2,
-        "days_observed": 14
+        "days_observed": 15
       }
     },
     "W1KLH6FB2SA106048": {
@@ -1847,7 +1847,7 @@
         "all_time_high": 73779,
         "total_drop_pct": 0.0,
         "n_observations": 1,
-        "days_observed": 14
+        "days_observed": 15
       }
     },
     "W1KLH6FB6TA212925": {
@@ -1895,7 +1895,7 @@
       "first_seen_at": "2026-07-09T21:00:16.097204+00:00",
       "current_price": 43484,
       "current_mileage": 54945,
-      "status": "gone",
+      "status": "reappeared",
       "observations": [
         {
           "observed_at": "2026-07-09T21:00:16.097204+00:00",
@@ -2120,6 +2120,52 @@
       "stats": {
         "all_time_low": 78293,
         "all_time_high": 78293,
+        "total_drop_pct": 0.0,
+        "n_observations": 1,
+        "days_observed": 0
+      }
+    },
+    "W1KZH6AB6PB173982": {
+      "year": 2023,
+      "trim": "E450S4",
+      "dealer": "Mercedes-Benz of Latham",
+      "first_seen_at": "2026-07-23T05:17:06.222281+00:00",
+      "current_price": 59995,
+      "current_mileage": 37825,
+      "status": "active",
+      "observations": [
+        {
+          "observed_at": "2026-07-23T05:17:06.222281+00:00",
+          "price": 59995,
+          "mileage": 37825
+        }
+      ],
+      "stats": {
+        "all_time_low": 59995,
+        "all_time_high": 59995,
+        "total_drop_pct": 0.0,
+        "n_observations": 1,
+        "days_observed": 0
+      }
+    },
+    "W1KLH6FB1SA106882": {
+      "year": 2025,
+      "trim": "E450S4",
+      "dealer": "Mercedes-Benz of Scarborough",
+      "first_seen_at": "2026-07-23T05:17:06.222281+00:00",
+      "current_price": 66738,
+      "current_mileage": 24013,
+      "status": "active",
+      "observations": [
+        {
+          "observed_at": "2026-07-23T05:17:06.222281+00:00",
+          "price": 66738,
+          "mileage": 24013
+        }
+      ],
+      "stats": {
+        "all_time_low": 66738,
+        "all_time_high": 66738,
         "total_drop_pct": 0.0,
         "n_observations": 1,
         "days_observed": 0
