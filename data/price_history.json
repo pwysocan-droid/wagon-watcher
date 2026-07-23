@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-22T23:54:56.567049+00:00",
+  "generated_at": "2026-07-23T01:54:51.481748+00:00",
   "schema_version": 1,
   "vins": {
     "W1KLH6FB2SA128504": {
@@ -429,7 +429,7 @@
       "dealer": "Mercedes-Benz OF Tiverton",
       "first_seen_at": "2026-05-13T09:22:44.161676+00:00",
       "current_price": 64487,
-      "current_mileage": 25589,
+      "current_mileage": 26025,
       "status": "active",
       "observations": [
         {
@@ -471,13 +471,18 @@
           "observed_at": "2026-07-17T04:55:24.851098+00:00",
           "price": 64487,
           "mileage": 25589
+        },
+        {
+          "observed_at": "2026-07-23T01:54:49.320479+00:00",
+          "price": 64487,
+          "mileage": 26025
         }
       ],
       "stats": {
         "all_time_low": 64487,
         "all_time_high": 65988,
         "total_drop_pct": -2.27,
-        "n_observations": 8,
+        "n_observations": 9,
         "days_observed": 70
       }
     },
@@ -806,7 +811,7 @@
         "all_time_high": 58367,
         "total_drop_pct": -5.94,
         "n_observations": 8,
-        "days_observed": 42
+        "days_observed": 43
       }
     },
     "W1KLH6FB7SA154743": {
@@ -877,7 +882,7 @@
       "first_seen_at": "2026-06-13T12:19:58.158781+00:00",
       "current_price": 49907,
       "current_mileage": 71983,
-      "status": "gone",
+      "status": "reappeared",
       "observations": [
         {
           "observed_at": "2026-06-13T12:19:58.158781+00:00",
@@ -1890,7 +1895,7 @@
       "first_seen_at": "2026-07-09T21:00:16.097204+00:00",
       "current_price": 43484,
       "current_mileage": 54945,
-      "status": "active",
+      "status": "gone",
       "observations": [
         {
           "observed_at": "2026-07-09T21:00:16.097204+00:00",
@@ -2047,21 +2052,26 @@
       "dealer": "Rallye Motors LLC",
       "first_seen_at": "2026-07-17T01:50:13.403476+00:00",
       "current_price": 71079,
-      "current_mileage": 5224,
+      "current_mileage": 5252,
       "status": "active",
       "observations": [
         {
           "observed_at": "2026-07-17T01:50:13.403476+00:00",
           "price": 71079,
           "mileage": 5224
+        },
+        {
+          "observed_at": "2026-07-23T01:54:49.320479+00:00",
+          "price": 71079,
+          "mileage": 5252
         }
       ],
       "stats": {
         "all_time_low": 71079,
         "all_time_high": 71079,
         "total_drop_pct": 0.0,
-        "n_observations": 1,
-        "days_observed": 5
+        "n_observations": 2,
+        "days_observed": 6
       }
     },
     "W1KLH6FB0RA026189": {
