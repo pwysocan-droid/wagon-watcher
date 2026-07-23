@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-23T16:19:47.161432+00:00",
+  "generated_at": "2026-07-23T17:52:59.514353+00:00",
   "schema_version": 1,
   "vins": {
     "W1KLH6FB2SA128504": {
@@ -672,7 +672,7 @@
       "first_seen_at": "2026-06-04T15:55:18.581517+00:00",
       "current_price": 72368,
       "current_mileage": 6237,
-      "status": "reappeared",
+      "status": "active",
       "observations": [
         {
           "observed_at": "2026-06-04T15:55:18.581517+00:00",
@@ -948,9 +948,9 @@
       "trim": "E450S4",
       "dealer": "Critz, Inc.",
       "first_seen_at": "2026-06-13T12:19:58.158781+00:00",
-      "current_price": 72595,
+      "current_price": 71795,
       "current_mileage": 5787,
-      "status": "reappeared",
+      "status": "active",
       "observations": [
         {
           "observed_at": "2026-06-13T12:19:58.158781+00:00",
@@ -1001,13 +1001,18 @@
           "observed_at": "2026-07-19T11:04:34.793955+00:00",
           "price": 72595,
           "mileage": 5787
+        },
+        {
+          "observed_at": "2026-07-23T17:52:58.404521+00:00",
+          "price": 71795,
+          "mileage": 5787
         }
       ],
       "stats": {
-        "all_time_low": 72595,
+        "all_time_low": 71795,
         "all_time_high": 76491,
-        "total_drop_pct": -5.09,
-        "n_observations": 10,
+        "total_drop_pct": -6.14,
+        "n_observations": 11,
         "days_observed": 40
       }
     },
@@ -1311,7 +1316,7 @@
       "dealer": "John Sisson Motors, Inc.",
       "first_seen_at": "2026-06-26T06:44:05.766174+00:00",
       "current_price": 53659,
-      "current_mileage": 37194,
+      "current_mileage": 37206,
       "status": "active",
       "observations": [
         {
@@ -1378,13 +1383,18 @@
           "observed_at": "2026-07-22T12:09:48.898568+00:00",
           "price": 53659,
           "mileage": 37194
+        },
+        {
+          "observed_at": "2026-07-23T17:52:58.404521+00:00",
+          "price": 53659,
+          "mileage": 37206
         }
       ],
       "stats": {
         "all_time_low": 53659,
         "all_time_high": 62406,
         "total_drop_pct": -14.02,
-        "n_observations": 13,
+        "n_observations": 14,
         "days_observed": 27
       }
     },
@@ -1540,7 +1550,7 @@
         "all_time_high": 54900,
         "total_drop_pct": 0.0,
         "n_observations": 3,
-        "days_observed": 24
+        "days_observed": 25
       }
     },
     "W1KLH6FBXSA153487": {
