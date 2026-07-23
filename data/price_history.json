@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-23T05:17:14.053956+00:00",
+  "generated_at": "2026-07-23T07:54:19.084054+00:00",
   "schema_version": 1,
   "vins": {
     "W1KLH6FB2SA128504": {
@@ -882,7 +882,7 @@
       "first_seen_at": "2026-06-13T12:19:58.158781+00:00",
       "current_price": 49907,
       "current_mileage": 71983,
-      "status": "gone",
+      "status": "reappeared",
       "observations": [
         {
           "observed_at": "2026-06-13T12:19:58.158781+00:00",
@@ -1385,7 +1385,7 @@
         "all_time_high": 62406,
         "total_drop_pct": -14.02,
         "n_observations": 13,
-        "days_observed": 26
+        "days_observed": 27
       }
     },
     "W1KZH6AB8PB172252": {
@@ -1436,7 +1436,7 @@
         "all_time_high": 42798,
         "total_drop_pct": 0.0,
         "n_observations": 1,
-        "days_observed": 25
+        "days_observed": 26
       }
     },
     "W1KZH6AB9MA949345": {
@@ -1464,7 +1464,7 @@
         "all_time_high": 51990,
         "total_drop_pct": -4.79,
         "n_observations": 2,
-        "days_observed": 25
+        "days_observed": 26
       }
     },
     "W1KLH6FB8RA026196": {
@@ -1507,7 +1507,7 @@
         "all_time_high": 69988,
         "total_drop_pct": 0.0,
         "n_observations": 5,
-        "days_observed": 25
+        "days_observed": 26
       }
     },
     "W1KZH6AB4NB031238": {
@@ -1563,7 +1563,7 @@
         "all_time_high": 69900,
         "total_drop_pct": 0.0,
         "n_observations": 1,
-        "days_observed": 22
+        "days_observed": 23
       }
     },
     "W1KLH6FB8TA283382": {
@@ -1591,7 +1591,7 @@
         "all_time_high": 79995,
         "total_drop_pct": -0.64,
         "n_observations": 2,
-        "days_observed": 22
+        "days_observed": 23
       }
     },
     "W1KLH6FBXSA104094": {
@@ -1895,7 +1895,7 @@
       "first_seen_at": "2026-07-09T21:00:16.097204+00:00",
       "current_price": 43484,
       "current_mileage": 54945,
-      "status": "reappeared",
+      "status": "gone",
       "observations": [
         {
           "observed_at": "2026-07-09T21:00:16.097204+00:00",
@@ -2132,7 +2132,7 @@
       "first_seen_at": "2026-07-23T05:17:06.222281+00:00",
       "current_price": 59995,
       "current_mileage": 37825,
-      "status": "active",
+      "status": "gone",
       "observations": [
         {
           "observed_at": "2026-07-23T05:17:06.222281+00:00",
@@ -2155,7 +2155,7 @@
       "first_seen_at": "2026-07-23T05:17:06.222281+00:00",
       "current_price": 66738,
       "current_mileage": 24013,
-      "status": "active",
+      "status": "gone",
       "observations": [
         {
           "observed_at": "2026-07-23T05:17:06.222281+00:00",
