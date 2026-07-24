@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-24T21:33:44.994168+00:00",
+  "generated_at": "2026-07-24T22:53:29.487569+00:00",
   "schema_version": 1,
   "vins": {
     "W1KLH6FB2SA128504": {
@@ -52,7 +52,7 @@
       "first_seen_at": "2026-04-26T15:50:37.492543+00:00",
       "current_price": 75894,
       "current_mileage": 13678,
-      "status": "gone",
+      "status": "reappeared",
       "observations": [
         {
           "observed_at": "2026-04-26T15:50:37.492543+00:00",
@@ -644,7 +644,7 @@
       "first_seen_at": "2026-06-04T15:55:18.581517+00:00",
       "current_price": 72368,
       "current_mileage": 6237,
-      "status": "reappeared",
+      "status": "active",
       "observations": [
         {
           "observed_at": "2026-06-04T15:55:18.581517+00:00",
@@ -1256,7 +1256,7 @@
         "all_time_high": 68499,
         "total_drop_pct": 0.0,
         "n_observations": 4,
-        "days_observed": 28
+        "days_observed": 29
       }
     },
     "W1KZH6AB1MA992125": {
@@ -1279,7 +1279,7 @@
         "all_time_high": 52645,
         "total_drop_pct": 0.0,
         "n_observations": 1,
-        "days_observed": 28
+        "days_observed": 29
       }
     },
     "W1KZH6AB1PB178619": {
@@ -1504,7 +1504,7 @@
       "first_seen_at": "2026-06-28T16:40:19.702036+00:00",
       "current_price": 52900,
       "current_mileage": 24166,
-      "status": "reappeared",
+      "status": "active",
       "observations": [
         {
           "observed_at": "2026-06-28T16:40:19.702036+00:00",
@@ -1788,7 +1788,7 @@
         "all_time_high": 85965,
         "total_drop_pct": -9.28,
         "n_observations": 2,
-        "days_observed": 16
+        "days_observed": 17
       }
     },
     "W1KZH6AB9PB172132": {
@@ -2035,7 +2035,7 @@
         "all_time_high": 86332,
         "total_drop_pct": 0.0,
         "n_observations": 1,
-        "days_observed": 10
+        "days_observed": 11
       }
     },
     "W1KLH6FB4TA207688": {
@@ -2073,7 +2073,7 @@
       "first_seen_at": "2026-07-17T09:25:50.076226+00:00",
       "current_price": 76815,
       "current_mileage": 12469,
-      "status": "reappeared",
+      "status": "gone",
       "observations": [
         {
           "observed_at": "2026-07-17T09:25:50.076226+00:00",
@@ -2166,6 +2166,29 @@
         "total_drop_pct": 0.0,
         "n_observations": 2,
         "days_observed": 1
+      }
+    },
+    "W1KLH6FB8SA148918": {
+      "year": 2025,
+      "trim": "E450S4",
+      "dealer": "Mercedes-Benz of Tysons Corner",
+      "first_seen_at": "2026-07-24T22:53:25.107170+00:00",
+      "current_price": 73415,
+      "current_mileage": 7730,
+      "status": "active",
+      "observations": [
+        {
+          "observed_at": "2026-07-24T22:53:25.107170+00:00",
+          "price": 73415,
+          "mileage": 7730
+        }
+      ],
+      "stats": {
+        "all_time_low": 73415,
+        "all_time_high": 73415,
+        "total_drop_pct": 0.0,
+        "n_observations": 1,
+        "days_observed": 0
       }
     }
   }
