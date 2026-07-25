@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-25T07:31:08.418110+00:00",
+  "generated_at": "2026-07-25T09:29:19.012568+00:00",
   "schema_version": 1,
   "vins": {
     "W1KLH6FB2SA128504": {
@@ -9,7 +9,7 @@
       "first_seen_at": "2026-04-26T15:50:37.492543+00:00",
       "current_price": 71973,
       "current_mileage": 8725,
-      "status": "reappeared",
+      "status": "gone",
       "observations": [
         {
           "observed_at": "2026-04-26T15:50:37.492543+00:00",
@@ -321,7 +321,7 @@
         "all_time_high": 82564,
         "total_drop_pct": -9.73,
         "n_observations": 4,
-        "days_observed": 72
+        "days_observed": 73
       }
     },
     "W1KLH6FB0TA237464": {
@@ -369,7 +369,7 @@
         "all_time_high": 80794,
         "total_drop_pct": -0.98,
         "n_observations": 6,
-        "days_observed": 72
+        "days_observed": 73
       }
     },
     "W1KZH6AB2NB082348": {
@@ -392,7 +392,7 @@
         "all_time_high": 51900,
         "total_drop_pct": 0.0,
         "n_observations": 1,
-        "days_observed": 72
+        "days_observed": 73
       }
     },
     "W1KLH6FB3SA087512": {
@@ -455,7 +455,7 @@
         "all_time_high": 65988,
         "total_drop_pct": -2.27,
         "n_observations": 9,
-        "days_observed": 72
+        "days_observed": 73
       }
     },
     "W1KLH6FB3SA142248": {
@@ -503,7 +503,7 @@
         "all_time_high": 65988,
         "total_drop_pct": -1.52,
         "n_observations": 6,
-        "days_observed": 71
+        "days_observed": 72
       }
     },
     "W1KLH6FB9SA095436": {
@@ -725,7 +725,7 @@
         "all_time_high": 50966,
         "total_drop_pct": 0.0,
         "n_observations": 7,
-        "days_observed": 45
+        "days_observed": 46
       }
     },
     "W1KZH6AB0PB118007": {
@@ -922,7 +922,7 @@
       "first_seen_at": "2026-06-13T12:19:58.158781+00:00",
       "current_price": 71795,
       "current_mileage": 5787,
-      "status": "active",
+      "status": "gone",
       "observations": [
         {
           "observed_at": "2026-06-13T12:19:58.158781+00:00",
@@ -1504,7 +1504,7 @@
       "first_seen_at": "2026-06-28T16:40:19.702036+00:00",
       "current_price": 52900,
       "current_mileage": 24166,
-      "status": "gone",
+      "status": "reappeared",
       "observations": [
         {
           "observed_at": "2026-06-28T16:40:19.702036+00:00",
@@ -1737,7 +1737,7 @@
         "all_time_high": 81411,
         "total_drop_pct": -6.14,
         "n_observations": 5,
-        "days_observed": 23
+        "days_observed": 24
       }
     },
     "W1KLH6FB8SA137367": {
@@ -1760,7 +1760,7 @@
         "all_time_high": 64680,
         "total_drop_pct": 0.0,
         "n_observations": 1,
-        "days_observed": 23
+        "days_observed": 24
       }
     },
     "W1KLH6FB5TA256561": {
@@ -1984,7 +1984,7 @@
         "all_time_high": 51891,
         "total_drop_pct": 6.14,
         "n_observations": 3,
-        "days_observed": 13
+        "days_observed": 14
       }
     },
     "W1KLH6FB3SA129550": {
@@ -2012,7 +2012,7 @@
         "all_time_high": 73988,
         "total_drop_pct": 0.0,
         "n_observations": 2,
-        "days_observed": 13
+        "days_observed": 14
       }
     },
     "W1KLH6FB2TA196545": {
@@ -2073,7 +2073,7 @@
       "first_seen_at": "2026-07-17T09:25:50.076226+00:00",
       "current_price": 76815,
       "current_mileage": 12469,
-      "status": "gone",
+      "status": "reappeared",
       "observations": [
         {
           "observed_at": "2026-07-17T09:25:50.076226+00:00",
@@ -2091,7 +2091,7 @@
         "all_time_high": 76815,
         "total_drop_pct": 0.0,
         "n_observations": 2,
-        "days_observed": 7
+        "days_observed": 8
       }
     },
     "W1KLH6FB9TA207363": {
@@ -2147,7 +2147,7 @@
       "first_seen_at": "2026-07-23T05:17:06.222281+00:00",
       "current_price": 66738,
       "current_mileage": 24564,
-      "status": "active",
+      "status": "gone",
       "observations": [
         {
           "observed_at": "2026-07-23T05:17:06.222281+00:00",
@@ -2175,7 +2175,7 @@
       "first_seen_at": "2026-07-24T22:53:25.107170+00:00",
       "current_price": 73415,
       "current_mileage": 7730,
-      "status": "gone",
+      "status": "reappeared",
       "observations": [
         {
           "observed_at": "2026-07-24T22:53:25.107170+00:00",
@@ -2186,6 +2186,29 @@
       "stats": {
         "all_time_low": 73415,
         "all_time_high": 73415,
+        "total_drop_pct": 0.0,
+        "n_observations": 1,
+        "days_observed": 0
+      }
+    },
+    "W1KZH6AB9NB055261": {
+      "year": 2022,
+      "trim": "E450S4",
+      "dealer": "Benzel-Busch Motor Car Corp.",
+      "first_seen_at": "2026-07-25T09:28:35.139701+00:00",
+      "current_price": 49987,
+      "current_mileage": 51923,
+      "status": "active",
+      "observations": [
+        {
+          "observed_at": "2026-07-25T09:28:35.139701+00:00",
+          "price": 49987,
+          "mileage": 51923
+        }
+      ],
+      "stats": {
+        "all_time_low": 49987,
+        "all_time_high": 49987,
         "total_drop_pct": 0.0,
         "n_observations": 1,
         "days_observed": 0
