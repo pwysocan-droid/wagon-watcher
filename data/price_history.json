@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-25T20:06:16.585461+00:00",
+  "generated_at": "2026-07-25T21:14:59.782150+00:00",
   "schema_version": 1,
   "vins": {
     "W1KLH6FB2SA128504": {
@@ -260,7 +260,7 @@
         "all_time_high": 73984,
         "total_drop_pct": -2.06,
         "n_observations": 5,
-        "days_observed": 79
+        "days_observed": 80
       }
     },
     "W1KZH6AB4PB180428": {
@@ -1165,29 +1165,6 @@
         "days_observed": 32
       }
     },
-    "W1KLH6FB4RA026129": {
-      "year": 2024,
-      "trim": "E450S4",
-      "dealer": "Mercedes-Benz of Lynnfield",
-      "first_seen_at": "2026-06-23T13:36:35.832747+00:00",
-      "current_price": 65998,
-      "current_mileage": 18695,
-      "status": "gone",
-      "observations": [
-        {
-          "observed_at": "2026-06-23T13:36:35.832747+00:00",
-          "price": 65998,
-          "mileage": 18695
-        }
-      ],
-      "stats": {
-        "all_time_low": 65998,
-        "all_time_high": 65998,
-        "total_drop_pct": 0.0,
-        "n_observations": 1,
-        "days_observed": 32
-      }
-    },
     "W1KZH6AB8NB035065": {
       "year": 2022,
       "trim": "E450S4",
@@ -1218,7 +1195,7 @@
         "all_time_high": 55035,
         "total_drop_pct": 0.0,
         "n_observations": 3,
-        "days_observed": 31
+        "days_observed": 32
       }
     },
     "W1KLH6FB7SA087237": {
@@ -1887,7 +1864,7 @@
       "first_seen_at": "2026-07-09T21:00:16.097204+00:00",
       "current_price": 43484,
       "current_mileage": 54945,
-      "status": "gone",
+      "status": "reappeared",
       "observations": [
         {
           "observed_at": "2026-07-09T21:00:16.097204+00:00",
@@ -1905,7 +1882,7 @@
         "all_time_high": 43484,
         "total_drop_pct": 31.4,
         "n_observations": 2,
-        "days_observed": 15
+        "days_observed": 16
       }
     },
     "W1KLH6FB0RA026225": {
