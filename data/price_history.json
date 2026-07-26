@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-26T01:05:04.255603+00:00",
+  "generated_at": "2026-07-26T04:51:40.080549+00:00",
   "schema_version": 1,
   "vins": {
     "W1KLH6FB2SA128504": {
@@ -75,59 +75,6 @@
         "all_time_high": 76900,
         "total_drop_pct": -1.31,
         "n_observations": 3,
-        "days_observed": 90
-      }
-    },
-    "W1KLH6FB9SA129536": {
-      "year": 2025,
-      "trim": "E450S4",
-      "dealer": "Mercedes-Benz of Asheville",
-      "first_seen_at": "2026-04-26T15:50:37.492543+00:00",
-      "current_price": 76937,
-      "current_mileage": 3461,
-      "status": "gone",
-      "observations": [
-        {
-          "observed_at": "2026-04-26T15:50:37.492543+00:00",
-          "price": 77437,
-          "mileage": 3132
-        },
-        {
-          "observed_at": "2026-04-28T17:09:04.838821+00:00",
-          "price": 76937,
-          "mileage": 3132
-        },
-        {
-          "observed_at": "2026-04-28T19:00:07.148935+00:00",
-          "price": 77437,
-          "mileage": 3132
-        },
-        {
-          "observed_at": "2026-04-28T20:20:38.219570+00:00",
-          "price": 76937,
-          "mileage": 3132
-        },
-        {
-          "observed_at": "2026-04-28T21:35:14.675184+00:00",
-          "price": 77437,
-          "mileage": 3132
-        },
-        {
-          "observed_at": "2026-04-29T05:38:32.386924+00:00",
-          "price": 76937,
-          "mileage": 3132
-        },
-        {
-          "observed_at": "2026-05-20T14:01:38.837211+00:00",
-          "price": 76937,
-          "mileage": 3461
-        }
-      ],
-      "stats": {
-        "all_time_low": 76937,
-        "all_time_high": 77437,
-        "total_drop_pct": -0.65,
-        "n_observations": 7,
         "days_observed": 90
       }
     },
@@ -321,54 +268,6 @@
         "all_time_high": 82564,
         "total_drop_pct": -9.73,
         "n_observations": 4,
-        "days_observed": 73
-      }
-    },
-    "W1KLH6FB0TA237464": {
-      "year": 2026,
-      "trim": "E450S4",
-      "dealer": "Mercedes-Benz of Charleston",
-      "first_seen_at": "2026-05-13T09:22:44.161676+00:00",
-      "current_price": 79999,
-      "current_mileage": 4475,
-      "status": "gone",
-      "observations": [
-        {
-          "observed_at": "2026-05-13T09:22:44.161676+00:00",
-          "price": 80794,
-          "mileage": 4467
-        },
-        {
-          "observed_at": "2026-05-13T16:37:35.471057+00:00",
-          "price": 80794,
-          "mileage": 4475
-        },
-        {
-          "observed_at": "2026-05-19T16:45:24.704948+00:00",
-          "price": 80595,
-          "mileage": 4475
-        },
-        {
-          "observed_at": "2026-05-20T08:20:28.736167+00:00",
-          "price": 80794,
-          "mileage": 4475
-        },
-        {
-          "observed_at": "2026-05-20T14:01:38.837211+00:00",
-          "price": 80595,
-          "mileage": 4475
-        },
-        {
-          "observed_at": "2026-06-14T08:52:36.356465+00:00",
-          "price": 79999,
-          "mileage": 4475
-        }
-      ],
-      "stats": {
-        "all_time_low": 79999,
-        "all_time_high": 80794,
-        "total_drop_pct": -0.98,
-        "n_observations": 6,
         "days_observed": 73
       }
     },
@@ -783,7 +682,7 @@
         "all_time_high": 58367,
         "total_drop_pct": -5.94,
         "n_observations": 8,
-        "days_observed": 45
+        "days_observed": 46
       }
     },
     "W1KLH6FB7SA154743": {
@@ -2040,7 +1939,7 @@
         "all_time_high": 71079,
         "total_drop_pct": 0.0,
         "n_observations": 2,
-        "days_observed": 8
+        "days_observed": 9
       }
     },
     "W1KLH6FB0RA026189": {
