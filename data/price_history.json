@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-28T01:53:13.810589+00:00",
+  "generated_at": "2026-07-28T04:55:38.660886+00:00",
   "schema_version": 1,
   "vins": {
     "W1KLH6FB2SA128504": {
@@ -278,7 +278,7 @@
       "first_seen_at": "2026-05-13T09:22:44.161676+00:00",
       "current_price": 64487,
       "current_mileage": 26025,
-      "status": "gone",
+      "status": "reappeared",
       "observations": [
         {
           "observed_at": "2026-05-13T09:22:44.161676+00:00",
@@ -798,7 +798,7 @@
       "first_seen_at": "2026-06-13T12:19:58.158781+00:00",
       "current_price": 71795,
       "current_mileage": 5787,
-      "status": "reappeared",
+      "status": "active",
       "observations": [
         {
           "observed_at": "2026-06-13T12:19:58.158781+00:00",
@@ -1768,7 +1768,7 @@
       "first_seen_at": "2026-07-10T10:14:43.716840+00:00",
       "current_price": 71998,
       "current_mileage": 5978,
-      "status": "gone",
+      "status": "reappeared",
       "observations": [
         {
           "observed_at": "2026-07-10T10:14:43.716840+00:00",
@@ -1875,7 +1875,7 @@
       "first_seen_at": "2026-07-17T01:50:13.403476+00:00",
       "current_price": 71079,
       "current_mileage": 5252,
-      "status": "gone",
+      "status": "reappeared",
       "observations": [
         {
           "observed_at": "2026-07-17T01:50:13.403476+00:00",
@@ -1954,7 +1954,7 @@
       "first_seen_at": "2026-07-23T05:17:06.222281+00:00",
       "current_price": 59995,
       "current_mileage": 37825,
-      "status": "reappeared",
+      "status": "active",
       "observations": [
         {
           "observed_at": "2026-07-23T05:17:06.222281+00:00",
@@ -2026,7 +2026,7 @@
       "trim": "E450S4",
       "dealer": "Benzel-Busch Motor Car Corp.",
       "first_seen_at": "2026-07-25T09:28:35.139701+00:00",
-      "current_price": 49987,
+      "current_price": 51721,
       "current_mileage": 51923,
       "status": "active",
       "observations": [
@@ -2034,13 +2034,18 @@
           "observed_at": "2026-07-25T09:28:35.139701+00:00",
           "price": 49987,
           "mileage": 51923
+        },
+        {
+          "observed_at": "2026-07-28T04:55:37.861912+00:00",
+          "price": 51721,
+          "mileage": 51923
         }
       ],
       "stats": {
         "all_time_low": 49987,
-        "all_time_high": 49987,
-        "total_drop_pct": 0.0,
-        "n_observations": 1,
+        "all_time_high": 51721,
+        "total_drop_pct": 3.47,
+        "n_observations": 2,
         "days_observed": 2
       }
     }
