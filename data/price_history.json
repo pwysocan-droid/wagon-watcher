@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-29T10:59:44.666978+00:00",
+  "generated_at": "2026-07-29T13:01:49.809167+00:00",
   "schema_version": 1,
   "vins": {
     "W1KLH6FB2SA128504": {
@@ -9,7 +9,7 @@
       "first_seen_at": "2026-04-26T15:50:37.492543+00:00",
       "current_price": 71973,
       "current_mileage": 8725,
-      "status": "reappeared",
+      "status": "active",
       "observations": [
         {
           "observed_at": "2026-04-26T15:50:37.492543+00:00",
@@ -164,7 +164,7 @@
         "all_time_high": 71860,
         "total_drop_pct": -1.28,
         "n_observations": 2,
-        "days_observed": 90
+        "days_observed": 91
       }
     },
     "W1KLH6FB0SA088150": {
@@ -715,7 +715,7 @@
         "all_time_high": 50987,
         "total_drop_pct": -2.12,
         "n_observations": 10,
-        "days_observed": 45
+        "days_observed": 46
       }
     },
     "W1KLH6FB8TA215339": {
@@ -788,7 +788,7 @@
         "all_time_high": 76491,
         "total_drop_pct": -6.14,
         "n_observations": 11,
-        "days_observed": 45
+        "days_observed": 46
       }
     },
     "W1KZH6AB9PB156528": {
@@ -864,7 +864,7 @@
       "trim": "E450S4",
       "dealer": "Mercedes-Benz of Pompano",
       "first_seen_at": "2026-06-23T13:36:35.832747+00:00",
-      "current_price": 75491,
+      "current_price": 74995,
       "current_mileage": 7750,
       "status": "active",
       "observations": [
@@ -907,13 +907,18 @@
           "observed_at": "2026-07-22T20:10:36.038331+00:00",
           "price": 75491,
           "mileage": 7750
+        },
+        {
+          "observed_at": "2026-07-29T13:01:44.030537+00:00",
+          "price": 74995,
+          "mileage": 7750
         }
       ],
       "stats": {
-        "all_time_low": 75491,
+        "all_time_low": 74995,
         "all_time_high": 78491,
-        "total_drop_pct": -3.82,
-        "n_observations": 8,
+        "total_drop_pct": -4.45,
+        "n_observations": 9,
         "days_observed": 35
       }
     },
@@ -955,9 +960,9 @@
       "trim": "E450S4",
       "dealer": "Mercedes-Benz of St. Paul",
       "first_seen_at": "2026-06-25T22:15:40.447396+00:00",
-      "current_price": 68499,
+      "current_price": 66870,
       "current_mileage": 19473,
-      "status": "reappeared",
+      "status": "active",
       "observations": [
         {
           "observed_at": "2026-06-25T22:15:40.447396+00:00",
@@ -978,13 +983,18 @@
           "observed_at": "2026-06-27T09:09:10.286656+00:00",
           "price": 68499,
           "mileage": 19473
+        },
+        {
+          "observed_at": "2026-07-29T13:01:44.030537+00:00",
+          "price": 66870,
+          "mileage": 19473
         }
       ],
       "stats": {
-        "all_time_low": 68499,
+        "all_time_low": 66870,
         "all_time_high": 68499,
-        "total_drop_pct": 0.0,
-        "n_observations": 4,
+        "total_drop_pct": -2.38,
+        "n_observations": 5,
         "days_observed": 33
       }
     },
@@ -1106,7 +1116,7 @@
         "all_time_high": 54981,
         "total_drop_pct": 0.0,
         "n_observations": 2,
-        "days_observed": 32
+        "days_observed": 33
       }
     },
     "WDDZH6JB4LA707531": {
@@ -1779,7 +1789,7 @@
       "first_seen_at": "2026-07-17T09:25:50.076226+00:00",
       "current_price": 76815,
       "current_mileage": 12469,
-      "status": "active",
+      "status": "gone",
       "observations": [
         {
           "observed_at": "2026-07-17T09:25:50.076226+00:00",
@@ -1930,7 +1940,7 @@
       "trim": "E450S4",
       "dealer": "Hendrick Motors of Charlotte",
       "first_seen_at": "2026-07-28T10:25:12.144964+00:00",
-      "current_price": 69990,
+      "current_price": 69490,
       "current_mileage": 14467,
       "status": "active",
       "observations": [
@@ -1938,13 +1948,18 @@
           "observed_at": "2026-07-28T10:25:12.144964+00:00",
           "price": 69990,
           "mileage": 14467
+        },
+        {
+          "observed_at": "2026-07-29T13:01:44.030537+00:00",
+          "price": 69490,
+          "mileage": 14467
         }
       ],
       "stats": {
-        "all_time_low": 69990,
+        "all_time_low": 69490,
         "all_time_high": 69990,
-        "total_drop_pct": 0.0,
-        "n_observations": 1,
+        "total_drop_pct": -0.71,
+        "n_observations": 2,
         "days_observed": 1
       }
     },
@@ -1954,20 +1969,25 @@
       "dealer": "Mercedes-Benz of Princeton",
       "first_seen_at": "2026-07-28T10:25:12.144964+00:00",
       "current_price": 86145,
-      "current_mileage": 50,
+      "current_mileage": 54,
       "status": "active",
       "observations": [
         {
           "observed_at": "2026-07-28T10:25:12.144964+00:00",
           "price": 86145,
           "mileage": 50
+        },
+        {
+          "observed_at": "2026-07-29T13:01:44.030537+00:00",
+          "price": 86145,
+          "mileage": 54
         }
       ],
       "stats": {
         "all_time_low": 86145,
         "all_time_high": 86145,
         "total_drop_pct": 0.0,
-        "n_observations": 1,
+        "n_observations": 2,
         "days_observed": 1
       }
     },
