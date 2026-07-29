@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-29T01:45:39.295416+00:00",
+  "generated_at": "2026-07-29T05:11:35.073216+00:00",
   "schema_version": 1,
   "vins": {
     "W1KLH6FB2SA128504": {
@@ -9,7 +9,7 @@
       "first_seen_at": "2026-04-26T15:50:37.492543+00:00",
       "current_price": 71973,
       "current_mileage": 8725,
-      "status": "gone",
+      "status": "reappeared",
       "observations": [
         {
           "observed_at": "2026-04-26T15:50:37.492543+00:00",
@@ -380,79 +380,6 @@
         "total_drop_pct": -1.52,
         "n_observations": 6,
         "days_observed": 75
-      }
-    },
-    "W1KLH6FB9SA095436": {
-      "year": 2025,
-      "trim": "E450S4",
-      "dealer": "Mercedes-Benz of Coconut Creek",
-      "first_seen_at": "2026-05-27T11:31:54.751828+00:00",
-      "current_price": 67493,
-      "current_mileage": 16690,
-      "status": "gone",
-      "observations": [
-        {
-          "observed_at": "2026-05-27T11:31:54.751828+00:00",
-          "price": 71492,
-          "mileage": 16689
-        },
-        {
-          "observed_at": "2026-05-28T10:45:18.642083+00:00",
-          "price": 69990,
-          "mileage": 16689
-        },
-        {
-          "observed_at": "2026-05-29T13:53:27.534638+00:00",
-          "price": 69990,
-          "mileage": 16690
-        },
-        {
-          "observed_at": "2026-06-02T13:52:46.966899+00:00",
-          "price": 69692,
-          "mileage": 16690
-        },
-        {
-          "observed_at": "2026-06-07T22:54:39.909404+00:00",
-          "price": 69292,
-          "mileage": 16690
-        },
-        {
-          "observed_at": "2026-06-12T18:58:14.145893+00:00",
-          "price": 68992,
-          "mileage": 16690
-        },
-        {
-          "observed_at": "2026-06-19T15:21:12.354675+00:00",
-          "price": 68493,
-          "mileage": 16690
-        },
-        {
-          "observed_at": "2026-06-23T16:21:32.202925+00:00",
-          "price": 67993,
-          "mileage": 16690
-        },
-        {
-          "observed_at": "2026-06-27T14:22:43.621303+00:00",
-          "price": 67493,
-          "mileage": 16690
-        },
-        {
-          "observed_at": "2026-06-28T06:55:40.975518+00:00",
-          "price": 67993,
-          "mileage": 16690
-        },
-        {
-          "observed_at": "2026-06-28T11:42:36.599050+00:00",
-          "price": 67493,
-          "mileage": 16690
-        }
-      ],
-      "stats": {
-        "all_time_low": 67493,
-        "all_time_high": 71492,
-        "total_drop_pct": -5.59,
-        "n_observations": 11,
-        "days_observed": 62
       }
     },
     "W1KZH6AB6PB116701": {
@@ -987,29 +914,6 @@
         "all_time_high": 78491,
         "total_drop_pct": -3.82,
         "n_observations": 8,
-        "days_observed": 35
-      }
-    },
-    "W1KLH6FB2SA155265": {
-      "year": 2025,
-      "trim": "E450S4",
-      "dealer": "Mercedes-Benz of Union",
-      "first_seen_at": "2026-06-23T13:36:35.832747+00:00",
-      "current_price": 76390,
-      "current_mileage": 2526,
-      "status": "gone",
-      "observations": [
-        {
-          "observed_at": "2026-06-23T13:36:35.832747+00:00",
-          "price": 76390,
-          "mileage": 2526
-        }
-      ],
-      "stats": {
-        "all_time_low": 76390,
-        "all_time_high": 76390,
-        "total_drop_pct": 0.0,
-        "n_observations": 1,
         "days_observed": 35
       }
     },
@@ -1865,7 +1769,7 @@
         "all_time_high": 71079,
         "total_drop_pct": 0.0,
         "n_observations": 2,
-        "days_observed": 11
+        "days_observed": 12
       }
     },
     "W1KLH6FB0RA026189": {
