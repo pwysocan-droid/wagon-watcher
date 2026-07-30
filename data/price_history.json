@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-30T13:28:09.440197+00:00",
+  "generated_at": "2026-07-30T15:30:26.891733+00:00",
   "schema_version": 1,
   "vins": {
     "W1KLH6FB2SA128504": {
@@ -340,7 +340,7 @@
       "dealer": "Mercedes-Benz OF Tiverton",
       "first_seen_at": "2026-05-14T09:12:41.790440+00:00",
       "current_price": 64987,
-      "current_mileage": 23016,
+      "current_mileage": 22824,
       "status": "active",
       "observations": [
         {
@@ -377,13 +377,18 @@
           "observed_at": "2026-07-29T15:25:05.723369+00:00",
           "price": 64987,
           "mileage": 23016
+        },
+        {
+          "observed_at": "2026-07-30T15:30:26.404504+00:00",
+          "price": 64987,
+          "mileage": 22824
         }
       ],
       "stats": {
         "all_time_low": 64987,
         "all_time_high": 65988,
         "total_drop_pct": -1.52,
-        "n_observations": 7,
+        "n_observations": 8,
         "days_observed": 77
       }
     },
@@ -442,7 +447,7 @@
         "all_time_high": 61995,
         "total_drop_pct": -4.03,
         "n_observations": 8,
-        "days_observed": 56
+        "days_observed": 57
       }
     },
     "W1KLH6FB3RA004560": {
@@ -543,7 +548,7 @@
       "first_seen_at": "2026-06-10T01:34:53.866360+00:00",
       "current_price": 54902,
       "current_mileage": 30805,
-      "status": "reappeared",
+      "status": "active",
       "observations": [
         {
           "observed_at": "2026-06-10T01:34:53.866360+00:00",
@@ -662,7 +667,7 @@
       "first_seen_at": "2026-06-13T12:19:58.158781+00:00",
       "current_price": 49907,
       "current_mileage": 71983,
-      "status": "reappeared",
+      "status": "active",
       "observations": [
         {
           "observed_at": "2026-06-13T12:19:58.158781+00:00",
@@ -730,7 +735,7 @@
       "first_seen_at": "2026-06-13T12:19:58.158781+00:00",
       "current_price": 71795,
       "current_mileage": 5787,
-      "status": "reappeared",
+      "status": "active",
       "observations": [
         {
           "observed_at": "2026-06-13T12:19:58.158781+00:00",
@@ -869,7 +874,7 @@
       "trim": "E450S4",
       "dealer": "Mercedes-Benz of Pompano",
       "first_seen_at": "2026-06-23T13:36:35.832747+00:00",
-      "current_price": 74995,
+      "current_price": 75491,
       "current_mileage": 7750,
       "status": "active",
       "observations": [
@@ -917,14 +922,19 @@
           "observed_at": "2026-07-29T13:01:44.030537+00:00",
           "price": 74995,
           "mileage": 7750
+        },
+        {
+          "observed_at": "2026-07-30T15:30:26.404504+00:00",
+          "price": 75491,
+          "mileage": 7750
         }
       ],
       "stats": {
         "all_time_low": 74995,
         "all_time_high": 78491,
-        "total_drop_pct": -4.45,
-        "n_observations": 9,
-        "days_observed": 36
+        "total_drop_pct": -3.82,
+        "n_observations": 10,
+        "days_observed": 37
       }
     },
     "W1KZH6AB8NB035065": {
@@ -1400,7 +1410,7 @@
       "trim": "E450S4",
       "dealer": "Mercedes-Benz of North Orlando",
       "first_seen_at": "2026-07-01T08:08:36.498612+00:00",
-      "current_price": 75411,
+      "current_price": 76411,
       "current_mileage": 15355,
       "status": "active",
       "observations": [
@@ -1433,13 +1443,18 @@
           "observed_at": "2026-07-30T11:49:55.422780+00:00",
           "price": 75411,
           "mileage": 15355
+        },
+        {
+          "observed_at": "2026-07-30T15:30:26.404504+00:00",
+          "price": 76411,
+          "mileage": 15355
         }
       ],
       "stats": {
         "all_time_low": 75411,
         "all_time_high": 81411,
-        "total_drop_pct": -7.37,
-        "n_observations": 6,
+        "total_drop_pct": -6.14,
+        "n_observations": 7,
         "days_observed": 29
       }
     },
@@ -1580,7 +1595,7 @@
         "all_time_high": 87350,
         "total_drop_pct": 0.0,
         "n_observations": 4,
-        "days_observed": 20
+        "days_observed": 21
       }
     },
     "WDDZH6JB4LA708629": {
@@ -1776,7 +1791,7 @@
       "first_seen_at": "2026-07-17T09:25:50.076226+00:00",
       "current_price": 76815,
       "current_mileage": 12469,
-      "status": "reappeared",
+      "status": "active",
       "observations": [
         {
           "observed_at": "2026-07-17T09:25:50.076226+00:00",
@@ -1817,7 +1832,7 @@
         "all_time_high": 78293,
         "total_drop_pct": 0.0,
         "n_observations": 1,
-        "days_observed": 7
+        "days_observed": 8
       }
     },
     "W1KZH6AB6PB173982": {
@@ -1855,7 +1870,7 @@
       "first_seen_at": "2026-07-23T05:17:06.222281+00:00",
       "current_price": 66738,
       "current_mileage": 24564,
-      "status": "reappeared",
+      "status": "active",
       "observations": [
         {
           "observed_at": "2026-07-23T05:17:06.222281+00:00",
@@ -1881,7 +1896,7 @@
       "trim": "E450S4",
       "dealer": "Mercedes-Benz of Tysons Corner",
       "first_seen_at": "2026-07-24T22:53:25.107170+00:00",
-      "current_price": 73395,
+      "current_price": 73415,
       "current_mileage": 7730,
       "status": "active",
       "observations": [
@@ -1894,13 +1909,18 @@
           "observed_at": "2026-07-30T11:49:55.422780+00:00",
           "price": 73395,
           "mileage": 7730
+        },
+        {
+          "observed_at": "2026-07-30T15:30:26.404504+00:00",
+          "price": 73415,
+          "mileage": 7730
         }
       ],
       "stats": {
         "all_time_low": 73395,
         "all_time_high": 73415,
-        "total_drop_pct": -0.03,
-        "n_observations": 2,
+        "total_drop_pct": 0.0,
+        "n_observations": 3,
         "days_observed": 5
       }
     },
@@ -1937,7 +1957,7 @@
       "trim": "E450S4",
       "dealer": "Hendrick Motors of Charlotte",
       "first_seen_at": "2026-07-28T10:25:12.144964+00:00",
-      "current_price": 69490,
+      "current_price": 69990,
       "current_mileage": 14467,
       "status": "active",
       "observations": [
@@ -1950,13 +1970,18 @@
           "observed_at": "2026-07-29T13:01:44.030537+00:00",
           "price": 69490,
           "mileage": 14467
+        },
+        {
+          "observed_at": "2026-07-30T15:30:26.404504+00:00",
+          "price": 69990,
+          "mileage": 14467
         }
       ],
       "stats": {
         "all_time_low": 69490,
         "all_time_high": 69990,
-        "total_drop_pct": -0.71,
-        "n_observations": 2,
+        "total_drop_pct": 0.0,
+        "n_observations": 3,
         "days_observed": 2
       }
     },
