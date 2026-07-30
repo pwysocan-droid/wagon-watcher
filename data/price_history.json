@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-30T09:58:11.038426+00:00",
+  "generated_at": "2026-07-30T11:50:00.444234+00:00",
   "schema_version": 1,
   "vins": {
     "W1KLH6FB2SA128504": {
@@ -652,7 +652,7 @@
         "all_time_high": 67301,
         "total_drop_pct": 0.0,
         "n_observations": 2,
-        "days_observed": 46
+        "days_observed": 47
       }
     },
     "W1KZH6AB0PB118184": {
@@ -1309,7 +1309,7 @@
         "all_time_high": 74998,
         "total_drop_pct": -0.14,
         "n_observations": 2,
-        "days_observed": 29
+        "days_observed": 30
       }
     },
     "W1KZH6AB6PB139489": {
@@ -1400,7 +1400,7 @@
       "trim": "E450S4",
       "dealer": "Mercedes-Benz of North Orlando",
       "first_seen_at": "2026-07-01T08:08:36.498612+00:00",
-      "current_price": 76411,
+      "current_price": 75411,
       "current_mileage": 15355,
       "status": "active",
       "observations": [
@@ -1428,13 +1428,18 @@
           "observed_at": "2026-07-17T04:55:24.851098+00:00",
           "price": 76411,
           "mileage": 15355
+        },
+        {
+          "observed_at": "2026-07-30T11:49:55.422780+00:00",
+          "price": 75411,
+          "mileage": 15355
         }
       ],
       "stats": {
-        "all_time_low": 76411,
+        "all_time_low": 75411,
         "all_time_high": 81411,
-        "total_drop_pct": -6.14,
-        "n_observations": 5,
+        "total_drop_pct": -7.37,
+        "n_observations": 6,
         "days_observed": 29
       }
     },
@@ -1626,7 +1631,7 @@
         "all_time_high": 74110,
         "total_drop_pct": 0.0,
         "n_observations": 1,
-        "days_observed": 19
+        "days_observed": 20
       }
     },
     "W1KLH6FB6SA133396": {
@@ -1649,7 +1654,7 @@
         "all_time_high": 71998,
         "total_drop_pct": 0.0,
         "n_observations": 1,
-        "days_observed": 19
+        "days_observed": 20
       }
     },
     "W1KZH6AB5MA988742": {
@@ -1876,7 +1881,7 @@
       "trim": "E450S4",
       "dealer": "Mercedes-Benz of Tysons Corner",
       "first_seen_at": "2026-07-24T22:53:25.107170+00:00",
-      "current_price": 73415,
+      "current_price": 73395,
       "current_mileage": 7730,
       "status": "active",
       "observations": [
@@ -1884,13 +1889,18 @@
           "observed_at": "2026-07-24T22:53:25.107170+00:00",
           "price": 73415,
           "mileage": 7730
+        },
+        {
+          "observed_at": "2026-07-30T11:49:55.422780+00:00",
+          "price": 73395,
+          "mileage": 7730
         }
       ],
       "stats": {
-        "all_time_low": 73415,
+        "all_time_low": 73395,
         "all_time_high": 73415,
-        "total_drop_pct": 0.0,
-        "n_observations": 1,
+        "total_drop_pct": -0.03,
+        "n_observations": 2,
         "days_observed": 5
       }
     },
@@ -1947,7 +1957,7 @@
         "all_time_high": 69990,
         "total_drop_pct": -0.71,
         "n_observations": 2,
-        "days_observed": 1
+        "days_observed": 2
       }
     },
     "W1KLH6FB3SA118709": {
@@ -1975,7 +1985,7 @@
         "all_time_high": 86145,
         "total_drop_pct": 0.0,
         "n_observations": 2,
-        "days_observed": 1
+        "days_observed": 2
       }
     },
     "W1KLH6FB1SA161445": {
@@ -1998,7 +2008,7 @@
         "all_time_high": 68974,
         "total_drop_pct": 0.0,
         "n_observations": 1,
-        "days_observed": 0
+        "days_observed": 1
       }
     }
   }
