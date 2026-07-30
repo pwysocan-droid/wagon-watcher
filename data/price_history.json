@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-30T17:15:32.692776+00:00",
+  "generated_at": "2026-07-30T18:52:37.072729+00:00",
   "schema_version": 1,
   "vins": {
     "W1KLH6FB2SA128504": {
@@ -9,7 +9,7 @@
       "first_seen_at": "2026-04-26T15:50:37.492543+00:00",
       "current_price": 71973,
       "current_mileage": 8725,
-      "status": "reappeared",
+      "status": "active",
       "observations": [
         {
           "observed_at": "2026-04-26T15:50:37.492543+00:00",
@@ -255,7 +255,7 @@
       "first_seen_at": "2026-05-13T09:22:44.161676+00:00",
       "current_price": 51900,
       "current_mileage": 37200,
-      "status": "reappeared",
+      "status": "active",
       "observations": [
         {
           "observed_at": "2026-05-13T09:22:44.161676+00:00",
@@ -340,7 +340,7 @@
       "dealer": "Mercedes-Benz OF Tiverton",
       "first_seen_at": "2026-05-14T09:12:41.790440+00:00",
       "current_price": 64987,
-      "current_mileage": 22824,
+      "current_mileage": 23016,
       "status": "active",
       "observations": [
         {
@@ -382,13 +382,18 @@
           "observed_at": "2026-07-30T15:30:26.404504+00:00",
           "price": 64987,
           "mileage": 22824
+        },
+        {
+          "observed_at": "2026-07-30T18:52:35.644013+00:00",
+          "price": 64987,
+          "mileage": 23016
         }
       ],
       "stats": {
         "all_time_low": 64987,
         "all_time_high": 65988,
         "total_drop_pct": -1.52,
-        "n_observations": 8,
+        "n_observations": 9,
         "days_observed": 77
       }
     },
@@ -1235,7 +1240,7 @@
       "first_seen_at": "2026-06-28T16:40:19.702036+00:00",
       "current_price": 52900,
       "current_mileage": 24166,
-      "status": "reappeared",
+      "status": "active",
       "observations": [
         {
           "observed_at": "2026-06-28T16:40:19.702036+00:00",
@@ -1410,7 +1415,7 @@
       "trim": "E450S4",
       "dealer": "Mercedes-Benz of North Orlando",
       "first_seen_at": "2026-07-01T08:08:36.498612+00:00",
-      "current_price": 76411,
+      "current_price": 75411,
       "current_mileage": 15355,
       "status": "active",
       "observations": [
@@ -1448,13 +1453,18 @@
           "observed_at": "2026-07-30T15:30:26.404504+00:00",
           "price": 76411,
           "mileage": 15355
+        },
+        {
+          "observed_at": "2026-07-30T18:52:35.644013+00:00",
+          "price": 75411,
+          "mileage": 15355
         }
       ],
       "stats": {
         "all_time_low": 75411,
         "all_time_high": 81411,
-        "total_drop_pct": -6.14,
-        "n_observations": 7,
+        "total_drop_pct": -7.37,
+        "n_observations": 8,
         "days_observed": 29
       }
     },
@@ -1763,7 +1773,7 @@
       "first_seen_at": "2026-07-17T01:50:13.403476+00:00",
       "current_price": 71079,
       "current_mileage": 5252,
-      "status": "reappeared",
+      "status": "active",
       "observations": [
         {
           "observed_at": "2026-07-17T01:50:13.403476+00:00",
@@ -1842,7 +1852,7 @@
       "first_seen_at": "2026-07-23T05:17:06.222281+00:00",
       "current_price": 59995,
       "current_mileage": 37829,
-      "status": "reappeared",
+      "status": "active",
       "observations": [
         {
           "observed_at": "2026-07-23T05:17:06.222281+00:00",
@@ -1896,7 +1906,7 @@
       "trim": "E450S4",
       "dealer": "Mercedes-Benz of Tysons Corner",
       "first_seen_at": "2026-07-24T22:53:25.107170+00:00",
-      "current_price": 73415,
+      "current_price": 73395,
       "current_mileage": 7730,
       "status": "active",
       "observations": [
@@ -1914,13 +1924,18 @@
           "observed_at": "2026-07-30T15:30:26.404504+00:00",
           "price": 73415,
           "mileage": 7730
+        },
+        {
+          "observed_at": "2026-07-30T18:52:35.644013+00:00",
+          "price": 73395,
+          "mileage": 7730
         }
       ],
       "stats": {
         "all_time_low": 73395,
         "all_time_high": 73415,
-        "total_drop_pct": 0.0,
-        "n_observations": 3,
+        "total_drop_pct": -0.03,
+        "n_observations": 4,
         "days_observed": 5
       }
     },
@@ -1931,7 +1946,7 @@
       "first_seen_at": "2026-07-25T09:28:35.139701+00:00",
       "current_price": 51721,
       "current_mileage": 51923,
-      "status": "reappeared",
+      "status": "active",
       "observations": [
         {
           "observed_at": "2026-07-25T09:28:35.139701+00:00",
@@ -1957,7 +1972,7 @@
       "trim": "E450S4",
       "dealer": "Hendrick Motors of Charlotte",
       "first_seen_at": "2026-07-28T10:25:12.144964+00:00",
-      "current_price": 69990,
+      "current_price": 69490,
       "current_mileage": 14467,
       "status": "active",
       "observations": [
@@ -1975,13 +1990,18 @@
           "observed_at": "2026-07-30T15:30:26.404504+00:00",
           "price": 69990,
           "mileage": 14467
+        },
+        {
+          "observed_at": "2026-07-30T18:52:35.644013+00:00",
+          "price": 69490,
+          "mileage": 14467
         }
       ],
       "stats": {
         "all_time_low": 69490,
         "all_time_high": 69990,
-        "total_drop_pct": 0.0,
-        "n_observations": 3,
+        "total_drop_pct": -0.71,
+        "n_observations": 4,
         "days_observed": 2
       }
     },
@@ -1992,7 +2012,7 @@
       "first_seen_at": "2026-07-28T10:25:12.144964+00:00",
       "current_price": 86145,
       "current_mileage": 54,
-      "status": "reappeared",
+      "status": "active",
       "observations": [
         {
           "observed_at": "2026-07-28T10:25:12.144964+00:00",
@@ -2020,7 +2040,7 @@
       "first_seen_at": "2026-07-29T10:59:38.293859+00:00",
       "current_price": 68974,
       "current_mileage": 9908,
-      "status": "reappeared",
+      "status": "active",
       "observations": [
         {
           "observed_at": "2026-07-29T10:59:38.293859+00:00",
