@@ -9,6 +9,12 @@ const RAW_BASE =
   "https://raw.githubusercontent.com/pwysocan-droid/wagon-watcher/main/digest";
 const FETCH_REVALIDATE_S = 600;
 
+// This GET reads no request input, so Next.js would statically prerender
+// it at build time — the source of the day-old manifests this endpoint
+// served. force-dynamic runs it per-request; no-store (in withCors) keeps
+// the CDN out of it. Upstream fetches still cache for FETCH_REVALIDATE_S.
+export const dynamic = "force-dynamic";
+
 type ManifestItem = {
   label: string;
   href: string;
@@ -25,6 +31,7 @@ type RawManifest = {
 function withCors(res: NextResponse): NextResponse {
   res.headers.set("Access-Control-Allow-Origin", "*");
   res.headers.set("Access-Control-Allow-Methods", "GET, OPTIONS");
+  res.headers.set("Cache-Control", "no-store");
   return res;
 }
 

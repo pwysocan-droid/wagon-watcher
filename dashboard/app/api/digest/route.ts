@@ -6,6 +6,12 @@ const RAW_BASE =
   "https://raw.githubusercontent.com/pwysocan-droid/wagon-watcher/main/digest";
 const PUBLIC_BASE = "https://wagon-watcher.vercel.app/digest";
 
+// Never CDN-cache API responses: Vercel's edge cache was keying these
+// without the query string, so different ?start/?end ranges got the same
+// cached payload. Freshness beats edge latency for this small data API;
+// the upstream raw-GH fetches below still cache for FETCH_REVALIDATE_S.
+export const dynamic = "force-dynamic";
+
 const DATE_RE = /^\d{4}-\d{2}-\d{2}$/;
 const WEEK_RE = /^\d{4}-W\d{2}$/;
 const MAX_RANGE_DAYS = 90;
@@ -28,6 +34,7 @@ function isValidWeek(s: string): boolean {
 function withCors(res: NextResponse): NextResponse {
   res.headers.set("Access-Control-Allow-Origin", "*");
   res.headers.set("Access-Control-Allow-Methods", "GET, OPTIONS");
+  res.headers.set("Cache-Control", "no-store");
   return res;
 }
 

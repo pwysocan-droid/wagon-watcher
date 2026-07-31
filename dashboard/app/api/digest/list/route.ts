@@ -4,6 +4,12 @@ const INDEX_URL =
   "https://raw.githubusercontent.com/pwysocan-droid/wagon-watcher/main/digest/index.json";
 const FETCH_REVALIDATE_S = 600;
 
+// This GET reads no request input, so Next.js would statically prerender
+// it at build time and serve a frozen manifest forever. force-dynamic
+// runs it per-request; no-store (in withCors) keeps the CDN out of it.
+// The upstream manifest fetch still caches for FETCH_REVALIDATE_S.
+export const dynamic = "force-dynamic";
+
 type Item = { label: string; href: string; size_bytes: number };
 type Manifest = {
   generated_at: string;
@@ -14,6 +20,7 @@ type Manifest = {
 function withCors(res: NextResponse): NextResponse {
   res.headers.set("Access-Control-Allow-Origin", "*");
   res.headers.set("Access-Control-Allow-Methods", "GET, OPTIONS");
+  res.headers.set("Cache-Control", "no-store");
   return res;
 }
 
