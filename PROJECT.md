@@ -187,6 +187,12 @@ Two core tables plus three support tables. SQLite, with `PRAGMA journal_mode=WAL
 - `error_message` TEXT NULL
 
 ### `watchlist` (specs or VINs I'm tracking closely)
+
+The active spec row ("Within criteria.md") implements the canonical buying
+spec in `criteria.md` at the repo root — see that file for the full
+criteria including the parts a spec row can't encode (CPO, clean history,
+benchmark config).
+
 - `id` INTEGER PRIMARY KEY
 - `kind` TEXT  -- 'vin' | 'spec'
 - `vin` TEXT NULL
