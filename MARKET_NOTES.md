@@ -4,6 +4,46 @@ Running market observations for the wagon watch. Newest entries on top.
 Convention per entry: dated section header, observation → interpretation
 structure, pattern signals marked with confidence.
 
+## 2026-07-31 — Survival analysis v1: reaction windows and percentile tracks
+
+Strategic conclusions from analysis/survival_v1.md (94-VIN clean cohort,
+65 completed lifetimes), developed in the claude.ai session of 2026-07-31.
+
+**1. The reaction window is ~2 weeks, not hours (pattern signal, high
+confidence).** Median time-to-sale is 15 days (KM, IQR 6–43). Well-priced
+qualifying cars carry a 13–18 day fuse. The Keyes flash-sale (gone in
+hours) is the exception, not the rule. Practical implication: when a
+qualifying car appears, there is time for the full remote-purchase
+guardrail sequence (Carfax + AutoCheck, CPO sheet, video walkaround, PPI)
+— but not for passive watching. Engage week one, decide by day 10–14.
+
+**2. Percentile-at-listing predicts the car's track, not its speed
+(pattern signal, high confidence).** Sold cars cluster ~10 days in every
+price band (elasticity r²=0.04, ~1.1 days per 10 percentile points). But
+the tail separates hard: every 40+ day survivor listed above the 55th
+percentile; everything under the 25th percentile and under $70k cleared
+in ≤18 days. Triage rule for November:
+- <25th percentile: Fort Pierce archetype. List price is the deal.
+  Engage immediately, decide fast.
+- 25th–55th: conventional negotiation band.
+- >55th percentile: near-certain future stale target. Don't chase now —
+  calendar it and phone-negotiate at day 45+.
+
+**3. Two-track refinement.** The "let fresh arrivals run their cuts,
+engage as cuts flatten (~week 3)" play only applies to mid/high-percentile
+cars — low-percentile cars sell before their cuts flatten. Waiting out a
+low-percentile car means losing it.
+
+**4. November window arithmetic.** A 15-day median lifetime means the
+Oct 15–Nov 30 window spans ~3 full market turnover cycles. At summer
+inflow rates (~5–7 new listings/week) that's 30+ listings crossing the
+window; historical criteria conversion (~10–15%) puts the base case at
+3–5 qualifying candidates even without fall replenishment.
+
+Validation reference: analysis/survival_v1.md. Re-run as survival_v2 at
+the late-September checkpoint; diff the two for the seasonal tempo
+reading (did the market slow down or speed up into fall?).
+
 ## 2026-07-30 — 101-day analysis: survivorship bias, decay clustering, month-end 4-for-4
 
 Three findings from the April 29 – July 30 observation window (105 digests),
