@@ -7,6 +7,11 @@ deferred from the 2026-07-30 analysis session (see MARKET_NOTES.md entry of
 that date): month-end drop clustering and day 25–35 / 55–65 / 85+ decay
 clustering.
 
+> **Re-run reminder:** re-run this analysis after **2026-09-25**, when the
+> late-DoL bins (55–65, 66–84, 85+) will have enough uncensored data to
+> confirm or refute the absence of late-life cut clusters (verdict 2's
+> right-censoring caveat).
+
 ## Verdicts up front
 
 1. **Month-end clustering: PARTIALLY HELD.** There is a real but modest
