@@ -19,6 +19,18 @@ def _suppress_pushover(monkeypatch, tmp_path_factory):
 
 
 @pytest.fixture(autouse=True)
+def _isolate_anomalies_log(monkeypatch, tmp_path_factory):
+    """Redirect scrape.ANOMALIES_LOG to an isolated tmp file so tests that
+    exercise the price-quarantine path (msrp <= PRICE_ANOMALY_FLOOR) don't
+    append to the repo's real data/anomalies.jsonl."""
+    import scrape
+    monkeypatch.setattr(
+        scrape, "ANOMALIES_LOG",
+        tmp_path_factory.mktemp("anomalies") / "anomalies.jsonl",
+    )
+
+
+@pytest.fixture(autouse=True)
 def _mock_vin_decode(monkeypatch):
     """Default every test to a no-op vin_decode.decode so reconcile tests
     that insert new listings don't hit the NHTSA API. Tests that specifically

@@ -23,6 +23,14 @@ ROOT = Path(__file__).parent
 FIXTURE = ROOT / "fixtures" / "sample_response.json"
 RAW_SNAPSHOTS = ROOT / "raw_snapshots"
 
+# Quarantine floor for implausible prices. The API returned msrp=0 for 10
+# records on the 2026-04-26 21:59 poll; those rows reached price_history and
+# skewed the 2026-07-30 EOM analysis (analysis/eom_pattern.md) before being
+# deleted. CPO wagons are never ≤ $1,000, so anything at or below the floor
+# is treated as missing and logged to data/anomalies.jsonl for visibility.
+PRICE_ANOMALY_FLOOR = 1_000
+ANOMALIES_LOG = ROOT / "data" / "anomalies.jsonl"
+
 ENDPOINT = "https://nafta-service.mbusa.com/api/inv/v1/en_us/used/vehicles/search"
 USER_AGENT = "mb-wagon-watcher/1.0 (personal research; pwysocan@gmail.com)"
 
@@ -121,6 +129,25 @@ def _first(seq: Any) -> Any:
     return None
 
 
+def _log_price_anomaly(vin: str, raw_msrp: int) -> None:
+    """Append a quarantined-price record to data/anomalies.jsonl.
+
+    Best-effort: a logging failure must never fail the scrape itself."""
+    entry = {
+        "at": datetime.now(timezone.utc).isoformat(),
+        "kind": "price_quarantined",
+        "vin": vin,
+        "raw_msrp": raw_msrp,
+        "reason": f"msrp <= {PRICE_ANOMALY_FLOOR}",
+    }
+    try:
+        ANOMALIES_LOG.parent.mkdir(parents=True, exist_ok=True)
+        with ANOMALIES_LOG.open("a", encoding="utf-8") as f:
+            f.write(json.dumps(entry) + "\n")
+    except OSError:
+        pass
+
+
 def parse_record(record: dict) -> ParsedRecord:
     """Map one raw API record to the watcher's domain model.
 
@@ -138,12 +165,15 @@ def parse_record(record: dict) -> ParsedRecord:
     images = uva.get("images") or []
     option_list = uva.get("optionList") or []
 
-    # Defensive: the API has been observed returning msrp=0 transiently
-    # (10 records on the 2026-04-26 21:59 poll). CPO wagons are never $0,
-    # so treat 0/negative as missing and let downstream code skip pricing
-    # operations until the API recovers on a later poll.
+    # Quarantine implausible prices (see PRICE_ANOMALY_FLOOR): treat as
+    # missing so downstream code skips pricing operations until the API
+    # recovers on a later poll, and log so a recurrence is visible.
     raw_msrp = _to_int(record.get("msrp"))
-    mbusa_price = raw_msrp if (raw_msrp is not None and raw_msrp > 0) else None
+    if raw_msrp is not None and raw_msrp <= PRICE_ANOMALY_FLOOR:
+        _log_price_anomaly(record["vin"], raw_msrp)
+        mbusa_price = None
+    else:
+        mbusa_price = raw_msrp
 
     return ParsedRecord(
         vin=record["vin"],

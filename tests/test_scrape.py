@@ -158,6 +158,47 @@ def test_parse_record_treats_negative_msrp_as_missing():
     assert p.mbusa_price is None
 
 
+def test_parse_record_quarantines_price_at_floor_and_logs(tmp_path, monkeypatch):
+    """msrp <= PRICE_ANOMALY_FLOOR is treated as missing AND appended to the
+    anomalies log — the 2026-04-26 price=0 glitch made it into price_history
+    silently; a recurrence must be visible."""
+    import scrape
+    log = tmp_path / "anomalies.jsonl"
+    monkeypatch.setattr(scrape, "ANOMALIES_LOG", log)
+    raw = {"vin": "FLOOR_PRICE______", "msrp": scrape.PRICE_ANOMALY_FLOOR,
+           "usedVehicleAttributes": {"mileage": 12000}}
+    p = parse_record(raw)
+    assert p.mbusa_price is None
+    assert p.mileage == 12000  # unrelated fields still parse
+    entry = json.loads(log.read_text().splitlines()[0])
+    assert entry["kind"] == "price_quarantined"
+    assert entry["vin"] == "FLOOR_PRICE______"
+    assert entry["raw_msrp"] == scrape.PRICE_ANOMALY_FLOOR
+
+
+def test_parse_record_price_just_above_floor_passes_without_logging(
+    tmp_path, monkeypatch,
+):
+    import scrape
+    log = tmp_path / "anomalies.jsonl"
+    monkeypatch.setattr(scrape, "ANOMALIES_LOG", log)
+    raw = {"vin": "OK_PRICE_________",
+           "msrp": scrape.PRICE_ANOMALY_FLOOR + 1, "usedVehicleAttributes": {}}
+    p = parse_record(raw)
+    assert p.mbusa_price == scrape.PRICE_ANOMALY_FLOOR + 1
+    assert not log.exists()
+
+
+def test_parse_record_missing_msrp_does_not_log(tmp_path, monkeypatch):
+    """Absent msrp is ordinary sparse data, not an anomaly."""
+    import scrape
+    log = tmp_path / "anomalies.jsonl"
+    monkeypatch.setattr(scrape, "ANOMALIES_LOG", log)
+    p = parse_record({"vin": "NO_PRICE_________", "usedVehicleAttributes": {}})
+    assert p.mbusa_price is None
+    assert not log.exists()
+
+
 def test_parse_record_handles_dealer_with_no_address():
     raw = {
         "vin": "TESTVIN0000000002",
