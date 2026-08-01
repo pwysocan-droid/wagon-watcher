@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-01T05:22:37.918649+00:00",
+  "generated_at": "2026-08-01T07:40:28.166651+00:00",
   "schema_version": 1,
   "vins": {
     "W1KLH6FB2SA128504": {
@@ -341,7 +341,7 @@
       "first_seen_at": "2026-05-14T09:12:41.790440+00:00",
       "current_price": 64987,
       "current_mileage": 23016,
-      "status": "gone",
+      "status": "reappeared",
       "observations": [
         {
           "observed_at": "2026-05-14T09:12:41.790440+00:00",
@@ -602,39 +602,6 @@
         "total_drop_pct": -5.94,
         "n_observations": 8,
         "days_observed": 52
-      }
-    },
-    "W1KLH6FB7SA154743": {
-      "year": 2025,
-      "trim": "E450S4",
-      "dealer": "EuroMotorcars Devon, Inc.",
-      "first_seen_at": "2026-06-10T23:53:36.737226+00:00",
-      "current_price": 73681,
-      "current_mileage": 6693,
-      "status": "gone",
-      "observations": [
-        {
-          "observed_at": "2026-06-10T23:53:36.737226+00:00",
-          "price": 73681,
-          "mileage": 6176
-        },
-        {
-          "observed_at": "2026-06-12T16:43:27.954875+00:00",
-          "price": 73681,
-          "mileage": 6407
-        },
-        {
-          "observed_at": "2026-07-01T11:36:31.035154+00:00",
-          "price": 73681,
-          "mileage": 6693
-        }
-      ],
-      "stats": {
-        "all_time_low": 73681,
-        "all_time_high": 73681,
-        "total_drop_pct": 0.0,
-        "n_observations": 3,
-        "days_observed": 51
       }
     },
     "W1KZH6AB6PB159273": {
@@ -1108,7 +1075,7 @@
         "all_time_high": 62406,
         "total_drop_pct": -14.02,
         "n_observations": 15,
-        "days_observed": 35
+        "days_observed": 36
       }
     },
     "W1KZH6AB8PB172252": {
@@ -1159,7 +1126,7 @@
         "all_time_high": 42798,
         "total_drop_pct": 0.0,
         "n_observations": 1,
-        "days_observed": 34
+        "days_observed": 35
       }
     },
     "W1KZH6AB9MA949345": {
@@ -1187,7 +1154,7 @@
         "all_time_high": 51990,
         "total_drop_pct": -4.79,
         "n_observations": 2,
-        "days_observed": 34
+        "days_observed": 35
       }
     },
     "W1KLH6FB8RA026196": {
@@ -1230,7 +1197,7 @@
         "all_time_high": 69988,
         "total_drop_pct": 0.0,
         "n_observations": 5,
-        "days_observed": 34
+        "days_observed": 35
       }
     },
     "W1KZH6AB4NB031238": {
@@ -1296,7 +1263,7 @@
         "all_time_high": 79995,
         "total_drop_pct": -0.64,
         "n_observations": 2,
-        "days_observed": 31
+        "days_observed": 32
       }
     },
     "W1KLH6FBXSA104094": {
@@ -1468,29 +1435,6 @@
         "days_observed": 30
       }
     },
-    "W1KLH6FB8SA137367": {
-      "year": 2025,
-      "trim": "E450S4",
-      "dealer": "Euro Motorcars, LLC",
-      "first_seen_at": "2026-07-01T08:08:36.498612+00:00",
-      "current_price": 64680,
-      "current_mileage": 7718,
-      "status": "gone",
-      "observations": [
-        {
-          "observed_at": "2026-07-01T08:08:36.498612+00:00",
-          "price": 64680,
-          "mileage": 7718
-        }
-      ],
-      "stats": {
-        "all_time_low": 64680,
-        "all_time_high": 64680,
-        "total_drop_pct": 0.0,
-        "n_observations": 1,
-        "days_observed": 30
-      }
-    },
     "W1KLH6FB5TA256561": {
       "year": 2026,
       "trim": "E450S4",
@@ -1498,7 +1442,7 @@
       "first_seen_at": "2026-07-07T21:49:21.934787+00:00",
       "current_price": 77991,
       "current_mileage": 4330,
-      "status": "active",
+      "status": "gone",
       "observations": [
         {
           "observed_at": "2026-07-07T21:49:21.934787+00:00",
@@ -2068,7 +2012,7 @@
       "first_seen_at": "2026-08-01T01:56:33.151955+00:00",
       "current_price": 75990,
       "current_mileage": 5678,
-      "status": "active",
+      "status": "gone",
       "observations": [
         {
           "observed_at": "2026-08-01T01:56:33.151955+00:00",
@@ -2091,7 +2035,7 @@
       "first_seen_at": "2026-08-01T01:56:33.151955+00:00",
       "current_price": 74995,
       "current_mileage": 5562,
-      "status": "active",
+      "status": "gone",
       "observations": [
         {
           "observed_at": "2026-08-01T01:56:33.151955+00:00",
@@ -2114,7 +2058,7 @@
       "first_seen_at": "2026-08-01T01:56:33.151955+00:00",
       "current_price": 76995,
       "current_mileage": 5454,
-      "status": "active",
+      "status": "gone",
       "observations": [
         {
           "observed_at": "2026-08-01T01:56:33.151955+00:00",
@@ -2137,7 +2081,7 @@
       "first_seen_at": "2026-08-01T01:56:33.151955+00:00",
       "current_price": 76995,
       "current_mileage": 2858,
-      "status": "active",
+      "status": "gone",
       "observations": [
         {
           "observed_at": "2026-08-01T01:56:33.151955+00:00",
@@ -2160,7 +2104,7 @@
       "first_seen_at": "2026-08-01T05:22:32.366241+00:00",
       "current_price": 76995,
       "current_mileage": 2967,
-      "status": "active",
+      "status": "gone",
       "observations": [
         {
           "observed_at": "2026-08-01T05:22:32.366241+00:00",
