@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-01T01:56:41.762189+00:00",
+  "generated_at": "2026-08-01T05:22:37.918649+00:00",
   "schema_version": 1,
   "vins": {
     "W1KLH6FB2SA128504": {
@@ -255,7 +255,7 @@
       "first_seen_at": "2026-05-13T09:22:44.161676+00:00",
       "current_price": 51900,
       "current_mileage": 37200,
-      "status": "reappeared",
+      "status": "active",
       "observations": [
         {
           "observed_at": "2026-05-13T09:22:44.161676+00:00",
@@ -1544,7 +1544,7 @@
         "all_time_high": 60690,
         "total_drop_pct": 0.0,
         "n_observations": 2,
-        "days_observed": 23
+        "days_observed": 24
       }
     },
     "W1KLH6FB2SA106048": {
@@ -1567,7 +1567,7 @@
         "all_time_high": 73779,
         "total_drop_pct": 0.0,
         "n_observations": 1,
-        "days_observed": 23
+        "days_observed": 24
       }
     },
     "W1KLH6FB6TA212925": {
@@ -1870,7 +1870,7 @@
         "all_time_high": 59995,
         "total_drop_pct": 0.0,
         "n_observations": 2,
-        "days_observed": 8
+        "days_observed": 9
       }
     },
     "W1KLH6FB1SA106882": {
@@ -1898,7 +1898,7 @@
         "all_time_high": 66738,
         "total_drop_pct": 0.0,
         "n_observations": 2,
-        "days_observed": 8
+        "days_observed": 9
       }
     },
     "W1KLH6FB8SA148918": {
@@ -2143,6 +2143,29 @@
           "observed_at": "2026-08-01T01:56:33.151955+00:00",
           "price": 76995,
           "mileage": 2858
+        }
+      ],
+      "stats": {
+        "all_time_low": 76995,
+        "all_time_high": 76995,
+        "total_drop_pct": 0.0,
+        "n_observations": 1,
+        "days_observed": 0
+      }
+    },
+    "W1KLH6FB9RA026207": {
+      "year": 2024,
+      "trim": "E450S4",
+      "dealer": "Mercedes-Benz of Union",
+      "first_seen_at": "2026-08-01T05:22:32.366241+00:00",
+      "current_price": 76995,
+      "current_mileage": 2967,
+      "status": "active",
+      "observations": [
+        {
+          "observed_at": "2026-08-01T05:22:32.366241+00:00",
+          "price": 76995,
+          "mileage": 2967
         }
       ],
       "stats": {
