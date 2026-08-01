@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-31T23:54:04.156737+00:00",
+  "generated_at": "2026-08-01T01:56:41.762189+00:00",
   "schema_version": 1,
   "vins": {
     "W1KLH6FB2SA128504": {
@@ -255,7 +255,7 @@
       "first_seen_at": "2026-05-13T09:22:44.161676+00:00",
       "current_price": 51900,
       "current_mileage": 37200,
-      "status": "gone",
+      "status": "reappeared",
       "observations": [
         {
           "observed_at": "2026-05-13T09:22:44.161676+00:00",
@@ -341,7 +341,7 @@
       "first_seen_at": "2026-05-14T09:12:41.790440+00:00",
       "current_price": 64987,
       "current_mileage": 23016,
-      "status": "active",
+      "status": "gone",
       "observations": [
         {
           "observed_at": "2026-05-14T09:12:41.790440+00:00",
@@ -601,7 +601,7 @@
         "all_time_high": 58367,
         "total_drop_pct": -5.94,
         "n_observations": 8,
-        "days_observed": 51
+        "days_observed": 52
       }
     },
     "W1KLH6FB7SA154743": {
@@ -1498,7 +1498,7 @@
       "first_seen_at": "2026-07-07T21:49:21.934787+00:00",
       "current_price": 77991,
       "current_mileage": 4330,
-      "status": "reappeared",
+      "status": "active",
       "observations": [
         {
           "observed_at": "2026-07-07T21:49:21.934787+00:00",
@@ -1791,7 +1791,7 @@
         "all_time_high": 71079,
         "total_drop_pct": 0.0,
         "n_observations": 2,
-        "days_observed": 14
+        "days_observed": 15
       }
     },
     "W1KLH6FB0RA026189": {
@@ -2059,6 +2059,98 @@
         "total_drop_pct": 0.0,
         "n_observations": 1,
         "days_observed": 2
+      }
+    },
+    "W1KLH6FB7TA253953": {
+      "year": 2026,
+      "trim": "E450S4",
+      "dealer": "Knauz Continental Autos, Inc.",
+      "first_seen_at": "2026-08-01T01:56:33.151955+00:00",
+      "current_price": 75990,
+      "current_mileage": 5678,
+      "status": "active",
+      "observations": [
+        {
+          "observed_at": "2026-08-01T01:56:33.151955+00:00",
+          "price": 75990,
+          "mileage": 5678
+        }
+      ],
+      "stats": {
+        "all_time_low": 75990,
+        "all_time_high": 75990,
+        "total_drop_pct": 0.0,
+        "n_observations": 1,
+        "days_observed": 0
+      }
+    },
+    "W1KLH6FB0RA056051": {
+      "year": 2024,
+      "trim": "E450S4",
+      "dealer": "Mercedes-Benz of Edison",
+      "first_seen_at": "2026-08-01T01:56:33.151955+00:00",
+      "current_price": 74995,
+      "current_mileage": 5562,
+      "status": "active",
+      "observations": [
+        {
+          "observed_at": "2026-08-01T01:56:33.151955+00:00",
+          "price": 74995,
+          "mileage": 5562
+        }
+      ],
+      "stats": {
+        "all_time_low": 74995,
+        "all_time_high": 74995,
+        "total_drop_pct": 0.0,
+        "n_observations": 1,
+        "days_observed": 0
+      }
+    },
+    "W1KLH6FB5RA026169": {
+      "year": 2024,
+      "trim": "E450S4",
+      "dealer": "Mercedes-Benz of Union",
+      "first_seen_at": "2026-08-01T01:56:33.151955+00:00",
+      "current_price": 76995,
+      "current_mileage": 5454,
+      "status": "active",
+      "observations": [
+        {
+          "observed_at": "2026-08-01T01:56:33.151955+00:00",
+          "price": 76995,
+          "mileage": 5454
+        }
+      ],
+      "stats": {
+        "all_time_low": 76995,
+        "all_time_high": 76995,
+        "total_drop_pct": 0.0,
+        "n_observations": 1,
+        "days_observed": 0
+      }
+    },
+    "W1KLH6FB4RA026213": {
+      "year": 2024,
+      "trim": "E450S4",
+      "dealer": "Mercedes-Benz of Union",
+      "first_seen_at": "2026-08-01T01:56:33.151955+00:00",
+      "current_price": 76995,
+      "current_mileage": 2858,
+      "status": "active",
+      "observations": [
+        {
+          "observed_at": "2026-08-01T01:56:33.151955+00:00",
+          "price": 76995,
+          "mileage": 2858
+        }
+      ],
+      "stats": {
+        "all_time_low": 76995,
+        "all_time_high": 76995,
+        "total_drop_pct": 0.0,
+        "n_observations": 1,
+        "days_observed": 0
       }
     }
   }
