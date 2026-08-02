@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-02T22:24:16.818966+00:00",
+  "generated_at": "2026-08-02T23:26:06.540442+00:00",
   "schema_version": 1,
   "vins": {
     "W1KLH6FB2SA128504": {
@@ -515,7 +515,7 @@
       "first_seen_at": "2026-06-04T15:55:18.581517+00:00",
       "current_price": 72368,
       "current_mileage": 6237,
-      "status": "gone",
+      "status": "reappeared",
       "observations": [
         {
           "observed_at": "2026-06-04T15:55:18.581517+00:00",
@@ -1500,7 +1500,7 @@
       "first_seen_at": "2026-07-07T21:49:21.934787+00:00",
       "current_price": 77991,
       "current_mileage": 4330,
-      "status": "reappeared",
+      "status": "gone",
       "observations": [
         {
           "observed_at": "2026-07-07T21:49:21.934787+00:00",
@@ -1668,7 +1668,7 @@
       "first_seen_at": "2026-07-10T10:14:43.716840+00:00",
       "current_price": 71998,
       "current_mileage": 5978,
-      "status": "gone",
+      "status": "reappeared",
       "observations": [
         {
           "observed_at": "2026-07-10T10:14:43.716840+00:00",
@@ -1689,7 +1689,7 @@
       "trim": "E450S4",
       "dealer": "Mercedes-Benz of Jacksonville",
       "first_seen_at": "2026-07-11T09:04:15.905999+00:00",
-      "current_price": 51891,
+      "current_price": 50891,
       "current_mileage": 43674,
       "status": "active",
       "observations": [
@@ -1717,13 +1717,18 @@
           "observed_at": "2026-08-02T20:06:23.028428+00:00",
           "price": 51891,
           "mileage": 43674
+        },
+        {
+          "observed_at": "2026-08-02T23:25:59.964301+00:00",
+          "price": 50891,
+          "mileage": 43674
         }
       ],
       "stats": {
         "all_time_low": 48891,
         "all_time_high": 51891,
-        "total_drop_pct": 6.14,
-        "n_observations": 5,
+        "total_drop_pct": 4.09,
+        "n_observations": 6,
         "days_observed": 22
       }
     },
@@ -1775,7 +1780,7 @@
         "all_time_high": 86332,
         "total_drop_pct": 0.0,
         "n_observations": 1,
-        "days_observed": 19
+        "days_observed": 20
       }
     },
     "W1KLH6FB4TA207688": {
@@ -1953,7 +1958,7 @@
         "all_time_high": 73415,
         "total_drop_pct": -0.57,
         "n_observations": 5,
-        "days_observed": 8
+        "days_observed": 9
       }
     },
     "W1KZH6AB9NB055261": {
