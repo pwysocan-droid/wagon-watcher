@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-02T23:26:06.540442+00:00",
+  "generated_at": "2026-08-03T01:03:35.271688+00:00",
   "schema_version": 1,
   "vins": {
     "W1KLH6FB2SA128504": {
@@ -208,44 +208,6 @@
         "total_drop_pct": -2.06,
         "n_observations": 5,
         "days_observed": 88
-      }
-    },
-    "W1KLH6FB6SA138629": {
-      "year": 2025,
-      "trim": "E450S4",
-      "dealer": "Mercedes-Benz of Kingsport",
-      "first_seen_at": "2026-05-13T09:22:44.161676+00:00",
-      "current_price": 74531,
-      "current_mileage": 2866,
-      "status": "gone",
-      "observations": [
-        {
-          "observed_at": "2026-05-13T09:22:44.161676+00:00",
-          "price": 82564,
-          "mileage": 2866
-        },
-        {
-          "observed_at": "2026-05-13T16:37:35.471057+00:00",
-          "price": 77990,
-          "mileage": 2866
-        },
-        {
-          "observed_at": "2026-05-30T18:35:59.215173+00:00",
-          "price": 75986,
-          "mileage": 2866
-        },
-        {
-          "observed_at": "2026-06-07T12:06:28.736369+00:00",
-          "price": 74531,
-          "mileage": 2866
-        }
-      ],
-      "stats": {
-        "all_time_low": 74531,
-        "all_time_high": 82564,
-        "total_drop_pct": -9.73,
-        "n_observations": 4,
-        "days_observed": 81
       }
     },
     "W1KLH6FB0TA237464": {
@@ -515,7 +477,7 @@
       "first_seen_at": "2026-06-04T15:55:18.581517+00:00",
       "current_price": 72368,
       "current_mileage": 6237,
-      "status": "reappeared",
+      "status": "active",
       "observations": [
         {
           "observed_at": "2026-06-04T15:55:18.581517+00:00",
@@ -967,39 +929,6 @@
         "days_observed": 40
       }
     },
-    "W1KZH6AB8NB035065": {
-      "year": 2022,
-      "trim": "E450S4",
-      "dealer": "Mercedes-Benz of Creve Coeur",
-      "first_seen_at": "2026-06-23T20:29:33.852774+00:00",
-      "current_price": 55035,
-      "current_mileage": 14433,
-      "status": "gone",
-      "observations": [
-        {
-          "observed_at": "2026-06-23T20:29:33.852774+00:00",
-          "price": 55035,
-          "mileage": 12425
-        },
-        {
-          "observed_at": "2026-06-25T13:32:17.968825+00:00",
-          "price": 55035,
-          "mileage": 14431
-        },
-        {
-          "observed_at": "2026-06-27T09:09:10.286656+00:00",
-          "price": 55035,
-          "mileage": 14433
-        }
-      ],
-      "stats": {
-        "all_time_low": 55035,
-        "all_time_high": 55035,
-        "total_drop_pct": 0.0,
-        "n_observations": 3,
-        "days_observed": 40
-      }
-    },
     "W1KLH6FB7SA087237": {
       "year": 2025,
       "trim": "E450S4",
@@ -1134,57 +1063,6 @@
         "total_drop_pct": -14.02,
         "n_observations": 15,
         "days_observed": 37
-      }
-    },
-    "W1KZH6AB8PB172252": {
-      "year": 2023,
-      "trim": "E450S4",
-      "dealer": "Mercedes-Benz of Traverse City",
-      "first_seen_at": "2026-06-26T12:29:02.023303+00:00",
-      "current_price": 54981,
-      "current_mileage": 36831,
-      "status": "gone",
-      "observations": [
-        {
-          "observed_at": "2026-06-26T12:29:02.023303+00:00",
-          "price": 54981,
-          "mileage": 36796
-        },
-        {
-          "observed_at": "2026-06-28T11:42:36.599050+00:00",
-          "price": 54981,
-          "mileage": 36831
-        }
-      ],
-      "stats": {
-        "all_time_low": 54981,
-        "all_time_high": 54981,
-        "total_drop_pct": 0.0,
-        "n_observations": 2,
-        "days_observed": 37
-      }
-    },
-    "WDDZH6JB4LA707531": {
-      "year": 2020,
-      "trim": "E450S4",
-      "dealer": "Mercedes-Benz of Fort Myers",
-      "first_seen_at": "2026-06-27T06:22:12.592619+00:00",
-      "current_price": 42798,
-      "current_mileage": 28441,
-      "status": "gone",
-      "observations": [
-        {
-          "observed_at": "2026-06-27T06:22:12.592619+00:00",
-          "price": 42798,
-          "mileage": 28441
-        }
-      ],
-      "stats": {
-        "all_time_low": 42798,
-        "all_time_high": 42798,
-        "total_drop_pct": 0.0,
-        "n_observations": 1,
-        "days_observed": 36
       }
     },
     "W1KZH6AB9MA949345": {
@@ -1668,7 +1546,7 @@
       "first_seen_at": "2026-07-10T10:14:43.716840+00:00",
       "current_price": 71998,
       "current_mileage": 5978,
-      "status": "reappeared",
+      "status": "active",
       "observations": [
         {
           "observed_at": "2026-07-10T10:14:43.716840+00:00",
