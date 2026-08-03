@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-03T04:57:14.672583+00:00",
+  "generated_at": "2026-08-03T08:25:03.795502+00:00",
   "schema_version": 1,
   "vins": {
     "W1KLH6FB2SA128504": {
@@ -1062,35 +1062,7 @@
         "all_time_high": 62406,
         "total_drop_pct": -14.02,
         "n_observations": 15,
-        "days_observed": 37
-      }
-    },
-    "W1KZH6AB9MA949345": {
-      "year": 2021,
-      "trim": "E450S4",
-      "dealer": "Tom Masano, Inc.",
-      "first_seen_at": "2026-06-27T06:22:12.592619+00:00",
-      "current_price": 49500,
-      "current_mileage": 18592,
-      "status": "gone",
-      "observations": [
-        {
-          "observed_at": "2026-06-27T06:22:12.592619+00:00",
-          "price": 51990,
-          "mileage": 18592
-        },
-        {
-          "observed_at": "2026-06-28T11:42:36.599050+00:00",
-          "price": 49500,
-          "mileage": 18592
-        }
-      ],
-      "stats": {
-        "all_time_low": 49500,
-        "all_time_high": 51990,
-        "total_drop_pct": -4.79,
-        "n_observations": 2,
-        "days_observed": 36
+        "days_observed": 38
       }
     },
     "W1KLH6FB8RA026196": {
@@ -1133,7 +1105,7 @@
         "all_time_high": 69988,
         "total_drop_pct": 0.0,
         "n_observations": 5,
-        "days_observed": 36
+        "days_observed": 37
       }
     },
     "W1KZH6AB4NB031238": {
@@ -1199,7 +1171,7 @@
         "all_time_high": 79995,
         "total_drop_pct": -0.64,
         "n_observations": 2,
-        "days_observed": 33
+        "days_observed": 34
       }
     },
     "W1KLH6FBXSA104094": {
@@ -1368,7 +1340,7 @@
         "all_time_high": 81411,
         "total_drop_pct": -7.37,
         "n_observations": 8,
-        "days_observed": 32
+        "days_observed": 33
       }
     },
     "W1KLH6FB5TA256561": {
@@ -1378,7 +1350,7 @@
       "first_seen_at": "2026-07-07T21:49:21.934787+00:00",
       "current_price": 77991,
       "current_mileage": 4330,
-      "status": "reappeared",
+      "status": "active",
       "observations": [
         {
           "observed_at": "2026-07-07T21:49:21.934787+00:00",
@@ -1424,7 +1396,7 @@
         "all_time_high": 60690,
         "total_drop_pct": 0.0,
         "n_observations": 2,
-        "days_observed": 25
+        "days_observed": 26
       }
     },
     "W1KLH6FB2SA106048": {
@@ -1447,7 +1419,7 @@
         "all_time_high": 73779,
         "total_drop_pct": 0.0,
         "n_observations": 1,
-        "days_observed": 25
+        "days_observed": 26
       }
     },
     "W1KLH6FB6TA212925": {
@@ -1765,7 +1737,7 @@
         "all_time_high": 59995,
         "total_drop_pct": 0.0,
         "n_observations": 2,
-        "days_observed": 10
+        "days_observed": 11
       }
     },
     "W1KLH6FB1SA106882": {
@@ -1793,7 +1765,7 @@
         "all_time_high": 66738,
         "total_drop_pct": 0.0,
         "n_observations": 2,
-        "days_observed": 10
+        "days_observed": 11
       }
     },
     "W1KLH6FB8SA148918": {
@@ -2068,7 +2040,7 @@
         "all_time_high": 76995,
         "total_drop_pct": 0.0,
         "n_observations": 1,
-        "days_observed": 1
+        "days_observed": 2
       }
     }
   }
