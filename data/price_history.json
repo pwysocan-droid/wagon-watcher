@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-04T02:46:57.124397+00:00",
+  "generated_at": "2026-08-04T05:39:15.014851+00:00",
   "schema_version": 1,
   "vins": {
     "W1KLH6FB2SA128504": {
@@ -1065,49 +1065,6 @@
         "days_observed": 38
       }
     },
-    "W1KLH6FB8RA026196": {
-      "year": 2024,
-      "trim": "E450S4",
-      "dealer": "Mercedes-Benz OF Tiverton",
-      "first_seen_at": "2026-06-27T06:22:12.592619+00:00",
-      "current_price": 69988,
-      "current_mileage": 25630,
-      "status": "gone",
-      "observations": [
-        {
-          "observed_at": "2026-06-27T06:22:12.592619+00:00",
-          "price": 69988,
-          "mileage": 25590
-        },
-        {
-          "observed_at": "2026-07-01T20:45:13.474558+00:00",
-          "price": 69988,
-          "mileage": 25599
-        },
-        {
-          "observed_at": "2026-07-01T23:49:40.320763+00:00",
-          "price": 69988,
-          "mileage": 25590
-        },
-        {
-          "observed_at": "2026-07-02T06:21:43.363960+00:00",
-          "price": 69988,
-          "mileage": 25599
-        },
-        {
-          "observed_at": "2026-07-03T12:00:33.074330+00:00",
-          "price": 69988,
-          "mileage": 25630
-        }
-      ],
-      "stats": {
-        "all_time_low": 69988,
-        "all_time_high": 69988,
-        "total_drop_pct": 0.0,
-        "n_observations": 5,
-        "days_observed": 37
-      }
-    },
     "W1KZH6AB4NB031238": {
       "year": 2022,
       "trim": "E450S4",
@@ -1396,7 +1353,7 @@
         "all_time_high": 60690,
         "total_drop_pct": 0.0,
         "n_observations": 2,
-        "days_observed": 26
+        "days_observed": 27
       }
     },
     "W1KLH6FB2SA106048": {
@@ -1419,7 +1376,7 @@
         "all_time_high": 73779,
         "total_drop_pct": 0.0,
         "n_observations": 1,
-        "days_observed": 26
+        "days_observed": 27
       }
     },
     "W1KLH6FB6TA212925": {
@@ -1737,7 +1694,7 @@
         "all_time_high": 59995,
         "total_drop_pct": 0.0,
         "n_observations": 2,
-        "days_observed": 11
+        "days_observed": 12
       }
     },
     "W1KLH6FB1SA106882": {
@@ -1765,7 +1722,7 @@
         "all_time_high": 66738,
         "total_drop_pct": 0.0,
         "n_observations": 2,
-        "days_observed": 11
+        "days_observed": 12
       }
     },
     "W1KLH6FB8SA148918": {
@@ -2045,7 +2002,7 @@
         "all_time_high": 76995,
         "total_drop_pct": 0.0,
         "n_observations": 1,
-        "days_observed": 2
+        "days_observed": 3
       }
     }
   }
