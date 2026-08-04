@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-04T13:13:40.512140+00:00",
+  "generated_at": "2026-08-04T15:43:12.046094+00:00",
   "schema_version": 1,
   "vins": {
     "W1KLH6FB2SA128504": {
@@ -467,7 +467,7 @@
         "all_time_high": 61995,
         "total_drop_pct": -4.03,
         "n_observations": 8,
-        "days_observed": 61
+        "days_observed": 62
       }
     },
     "W1KLH6FB3RA004560": {
@@ -926,7 +926,7 @@
         "all_time_high": 78491,
         "total_drop_pct": -3.82,
         "n_observations": 10,
-        "days_observed": 41
+        "days_observed": 42
       }
     },
     "W1KLH6FB7SA087237": {
@@ -1414,7 +1414,7 @@
         "all_time_high": 87350,
         "total_drop_pct": 0.0,
         "n_observations": 4,
-        "days_observed": 25
+        "days_observed": 26
       }
     },
     "WDDZH6JB4LA708629": {
@@ -1666,7 +1666,7 @@
         "all_time_high": 78293,
         "total_drop_pct": 0.0,
         "n_observations": 1,
-        "days_observed": 12
+        "days_observed": 13
       }
     },
     "W1KZH6AB6PB173982": {
@@ -1918,7 +1918,7 @@
       "trim": "E450S4",
       "dealer": "Mercedes-Benz of Edison",
       "first_seen_at": "2026-08-01T01:56:33.151955+00:00",
-      "current_price": 74995,
+      "current_price": 74997,
       "current_mileage": 5562,
       "status": "active",
       "observations": [
@@ -1926,13 +1926,18 @@
           "observed_at": "2026-08-01T01:56:33.151955+00:00",
           "price": 74995,
           "mileage": 5562
+        },
+        {
+          "observed_at": "2026-08-04T15:43:08.322855+00:00",
+          "price": 74997,
+          "mileage": 5562
         }
       ],
       "stats": {
         "all_time_low": 74995,
-        "all_time_high": 74995,
+        "all_time_high": 74997,
         "total_drop_pct": 0.0,
-        "n_observations": 1,
+        "n_observations": 2,
         "days_observed": 3
       }
     },
