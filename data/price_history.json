@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-06T01:44:04.554166+00:00",
+  "generated_at": "2026-08-06T04:56:51.541800+00:00",
   "schema_version": 1,
   "vins": {
     "W1KLH6FB2SA128504": {
@@ -627,34 +627,6 @@
         "total_drop_pct": -7.01,
         "n_observations": 9,
         "days_observed": 57
-      }
-    },
-    "W1KZH6AB6PB159273": {
-      "year": 2023,
-      "trim": "E450S4",
-      "dealer": "Mercedes-Benz of Annapolis",
-      "first_seen_at": "2026-06-13T10:42:46.396398+00:00",
-      "current_price": 67301,
-      "current_mileage": 6589,
-      "status": "gone",
-      "observations": [
-        {
-          "observed_at": "2026-06-13T10:42:46.396398+00:00",
-          "price": 67300,
-          "mileage": 6589
-        },
-        {
-          "observed_at": "2026-07-05T10:34:52.186739+00:00",
-          "price": 67301,
-          "mileage": 6589
-        }
-      ],
-      "stats": {
-        "all_time_low": 67300,
-        "all_time_high": 67301,
-        "total_drop_pct": 0.0,
-        "n_observations": 2,
-        "days_observed": 53
       }
     },
     "W1KZH6AB0PB118184": {
@@ -1620,7 +1592,7 @@
         "all_time_high": 71079,
         "total_drop_pct": 0.0,
         "n_observations": 2,
-        "days_observed": 19
+        "days_observed": 20
       }
     },
     "W1KLH6FB0RA026189": {
@@ -1915,7 +1887,7 @@
         "all_time_high": 75990,
         "total_drop_pct": 0.0,
         "n_observations": 1,
-        "days_observed": 4
+        "days_observed": 5
       }
     },
     "W1KLH6FB0RA056051": {
@@ -1943,7 +1915,7 @@
         "all_time_high": 74997,
         "total_drop_pct": 0.0,
         "n_observations": 2,
-        "days_observed": 4
+        "days_observed": 5
       }
     },
     "W1KLH6FB5RA026169": {
@@ -1966,7 +1938,7 @@
         "all_time_high": 76995,
         "total_drop_pct": 0.0,
         "n_observations": 1,
-        "days_observed": 4
+        "days_observed": 5
       }
     },
     "W1KLH6FB4RA026213": {
@@ -1989,7 +1961,7 @@
         "all_time_high": 76995,
         "total_drop_pct": 0.0,
         "n_observations": 1,
-        "days_observed": 4
+        "days_observed": 5
       }
     },
     "W1KLH6FB9RA026207": {
