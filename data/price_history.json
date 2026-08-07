@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-07T10:26:04.160597+00:00",
+  "generated_at": "2026-08-07T11:14:01.151953+00:00",
   "schema_version": 1,
   "vins": {
     "W1KLH6FB2SA128504": {
@@ -1138,7 +1138,7 @@
         "all_time_high": 74998,
         "total_drop_pct": -0.14,
         "n_observations": 2,
-        "days_observed": 37
+        "days_observed": 38
       }
     },
     "W1KZH6AB6PB139489": {
@@ -1869,7 +1869,7 @@
         "all_time_high": 68974,
         "total_drop_pct": 0.0,
         "n_observations": 1,
-        "days_observed": 8
+        "days_observed": 9
       }
     },
     "W1KLH6FB7TA253953": {
@@ -1990,6 +1990,52 @@
         "total_drop_pct": 0.0,
         "n_observations": 1,
         "days_observed": 6
+      }
+    },
+    "W1KLH6FB0SA157919": {
+      "year": 2025,
+      "trim": "E450S4",
+      "dealer": "Mercedes-Benz of Fort Mitchell",
+      "first_seen_at": "2026-08-07T11:13:52.986152+00:00",
+      "current_price": 69940,
+      "current_mileage": 7525,
+      "status": "active",
+      "observations": [
+        {
+          "observed_at": "2026-08-07T11:13:52.986152+00:00",
+          "price": 69940,
+          "mileage": 7525
+        }
+      ],
+      "stats": {
+        "all_time_low": 69940,
+        "all_time_high": 69940,
+        "total_drop_pct": 0.0,
+        "n_observations": 1,
+        "days_observed": 0
+      }
+    },
+    "W1KLH6FB4SA151055": {
+      "year": 2025,
+      "trim": "E450S4",
+      "dealer": "Mercedes-Benz of Lynnfield",
+      "first_seen_at": "2026-08-07T11:13:52.986152+00:00",
+      "current_price": 69497,
+      "current_mileage": 6261,
+      "status": "active",
+      "observations": [
+        {
+          "observed_at": "2026-08-07T11:13:52.986152+00:00",
+          "price": 69497,
+          "mileage": 6261
+        }
+      ],
+      "stats": {
+        "all_time_low": 69497,
+        "all_time_high": 69497,
+        "total_drop_pct": 0.0,
+        "n_observations": 1,
+        "days_observed": 0
       }
     }
   }
