@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-07T19:44:16.513158+00:00",
+  "generated_at": "2026-08-07T20:30:06.021686+00:00",
   "schema_version": 1,
   "vins": {
     "W1KLH6FB2SA128504": {
@@ -207,7 +207,7 @@
         "all_time_high": 73984,
         "total_drop_pct": -2.06,
         "n_observations": 5,
-        "days_observed": 92
+        "days_observed": 93
       }
     },
     "W1KLH6FB0TA237464": {
@@ -1633,7 +1633,7 @@
       "trim": "E450S4",
       "dealer": "Mercedes-Benz of Hanover",
       "first_seen_at": "2026-07-22T14:31:37.242847+00:00",
-      "current_price": 77490,
+      "current_price": 78293,
       "current_mileage": 10309,
       "status": "active",
       "observations": [
@@ -1646,13 +1646,18 @@
           "observed_at": "2026-08-07T12:05:09.546403+00:00",
           "price": 77490,
           "mileage": 10309
+        },
+        {
+          "observed_at": "2026-08-07T20:30:04.561195+00:00",
+          "price": 78293,
+          "mileage": 10309
         }
       ],
       "stats": {
         "all_time_low": 77490,
         "all_time_high": 78293,
-        "total_drop_pct": -1.03,
-        "n_observations": 2,
+        "total_drop_pct": 0.0,
+        "n_observations": 3,
         "days_observed": 16
       }
     },
