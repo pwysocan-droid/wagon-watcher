@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-08T09:08:00.352270+00:00",
+  "generated_at": "2026-08-08T10:01:33.230819+00:00",
   "schema_version": 1,
   "vins": {
     "W1KLH6FB2SA128504": {
@@ -260,7 +260,7 @@
         "all_time_high": 80794,
         "total_drop_pct": -0.18,
         "n_observations": 7,
-        "days_observed": 86
+        "days_observed": 87
       }
     },
     "W1KZH6AB2NB082348": {
@@ -283,7 +283,7 @@
         "all_time_high": 51900,
         "total_drop_pct": 0.0,
         "n_observations": 1,
-        "days_observed": 86
+        "days_observed": 87
       }
     },
     "W1KLH6FB3SA087512": {
@@ -351,7 +351,7 @@
         "all_time_high": 65988,
         "total_drop_pct": -2.27,
         "n_observations": 10,
-        "days_observed": 86
+        "days_observed": 87
       }
     },
     "W1KLH6FB3SA142248": {
@@ -414,7 +414,7 @@
         "all_time_high": 65988,
         "total_drop_pct": -1.52,
         "n_observations": 9,
-        "days_observed": 85
+        "days_observed": 86
       }
     },
     "W1KZH6AB6PB116701": {
@@ -518,7 +518,7 @@
       "trim": "E450S4",
       "dealer": "Mercedes-Benz of Durham",
       "first_seen_at": "2026-06-10T01:34:53.866360+00:00",
-      "current_price": 54275,
+      "current_price": 53917,
       "current_mileage": 30805,
       "status": "active",
       "observations": [
@@ -566,13 +566,18 @@
           "observed_at": "2026-08-02T11:10:43.896414+00:00",
           "price": 54275,
           "mileage": 30805
+        },
+        {
+          "observed_at": "2026-08-08T10:00:46.126764+00:00",
+          "price": 53917,
+          "mileage": 30805
         }
       ],
       "stats": {
-        "all_time_low": 54275,
+        "all_time_low": 53917,
         "all_time_high": 58367,
-        "total_drop_pct": -7.01,
-        "n_observations": 9,
+        "total_drop_pct": -7.62,
+        "n_observations": 10,
         "days_observed": 59
       }
     },
@@ -787,7 +792,7 @@
         "all_time_high": 62998,
         "total_drop_pct": -5.56,
         "n_observations": 10,
-        "days_observed": 50
+        "days_observed": 51
       }
     },
     "W1KLH6FB0TA220597": {
@@ -1236,7 +1241,7 @@
       "first_seen_at": "2026-07-07T21:49:21.934787+00:00",
       "current_price": 77991,
       "current_mileage": 4330,
-      "status": "reappeared",
+      "status": "active",
       "observations": [
         {
           "observed_at": "2026-07-07T21:49:21.934787+00:00",
@@ -1549,7 +1554,7 @@
         "all_time_high": 76815,
         "total_drop_pct": 0.0,
         "n_observations": 2,
-        "days_observed": 21
+        "days_observed": 22
       }
     },
     "W1KLH6FB9TA207363": {
@@ -1719,7 +1724,7 @@
         "all_time_high": 51721,
         "total_drop_pct": 0.0,
         "n_observations": 3,
-        "days_observed": 13
+        "days_observed": 14
       }
     },
     "W1KZH6AB5PB157997": {
@@ -1727,7 +1732,7 @@
       "trim": "E450S4",
       "dealer": "Hendrick Motors of Charlotte",
       "first_seen_at": "2026-07-28T10:25:12.144964+00:00",
-      "current_price": 69490,
+      "current_price": 67990,
       "current_mileage": 14467,
       "status": "active",
       "observations": [
@@ -1750,13 +1755,18 @@
           "observed_at": "2026-07-30T18:52:35.644013+00:00",
           "price": 69490,
           "mileage": 14467
+        },
+        {
+          "observed_at": "2026-08-08T10:00:46.126764+00:00",
+          "price": 67990,
+          "mileage": 14467
         }
       ],
       "stats": {
-        "all_time_low": 69490,
+        "all_time_low": 67990,
         "all_time_high": 69990,
-        "total_drop_pct": -0.71,
-        "n_observations": 4,
+        "total_drop_pct": -2.86,
+        "n_observations": 5,
         "days_observed": 10
       }
     },
@@ -1818,7 +1828,7 @@
       "first_seen_at": "2026-08-01T01:56:33.151955+00:00",
       "current_price": 75990,
       "current_mileage": 5678,
-      "status": "reappeared",
+      "status": "active",
       "observations": [
         {
           "observed_at": "2026-08-01T01:56:33.151955+00:00",
