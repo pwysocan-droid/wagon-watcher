@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-08T08:05:37.661702+00:00",
+  "generated_at": "2026-08-08T09:08:00.352270+00:00",
   "schema_version": 1,
   "vins": {
     "W1KLH6FB2SA128504": {
@@ -1226,7 +1226,7 @@
         "all_time_high": 81411,
         "total_drop_pct": -7.37,
         "n_observations": 8,
-        "days_observed": 37
+        "days_observed": 38
       }
     },
     "W1KLH6FB5TA256561": {
@@ -1236,7 +1236,7 @@
       "first_seen_at": "2026-07-07T21:49:21.934787+00:00",
       "current_price": 77991,
       "current_mileage": 4330,
-      "status": "gone",
+      "status": "reappeared",
       "observations": [
         {
           "observed_at": "2026-07-07T21:49:21.934787+00:00",
@@ -1282,29 +1282,6 @@
         "all_time_high": 60690,
         "total_drop_pct": 0.0,
         "n_observations": 2,
-        "days_observed": 31
-      }
-    },
-    "W1KLH6FB2SA106048": {
-      "year": 2025,
-      "trim": "E450S4",
-      "dealer": "R B M of Atlanta, Inc.",
-      "first_seen_at": "2026-07-08T05:12:10.801567+00:00",
-      "current_price": 73779,
-      "current_mileage": 9191,
-      "status": "gone",
-      "observations": [
-        {
-          "observed_at": "2026-07-08T05:12:10.801567+00:00",
-          "price": 73779,
-          "mileage": 9191
-        }
-      ],
-      "stats": {
-        "all_time_low": 73779,
-        "all_time_high": 73779,
-        "total_drop_pct": 0.0,
-        "n_observations": 1,
         "days_observed": 31
       }
     },
@@ -1465,7 +1442,7 @@
         "all_time_high": 51891,
         "total_drop_pct": 4.09,
         "n_observations": 6,
-        "days_observed": 27
+        "days_observed": 28
       }
     },
     "W1KLH6FB3SA129550": {
@@ -1493,7 +1470,7 @@
         "all_time_high": 73988,
         "total_drop_pct": 0.0,
         "n_observations": 2,
-        "days_observed": 27
+        "days_observed": 28
       }
     },
     "W1KLH6FB2TA196545": {
@@ -1841,7 +1818,7 @@
       "first_seen_at": "2026-08-01T01:56:33.151955+00:00",
       "current_price": 75990,
       "current_mileage": 5678,
-      "status": "gone",
+      "status": "reappeared",
       "observations": [
         {
           "observed_at": "2026-08-01T01:56:33.151955+00:00",
