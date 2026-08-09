@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-09T22:19:57.754444+00:00",
+  "generated_at": "2026-08-09T22:56:33.451591+00:00",
   "schema_version": 1,
   "vins": {
     "W1KLH6FB2SA128504": {
@@ -1065,34 +1065,6 @@
         "days_observed": 40
       }
     },
-    "W1KLH6FBXSA104094": {
-      "year": 2025,
-      "trim": "E450S4",
-      "dealer": "Mercedes-Benz of Jacksonville",
-      "first_seen_at": "2026-06-30T10:26:15.914724+00:00",
-      "current_price": 74891,
-      "current_mileage": 7139,
-      "status": "gone",
-      "observations": [
-        {
-          "observed_at": "2026-06-30T10:26:15.914724+00:00",
-          "price": 74998,
-          "mileage": 7136
-        },
-        {
-          "observed_at": "2026-07-07T22:51:47.577519+00:00",
-          "price": 74891,
-          "mileage": 7139
-        }
-      ],
-      "stats": {
-        "all_time_low": 74891,
-        "all_time_high": 74998,
-        "total_drop_pct": -0.14,
-        "n_observations": 2,
-        "days_observed": 40
-      }
-    },
     "W1KZH6AB6PB139489": {
       "year": 2023,
       "trim": "E450S4",
@@ -1241,7 +1213,7 @@
       "first_seen_at": "2026-07-07T21:49:21.934787+00:00",
       "current_price": 77991,
       "current_mileage": 4330,
-      "status": "active",
+      "status": "gone",
       "observations": [
         {
           "observed_at": "2026-07-07T21:49:21.934787+00:00",
@@ -1470,7 +1442,7 @@
         "all_time_high": 86332,
         "total_drop_pct": 0.0,
         "n_observations": 1,
-        "days_observed": 26
+        "days_observed": 27
       }
     },
     "W1KLH6FB4TA207688": {
@@ -1698,7 +1670,7 @@
         "all_time_high": 73415,
         "total_drop_pct": -0.57,
         "n_observations": 5,
-        "days_observed": 15
+        "days_observed": 16
       }
     },
     "W1KZH6AB9NB055261": {
