@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-10T06:48:38.280810+00:00",
+  "generated_at": "2026-08-10T08:21:02.245543+00:00",
   "schema_version": 1,
   "vins": {
     "W1KLH6FB2SA128504": {
@@ -165,49 +165,6 @@
         "total_drop_pct": -1.28,
         "n_observations": 2,
         "days_observed": 102
-      }
-    },
-    "W1KLH6FB0SA088150": {
-      "year": 2025,
-      "trim": "E450S4",
-      "dealer": "R B M of Alpharetta",
-      "first_seen_at": "2026-05-06T20:07:22.489014+00:00",
-      "current_price": 72460,
-      "current_mileage": 8719,
-      "status": "gone",
-      "observations": [
-        {
-          "observed_at": "2026-05-06T20:07:22.489014+00:00",
-          "price": 73984,
-          "mileage": 8522
-        },
-        {
-          "observed_at": "2026-05-07T15:10:13.929955+00:00",
-          "price": 73984,
-          "mileage": 8566
-        },
-        {
-          "observed_at": "2026-05-08T08:53:07.091617+00:00",
-          "price": 73984,
-          "mileage": 8573
-        },
-        {
-          "observed_at": "2026-06-12T16:43:27.954875+00:00",
-          "price": 72460,
-          "mileage": 8573
-        },
-        {
-          "observed_at": "2026-07-09T17:11:52.167243+00:00",
-          "price": 72460,
-          "mileage": 8719
-        }
-      ],
-      "stats": {
-        "all_time_low": 72460,
-        "all_time_high": 73984,
-        "total_drop_pct": -2.06,
-        "n_observations": 5,
-        "days_observed": 95
       }
     },
     "W1KLH6FB0TA237464": {
@@ -1203,7 +1160,7 @@
         "all_time_high": 81411,
         "total_drop_pct": -7.37,
         "n_observations": 8,
-        "days_observed": 39
+        "days_observed": 40
       }
     },
     "W1KLH6FB5TA256561": {
@@ -1298,29 +1255,6 @@
         "total_drop_pct": 31.4,
         "n_observations": 2,
         "days_observed": 31
-      }
-    },
-    "W1KLH6FB0RA026225": {
-      "year": 2024,
-      "trim": "E450S4",
-      "dealer": "Mercedes-Benz of Kansas City",
-      "first_seen_at": "2026-07-10T10:14:43.716840+00:00",
-      "current_price": 74110,
-      "current_mileage": 20973,
-      "status": "gone",
-      "observations": [
-        {
-          "observed_at": "2026-07-10T10:14:43.716840+00:00",
-          "price": 74110,
-          "mileage": 20973
-        }
-      ],
-      "stats": {
-        "all_time_low": 74110,
-        "all_time_high": 74110,
-        "total_drop_pct": 0.0,
-        "n_observations": 1,
-        "days_observed": 30
       }
     },
     "W1KLH6FB6SA133396": {
