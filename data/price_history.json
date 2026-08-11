@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-11T08:03:42.348797+00:00",
+  "generated_at": "2026-08-11T09:27:00.039108+00:00",
   "schema_version": 1,
   "vins": {
     "W1KLH6FB2SA128504": {
@@ -9,7 +9,7 @@
       "first_seen_at": "2026-04-26T15:50:37.492543+00:00",
       "current_price": 71973,
       "current_mileage": 8725,
-      "status": "active",
+      "status": "gone",
       "observations": [
         {
           "observed_at": "2026-04-26T15:50:37.492543+00:00",
@@ -217,7 +217,7 @@
         "all_time_high": 80794,
         "total_drop_pct": -0.18,
         "n_observations": 7,
-        "days_observed": 89
+        "days_observed": 90
       }
     },
     "W1KZH6AB2NB082348": {
@@ -227,7 +227,7 @@
       "first_seen_at": "2026-05-13T09:22:44.161676+00:00",
       "current_price": 51900,
       "current_mileage": 37200,
-      "status": "active",
+      "status": "gone",
       "observations": [
         {
           "observed_at": "2026-05-13T09:22:44.161676+00:00",
@@ -240,7 +240,7 @@
         "all_time_high": 51900,
         "total_drop_pct": 0.0,
         "n_observations": 1,
-        "days_observed": 89
+        "days_observed": 90
       }
     },
     "W1KLH6FB3SA087512": {
@@ -313,7 +313,7 @@
         "all_time_high": 65988,
         "total_drop_pct": -2.27,
         "n_observations": 11,
-        "days_observed": 89
+        "days_observed": 90
       }
     },
     "W1KLH6FB3SA142248": {
@@ -376,7 +376,7 @@
         "all_time_high": 65988,
         "total_drop_pct": -1.52,
         "n_observations": 9,
-        "days_observed": 88
+        "days_observed": 89
       }
     },
     "W1KZH6AB6PB116701": {
@@ -482,7 +482,7 @@
       "first_seen_at": "2026-06-10T01:34:53.866360+00:00",
       "current_price": 53917,
       "current_mileage": 30805,
-      "status": "reappeared",
+      "status": "gone",
       "observations": [
         {
           "observed_at": "2026-06-10T01:34:53.866360+00:00",
@@ -548,7 +548,7 @@
       "trim": "E450S4",
       "dealer": "R B M of Atlanta, Inc.",
       "first_seen_at": "2026-06-13T12:19:58.158781+00:00",
-      "current_price": 48910,
+      "current_price": 49907,
       "current_mileage": 71983,
       "status": "active",
       "observations": [
@@ -606,13 +606,18 @@
           "observed_at": "2026-08-07T06:41:05.893572+00:00",
           "price": 48910,
           "mileage": 71983
+        },
+        {
+          "observed_at": "2026-08-11T09:26:56.413092+00:00",
+          "price": 49907,
+          "mileage": 71983
         }
       ],
       "stats": {
         "all_time_low": 48910,
         "all_time_high": 50987,
-        "total_drop_pct": -4.07,
-        "n_observations": 11,
+        "total_drop_pct": -2.12,
+        "n_observations": 12,
         "days_observed": 58
       }
     },
@@ -1165,7 +1170,7 @@
         "all_time_high": 81411,
         "total_drop_pct": -7.37,
         "n_observations": 8,
-        "days_observed": 40
+        "days_observed": 41
       }
     },
     "W1KLH6FB5TA256561": {
@@ -1292,7 +1297,7 @@
       "first_seen_at": "2026-07-11T09:04:15.905999+00:00",
       "current_price": 50891,
       "current_mileage": 43674,
-      "status": "gone",
+      "status": "reappeared",
       "observations": [
         {
           "observed_at": "2026-07-11T09:04:15.905999+00:00",
@@ -1330,7 +1335,7 @@
         "all_time_high": 51891,
         "total_drop_pct": 4.09,
         "n_observations": 6,
-        "days_observed": 30
+        "days_observed": 31
       }
     },
     "W1KLH6FB3SA129550": {
@@ -1358,7 +1363,7 @@
         "all_time_high": 73988,
         "total_drop_pct": 0.0,
         "n_observations": 2,
-        "days_observed": 30
+        "days_observed": 31
       }
     },
     "W1KLH6FB2TA196545": {
@@ -1437,7 +1442,7 @@
         "all_time_high": 76815,
         "total_drop_pct": 0.0,
         "n_observations": 2,
-        "days_observed": 24
+        "days_observed": 25
       }
     },
     "W1KLH6FB9TA207363": {
@@ -1650,7 +1655,7 @@
       "trim": "E450S4",
       "dealer": "Hendrick Motors of Charlotte",
       "first_seen_at": "2026-07-28T10:25:12.144964+00:00",
-      "current_price": 67990,
+      "current_price": 69490,
       "current_mileage": 14467,
       "status": "active",
       "observations": [
@@ -1678,13 +1683,18 @@
           "observed_at": "2026-08-08T10:00:46.126764+00:00",
           "price": 67990,
           "mileage": 14467
+        },
+        {
+          "observed_at": "2026-08-11T09:26:56.413092+00:00",
+          "price": 69490,
+          "mileage": 14467
         }
       ],
       "stats": {
         "all_time_low": 67990,
         "all_time_high": 69990,
-        "total_drop_pct": -2.86,
-        "n_observations": 5,
+        "total_drop_pct": -0.71,
+        "n_observations": 6,
         "days_observed": 13
       }
     },
@@ -1797,7 +1807,7 @@
       "first_seen_at": "2026-08-01T01:56:33.151955+00:00",
       "current_price": 76995,
       "current_mileage": 5454,
-      "status": "reappeared",
+      "status": "gone",
       "observations": [
         {
           "observed_at": "2026-08-01T01:56:33.151955+00:00",
@@ -1866,7 +1876,7 @@
       "first_seen_at": "2026-08-07T11:13:52.986152+00:00",
       "current_price": 69940,
       "current_mileage": 7525,
-      "status": "active",
+      "status": "gone",
       "observations": [
         {
           "observed_at": "2026-08-07T11:13:52.986152+00:00",
@@ -1889,7 +1899,7 @@
       "first_seen_at": "2026-08-07T11:13:52.986152+00:00",
       "current_price": 69497,
       "current_mileage": 6261,
-      "status": "active",
+      "status": "gone",
       "observations": [
         {
           "observed_at": "2026-08-07T11:13:52.986152+00:00",
