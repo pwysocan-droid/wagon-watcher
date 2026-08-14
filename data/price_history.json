@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-14T05:24:48.693181+00:00",
+  "generated_at": "2026-08-14T06:50:55.311751+00:00",
   "schema_version": 1,
   "vins": {
     "W1KLH6FB2SA128504": {
@@ -137,34 +137,6 @@
         "total_drop_pct": 0.0,
         "n_observations": 2,
         "days_observed": 109
-      }
-    },
-    "W1KLH6FBXRA058115": {
-      "year": 2024,
-      "trim": "E450S4",
-      "dealer": "Mercedes-Benz of Centerville",
-      "first_seen_at": "2026-04-29T11:57:15.784091+00:00",
-      "current_price": 70937,
-      "current_mileage": 8958,
-      "status": "gone",
-      "observations": [
-        {
-          "observed_at": "2026-04-29T11:57:15.784091+00:00",
-          "price": 71860,
-          "mileage": 8958
-        },
-        {
-          "observed_at": "2026-06-26T10:14:44.424269+00:00",
-          "price": 70937,
-          "mileage": 8958
-        }
-      ],
-      "stats": {
-        "all_time_low": 70937,
-        "all_time_high": 71860,
-        "total_drop_pct": -1.28,
-        "n_observations": 2,
-        "days_observed": 106
       }
     },
     "W1KLH6FB0TA237464": {
@@ -487,7 +459,7 @@
       "first_seen_at": "2026-06-10T01:34:53.866360+00:00",
       "current_price": 54275,
       "current_mileage": 30805,
-      "status": "gone",
+      "status": "reappeared",
       "observations": [
         {
           "observed_at": "2026-06-10T01:34:53.866360+00:00",
@@ -560,7 +532,7 @@
       "first_seen_at": "2026-06-13T12:19:58.158781+00:00",
       "current_price": 49907,
       "current_mileage": 71983,
-      "status": "gone",
+      "status": "reappeared",
       "observations": [
         {
           "observed_at": "2026-06-13T12:19:58.158781+00:00",
@@ -905,7 +877,7 @@
         "all_time_high": 62406,
         "total_drop_pct": -14.02,
         "n_observations": 15,
-        "days_observed": 48
+        "days_observed": 49
       }
     },
     "W1KZH6AB4NB031238": {
@@ -971,7 +943,7 @@
         "all_time_high": 79995,
         "total_drop_pct": -0.64,
         "n_observations": 2,
-        "days_observed": 44
+        "days_observed": 45
       }
     },
     "W1KZH6AB6PB139489": {
@@ -1698,7 +1670,7 @@
       "first_seen_at": "2026-08-01T01:56:33.151955+00:00",
       "current_price": 76995,
       "current_mileage": 5454,
-      "status": "reappeared",
+      "status": "active",
       "observations": [
         {
           "observed_at": "2026-08-01T01:56:33.151955+00:00",
@@ -1813,7 +1785,7 @@
       "first_seen_at": "2026-08-11T12:05:05.663227+00:00",
       "current_price": 70909,
       "current_mileage": 4103,
-      "status": "gone",
+      "status": "reappeared",
       "observations": [
         {
           "observed_at": "2026-08-11T12:05:05.663227+00:00",
