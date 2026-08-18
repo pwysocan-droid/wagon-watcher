@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-18T07:12:22.303226+00:00",
+  "generated_at": "2026-08-18T08:00:03.998625+00:00",
   "schema_version": 1,
   "vins": {
     "W1KLH6FB2SA128504": {
@@ -9,7 +9,7 @@
       "first_seen_at": "2026-04-26T15:50:37.492543+00:00",
       "current_price": 71973,
       "current_mileage": 8725,
-      "status": "reappeared",
+      "status": "gone",
       "observations": [
         {
           "observed_at": "2026-04-26T15:50:37.492543+00:00",
@@ -356,64 +356,6 @@
         "days_observed": 95
       }
     },
-    "W1KZH6AB6PB116701": {
-      "year": 2023,
-      "trim": "E450S4",
-      "dealer": "Mercedes-Benz of White Plains",
-      "first_seen_at": "2026-06-03T15:11:31.353813+00:00",
-      "current_price": 59495,
-      "current_mileage": 30033,
-      "status": "gone",
-      "observations": [
-        {
-          "observed_at": "2026-06-03T15:11:31.353813+00:00",
-          "price": 61995,
-          "mileage": 30016
-        },
-        {
-          "observed_at": "2026-06-11T02:44:13.527944+00:00",
-          "price": 61995,
-          "mileage": 30033
-        },
-        {
-          "observed_at": "2026-06-23T16:21:32.202925+00:00",
-          "price": 60495,
-          "mileage": 30033
-        },
-        {
-          "observed_at": "2026-07-04T15:38:24.039018+00:00",
-          "price": 59495,
-          "mileage": 30033
-        },
-        {
-          "observed_at": "2026-07-04T22:25:36.204441+00:00",
-          "price": 60495,
-          "mileage": 30033
-        },
-        {
-          "observed_at": "2026-07-05T01:15:01.276884+00:00",
-          "price": 59495,
-          "mileage": 30033
-        },
-        {
-          "observed_at": "2026-07-05T08:25:36.188468+00:00",
-          "price": 60495,
-          "mileage": 30033
-        },
-        {
-          "observed_at": "2026-07-05T12:09:20.524477+00:00",
-          "price": 59495,
-          "mileage": 30033
-        }
-      ],
-      "stats": {
-        "all_time_low": 59495,
-        "all_time_high": 61995,
-        "total_drop_pct": -4.03,
-        "n_observations": 8,
-        "days_observed": 75
-      }
-    },
     "W1KLH6FB3RA004560": {
       "year": 2024,
       "trim": "E450S4",
@@ -537,7 +479,7 @@
       "first_seen_at": "2026-06-13T12:19:58.158781+00:00",
       "current_price": 48910,
       "current_mileage": 71983,
-      "status": "active",
+      "status": "gone",
       "observations": [
         {
           "observed_at": "2026-06-13T12:19:58.158781+00:00",
@@ -1076,7 +1018,7 @@
       "first_seen_at": "2026-07-07T21:49:21.934787+00:00",
       "current_price": 77991,
       "current_mileage": 4330,
-      "status": "active",
+      "status": "gone",
       "observations": [
         {
           "observed_at": "2026-07-07T21:49:21.934787+00:00",
@@ -1527,7 +1469,7 @@
       "first_seen_at": "2026-07-28T10:25:12.144964+00:00",
       "current_price": 67990,
       "current_mileage": 14467,
-      "status": "active",
+      "status": "gone",
       "observations": [
         {
           "observed_at": "2026-07-28T10:25:12.144964+00:00",
@@ -1774,7 +1716,7 @@
       "first_seen_at": "2026-08-07T11:13:52.986152+00:00",
       "current_price": 69497,
       "current_mileage": 6261,
-      "status": "gone",
+      "status": "reappeared",
       "observations": [
         {
           "observed_at": "2026-08-07T11:13:52.986152+00:00",
@@ -1797,7 +1739,7 @@
       "first_seen_at": "2026-08-11T12:05:05.663227+00:00",
       "current_price": 70909,
       "current_mileage": 4103,
-      "status": "active",
+      "status": "gone",
       "observations": [
         {
           "observed_at": "2026-08-11T12:05:05.663227+00:00",
