@@ -88,6 +88,33 @@ outright once the pool fell to 23: at that size `count=24` returns 0
 records, so the union collapsed to 11 and tripped `EXPECTED_MIN_POOL`,
 aborting every poll for ~16 hours on 2026-08-18/19.
 
+### Proof that the API did not change (and why nobody noticed for 4 months)
+
+Worth recording, because `sample_response.json` shows a Los Angeles car as
+record #1 and that looks like evidence the API used to behave differently.
+It isn't. The fixture and the first automated snapshot are adjacent pages of
+the same distance-sorted list, captured the same day:
+
+| | records | distance range | n |
+|---|---|---|---|
+| `fixtures/sample_response.json` | 0–11 (page 0) | 9.7 → 1,373 mi | 12 |
+| `raw_snapshots/20260426_155037.json.gz` | 12–47 (pages 1@12 ∪ 1@24) | 1,552 → 2,532 mi | 36 |
+
+**Zero VIN overlap. The fixture's farthest car (1,373 mi) is nearer than the
+snapshot's nearest (1,552 mi). 12 + 36 = 48 = the true pool that day.** So
+`start=1` already meant "second page" on 2026-04-26, the same day the recon
+notes declared it canonical. The semantics never changed — the recon
+captured page 0 by hand, then wrote down `start=1`, and the automation used
+`start=1` from its very first run.
+
+**Why it stayed invisible:** the fixture *is* page-0 data, so `DRY_RUN=1`
+replay and the entire test suite validated against a payload full of LA
+cars. Local runs looked correct; only the live path was wrong. A fixture
+captured differently from how production queries is a blind spot — when
+changing the query contract, re-verify against the live endpoint, not the
+fixture. (`test_fetch_all_walks_pages_until_short_page` now pins the walk to
+page 0 so this specific regression can't return silently.)
+
 ### Current strategy: walk the pages
 
 `scrape.fetch_all()` requests page 0, 1, 2, … at `PAGE_SIZE = 12` until a
