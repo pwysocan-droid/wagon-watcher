@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-19T06:13:02.835518+00:00",
+  "generated_at": "2026-08-19T06:26:56.423792+00:00",
   "schema_version": 1,
   "vins": {
     "W1KLH6FB2SA128504": {
@@ -958,7 +958,7 @@
       "trim": "E450S4",
       "dealer": "Mercedes-Benz of North Orlando",
       "first_seen_at": "2026-07-01T08:08:36.498612+00:00",
-      "current_price": 75411,
+      "current_price": 74411,
       "current_mileage": 15355,
       "status": "active",
       "observations": [
@@ -1001,13 +1001,18 @@
           "observed_at": "2026-07-30T18:52:35.644013+00:00",
           "price": 75411,
           "mileage": 15355
+        },
+        {
+          "observed_at": "2026-08-19T06:26:52.354336+00:00",
+          "price": 74411,
+          "mileage": 15355
         }
       ],
       "stats": {
-        "all_time_low": 75411,
+        "all_time_low": 74411,
         "all_time_high": 81411,
-        "total_drop_pct": -7.37,
-        "n_observations": 8,
+        "total_drop_pct": -8.6,
+        "n_observations": 9,
         "days_observed": 48
       }
     },
@@ -1434,7 +1439,7 @@
       "trim": "E450S4",
       "dealer": "Benzel-Busch Motor Car Corp.",
       "first_seen_at": "2026-07-25T09:28:35.139701+00:00",
-      "current_price": 49987,
+      "current_price": 51439,
       "current_mileage": 51923,
       "status": "active",
       "observations": [
@@ -1452,13 +1457,18 @@
           "observed_at": "2026-08-03T14:16:45.042356+00:00",
           "price": 49987,
           "mileage": 51923
+        },
+        {
+          "observed_at": "2026-08-19T06:26:52.354336+00:00",
+          "price": 51439,
+          "mileage": 51923
         }
       ],
       "stats": {
         "all_time_low": 49987,
         "all_time_high": 51721,
-        "total_drop_pct": 0.0,
-        "n_observations": 3,
+        "total_drop_pct": 2.9,
+        "n_observations": 4,
         "days_observed": 24
       }
     },
