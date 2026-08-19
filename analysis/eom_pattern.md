@@ -97,3 +97,30 @@ so "no late clusters" is *unconfirmed absence*, not proof. Re-run this
 after another 60–90 days of data before hardening the November entry-point
 model ("2–3 cuts deep by late November" survives — multi-cut VINs are real —
 but the cuts arrive earlier and flatter than the clustered model assumed).
+
+## Data-integrity caveat added 2026-08-19 (read before reusing these numbers)
+
+A pagination bug found on 2026-08-19 means the pool this analysis ran on was
+systematically truncated: `scrape.fetch_all()` pinned `start=1`, which is
+**page 1**, so the 12 nearest-to-90210 listings (page 0) were never fetched
+for the life of the project. Fixed in scrape.py; see
+fixtures/endpoint_notes.md "Pagination".
+
+Effects specific to this analysis:
+
+- **The drop census is incomplete, not just small.** Price cuts on page-0
+  cars were never recorded, so both the day-of-month counts and the
+  days-on-lot bins are built from a distance-biased subset of the market.
+  6 of the 23 VINs live on 2026-08-19 had never entered the DB at all.
+- **Some days-on-lot values are wrong.** A car that slid between pages
+  disappeared and re-entered the feed as far as the watcher could tell;
+  where that produced a new `first_seen`, its days-on-lot restarts from
+  zero, which biases drops toward the early bins — the same direction as
+  this analysis's headline "cuts front-load" finding.
+
+The month-end verdict (a day-28–30 frequency bump with no magnitude effect)
+rests on within-sample comparisons and is unlikely to flip. The decay-bin
+verdict is the one to re-test: its "no late clusters" conclusion was already
+flagged as unconfirmed absence due to right-censoring, and page-0 truncation
+pushes the same way. Fold both into the v2 re-run after 2026-09-25 on
+post-fix data.

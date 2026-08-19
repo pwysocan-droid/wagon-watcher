@@ -53,19 +53,39 @@ DEFAULT_QUERY: dict[str, str] = {
     "bodyStyleId": "WGN",
     "resvOnly": "false",
     "sortBy": "distance-asc",
-    "start": "1",
+    "start": "0",  # page index, not an offset — see "Pagination" below
     "withFilters": "true",
     "zip": "90210",
 }
 
-# Per recon 2026-04-26: the API does NOT support offset-style pagination via
-# `start`. Different `start` values return disjoint windows; `start>=12`
-# returns 0 records. The `count` parameter, however, is not capped at 12 as
-# original recon claimed — `count=24` works. count=12 and count=24 (both with
-# start=1) return DISJOINT sets of records that, when unioned, cover the full
-# filtered pool. Three consecutive runs returned the same 36 VINs with
-# consistent prices, so this strategy is deterministic.
-COUNTS_FOR_UNION: tuple[str, ...] = ("12", "24")
+# Pagination — re-verified live 2026-08-19, after the watcher aborted on
+# every poll for ~16 hours.
+#
+# `start` is a ZERO-BASED PAGE INDEX and `count` is the page size. Page p
+# returns records [p*count, (p+1)*count). The original recon read the same
+# behavior as "start is a misnomer, vary count instead", which fit the
+# observations but had the semantics backwards:
+#
+#   start=0&count=12 → the 12 NEAREST cars (page 0)
+#   start=1&count=12 → the next 11         (page 1; short page = the end)
+#   start=2&count=12 → 0 records           (past the end)
+#
+# Consequences of the old COUNTS_FOR_UNION strategy (two calls, both
+# start=1, count=12 then count=24 — i.e. pages 1 and 1-of-size-24, records
+# 12..47):
+#   - It never fetched page 0, so the nearest listings were invisible for
+#     the life of the project. On 2026-08-19 page 0 held two CA cars 71.8
+#     miles away — the closest in the feed and the most relevant to a
+#     Los Angeles buyer — neither of which had ever entered the DB.
+#   - It broke outright when the pool fell to 23: count=24 returns 0
+#     records at that size, leaving an 11-VIN union that tripped
+#     EXPECTED_MIN_POOL and aborted every run.
+#
+# Walk pages until a short page (fewer than PAGE_SIZE records) arrives —
+# that is how the API signals the end. MAX_PAGES is a runaway guard.
+PAGE_SIZE = 12
+MAX_PAGES = 25
+
 
 # Coarse "endpoint returned almost nothing" tripwire. This is a backstop, not
 # the primary defense: reconcile.py's relative check (abort if found < 0.5 *
@@ -74,9 +94,11 @@ COUNTS_FOR_UNION: tuple[str, ...] = ("12", "24")
 # compare against (e.g. first run on an empty DB). 12 == one count=12 window,
 # so anything below it means even a single call came back broken.
 #
-# Originally 25, set at recon when the national E450S4+WGN pool was ≥34. The
-# CPO wagon market is thin and genuinely fell to 24 by 2026-05-21, which
-# tripped the old floor on healthy data — hence the lower, backstop-only value.
+# Originally 25, set at recon when the national E450S4+WGN pool was ≥34. It
+# was lowered to 12 on 2026-05-21 because it kept tripping on "healthy" data
+# — which, in hindsight, was the pagination bug above quietly serving a
+# truncated pool (records 12..47 of it), not a thinning market. With page 0
+# restored the real pool reads 23 as of 2026-08-19.
 EXPECTED_MIN_POOL = 12
 
 
@@ -129,16 +151,14 @@ def _first(seq: Any) -> Any:
     return None
 
 
-def _log_price_anomaly(vin: str, raw_msrp: int) -> None:
-    """Append a quarantined-price record to data/anomalies.jsonl.
+def _log_anomaly(kind: str, **fields: Any) -> None:
+    """Append one record to data/anomalies.jsonl.
 
     Best-effort: a logging failure must never fail the scrape itself."""
     entry = {
         "at": datetime.now(timezone.utc).isoformat(),
-        "kind": "price_quarantined",
-        "vin": vin,
-        "raw_msrp": raw_msrp,
-        "reason": f"msrp <= {PRICE_ANOMALY_FLOOR}",
+        "kind": kind,
+        **fields,
     }
     try:
         ANOMALIES_LOG.parent.mkdir(parents=True, exist_ok=True)
@@ -146,6 +166,15 @@ def _log_price_anomaly(vin: str, raw_msrp: int) -> None:
             f.write(json.dumps(entry) + "\n")
     except OSError:
         pass
+
+
+def _log_price_anomaly(vin: str, raw_msrp: int) -> None:
+    _log_anomaly(
+        "price_quarantined",
+        vin=vin,
+        raw_msrp=raw_msrp,
+        reason=f"msrp <= {PRICE_ANOMALY_FLOOR}",
+    )
 
 
 def parse_record(record: dict) -> ParsedRecord:
@@ -230,11 +259,12 @@ def fetch_all(
     query: dict[str, str] | None = None,
     dry_run: bool | None = None,
 ) -> dict:
-    """Fetch the full filtered pool by unioning two API calls.
+    """Fetch the full filtered pool by walking the API's pages.
 
-    Live mode: makes len(COUNTS_FOR_UNION) calls (count=12, count=24), unions
-    by VIN, and returns a synthetic single-payload response with the union as
-    `records` and a corrected `paging` block (the API's own totalCount lies).
+    Live mode: requests page 0, 1, 2, … at PAGE_SIZE records per page until a
+    short page signals the end (see "Pagination" above), unions by VIN, and
+    returns a synthetic single-payload response with the union as `records`
+    and a corrected `paging` block.
 
     DRY_RUN=1 (env or arg) reads fixtures/sample_response.json instead.
     """
@@ -247,28 +277,65 @@ def fetch_all(
 
     by_vin: dict[str, dict] = {}
     base_response: dict | None = None
-    for count in COUNTS_FOR_UNION:
-        response = _fetch_page({**base_query, "count": count})
+    reported_total: int | None = None
+    pages_walked = 0
+
+    for page in range(MAX_PAGES):
+        response = _fetch_page(
+            {**base_query, "start": str(page), "count": str(PAGE_SIZE)}
+        )
         if base_response is None:
             base_response = response
-        for r in response["result"]["pagedVehicles"]["records"]:
+        paged = response["result"]["pagedVehicles"]
+        page_records = paged.get("records") or []
+        if reported_total is None:
+            reported_total = (paged.get("paging") or {}).get("totalCount")
+        for r in page_records:
             by_vin[r["vin"]] = r
+        pages_walked += 1
+        if len(page_records) < PAGE_SIZE:
+            break  # short (or empty) page — that's the end of the pool
+    else:
+        raise RuntimeError(
+            f"fetch_all walked all {MAX_PAGES} pages without reaching a "
+            f"short page (collected {len(by_vin)} VINs). The pagination "
+            f"contract may have changed again — verify before trusting the "
+            f"data. Aborting before reconcile."
+        )
 
-    assert base_response is not None  # COUNTS_FOR_UNION is non-empty
+    assert base_response is not None  # MAX_PAGES >= 1
     records = list(by_vin.values())
 
     if len(records) < EXPECTED_MIN_POOL:
         raise RuntimeError(
-            f"fetch_all returned {len(records)} records, below expected "
-            f"minimum {EXPECTED_MIN_POOL}. The two calls "
-            f"(count={', count='.join(COUNTS_FOR_UNION)}) may now return "
-            f"overlapping records — verify the union strategy is still "
-            f"disjoint. Aborting before reconcile."
+            f"fetch_all returned {len(records)} records from {pages_walked} "
+            f"page(s), below expected minimum {EXPECTED_MIN_POOL}. Verify the "
+            f"pagination contract still holds (start = zero-based page index, "
+            f"count = page size). Aborting before reconcile."
+        )
+
+    # Coverage tripwire. The union should match the API's own totalCount;
+    # a shortfall means whole pages are going missing — precisely the silent
+    # failure the old union strategy hid for months. Log it instead of
+    # aborting: totalCount has been unreliable before, and a stale count
+    # shouldn't take the watcher offline when the data itself looks sane.
+    if reported_total is not None and len(records) < reported_total:
+        _log_anomaly(
+            "coverage_shortfall",
+            collected=len(records),
+            reported_total=reported_total,
+            pages_walked=pages_walked,
+            reason="union smaller than the API's totalCount",
+        )
+        print(
+            f"WARNING: collected {len(records)} of {reported_total} reported "
+            f"records across {pages_walked} page(s) — possible missed page",
+            file=sys.stderr,
         )
 
     base_response["result"]["pagedVehicles"]["records"] = records
     base_response["result"]["pagedVehicles"]["paging"] = {
-        "totalCount": len(records),  # corrected — API's totalCount is unreliable
+        "totalCount": len(records),  # corrected — count what we actually got
         "currentOffset": 0,
         "currentCount": len(records),
     }

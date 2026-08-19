@@ -38,8 +38,8 @@ sorted by distance from Beverly Hills (90210), 12 per page.
 | `invType` | yes | `cpo` | `cpo` = Certified Pre-Owned. |
 | `zip` | yes | `90210` | Buyer ZIP for distance calculation. |
 | `distance` | yes | `ANY` | Radius. `ANY` = nationwide. Numeric (`50`, `100`, `500`, `1000`) also accepted. |
-| `count` | yes | `12` | Records to return. NOT capped at 12 — `count=24` works. `count=30+` returns truncated/anomalous results (see "Pagination" below). |
-| `start` | yes | `1` | Misnomer — does NOT behave as an offset. Different `start` values return *disjoint* 12-record windows; values ≥12 return 0 records. Use `start=1` always; vary `count` instead. |
+| `count` | yes | `12` | **Page size.** Values above the remaining-record count return fewer records or none (see "Pagination"). Keep at `12`. |
+| `start` | yes | `0` | **Zero-based page index** (not an offset). Page `p` returns records `[p*count, (p+1)*count)`. Page 0 is the nearest cars. |
 | `sortBy` | yes | `distance-asc` | Sort order. `distance-asc` is the safe default. |
 | `resvOnly` | yes | `false` | When `true`, returns only reservation-required vehicles. We want `false`. |
 | `withFilters` | yes | `true` | **Required.** `false` returns 400. Response always includes facets. |
@@ -48,36 +48,53 @@ sorted by distance from Beverly Hills (90210), 12 per page.
 
 ---
 
-## Pagination — the API doesn't actually paginate
+## Pagination — `start` is a page index
 
-**Important — this contradicts the original recon notes.** Re-verified
-2026-04-26 by direct probing: the API does NOT support offset-style
-pagination via `start`. Original recon assumed `start=13`, `start=25`
-would give pages 2 and 3; in reality both return zero records.
+**Corrected 2026-08-19. This supersedes the "the API doesn't actually
+paginate" note that stood here from 2026-04-26 to 2026-08-19.**
 
-What the API actually does:
+The contract is ordinary page-based pagination:
 
-- `start=1, count=12` → some 12 VINs (set A).
-- `start=2, count=12` → a *different* 12 VINs (set B). **Zero overlap with A.**
-- `start>=12, count=12` → **0 records.**
-- `start=1, count=24` → 24 VINs (set C). **C ⊃ B; C ∩ A = ∅.**
-- `start=1, count=30+` → fewer records than asked (returns are truncated
-  in a non-obvious way; assume broken).
+- **`start` = zero-based page index. `count` = page size.** Page `p`
+  returns records `[p*count, (p+1)*count)`.
+- A page with fewer than `count` records is the **last** page. Past the
+  end you get 0 records.
+- Verified live 2026-08-19 against a 23-record pool:
+  `start=0&count=12` → 12 records (the 12 nearest cars);
+  `start=1&count=12` → 11 records (short page → end);
+  `start=2&count=12` → 0 records.
+  `count=6` walks it in 4 pages: 6 + 6 + 6 + 5.
+- `result.pagedVehicles.paging.totalCount` reported 23 and the walk
+  collected exactly 23, so totalCount is at least sometimes right. The
+  watcher still overwrites it with the count it actually collected, and
+  logs a `coverage_shortfall` anomaly when the walk comes up short.
 
-The `result.pagedVehicles.paging.totalCount` field is also unreliable —
-it reports 53 even when the modelDesignation facet says only 34 E450S4
-listings exist.
+### Why the old notes read it backwards
 
-### The workaround: union strategy
+The April probing was accurate but interpreted with the semantics
+inverted. `start=1, count=12` and `start=2, count=12` really do return
+disjoint 12-record sets — because they are *pages 1 and 2*. `start=1,
+count=24` really is a superset of `start=2, count=12` — because page 1 at
+size 24 spans records 24–47, which contains records 24–35. Everything
+observed is consistent with page indexing; nothing required a "the API
+doesn't paginate" theory.
 
-To cover the full filtered pool (~36 unique VINs for E450S4+WGN), the
-watcher makes **two calls per poll**, both with `start=1`:
+Cost of the misreading: the watcher pinned `start=1` and varied `count`,
+so it only ever read records 12 and beyond. **Page 0 — the nearest
+listings — was never fetched for the life of the project.** On 2026-08-19
+page 0 held two CA cars 71.8 miles from the target ZIP, the closest in the
+feed, neither of which had ever entered the DB. The strategy also failed
+outright once the pool fell to 23: at that size `count=24` returns 0
+records, so the union collapsed to 11 and tripped `EXPECTED_MIN_POOL`,
+aborting every poll for ~16 hours on 2026-08-18/19.
 
-1. `count=12, start=1` → set A (12 VINs)
-2. `count=24, start=1` → set C (24 VINs, disjoint from A)
+### Current strategy: walk the pages
 
-Union by VIN, dedupe → ~36 VINs. Verified deterministic across 3
-consecutive polls (same VINs, same prices).
+`scrape.fetch_all()` requests page 0, 1, 2, … at `PAGE_SIZE = 12` until a
+short page arrives, unions by VIN (the page boundary has been observed
+repeating one record), and rewrites `paging` with the real collected
+count. `MAX_PAGES = 25` guards against a contract change that yields full
+pages forever.
 
 At 30-min polling, that's 4 requests/hour total — still well within
 polite limits.
@@ -196,9 +213,12 @@ Color codes from `facets.color`:
 The API returns non-200 status codes for:
 - `withFilters=false` → 400 Bad Request
 
-(`count > 12` does NOT actually return 500 — the original recon claim was
-wrong. `count=24` returns 24 records cleanly. `count=30+` quietly returns
-fewer records than requested with no error code.)
+(`count > 12` does NOT return 500 — the original recon claim was wrong.
+Large `count` values are page sizes: they return whatever remains on that
+page, which is often fewer records than requested and sometimes none, with
+no error code. `count=0` returns 500. `sortBy` values other than
+`distance-asc`/`distance-desc` (e.g. `price-asc`, `mileage-asc`,
+`year-desc`) return 400.)
 
 The watcher should treat any 4xx/5xx response as an abort signal:
 log the failure to the `runs` table, send a high-priority alert, and

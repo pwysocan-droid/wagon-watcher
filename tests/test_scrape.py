@@ -222,108 +222,145 @@ def test_fetch_all_respects_env_var(monkeypatch, payload):
     assert out == payload
 
 
-def test_fetch_all_live_unions_two_count_responses(monkeypatch):
-    """Live mode makes two calls (count=12, count=24) and unions by VIN.
-
-    The MBUSA API doesn't paginate offset-style; this is the workaround
-    documented in fixtures/endpoint_notes.md (recon 2026-04-26).
-    """
-    monkeypatch.delenv("DRY_RUN", raising=False)
-
-    def make_response(vins: list[str]) -> dict:
-        return {
-            "result": {"pagedVehicles": {
-                "records": [{"vin": v} for v in vins],
-                "paging": {"totalCount": 53, "currentOffset": 0,
-                           "currentCount": len(vins)},
-            }, "facets": {}},
-            "status": {"code": 200, "ok": True, "tmstmp": "0", "traceId": "x"},
-            "messages": [],
-            "success": True,
-        }
-
-    # The two calls return disjoint VIN sets (mirrors observed API behavior).
-    response_for_count = {
-        "12": make_response([f"VIN_A_{i}" for i in range(12)]),
-        "24": make_response([f"VIN_B_{i}" for i in range(24)]),
+def _paged_response(vins: list[str], total: int) -> dict:
+    return {
+        "result": {"pagedVehicles": {
+            "records": [{"vin": v} for v in vins],
+            "paging": {"totalCount": total, "currentOffset": 0,
+                       "currentCount": len(vins)},
+        }, "facets": {}},
+        "status": {"code": 200, "ok": True, "tmstmp": "0", "traceId": "x"},
+        "messages": [],
+        "success": True,
     }
-    calls: list[str] = []
+
+
+def test_fetch_all_walks_pages_until_short_page(monkeypatch):
+    """`start` is a zero-based page index and `count` the page size, so the
+    walk must request page 0 first (the nearest cars — the page the old
+    count-union strategy never fetched) and stop on the first short page."""
+    monkeypatch.delenv("DRY_RUN", raising=False)
+    from scrape import PAGE_SIZE
+
+    pages = {
+        "0": [f"P0_{i}" for i in range(PAGE_SIZE)],       # full page
+        "1": [f"P1_{i}" for i in range(PAGE_SIZE)],       # full page
+        "2": [f"P2_{i}" for i in range(5)],               # short → stop
+        "3": [],                                          # must not be fetched
+    }
+    calls: list[tuple[str, str]] = []
 
     def mock_fetch(query):
-        count = query["count"]
-        calls.append(count)
-        return response_for_count[count]
+        calls.append((query["start"], query["count"]))
+        return _paged_response(pages[query["start"]], 29)
 
     monkeypatch.setattr("scrape._fetch_page", mock_fetch)
-
     out = fetch_all()
-    assert calls == ["12", "24"]
 
-    records = out["result"]["pagedVehicles"]["records"]
-    vins = {r["vin"] for r in records}
-    assert vins == ({f"VIN_A_{i}" for i in range(12)}
-                    | {f"VIN_B_{i}" for i in range(24)})
-    assert len(records) == 36
-
+    assert calls == [("0", str(PAGE_SIZE)), ("1", str(PAGE_SIZE)),
+                     ("2", str(PAGE_SIZE))]
+    vins = [r["vin"] for r in out["result"]["pagedVehicles"]["records"]]
+    assert vins[0] == "P0_0"  # page 0 is present, and first
+    assert len(vins) == 29
     paging = out["result"]["pagedVehicles"]["paging"]
-    assert paging["totalCount"] == 36          # corrected from API's lying 53
-    assert paging["currentCount"] == 36
+    assert paging["totalCount"] == 29
+    assert paging["currentCount"] == 29
 
 
-def test_fetch_all_live_dedupes_overlapping_vins(monkeypatch):
-    """If the two calls share a VIN, it appears once in the union."""
+def test_fetch_all_stops_on_empty_page_when_pool_is_a_page_multiple(monkeypatch):
+    """A pool that's an exact multiple of PAGE_SIZE ends with an empty page."""
     monkeypatch.delenv("DRY_RUN", raising=False)
-    shared = "SHARED_VIN_0000001"
+    from scrape import PAGE_SIZE
 
-    def make_response(vins):
-        return {
-            "result": {"pagedVehicles": {
-                "records": [{"vin": v} for v in vins],
-                "paging": {"totalCount": 99, "currentOffset": 0,
-                           "currentCount": len(vins)},
-            }, "facets": {}},
-            "status": {"code": 200},
-            "success": True,
-        }
+    pages = {"0": [f"A{i}" for i in range(PAGE_SIZE)],
+             "1": [f"B{i}" for i in range(PAGE_SIZE)],
+             "2": []}
+    seen: list[str] = []
 
-    # Total ≥ EXPECTED_MIN_POOL so the sanity check passes.
-    responses = iter([
-        make_response([shared] + [f"A{i}" for i in range(13)]),
-        make_response([shared] + [f"B{i}" for i in range(15)]),
-    ])
-    monkeypatch.setattr("scrape._fetch_page", lambda q: next(responses))
+    def mock_fetch(query):
+        seen.append(query["start"])
+        return _paged_response(pages[query["start"]], PAGE_SIZE * 2)
 
+    monkeypatch.setattr("scrape._fetch_page", mock_fetch)
     out = fetch_all()
-    vins = {r["vin"] for r in out["result"]["pagedVehicles"]["records"]}
-    expected = {shared} | {f"A{i}" for i in range(13)} | {f"B{i}" for i in range(15)}
-    assert vins == expected
-    assert len(vins) == 29  # not 30 — shared appears once
+    assert seen == ["0", "1", "2"]
+    assert len(out["result"]["pagedVehicles"]["records"]) == PAGE_SIZE * 2
+
+
+def test_fetch_all_dedupes_vins_repeated_across_pages(monkeypatch):
+    """The page boundary has been observed repeating a record; dedupe by VIN."""
+    monkeypatch.delenv("DRY_RUN", raising=False)
+    from scrape import PAGE_SIZE
+
+    shared = "SHARED_VIN_0000001"
+    pages = {
+        "0": [f"A{i}" for i in range(PAGE_SIZE - 1)] + [shared],
+        "1": [shared] + [f"B{i}" for i in range(6)],
+    }
+    monkeypatch.setattr("scrape._fetch_page",
+                        lambda q: _paged_response(pages[q["start"]], 18))
+    out = fetch_all()
+    vins = [r["vin"] for r in out["result"]["pagedVehicles"]["records"]]
+    assert len(vins) == len(set(vins))
+    assert vins.count(shared) == 1
+    assert len(vins) == (PAGE_SIZE - 1) + 1 + 6
+
+
+def test_fetch_all_logs_coverage_shortfall_without_aborting(monkeypatch, tmp_path):
+    """Collecting fewer VINs than the API's own totalCount is the silent
+    failure mode that hid the missing page — log it, but keep the run alive."""
+    monkeypatch.delenv("DRY_RUN", raising=False)
+    import json as _json
+    import scrape
+    log = tmp_path / "anomalies.jsonl"
+    monkeypatch.setattr(scrape, "ANOMALIES_LOG", log)
+
+    pages = {"0": [f"V{i}" for i in range(scrape.PAGE_SIZE)], "1": [f"W{i}" for i in range(3)]}
+    monkeypatch.setattr("scrape._fetch_page",
+                        lambda q: _paged_response(pages[q["start"]], 40))
+
+    out = fetch_all()  # does not raise
+    assert len(out["result"]["pagedVehicles"]["records"]) == scrape.PAGE_SIZE + 3
+    entry = _json.loads(log.read_text().splitlines()[0])
+    assert entry["kind"] == "coverage_shortfall"
+    assert entry["collected"] == scrape.PAGE_SIZE + 3
+    assert entry["reported_total"] == 40
 
 
 def test_fetch_all_aborts_below_expected_min_pool(monkeypatch):
-    """If the union produces fewer than EXPECTED_MIN_POOL records, raise.
+    """If the walk produces fewer than EXPECTED_MIN_POOL records, raise.
 
-    Defends against the silent failure where MBUSA changes the backend so
-    count=12 and count=24 return overlapping records — we'd quietly lose
-    half the dataset. Per CODE_REVIEW.md TODO 1.
+    This is the tripwire that fired for ~16h on 2026-08-18/19 when count=24
+    began returning 0 records. Per CODE_REVIEW.md TODO 1.
     """
     from scrape import EXPECTED_MIN_POOL
     monkeypatch.delenv("DRY_RUN", raising=False)
 
-    # Both calls return the SAME 10 records — total union = 10, < 12.
-    same_vins = [{"vin": f"V{i:017d}"} for i in range(10)]
-    response = {
-        "result": {"pagedVehicles": {
-            "records": same_vins,
-            "paging": {"totalCount": 53, "currentOffset": 0, "currentCount": 12},
-        }, "facets": {}},
-        "status": {"code": 200},
-        "success": True,
-    }
+    # Page 0 comes back short with fewer records than the floor.
+    response = _paged_response([f"V{i:017d}" for i in range(10)], 53)
     monkeypatch.setattr("scrape._fetch_page", lambda q: response)
 
     with pytest.raises(RuntimeError, match=f"below expected minimum {EXPECTED_MIN_POOL}"):
         fetch_all()
+
+
+def test_fetch_all_aborts_when_pages_never_end(monkeypatch):
+    """A pagination contract change that yields full pages forever must abort
+    rather than loop — MAX_PAGES is the runaway guard."""
+    from scrape import MAX_PAGES, PAGE_SIZE
+    monkeypatch.delenv("DRY_RUN", raising=False)
+
+    counter = {"n": 0}
+
+    def mock_fetch(query):
+        counter["n"] += 1
+        base = counter["n"] * 1000
+        return _paged_response([f"V{base + i}" for i in range(PAGE_SIZE)], 999)
+
+    monkeypatch.setattr("scrape._fetch_page", mock_fetch)
+    with pytest.raises(RuntimeError, match=f"walked all {MAX_PAGES} pages"):
+        fetch_all()
+    assert counter["n"] == MAX_PAGES
 
 
 def test_save_snapshot_filename_format(tmp_path, payload):

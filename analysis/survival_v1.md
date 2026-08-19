@@ -168,3 +168,30 @@ stale-inventory targets the November playbook depends on.
 - The 14-day merge threshold is a judgment call; at the observed flap
   cadence (most reappearances within 1–3 days) the results are not
   sensitive to ±a few days.
+
+## Data-integrity caveat added 2026-08-19 (read before reusing these numbers)
+
+A pagination bug found on 2026-08-19 means the pool this analysis ran on
+was systematically truncated: `scrape.fetch_all()` pinned `start=1`, which
+is **page 1**, so the 12 nearest-to-90210 listings (page 0) were never
+fetched for the life of the project. Fixed in scrape.py; see
+fixtures/endpoint_notes.md "Pagination".
+
+Concrete effects on this analysis:
+
+- **Pool sizes and medians are computed on a truncated, distance-biased
+  sample.** Page 0 is the *nearest* inventory, which on 2026-08-19 included
+  two CA cars at 71.8 mi listing for $41,453 and $46,871 — well below the
+  band this analysis calls the market. 6 of the 23 VINs live that day had
+  never entered the DB at all.
+- **Some "sales" are artifacts.** A car that slid from page 1 into page 0
+  as the pool shrank vanished from the watcher's view while still being
+  listed, and the >14-day rule then scored it as sold. On 2026-08-19, 3
+  VINs marked `gone` were live in the feed (2 of them inside this
+  analysis's clean cohort), so the sold/censored split and the lifetimes
+  of affected VINs are wrong in the "too short" direction.
+
+Treat the *shape* findings (front-loading, percentile-track separation) as
+provisional but plausible — they don't depend on the missing page — and
+treat any absolute level (pool size, median asking, clearing band, count of
+sales) as unreliable until the v2 re-run on post-fix data.
