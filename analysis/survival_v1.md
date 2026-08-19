@@ -184,12 +184,33 @@ Concrete effects on this analysis:
   two CA cars at 71.8 mi listing for $41,453 and $46,871 — well below the
   band this analysis calls the market. 6 of the 23 VINs live that day had
   never entered the DB at all.
-- **Some "sales" are artifacts.** A car that slid from page 1 into page 0
-  as the pool shrank vanished from the watcher's view while still being
-  listed, and the >14-day rule then scored it as sold. On 2026-08-19, 3
-  VINs marked `gone` were live in the feed (2 of them inside this
-  analysis's clean cohort), so the sold/censored split and the lifetimes
-  of affected VINs are wrong in the "too short" direction.
+- **Some "sales" are artifacts, and the rate is now measured.** A car that
+  slid from page 1 into page 0 as the pool shrank vanished from the
+  watcher's view while still listed, and the >14-day rule then scored it as
+  sold. Measured across all 1,486 snapshots by distance rank at exit:
+
+  | exit position | share of disappearances |
+  |---|---|
+  | rank 0 (nearest visible) | 21% |
+  | rank 1–2 | 16% |
+  | middle | 51% |
+  | far edge | 13% |
+
+  Position-independent exits would put rank 0 near 4–8%, so the near edge
+  is ~3–5× over-represented. Within this analysis's clean cohort, **22 of
+  87 "sales" (25%) last appeared at rank 0–2** versus ~10–12% expected by
+  chance — so on the order of 10–12 of the 65 completed lifetimes are
+  probably not sales at all. Those VINs are tagged `suspect_sale` in the
+  DB's `notes` table (2026-08-19). Three were confirmed outright: still
+  live in the feed while marked `gone`; their rows were repaired to
+  `active`.
+
+  Direction of the bias: a boundary exit is recorded as a sale at whatever
+  age the car had reached, so it both inflates the sale count and truncates
+  lifetimes. **The 15-day median is biased low.** The 0–3 day "sales"
+  flagged below are the clearest cases — MB Madison's 96th-percentile 2026
+  "selling" in 0 days last appeared at rank 0 of 24, confirming it was a
+  boundary artifact rather than a transaction.
 
 Treat the *shape* findings (front-loading, percentile-track separation) as
 provisional but plausible — they don't depend on the missing page — and
