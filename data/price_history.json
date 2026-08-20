@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-20T10:54:49.283842+00:00",
+  "generated_at": "2026-08-20T11:18:10.014927+00:00",
   "schema_version": 1,
   "vins": {
     "W1KLH6FB2SA128504": {
@@ -1573,7 +1573,7 @@
         "all_time_high": 68974,
         "total_drop_pct": 0.0,
         "n_observations": 1,
-        "days_observed": 21
+        "days_observed": 22
       }
     },
     "W1KLH6FB7TA253953": {
@@ -1716,7 +1716,7 @@
         "all_time_high": 69940,
         "total_drop_pct": 0.0,
         "n_observations": 1,
-        "days_observed": 12
+        "days_observed": 13
       }
     },
     "W1KLH6FB4SA151055": {
@@ -1739,7 +1739,7 @@
         "all_time_high": 69497,
         "total_drop_pct": 0.0,
         "n_observations": 1,
-        "days_observed": 12
+        "days_observed": 13
       }
     },
     "W1KLH6FB0SA155006": {
