@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-22T07:51:40.662379+00:00",
+  "generated_at": "2026-08-22T08:17:39.334903+00:00",
   "schema_version": 1,
   "vins": {
     "W1KLH6FB2SA128504": {
@@ -870,89 +870,6 @@
         "days_observed": 54
       }
     },
-    "W1KZH6AB6PB139489": {
-      "year": 2023,
-      "trim": "E450S4",
-      "dealer": "New Country Motor Cars, Inc.",
-      "first_seen_at": "2026-06-30T19:14:28.809888+00:00",
-      "current_price": 59997,
-      "current_mileage": 16957,
-      "status": "gone",
-      "observations": [
-        {
-          "observed_at": "2026-06-30T19:14:28.809888+00:00",
-          "price": 60997,
-          "mileage": 16944
-        },
-        {
-          "observed_at": "2026-07-04T14:23:22.042596+00:00",
-          "price": 60997,
-          "mileage": 16945
-        },
-        {
-          "observed_at": "2026-07-04T22:25:36.204441+00:00",
-          "price": 60997,
-          "mileage": 16944
-        },
-        {
-          "observed_at": "2026-07-05T01:15:01.276884+00:00",
-          "price": 60997,
-          "mileage": 16945
-        },
-        {
-          "observed_at": "2026-07-15T10:42:16.096175+00:00",
-          "price": 59997,
-          "mileage": 16957
-        },
-        {
-          "observed_at": "2026-07-17T22:39:30.710726+00:00",
-          "price": 59997,
-          "mileage": 16694
-        },
-        {
-          "observed_at": "2026-07-18T01:40:41.980439+00:00",
-          "price": 59997,
-          "mileage": 16957
-        },
-        {
-          "observed_at": "2026-07-18T10:09:50.687079+00:00",
-          "price": 59997,
-          "mileage": 16694
-        },
-        {
-          "observed_at": "2026-07-18T12:10:52.188151+00:00",
-          "price": 59997,
-          "mileage": 16957
-        },
-        {
-          "observed_at": "2026-07-18T14:43:27.335150+00:00",
-          "price": 59997,
-          "mileage": 16694
-        },
-        {
-          "observed_at": "2026-07-18T16:44:30.859667+00:00",
-          "price": 59997,
-          "mileage": 16957
-        },
-        {
-          "observed_at": "2026-07-18T21:40:58.109094+00:00",
-          "price": 59997,
-          "mileage": 16694
-        },
-        {
-          "observed_at": "2026-07-19T01:48:31.774893+00:00",
-          "price": 59997,
-          "mileage": 16957
-        }
-      ],
-      "stats": {
-        "all_time_low": 59997,
-        "all_time_high": 60997,
-        "total_drop_pct": -1.64,
-        "n_observations": 13,
-        "days_observed": 52
-      }
-    },
     "W1KLH6FB0RA026242": {
       "year": 2024,
       "trim": "E450S4",
@@ -1013,7 +930,7 @@
         "all_time_high": 81411,
         "total_drop_pct": -8.6,
         "n_observations": 9,
-        "days_observed": 51
+        "days_observed": 52
       }
     },
     "W1KLH6FB5TA256561": {
