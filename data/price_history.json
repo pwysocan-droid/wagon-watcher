@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-23T22:44:42.188435+00:00",
+  "generated_at": "2026-08-23T23:11:36.505099+00:00",
   "schema_version": 1,
   "vins": {
     "W1KLH6FB2SA128504": {
@@ -42,39 +42,6 @@
         "all_time_high": 75340,
         "total_drop_pct": -4.47,
         "n_observations": 5,
-        "days_observed": 119
-      }
-    },
-    "W1KLH6FB1SA097441": {
-      "year": 2025,
-      "trim": "E450S4",
-      "dealer": "R B M of Atlanta, Inc.",
-      "first_seen_at": "2026-04-26T15:50:37.492543+00:00",
-      "current_price": 75894,
-      "current_mileage": 13678,
-      "status": "gone",
-      "observations": [
-        {
-          "observed_at": "2026-04-26T15:50:37.492543+00:00",
-          "price": 76900,
-          "mileage": 10663
-        },
-        {
-          "observed_at": "2026-07-22T14:31:37.242847+00:00",
-          "price": 75894,
-          "mileage": 13644
-        },
-        {
-          "observed_at": "2026-07-23T23:52:23.835471+00:00",
-          "price": 75894,
-          "mileage": 13678
-        }
-      ],
-      "stats": {
-        "all_time_low": 75894,
-        "all_time_high": 76900,
-        "total_drop_pct": -1.31,
-        "n_observations": 3,
         "days_observed": 119
       }
     },
@@ -1194,7 +1161,7 @@
         "all_time_high": 73415,
         "total_drop_pct": -0.57,
         "n_observations": 5,
-        "days_observed": 29
+        "days_observed": 30
       }
     },
     "W1KZH6AB9NB055261": {
