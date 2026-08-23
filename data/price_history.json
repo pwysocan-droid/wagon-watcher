@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-23T04:58:37.429653+00:00",
+  "generated_at": "2026-08-23T05:28:46.932020+00:00",
   "schema_version": 1,
   "vins": {
     "W1KLH6FB2SA128504": {
@@ -74,39 +74,6 @@
         "all_time_low": 75894,
         "all_time_high": 76900,
         "total_drop_pct": -1.31,
-        "n_observations": 3,
-        "days_observed": 118
-      }
-    },
-    "W1KLH6FB1SA095172": {
-      "year": 2025,
-      "trim": "E450S4",
-      "dealer": "Sun Motor Cars, Inc.",
-      "first_seen_at": "2026-04-26T15:50:37.492543+00:00",
-      "current_price": 69489,
-      "current_mileage": 7975,
-      "status": "gone",
-      "observations": [
-        {
-          "observed_at": "2026-04-26T15:50:37.492543+00:00",
-          "price": 70489,
-          "mileage": 7975
-        },
-        {
-          "observed_at": "2026-04-26T23:31:01.171865+00:00",
-          "price": 70489,
-          "mileage": 7975
-        },
-        {
-          "observed_at": "2026-06-23T16:21:32.202925+00:00",
-          "price": 69489,
-          "mileage": 7975
-        }
-      ],
-      "stats": {
-        "all_time_low": 69489,
-        "all_time_high": 70489,
-        "total_drop_pct": -1.42,
         "n_observations": 3,
         "days_observed": 118
       }
@@ -739,99 +706,6 @@
         "days_observed": 58
       }
     },
-    "W1KZH6AB1PB178619": {
-      "year": 2023,
-      "trim": "E450S4",
-      "dealer": "John Sisson Motors, Inc.",
-      "first_seen_at": "2026-06-26T06:44:05.766174+00:00",
-      "current_price": 53659,
-      "current_mileage": 37194,
-      "status": "gone",
-      "observations": [
-        {
-          "observed_at": "2026-06-26T06:44:05.766174+00:00",
-          "price": 62406,
-          "mileage": 37188
-        },
-        {
-          "observed_at": "2026-06-27T09:09:10.286656+00:00",
-          "price": 62406,
-          "mileage": 37194
-        },
-        {
-          "observed_at": "2026-07-01T11:36:31.035154+00:00",
-          "price": 61275,
-          "mileage": 37194
-        },
-        {
-          "observed_at": "2026-07-03T09:39:13.381139+00:00",
-          "price": 62406,
-          "mileage": 37194
-        },
-        {
-          "observed_at": "2026-07-03T16:19:10.562329+00:00",
-          "price": 61275,
-          "mileage": 37194
-        },
-        {
-          "observed_at": "2026-07-03T22:59:20.618860+00:00",
-          "price": 62406,
-          "mileage": 37194
-        },
-        {
-          "observed_at": "2026-07-04T07:20:21.575364+00:00",
-          "price": 61275,
-          "mileage": 37194
-        },
-        {
-          "observed_at": "2026-07-17T04:55:24.851098+00:00",
-          "price": 55675,
-          "mileage": 37194
-        },
-        {
-          "observed_at": "2026-07-17T18:31:26.468044+00:00",
-          "price": 54563,
-          "mileage": 37194
-        },
-        {
-          "observed_at": "2026-07-18T08:42:58.806319+00:00",
-          "price": 55675,
-          "mileage": 37194
-        },
-        {
-          "observed_at": "2026-07-18T11:27:29.250198+00:00",
-          "price": 54563,
-          "mileage": 37194
-        },
-        {
-          "observed_at": "2026-07-18T16:44:30.859667+00:00",
-          "price": 54230,
-          "mileage": 37194
-        },
-        {
-          "observed_at": "2026-07-22T12:09:48.898568+00:00",
-          "price": 53659,
-          "mileage": 37194
-        },
-        {
-          "observed_at": "2026-07-23T17:52:58.404521+00:00",
-          "price": 53659,
-          "mileage": 37206
-        },
-        {
-          "observed_at": "2026-07-24T01:50:19.110892+00:00",
-          "price": 53659,
-          "mileage": 37194
-        }
-      ],
-      "stats": {
-        "all_time_low": 53659,
-        "all_time_high": 62406,
-        "total_drop_pct": -14.02,
-        "n_observations": 15,
-        "days_observed": 57
-      }
-    },
     "W1KZH6AB4NB031238": {
       "year": 2022,
       "trim": "E450S4",
@@ -1060,34 +934,6 @@
         "days_observed": 42
       }
     },
-    "W1KLH6FB3SA129550": {
-      "year": 2025,
-      "trim": "E450S4",
-      "dealer": "Mercedes-Benz of Mount Pleasant",
-      "first_seen_at": "2026-07-11T09:04:15.905999+00:00",
-      "current_price": 73988,
-      "current_mileage": 15430,
-      "status": "gone",
-      "observations": [
-        {
-          "observed_at": "2026-07-11T09:04:15.905999+00:00",
-          "price": 73988,
-          "mileage": 15357
-        },
-        {
-          "observed_at": "2026-07-15T10:42:16.096175+00:00",
-          "price": 73988,
-          "mileage": 15430
-        }
-      ],
-      "stats": {
-        "all_time_low": 73988,
-        "all_time_high": 73988,
-        "total_drop_pct": 0.0,
-        "n_observations": 2,
-        "days_observed": 42
-      }
-    },
     "W1KLH6FB4TA207688": {
       "year": 2026,
       "trim": "E450S4",
@@ -1277,7 +1123,7 @@
         "all_time_high": 59995,
         "total_drop_pct": 0.0,
         "n_observations": 2,
-        "days_observed": 30
+        "days_observed": 31
       }
     },
     "W1KLH6FB1SA106882": {
@@ -1305,7 +1151,7 @@
         "all_time_high": 66738,
         "total_drop_pct": 0.0,
         "n_observations": 2,
-        "days_observed": 30
+        "days_observed": 31
       }
     },
     "W1KLH6FB8SA148918": {
@@ -1610,7 +1456,7 @@
         "all_time_high": 76995,
         "total_drop_pct": 0.0,
         "n_observations": 1,
-        "days_observed": 21
+        "days_observed": 22
       }
     },
     "W1KLH6FB0SA157919": {
