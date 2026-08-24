@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-24T09:10:59.482252+00:00",
+  "generated_at": "2026-08-24T10:08:28.701899+00:00",
   "schema_version": 1,
   "vins": {
     "W1KLH6FB2SA128504": {
@@ -123,7 +123,7 @@
         "all_time_high": 80794,
         "total_drop_pct": -0.18,
         "n_observations": 7,
-        "days_observed": 102
+        "days_observed": 103
       }
     },
     "W1KZH6AB2NB082348": {
@@ -146,7 +146,7 @@
         "all_time_high": 51900,
         "total_drop_pct": 0.0,
         "n_observations": 1,
-        "days_observed": 102
+        "days_observed": 103
       }
     },
     "W1KLH6FB3SA087512": {
@@ -224,7 +224,7 @@
         "all_time_high": 65988,
         "total_drop_pct": -2.27,
         "n_observations": 12,
-        "days_observed": 102
+        "days_observed": 103
       }
     },
     "W1KLH6FB3SA142248": {
@@ -287,7 +287,7 @@
         "all_time_high": 65988,
         "total_drop_pct": -1.52,
         "n_observations": 9,
-        "days_observed": 101
+        "days_observed": 102
       }
     },
     "W1KLH6FB3RA004560": {
@@ -954,7 +954,7 @@
         "all_time_high": 76815,
         "total_drop_pct": 0.0,
         "n_observations": 2,
-        "days_observed": 37
+        "days_observed": 38
       }
     },
     "W1KLH6FB9TA207363": {
@@ -1199,7 +1199,7 @@
         "all_time_high": 51721,
         "total_drop_pct": 2.9,
         "n_observations": 4,
-        "days_observed": 29
+        "days_observed": 30
       }
     },
     "W1KZH6AB5PB157997": {
@@ -1569,7 +1569,7 @@
       "trim": "E450S4",
       "dealer": "Mercedes-Benz of Grapevine",
       "first_seen_at": "2026-08-19T06:12:47.586461+00:00",
-      "current_price": 79892,
+      "current_price": 76994,
       "current_mileage": 18534,
       "status": "active",
       "observations": [
@@ -1577,13 +1577,18 @@
           "observed_at": "2026-08-19T06:12:47.586461+00:00",
           "price": 79892,
           "mileage": 18534
+        },
+        {
+          "observed_at": "2026-08-24T10:08:28.137241+00:00",
+          "price": 76994,
+          "mileage": 18534
         }
       ],
       "stats": {
-        "all_time_low": 79892,
+        "all_time_low": 76994,
         "all_time_high": 79892,
-        "total_drop_pct": 0.0,
-        "n_observations": 1,
+        "total_drop_pct": -3.63,
+        "n_observations": 2,
         "days_observed": 5
       }
     },
