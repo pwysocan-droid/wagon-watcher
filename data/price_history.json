@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-24T17:54:55.154831+00:00",
+  "generated_at": "2026-08-24T18:26:00.936060+00:00",
   "schema_version": 1,
   "vins": {
     "W1KLH6FB2SA128504": {
@@ -295,7 +295,7 @@
       "trim": "E450S4",
       "dealer": "R B M of Atlanta, Inc.",
       "first_seen_at": "2026-06-04T15:55:18.581517+00:00",
-      "current_price": 72368,
+      "current_price": 71591,
       "current_mileage": 6237,
       "status": "active",
       "observations": [
@@ -318,13 +318,18 @@
           "observed_at": "2026-07-10T12:38:47.771930+00:00",
           "price": 72368,
           "mileage": 6237
+        },
+        {
+          "observed_at": "2026-08-24T18:26:00.034150+00:00",
+          "price": 71591,
+          "mileage": 6237
         }
       ],
       "stats": {
-        "all_time_low": 72368,
+        "all_time_low": 71591,
         "all_time_high": 74984,
-        "total_drop_pct": -3.49,
-        "n_observations": 4,
+        "total_drop_pct": -4.52,
+        "n_observations": 5,
         "days_observed": 81
       }
     },
@@ -781,7 +786,7 @@
       "first_seen_at": "2026-07-07T21:49:21.934787+00:00",
       "current_price": 77492,
       "current_mileage": 4330,
-      "status": "reappeared",
+      "status": "active",
       "observations": [
         {
           "observed_at": "2026-07-07T21:49:21.934787+00:00",
@@ -1214,7 +1219,7 @@
       "first_seen_at": "2026-07-28T10:25:12.144964+00:00",
       "current_price": 67990,
       "current_mileage": 14467,
-      "status": "reappeared",
+      "status": "active",
       "observations": [
         {
           "observed_at": "2026-07-28T10:25:12.144964+00:00",
@@ -1265,7 +1270,7 @@
       "trim": "E450S4",
       "dealer": "Mercedes-Benz of Princeton",
       "first_seen_at": "2026-07-28T10:25:12.144964+00:00",
-      "current_price": 86145,
+      "current_price": 80999,
       "current_mileage": 54,
       "status": "active",
       "observations": [
@@ -1278,13 +1283,18 @@
           "observed_at": "2026-07-29T13:01:44.030537+00:00",
           "price": 86145,
           "mileage": 54
+        },
+        {
+          "observed_at": "2026-08-24T18:26:00.034150+00:00",
+          "price": 80999,
+          "mileage": 54
         }
       ],
       "stats": {
-        "all_time_low": 86145,
+        "all_time_low": 80999,
         "all_time_high": 86145,
-        "total_drop_pct": 0.0,
-        "n_observations": 2,
+        "total_drop_pct": -5.97,
+        "n_observations": 3,
         "days_observed": 27
       }
     },
@@ -1339,7 +1349,7 @@
       "trim": "E450S4",
       "dealer": "Mercedes-Benz of Edison",
       "first_seen_at": "2026-08-01T01:56:33.151955+00:00",
-      "current_price": 74997,
+      "current_price": 74495,
       "current_mileage": 5562,
       "status": "active",
       "observations": [
@@ -1352,13 +1362,18 @@
           "observed_at": "2026-08-04T15:43:08.322855+00:00",
           "price": 74997,
           "mileage": 5562
+        },
+        {
+          "observed_at": "2026-08-24T18:26:00.034150+00:00",
+          "price": 74495,
+          "mileage": 5562
         }
       ],
       "stats": {
-        "all_time_low": 74995,
+        "all_time_low": 74495,
         "all_time_high": 74997,
-        "total_drop_pct": 0.0,
-        "n_observations": 2,
+        "total_drop_pct": -0.67,
+        "n_observations": 3,
         "days_observed": 23
       }
     },
@@ -1392,7 +1407,7 @@
       "first_seen_at": "2026-08-01T01:56:33.151955+00:00",
       "current_price": 76995,
       "current_mileage": 2858,
-      "status": "reappeared",
+      "status": "active",
       "observations": [
         {
           "observed_at": "2026-08-01T01:56:33.151955+00:00",
@@ -1415,7 +1430,7 @@
       "first_seen_at": "2026-08-01T05:22:32.366241+00:00",
       "current_price": 76995,
       "current_mileage": 2967,
-      "status": "reappeared",
+      "status": "active",
       "observations": [
         {
           "observed_at": "2026-08-01T05:22:32.366241+00:00",
@@ -1604,7 +1619,7 @@
       "first_seen_at": "2026-08-19T06:12:47.586461+00:00",
       "current_price": 52888,
       "current_mileage": 31691,
-      "status": "reappeared",
+      "status": "active",
       "observations": [
         {
           "observed_at": "2026-08-19T06:12:47.586461+00:00",
@@ -1650,7 +1665,7 @@
       "first_seen_at": "2026-08-24T15:07:22.871794+00:00",
       "current_price": 56761,
       "current_mileage": 30037,
-      "status": "reappeared",
+      "status": "active",
       "observations": [
         {
           "observed_at": "2026-08-24T15:07:22.871794+00:00",
@@ -1673,7 +1688,7 @@
       "first_seen_at": "2026-08-24T15:07:22.871794+00:00",
       "current_price": 44990,
       "current_mileage": 56302,
-      "status": "reappeared",
+      "status": "active",
       "observations": [
         {
           "observed_at": "2026-08-24T15:07:22.871794+00:00",
@@ -1696,7 +1711,7 @@
       "first_seen_at": "2026-08-24T15:07:22.871794+00:00",
       "current_price": 76995,
       "current_mileage": 7704,
-      "status": "reappeared",
+      "status": "active",
       "observations": [
         {
           "observed_at": "2026-08-24T15:07:22.871794+00:00",
