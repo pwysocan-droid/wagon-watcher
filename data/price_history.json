@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-24T17:02:38.027933+00:00",
+  "generated_at": "2026-08-24T17:54:55.154831+00:00",
   "schema_version": 1,
   "vins": {
     "W1KLH6FB2SA128504": {
@@ -779,9 +779,9 @@
       "trim": "E450S4",
       "dealer": "Bud Smail Motorcars, Ltd.",
       "first_seen_at": "2026-07-07T21:49:21.934787+00:00",
-      "current_price": 77991,
+      "current_price": 77492,
       "current_mileage": 4330,
-      "status": "gone",
+      "status": "reappeared",
       "observations": [
         {
           "observed_at": "2026-07-07T21:49:21.934787+00:00",
@@ -792,13 +792,18 @@
           "observed_at": "2026-07-09T14:34:03.224392+00:00",
           "price": 77991,
           "mileage": 4330
+        },
+        {
+          "observed_at": "2026-08-24T17:54:48.882368+00:00",
+          "price": 77492,
+          "mileage": 4330
         }
       ],
       "stats": {
-        "all_time_low": 77991,
+        "all_time_low": 77492,
         "all_time_high": 85965,
-        "total_drop_pct": -9.28,
-        "n_observations": 2,
+        "total_drop_pct": -9.86,
+        "n_observations": 3,
         "days_observed": 47
       }
     },
@@ -1209,7 +1214,7 @@
       "first_seen_at": "2026-07-28T10:25:12.144964+00:00",
       "current_price": 67990,
       "current_mileage": 14467,
-      "status": "gone",
+      "status": "reappeared",
       "observations": [
         {
           "observed_at": "2026-07-28T10:25:12.144964+00:00",
@@ -1387,7 +1392,7 @@
       "first_seen_at": "2026-08-01T01:56:33.151955+00:00",
       "current_price": 76995,
       "current_mileage": 2858,
-      "status": "gone",
+      "status": "reappeared",
       "observations": [
         {
           "observed_at": "2026-08-01T01:56:33.151955+00:00",
@@ -1410,7 +1415,7 @@
       "first_seen_at": "2026-08-01T05:22:32.366241+00:00",
       "current_price": 76995,
       "current_mileage": 2967,
-      "status": "gone",
+      "status": "reappeared",
       "observations": [
         {
           "observed_at": "2026-08-01T05:22:32.366241+00:00",
@@ -1599,7 +1604,7 @@
       "first_seen_at": "2026-08-19T06:12:47.586461+00:00",
       "current_price": 52888,
       "current_mileage": 31691,
-      "status": "gone",
+      "status": "reappeared",
       "observations": [
         {
           "observed_at": "2026-08-19T06:12:47.586461+00:00",
@@ -1622,7 +1627,7 @@
       "first_seen_at": "2026-08-19T06:12:47.586461+00:00",
       "current_price": 69995,
       "current_mileage": 20209,
-      "status": "active",
+      "status": "gone",
       "observations": [
         {
           "observed_at": "2026-08-19T06:12:47.586461+00:00",
@@ -1645,7 +1650,7 @@
       "first_seen_at": "2026-08-24T15:07:22.871794+00:00",
       "current_price": 56761,
       "current_mileage": 30037,
-      "status": "gone",
+      "status": "reappeared",
       "observations": [
         {
           "observed_at": "2026-08-24T15:07:22.871794+00:00",
@@ -1668,7 +1673,7 @@
       "first_seen_at": "2026-08-24T15:07:22.871794+00:00",
       "current_price": 44990,
       "current_mileage": 56302,
-      "status": "gone",
+      "status": "reappeared",
       "observations": [
         {
           "observed_at": "2026-08-24T15:07:22.871794+00:00",
@@ -1691,7 +1696,7 @@
       "first_seen_at": "2026-08-24T15:07:22.871794+00:00",
       "current_price": 76995,
       "current_mileage": 7704,
-      "status": "gone",
+      "status": "reappeared",
       "observations": [
         {
           "observed_at": "2026-08-24T15:07:22.871794+00:00",
@@ -1702,6 +1707,29 @@
       "stats": {
         "all_time_low": 76995,
         "all_time_high": 76995,
+        "total_drop_pct": 0.0,
+        "n_observations": 1,
+        "days_observed": 0
+      }
+    },
+    "W1KZH6AB2PB179861": {
+      "year": 2023,
+      "trim": "E450S4",
+      "dealer": "Mercedes-Benz of Youngstown",
+      "first_seen_at": "2026-08-24T17:54:48.882368+00:00",
+      "current_price": 58990,
+      "current_mileage": 24036,
+      "status": "active",
+      "observations": [
+        {
+          "observed_at": "2026-08-24T17:54:48.882368+00:00",
+          "price": 58990,
+          "mileage": 24036
+        }
+      ],
+      "stats": {
+        "all_time_low": 58990,
+        "all_time_high": 58990,
         "total_drop_pct": 0.0,
         "n_observations": 1,
         "days_observed": 0
