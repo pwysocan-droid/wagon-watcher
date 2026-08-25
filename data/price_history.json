@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-25T09:58:25.743704+00:00",
+  "generated_at": "2026-08-25T10:30:45.991662+00:00",
   "schema_version": 1,
   "vins": {
     "W1KLH6FB2SA128504": {
@@ -300,9 +300,9 @@
       "trim": "E450S4",
       "dealer": "R B M of Atlanta, Inc.",
       "first_seen_at": "2026-06-04T15:55:18.581517+00:00",
-      "current_price": 72368,
+      "current_price": 71591,
       "current_mileage": 6237,
-      "status": "reappeared",
+      "status": "active",
       "observations": [
         {
           "observed_at": "2026-06-04T15:55:18.581517+00:00",
@@ -343,13 +343,18 @@
           "observed_at": "2026-08-25T07:24:59.933105+00:00",
           "price": 72368,
           "mileage": 6237
+        },
+        {
+          "observed_at": "2026-08-25T10:30:39.560878+00:00",
+          "price": 71591,
+          "mileage": 6237
         }
       ],
       "stats": {
         "all_time_low": 71591,
         "all_time_high": 74984,
-        "total_drop_pct": -3.49,
-        "n_observations": 8,
+        "total_drop_pct": -4.52,
+        "n_observations": 9,
         "days_observed": 81
       }
     },
@@ -811,7 +816,7 @@
       "first_seen_at": "2026-07-07T21:49:21.934787+00:00",
       "current_price": 77492,
       "current_mileage": 4330,
-      "status": "gone",
+      "status": "reappeared",
       "observations": [
         {
           "observed_at": "2026-07-07T21:49:21.934787+00:00",
@@ -885,7 +890,7 @@
         "all_time_high": 71998,
         "total_drop_pct": 0.0,
         "n_observations": 1,
-        "days_observed": 45
+        "days_observed": 46
       }
     },
     "W1KZH6AB5MA988742": {
@@ -1292,7 +1297,7 @@
         "all_time_high": 69990,
         "total_drop_pct": -2.86,
         "n_observations": 7,
-        "days_observed": 27
+        "days_observed": 28
       }
     },
     "W1KLH6FB3SA118709": {
@@ -1335,7 +1340,7 @@
         "all_time_high": 86145,
         "total_drop_pct": -5.97,
         "n_observations": 5,
-        "days_observed": 27
+        "days_observed": 28
       }
     },
     "W1KLH6FB1SA161445": {
