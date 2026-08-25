@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-25T17:03:01.338056+00:00",
+  "generated_at": "2026-08-25T17:52:12.819639+00:00",
   "schema_version": 1,
   "vins": {
     "W1KLH6FB2SA128504": {
@@ -816,7 +816,7 @@
       "first_seen_at": "2026-07-07T21:49:21.934787+00:00",
       "current_price": 77492,
       "current_mileage": 4330,
-      "status": "active",
+      "status": "gone",
       "observations": [
         {
           "observed_at": "2026-07-07T21:49:21.934787+00:00",
@@ -1214,7 +1214,7 @@
       "trim": "E450S4",
       "dealer": "Benzel-Busch Motor Car Corp.",
       "first_seen_at": "2026-07-25T09:28:35.139701+00:00",
-      "current_price": 51439,
+      "current_price": 49987,
       "current_mileage": 51923,
       "status": "active",
       "observations": [
@@ -1237,13 +1237,18 @@
           "observed_at": "2026-08-19T06:26:52.354336+00:00",
           "price": 51439,
           "mileage": 51923
+        },
+        {
+          "observed_at": "2026-08-25T17:52:06.652259+00:00",
+          "price": 49987,
+          "mileage": 51923
         }
       ],
       "stats": {
         "all_time_low": 49987,
         "all_time_high": 51721,
-        "total_drop_pct": 2.9,
-        "n_observations": 4,
+        "total_drop_pct": 0.0,
+        "n_observations": 5,
         "days_observed": 31
       }
     },
@@ -1254,7 +1259,7 @@
       "first_seen_at": "2026-07-28T10:25:12.144964+00:00",
       "current_price": 67990,
       "current_mileage": 14467,
-      "status": "reappeared",
+      "status": "active",
       "observations": [
         {
           "observed_at": "2026-07-28T10:25:12.144964+00:00",
@@ -1472,7 +1477,7 @@
       "first_seen_at": "2026-08-01T01:56:33.151955+00:00",
       "current_price": 76995,
       "current_mileage": 2858,
-      "status": "reappeared",
+      "status": "active",
       "observations": [
         {
           "observed_at": "2026-08-01T01:56:33.151955+00:00",
@@ -1495,7 +1500,7 @@
       "first_seen_at": "2026-08-01T05:22:32.366241+00:00",
       "current_price": 76995,
       "current_mileage": 2967,
-      "status": "gone",
+      "status": "reappeared",
       "observations": [
         {
           "observed_at": "2026-08-01T05:22:32.366241+00:00",
