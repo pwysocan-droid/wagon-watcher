@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-25T08:05:21.793006+00:00",
+  "generated_at": "2026-08-25T09:05:43.664809+00:00",
   "schema_version": 1,
   "vins": {
     "W1KLH6FB2SA128504": {
@@ -297,7 +297,7 @@
       "first_seen_at": "2026-06-04T15:55:18.581517+00:00",
       "current_price": 72368,
       "current_mileage": 6237,
-      "status": "active",
+      "status": "gone",
       "observations": [
         {
           "observed_at": "2026-06-04T15:55:18.581517+00:00",
@@ -657,7 +657,7 @@
       "first_seen_at": "2026-06-25T22:15:40.447396+00:00",
       "current_price": 66370,
       "current_mileage": 19473,
-      "status": "gone",
+      "status": "reappeared",
       "observations": [
         {
           "observed_at": "2026-06-25T22:15:40.447396+00:00",
@@ -796,7 +796,7 @@
         "all_time_high": 81411,
         "total_drop_pct": -8.6,
         "n_observations": 9,
-        "days_observed": 54
+        "days_observed": 55
       }
     },
     "W1KLH6FB5TA256561": {
@@ -806,7 +806,7 @@
       "first_seen_at": "2026-07-07T21:49:21.934787+00:00",
       "current_price": 77492,
       "current_mileage": 4330,
-      "status": "gone",
+      "status": "reappeared",
       "observations": [
         {
           "observed_at": "2026-07-07T21:49:21.934787+00:00",
@@ -928,7 +928,7 @@
         "all_time_high": 51891,
         "total_drop_pct": 4.09,
         "n_observations": 6,
-        "days_observed": 44
+        "days_observed": 45
       }
     },
     "W1KLH6FB4TA207688": {
@@ -1239,7 +1239,7 @@
       "first_seen_at": "2026-07-28T10:25:12.144964+00:00",
       "current_price": 67990,
       "current_mileage": 14467,
-      "status": "gone",
+      "status": "reappeared",
       "observations": [
         {
           "observed_at": "2026-07-28T10:25:12.144964+00:00",
@@ -1447,7 +1447,7 @@
       "first_seen_at": "2026-08-01T01:56:33.151955+00:00",
       "current_price": 76995,
       "current_mileage": 2858,
-      "status": "gone",
+      "status": "reappeared",
       "observations": [
         {
           "observed_at": "2026-08-01T01:56:33.151955+00:00",
@@ -1470,7 +1470,7 @@
       "first_seen_at": "2026-08-01T05:22:32.366241+00:00",
       "current_price": 76995,
       "current_mileage": 2967,
-      "status": "gone",
+      "status": "reappeared",
       "observations": [
         {
           "observed_at": "2026-08-01T05:22:32.366241+00:00",
@@ -1659,7 +1659,7 @@
       "first_seen_at": "2026-08-19T06:12:47.586461+00:00",
       "current_price": 52888,
       "current_mileage": 31691,
-      "status": "gone",
+      "status": "reappeared",
       "observations": [
         {
           "observed_at": "2026-08-19T06:12:47.586461+00:00",
@@ -1682,7 +1682,7 @@
       "first_seen_at": "2026-08-19T06:12:47.586461+00:00",
       "current_price": 69995,
       "current_mileage": 20209,
-      "status": "active",
+      "status": "gone",
       "observations": [
         {
           "observed_at": "2026-08-19T06:12:47.586461+00:00",
@@ -1705,7 +1705,7 @@
       "first_seen_at": "2026-08-24T15:07:22.871794+00:00",
       "current_price": 56761,
       "current_mileage": 30037,
-      "status": "gone",
+      "status": "reappeared",
       "observations": [
         {
           "observed_at": "2026-08-24T15:07:22.871794+00:00",
@@ -1728,7 +1728,7 @@
       "first_seen_at": "2026-08-24T15:07:22.871794+00:00",
       "current_price": 44990,
       "current_mileage": 56302,
-      "status": "gone",
+      "status": "reappeared",
       "observations": [
         {
           "observed_at": "2026-08-24T15:07:22.871794+00:00",
@@ -1751,7 +1751,7 @@
       "first_seen_at": "2026-08-24T15:07:22.871794+00:00",
       "current_price": 76995,
       "current_mileage": 7704,
-      "status": "gone",
+      "status": "reappeared",
       "observations": [
         {
           "observed_at": "2026-08-24T15:07:22.871794+00:00",
@@ -1774,7 +1774,7 @@
       "first_seen_at": "2026-08-24T17:54:48.882368+00:00",
       "current_price": 58990,
       "current_mileage": 24036,
-      "status": "gone",
+      "status": "reappeared",
       "observations": [
         {
           "observed_at": "2026-08-24T17:54:48.882368+00:00",
@@ -1785,6 +1785,29 @@
       "stats": {
         "all_time_low": 58990,
         "all_time_high": 58990,
+        "total_drop_pct": 0.0,
+        "n_observations": 1,
+        "days_observed": 0
+      }
+    },
+    "W1KZH6AB1PB170231": {
+      "year": 2023,
+      "trim": "E450S4",
+      "dealer": "Mercedes-Benz of The Woodlands",
+      "first_seen_at": "2026-08-25T09:05:36.798006+00:00",
+      "current_price": 62998,
+      "current_mileage": 9795,
+      "status": "active",
+      "observations": [
+        {
+          "observed_at": "2026-08-25T09:05:36.798006+00:00",
+          "price": 62998,
+          "mileage": 9795
+        }
+      ],
+      "stats": {
+        "all_time_low": 62998,
+        "all_time_high": 62998,
         "total_drop_pct": 0.0,
         "n_observations": 1,
         "days_observed": 0
