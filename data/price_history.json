@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-25T22:16:20.706370+00:00",
+  "generated_at": "2026-08-25T22:51:31.206101+00:00",
   "schema_version": 1,
   "vins": {
     "W1KLH6FB2SA128504": {
@@ -9,7 +9,7 @@
       "first_seen_at": "2026-04-26T15:50:37.492543+00:00",
       "current_price": 71973,
       "current_mileage": 8725,
-      "status": "gone",
+      "status": "reappeared",
       "observations": [
         {
           "observed_at": "2026-04-26T15:50:37.492543+00:00",
@@ -667,7 +667,7 @@
       "first_seen_at": "2026-06-25T22:15:40.447396+00:00",
       "current_price": 66370,
       "current_mileage": 19473,
-      "status": "gone",
+      "status": "reappeared",
       "observations": [
         {
           "observed_at": "2026-06-25T22:15:40.447396+00:00",
@@ -840,34 +840,6 @@
         "total_drop_pct": -9.86,
         "n_observations": 3,
         "days_observed": 49
-      }
-    },
-    "WDDZH6JB4LA708629": {
-      "year": 2020,
-      "trim": "E450S4",
-      "dealer": "EuroMotorcars Devon, Inc.",
-      "first_seen_at": "2026-07-09T21:00:16.097204+00:00",
-      "current_price": 43484,
-      "current_mileage": 54945,
-      "status": "gone",
-      "observations": [
-        {
-          "observed_at": "2026-07-09T21:00:16.097204+00:00",
-          "price": 33093,
-          "mileage": 54941
-        },
-        {
-          "observed_at": "2026-07-10T12:38:47.771930+00:00",
-          "price": 43484,
-          "mileage": 54945
-        }
-      ],
-      "stats": {
-        "all_time_low": 33093,
-        "all_time_high": 43484,
-        "total_drop_pct": 31.4,
-        "n_observations": 2,
-        "days_observed": 47
       }
     },
     "W1KLH6FB6SA133396": {
