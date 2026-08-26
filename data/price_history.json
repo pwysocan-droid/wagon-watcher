@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-26T08:31:39.030027+00:00",
+  "generated_at": "2026-08-26T09:31:20.489717+00:00",
   "schema_version": 1,
   "vins": {
     "W1KLH6FB2SA128504": {
@@ -123,7 +123,7 @@
         "all_time_high": 80794,
         "total_drop_pct": -0.18,
         "n_observations": 7,
-        "days_observed": 104
+        "days_observed": 105
       }
     },
     "W1KZH6AB2NB082348": {
@@ -146,7 +146,7 @@
         "all_time_high": 51900,
         "total_drop_pct": 0.0,
         "n_observations": 1,
-        "days_observed": 104
+        "days_observed": 105
       }
     },
     "W1KLH6FB3SA087512": {
@@ -229,7 +229,7 @@
         "all_time_high": 65988,
         "total_drop_pct": -2.27,
         "n_observations": 13,
-        "days_observed": 104
+        "days_observed": 105
       }
     },
     "W1KLH6FB3SA142248": {
@@ -292,7 +292,7 @@
         "all_time_high": 65988,
         "total_drop_pct": -1.52,
         "n_observations": 9,
-        "days_observed": 103
+        "days_observed": 104
       }
     },
     "W1KLH6FB3RA004560": {
@@ -753,7 +753,7 @@
       "first_seen_at": "2026-07-01T08:08:36.498612+00:00",
       "current_price": 74411,
       "current_mileage": 15355,
-      "status": "active",
+      "status": "gone",
       "observations": [
         {
           "observed_at": "2026-07-01T08:08:36.498612+00:00",
@@ -816,7 +816,7 @@
       "first_seen_at": "2026-07-07T21:49:21.934787+00:00",
       "current_price": 77492,
       "current_mileage": 4330,
-      "status": "active",
+      "status": "gone",
       "observations": [
         {
           "observed_at": "2026-07-07T21:49:21.934787+00:00",
@@ -910,7 +910,7 @@
         "all_time_high": 51891,
         "total_drop_pct": 4.09,
         "n_observations": 6,
-        "days_observed": 45
+        "days_observed": 46
       }
     },
     "W1KLH6FB4TA207688": {
@@ -966,7 +966,7 @@
         "all_time_high": 76815,
         "total_drop_pct": 0.0,
         "n_observations": 2,
-        "days_observed": 39
+        "days_observed": 40
       }
     },
     "W1KLH6FB9TA207363": {
@@ -1226,7 +1226,7 @@
         "all_time_high": 51721,
         "total_drop_pct": 2.9,
         "n_observations": 6,
-        "days_observed": 31
+        "days_observed": 32
       }
     },
     "W1KZH6AB5PB157997": {
@@ -1477,7 +1477,7 @@
       "first_seen_at": "2026-08-01T05:22:32.366241+00:00",
       "current_price": 76995,
       "current_mileage": 2967,
-      "status": "active",
+      "status": "gone",
       "observations": [
         {
           "observed_at": "2026-08-01T05:22:32.366241+00:00",
@@ -1595,7 +1595,7 @@
       "trim": "E450S4",
       "dealer": "Mercedes-Benz of Laguna Niguel",
       "first_seen_at": "2026-08-19T06:12:47.586461+00:00",
-      "current_price": 45680,
+      "current_price": 45360,
       "current_mileage": 45958,
       "status": "active",
       "observations": [
@@ -1608,13 +1608,18 @@
           "observed_at": "2026-08-25T09:58:19.405943+00:00",
           "price": 45680,
           "mileage": 45958
+        },
+        {
+          "observed_at": "2026-08-26T09:31:12.060204+00:00",
+          "price": 45360,
+          "mileage": 45958
         }
       ],
       "stats": {
-        "all_time_low": 45680,
+        "all_time_low": 45360,
         "all_time_high": 46871,
-        "total_drop_pct": -2.54,
-        "n_observations": 2,
+        "total_drop_pct": -3.22,
+        "n_observations": 3,
         "days_observed": 7
       }
     },
@@ -1681,7 +1686,7 @@
       "first_seen_at": "2026-08-19T06:12:47.586461+00:00",
       "current_price": 52888,
       "current_mileage": 31691,
-      "status": "active",
+      "status": "gone",
       "observations": [
         {
           "observed_at": "2026-08-19T06:12:47.586461+00:00",
@@ -1830,6 +1835,29 @@
       "stats": {
         "all_time_low": 62998,
         "all_time_high": 62998,
+        "total_drop_pct": 0.0,
+        "n_observations": 1,
+        "days_observed": 1
+      }
+    },
+    "W1KLH6FB2SA084620": {
+      "year": 2025,
+      "trim": "E450S4",
+      "dealer": "Valley Imports, Inc.",
+      "first_seen_at": "2026-08-26T09:31:12.060204+00:00",
+      "current_price": 69048,
+      "current_mileage": 6505,
+      "status": "active",
+      "observations": [
+        {
+          "observed_at": "2026-08-26T09:31:12.060204+00:00",
+          "price": 69048,
+          "mileage": 6505
+        }
+      ],
+      "stats": {
+        "all_time_low": 69048,
+        "all_time_high": 69048,
         "total_drop_pct": 0.0,
         "n_observations": 1,
         "days_observed": 0
