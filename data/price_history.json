@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-26T23:51:59.558833+00:00",
+  "generated_at": "2026-08-27T05:51:02.441975+00:00",
   "schema_version": 1,
   "vins": {
     "W1KLH6FB2SA128504": {
@@ -433,7 +433,7 @@
         "all_time_high": 58367,
         "total_drop_pct": -7.62,
         "n_observations": 12,
-        "days_observed": 77
+        "days_observed": 78
       }
     },
     "W1KZH6AB0PB118184": {
@@ -938,7 +938,7 @@
         "all_time_high": 71079,
         "total_drop_pct": 0.0,
         "n_observations": 2,
-        "days_observed": 40
+        "days_observed": 41
       }
     },
     "W1KLH6FB0RA026189": {
@@ -1107,7 +1107,7 @@
         "all_time_high": 59995,
         "total_drop_pct": 0.0,
         "n_observations": 2,
-        "days_observed": 34
+        "days_observed": 35
       }
     },
     "W1KLH6FB1SA106882": {
@@ -1135,7 +1135,7 @@
         "all_time_high": 66738,
         "total_drop_pct": 0.0,
         "n_observations": 2,
-        "days_observed": 34
+        "days_observed": 35
       }
     },
     "W1KLH6FB8SA148918": {
@@ -1373,7 +1373,7 @@
         "all_time_high": 75990,
         "total_drop_pct": 0.0,
         "n_observations": 1,
-        "days_observed": 25
+        "days_observed": 26
       }
     },
     "W1KLH6FB0RA056051": {
@@ -1431,7 +1431,7 @@
         "all_time_high": 74997,
         "total_drop_pct": -0.68,
         "n_observations": 8,
-        "days_observed": 25
+        "days_observed": 26
       }
     },
     "W1KLH6FB5RA026169": {
@@ -1454,7 +1454,7 @@
         "all_time_high": 76995,
         "total_drop_pct": 0.0,
         "n_observations": 1,
-        "days_observed": 25
+        "days_observed": 26
       }
     },
     "W1KLH6FB4RA026213": {
@@ -1477,7 +1477,7 @@
         "all_time_high": 76995,
         "total_drop_pct": 0.0,
         "n_observations": 1,
-        "days_observed": 25
+        "days_observed": 26
       }
     },
     "W1KLH6FB9RA026207": {
@@ -1500,7 +1500,7 @@
         "all_time_high": 76995,
         "total_drop_pct": 0.0,
         "n_observations": 1,
-        "days_observed": 25
+        "days_observed": 26
       }
     },
     "W1KLH6FB0SA157919": {
