@@ -233,6 +233,11 @@ Tier 1 (Pushover priority 1 or 2, bypasses quiet hours):
 - Scraper aborted (health check failed) → **priority 2**, with
   `retry=30, expire=3600` so it re-alerts every 30 seconds for up
   to one hour until acknowledged
+- Watcher stalled (no successful run in 18h) → priority 1, from the
+  separate `heartbeat` workflow. Covers the silent case the health check
+  cannot: runs that never happen. GitHub `schedule` triggers are
+  best-effort and the every-30-minutes cron degraded to ~2/day on
+  2026-08-27 without a single failed run. Cooldown: 12h between alerts.
 
 Tier 2 (Pushover priority 0, normal):
 - Any new listing
