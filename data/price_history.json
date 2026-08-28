@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-27T17:07:06.819672+00:00",
+  "generated_at": "2026-08-28T01:34:09.180495+00:00",
   "schema_version": 1,
   "vins": {
     "W1KLH6FB2SA128504": {
@@ -665,7 +665,7 @@
       "trim": "E450S4",
       "dealer": "Mercedes-Benz of St. Paul",
       "first_seen_at": "2026-06-25T22:15:40.447396+00:00",
-      "current_price": 66370,
+      "current_price": 65853,
       "current_mileage": 19473,
       "status": "active",
       "observations": [
@@ -698,14 +698,19 @@
           "observed_at": "2026-08-24T22:49:53.733813+00:00",
           "price": 66370,
           "mileage": 19473
+        },
+        {
+          "observed_at": "2026-08-28T01:34:08.737152+00:00",
+          "price": 65853,
+          "mileage": 19473
         }
       ],
       "stats": {
-        "all_time_low": 66370,
+        "all_time_low": 65853,
         "all_time_high": 68499,
-        "total_drop_pct": -3.11,
-        "n_observations": 6,
-        "days_observed": 62
+        "total_drop_pct": -3.86,
+        "n_observations": 7,
+        "days_observed": 63
       }
     },
     "W1KZH6AB4NB031238": {
@@ -839,7 +844,7 @@
         "all_time_high": 85965,
         "total_drop_pct": -9.86,
         "n_observations": 3,
-        "days_observed": 50
+        "days_observed": 51
       }
     },
     "W1KLH6FB6SA133396": {
@@ -1178,7 +1183,7 @@
         "all_time_high": 73415,
         "total_drop_pct": -0.57,
         "n_observations": 5,
-        "days_observed": 33
+        "days_observed": 34
       }
     },
     "W1KZH6AB9NB055261": {
@@ -1824,7 +1829,7 @@
         "all_time_high": 58990,
         "total_drop_pct": 0.0,
         "n_observations": 1,
-        "days_observed": 2
+        "days_observed": 3
       }
     },
     "W1KZH6AB1PB170231": {
