@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-29T23:43:17.290756+00:00",
+  "generated_at": "2026-08-30T02:32:13.660281+00:00",
   "schema_version": 1,
   "vins": {
     "W1KLH6FB2SA128504": {
@@ -433,7 +433,7 @@
         "all_time_high": 58367,
         "total_drop_pct": -7.62,
         "n_observations": 12,
-        "days_observed": 80
+        "days_observed": 81
       }
     },
     "W1KZH6AB0PB118184": {
@@ -974,34 +974,6 @@
         "days_observed": 47
       }
     },
-    "W1KLH6FB4TA207688": {
-      "year": 2026,
-      "trim": "E450S4",
-      "dealer": "Rallye Motors LLC",
-      "first_seen_at": "2026-07-17T01:50:13.403476+00:00",
-      "current_price": 71079,
-      "current_mileage": 5252,
-      "status": "gone",
-      "observations": [
-        {
-          "observed_at": "2026-07-17T01:50:13.403476+00:00",
-          "price": 71079,
-          "mileage": 5224
-        },
-        {
-          "observed_at": "2026-07-23T01:54:49.320479+00:00",
-          "price": 71079,
-          "mileage": 5252
-        }
-      ],
-      "stats": {
-        "all_time_low": 71079,
-        "all_time_high": 71079,
-        "total_drop_pct": 0.0,
-        "n_observations": 2,
-        "days_observed": 43
-      }
-    },
     "W1KLH6FB0RA026189": {
       "year": 2024,
       "trim": "E450S4",
@@ -1166,34 +1138,6 @@
       "stats": {
         "all_time_low": 59995,
         "all_time_high": 59995,
-        "total_drop_pct": 0.0,
-        "n_observations": 2,
-        "days_observed": 37
-      }
-    },
-    "W1KLH6FB1SA106882": {
-      "year": 2025,
-      "trim": "E450S4",
-      "dealer": "Mercedes-Benz of Scarborough",
-      "first_seen_at": "2026-07-23T05:17:06.222281+00:00",
-      "current_price": 66738,
-      "current_mileage": 24564,
-      "status": "gone",
-      "observations": [
-        {
-          "observed_at": "2026-07-23T05:17:06.222281+00:00",
-          "price": 66738,
-          "mileage": 24013
-        },
-        {
-          "observed_at": "2026-07-24T10:08:02.610035+00:00",
-          "price": 66738,
-          "mileage": 24564
-        }
-      ],
-      "stats": {
-        "all_time_low": 66738,
-        "all_time_high": 66738,
         "total_drop_pct": 0.0,
         "n_observations": 2,
         "days_observed": 37
@@ -1434,7 +1378,7 @@
         "all_time_high": 75990,
         "total_drop_pct": 0.0,
         "n_observations": 1,
-        "days_observed": 28
+        "days_observed": 29
       }
     },
     "W1KLH6FB0RA056051": {
@@ -1492,7 +1436,7 @@
         "all_time_high": 74997,
         "total_drop_pct": -0.68,
         "n_observations": 8,
-        "days_observed": 28
+        "days_observed": 29
       }
     },
     "W1KLH6FB5RA026169": {
@@ -1515,7 +1459,7 @@
         "all_time_high": 76995,
         "total_drop_pct": 0.0,
         "n_observations": 1,
-        "days_observed": 28
+        "days_observed": 29
       }
     },
     "W1KLH6FB4RA026213": {
@@ -1538,7 +1482,7 @@
         "all_time_high": 76995,
         "total_drop_pct": 0.0,
         "n_observations": 1,
-        "days_observed": 28
+        "days_observed": 29
       }
     },
     "W1KLH6FB9RA026207": {
