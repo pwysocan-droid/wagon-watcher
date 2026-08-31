@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-31T02:26:35.729766+00:00",
+  "generated_at": "2026-08-31T08:47:02.633816+00:00",
   "schema_version": 1,
   "vins": {
     "W1KLH6FB2SA128504": {
@@ -230,69 +230,6 @@
         "total_drop_pct": -2.27,
         "n_observations": 13,
         "days_observed": 109
-      }
-    },
-    "W1KLH6FB3SA142248": {
-      "year": 2025,
-      "trim": "E450S4",
-      "dealer": "Mercedes-Benz OF Tiverton",
-      "first_seen_at": "2026-05-14T09:12:41.790440+00:00",
-      "current_price": 64987,
-      "current_mileage": 23016,
-      "status": "gone",
-      "observations": [
-        {
-          "observed_at": "2026-05-14T09:12:41.790440+00:00",
-          "price": 65988,
-          "mileage": 22826
-        },
-        {
-          "observed_at": "2026-05-30T18:35:59.215173+00:00",
-          "price": 65988,
-          "mileage": 22829
-        },
-        {
-          "observed_at": "2026-06-11T15:36:36.753843+00:00",
-          "price": 65988,
-          "mileage": 22824
-        },
-        {
-          "observed_at": "2026-07-08T23:08:06.508505+00:00",
-          "price": 64987,
-          "mileage": 22824
-        },
-        {
-          "observed_at": "2026-07-09T05:29:14.895704+00:00",
-          "price": 65988,
-          "mileage": 22824
-        },
-        {
-          "observed_at": "2026-07-09T14:34:03.224392+00:00",
-          "price": 64987,
-          "mileage": 22824
-        },
-        {
-          "observed_at": "2026-07-29T15:25:05.723369+00:00",
-          "price": 64987,
-          "mileage": 23016
-        },
-        {
-          "observed_at": "2026-07-30T15:30:26.404504+00:00",
-          "price": 64987,
-          "mileage": 22824
-        },
-        {
-          "observed_at": "2026-07-30T18:52:35.644013+00:00",
-          "price": 64987,
-          "mileage": 23016
-        }
-      ],
-      "stats": {
-        "all_time_low": 64987,
-        "all_time_high": 65988,
-        "total_drop_pct": -1.52,
-        "n_observations": 9,
-        "days_observed": 108
       }
     },
     "W1KLH6FB3RA004560": {
@@ -771,7 +708,7 @@
         "all_time_high": 81411,
         "total_drop_pct": -8.6,
         "n_observations": 9,
-        "days_observed": 60
+        "days_observed": 61
       }
     },
     "W1KLH6FB5TA256561": {
@@ -1353,7 +1290,7 @@
         "all_time_high": 76995,
         "total_drop_pct": 0.0,
         "n_observations": 1,
-        "days_observed": 29
+        "days_observed": 30
       }
     },
     "W1KLH6FB0SA157919": {
@@ -1450,7 +1387,7 @@
         "all_time_high": 41453,
         "total_drop_pct": -1.45,
         "n_observations": 2,
-        "days_observed": 11
+        "days_observed": 12
       }
     },
     "W1KZH6AB5NB038537": {
@@ -1483,7 +1420,7 @@
         "all_time_high": 46871,
         "total_drop_pct": -3.22,
         "n_observations": 3,
-        "days_observed": 11
+        "days_observed": 12
       }
     },
     "W1KLH6FB4TA236530": {
@@ -1511,7 +1448,7 @@
         "all_time_high": 81215,
         "total_drop_pct": -1.62,
         "n_observations": 2,
-        "days_observed": 11
+        "days_observed": 12
       }
     },
     "W1KLH6FB7RA058542": {
@@ -1539,7 +1476,7 @@
         "all_time_high": 79892,
         "total_drop_pct": -3.63,
         "n_observations": 2,
-        "days_observed": 11
+        "days_observed": 12
       }
     },
     "W1KZH6AB1NB040236": {
@@ -1562,7 +1499,7 @@
         "all_time_high": 52888,
         "total_drop_pct": 0.0,
         "n_observations": 1,
-        "days_observed": 11
+        "days_observed": 12
       }
     },
     "W1KLH6FB4RA070115": {
@@ -1585,7 +1522,7 @@
         "all_time_high": 69995,
         "total_drop_pct": 0.0,
         "n_observations": 1,
-        "days_observed": 11
+        "days_observed": 12
       }
     },
     "W1KZH6ABXPB125367": {
