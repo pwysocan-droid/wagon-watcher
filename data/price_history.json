@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-02T11:32:28.282297+00:00",
+  "generated_at": "2026-09-02T15:38:53.731167+00:00",
   "schema_version": 1,
   "vins": {
     "W1KLH6FB2SA128504": {
@@ -400,7 +400,7 @@
         "all_time_high": 50987,
         "total_drop_pct": -4.07,
         "n_observations": 13,
-        "days_observed": 80
+        "days_observed": 81
       }
     },
     "W1KLH6FB1SA114903": {
@@ -433,7 +433,7 @@
         "all_time_high": 73998,
         "total_drop_pct": -6.76,
         "n_observations": 3,
-        "days_observed": 76
+        "days_observed": 77
       }
     },
     "W1KLH6FB0TA220597": {
@@ -501,7 +501,7 @@
         "all_time_high": 78491,
         "total_drop_pct": -3.82,
         "n_observations": 10,
-        "days_observed": 70
+        "days_observed": 71
       }
     },
     "W1KLH6FB7SA087237": {
@@ -857,7 +857,7 @@
         "all_time_high": 78293,
         "total_drop_pct": -4.86,
         "n_observations": 19,
-        "days_observed": 41
+        "days_observed": 42
       }
     },
     "W1KLH6FB8SA148918": {
@@ -1268,7 +1268,7 @@
         "all_time_high": 70909,
         "total_drop_pct": 0.0,
         "n_observations": 1,
-        "days_observed": 21
+        "days_observed": 22
       }
     },
     "W1KZH6AB7MA926498": {
@@ -1454,7 +1454,7 @@
         "all_time_high": 56761,
         "total_drop_pct": 0.0,
         "n_observations": 1,
-        "days_observed": 8
+        "days_observed": 9
       }
     },
     "W1KZH6AB2MA941166": {
@@ -1477,7 +1477,7 @@
         "all_time_high": 44990,
         "total_drop_pct": 0.0,
         "n_observations": 1,
-        "days_observed": 8
+        "days_observed": 9
       }
     },
     "W1KLH6FB3RA026171": {
@@ -1500,7 +1500,7 @@
         "all_time_high": 76995,
         "total_drop_pct": 0.0,
         "n_observations": 1,
-        "days_observed": 8
+        "days_observed": 9
       }
     },
     "W1KZH6AB2PB179861": {
@@ -1592,7 +1592,7 @@
         "all_time_high": 72158,
         "total_drop_pct": 0.0,
         "n_observations": 1,
-        "days_observed": 4
+        "days_observed": 5
       }
     }
   }
