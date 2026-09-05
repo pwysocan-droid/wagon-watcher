@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-05T11:19:00.598468+00:00",
+  "generated_at": "2026-09-05T13:56:45.586745+00:00",
   "schema_version": 1,
   "vins": {
     "W1KLH6FB2SA128504": {
@@ -400,7 +400,7 @@
         "all_time_high": 50987,
         "total_drop_pct": -4.07,
         "n_observations": 13,
-        "days_observed": 83
+        "days_observed": 84
       }
     },
     "W1KLH6FB1SA114903": {
@@ -409,8 +409,8 @@
       "dealer": "Mercedes-Benz of Hoffman Estates",
       "first_seen_at": "2026-06-17T12:01:25.514742+00:00",
       "current_price": 68999,
-      "current_mileage": 8755,
-      "status": "reappeared",
+      "current_mileage": 8759,
+      "status": "active",
       "observations": [
         {
           "observed_at": "2026-06-17T12:01:25.514742+00:00",
@@ -426,14 +426,19 @@
           "observed_at": "2026-08-28T23:18:17.844842+00:00",
           "price": 68999,
           "mileage": 8755
+        },
+        {
+          "observed_at": "2026-09-05T13:56:01.422272+00:00",
+          "price": 68999,
+          "mileage": 8759
         }
       ],
       "stats": {
         "all_time_low": 68999,
         "all_time_high": 73998,
         "total_drop_pct": -6.76,
-        "n_observations": 3,
-        "days_observed": 79
+        "n_observations": 4,
+        "days_observed": 80
       }
     },
     "W1KLH6FB0TA220597": {
@@ -501,7 +506,7 @@
         "all_time_high": 78491,
         "total_drop_pct": -3.82,
         "n_observations": 10,
-        "days_observed": 73
+        "days_observed": 74
       }
     },
     "W1KLH6FB7SA087237": {
@@ -731,7 +736,7 @@
       "first_seen_at": "2026-07-13T22:45:03.922551+00:00",
       "current_price": 83600,
       "current_mileage": 5669,
-      "status": "reappeared",
+      "status": "active",
       "observations": [
         {
           "observed_at": "2026-07-13T22:45:03.922551+00:00",
@@ -1288,7 +1293,7 @@
         "all_time_high": 70909,
         "total_drop_pct": 0.0,
         "n_observations": 1,
-        "days_observed": 24
+        "days_observed": 25
       }
     },
     "W1KZH6AB7MA926498": {
@@ -1298,7 +1303,7 @@
       "first_seen_at": "2026-08-19T06:12:47.586461+00:00",
       "current_price": 40451,
       "current_mileage": 70149,
-      "status": "reappeared",
+      "status": "gone",
       "observations": [
         {
           "observed_at": "2026-08-19T06:12:47.586461+00:00",
@@ -1397,7 +1402,7 @@
       "first_seen_at": "2026-08-19T06:12:47.586461+00:00",
       "current_price": 76994,
       "current_mileage": 18534,
-      "status": "reappeared",
+      "status": "gone",
       "observations": [
         {
           "observed_at": "2026-08-19T06:12:47.586461+00:00",
@@ -1527,7 +1532,7 @@
       "first_seen_at": "2026-08-24T15:07:22.871794+00:00",
       "current_price": 76995,
       "current_mileage": 7704,
-      "status": "active",
+      "status": "gone",
       "observations": [
         {
           "observed_at": "2026-08-24T15:07:22.871794+00:00",
@@ -1642,7 +1647,7 @@
         "all_time_high": 72158,
         "total_drop_pct": 0.0,
         "n_observations": 1,
-        "days_observed": 7
+        "days_observed": 8
       }
     },
     "W1KZH6AB1NB081983": {
@@ -1652,7 +1657,7 @@
       "first_seen_at": "2026-09-03T19:30:06.367144+00:00",
       "current_price": 51986,
       "current_mileage": 27747,
-      "status": "active",
+      "status": "gone",
       "observations": [
         {
           "observed_at": "2026-09-03T19:30:06.367144+00:00",
@@ -1697,20 +1702,25 @@
       "dealer": "Mercedes-Benz of Barrington",
       "first_seen_at": "2026-09-04T07:19:29.045797+00:00",
       "current_price": 69900,
-      "current_mileage": 23197,
+      "current_mileage": 23212,
       "status": "active",
       "observations": [
         {
           "observed_at": "2026-09-04T07:19:29.045797+00:00",
           "price": 69900,
           "mileage": 23197
+        },
+        {
+          "observed_at": "2026-09-05T13:56:01.422272+00:00",
+          "price": 69900,
+          "mileage": 23212
         }
       ],
       "stats": {
         "all_time_low": 69900,
         "all_time_high": 69900,
         "total_drop_pct": 0.0,
-        "n_observations": 1,
+        "n_observations": 2,
         "days_observed": 1
       }
     },
