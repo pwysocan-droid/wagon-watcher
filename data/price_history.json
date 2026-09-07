@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-07T20:03:01.189375+00:00",
+  "generated_at": "2026-09-07T22:54:48.627625+00:00",
   "schema_version": 1,
   "vins": {
     "W1KLH6FB2SA128504": {
@@ -559,7 +559,7 @@
         "all_time_high": 68499,
         "total_drop_pct": -3.86,
         "n_observations": 7,
-        "days_observed": 73
+        "days_observed": 74
       }
     },
     "W1KLH6FB0RA026242": {
@@ -655,7 +655,7 @@
         "all_time_high": 85965,
         "total_drop_pct": -9.86,
         "n_observations": 3,
-        "days_observed": 61
+        "days_observed": 62
       }
     },
     "W1KLH6FB6SA133396": {
@@ -754,7 +754,7 @@
         "all_time_high": 86332,
         "total_drop_pct": -3.16,
         "n_observations": 2,
-        "days_observed": 55
+        "days_observed": 56
       }
     },
     "W1KLH6FB9TA207363": {
@@ -920,7 +920,7 @@
         "all_time_high": 73415,
         "total_drop_pct": -0.57,
         "n_observations": 5,
-        "days_observed": 44
+        "days_observed": 45
       }
     },
     "W1KZH6AB9NB055261": {
@@ -1308,7 +1308,7 @@
       "first_seen_at": "2026-08-19T06:12:47.586461+00:00",
       "current_price": 40451,
       "current_mileage": 70149,
-      "status": "active",
+      "status": "gone",
       "observations": [
         {
           "observed_at": "2026-08-19T06:12:47.586461+00:00",
@@ -1844,6 +1844,29 @@
       "stats": {
         "all_time_low": 58400,
         "all_time_high": 58400,
+        "total_drop_pct": 0.0,
+        "n_observations": 1,
+        "days_observed": 0
+      }
+    },
+    "W1KLH6FB3SA084433": {
+      "year": 2025,
+      "trim": "E450S4",
+      "dealer": "Mercedes-Benz of Madison",
+      "first_seen_at": "2026-09-07T22:54:43.061530+00:00",
+      "current_price": 67600,
+      "current_mileage": 4029,
+      "status": "active",
+      "observations": [
+        {
+          "observed_at": "2026-09-07T22:54:43.061530+00:00",
+          "price": 67600,
+          "mileage": 4029
+        }
+      ],
+      "stats": {
+        "all_time_low": 67600,
+        "all_time_high": 67600,
         "total_drop_pct": 0.0,
         "n_observations": 1,
         "days_observed": 0
