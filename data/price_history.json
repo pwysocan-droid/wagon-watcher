@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-08T14:01:37.692987+00:00",
+  "generated_at": "2026-09-08T17:58:18.064020+00:00",
   "schema_version": 1,
   "vins": {
     "W1KLH6FB2SA128504": {
@@ -42,7 +42,7 @@
         "all_time_high": 75340,
         "total_drop_pct": -4.47,
         "n_observations": 5,
-        "days_observed": 134
+        "days_observed": 135
       }
     },
     "W1KLH6FB4SA129881": {
@@ -70,7 +70,7 @@
         "all_time_high": 80345,
         "total_drop_pct": 0.0,
         "n_observations": 2,
-        "days_observed": 134
+        "days_observed": 135
       }
     },
     "W1KZH6AB2NB082348": {
@@ -239,7 +239,7 @@
         "all_time_high": 74984,
         "total_drop_pct": -4.52,
         "n_observations": 9,
-        "days_observed": 95
+        "days_observed": 96
       }
     },
     "W1KZH6AB0PB118007": {
@@ -877,7 +877,7 @@
         "all_time_high": 78293,
         "total_drop_pct": -7.41,
         "n_observations": 21,
-        "days_observed": 47
+        "days_observed": 48
       }
     },
     "W1KLH6FB8SA148918": {
@@ -1306,9 +1306,9 @@
       "trim": "E450S4",
       "dealer": "Mercedes-Benz of Laguna Niguel",
       "first_seen_at": "2026-08-19T06:12:47.586461+00:00",
-      "current_price": 40451,
+      "current_price": 39840,
       "current_mileage": 70149,
-      "status": "gone",
+      "status": "reappeared",
       "observations": [
         {
           "observed_at": "2026-08-19T06:12:47.586461+00:00",
@@ -1324,13 +1324,18 @@
           "observed_at": "2026-09-04T12:11:19.590680+00:00",
           "price": 40451,
           "mileage": 70149
+        },
+        {
+          "observed_at": "2026-09-08T17:58:13.910614+00:00",
+          "price": 39840,
+          "mileage": 70149
         }
       ],
       "stats": {
-        "all_time_low": 40451,
+        "all_time_low": 39840,
         "all_time_high": 41453,
-        "total_drop_pct": -2.42,
-        "n_observations": 3,
+        "total_drop_pct": -3.89,
+        "n_observations": 4,
         "days_observed": 20
       }
     },
@@ -1499,7 +1504,7 @@
         "all_time_high": 56761,
         "total_drop_pct": 0.0,
         "n_observations": 1,
-        "days_observed": 14
+        "days_observed": 15
       }
     },
     "W1KZH6AB2MA941166": {
@@ -1527,7 +1532,7 @@
         "all_time_high": 44990,
         "total_drop_pct": -0.01,
         "n_observations": 2,
-        "days_observed": 14
+        "days_observed": 15
       }
     },
     "W1KLH6FB3RA026171": {
@@ -1550,7 +1555,7 @@
         "all_time_high": 76995,
         "total_drop_pct": 0.0,
         "n_observations": 1,
-        "days_observed": 14
+        "days_observed": 15
       }
     },
     "W1KZH6AB2PB179861": {
@@ -1573,7 +1578,7 @@
         "all_time_high": 58990,
         "total_drop_pct": 0.0,
         "n_observations": 1,
-        "days_observed": 14
+        "days_observed": 15
       }
     },
     "W1KZH6AB1PB170231": {
@@ -1583,7 +1588,7 @@
       "first_seen_at": "2026-08-25T09:05:36.798006+00:00",
       "current_price": 62498,
       "current_mileage": 9795,
-      "status": "gone",
+      "status": "reappeared",
       "observations": [
         {
           "observed_at": "2026-08-25T09:05:36.798006+00:00",
@@ -1711,7 +1716,7 @@
       "trim": "E450S4",
       "dealer": "Mercedes-Benz of Barrington",
       "first_seen_at": "2026-09-04T07:19:29.045797+00:00",
-      "current_price": 69900,
+      "current_price": 67998,
       "current_mileage": 23212,
       "status": "active",
       "observations": [
@@ -1724,13 +1729,18 @@
           "observed_at": "2026-09-05T13:56:01.422272+00:00",
           "price": 69900,
           "mileage": 23212
+        },
+        {
+          "observed_at": "2026-09-08T17:58:13.910614+00:00",
+          "price": 67998,
+          "mileage": 23212
         }
       ],
       "stats": {
-        "all_time_low": 69900,
+        "all_time_low": 67998,
         "all_time_high": 69900,
-        "total_drop_pct": 0.0,
-        "n_observations": 2,
+        "total_drop_pct": -2.72,
+        "n_observations": 3,
         "days_observed": 4
       }
     },
@@ -1838,7 +1848,7 @@
       "first_seen_at": "2026-09-07T16:12:26.292100+00:00",
       "current_price": 58400,
       "current_mileage": 21000,
-      "status": "gone",
+      "status": "reappeared",
       "observations": [
         {
           "observed_at": "2026-09-07T16:12:26.292100+00:00",
@@ -1851,7 +1861,7 @@
         "all_time_high": 58400,
         "total_drop_pct": 0.0,
         "n_observations": 1,
-        "days_observed": 0
+        "days_observed": 1
       }
     },
     "W1KLH6FB3SA084433": {
