@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-08T00:48:56.472135+00:00",
+  "generated_at": "2026-09-08T05:27:46.979734+00:00",
   "schema_version": 1,
   "vins": {
     "W1KLH6FB2SA128504": {
@@ -186,7 +186,7 @@
       "first_seen_at": "2026-06-04T15:55:18.581517+00:00",
       "current_price": 71591,
       "current_mileage": 6237,
-      "status": "gone",
+      "status": "reappeared",
       "observations": [
         {
           "observed_at": "2026-06-04T15:55:18.581517+00:00",
@@ -317,7 +317,7 @@
         "all_time_high": 58367,
         "total_drop_pct": -7.62,
         "n_observations": 12,
-        "days_observed": 89
+        "days_observed": 90
       }
     },
     "W1KZH6AB0PB118184": {
@@ -1097,7 +1097,7 @@
         "all_time_high": 75990,
         "total_drop_pct": 0.0,
         "n_observations": 1,
-        "days_observed": 37
+        "days_observed": 38
       }
     },
     "W1KLH6FB0RA056051": {
@@ -1160,7 +1160,7 @@
         "all_time_high": 74997,
         "total_drop_pct": -0.73,
         "n_observations": 9,
-        "days_observed": 37
+        "days_observed": 38
       }
     },
     "W1KLH6FB5RA026169": {
@@ -1183,7 +1183,7 @@
         "all_time_high": 76995,
         "total_drop_pct": 0.0,
         "n_observations": 1,
-        "days_observed": 37
+        "days_observed": 38
       }
     },
     "W1KLH6FB4RA026213": {
@@ -1206,7 +1206,7 @@
         "all_time_high": 76995,
         "total_drop_pct": 0.0,
         "n_observations": 1,
-        "days_observed": 37
+        "days_observed": 38
       }
     },
     "W1KLH6FB9RA026207": {
@@ -1229,7 +1229,7 @@
         "all_time_high": 76995,
         "total_drop_pct": 0.0,
         "n_observations": 1,
-        "days_observed": 37
+        "days_observed": 38
       }
     },
     "W1KLH6FB0SA157919": {
@@ -1308,7 +1308,7 @@
       "first_seen_at": "2026-08-19T06:12:47.586461+00:00",
       "current_price": 40451,
       "current_mileage": 70149,
-      "status": "reappeared",
+      "status": "active",
       "observations": [
         {
           "observed_at": "2026-08-19T06:12:47.586461+00:00",
@@ -1872,6 +1872,29 @@
       "stats": {
         "all_time_low": 67600,
         "all_time_high": 67600,
+        "total_drop_pct": 0.0,
+        "n_observations": 1,
+        "days_observed": 0
+      }
+    },
+    "W1KZH6AB1PB172920": {
+      "year": 2023,
+      "trim": "E450S4",
+      "dealer": "Euro Motorcars, LLC",
+      "first_seen_at": "2026-09-08T05:27:39.826834+00:00",
+      "current_price": 58799,
+      "current_mileage": 40563,
+      "status": "active",
+      "observations": [
+        {
+          "observed_at": "2026-09-08T05:27:39.826834+00:00",
+          "price": 58799,
+          "mileage": 40563
+        }
+      ],
+      "stats": {
+        "all_time_low": 58799,
+        "all_time_high": 58799,
         "total_drop_pct": 0.0,
         "n_observations": 1,
         "days_observed": 0
