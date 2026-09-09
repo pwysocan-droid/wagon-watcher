@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-08T23:03:35.265481+00:00",
+  "generated_at": "2026-09-09T01:19:31.393064+00:00",
   "schema_version": 1,
   "vins": {
     "W1KLH6FB2SA128504": {
@@ -186,7 +186,7 @@
       "first_seen_at": "2026-06-04T15:55:18.581517+00:00",
       "current_price": 71591,
       "current_mileage": 6237,
-      "status": "gone",
+      "status": "reappeared",
       "observations": [
         {
           "observed_at": "2026-06-04T15:55:18.581517+00:00",
@@ -1308,7 +1308,7 @@
       "first_seen_at": "2026-08-19T06:12:47.586461+00:00",
       "current_price": 39840,
       "current_mileage": 70149,
-      "status": "active",
+      "status": "gone",
       "observations": [
         {
           "observed_at": "2026-08-19T06:12:47.586461+00:00",
@@ -1588,7 +1588,7 @@
       "first_seen_at": "2026-08-25T09:05:36.798006+00:00",
       "current_price": 62498,
       "current_mileage": 9795,
-      "status": "gone",
+      "status": "reappeared",
       "observations": [
         {
           "observed_at": "2026-08-25T09:05:36.798006+00:00",
@@ -1848,7 +1848,7 @@
       "first_seen_at": "2026-09-07T16:12:26.292100+00:00",
       "current_price": 58400,
       "current_mileage": 21000,
-      "status": "active",
+      "status": "gone",
       "observations": [
         {
           "observed_at": "2026-09-07T16:12:26.292100+00:00",
@@ -1912,6 +1912,29 @@
         "all_time_high": 58799,
         "total_drop_pct": -0.2,
         "n_observations": 2,
+        "days_observed": 0
+      }
+    },
+    "W1KLH6FB4RA004552": {
+      "year": 2024,
+      "trim": "E450S4",
+      "dealer": "R B M of Alpharetta",
+      "first_seen_at": "2026-09-09T01:19:26.594634+00:00",
+      "current_price": 69982,
+      "current_mileage": 27193,
+      "status": "active",
+      "observations": [
+        {
+          "observed_at": "2026-09-09T01:19:26.594634+00:00",
+          "price": 69982,
+          "mileage": 27193
+        }
+      ],
+      "stats": {
+        "all_time_low": 69982,
+        "all_time_high": 69982,
+        "total_drop_pct": 0.0,
+        "n_observations": 1,
         "days_observed": 0
       }
     }
