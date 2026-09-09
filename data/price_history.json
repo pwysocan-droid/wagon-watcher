@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-09T11:36:50.879131+00:00",
+  "generated_at": "2026-09-09T15:35:12.739617+00:00",
   "schema_version": 1,
   "vins": {
     "W1KLH6FB2SA128504": {
@@ -186,7 +186,7 @@
       "first_seen_at": "2026-06-04T15:55:18.581517+00:00",
       "current_price": 71591,
       "current_mileage": 6237,
-      "status": "reappeared",
+      "status": "active",
       "observations": [
         {
           "observed_at": "2026-06-04T15:55:18.581517+00:00",
@@ -400,7 +400,7 @@
         "all_time_high": 50987,
         "total_drop_pct": -4.07,
         "n_observations": 13,
-        "days_observed": 87
+        "days_observed": 88
       }
     },
     "W1KLH6FB1SA114903": {
@@ -438,7 +438,7 @@
         "all_time_high": 73998,
         "total_drop_pct": -6.76,
         "n_observations": 4,
-        "days_observed": 83
+        "days_observed": 84
       }
     },
     "W1KLH6FB0TA220597": {
@@ -506,7 +506,7 @@
         "all_time_high": 78491,
         "total_drop_pct": -3.82,
         "n_observations": 10,
-        "days_observed": 77
+        "days_observed": 78
       }
     },
     "W1KLH6FB7SA087237": {
@@ -877,7 +877,7 @@
         "all_time_high": 78293,
         "total_drop_pct": -7.41,
         "n_observations": 21,
-        "days_observed": 48
+        "days_observed": 49
       }
     },
     "W1KLH6FB8SA148918": {
@@ -1298,7 +1298,7 @@
         "all_time_high": 70909,
         "total_drop_pct": 0.0,
         "n_observations": 1,
-        "days_observed": 28
+        "days_observed": 29
       }
     },
     "W1KZH6AB7MA926498": {
@@ -1462,7 +1462,7 @@
       "dealer": "Mercedes-Benz of Knoxville",
       "first_seen_at": "2026-08-19T06:12:47.586461+00:00",
       "current_price": 70790,
-      "current_mileage": 20906,
+      "current_mileage": 20934,
       "status": "active",
       "observations": [
         {
@@ -1474,13 +1474,18 @@
           "observed_at": "2026-09-04T12:11:19.590680+00:00",
           "price": 70790,
           "mileage": 20906
+        },
+        {
+          "observed_at": "2026-09-09T15:35:07.889444+00:00",
+          "price": 70790,
+          "mileage": 20934
         }
       ],
       "stats": {
         "all_time_low": 69995,
         "all_time_high": 70790,
         "total_drop_pct": 1.14,
-        "n_observations": 2,
+        "n_observations": 3,
         "days_observed": 21
       }
     },
@@ -1504,7 +1509,7 @@
         "all_time_high": 56761,
         "total_drop_pct": 0.0,
         "n_observations": 1,
-        "days_observed": 15
+        "days_observed": 16
       }
     },
     "W1KZH6AB2MA941166": {
@@ -1532,7 +1537,7 @@
         "all_time_high": 44990,
         "total_drop_pct": -0.01,
         "n_observations": 2,
-        "days_observed": 15
+        "days_observed": 16
       }
     },
     "W1KLH6FB3RA026171": {
@@ -1555,7 +1560,7 @@
         "all_time_high": 76995,
         "total_drop_pct": 0.0,
         "n_observations": 1,
-        "days_observed": 15
+        "days_observed": 16
       }
     },
     "W1KZH6AB2PB179861": {
@@ -1662,7 +1667,7 @@
         "all_time_high": 72158,
         "total_drop_pct": -0.36,
         "n_observations": 2,
-        "days_observed": 11
+        "days_observed": 12
       }
     },
     "W1KZH6AB1NB081983": {
