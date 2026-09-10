@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-10T11:34:57.640470+00:00",
+  "generated_at": "2026-09-10T15:30:49.039555+00:00",
   "schema_version": 1,
   "vins": {
     "W1KLH6FB2SA128504": {
@@ -103,7 +103,7 @@
       "first_seen_at": "2026-05-13T09:22:44.161676+00:00",
       "current_price": 64487,
       "current_mileage": 26439,
-      "status": "reappeared",
+      "status": "active",
       "observations": [
         {
           "observed_at": "2026-05-13T09:22:44.161676+00:00",
@@ -186,7 +186,7 @@
       "first_seen_at": "2026-06-04T15:55:18.581517+00:00",
       "current_price": 71591,
       "current_mileage": 6237,
-      "status": "reappeared",
+      "status": "active",
       "observations": [
         {
           "observed_at": "2026-06-04T15:55:18.581517+00:00",
@@ -325,7 +325,7 @@
       "trim": "E450S4",
       "dealer": "R B M of Atlanta, Inc.",
       "first_seen_at": "2026-06-13T12:19:58.158781+00:00",
-      "current_price": 48910,
+      "current_price": 48119,
       "current_mileage": 71983,
       "status": "active",
       "observations": [
@@ -393,14 +393,19 @@
           "observed_at": "2026-08-14T11:36:51.144419+00:00",
           "price": 48910,
           "mileage": 71983
+        },
+        {
+          "observed_at": "2026-09-10T15:30:48.267732+00:00",
+          "price": 48119,
+          "mileage": 71983
         }
       ],
       "stats": {
-        "all_time_low": 48910,
+        "all_time_low": 48119,
         "all_time_high": 50987,
-        "total_drop_pct": -4.07,
-        "n_observations": 13,
-        "days_observed": 88
+        "total_drop_pct": -5.62,
+        "n_observations": 14,
+        "days_observed": 89
       }
     },
     "W1KLH6FB1SA114903": {
@@ -438,7 +443,7 @@
         "all_time_high": 73998,
         "total_drop_pct": -6.76,
         "n_observations": 4,
-        "days_observed": 84
+        "days_observed": 85
       }
     },
     "W1KLH6FB0TA220597": {
@@ -506,7 +511,7 @@
         "all_time_high": 78491,
         "total_drop_pct": -3.82,
         "n_observations": 10,
-        "days_observed": 78
+        "days_observed": 79
       }
     },
     "W1KLH6FB7SA087237": {
@@ -877,7 +882,7 @@
         "all_time_high": 78293,
         "total_drop_pct": -7.41,
         "n_observations": 21,
-        "days_observed": 49
+        "days_observed": 50
       }
     },
     "W1KLH6FB8SA148918": {
@@ -928,7 +933,7 @@
       "trim": "E450S4",
       "dealer": "Benzel-Busch Motor Car Corp.",
       "first_seen_at": "2026-07-25T09:28:35.139701+00:00",
-      "current_price": 51980,
+      "current_price": 51983,
       "current_mileage": 51923,
       "status": "active",
       "observations": [
@@ -971,13 +976,18 @@
           "observed_at": "2026-09-04T12:11:19.590680+00:00",
           "price": 51980,
           "mileage": 51923
+        },
+        {
+          "observed_at": "2026-09-10T15:30:48.267732+00:00",
+          "price": 51983,
+          "mileage": 51923
         }
       ],
       "stats": {
         "all_time_low": 49987,
-        "all_time_high": 51980,
+        "all_time_high": 51983,
         "total_drop_pct": 3.99,
-        "n_observations": 8,
+        "n_observations": 9,
         "days_observed": 47
       }
     },
@@ -1275,7 +1285,7 @@
         "all_time_high": 70909,
         "total_drop_pct": 0.0,
         "n_observations": 1,
-        "days_observed": 29
+        "days_observed": 30
       }
     },
     "W1KZH6AB7MA926498": {
@@ -1486,7 +1496,7 @@
         "all_time_high": 56761,
         "total_drop_pct": 0.0,
         "n_observations": 1,
-        "days_observed": 16
+        "days_observed": 17
       }
     },
     "W1KZH6AB2MA941166": {
@@ -1514,7 +1524,7 @@
         "all_time_high": 44990,
         "total_drop_pct": -0.01,
         "n_observations": 2,
-        "days_observed": 16
+        "days_observed": 17
       }
     },
     "W1KLH6FB3RA026171": {
@@ -1537,7 +1547,7 @@
         "all_time_high": 76995,
         "total_drop_pct": 0.0,
         "n_observations": 1,
-        "days_observed": 16
+        "days_observed": 17
       }
     },
     "W1KZH6AB2PB179861": {
@@ -1644,7 +1654,7 @@
         "all_time_high": 72158,
         "total_drop_pct": -0.36,
         "n_observations": 2,
-        "days_observed": 12
+        "days_observed": 13
       }
     },
     "W1KZH6AB1NB081983": {
