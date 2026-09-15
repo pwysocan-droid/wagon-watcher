@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-15T11:56:20.223903+00:00",
+  "generated_at": "2026-09-15T16:02:07.906829+00:00",
   "schema_version": 1,
   "vins": {
     "W1KLH6FB2SA128504": {
@@ -42,7 +42,7 @@
         "all_time_high": 75340,
         "total_drop_pct": -4.47,
         "n_observations": 5,
-        "days_observed": 141
+        "days_observed": 142
       }
     },
     "W1KLH6FB4SA129881": {
@@ -70,7 +70,7 @@
         "all_time_high": 80345,
         "total_drop_pct": 0.0,
         "n_observations": 2,
-        "days_observed": 141
+        "days_observed": 142
       }
     },
     "W1KLH6FB3SA087512": {
@@ -231,7 +231,7 @@
         "all_time_high": 74984,
         "total_drop_pct": -4.52,
         "n_observations": 9,
-        "days_observed": 102
+        "days_observed": 103
       }
     },
     "W1KZH6AB0PB118184": {
@@ -319,7 +319,7 @@
         "all_time_high": 50987,
         "total_drop_pct": -5.62,
         "n_observations": 14,
-        "days_observed": 93
+        "days_observed": 94
       }
     },
     "W1KLH6FB1SA114903": {
@@ -357,7 +357,7 @@
         "all_time_high": 73998,
         "total_drop_pct": -6.76,
         "n_observations": 4,
-        "days_observed": 89
+        "days_observed": 90
       }
     },
     "W1KLH6FB0TA220597": {
@@ -425,7 +425,7 @@
         "all_time_high": 78491,
         "total_drop_pct": -3.82,
         "n_observations": 10,
-        "days_observed": 83
+        "days_observed": 84
       }
     },
     "W1KLH6FB7SA087237": {
@@ -748,7 +748,7 @@
         "all_time_high": 78293,
         "total_drop_pct": -7.41,
         "n_observations": 21,
-        "days_observed": 54
+        "days_observed": 55
       }
     },
     "W1KZH6AB9NB055261": {
@@ -1067,7 +1067,7 @@
         "all_time_high": 70909,
         "total_drop_pct": 0.0,
         "n_observations": 1,
-        "days_observed": 34
+        "days_observed": 35
       }
     },
     "W1KZH6AB7MA926498": {
@@ -1278,7 +1278,7 @@
         "all_time_high": 56761,
         "total_drop_pct": 0.0,
         "n_observations": 1,
-        "days_observed": 21
+        "days_observed": 22
       }
     },
     "W1KZH6AB2MA941166": {
@@ -1306,7 +1306,7 @@
         "all_time_high": 44990,
         "total_drop_pct": -0.01,
         "n_observations": 2,
-        "days_observed": 21
+        "days_observed": 22
       }
     },
     "W1KLH6FB3RA026171": {
@@ -1329,7 +1329,7 @@
         "all_time_high": 76995,
         "total_drop_pct": 0.0,
         "n_observations": 1,
-        "days_observed": 21
+        "days_observed": 22
       }
     },
     "W1KZH6AB2PB179861": {
@@ -1436,7 +1436,7 @@
         "all_time_high": 72158,
         "total_drop_pct": -0.36,
         "n_observations": 2,
-        "days_observed": 17
+        "days_observed": 18
       }
     },
     "W1KZH6AB1NB081983": {
@@ -1715,20 +1715,25 @@
       "dealer": "R B M of Alpharetta",
       "first_seen_at": "2026-09-09T01:19:26.594634+00:00",
       "current_price": 69982,
-      "current_mileage": 27193,
+      "current_mileage": 27197,
       "status": "active",
       "observations": [
         {
           "observed_at": "2026-09-09T01:19:26.594634+00:00",
           "price": 69982,
           "mileage": 27193
+        },
+        {
+          "observed_at": "2026-09-15T16:02:02.452139+00:00",
+          "price": 69982,
+          "mileage": 27197
         }
       ],
       "stats": {
         "all_time_low": 69982,
         "all_time_high": 69982,
         "total_drop_pct": 0.0,
-        "n_observations": 1,
+        "n_observations": 2,
         "days_observed": 6
       }
     },
@@ -1752,7 +1757,7 @@
         "all_time_high": 59891,
         "total_drop_pct": 0.0,
         "n_observations": 1,
-        "days_observed": 0
+        "days_observed": 1
       }
     }
   }
