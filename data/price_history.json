@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-15T22:32:53.426526+00:00",
+  "generated_at": "2026-09-16T00:53:51.818180+00:00",
   "schema_version": 1,
   "vins": {
     "W1KLH6FB2SA128504": {
@@ -625,7 +625,7 @@
         "all_time_high": 86332,
         "total_drop_pct": -3.16,
         "n_observations": 2,
-        "days_observed": 63
+        "days_observed": 64
       }
     },
     "W1KLH6FB9TA207363": {
@@ -1678,7 +1678,7 @@
         "all_time_high": 67600,
         "total_drop_pct": 0.0,
         "n_observations": 1,
-        "days_observed": 7
+        "days_observed": 8
       }
     },
     "W1KZH6AB1PB172920": {
@@ -1744,7 +1744,7 @@
       "first_seen_at": "2026-09-14T15:06:48.747634+00:00",
       "current_price": 59891,
       "current_mileage": 21502,
-      "status": "active",
+      "status": "gone",
       "observations": [
         {
           "observed_at": "2026-09-14T15:06:48.747634+00:00",
@@ -1758,6 +1758,29 @@
         "total_drop_pct": 0.0,
         "n_observations": 1,
         "days_observed": 1
+      }
+    },
+    "W1KLH6FB2RA069447": {
+      "year": 2024,
+      "trim": "E450S4",
+      "dealer": "Mercedes-Benz of Pittsburgh",
+      "first_seen_at": "2026-09-16T00:53:45.965988+00:00",
+      "current_price": 71780,
+      "current_mileage": 14243,
+      "status": "active",
+      "observations": [
+        {
+          "observed_at": "2026-09-16T00:53:45.965988+00:00",
+          "price": 71780,
+          "mileage": 14243
+        }
+      ],
+      "stats": {
+        "all_time_low": 71780,
+        "all_time_high": 71780,
+        "total_drop_pct": 0.0,
+        "n_observations": 1,
+        "days_observed": 0
       }
     }
   }
