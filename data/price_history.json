@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-17T09:01:16.762683+00:00",
+  "generated_at": "2026-09-17T14:21:38.270904+00:00",
   "schema_version": 1,
   "vins": {
     "W1KLH6FB2SA128504": {
@@ -173,7 +173,7 @@
         "all_time_high": 65988,
         "total_drop_pct": -2.27,
         "n_observations": 17,
-        "days_observed": 126
+        "days_observed": 127
       }
     },
     "W1KLH6FB3RA004560": {
@@ -324,7 +324,7 @@
         "all_time_high": 50987,
         "total_drop_pct": -5.62,
         "n_observations": 14,
-        "days_observed": 95
+        "days_observed": 96
       }
     },
     "W1KLH6FB1SA114903": {
@@ -362,7 +362,7 @@
         "all_time_high": 73998,
         "total_drop_pct": -6.76,
         "n_observations": 4,
-        "days_observed": 91
+        "days_observed": 92
       }
     },
     "W1KLH6FB0TA220597": {
@@ -430,7 +430,7 @@
         "all_time_high": 78491,
         "total_drop_pct": -3.82,
         "n_observations": 10,
-        "days_observed": 85
+        "days_observed": 86
       }
     },
     "W1KLH6FB7SA087237": {
@@ -602,7 +602,7 @@
         "all_time_high": 71998,
         "total_drop_pct": 0.0,
         "n_observations": 1,
-        "days_observed": 68
+        "days_observed": 69
       }
     },
     "W1KLH6FB2TA196545": {
@@ -816,7 +816,7 @@
         "all_time_high": 51983,
         "total_drop_pct": 3.99,
         "n_observations": 9,
-        "days_observed": 53
+        "days_observed": 54
       }
     },
     "W1KZH6AB5PB157997": {
@@ -869,7 +869,7 @@
         "all_time_high": 69990,
         "total_drop_pct": -2.86,
         "n_observations": 7,
-        "days_observed": 50
+        "days_observed": 51
       }
     },
     "W1KLH6FB3SA118709": {
@@ -912,7 +912,7 @@
         "all_time_high": 86145,
         "total_drop_pct": -5.97,
         "n_observations": 5,
-        "days_observed": 50
+        "days_observed": 51
       }
     },
     "W1KLH6FB0RA056051": {
@@ -1339,7 +1339,7 @@
         "all_time_high": 62998,
         "total_drop_pct": -0.79,
         "n_observations": 2,
-        "days_observed": 22
+        "days_observed": 23
       }
     },
     "W1KLH6FB2SA084620": {
@@ -1347,7 +1347,7 @@
       "trim": "E450S4",
       "dealer": "Valley Imports, Inc.",
       "first_seen_at": "2026-08-26T09:31:12.060204+00:00",
-      "current_price": 69048,
+      "current_price": 66590,
       "current_mileage": 12618,
       "status": "active",
       "observations": [
@@ -1360,14 +1360,19 @@
           "observed_at": "2026-09-04T12:11:19.590680+00:00",
           "price": 69048,
           "mileage": 12618
+        },
+        {
+          "observed_at": "2026-09-17T14:21:35.773551+00:00",
+          "price": 66590,
+          "mileage": 12618
         }
       ],
       "stats": {
-        "all_time_low": 69048,
+        "all_time_low": 66590,
         "all_time_high": 69048,
-        "total_drop_pct": 0.0,
-        "n_observations": 2,
-        "days_observed": 21
+        "total_drop_pct": -3.56,
+        "n_observations": 3,
+        "days_observed": 22
       }
     },
     "W1KLH6FB7SA105624": {
@@ -1377,7 +1382,7 @@
       "first_seen_at": "2026-08-28T13:34:05.304881+00:00",
       "current_price": 71900,
       "current_mileage": 2680,
-      "status": "active",
+      "status": "gone",
       "observations": [
         {
           "observed_at": "2026-08-28T13:34:05.304881+00:00",
@@ -1395,7 +1400,7 @@
         "all_time_high": 72158,
         "total_drop_pct": -0.36,
         "n_observations": 2,
-        "days_observed": 19
+        "days_observed": 20
       }
     },
     "W1KZH6AB1NB081983": {
@@ -1563,7 +1568,7 @@
         "all_time_high": 78939,
         "total_drop_pct": 0.0,
         "n_observations": 3,
-        "days_observed": 11
+        "days_observed": 12
       }
     },
     "W1KLH6FB5SA106366": {
@@ -1591,7 +1596,7 @@
         "all_time_high": 78985,
         "total_drop_pct": 0.0,
         "n_observations": 2,
-        "days_observed": 10
+        "days_observed": 11
       }
     },
     "W1KZH6AB7PB123799": {
