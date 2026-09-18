@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-18T16:38:52.572850+00:00",
+  "generated_at": "2026-09-18T19:19:15.225015+00:00",
   "schema_version": 1,
   "vins": {
     "W1KLH6FB2SA128504": {
@@ -1222,7 +1222,7 @@
       "trim": "E450S4",
       "dealer": "Mercedes-Benz of Riverside",
       "first_seen_at": "2026-08-24T15:07:22.871794+00:00",
-      "current_price": 56761,
+      "current_price": 55800,
       "current_mileage": 30037,
       "status": "active",
       "observations": [
@@ -1230,13 +1230,18 @@
           "observed_at": "2026-08-24T15:07:22.871794+00:00",
           "price": 56761,
           "mileage": 30037
+        },
+        {
+          "observed_at": "2026-09-18T19:19:06.425604+00:00",
+          "price": 55800,
+          "mileage": 30037
         }
       ],
       "stats": {
-        "all_time_low": 56761,
+        "all_time_low": 55800,
         "all_time_high": 56761,
-        "total_drop_pct": 0.0,
-        "n_observations": 1,
+        "total_drop_pct": -1.69,
+        "n_observations": 2,
         "days_observed": 25
       }
     },
@@ -1311,7 +1316,7 @@
         "all_time_high": 58990,
         "total_drop_pct": 0.0,
         "n_observations": 1,
-        "days_observed": 24
+        "days_observed": 25
       }
     },
     "W1KZH6AB1PB170231": {
@@ -1667,7 +1672,7 @@
       "first_seen_at": "2026-09-08T05:27:39.826834+00:00",
       "current_price": 58680,
       "current_mileage": 40623,
-      "status": "gone",
+      "status": "reappeared",
       "observations": [
         {
           "observed_at": "2026-09-08T05:27:39.826834+00:00",
@@ -1722,20 +1727,25 @@
       "dealer": "Mercedes-Benz of Jacksonville",
       "first_seen_at": "2026-09-14T15:06:48.747634+00:00",
       "current_price": 59891,
-      "current_mileage": 21502,
+      "current_mileage": 21506,
       "status": "active",
       "observations": [
         {
           "observed_at": "2026-09-14T15:06:48.747634+00:00",
           "price": 59891,
           "mileage": 21502
+        },
+        {
+          "observed_at": "2026-09-18T19:19:06.425604+00:00",
+          "price": 59891,
+          "mileage": 21506
         }
       ],
       "stats": {
         "all_time_low": 59891,
         "all_time_high": 59891,
         "total_drop_pct": 0.0,
-        "n_observations": 1,
+        "n_observations": 2,
         "days_observed": 4
       }
     },
@@ -1805,7 +1815,7 @@
         "all_time_high": 63214,
         "total_drop_pct": 0.0,
         "n_observations": 1,
-        "days_observed": 0
+        "days_observed": 1
       }
     },
     "W1KLH6FB1SA104758": {
@@ -1849,6 +1859,29 @@
       "stats": {
         "all_time_low": 57894,
         "all_time_high": 57894,
+        "total_drop_pct": 0.0,
+        "n_observations": 1,
+        "days_observed": 0
+      }
+    },
+    "W1KZH6AB3PB148201": {
+      "year": 2023,
+      "trim": "E450S4",
+      "dealer": "Mercedes-Benz of Morristown",
+      "first_seen_at": "2026-09-18T19:19:06.425604+00:00",
+      "current_price": 54995,
+      "current_mileage": 44699,
+      "status": "active",
+      "observations": [
+        {
+          "observed_at": "2026-09-18T19:19:06.425604+00:00",
+          "price": 54995,
+          "mileage": 44699
+        }
+      ],
+      "stats": {
+        "all_time_low": 54995,
+        "all_time_high": 54995,
         "total_drop_pct": 0.0,
         "n_observations": 1,
         "days_observed": 0
