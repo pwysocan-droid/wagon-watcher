@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-18T21:45:28.835496+00:00",
+  "generated_at": "2026-09-18T23:45:12.950723+00:00",
   "schema_version": 1,
   "vins": {
     "W1KLH6FB2SA128504": {
@@ -483,7 +483,7 @@
         "all_time_high": 68499,
         "total_drop_pct": -3.86,
         "n_observations": 7,
-        "days_observed": 84
+        "days_observed": 85
       }
     },
     "W1KLH6FB0RA026242": {
@@ -579,7 +579,7 @@
         "all_time_high": 85965,
         "total_drop_pct": -9.86,
         "n_observations": 3,
-        "days_observed": 72
+        "days_observed": 73
       }
     },
     "W1KLH6FB6SA133396": {
@@ -630,7 +630,7 @@
         "all_time_high": 86332,
         "total_drop_pct": -3.16,
         "n_observations": 2,
-        "days_observed": 66
+        "days_observed": 67
       }
     },
     "W1KLH6FB9TA207363": {
@@ -761,7 +761,7 @@
       "trim": "E450S4",
       "dealer": "Benzel-Busch Motor Car Corp.",
       "first_seen_at": "2026-07-25T09:28:35.139701+00:00",
-      "current_price": 51983,
+      "current_price": 49987,
       "current_mileage": 51923,
       "status": "active",
       "observations": [
@@ -809,13 +809,18 @@
           "observed_at": "2026-09-10T15:30:48.267732+00:00",
           "price": 51983,
           "mileage": 51923
+        },
+        {
+          "observed_at": "2026-09-18T23:45:08.215175+00:00",
+          "price": 49987,
+          "mileage": 51923
         }
       ],
       "stats": {
         "all_time_low": 49987,
         "all_time_high": 51983,
-        "total_drop_pct": 3.99,
-        "n_observations": 9,
+        "total_drop_pct": 0.0,
+        "n_observations": 10,
         "days_observed": 55
       }
     },
@@ -1662,7 +1667,7 @@
         "all_time_high": 67600,
         "total_drop_pct": 0.0,
         "n_observations": 2,
-        "days_observed": 10
+        "days_observed": 11
       }
     },
     "W1KZH6AB1PB172920": {
