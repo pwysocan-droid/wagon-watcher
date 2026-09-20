@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-20T17:32:40.859014+00:00",
+  "generated_at": "2026-09-20T19:59:37.280452+00:00",
   "schema_version": 1,
   "vins": {
     "W1KLH6FB2SA128504": {
@@ -1331,7 +1331,7 @@
         "all_time_high": 58990,
         "total_drop_pct": 0.0,
         "n_observations": 1,
-        "days_observed": 26
+        "days_observed": 27
       }
     },
     "W1KZH6AB1PB170231": {
@@ -1401,7 +1401,7 @@
       "dealer": "Mercedes-Benz of Columbus North",
       "first_seen_at": "2026-08-28T13:34:05.304881+00:00",
       "current_price": 71290,
-      "current_mileage": 2680,
+      "current_mileage": 2762,
       "status": "active",
       "observations": [
         {
@@ -1418,13 +1418,18 @@
           "observed_at": "2026-09-17T18:22:46.082814+00:00",
           "price": 71290,
           "mileage": 2680
+        },
+        {
+          "observed_at": "2026-09-20T19:59:33.278499+00:00",
+          "price": 71290,
+          "mileage": 2762
         }
       ],
       "stats": {
         "all_time_low": 71290,
         "all_time_high": 72158,
         "total_drop_pct": -1.2,
-        "n_observations": 3,
+        "n_observations": 4,
         "days_observed": 23
       }
     },
@@ -1448,7 +1453,7 @@
         "all_time_high": 51986,
         "total_drop_pct": 0.0,
         "n_observations": 1,
-        "days_observed": 16
+        "days_observed": 17
       }
     },
     "W1KZH6AB3NB059242": {
@@ -1575,7 +1580,7 @@
       "first_seen_at": "2026-09-05T11:18:53.724744+00:00",
       "current_price": 78939,
       "current_mileage": 20463,
-      "status": "active",
+      "status": "gone",
       "observations": [
         {
           "observed_at": "2026-09-05T11:18:53.724744+00:00",
@@ -1835,7 +1840,7 @@
         "all_time_high": 63214,
         "total_drop_pct": 0.0,
         "n_observations": 1,
-        "days_observed": 2
+        "days_observed": 3
       }
     },
     "W1KLH6FB1SA104758": {
@@ -1904,7 +1909,7 @@
         "all_time_high": 54995,
         "total_drop_pct": 0.0,
         "n_observations": 1,
-        "days_observed": 1
+        "days_observed": 2
       }
     },
     "W1KLH6FB7SA114047": {
