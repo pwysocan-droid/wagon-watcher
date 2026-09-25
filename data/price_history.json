@@ -1,50 +1,7 @@
 {
-  "generated_at": "2026-09-25T02:35:21.901107+00:00",
+  "generated_at": "2026-09-25T08:20:44.973435+00:00",
   "schema_version": 1,
   "vins": {
-    "W1KLH6FB2SA128504": {
-      "year": 2025,
-      "trim": "E450S4",
-      "dealer": "R B M of Atlanta, Inc.",
-      "first_seen_at": "2026-04-26T15:50:37.492543+00:00",
-      "current_price": 71973,
-      "current_mileage": 8725,
-      "status": "gone",
-      "observations": [
-        {
-          "observed_at": "2026-04-26T15:50:37.492543+00:00",
-          "price": 75340,
-          "mileage": 8725
-        },
-        {
-          "observed_at": "2026-05-18T13:00:24.713745+00:00",
-          "price": 74319,
-          "mileage": 8725
-        },
-        {
-          "observed_at": "2026-06-05T13:48:44.369983+00:00",
-          "price": 73845,
-          "mileage": 8725
-        },
-        {
-          "observed_at": "2026-06-23T16:21:32.202925+00:00",
-          "price": 73257,
-          "mileage": 8725
-        },
-        {
-          "observed_at": "2026-07-05T08:25:36.188468+00:00",
-          "price": 71973,
-          "mileage": 8725
-        }
-      ],
-      "stats": {
-        "all_time_low": 71973,
-        "all_time_high": 75340,
-        "total_drop_pct": -4.47,
-        "n_observations": 5,
-        "days_observed": 151
-      }
-    },
     "W1KLH6FB4SA129881": {
       "year": 2025,
       "trim": "E450S4",
@@ -483,7 +440,7 @@
         "all_time_high": 81411,
         "total_drop_pct": -8.6,
         "n_observations": 9,
-        "days_observed": 85
+        "days_observed": 86
       }
     },
     "W1KLH6FB5TA256561": {
@@ -549,7 +506,7 @@
       "first_seen_at": "2026-07-13T22:45:03.922551+00:00",
       "current_price": 83600,
       "current_mileage": 5669,
-      "status": "reappeared",
+      "status": "gone",
       "observations": [
         {
           "observed_at": "2026-07-13T22:45:03.922551+00:00",
@@ -983,7 +940,7 @@
         "all_time_high": 76995,
         "total_drop_pct": 0.0,
         "n_observations": 1,
-        "days_observed": 54
+        "days_observed": 55
       }
     },
     "W1KZH6AB7MA926498": {
@@ -1021,7 +978,7 @@
         "all_time_high": 41453,
         "total_drop_pct": -3.89,
         "n_observations": 4,
-        "days_observed": 36
+        "days_observed": 37
       }
     },
     "W1KZH6AB5NB038537": {
@@ -1054,7 +1011,7 @@
         "all_time_high": 46871,
         "total_drop_pct": -3.22,
         "n_observations": 3,
-        "days_observed": 36
+        "days_observed": 37
       }
     },
     "W1KLH6FB4TA236530": {
@@ -1092,7 +1049,7 @@
         "all_time_high": 81215,
         "total_drop_pct": -7.65,
         "n_observations": 4,
-        "days_observed": 36
+        "days_observed": 37
       }
     },
     "W1KLH6FB7RA058542": {
@@ -1120,7 +1077,7 @@
         "all_time_high": 79892,
         "total_drop_pct": -3.63,
         "n_observations": 2,
-        "days_observed": 36
+        "days_observed": 37
       }
     },
     "W1KZH6AB1NB040236": {
@@ -1143,7 +1100,7 @@
         "all_time_high": 52888,
         "total_drop_pct": 0.0,
         "n_observations": 1,
-        "days_observed": 36
+        "days_observed": 37
       }
     },
     "W1KLH6FB4RA070115": {
@@ -1176,7 +1133,7 @@
         "all_time_high": 70790,
         "total_drop_pct": 1.14,
         "n_observations": 3,
-        "days_observed": 36
+        "days_observed": 37
       }
     },
     "W1KZH6ABXPB125367": {
@@ -1438,7 +1395,7 @@
         "all_time_high": 43760,
         "total_drop_pct": 0.33,
         "n_observations": 3,
-        "days_observed": 20
+        "days_observed": 21
       }
     },
     "W1KLH6FB1SA137310": {
@@ -1481,7 +1438,7 @@
         "all_time_high": 69900,
         "total_drop_pct": -7.15,
         "n_observations": 5,
-        "days_observed": 20
+        "days_observed": 21
       }
     },
     "W1KLH6FB6SA164745": {
@@ -1509,7 +1466,7 @@
         "all_time_high": 73900,
         "total_drop_pct": -1.06,
         "n_observations": 2,
-        "days_observed": 20
+        "days_observed": 21
       }
     },
     "W1KLH6FBXRA004555": {
@@ -1532,7 +1489,7 @@
         "all_time_high": 78639,
         "total_drop_pct": 0.0,
         "n_observations": 1,
-        "days_observed": 20
+        "days_observed": 21
       }
     },
     "W1KLH6FB9SA151505": {
@@ -1677,7 +1634,7 @@
         "all_time_high": 58799,
         "total_drop_pct": -0.2,
         "n_observations": 3,
-        "days_observed": 16
+        "days_observed": 17
       }
     },
     "W1KLH6FB4RA004552": {
