@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-25T13:59:39.836812+00:00",
+  "generated_at": "2026-09-25T18:18:48.181806+00:00",
   "schema_version": 1,
   "vins": {
     "W1KLH6FB4SA129881": {
@@ -27,7 +27,7 @@
         "all_time_high": 80345,
         "total_drop_pct": 0.0,
         "n_observations": 2,
-        "days_observed": 151
+        "days_observed": 152
       }
     },
     "W1KLH6FB3SA087512": {
@@ -193,7 +193,7 @@
         "all_time_high": 74984,
         "total_drop_pct": -4.52,
         "n_observations": 9,
-        "days_observed": 112
+        "days_observed": 113
       }
     },
     "W1KZH6AB0PB118184": {
@@ -614,7 +614,7 @@
         "all_time_high": 78293,
         "total_drop_pct": -7.41,
         "n_observations": 21,
-        "days_observed": 64
+        "days_observed": 65
       }
     },
     "W1KZH6AB9NB055261": {
@@ -1075,7 +1075,7 @@
       "trim": "E450S4",
       "dealer": "Mercedes-Benz of Knoxville",
       "first_seen_at": "2026-08-19T06:12:47.586461+00:00",
-      "current_price": 70790,
+      "current_price": 68790,
       "current_mileage": 20934,
       "status": "active",
       "observations": [
@@ -1093,13 +1093,18 @@
           "observed_at": "2026-09-09T15:35:07.889444+00:00",
           "price": 70790,
           "mileage": 20934
+        },
+        {
+          "observed_at": "2026-09-25T18:18:46.387129+00:00",
+          "price": 68790,
+          "mileage": 20934
         }
       ],
       "stats": {
-        "all_time_low": 69995,
+        "all_time_low": 68790,
         "all_time_high": 70790,
-        "total_drop_pct": 1.14,
-        "n_observations": 3,
+        "total_drop_pct": -1.72,
+        "n_observations": 4,
         "days_observed": 37
       }
     },
@@ -1133,7 +1138,7 @@
         "all_time_high": 56761,
         "total_drop_pct": -5.06,
         "n_observations": 3,
-        "days_observed": 31
+        "days_observed": 32
       }
     },
     "W1KZH6AB2MA941166": {
@@ -1161,7 +1166,7 @@
         "all_time_high": 44990,
         "total_drop_pct": -0.01,
         "n_observations": 2,
-        "days_observed": 31
+        "days_observed": 32
       }
     },
     "W1KLH6FB3RA026171": {
@@ -1184,7 +1189,7 @@
         "all_time_high": 76995,
         "total_drop_pct": 0.0,
         "n_observations": 1,
-        "days_observed": 31
+        "days_observed": 32
       }
     },
     "W1KZH6AB2PB179861": {
@@ -1207,7 +1212,7 @@
         "all_time_high": 58990,
         "total_drop_pct": 0.0,
         "n_observations": 1,
-        "days_observed": 31
+        "days_observed": 32
       }
     },
     "W1KZH6AB1PB170231": {
@@ -1540,7 +1545,7 @@
         "all_time_high": 58400,
         "total_drop_pct": 0.0,
         "n_observations": 1,
-        "days_observed": 17
+        "days_observed": 18
       }
     },
     "W1KLH6FB3SA084433": {
@@ -1637,7 +1642,7 @@
       "trim": "E450S4",
       "dealer": "Mercedes-Benz of Jacksonville",
       "first_seen_at": "2026-09-14T15:06:48.747634+00:00",
-      "current_price": 57891,
+      "current_price": 56891,
       "current_mileage": 21506,
       "status": "active",
       "observations": [
@@ -1655,14 +1660,19 @@
           "observed_at": "2026-09-25T02:35:12.922413+00:00",
           "price": 57891,
           "mileage": 21506
+        },
+        {
+          "observed_at": "2026-09-25T18:18:46.387129+00:00",
+          "price": 56891,
+          "mileage": 21506
         }
       ],
       "stats": {
-        "all_time_low": 57891,
+        "all_time_low": 56891,
         "all_time_high": 59891,
-        "total_drop_pct": -3.34,
-        "n_observations": 3,
-        "days_observed": 10
+        "total_drop_pct": -5.01,
+        "n_observations": 4,
+        "days_observed": 11
       }
     },
     "W1KLH6FB2RA069447": {
@@ -1838,7 +1848,7 @@
         "all_time_high": 71790,
         "total_drop_pct": 0.0,
         "n_observations": 1,
-        "days_observed": 4
+        "days_observed": 5
       }
     },
     "W1KZH6AB5PB118889": {
@@ -1861,7 +1871,7 @@
         "all_time_high": 52894,
         "total_drop_pct": 0.0,
         "n_observations": 1,
-        "days_observed": 0
+        "days_observed": 1
       }
     },
     "W1KLH6FB7SA096827": {
@@ -1884,7 +1894,7 @@
         "all_time_high": 63900,
         "total_drop_pct": 0.0,
         "n_observations": 1,
-        "days_observed": 0
+        "days_observed": 1
       }
     },
     "W1KLH6FB9TA261326": {
@@ -1907,7 +1917,7 @@
         "all_time_high": 74990,
         "total_drop_pct": 0.0,
         "n_observations": 1,
-        "days_observed": 0
+        "days_observed": 1
       }
     },
     "W1KZH6AB5PB149060": {
@@ -1930,7 +1940,7 @@
         "all_time_high": 60952,
         "total_drop_pct": 0.0,
         "n_observations": 1,
-        "days_observed": 0
+        "days_observed": 1
       }
     },
     "W1KLH6FB6TA255810": {
@@ -1939,21 +1949,26 @@
       "dealer": "Mercedes-Benz of Hilton Head",
       "first_seen_at": "2026-09-24T17:27:33.514676+00:00",
       "current_price": 83584,
-      "current_mileage": 450,
+      "current_mileage": 597,
       "status": "active",
       "observations": [
         {
           "observed_at": "2026-09-24T17:27:33.514676+00:00",
           "price": 83584,
           "mileage": 450
+        },
+        {
+          "observed_at": "2026-09-25T18:18:46.387129+00:00",
+          "price": 83584,
+          "mileage": 597
         }
       ],
       "stats": {
         "all_time_low": 83584,
         "all_time_high": 83584,
         "total_drop_pct": 0.0,
-        "n_observations": 1,
-        "days_observed": 0
+        "n_observations": 2,
+        "days_observed": 1
       }
     },
     "W1KLH6FB0RA026192": {
@@ -1976,7 +1991,7 @@
         "all_time_high": 78146,
         "total_drop_pct": 0.0,
         "n_observations": 1,
-        "days_observed": 0
+        "days_observed": 1
       }
     },
     "W1KLH6FB9SA163752": {
@@ -1999,7 +2014,7 @@
         "all_time_high": 72900,
         "total_drop_pct": 0.0,
         "n_observations": 1,
-        "days_observed": 0
+        "days_observed": 1
       }
     },
     "W1KLH6FB7TA219768": {
