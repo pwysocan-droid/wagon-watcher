@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-25T18:18:48.181806+00:00",
+  "generated_at": "2026-09-25T21:43:15.341584+00:00",
   "schema_version": 1,
   "vins": {
     "W1KLH6FB4SA129881": {
@@ -1334,7 +1334,7 @@
         "all_time_high": 51986,
         "total_drop_pct": 0.0,
         "n_observations": 1,
-        "days_observed": 21
+        "days_observed": 22
       }
     },
     "W1KZH6AB3NB059242": {
@@ -1751,7 +1751,7 @@
         "all_time_high": 63214,
         "total_drop_pct": 0.0,
         "n_observations": 1,
-        "days_observed": 7
+        "days_observed": 8
       }
     },
     "W1KLH6FB1SA104758": {
@@ -1774,7 +1774,7 @@
         "all_time_high": 70578,
         "total_drop_pct": 0.0,
         "n_observations": 1,
-        "days_observed": 7
+        "days_observed": 8
       }
     },
     "W1KZH6AB2PB180010": {
@@ -1825,7 +1825,7 @@
         "all_time_high": 54995,
         "total_drop_pct": 0.0,
         "n_observations": 1,
-        "days_observed": 6
+        "days_observed": 7
       }
     },
     "W1KLH6FB7SA114047": {
@@ -1950,7 +1950,7 @@
       "first_seen_at": "2026-09-24T17:27:33.514676+00:00",
       "current_price": 83584,
       "current_mileage": 597,
-      "status": "active",
+      "status": "gone",
       "observations": [
         {
           "observed_at": "2026-09-24T17:27:33.514676+00:00",
@@ -2035,6 +2035,52 @@
       "stats": {
         "all_time_low": 73498,
         "all_time_high": 73498,
+        "total_drop_pct": 0.0,
+        "n_observations": 1,
+        "days_observed": 0
+      }
+    },
+    "W1KZH6AB4NB056172": {
+      "year": 2022,
+      "trim": "E450S4",
+      "dealer": "Mercedes-Benz of Elmbrook",
+      "first_seen_at": "2026-09-25T21:43:04.725474+00:00",
+      "current_price": 54494,
+      "current_mileage": 31280,
+      "status": "active",
+      "observations": [
+        {
+          "observed_at": "2026-09-25T21:43:04.725474+00:00",
+          "price": 54494,
+          "mileage": 31280
+        }
+      ],
+      "stats": {
+        "all_time_low": 54494,
+        "all_time_high": 54494,
+        "total_drop_pct": 0.0,
+        "n_observations": 1,
+        "days_observed": 0
+      }
+    },
+    "W1KLH6FB0SA107246": {
+      "year": 2025,
+      "trim": "E450S4",
+      "dealer": "Mercedes-Benz of Mishawaka",
+      "first_seen_at": "2026-09-25T21:43:04.725474+00:00",
+      "current_price": 61555,
+      "current_mileage": 26312,
+      "status": "active",
+      "observations": [
+        {
+          "observed_at": "2026-09-25T21:43:04.725474+00:00",
+          "price": 61555,
+          "mileage": 26312
+        }
+      ],
+      "stats": {
+        "all_time_low": 61555,
+        "all_time_high": 61555,
         "total_drop_pct": 0.0,
         "n_observations": 1,
         "days_observed": 0
