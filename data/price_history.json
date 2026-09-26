@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-26T20:24:02.588146+00:00",
+  "generated_at": "2026-09-26T23:02:02.507099+00:00",
   "schema_version": 1,
   "vins": {
     "W1KLH6FB4SA129881": {
@@ -377,7 +377,7 @@
         "all_time_high": 68499,
         "total_drop_pct": -3.86,
         "n_observations": 7,
-        "days_observed": 92
+        "days_observed": 93
       }
     },
     "W1KLH6FB0RA026242": {
@@ -491,7 +491,7 @@
         "all_time_high": 86332,
         "total_drop_pct": -3.16,
         "n_observations": 2,
-        "days_observed": 74
+        "days_observed": 75
       }
     },
     "W1KLH6FB9TA207363": {
@@ -1487,7 +1487,7 @@
         "all_time_high": 67600,
         "total_drop_pct": 0.0,
         "n_observations": 2,
-        "days_observed": 18
+        "days_observed": 19
       }
     },
     "W1KZH6AB1PB172920": {
@@ -1624,7 +1624,7 @@
       "first_seen_at": "2026-09-17T09:01:11.770811+00:00",
       "current_price": 70649,
       "current_mileage": 14296,
-      "status": "gone",
+      "status": "reappeared",
       "observations": [
         {
           "observed_at": "2026-09-17T09:01:11.770811+00:00",
@@ -1688,7 +1688,7 @@
         "all_time_high": 70578,
         "total_drop_pct": 0.0,
         "n_observations": 1,
-        "days_observed": 8
+        "days_observed": 9
       }
     },
     "W1KZH6AB2PB180010": {
@@ -1965,21 +1965,26 @@
       "dealer": "Mercedes-Benz of Elmbrook",
       "first_seen_at": "2026-09-25T21:43:04.725474+00:00",
       "current_price": 54494,
-      "current_mileage": 31280,
+      "current_mileage": 31281,
       "status": "active",
       "observations": [
         {
           "observed_at": "2026-09-25T21:43:04.725474+00:00",
           "price": 54494,
           "mileage": 31280
+        },
+        {
+          "observed_at": "2026-09-26T23:01:56.505883+00:00",
+          "price": 54494,
+          "mileage": 31281
         }
       ],
       "stats": {
         "all_time_low": 54494,
         "all_time_high": 54494,
         "total_drop_pct": 0.0,
-        "n_observations": 1,
-        "days_observed": 0
+        "n_observations": 2,
+        "days_observed": 1
       }
     },
     "W1KLH6FB0SA107246": {
@@ -2002,7 +2007,7 @@
         "all_time_high": 61555,
         "total_drop_pct": 0.0,
         "n_observations": 1,
-        "days_observed": 0
+        "days_observed": 1
       }
     },
     "W1KZH6AB2PB175549": {
