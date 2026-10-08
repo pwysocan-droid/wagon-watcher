@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-07T22:07:26.449494+00:00",
+  "generated_at": "2026-10-08T02:07:09.773482+00:00",
   "schema_version": 1,
   "vins": {
     "W1KLH6FB4SA129881": {
@@ -362,7 +362,7 @@
         "all_time_high": 86332,
         "total_drop_pct": -5.91,
         "n_observations": 3,
-        "days_observed": 85
+        "days_observed": 86
       }
     },
     "W1KZH6AB9NB055261": {
@@ -518,7 +518,7 @@
         "all_time_high": 74997,
         "total_drop_pct": -0.81,
         "n_observations": 13,
-        "days_observed": 67
+        "days_observed": 68
       }
     },
     "W1KZH6AB7MA926498": {
@@ -767,29 +767,6 @@
         "days_observed": 40
       }
     },
-    "W1KZH6AB1NB081983": {
-      "year": 2022,
-      "trim": "E450S4",
-      "dealer": "Mercedes-Benz of Danbury",
-      "first_seen_at": "2026-09-03T19:30:06.367144+00:00",
-      "current_price": 51986,
-      "current_mileage": 27747,
-      "status": "gone",
-      "observations": [
-        {
-          "observed_at": "2026-09-03T19:30:06.367144+00:00",
-          "price": 51986,
-          "mileage": 27747
-        }
-      ],
-      "stats": {
-        "all_time_low": 51986,
-        "all_time_high": 51986,
-        "total_drop_pct": 0.0,
-        "n_observations": 1,
-        "days_observed": 34
-      }
-    },
     "W1KZH6AB3NB059242": {
       "year": 2022,
       "trim": "E450S4",
@@ -1013,7 +990,7 @@
         "all_time_high": 67600,
         "total_drop_pct": 0.0,
         "n_observations": 2,
-        "days_observed": 29
+        "days_observed": 30
       }
     },
     "W1KZH6AB1PB172920": {
@@ -1074,7 +1051,7 @@
         "all_time_high": 69982,
         "total_drop_pct": 0.0,
         "n_observations": 2,
-        "days_observed": 28
+        "days_observed": 29
       }
     },
     "W1KZH6AB8NB046826": {
@@ -1140,7 +1117,7 @@
         "all_time_high": 71780,
         "total_drop_pct": -0.42,
         "n_observations": 2,
-        "days_observed": 21
+        "days_observed": 22
       }
     },
     "W1KLH6FB5RA058801": {
@@ -1433,7 +1410,7 @@
       "first_seen_at": "2026-09-24T17:27:33.514676+00:00",
       "current_price": 78146,
       "current_mileage": 14188,
-      "status": "active",
+      "status": "gone",
       "observations": [
         {
           "observed_at": "2026-09-24T17:27:33.514676+00:00",
@@ -1604,7 +1581,7 @@
       "first_seen_at": "2026-09-28T16:32:18.964338+00:00",
       "current_price": 81900,
       "current_mileage": 632,
-      "status": "active",
+      "status": "gone",
       "observations": [
         {
           "observed_at": "2026-09-28T16:32:18.964338+00:00",
@@ -1678,7 +1655,7 @@
       "first_seen_at": "2026-10-06T00:29:17.166580+00:00",
       "current_price": 53216,
       "current_mileage": 64696,
-      "status": "active",
+      "status": "gone",
       "observations": [
         {
           "observed_at": "2026-10-06T23:09:34.670158+00:00",
@@ -1691,7 +1668,7 @@
         "all_time_high": 53216,
         "total_drop_pct": 0.0,
         "n_observations": 1,
-        "days_observed": 1
+        "days_observed": 2
       }
     },
     "WDDZH6JB3LA707763": {
