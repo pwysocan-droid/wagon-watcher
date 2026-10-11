@@ -1,11 +1,11 @@
 # mb-wagon-watcher · weekly digest
 
-**Week 40 — 2026**  
-September 27 → October 4, 2026
+**Week 41 — 2026**  
+October 4 → October 11, 2026
 
-`Snapshot range: 2026-09-27T18:53Z → 2026-10-04T18:53Z · 34 runs · 34 OK`  
+`Snapshot range: 2026-10-04T19:48Z → 2026-10-11T19:48Z · 31 runs · 31 OK`  
 `Source: nafta-service.mbusa.com/api/inv/v1/en_us/used/vehicles/search`  
-`Generated: 2026-10-04T18:53:35Z`
+`Generated: 2026-10-11T19:48:25Z`
 
 ---
 
@@ -13,9 +13,9 @@ September 27 → October 4, 2026
 
 | New listings | Price changes | Sold / gone | Reappeared | Watchlist hits |
 |:-:|:-:|:-:|:-:|:-:|
-| 4 | 3 | 36 | 27 | 0 |
+| 7 | 4 | 31 | 19 | 0 |
 
-Total **$10,080** in price reductions across 2 listings. Pool: `30 → 22`; median asking moved `$69,788 → $70,136` wk/wk and `$70,345 → $70,136` over 4 weeks.
+Total **$2,019** in price reductions across 4 listings. Pool: `26 → 17`; median asking moved `$68,894 → $63,900` wk/wk and `$69,982 → $63,900` over 4 weeks.
 
 ---
 
@@ -29,8 +29,10 @@ _No watchlist matches this week._
 
 | Year | Dealer | VIN | Was | Now | Δ |
 | ---- | ------ | --- | --: | --: | --: |
-| 2025 | MB Atlantic City | [`W1KLH6FB5SA106366`](https://www.mbusa.com/en/cpo/inventory/details/W1KLH6FB5SA106366) | $78,985 | **$71,273** | **−9.76%** |
-| 2026 | MB Madison | [`W1KLH6FB2TA196545`](https://www.mbusa.com/en/cpo/inventory/details/W1KLH6FB2TA196545) | $83,600 | **$81,232** | **−2.83%** |
+| 2023 | Fletcher Jones Motorc… | [`W1KZH6AB5PB118889`](https://www.mbusa.com/en/cpo/inventory/details/W1KZH6AB5PB118889) | $52,894 | **$51,893** | **−1.89%** |
+| 2020 | MB Palm Beach | [`W1KZH6JB3LA856240`](https://www.mbusa.com/en/cpo/inventory/details/W1KZH6JB3LA856240) | $40,995 | **$40,500** | **−1.21%** |
+| 2023 | R B M of Atlanta, Inc. | [`W1KZH6AB0PB118184`](https://www.mbusa.com/en/cpo/inventory/details/W1KZH6AB0PB118184) | $47,432 | **$46,921** | **−1.08%** |
+| 2024 | MB Edison | [`W1KLH6FB0RA056051`](https://www.mbusa.com/en/cpo/inventory/details/W1KLH6FB0RA056051) | $74,400 | **$74,388** | **−0.02%** |
 
 ---
 
@@ -38,20 +40,20 @@ _No watchlist matches this week._
 
 | DoL | Year | Dealer | VIN | Asking | Drops |
 | --: | ---- | ------ | --- | --: | --: |
-| **161** | 2025 | MB Hampton | [`W1KLH6FB4SA129881`](https://www.mbusa.com/en/cpo/inventory/details/W1KLH6FB4SA129881) | $80,345 | 0 |
-| **113** | 2023 | R B M of Atlanta, Inc. | [`W1KZH6AB0PB118184`](https://www.mbusa.com/en/cpo/inventory/details/W1KZH6AB0PB118184) | $47,432 | 6 |
-| **109** | 2025 | MB Hoffman Estates | [`W1KLH6FB1SA114903`](https://www.mbusa.com/en/cpo/inventory/details/W1KLH6FB1SA114903) | $68,999 | 2 |
-| **71** | 2022 | Benzel-Busch Motor Ca… | [`W1KZH6AB9NB055261`](https://www.mbusa.com/en/cpo/inventory/details/W1KZH6AB9NB055261) | $49,543 | 5 |
-| **64** | 2024 | MB Edison | [`W1KLH6FB0RA056051`](https://www.mbusa.com/en/cpo/inventory/details/W1KLH6FB0RA056051) | $74,400 | 7 |
+| **120** | 2023 | R B M of Atlanta, Inc. | [`W1KZH6AB0PB118184`](https://www.mbusa.com/en/cpo/inventory/details/W1KZH6AB0PB118184) | $46,921 | 7 |
+| **116** | 2025 | MB Hoffman Estates | [`W1KLH6FB1SA114903`](https://www.mbusa.com/en/cpo/inventory/details/W1KLH6FB1SA114903) | $68,999 | 2 |
+| **89** | 2026 | MB Madison | [`W1KLH6FB2TA196545`](https://www.mbusa.com/en/cpo/inventory/details/W1KLH6FB2TA196545) | $81,232 | 2 |
+| **48** | 2023 | MB Riverside | [`W1KZH6ABXPB125367`](https://www.mbusa.com/en/cpo/inventory/details/W1KZH6ABXPB125367) | $53,891 | 2 |
+| **37** | 2025 | MB Barrington | [`W1KLH6FB1SA137310`](https://www.mbusa.com/en/cpo/inventory/details/W1KLH6FB1SA137310) | $63,900 | 4 |
 
 ---
 
 ## § 05 — Trend
 
-4-week median asking trend: `$69,982 → $69,982 → $69,788 → $70,136`.
+4-week median asking trend: `$69,982 → $69,788 → $68,894 → $63,900`.
 
 ---
 
 ---
 
-`mb-wagon-watcher · digest.py · 2026-10-04T18:53:35Z · github.com/pwysocan-droid/wagon-watcher`
+`mb-wagon-watcher · digest.py · 2026-10-11T19:48:25Z · github.com/pwysocan-droid/wagon-watcher`
