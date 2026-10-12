@@ -1,14 +1,14 @@
 # mb-wagon-watcher · daily digest
 
-**2026-10-11** · 05:00 PT snapshot
+**2026-10-12** · 05:00 PT snapshot
 
-`Generated: 2026-10-11T17:21:55Z`
+`Generated: 2026-10-12T20:56:03Z`
 
 ---
 
 ## § Population
 
-**Population:** 17 active (no change since yesterday) · 0 watchlist matches · 0 actionable
+**Population:** 24 active (+5 net since yesterday) · 0 watchlist matches · 0 actionable
 
 ---
 
@@ -23,16 +23,17 @@ _No price moves vs. start of today (UTC)._
 - W1KZH6AB0PB118184 — R B M of Atlanta, Inc., GA — $46,921 (down from $50,987 floor)
 - W1KLH6FB1SA114903 — MB Hoffman Estates, IL — $68,999 (down from $73,998 floor)
 - W1KLH6FB2TA196545 — MB Madison, WI — $81,232 (down from $86,332 floor)
+- W1KLH6FB0RA056051 — MB Edison, NJ — $74,388 (down from $74,997 floor)
 - W1KZH6ABXPB125367 — MB Riverside, CA — $53,891 (down from $56,761 floor)
-- W1KLH6FB1SA137310 — MB Barrington, IL — $63,900 (down from $69,900 floor)
 
-_… and 2 more at floor._
+_… and 3 more at floor._
 
 ---
 
 ## § Anomalies
 
-- 6 cron runs returned <30 listings (min 17) — possible API cap
+- 3 cron runs returned <30 listings (min 17) — possible API cap
+- New dealer first-seen: Mercedes-Benz of Los Angeles
 
 ---
 
@@ -50,7 +51,7 @@ _No decisions in queue._  _Add one with: edit `config/decision_queue.json`._
 
 ---
 
-`mb-wagon-watcher · digest_daily.py · 2026-10-11T17:21:55Z`
+`mb-wagon-watcher · digest_daily.py · 2026-10-12T20:56:03Z`
 
 _To annotate a VIN: edit `config/vin_annotations.json`._  
 _To disqualify a VIN: edit `config/disqualified_vins.json`._  
