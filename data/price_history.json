@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-12T15:49:21.793914+00:00",
+  "generated_at": "2026-10-12T22:39:36.758632+00:00",
   "schema_version": 1,
   "vins": {
     "W1KLH6FB4SA129881": {
@@ -27,7 +27,7 @@
         "all_time_high": 80345,
         "total_drop_pct": 0.0,
         "n_observations": 2,
-        "days_observed": 168
+        "days_observed": 169
       }
     },
     "W1KLH6FB3SA087512": {
@@ -193,7 +193,7 @@
         "all_time_high": 74984,
         "total_drop_pct": -4.52,
         "n_observations": 9,
-        "days_observed": 129
+        "days_observed": 130
       }
     },
     "W1KZH6AB0PB118184": {
@@ -201,7 +201,7 @@
       "trim": "E450S4",
       "dealer": "R B M of Atlanta, Inc.",
       "first_seen_at": "2026-06-13T12:19:58.158781+00:00",
-      "current_price": 46921,
+      "current_price": 46428,
       "current_mileage": 71983,
       "status": "active",
       "observations": [
@@ -284,13 +284,18 @@
           "observed_at": "2026-10-09T20:10:31.010873+00:00",
           "price": 46921,
           "mileage": 71983
+        },
+        {
+          "observed_at": "2026-10-12T22:39:27.640948+00:00",
+          "price": 46428,
+          "mileage": 71983
         }
       ],
       "stats": {
-        "all_time_low": 46921,
+        "all_time_low": 46428,
         "all_time_high": 50987,
-        "total_drop_pct": -7.97,
-        "n_observations": 16,
+        "total_drop_pct": -8.94,
+        "n_observations": 17,
         "days_observed": 121
       }
     },
@@ -344,7 +349,7 @@
       "first_seen_at": "2026-07-13T22:45:03.922551+00:00",
       "current_price": 81232,
       "current_mileage": 5669,
-      "status": "active",
+      "status": "gone",
       "observations": [
         {
           "observed_at": "2026-07-13T22:45:03.922551+00:00",
@@ -448,9 +453,9 @@
       "trim": "E450S4",
       "dealer": "Mercedes-Benz of Edison",
       "first_seen_at": "2026-08-01T01:56:33.151955+00:00",
-      "current_price": 74388,
+      "current_price": 73995,
       "current_mileage": 5562,
-      "status": "reappeared",
+      "status": "active",
       "observations": [
         {
           "observed_at": "2026-08-01T01:56:33.151955+00:00",
@@ -516,13 +521,18 @@
           "observed_at": "2026-10-04T20:16:35.157552+00:00",
           "price": 74388,
           "mileage": 5562
+        },
+        {
+          "observed_at": "2026-10-12T22:39:27.640948+00:00",
+          "price": 73995,
+          "mileage": 5562
         }
       ],
       "stats": {
-        "all_time_low": 74388,
+        "all_time_low": 73995,
         "all_time_high": 74997,
-        "total_drop_pct": -0.81,
-        "n_observations": 13,
+        "total_drop_pct": -1.33,
+        "n_observations": 14,
         "days_observed": 72
       }
     },
@@ -772,7 +782,7 @@
       "trim": "E450S4",
       "dealer": "Mercedes-Benz of Barrington",
       "first_seen_at": "2026-09-04T07:19:29.045797+00:00",
-      "current_price": 63900,
+      "current_price": 62500,
       "current_mileage": 23212,
       "status": "active",
       "observations": [
@@ -805,13 +815,18 @@
           "observed_at": "2026-09-27T17:51:50.492477+00:00",
           "price": 63900,
           "mileage": 23212
+        },
+        {
+          "observed_at": "2026-10-12T22:39:27.640948+00:00",
+          "price": 62500,
+          "mileage": 23212
         }
       ],
       "stats": {
-        "all_time_low": 63900,
+        "all_time_low": 62500,
         "all_time_high": 69900,
-        "total_drop_pct": -8.58,
-        "n_observations": 6,
+        "total_drop_pct": -10.59,
+        "n_observations": 7,
         "days_observed": 38
       }
     },
@@ -1112,7 +1127,7 @@
         "all_time_high": 63214,
         "total_drop_pct": 0.0,
         "n_observations": 1,
-        "days_observed": 24
+        "days_observed": 25
       }
     },
     "W1KLH6FB1SA104758": {
@@ -1135,7 +1150,7 @@
         "all_time_high": 70578,
         "total_drop_pct": 0.0,
         "n_observations": 1,
-        "days_observed": 24
+        "days_observed": 25
       }
     },
     "W1KZH6AB2PB180010": {
@@ -1186,7 +1201,7 @@
         "all_time_high": 54995,
         "total_drop_pct": 0.0,
         "n_observations": 1,
-        "days_observed": 23
+        "days_observed": 24
       }
     },
     "W1KLH6FB7SA114047": {
@@ -1209,7 +1224,7 @@
         "all_time_high": 71790,
         "total_drop_pct": 0.0,
         "n_observations": 1,
-        "days_observed": 21
+        "days_observed": 22
       }
     },
     "W1KZH6AB5PB118889": {
@@ -1237,7 +1252,7 @@
         "all_time_high": 52894,
         "total_drop_pct": -1.89,
         "n_observations": 2,
-        "days_observed": 17
+        "days_observed": 18
       }
     },
     "W1KLH6FB7SA096827": {
@@ -1265,7 +1280,7 @@
         "all_time_high": 63900,
         "total_drop_pct": 0.0,
         "n_observations": 2,
-        "days_observed": 17
+        "days_observed": 18
       }
     },
     "W1KLH6FB9TA261326": {
@@ -1288,7 +1303,7 @@
         "all_time_high": 74990,
         "total_drop_pct": 0.0,
         "n_observations": 1,
-        "days_observed": 17
+        "days_observed": 18
       }
     },
     "W1KZH6AB5PB149060": {
@@ -1316,7 +1331,7 @@
         "all_time_high": 60952,
         "total_drop_pct": 0.0,
         "n_observations": 2,
-        "days_observed": 17
+        "days_observed": 18
       }
     },
     "W1KLH6FB6TA255810": {
@@ -1344,7 +1359,7 @@
         "all_time_high": 83584,
         "total_drop_pct": 0.0,
         "n_observations": 2,
-        "days_observed": 17
+        "days_observed": 18
       }
     },
     "W1KLH6FB0RA026192": {
@@ -1367,7 +1382,7 @@
         "all_time_high": 78146,
         "total_drop_pct": 0.0,
         "n_observations": 1,
-        "days_observed": 17
+        "days_observed": 18
       }
     },
     "W1KLH6FB9SA163752": {
@@ -1390,7 +1405,7 @@
         "all_time_high": 72900,
         "total_drop_pct": 0.0,
         "n_observations": 1,
-        "days_observed": 17
+        "days_observed": 18
       }
     },
     "W1KLH6FB7TA219768": {
@@ -1421,7 +1436,7 @@
       "trim": "E450S4",
       "dealer": "Mercedes-Benz of Elmbrook",
       "first_seen_at": "2026-09-25T21:43:04.725474+00:00",
-      "current_price": 54494,
+      "current_price": 53954,
       "current_mileage": 31281,
       "status": "active",
       "observations": [
@@ -1434,14 +1449,19 @@
           "observed_at": "2026-09-26T23:01:56.505883+00:00",
           "price": 54494,
           "mileage": 31281
+        },
+        {
+          "observed_at": "2026-10-12T22:39:27.640948+00:00",
+          "price": 53954,
+          "mileage": 31281
         }
       ],
       "stats": {
-        "all_time_low": 54494,
+        "all_time_low": 53954,
         "all_time_high": 54494,
-        "total_drop_pct": 0.0,
-        "n_observations": 2,
-        "days_observed": 16
+        "total_drop_pct": -0.99,
+        "n_observations": 3,
+        "days_observed": 17
       }
     },
     "W1KLH6FB0SA107246": {
@@ -1464,7 +1484,7 @@
         "all_time_high": 61555,
         "total_drop_pct": 0.0,
         "n_observations": 1,
-        "days_observed": 16
+        "days_observed": 17
       }
     },
     "W1KZH6AB2PB175549": {
@@ -1515,7 +1535,7 @@
         "all_time_high": 65584,
         "total_drop_pct": 0.0,
         "n_observations": 1,
-        "days_observed": 13
+        "days_observed": 14
       }
     },
     "W1KLH6FB2SA159333": {
@@ -1538,7 +1558,7 @@
         "all_time_high": 81900,
         "total_drop_pct": 0.0,
         "n_observations": 1,
-        "days_observed": 13
+        "days_observed": 14
       }
     },
     "W1KLH6FB0SA086396": {
@@ -1597,21 +1617,26 @@
       "trim": "E450S4",
       "dealer": "Mercedes-Benz of Wappingers Falls",
       "first_seen_at": "2026-10-06T00:29:17.166580+00:00",
-      "current_price": 53216,
+      "current_price": 52680,
       "current_mileage": 64696,
-      "status": "reappeared",
+      "status": "active",
       "observations": [
         {
           "observed_at": "2026-10-06T23:09:34.670158+00:00",
           "price": 53216,
           "mileage": 64696
+        },
+        {
+          "observed_at": "2026-10-12T22:39:27.640948+00:00",
+          "price": 52680,
+          "mileage": 64696
         }
       ],
       "stats": {
-        "all_time_low": 53216,
+        "all_time_low": 52680,
         "all_time_high": 53216,
-        "total_drop_pct": 0.0,
-        "n_observations": 1,
+        "total_drop_pct": -1.01,
+        "n_observations": 2,
         "days_observed": 6
       }
     },
@@ -1689,7 +1714,7 @@
       "trim": "E450S4",
       "dealer": "Mercedes-Benz of El Cajon",
       "first_seen_at": "2026-10-09T15:24:06.874344+00:00",
-      "current_price": 82121,
+      "current_price": 80121,
       "current_mileage": 14707,
       "status": "active",
       "observations": [
@@ -1697,13 +1722,18 @@
           "observed_at": "2026-10-09T15:24:06.874344+00:00",
           "price": 82121,
           "mileage": 14707
+        },
+        {
+          "observed_at": "2026-10-12T22:39:27.640948+00:00",
+          "price": 80121,
+          "mileage": 14707
         }
       ],
       "stats": {
-        "all_time_low": 82121,
+        "all_time_low": 80121,
         "all_time_high": 82121,
-        "total_drop_pct": 0.0,
-        "n_observations": 1,
+        "total_drop_pct": -2.44,
+        "n_observations": 2,
         "days_observed": 3
       }
     },
@@ -1712,7 +1742,7 @@
       "trim": "E450S4",
       "dealer": "Mercedes-Benz of North Palm Beach",
       "first_seen_at": "2026-10-09T15:24:06.874344+00:00",
-      "current_price": 70000,
+      "current_price": 69000,
       "current_mileage": 15321,
       "status": "active",
       "observations": [
@@ -1720,13 +1750,18 @@
           "observed_at": "2026-10-09T15:24:06.874344+00:00",
           "price": 70000,
           "mileage": 15321
+        },
+        {
+          "observed_at": "2026-10-12T22:39:27.640948+00:00",
+          "price": 69000,
+          "mileage": 15321
         }
       ],
       "stats": {
-        "all_time_low": 70000,
+        "all_time_low": 69000,
         "all_time_high": 70000,
-        "total_drop_pct": 0.0,
-        "n_observations": 1,
+        "total_drop_pct": -1.43,
+        "n_observations": 2,
         "days_observed": 3
       }
     },
@@ -1750,7 +1785,7 @@
         "all_time_high": 71559,
         "total_drop_pct": 0.0,
         "n_observations": 1,
-        "days_observed": 2
+        "days_observed": 3
       }
     },
     "W1KLH6FB3TA212378": {
@@ -1840,6 +1875,52 @@
       "stats": {
         "all_time_low": 55477,
         "all_time_high": 55477,
+        "total_drop_pct": 0.0,
+        "n_observations": 1,
+        "days_observed": 0
+      }
+    },
+    "W1KZH6AB8PB110575": {
+      "year": 2023,
+      "trim": "E450S4",
+      "dealer": "Mercedes-Benz of Akron",
+      "first_seen_at": "2026-10-12T22:39:27.640948+00:00",
+      "current_price": 57998,
+      "current_mileage": 27312,
+      "status": "active",
+      "observations": [
+        {
+          "observed_at": "2026-10-12T22:39:27.640948+00:00",
+          "price": 57998,
+          "mileage": 27312
+        }
+      ],
+      "stats": {
+        "all_time_low": 57998,
+        "all_time_high": 57998,
+        "total_drop_pct": 0.0,
+        "n_observations": 1,
+        "days_observed": 0
+      }
+    },
+    "W1KLH6FB8RA053835": {
+      "year": 2024,
+      "trim": "E450S4",
+      "dealer": "Mercedes-Benz of Manhattan",
+      "first_seen_at": "2026-10-12T22:39:27.640948+00:00",
+      "current_price": 77900,
+      "current_mileage": 4786,
+      "status": "active",
+      "observations": [
+        {
+          "observed_at": "2026-10-12T22:39:27.640948+00:00",
+          "price": 77900,
+          "mileage": 4786
+        }
+      ],
+      "stats": {
+        "all_time_low": 77900,
+        "all_time_high": 77900,
         "total_drop_pct": 0.0,
         "n_observations": 1,
         "days_observed": 0
