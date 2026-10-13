@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-12T22:39:36.758632+00:00",
+  "generated_at": "2026-10-13T03:16:36.033522+00:00",
   "schema_version": 1,
   "vins": {
     "W1KLH6FB4SA129881": {
@@ -372,7 +372,7 @@
         "all_time_high": 86332,
         "total_drop_pct": -5.91,
         "n_observations": 3,
-        "days_observed": 90
+        "days_observed": 91
       }
     },
     "W1KZH6AB9NB055261": {
@@ -533,7 +533,7 @@
         "all_time_high": 74997,
         "total_drop_pct": -1.33,
         "n_observations": 14,
-        "days_observed": 72
+        "days_observed": 73
       }
     },
     "W1KLH6FB4TA236530": {
@@ -643,34 +643,6 @@
         "total_drop_pct": -5.06,
         "n_observations": 3,
         "days_observed": 49
-      }
-    },
-    "W1KZH6AB1PB170231": {
-      "year": 2023,
-      "trim": "E450S4",
-      "dealer": "Mercedes-Benz of The Woodlands",
-      "first_seen_at": "2026-08-25T09:05:36.798006+00:00",
-      "current_price": 62498,
-      "current_mileage": 9795,
-      "status": "gone",
-      "observations": [
-        {
-          "observed_at": "2026-08-25T09:05:36.798006+00:00",
-          "price": 62998,
-          "mileage": 9795
-        },
-        {
-          "observed_at": "2026-09-04T12:11:19.590680+00:00",
-          "price": 62498,
-          "mileage": 9795
-        }
-      ],
-      "stats": {
-        "all_time_low": 62498,
-        "all_time_high": 62998,
-        "total_drop_pct": -0.79,
-        "n_observations": 2,
-        "days_observed": 48
       }
     },
     "W1KLH6FB2SA084620": {
@@ -949,7 +921,7 @@
         "all_time_high": 67600,
         "total_drop_pct": 0.0,
         "n_observations": 2,
-        "days_observed": 34
+        "days_observed": 35
       }
     },
     "W1KZH6AB1PB172920": {
@@ -1010,7 +982,7 @@
         "all_time_high": 69982,
         "total_drop_pct": 0.0,
         "n_observations": 2,
-        "days_observed": 33
+        "days_observed": 34
       }
     },
     "W1KZH6AB8NB046826": {
@@ -1076,7 +1048,7 @@
         "all_time_high": 71780,
         "total_drop_pct": -0.42,
         "n_observations": 2,
-        "days_observed": 26
+        "days_observed": 27
       }
     },
     "W1KLH6FB5RA058801": {
@@ -1637,7 +1609,7 @@
         "all_time_high": 53216,
         "total_drop_pct": -1.01,
         "n_observations": 2,
-        "days_observed": 6
+        "days_observed": 7
       }
     },
     "WDDZH6JB3LA707763": {
@@ -1829,6 +1801,29 @@
       "stats": {
         "all_time_low": 57990,
         "all_time_high": 57990,
+        "total_drop_pct": 0.0,
+        "n_observations": 1,
+        "days_observed": 0
+      }
+    },
+    "W1KLH6FB1RA026122": {
+      "year": 2024,
+      "trim": "E450S4",
+      "dealer": "R B M of Atlanta, Inc.",
+      "first_seen_at": "2026-10-12T15:49:10.816277+00:00",
+      "current_price": 76849,
+      "current_mileage": 16650,
+      "status": "active",
+      "observations": [
+        {
+          "observed_at": "2026-10-13T03:16:30.608322+00:00",
+          "price": 76849,
+          "mileage": 16650
+        }
+      ],
+      "stats": {
+        "all_time_low": 76849,
+        "all_time_high": 76849,
         "total_drop_pct": 0.0,
         "n_observations": 1,
         "days_observed": 0
