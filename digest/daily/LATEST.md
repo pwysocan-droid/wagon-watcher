@@ -1,14 +1,14 @@
 # mb-wagon-watcher · daily digest
 
-**2026-10-13** · 05:00 PT snapshot
+**2026-10-14** · 05:00 PT snapshot
 
-`Generated: 2026-10-13T18:54:06Z`
+`Generated: 2026-10-14T16:35:31Z`
 
 ---
 
 ## § Population
 
-**Population:** 26 active (+2 net since yesterday) · 0 watchlist matches · 0 actionable
+**Population:** 28 active (+1 net since yesterday) · 0 watchlist matches · 0 actionable
 
 ---
 
@@ -32,10 +32,7 @@ _… and 5 more at floor._
 
 ## § Anomalies
 
-- 4 cron runs returned <30 listings (min 25) — possible API cap
-- New dealer first-seen: Mercedes-Benz of Akron
-- New dealer first-seen: Mercedes-Benz of Easton
-- New dealer first-seen: Mercedes-Benz of Flemington
+- 5 cron runs returned <30 listings (min 25) — possible API cap
 
 ---
 
@@ -53,7 +50,7 @@ _No decisions in queue._  _Add one with: edit `config/decision_queue.json`._
 
 ---
 
-`mb-wagon-watcher · digest_daily.py · 2026-10-13T18:54:06Z`
+`mb-wagon-watcher · digest_daily.py · 2026-10-14T16:35:31Z`
 
 _To annotate a VIN: edit `config/vin_annotations.json`._  
 _To disqualify a VIN: edit `config/disqualified_vins.json`._  
