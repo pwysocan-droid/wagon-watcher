@@ -47,9 +47,10 @@ def empty_config_dir(tmp_path):
 
 def test_empty_db_produces_valid_digest(conn, empty_config_dir):
     md = digest_daily.generate_daily_digest(conn, when=NOW, config_dir=empty_config_dir)
-    # All six sections present with markers
+    # All seven sections present with markers
     for marker in ["§ Population", "§ Movers", "§ Floor watch",
-                   "§ Anomalies", "§ Watchlist matches", "§ Decision queue"]:
+                   "§ Anomalies", "§ Watchlist matches", "§ Near-miss",
+                   "§ Decision queue"]:
         assert marker in md
     # Header + footer
     assert "mb-wagon-watcher · daily digest" in md
@@ -61,6 +62,7 @@ def test_empty_db_produces_valid_digest(conn, empty_config_dir):
     assert "_No anomalies detected in the last 24h._" in md
     assert "_No active watchlist matches._" in md
     assert "_No decisions in queue._" in md
+    assert "_None — no single-criterion misses" in md
 
 
 # ---- Test 2: synthetic movers → correct sort + 10-row cap ----------------
@@ -329,6 +331,82 @@ def test_dossier_renders_without_db(tmp_path):
     """Section must not depend on a DB connection (falls back to dossier ask)."""
     config = _write_queue(tmp_path, [_dossier("W1KLH6FB3TA212378")])
     assert "$70,000" in digest_daily._section_decision_queue(NOW, config)
+
+
+# ---- Near-miss ----------------------------------------------------------
+
+def _nm_listing(c, vin, *, year=2025, miles=8_000, price=66_000, pct=10,
+                status="active", dealer="MB Test"):
+    c.execute(
+        "INSERT INTO listings (vin, first_seen, last_seen, status, dealer_name, "
+        "dealer_state, year, mileage_first_seen, fair_price_pct, fair_price_tier) "
+        "VALUES (?,?,?,?,?,?,?,?,?,?)",
+        (vin, NOW.isoformat(), NOW.isoformat(), status, dealer, "IL",
+         year, miles, pct, "strict"),
+    )
+    c.execute(
+        "INSERT INTO price_history (vin, observed_at, price, mileage) VALUES (?,?,?,?)",
+        (vin, NOW.isoformat(), price, miles),
+    )
+    c.commit()
+
+
+def test_near_miss_single_failure_at_low_pct_qualifies(conn, empty_config_dir):
+    _nm_listing(conn, "W1KLH6FB1SA137310", miles=23_212, price=61_900, pct=10)
+    md = digest_daily._section_near_miss(conn, empty_config_dir)
+    line = next(ln for ln in md.splitlines() if "137310" in ln)
+    assert line == ("- `…137310` · MB Test, IL · $61,900 · 23,212 mi · "
+                    "fails: miles > 15,000 · pct 10s")
+
+
+def test_near_miss_two_failures_excluded(conn, empty_config_dir):
+    _nm_listing(conn, "V_____________TWO", year=2023, miles=30_000, price=55_000, pct=5)
+    md = digest_daily._section_near_miss(conn, empty_config_dir)
+    assert "TWO" not in md and "_None" in md
+
+
+def test_near_miss_requires_pct_at_or_below_15(conn, empty_config_dir):
+    _nm_listing(conn, "V__________PCT15", miles=20_000, pct=15)
+    _nm_listing(conn, "V__________PCT16", miles=20_000, pct=16)
+    md = digest_daily._section_near_miss(conn, empty_config_dir)
+    assert "PCT15" in md and "PCT16" not in md
+
+
+def test_near_miss_excludes_fully_qualifying_and_price_failures_count(conn, empty_config_dir):
+    _nm_listing(conn, "V_________QUALIF", price=66_000)            # meets all → watchlist, not near-miss
+    _nm_listing(conn, "V_________PRICEX", price=69_000)            # fails price only
+    _nm_listing(conn, "V__________YEARX", year=2023, price=60_000) # fails year only
+    md = digest_daily._section_near_miss(conn, empty_config_dir)
+    assert "QUALIF" not in md
+    assert "fails: price > $68,000" in md and "fails: year 2023 < 2024" in md
+
+
+def test_near_miss_excludes_queued_and_gone(conn, tmp_path):
+    _nm_listing(conn, "V_________QUEUED", miles=20_000)
+    _nm_listing(conn, "V___________GONE", miles=20_000, status="gone")
+    config = _write_queue(tmp_path, [_dossier("V_________QUEUED")])
+    md = digest_daily._section_near_miss(conn, config)
+    assert "QUEUED" not in md and "GONE" not in md
+
+
+def test_near_miss_caps_at_five(conn, empty_config_dir):
+    for i in range(7):
+        _nm_listing(conn, f"V___________CAP{i}", miles=20_000, pct=i)
+    md = digest_daily._section_near_miss(conn, empty_config_dir)
+    assert sum("CAP" in ln for ln in md.splitlines()) == 5
+    assert "_… and 2 more._" in md
+
+
+def test_near_miss_reads_thresholds_from_watchlist_row(conn, empty_config_dir):
+    # migration 003 seeds the row; change its ceiling the way a spec edit would
+    conn.execute(
+        "UPDATE watchlist SET spec_json = ? WHERE label = 'Within criteria.md'",
+        (json.dumps({"min_year": 2024, "max_mileage": 25_000, "max_price_all_in": 68_000}),),
+    )
+    conn.commit()
+    _nm_listing(conn, "V_________MI20K", miles=20_000, price=69_000)  # 20k ok under 25k ceiling
+    md = digest_daily._section_near_miss(conn, empty_config_dir)
+    assert "fails: price > $68,000" in md
 
 
 # ---- Population: net-since-yesterday ------------------------------------

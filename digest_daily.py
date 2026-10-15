@@ -2,13 +2,14 @@
 
 Per HANDOFF_daily_digest.md: a once-a-day digest committed to
 digest/daily/<YYYY-MM-DD>.md (plus digest/daily/LATEST.md as the
-stable phone-readable URL). Six sections in fixed order:
+stable phone-readable URL). Seven sections in fixed order:
 
     § Population
     § Movers
     § Floor watch
     § Anomalies
     § Watchlist matches
+    § Near-miss
     § Decision queue
 
 The cron lands at 12:00 UTC = 05:00 PT during PDT / 04:00 PT during
@@ -61,6 +62,10 @@ def _money(n: int | None) -> str:
     if n is None:
         return "—"
     return f"${n:,.0f}"
+
+
+def _miles(n: int | None) -> str:
+    return "— mi" if n is None else f"{n:,} mi"
 
 
 def _signed(n: int) -> str:
@@ -410,6 +415,87 @@ def _section_watchlist_matches(conn: sqlite3.Connection, config_dir: Path) -> st
     return "\n".join(lines)
 
 
+# ---- § Near-miss ---------------------------------------------------------
+
+NEAR_MISS_MAX_PCT = 15
+NEAR_MISS_CAP = 5
+CRITERIA_LABEL = "Within criteria.md"
+# Fallback when the watchlist row is missing; mirrors criteria.md.
+DEFAULT_CRITERIA = {"min_year": 2024, "max_mileage": 15_000, "max_price_all_in": 68_000}
+
+
+def _criteria_spec(conn: sqlite3.Connection) -> dict:
+    """The hard criteria, read from the same watchlist row reconcile enforces."""
+    row = conn.execute(
+        "SELECT spec_json FROM watchlist WHERE kind = 'spec' AND active = 1 AND label = ? "
+        "ORDER BY id LIMIT 1",
+        (CRITERIA_LABEL,),
+    ).fetchone()
+    try:
+        spec = json.loads(row["spec_json"]) if row else {}
+    except (TypeError, json.JSONDecodeError):
+        spec = {}
+    return {k: spec.get(k, v) for k, v in DEFAULT_CRITERIA.items()}
+
+
+def _failed_criteria(year, mileage, price, spec: dict) -> list[str]:
+    failed = []
+    if year is None or year < spec["min_year"]:
+        failed.append(f"year {year or '?'} < {spec['min_year']}")
+    if mileage is None or mileage > spec["max_mileage"]:
+        failed.append(f"miles > {spec['max_mileage']:,}")
+    if price is None or price > spec["max_price_all_in"]:
+        failed.append(f"price > {_money(spec['max_price_all_in'])}")
+    return failed
+
+
+def _section_near_miss(conn: sqlite3.Connection, config_dir: Path) -> str:
+    """Feed cars failing exactly one hard criterion while priced at or below
+    the 15th percentile of their comps. Surface only, never act: a decision
+    about a criterion (e.g. decision-log.md's Barrington entry) is not
+    reopened by a car appearing here."""
+    spec = _criteria_spec(conn)
+    queue = _load_json_safe(config_dir / DECISION_QUEUE_FILE, [])
+    queued = {item.get("vin") for item in queue if isinstance(item, dict)}
+
+    rows = conn.execute(
+        "SELECT l.vin, l.dealer_name, l.dealer_state, l.year, l.mileage_first_seen, "
+        "       l.fair_price_pct, l.fair_price_tier, "
+        "       (SELECT price FROM price_history WHERE vin = l.vin AND price > 0 "
+        "        ORDER BY observed_at DESC, id DESC LIMIT 1) AS current_price "
+        "FROM listings l "
+        "WHERE l.status IN ('active', 'reappeared') "
+        "  AND l.fair_price_pct IS NOT NULL AND l.fair_price_pct <= ? "
+        "ORDER BY l.fair_price_pct ASC, current_price ASC",
+        (NEAR_MISS_MAX_PCT,),
+    ).fetchall()
+
+    hits = []
+    for r in rows:
+        if r["vin"] in queued:
+            continue
+        failed = _failed_criteria(r["year"], r["mileage_first_seen"], r["current_price"], spec)
+        if len(failed) == 1:
+            hits.append((r, failed[0]))
+
+    header = "## § Near-miss"
+    if not hits:
+        return f"{header}\n\n_None — no single-criterion misses at ≤{NEAR_MISS_MAX_PCT}th pct._"
+    lines = [header, "",
+             f"_Fails exactly one hard criterion, priced ≤{NEAR_MISS_MAX_PCT}th pct. "
+             "Surface only — criteria stand._", ""]
+    for r, failed in hits[:NEAR_MISS_CAP]:
+        tier = (r["fair_price_tier"] or "")[:1]
+        lines.append(
+            f"- `…{r['vin'][-6:]}` · {_dealer_loc(r['dealer_name'], r['dealer_state'])} · "
+            f"{_money(r['current_price'])} · {_miles(r['mileage_first_seen'])} · "
+            f"fails: {failed} · pct {r['fair_price_pct']}{tier}"
+        )
+    if len(hits) > NEAR_MISS_CAP:
+        lines += ["", f"_… and {len(hits) - NEAR_MISS_CAP} more._"]
+    return "\n".join(lines)
+
+
 # ---- § Decision queue ----------------------------------------------------
 
 def _feed_state(conn: sqlite3.Connection | None, vin: str | None) -> tuple[int | None, str | None]:
@@ -497,6 +583,7 @@ def generate_daily_digest(
         _section_floor_watch(conn),
         _section_anomalies(conn, when),
         _section_watchlist_matches(conn, config_dir),
+        _section_near_miss(conn, config_dir),
         _section_decision_queue(when, config_dir, conn),
         _footer(when),
     ]
