@@ -1,4 +1,4 @@
-import type { Inventory, Listing } from "./types";
+import type { Dossier, Inventory, Listing } from "./types";
 
 // 10-min ISR: the watcher commits latest.json every ~30 min. Pulling it
 // fresh every 10 min means the dashboard is at most ~10 min behind the
@@ -9,6 +9,22 @@ const RAW_LATEST_URL =
   "https://raw.githubusercontent.com/pwysocan-droid/wagon-watcher/main/data/latest.json";
 const RAW_DIGEST_URL =
   "https://raw.githubusercontent.com/pwysocan-droid/wagon-watcher/main/digest/weekly/LATEST.md";
+
+const RAW_QUEUE_URL =
+  "https://raw.githubusercontent.com/pwysocan-droid/wagon-watcher/main/config/decision_queue.json";
+
+// The case-file panel is an extra: a missing or malformed queue file must
+// never take down the inventory page, so failures render as an empty panel.
+async function getQueue(): Promise<Dossier[]> {
+  try {
+    const res = await fetch(RAW_QUEUE_URL, { next: { revalidate: REVALIDATE_S } });
+    if (!res.ok) return [];
+    const data = await res.json();
+    return Array.isArray(data) ? data : [];
+  } catch {
+    return [];
+  }
+}
 
 async function getInventory(): Promise<Inventory> {
   const res = await fetch(RAW_LATEST_URL, { next: { revalidate: REVALIDATE_S } });
@@ -85,9 +101,14 @@ function withDefaults(data: Inventory): Inventory {
 }
 
 export default async function Page() {
-  const raw = await getInventory();
+  const [raw, queue] = await Promise.all([getInventory(), getQueue()]);
   const data = withDefaults(raw);
   const { kpis, listings } = data;
+  // Only certified (MBUSA CPO feed) candidates appear on the dashboard;
+  // manual off-feed finds stay in the digest until they're confirmed CPO.
+  const cases = queue.filter((d) => !d.closed_at && d.source === "cpo_feed");
+  const caseVins = new Set(cases.map((d) => d.vin).filter((v): v is string => !!v));
+  const byVin = new Map(listings.map((l) => [l.vin, l]));
 
   return (
     <main style={{ maxWidth: 1200, margin: "0 auto", padding: 32 }}>
@@ -179,6 +200,41 @@ export default async function Page() {
         />
       </section>
 
+      {/* Case files */}
+      {cases.length > 0 && (
+        <section style={{ marginBottom: 40 }}>
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "space-between",
+              alignItems: "baseline",
+              marginBottom: 16,
+            }}
+          >
+            <div className="section-marker">
+              § 01 — Case files · CPO candidates
+            </div>
+            <div className="metadata">{cases.length} open</div>
+          </div>
+          <table className="mono" style={{ fontSize: 11 }}>
+            <thead>
+              <tr style={{ borderBottom: "1px solid var(--fg)" }}>
+                <Th align="left">VIN</Th>
+                <Th align="left">Dealer</Th>
+                <Th align="right">Asking</Th>
+                <Th align="left">Next trigger</Th>
+                <Th align="left">Status</Th>
+              </tr>
+            </thead>
+            <tbody>
+              {cases.map((d) => (
+                <CaseRow key={d.vin ?? d.dealer ?? ""} dossier={d} listing={d.vin ? byVin.get(d.vin) : undefined} />
+              ))}
+            </tbody>
+          </table>
+        </section>
+      )}
+
       {/* Section marker */}
       <div
         style={{
@@ -213,7 +269,7 @@ export default async function Page() {
         </thead>
         <tbody>
           {listings.map((l) => (
-            <Row key={l.vin} listing={l} />
+            <Row key={l.vin} listing={l} isCase={caseVins.has(l.vin)} />
           ))}
         </tbody>
       </table>
@@ -308,7 +364,41 @@ function Th({
   );
 }
 
-function Row({ listing }: { listing: Listing }) {
+function CaseRow({ dossier, listing }: { dossier: Dossier; listing?: Listing }) {
+  // Live feed price beats the hand-edited dossier value; a candidate that
+  // has dropped out of the feed is flagged rather than silently hidden.
+  const ask = listing?.current_price ?? dossier.pricing?.current_ask ?? null;
+  const cellStyle: React.CSSProperties = { padding: "10px 8px", verticalAlign: "top" };
+  return (
+    <tr className="row-hover" style={{ borderBottom: "1px solid var(--rule)" }}>
+      <td style={cellStyle}>
+        {dossier.vin ? (
+          <a
+            href={mbusaListingUrl(dossier.vin)}
+            target="_blank"
+            rel="noreferrer"
+            className="vin-link"
+            style={{ color: "var(--signal)", fontWeight: 700 }}
+          >
+            {dossier.vin}
+          </a>
+        ) : "—"}
+        <div className="metadata">
+          {dossier.year ?? "—"} · {fmtMiles(listing?.mileage_first_seen ?? dossier.miles)} mi
+        </div>
+      </td>
+      <td style={cellStyle}>{dossier.dealer ?? "—"}</td>
+      <td style={{ ...cellStyle, textAlign: "right", fontWeight: 700 }}>
+        {fmtMoney(ask)}
+        {!listing && <div className="metadata">not in feed</div>}
+      </td>
+      <td style={cellStyle}>{dossier.next_trigger ?? "—"}</td>
+      <td style={{ ...cellStyle, color: "var(--muted)" }}>{dossier.status ?? "—"}</td>
+    </tr>
+  );
+}
+
+function Row({ listing, isCase = false }: { listing: Listing; isCase?: boolean }) {
   const flagged = tierBadge(listing.tier1_count, listing.is_watchlist_match);
   const greyed = !listing.is_watchlist_match && !flagged && (
     (listing.year ?? 0) < 2024 ||
@@ -345,6 +435,15 @@ function Row({ listing }: { listing: Listing }) {
           <sup style={{ fontSize: "0.7em", verticalAlign: "super", color: "var(--signal)", marginLeft: 2 }}>
             ¹
           </sup>
+        )}
+        {isCase && (
+          <span
+            className="metadata"
+            style={{ marginLeft: 8, color: "var(--signal)", letterSpacing: "0.1em" }}
+            title="Open case file in config/decision_queue.json"
+          >
+            CASE
+          </span>
         )}
       </td>
       <td style={cellStyle}>

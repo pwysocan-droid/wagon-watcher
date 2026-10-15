@@ -45,3 +45,24 @@ export interface Inventory {
   kpis: KPIs;
   listings: Listing[];
 }
+
+// Shape of config/decision_queue.json (per-candidate dossiers). Only the
+// fields the dashboard renders are typed; the file carries more.
+export interface Dossier {
+  vin: string | null;
+  year: number | null;
+  miles: number | null;
+  dealer: string | null;
+  source: "cpo_feed" | "manual" | string;
+  status: string | null;
+  dealer_archetype: string | null;
+  pricing: {
+    current_ask: number | null;
+    target_close: [number, number] | null;
+    walk_number: number | null;
+    standing_offer: number | null;
+  } | null;
+  next_action: string | null;
+  next_trigger: string | null;
+  closed_at: string | null;
+}
