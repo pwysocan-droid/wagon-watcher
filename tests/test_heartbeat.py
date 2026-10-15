@@ -96,3 +96,72 @@ def test_env_var_configures_threshold(conn, monkeypatch):
     monkeypatch.setenv("STALE_AFTER_HOURS", "4")
     _run(conn, NOW - timedelta(hours=6))
     assert heartbeat.check(conn, now=NOW)["alerted"] is True
+
+
+# ---- cadence (partial degradation) ---------------------------------------
+
+def _runs_every(c, hours, n, status="ok"):
+    for i in range(n):
+        _run(c, NOW - timedelta(hours=hours * i + 0.5), status=status)
+
+
+def _prior_cadence_alert(c, when):
+    c.execute(
+        "INSERT INTO notifications (sent_at, tier, event_type, title, body, "
+        "pushover_priority, success) VALUES (?,1,?,'x','x',1,1)",
+        (when.isoformat(), heartbeat.CADENCE_EVENT_TYPE),
+    )
+    c.commit()
+
+
+def test_healthy_cadence_does_not_alert(conn):
+    _runs_every(conn, 1, 24)
+    v = heartbeat.check_cadence(conn, now=NOW, min_runs=10)
+    assert v["degraded"] is False and v["runs"] == 24
+
+
+def test_degraded_cadence_alerts_tier1(conn):
+    """The 2026-08-27 failure: still running, ~5 runs/day."""
+    _runs_every(conn, 5, 5)
+    v = heartbeat.check_cadence(conn, now=NOW, min_runs=10, cooldown_h=24)
+    assert v["degraded"] is True and v["alerted"] is True and v["runs"] == 5
+    row = conn.execute(
+        "SELECT event_type, tier FROM notifications ORDER BY id DESC LIMIT 1"
+    ).fetchone()
+    assert row["event_type"] == "watcher_degraded" and row["tier"] == 1
+
+
+def test_cadence_counts_only_trailing_24h(conn):
+    _runs_every(conn, 1, 9)                       # 9 in window
+    _run(conn, NOW - timedelta(hours=30))         # outside window
+    assert heartbeat.check_cadence(conn, now=NOW, min_runs=10)["runs"] == 9
+
+
+def test_cadence_alert_once_per_cooldown(conn):
+    _runs_every(conn, 5, 5)
+    _prior_cadence_alert(conn, NOW - timedelta(hours=6))
+    v = heartbeat.check_cadence(conn, now=NOW, min_runs=10, cooldown_h=24)
+    assert v["degraded"] is True and v["alerted"] is False
+
+
+def test_cadence_alert_repeats_after_cooldown(conn):
+    _runs_every(conn, 5, 5)
+    _prior_cadence_alert(conn, NOW - timedelta(hours=25))
+    assert heartbeat.check_cadence(conn, now=NOW, min_runs=10, cooldown_h=24)["alerted"] is True
+
+
+def test_cadence_ignores_aborted_runs(conn):
+    _runs_every(conn, 1, 20, status="aborted")
+    _runs_every(conn, 5, 3)
+    assert heartbeat.check_cadence(conn, now=NOW, min_runs=10)["runs"] == 3
+
+
+def test_cadence_and_stall_cooldowns_are_independent(conn):
+    """A recent stall alert must not suppress the degraded alert."""
+    _runs_every(conn, 5, 5)
+    _prior_alert(conn, NOW - timedelta(hours=1))
+    assert heartbeat.check_cadence(conn, now=NOW, min_runs=10, cooldown_h=24)["alerted"] is True
+
+
+def test_cadence_empty_db_does_not_alert(conn):
+    assert heartbeat.check_cadence(conn, now=NOW, min_runs=10)["alerted"] is False
