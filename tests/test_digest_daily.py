@@ -256,6 +256,81 @@ def test_decision_queue_empty_message(empty_config_dir):
     assert "edit `config/decision_queue.json`" in md
 
 
+def _dossier(vin, **kw):
+    d = {
+        "vin": vin, "dealer": "MB Test, CA", "source": "cpo_feed",
+        "status": "active", "pricing": {"current_ask": 70_000},
+        "next_trigger": "first batch cut", "call_log": [],
+        "opened_at": (NOW - timedelta(days=1)).isoformat(), "closed_at": None,
+    }
+    d.update(kw)
+    return d
+
+
+def _write_queue(tmp_path, items):
+    config = tmp_path / "config"
+    config.mkdir(exist_ok=True)
+    (config / digest_daily.DECISION_QUEUE_FILE).write_text(json.dumps(items))
+    return config
+
+
+def _feed_listing(c, vin, price, status="active"):
+    c.execute(
+        "INSERT INTO listings (vin, first_seen, last_seen, status, dealer_name) "
+        "VALUES (?,?,?,?,?)",
+        (vin, NOW.isoformat(), NOW.isoformat(), status, "MB Test"),
+    )
+    c.execute(
+        "INSERT INTO price_history (vin, observed_at, price, mileage) VALUES (?,?,?,?)",
+        (vin, NOW.isoformat(), price, 1000),
+    )
+    c.commit()
+
+
+def test_dossier_line_has_suffix_dealer_ask_trigger_status(conn, tmp_path):
+    config = _write_queue(tmp_path, [_dossier("W1KLH6FB3TA212378", status="awaiting cut")])
+    md = digest_daily._section_decision_queue(NOW, config, conn)
+    line = next(ln for ln in md.splitlines() if "212378" in ln)
+    assert line == ("- `…212378` · MB Test, CA · $70,000 · next: first batch cut · "
+                    "awaiting cut")
+
+
+def test_dossier_ask_prefers_live_feed_price(conn, tmp_path):
+    _feed_listing(conn, "W1KLH6FB3TA212378", 73_900)
+    config = _write_queue(tmp_path, [_dossier("W1KLH6FB3TA212378")])
+    md = digest_daily._section_decision_queue(NOW, config, conn)
+    assert "$73,900" in md and "$70,000" not in md
+
+
+def test_dossier_flags_vin_gone_from_feed(conn, tmp_path):
+    _feed_listing(conn, "W1KLH6FB1SA114903", 68_999, status="gone")
+    config = _write_queue(tmp_path, [_dossier("W1KLH6FB1SA114903")])
+    md = digest_daily._section_decision_queue(NOW, config, conn)
+    assert "$68,999 (gone from feed)" in md
+
+
+def test_dossier_manual_candidate_without_vin(conn, tmp_path):
+    config = _write_queue(tmp_path, [_dossier(None, source="manual",
+                                              pricing={"current_ask": 73_763})])
+    md = digest_daily._section_decision_queue(NOW, config, conn)
+    assert "`(no VIN)`" in md and "$73,763 (manual)" in md
+
+
+def test_dossier_closed_candidates_excluded(conn, tmp_path):
+    config = _write_queue(tmp_path, [
+        _dossier("W1KLH6FB3TA212378"),
+        _dossier("W1KLH6FB9SA163752", closed_at=NOW.isoformat()),
+    ])
+    md = digest_daily._section_decision_queue(NOW, config, conn)
+    assert "212378" in md and "163752" not in md
+
+
+def test_dossier_renders_without_db(tmp_path):
+    """Section must not depend on a DB connection (falls back to dossier ask)."""
+    config = _write_queue(tmp_path, [_dossier("W1KLH6FB3TA212378")])
+    assert "$70,000" in digest_daily._section_decision_queue(NOW, config)
+
+
 # ---- Population: net-since-yesterday ------------------------------------
 
 def test_population_net_change_computed(conn, empty_config_dir):

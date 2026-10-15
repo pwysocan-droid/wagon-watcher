@@ -17,7 +17,9 @@ PST. Read on phone via GitHub mobile.
 Three optional config files in `config/`:
     disqualified_vins.json  — {"<vin>": "<reason>"}
     vin_annotations.json    — {"<vin>": "<note>"}
-    decision_queue.json     — [{"vin", "action", "opened_at", "closed_at"}]
+    decision_queue.json     — [dossier, ...] per-candidate case files (see the
+                              file; legacy {"vin","action","opened_at",
+                              "closed_at"} entries still render)
 
 All three are optional — missing files render as bare/empty.
 """
@@ -410,9 +412,46 @@ def _section_watchlist_matches(conn: sqlite3.Connection, config_dir: Path) -> st
 
 # ---- § Decision queue ----------------------------------------------------
 
-def _section_decision_queue(when: datetime, config_dir: Path) -> str:
+def _feed_state(conn: sqlite3.Connection | None, vin: str | None) -> tuple[int | None, str | None]:
+    """(latest feed price, listing status) for a VIN, or (None, None)."""
+    if conn is None or not vin:
+        return None, None
+    row = conn.execute(
+        "SELECT l.status, (SELECT price FROM price_history WHERE vin = l.vin AND price > 0 "
+        "                  ORDER BY observed_at DESC, id DESC LIMIT 1) AS price "
+        "FROM listings l WHERE l.vin = ?",
+        (vin,),
+    ).fetchone()
+    return (row[1], row[0]) if row else (None, None)
+
+
+def _dossier_line(item: dict, conn: sqlite3.Connection | None) -> str:
+    """vin-suffix · dealer · current ask · next trigger · status.
+
+    For feed candidates the ask comes from the live feed (the dossier's
+    current_ask goes stale between hand edits); manual candidates use the
+    dossier value. A feed VIN the watcher has marked gone is flagged."""
+    vin = item.get("vin")
+    suffix = f"`…{vin[-6:]}`" if vin else "`(no VIN)`"
+    dealer = item.get("dealer") or "—"
+    feed_price, feed_status = _feed_state(conn, vin)
+    ask = feed_price if feed_price is not None else (item.get("pricing") or {}).get("current_ask")
+    ask_str = _money(ask)
+    if feed_status == "gone":
+        ask_str += " (gone from feed)"
+    elif item.get("source") == "manual":
+        ask_str += " (manual)"
+    trigger = item.get("next_trigger") or "—"
+    status = item.get("status") or "—"
+    return f"- {suffix} · {dealer} · {ask_str} · next: {trigger} · {status}"
+
+
+def _section_decision_queue(
+    when: datetime, config_dir: Path, conn: sqlite3.Connection | None = None,
+) -> str:
     queue = _load_json_safe(config_dir / DECISION_QUEUE_FILE, [])
-    open_items = [item for item in queue if not item.get("closed_at")]
+    open_items = [item for item in queue
+                  if isinstance(item, dict) and not item.get("closed_at")]
 
     if not open_items:
         return (
@@ -423,6 +462,10 @@ def _section_decision_queue(when: datetime, config_dir: Path) -> str:
 
     lines = ["## § Decision queue", "", "Open decisions today:"]
     for item in open_items:
+        if "next_trigger" in item or "pricing" in item:  # dossier schema
+            lines.append(_dossier_line(item, conn))
+            continue
+        # Legacy {"vin", "action", "opened_at", "closed_at"} entries.
         opened_str = item.get("opened_at", "")
         try:
             opened = datetime.fromisoformat(opened_str)
@@ -454,7 +497,7 @@ def generate_daily_digest(
         _section_floor_watch(conn),
         _section_anomalies(conn, when),
         _section_watchlist_matches(conn, config_dir),
-        _section_decision_queue(when, config_dir),
+        _section_decision_queue(when, config_dir, conn),
         _footer(when),
     ]
     return "\n\n---\n\n".join(sections) + "\n"
