@@ -4,6 +4,65 @@ Running market observations for the wagon watch. Newest entries on top.
 Convention per entry: dated section header, observation → interpretation
 structure, pattern signals marked with confidence.
 
+## 2026-10-15 — Survival v2 on post-fix data: fall is slower, the band holds, supply forecast dies
+
+Source: analysis/survival_v2.md (61-VIN post-fix cohort, first seen on or
+after 2026-08-20; 20 completed lifetimes, 67% censored), developed with
+the claude.ai session of 2026-10-15.
+
+**What survives from v1**
+
+- **The clearing band, $65,980–$67,998 (high confidence).** Both post-fix
+  qualifying sales under $70k closed inside it: Valley Imports at $66,590
+  and Madison at $67,600. Nothing has sold below the band since July. The
+  survivorship-bias warning still applies: ignore the pool median.
+- **Percentile at listing predicts the car's path (high confidence,
+  stronger than before).** Medians: under the 20th percentile 16 days,
+  20th–50th 21 days, over the 50th not reached (4 of 24 sold). Expensive
+  listings still become the stale stock.
+- **Cuts come early (moderate confidence).** The median first cut is on
+  day 9, and 17 of 27 cuts land in the first 14 days. Cuts are a bit
+  bigger than v1 found: 2.1% on average, against about 1.5%.
+- **v1's speed was mostly real.** Excluding the 24 `suspect_sale` VINs
+  moves v1's 14-day exit share only from 52% to 49%. Page-0 truncation
+  inflated the sale count but didn't create the fast tempo.
+
+**What dies**
+
+- **"Engage week one, decide by day 10–14."** The v2 median is 21 days.
+  Only 33% of cars were gone by day 14, against about 50% in v1. For S214
+  2024+ cars it was 20% against 44%, and the S214 median is 29 days.
+  Revised: the fuse is about 3 weeks. Engage early still, but day 10–14 is
+  no longer a hard deadline. (Moderate confidence: only n = 18 cars, or
+  10 for S214, had enough time to be compared.)
+- **"Under the 25th percentile and under $70k clears in 18 days or
+  less."** Valley Imports was listed at the 8th percentile and took 29
+  days and two cuts. Low-percentile cars still sell, just not always
+  fast.
+- **The November arithmetic (3–5 qualifying candidates).** At the $67,000
+  cap after shipping, post-fix inflow is 1 car in 57 days.
+  - Expected for Oct 15 – Nov 30: **0.8** (90% CI 0.04–3.8). **P(zero) =
+    45%.**
+  - Pooled across all months: 1.1 expected, P(0) = 34%.
+  - The July projection of qualifying cars listing at $63.5–66.5k also has
+    no post-fix support. No qualifying car has asked below $66,590 since
+    Jul 1.
+
+**What it means for November.** Don't wait for a new listing to show up
+in the window. There's a one-in-three to one-in-two chance none does.
+The realistic paths are:
+1. Negotiate an existing car down into the band. Hoffman Estates is now
+   in the decision queue: target $66,000–66,500, walk away at $67,000,
+   call Oct 28–30.
+2. Loosen a constraint. MB Los Angeles 2026 at $74,900 is local; on
+   mileage, Barrington 2025 is at $62,500 with 23k miles.
+
+**Process warnings.** Since about Aug 27 only 3–7 scrape runs a day have
+landed, against 30–40 before, because GitHub is dropping scheduled runs.
+The API may also be capping results at about 30 listings. Both make gone
+events noisier. Re-run v2 around 2026-11-15, after fixing the scrape
+cadence. The month-end effect was not retested in this pass.
+
 ## 2026-07-31 — Survival analysis v1: reaction windows and percentile tracks
 
 Strategic conclusions from analysis/survival_v1.md (94-VIN clean cohort,

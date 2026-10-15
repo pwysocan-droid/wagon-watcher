@@ -1,0 +1,12 @@
+[
+  {
+    "vin": "W1KLH6FB1SA114903",
+    "action": "Hoffman Estates 2025 @ $68,999 — verification requested (CPO sheet, Carfax + AutoCheck, Wichita→Hoffman trade history); target close $66,000–66,500, walk $67,000; price call Oct 28–30",
+    "status": "verification requested",
+    "target_close": [66000, 66500],
+    "walk_away": 67000,
+    "call_window": ["2026-10-28", "2026-10-30"],
+    "opened_at": "2026-10-15T00:00:00+00:00",
+    "closed_at": null
+  }
+]
