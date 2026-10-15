@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-15T20:08:32.366467+00:00",
+  "generated_at": "2026-10-15T20:28:28.830483+00:00",
   "schema_version": 1,
   "vins": {
     "W1KLH6FB4SA129881": {
@@ -696,7 +696,7 @@
       "trim": "E450S4",
       "dealer": "Mercedes-Benz of Barrington",
       "first_seen_at": "2026-09-04T07:19:29.045797+00:00",
-      "current_price": 62500,
+      "current_price": 61900,
       "current_mileage": 23212,
       "status": "active",
       "observations": [
@@ -734,13 +734,18 @@
           "observed_at": "2026-10-12T22:39:27.640948+00:00",
           "price": 62500,
           "mileage": 23212
+        },
+        {
+          "observed_at": "2026-10-15T20:28:28.090285+00:00",
+          "price": 61900,
+          "mileage": 23212
         }
       ],
       "stats": {
-        "all_time_low": 62500,
+        "all_time_low": 61900,
         "all_time_high": 69900,
-        "total_drop_pct": -10.59,
-        "n_observations": 7,
+        "total_drop_pct": -11.44,
+        "n_observations": 8,
         "days_observed": 41
       }
     },
@@ -1699,7 +1704,7 @@
         "all_time_high": 71559,
         "total_drop_pct": 0.0,
         "n_observations": 1,
-        "days_observed": 5
+        "days_observed": 6
       }
     },
     "W1KLH6FB3TA212378": {
