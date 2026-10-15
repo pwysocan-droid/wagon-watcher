@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-14T23:32:33.286492+00:00",
+  "generated_at": "2026-10-15T02:25:52.347702+00:00",
   "schema_version": 1,
   "vins": {
     "W1KLH6FB4SA129881": {
@@ -131,69 +131,6 @@
         "total_drop_pct": -2.27,
         "n_observations": 17,
         "days_observed": 154
-      }
-    },
-    "W1KLH6FB3RA004560": {
-      "year": 2024,
-      "trim": "E450S4",
-      "dealer": "R B M of Atlanta, Inc.",
-      "first_seen_at": "2026-06-04T15:55:18.581517+00:00",
-      "current_price": 71591,
-      "current_mileage": 6237,
-      "status": "gone",
-      "observations": [
-        {
-          "observed_at": "2026-06-04T15:55:18.581517+00:00",
-          "price": 74984,
-          "mileage": 6237
-        },
-        {
-          "observed_at": "2026-06-13T16:08:34.949004+00:00",
-          "price": 74413,
-          "mileage": 6237
-        },
-        {
-          "observed_at": "2026-06-27T09:09:10.286656+00:00",
-          "price": 73477,
-          "mileage": 6237
-        },
-        {
-          "observed_at": "2026-07-10T12:38:47.771930+00:00",
-          "price": 72368,
-          "mileage": 6237
-        },
-        {
-          "observed_at": "2026-08-24T18:26:00.034150+00:00",
-          "price": 71591,
-          "mileage": 6237
-        },
-        {
-          "observed_at": "2026-08-24T23:42:59.666453+00:00",
-          "price": 72368,
-          "mileage": 6237
-        },
-        {
-          "observed_at": "2026-08-25T05:55:02.639923+00:00",
-          "price": 71591,
-          "mileage": 6237
-        },
-        {
-          "observed_at": "2026-08-25T07:24:59.933105+00:00",
-          "price": 72368,
-          "mileage": 6237
-        },
-        {
-          "observed_at": "2026-08-25T10:30:39.560878+00:00",
-          "price": 71591,
-          "mileage": 6237
-        }
-      ],
-      "stats": {
-        "all_time_low": 71591,
-        "all_time_high": 74984,
-        "total_drop_pct": -4.52,
-        "n_observations": 9,
-        "days_observed": 132
       }
     },
     "W1KZH6AB0PB118184": {
@@ -380,9 +317,9 @@
       "trim": "E450S4",
       "dealer": "Benzel-Busch Motor Car Corp.",
       "first_seen_at": "2026-07-25T09:28:35.139701+00:00",
-      "current_price": 49543,
+      "current_price": 48985,
       "current_mileage": 51923,
-      "status": "reappeared",
+      "status": "active",
       "observations": [
         {
           "observed_at": "2026-07-25T09:28:35.139701+00:00",
@@ -438,13 +375,18 @@
           "observed_at": "2026-09-25T02:35:12.922413+00:00",
           "price": 49543,
           "mileage": 51923
+        },
+        {
+          "observed_at": "2026-10-15T02:25:50.890050+00:00",
+          "price": 48985,
+          "mileage": 51923
         }
       ],
       "stats": {
-        "all_time_low": 49543,
+        "all_time_low": 48985,
         "all_time_high": 51983,
-        "total_drop_pct": -0.89,
-        "n_observations": 11,
+        "total_drop_pct": -2.0,
+        "n_observations": 12,
         "days_observed": 81
       }
     },
@@ -533,7 +475,7 @@
         "all_time_high": 74997,
         "total_drop_pct": -1.33,
         "n_observations": 14,
-        "days_observed": 74
+        "days_observed": 75
       }
     },
     "W1KLH6FB4TA236530": {
@@ -982,7 +924,7 @@
         "all_time_high": 69982,
         "total_drop_pct": 0.0,
         "n_observations": 2,
-        "days_observed": 35
+        "days_observed": 36
       }
     },
     "W1KZH6AB8NB046826": {
@@ -1048,7 +990,7 @@
         "all_time_high": 71780,
         "total_drop_pct": -0.42,
         "n_observations": 2,
-        "days_observed": 28
+        "days_observed": 29
       }
     },
     "W1KLH6FB5RA058801": {
@@ -1609,7 +1551,7 @@
         "all_time_high": 53216,
         "total_drop_pct": -1.01,
         "n_observations": 2,
-        "days_observed": 8
+        "days_observed": 9
       }
     },
     "WDDZH6JB3LA707763": {
@@ -1767,7 +1709,7 @@
       "first_seen_at": "2026-10-12T15:49:10.816277+00:00",
       "current_price": 74900,
       "current_mileage": 2907,
-      "status": "reappeared",
+      "status": "active",
       "observations": [
         {
           "observed_at": "2026-10-12T15:49:10.816277+00:00",
