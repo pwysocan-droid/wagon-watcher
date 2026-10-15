@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-15T21:35:43.889370+00:00",
+  "generated_at": "2026-10-15T23:08:25.316291+00:00",
   "schema_version": 1,
   "vins": {
     "W1KLH6FB4SA129881": {
@@ -309,7 +309,7 @@
         "all_time_high": 86332,
         "total_drop_pct": -5.91,
         "n_observations": 3,
-        "days_observed": 93
+        "days_observed": 94
       }
     },
     "W1KZH6AB9NB055261": {
@@ -696,7 +696,7 @@
       "trim": "E450S4",
       "dealer": "Mercedes-Benz of Barrington",
       "first_seen_at": "2026-09-04T07:19:29.045797+00:00",
-      "current_price": 61900,
+      "current_price": 62500,
       "current_mileage": 23212,
       "status": "active",
       "observations": [
@@ -739,13 +739,18 @@
           "observed_at": "2026-10-15T20:28:28.090285+00:00",
           "price": 61900,
           "mileage": 23212
+        },
+        {
+          "observed_at": "2026-10-15T23:08:24.042503+00:00",
+          "price": 62500,
+          "mileage": 23212
         }
       ],
       "stats": {
         "all_time_low": 61900,
         "all_time_high": 69900,
-        "total_drop_pct": -11.44,
-        "n_observations": 8,
+        "total_drop_pct": -10.59,
+        "n_observations": 9,
         "days_observed": 41
       }
     },
@@ -868,7 +873,7 @@
         "all_time_high": 67600,
         "total_drop_pct": 0.0,
         "n_observations": 2,
-        "days_observed": 37
+        "days_observed": 38
       }
     },
     "W1KZH6AB1PB172920": {
@@ -1380,7 +1385,7 @@
         "all_time_high": 54494,
         "total_drop_pct": -0.99,
         "n_observations": 3,
-        "days_observed": 19
+        "days_observed": 20
       }
     },
     "W1KLH6FB0SA107246": {
@@ -1403,7 +1408,7 @@
         "all_time_high": 61555,
         "total_drop_pct": 0.0,
         "n_observations": 1,
-        "days_observed": 19
+        "days_observed": 20
       }
     },
     "W1KZH6AB2PB175549": {
@@ -1847,7 +1852,7 @@
         "all_time_high": 57998,
         "total_drop_pct": 0.0,
         "n_observations": 1,
-        "days_observed": 2
+        "days_observed": 3
       }
     },
     "W1KLH6FB8RA053835": {
@@ -1870,7 +1875,7 @@
         "all_time_high": 77900,
         "total_drop_pct": 0.0,
         "n_observations": 1,
-        "days_observed": 2
+        "days_observed": 3
       }
     },
     "W1KLH6FB8TA197277": {
