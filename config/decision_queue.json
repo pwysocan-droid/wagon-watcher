@@ -1,11 +1,14 @@
 [
   {
     "vin": "W1KLH6FB1SA114903",
-    "action": "Hoffman Estates 2025 @ $68,999 — verification requested (CPO sheet, Carfax + AutoCheck, Wichita→Hoffman trade history); target close $66,000–66,500, walk $67,000; price call Oct 28–30",
-    "status": "verification requested",
+    "action": "Hoffman Estates 2025 @ $68,999 — listing vanished from consumer surfaces 2026-10-15 while still in feed; called dealer same day. Oct 28–30 call window VOID. Fill outcome after the call: sold / transferred / glitch",
+    "status": "listing vanished from consumer surfaces 2026-10-15 while still in feed — called dealer same day",
+    "outcome": null,
+    "outcome_options": ["sold", "transferred", "glitch"],
     "target_close": [66000, 66500],
     "walk_away": 67000,
-    "call_window": ["2026-10-28", "2026-10-30"],
+    "call_window": null,
+    "call_window_voided": ["2026-10-28", "2026-10-30"],
     "opened_at": "2026-10-15T00:00:00+00:00",
     "closed_at": null
   }

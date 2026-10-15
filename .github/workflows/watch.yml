@@ -1,8 +1,15 @@
 name: watch
 
 on:
+  # GitHub's `schedule` trigger is best-effort and has dropped most of these
+  # runs since 2026-08-27 (3–7/day landed vs 30–40). Two mitigations:
+  #  - off-peak minutes (not :00/:30, where load-shedding is worst), asked
+  #    for every 20 minutes so a partial drop rate still lands ~2/hour;
+  #  - an external trigger hitting workflow_dispatch (scripts/launchd/),
+  #    which isn't subject to cron load-shedding. The concurrency group
+  #    below queues overlapping triggers instead of running them in parallel.
   schedule:
-    - cron: '*/30 * * * *'   # every 30 minutes (UTC)
+    - cron: '8,28,48 * * * *'
   workflow_dispatch:
 
 concurrency:
