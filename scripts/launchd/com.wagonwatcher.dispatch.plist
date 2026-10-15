@@ -5,7 +5,7 @@
   <key>Label</key><string>com.wagonwatcher.dispatch</string>
   <key>ProgramArguments</key>
   <array>
-    <string>/Users/paul_wysocan/Documents/wagon-watcher/scripts/launchd/dispatch_watch.sh</string>
+    <string>/Users/paul_wysocan/Library/Application Support/wagonwatcher/dispatch_watch.sh</string>
   </array>
   <key>StartInterval</key><integer>1200</integer>
   <key>RunAtLoad</key><true/>
