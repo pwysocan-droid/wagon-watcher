@@ -4,6 +4,51 @@ Running market observations for the wagon watch. Newest entries on top.
 Convention per entry: dated section header, observation → interpretation
 structure, pattern signals marked with confidence.
 
+## Endgame manual layer (Oct 15 – Nov 30)
+
+The MBUSA CPO feed shows only cars already certified in MBUSA's system.
+analysis/api_cap_probe.md confirmed it isn't capped, but it can't see
+non-certified cars at Mercedes dealers, and that's where the in-band cars
+are (Youngstown $60,778, Georgetown $62,999). For the buying window, the
+watcher works as an alert system and `config/decision_queue.json` is the
+case file. Three manual routines fill the gap.
+
+**1. Weekly 15-minute sweep (Mondays).**
+- Search CarGurus and Autotrader (plus Cars.com, which worked for these
+  searches when others blocked) for 2024–25 E450 All-Terrains with 15k mi
+  or less, nationwide, sorted by price.
+- Focus on non-CPO cars at Mercedes dealers. That's the certifiable pool
+  the feed can't see.
+- For each hit under about $67k: capture the VIN, price history, dealer,
+  and any "certified" claim in the seller notes. Then add it to
+  `decision_queue.json` with `"source": "manual"` and next_action "call:
+  mileage, Carfax, will you certify as part of the sale".
+- Also check off-feed cars already in the queue for price changes. Cars.com
+  detail pages show full price history.
+
+**2. MB LA batch-cut watch (from Oct 29).**
+- Every 2–3 days, check W1KLH6FB3TA212378 on CarGurus for a real price
+  change, ignoring the $74,900 ↔ $75,081 fee flapping. CarGurus' per-listing
+  JSON (`detailListingJson.action?inventoryListing=460915753`) has the
+  history.
+- The trigger is an *observed* cut, not a calendar date. Within 48h of the
+  first cut, call and restate the standing written offer.
+- Cuts come in lot-wide sweeps, so a cut on other MB LA CPO cars the same
+  week is the early warning.
+
+**3. Log every call the same day.**
+- Write each call into the candidate's `call_log` in
+  `config/decision_queue.json` **and** into `dealers.md`.
+- Record:
+  - who you spoke to
+  - every number quoted (price, out-the-door, trade, fees, add-ons)
+  - documents promised and by when
+  - red flags (non-optional add-ons, "market adjustment", reluctance to
+    send the CPO sheet or in-service date)
+- Spoken details fade within about 48 hours. "You quoted $X on date Y" is
+  leverage only if it's written down, ideally in an email back to the
+  dealer that confirms it.
+
 ## 2026-10-15 — Survival v2 on post-fix data: fall is slower, the band holds, supply forecast dies
 
 Source: analysis/survival_v2.md (61-VIN post-fix cohort, first seen on or
