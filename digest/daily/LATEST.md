@@ -1,23 +1,23 @@
 # mb-wagon-watcher · daily digest
 
-**2026-10-15** · 05:00 PT snapshot
+**2026-10-16** · 05:00 PT snapshot
 
-`Generated: 2026-10-15T20:45:18Z`
+`Generated: 2026-10-16T16:07:33Z`
 
 ---
 
 ## § Population
 
-**Population:** 33 active (+1 net since yesterday) · 0 watchlist matches · 0 actionable
+**Population:** 33 active (no change since yesterday) · 0 watchlist matches · 0 actionable
 
 ---
 
 ## § Movers
 
-- W1KLH6FB8RA026151 — MB Hanover, MA — $64,490 (-$1,000 / -1.53%)
-- W1KZH6AB9NB055261 — Benzel-Busch Motor Ca…, NJ — $48,985 (-$558 / -1.13%)
+- W1KZH6AB9NB055261 — Benzel-Busch Motor Ca…, NJ — $49,987 (+$1,002 / +2.05%)
+- W1KZH6AB5PB118889 — Fletcher Jones Motorc…, CA — $50,892 (-$1,001 / -1.93%)
 - W1KLH6FB1SA137310 — MB Barrington, IL — $61,900 (-$600 / -0.96%)
-- W1KLH6FB3TA212378 — MB Los Angeles, CA — $75,081 (+$181 / +0.24%)
+- W1KLH6FB3TA212378 — MB Los Angeles, CA — $74,900 (-$181 / -0.24%)
 
 ---
 
@@ -25,9 +25,9 @@
 
 - W1KZH6AB0PB118184 — R B M of Atlanta, Inc., GA — $46,428 (down from $50,987 floor)
 - W1KLH6FB1SA114903 — MB Hoffman Estates, IL — $68,999 (down from $73,998 floor)
-- W1KZH6AB9NB055261 — Benzel-Busch Motor Ca…, NJ — $48,985 (down from $51,983 floor)
 - W1KLH6FB0RA056051 — MB Edison, NJ — $73,995 (down from $74,997 floor)
 - W1KZH6ABXPB125367 — MB Riverside, CA — $53,891 (down from $56,761 floor)
+- W1KLH6FB1SA137310 — MB Barrington, IL — $61,900 (down from $69,900 floor)
 
 _… and 7 more at floor._
 
@@ -35,8 +35,7 @@ _… and 7 more at floor._
 
 ## § Anomalies
 
-- 4 cron runs returned <30 listings (min 28) — possible API cap
-- New dealer first-seen: Mercedes-Benz of Willoughby
+- VIN `W1KLH6FB9TA261326` toggled status 8 times (feed instability or price-testing)
 
 ---
 
@@ -46,11 +45,19 @@ _No active watchlist matches._
 
 ---
 
+## § Near-miss
+
+_Fails exactly one hard criterion, priced ≤15th pct. Surface only — criteria stand._
+
+- `…137310` · MB Barrington, IL · $61,900 · 23,197 mi · fails: miles > 15,000 · pct 8s
+
+---
+
 ## § Decision queue
 
 Open decisions today:
 - `…114903` · Mercedes-Benz of Hoffman Estates, IL · $68,999 · next: dealer call result (same day) · vanished from consumer surfaces 2026-10-15, feed still active; dealer call pending
-- `…212378` · Mercedes-Benz of Los Angeles, CA (Lithia) · $75,081 · next: within 48h of the first CarGurus batch cut on this VIN (check every 2-3 days from Oct 29) · active; no real cut (price flips between $74,900 and $75,081 as fees are shown or hidden)
+- `…212378` · Mercedes-Benz of Los Angeles, CA (Lithia) · $74,900 · next: within 48h of the first CarGurus batch cut on this VIN (check every 2-3 days from Oct 29) · active; no real cut (price flips between $74,900 and $75,081 as fees are shown or hidden)
 - `…163752` · Mercedes-Benz of Manhattan, NY · $72,900 · next: day-45 mark ~Nov 8, or any price cut before then · active; uncut since listing Sep 24
 - `…164745` · R B M of Atlanta, GA · $73,114 · next: mid-Nov (~day 70), or a second price cut · active; one small cut
 - `…133447` · Mercedes-Benz of Georgetown, TX · $62,999 (manual) · next: first call · found off-feed 2026-10-15; not called
@@ -62,7 +69,7 @@ Open decisions today:
 
 ---
 
-`mb-wagon-watcher · digest_daily.py · 2026-10-15T20:45:18Z`
+`mb-wagon-watcher · digest_daily.py · 2026-10-16T16:07:33Z`
 
 _To annotate a VIN: edit `config/vin_annotations.json`._  
 _To disqualify a VIN: edit `config/disqualified_vins.json`._  
