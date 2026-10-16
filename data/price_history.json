@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-16T15:29:51.381964+00:00",
+  "generated_at": "2026-10-16T15:49:43.419923+00:00",
   "schema_version": 1,
   "vins": {
     "W1KLH6FB4SA129881": {
@@ -1585,7 +1585,7 @@
       "dealer": "Mercedes-Benz of Columbus",
       "first_seen_at": "2026-10-06T13:47:07.426243+00:00",
       "current_price": 43690,
-      "current_mileage": 34305,
+      "current_mileage": 34313,
       "status": "active",
       "observations": [
         {
@@ -1602,13 +1602,18 @@
           "observed_at": "2026-10-16T14:05:15.449990+00:00",
           "price": 43690,
           "mileage": 34305
+        },
+        {
+          "observed_at": "2026-10-16T15:49:42.924641+00:00",
+          "price": 43690,
+          "mileage": 34313
         }
       ],
       "stats": {
         "all_time_low": 43690,
         "all_time_high": 43690,
         "total_drop_pct": 0.0,
-        "n_observations": 3,
+        "n_observations": 4,
         "days_observed": 10
       }
     },
@@ -1767,7 +1772,7 @@
         "all_time_high": 75081,
         "total_drop_pct": 0.0,
         "n_observations": 3,
-        "days_observed": 3
+        "days_observed": 4
       }
     },
     "W1KZH6AB4PB178727": {
@@ -1790,7 +1795,7 @@
         "all_time_high": 57990,
         "total_drop_pct": 0.0,
         "n_observations": 1,
-        "days_observed": 3
+        "days_observed": 4
       }
     },
     "W1KLH6FB1RA026122": {
@@ -1813,7 +1818,7 @@
         "all_time_high": 76849,
         "total_drop_pct": 0.0,
         "n_observations": 1,
-        "days_observed": 3
+        "days_observed": 4
       }
     },
     "W1KLH6FB8SA101288": {
@@ -1836,7 +1841,7 @@
         "all_time_high": 68988,
         "total_drop_pct": 0.0,
         "n_observations": 1,
-        "days_observed": 3
+        "days_observed": 4
       }
     },
     "W1KZH6ABXPB183379": {
@@ -1859,7 +1864,7 @@
         "all_time_high": 55477,
         "total_drop_pct": 0.0,
         "n_observations": 1,
-        "days_observed": 3
+        "days_observed": 4
       }
     },
     "W1KZH6AB8PB110575": {
