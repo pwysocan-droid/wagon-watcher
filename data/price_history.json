@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-16T13:49:31.780904+00:00",
+  "generated_at": "2026-10-16T14:05:16.557843+00:00",
   "schema_version": 1,
   "vins": {
     "W1KLH6FB4SA129881": {
@@ -1367,7 +1367,7 @@
         "all_time_high": 73498,
         "total_drop_pct": 0.0,
         "n_observations": 1,
-        "days_observed": 20
+        "days_observed": 21
       }
     },
     "W1KZH6AB4NB056172": {
@@ -1548,7 +1548,7 @@
         "all_time_high": 40995,
         "total_drop_pct": -1.21,
         "n_observations": 2,
-        "days_observed": 12
+        "days_observed": 13
       }
     },
     "W1KZH6AB3PB111794": {
@@ -1585,7 +1585,7 @@
       "dealer": "Mercedes-Benz of Columbus",
       "first_seen_at": "2026-10-06T13:47:07.426243+00:00",
       "current_price": 43690,
-      "current_mileage": 34313,
+      "current_mileage": 34305,
       "status": "active",
       "observations": [
         {
@@ -1597,13 +1597,18 @@
           "observed_at": "2026-10-16T12:49:20.611772+00:00",
           "price": 43690,
           "mileage": 34313
+        },
+        {
+          "observed_at": "2026-10-16T14:05:15.449990+00:00",
+          "price": 43690,
+          "mileage": 34305
         }
       ],
       "stats": {
         "all_time_low": 43690,
         "all_time_high": 43690,
         "total_drop_pct": 0.0,
-        "n_observations": 2,
+        "n_observations": 3,
         "days_observed": 10
       }
     },
