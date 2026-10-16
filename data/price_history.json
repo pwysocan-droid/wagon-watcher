@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-16T22:09:54.720793+00:00",
+  "generated_at": "2026-10-16T22:29:58.659256+00:00",
   "schema_version": 1,
   "vins": {
     "W1KLH6FB4SA129881": {
@@ -317,7 +317,7 @@
       "trim": "E450S4",
       "dealer": "Benzel-Busch Motor Car Corp.",
       "first_seen_at": "2026-07-25T09:28:35.139701+00:00",
-      "current_price": 48985,
+      "current_price": 49987,
       "current_mileage": 51923,
       "status": "active",
       "observations": [
@@ -390,13 +390,18 @@
           "observed_at": "2026-10-16T21:49:53.049260+00:00",
           "price": 48985,
           "mileage": 51923
+        },
+        {
+          "observed_at": "2026-10-16T22:29:57.545643+00:00",
+          "price": 49987,
+          "mileage": 51923
         }
       ],
       "stats": {
         "all_time_low": 48985,
         "all_time_high": 51983,
-        "total_drop_pct": -2.0,
-        "n_observations": 14,
+        "total_drop_pct": 0.0,
+        "n_observations": 15,
         "days_observed": 83
       }
     },
@@ -1999,7 +2004,7 @@
       "first_seen_at": "2026-10-13T17:51:25.914227+00:00",
       "current_price": 84995,
       "current_mileage": 5738,
-      "status": "active",
+      "status": "gone",
       "observations": [
         {
           "observed_at": "2026-10-13T17:51:25.914227+00:00",
