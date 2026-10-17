@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-16T23:50:08.616913+00:00",
+  "generated_at": "2026-10-17T00:10:13.115291+00:00",
   "schema_version": 1,
   "vins": {
     "W1KLH6FB4SA129881": {
@@ -28,109 +28,6 @@
         "total_drop_pct": 0.0,
         "n_observations": 2,
         "days_observed": 173
-      }
-    },
-    "W1KLH6FB3SA087512": {
-      "year": 2025,
-      "trim": "E450S4",
-      "dealer": "Mercedes-Benz OF Tiverton",
-      "first_seen_at": "2026-05-13T09:22:44.161676+00:00",
-      "current_price": 64487,
-      "current_mileage": 27165,
-      "status": "gone",
-      "observations": [
-        {
-          "observed_at": "2026-05-13T09:22:44.161676+00:00",
-          "price": 65988,
-          "mileage": 25577
-        },
-        {
-          "observed_at": "2026-05-16T16:46:56.288366+00:00",
-          "price": 65988,
-          "mileage": 25588
-        },
-        {
-          "observed_at": "2026-05-16T21:39:58.745305+00:00",
-          "price": 65988,
-          "mileage": 25577
-        },
-        {
-          "observed_at": "2026-05-17T05:59:10.398025+00:00",
-          "price": 65988,
-          "mileage": 25588
-        },
-        {
-          "observed_at": "2026-07-08T23:08:06.508505+00:00",
-          "price": 64487,
-          "mileage": 25588
-        },
-        {
-          "observed_at": "2026-07-09T05:29:14.895704+00:00",
-          "price": 65988,
-          "mileage": 25588
-        },
-        {
-          "observed_at": "2026-07-09T14:34:03.224392+00:00",
-          "price": 64487,
-          "mileage": 25588
-        },
-        {
-          "observed_at": "2026-07-17T04:55:24.851098+00:00",
-          "price": 64487,
-          "mileage": 25589
-        },
-        {
-          "observed_at": "2026-07-23T01:54:49.320479+00:00",
-          "price": 64487,
-          "mileage": 26025
-        },
-        {
-          "observed_at": "2026-08-04T23:30:41.182371+00:00",
-          "price": 64487,
-          "mileage": 26304
-        },
-        {
-          "observed_at": "2026-08-11T08:03:37.915597+00:00",
-          "price": 64487,
-          "mileage": 26025
-        },
-        {
-          "observed_at": "2026-08-12T10:52:09.488012+00:00",
-          "price": 64487,
-          "mileage": 26304
-        },
-        {
-          "observed_at": "2026-08-25T09:58:19.405943+00:00",
-          "price": 64487,
-          "mileage": 26439
-        },
-        {
-          "observed_at": "2026-09-12T19:30:28.631786+00:00",
-          "price": 64487,
-          "mileage": 27159
-        },
-        {
-          "observed_at": "2026-09-12T23:34:53.361971+00:00",
-          "price": 64487,
-          "mileage": 26439
-        },
-        {
-          "observed_at": "2026-09-14T15:06:48.747634+00:00",
-          "price": 64487,
-          "mileage": 27159
-        },
-        {
-          "observed_at": "2026-09-16T21:53:52.858570+00:00",
-          "price": 64487,
-          "mileage": 27165
-        }
-      ],
-      "stats": {
-        "all_time_low": 64487,
-        "all_time_high": 65988,
-        "total_drop_pct": -2.27,
-        "n_observations": 17,
-        "days_observed": 156
       }
     },
     "W1KZH6AB0PB118184": {
@@ -2004,7 +1901,7 @@
       "first_seen_at": "2026-10-13T17:51:25.914227+00:00",
       "current_price": 84995,
       "current_mileage": 5738,
-      "status": "reappeared",
+      "status": "gone",
       "observations": [
         {
           "observed_at": "2026-10-13T17:51:25.914227+00:00",
