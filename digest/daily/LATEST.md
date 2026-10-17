@@ -1,23 +1,20 @@
 # mb-wagon-watcher · daily digest
 
-**2026-10-16** · 05:00 PT snapshot
+**2026-10-17** · 05:00 PT snapshot
 
-`Generated: 2026-10-16T16:07:33Z`
+`Generated: 2026-10-17T14:59:56Z`
 
 ---
 
 ## § Population
 
-**Population:** 33 active (no change since yesterday) · 0 watchlist matches · 0 actionable
+**Population:** 31 active (-2 net since yesterday) · 0 watchlist matches · 0 actionable
 
 ---
 
 ## § Movers
 
-- W1KZH6AB9NB055261 — Benzel-Busch Motor Ca…, NJ — $49,987 (+$1,002 / +2.05%)
-- W1KZH6AB5PB118889 — Fletcher Jones Motorc…, CA — $50,892 (-$1,001 / -1.93%)
-- W1KLH6FB1SA137310 — MB Barrington, IL — $61,900 (-$600 / -0.96%)
-- W1KLH6FB3TA212378 — MB Los Angeles, CA — $74,900 (-$181 / -0.24%)
+_No price moves vs. start of today (UTC)._
 
 ---
 
@@ -35,7 +32,10 @@ _… and 7 more at floor._
 
 ## § Anomalies
 
-- VIN `W1KLH6FB9TA261326` toggled status 8 times (feed instability or price-testing)
+- VIN `W1KLH6FB0RA056051` toggled status 4 times (feed instability or price-testing)
+- VIN `W1KLH6FB4RA026101` toggled status 18 times (feed instability or price-testing)
+- VIN `W1KLH6FB9TA261326` toggled status 7 times (feed instability or price-testing)
+- VIN `W1KZH6AB3PB148201` toggled status 14 times (feed instability or price-testing)
 
 ---
 
@@ -69,7 +69,7 @@ Open decisions today:
 
 ---
 
-`mb-wagon-watcher · digest_daily.py · 2026-10-16T16:07:33Z`
+`mb-wagon-watcher · digest_daily.py · 2026-10-17T14:59:56Z`
 
 _To annotate a VIN: edit `config/vin_annotations.json`._  
 _To disqualify a VIN: edit `config/disqualified_vins.json`._  
