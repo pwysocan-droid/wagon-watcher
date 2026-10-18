@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-18T14:32:09.388254+00:00",
+  "generated_at": "2026-10-18T14:52:14.390034+00:00",
   "schema_version": 1,
   "vins": {
     "W1KLH6FB4SA129881": {
@@ -1376,7 +1376,7 @@
       "trim": "E450S4",
       "dealer": "Mercedes-Benz of Hilton Head",
       "first_seen_at": "2026-09-28T16:32:18.964338+00:00",
-      "current_price": 63584,
+      "current_price": 65584,
       "current_mileage": 44811,
       "status": "active",
       "observations": [
@@ -1389,13 +1389,18 @@
           "observed_at": "2026-10-18T14:12:06.605020+00:00",
           "price": 63584,
           "mileage": 44811
+        },
+        {
+          "observed_at": "2026-10-18T14:52:13.887847+00:00",
+          "price": 65584,
+          "mileage": 44811
         }
       ],
       "stats": {
         "all_time_low": 63584,
         "all_time_high": 65584,
-        "total_drop_pct": -3.05,
-        "n_observations": 2,
+        "total_drop_pct": 0.0,
+        "n_observations": 3,
         "days_observed": 19
       }
     },
@@ -1794,7 +1799,7 @@
       "trim": "E450S4",
       "dealer": "Mercedes-Benz of Akron",
       "first_seen_at": "2026-10-12T22:39:27.640948+00:00",
-      "current_price": 57911,
+      "current_price": 57998,
       "current_mileage": 27312,
       "status": "active",
       "observations": [
@@ -1807,13 +1812,18 @@
           "observed_at": "2026-10-18T14:12:06.605020+00:00",
           "price": 57911,
           "mileage": 27312
+        },
+        {
+          "observed_at": "2026-10-18T14:52:13.887847+00:00",
+          "price": 57998,
+          "mileage": 27312
         }
       ],
       "stats": {
         "all_time_low": 57911,
         "all_time_high": 57998,
-        "total_drop_pct": -0.15,
-        "n_observations": 2,
+        "total_drop_pct": 0.0,
+        "n_observations": 3,
         "days_observed": 5
       }
     },
