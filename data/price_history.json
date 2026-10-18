@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-18T21:36:21.362169+00:00",
+  "generated_at": "2026-10-18T21:56:23.062534+00:00",
   "schema_version": 1,
   "vins": {
     "W1KLH6FB4SA129881": {
@@ -1317,7 +1317,7 @@
         "all_time_high": 54494,
         "total_drop_pct": -0.99,
         "n_observations": 3,
-        "days_observed": 22
+        "days_observed": 23
       }
     },
     "W1KLH6FB0SA107246": {
@@ -1340,7 +1340,7 @@
         "all_time_high": 61555,
         "total_drop_pct": 0.0,
         "n_observations": 1,
-        "days_observed": 22
+        "days_observed": 23
       }
     },
     "W1KZH6AB2PB175549": {
@@ -1674,7 +1674,7 @@
       "trim": "E450S4",
       "dealer": "Mercedes-Benz of Los Angeles",
       "first_seen_at": "2026-10-12T15:49:10.816277+00:00",
-      "current_price": 74900,
+      "current_price": 75081,
       "current_mileage": 2907,
       "status": "active",
       "observations": [
@@ -1692,13 +1692,18 @@
           "observed_at": "2026-10-16T12:29:19.002466+00:00",
           "price": 74900,
           "mileage": 2907
+        },
+        {
+          "observed_at": "2026-10-18T21:56:22.244243+00:00",
+          "price": 75081,
+          "mileage": 2907
         }
       ],
       "stats": {
         "all_time_low": 74900,
         "all_time_high": 75081,
-        "total_drop_pct": 0.0,
-        "n_observations": 3,
+        "total_drop_pct": 0.24,
+        "n_observations": 4,
         "days_observed": 6
       }
     },
