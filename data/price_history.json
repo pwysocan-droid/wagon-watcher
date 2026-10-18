@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-18T01:38:20.681971+00:00",
+  "generated_at": "2026-10-18T01:58:17.546318+00:00",
   "schema_version": 1,
   "vins": {
     "W1KLH6FB4SA129881": {
@@ -397,7 +397,7 @@
         "all_time_high": 74997,
         "total_drop_pct": -1.33,
         "n_observations": 14,
-        "days_observed": 77
+        "days_observed": 78
       }
     },
     "W1KLH6FB4TA236530": {
