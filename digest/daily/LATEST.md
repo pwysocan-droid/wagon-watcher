@@ -1,14 +1,14 @@
 # mb-wagon-watcher · daily digest
 
-**2026-10-17** · 05:00 PT snapshot
+**2026-10-18** · 05:00 PT snapshot
 
-`Generated: 2026-10-17T14:59:56Z`
+`Generated: 2026-10-18T15:24:51Z`
 
 ---
 
 ## § Population
 
-**Population:** 31 active (-2 net since yesterday) · 0 watchlist matches · 0 actionable
+**Population:** 31 active (-1 net since yesterday) · 0 watchlist matches · 0 actionable
 
 ---
 
@@ -26,16 +26,13 @@ _No price moves vs. start of today (UTC)._
 - W1KZH6ABXPB125367 — MB Riverside, CA — $53,891 (down from $56,761 floor)
 - W1KLH6FB1SA137310 — MB Barrington, IL — $61,900 (down from $69,900 floor)
 
-_… and 7 more at floor._
+_… and 8 more at floor._
 
 ---
 
 ## § Anomalies
 
-- VIN `W1KLH6FB0RA056051` toggled status 4 times (feed instability or price-testing)
-- VIN `W1KLH6FB4RA026101` toggled status 18 times (feed instability or price-testing)
-- VIN `W1KLH6FB9TA261326` toggled status 7 times (feed instability or price-testing)
-- VIN `W1KZH6AB3PB148201` toggled status 14 times (feed instability or price-testing)
+- VIN `W1KLH6FB0RA056051` toggled status 14 times (feed instability or price-testing)
 
 ---
 
@@ -49,7 +46,7 @@ _No active watchlist matches._
 
 _Fails exactly one hard criterion, priced ≤15th pct. Surface only — criteria stand._
 
-- `…137310` · MB Barrington, IL · $61,900 · 23,197 mi · fails: miles > 15,000 · pct 8s
+- `…137310` · MB Barrington, IL · $61,900 · 23,197 mi · fails: miles > 15,000 · pct 7s
 
 ---
 
@@ -69,7 +66,7 @@ Open decisions today:
 
 ---
 
-`mb-wagon-watcher · digest_daily.py · 2026-10-17T14:59:56Z`
+`mb-wagon-watcher · digest_daily.py · 2026-10-18T15:24:51Z`
 
 _To annotate a VIN: edit `config/vin_annotations.json`._  
 _To disqualify a VIN: edit `config/disqualified_vins.json`._  
