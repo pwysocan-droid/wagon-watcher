@@ -1,5 +1,35 @@
 [
   {
+    "vin": "W1KLH6FB0RA056051",
+    "year": 2024,
+    "miles": 5562,
+    "dealer": "Mercedes-Benz of Edison, NJ",
+    "dealer_phone": null,
+    "source": "cpo_feed",
+    "status": "active; cap exception granted 2026-10-19 (decision-log.md) — best spec on the market",
+    "biography": "2024 CPO, black over black, 5,562 mi. Has P34 leather, ventilated seats and the surround camera, so it beats the benchmark config; best spec on the market as of 2026-10-19. Listed Aug 1 at $74,995. For weeks the price flipped between $74,4xx and $74,9xx, which is feed noise, not real cuts. The first real cut came Oct 12, to $73,995 (day 72). Strict percentile 38. A one-VIN exception to the $68k cap allows up to $70,500 all-in (~$68,500 asking + ~$2k NJ→LA shipping). Fair value is put at ~$69.5k all-in: spec and color about +$3k over the benchmark, the 2024 warranty gap about −$1.5k. Keep the BMW out of the deal (decision-log.md: never trade in).",
+    "dealer_archetype": "defensive",
+    "repricing_cadence": "Mostly noise: the price flipped by ±$500 for 10 weeks. One real $1,000 cut, on Oct 12 (day 72).",
+    "verification": {
+      "cpo_sheet": "pending",
+      "carfax": "pending",
+      "autocheck": "pending",
+      "video_walkaround": "pending",
+      "in_service_date": "pending"
+    },
+    "pricing": {
+      "current_ask": 73995,
+      "target_close": null,
+      "walk_number": 68500,
+      "standing_offer": null
+    },
+    "next_action": "Get the in-service date (it sets the 2024 warranty gap), the CPO sheet, Carfax + AutoCheck, and a video walkaround. Open the price conversation anchored on 79+ days on lot. Ask for the free 1-year CPO extension. Walk away above $68,500 asking ($70,500 all-in). No trade-in.",
+    "next_trigger": "next price cut, or day-90 mark ~Oct 30 (month-end)",
+    "call_log": [],
+    "opened_at": "2026-10-19T00:00:00+00:00",
+    "closed_at": null
+  },
+  {
     "vin": "W1KLH6FB1SA114903",
     "year": 2025,
     "miles": 8802,
