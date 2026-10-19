@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-19T11:00:26.455949+00:00",
+  "generated_at": "2026-10-19T13:39:41.633799+00:00",
   "schema_version": 1,
   "vins": {
     "W1KLH6FB4SA129881": {
@@ -9,7 +9,7 @@
       "first_seen_at": "2026-04-26T15:50:37.492543+00:00",
       "current_price": 80345,
       "current_mileage": 6174,
-      "status": "reappeared",
+      "status": "active",
       "observations": [
         {
           "observed_at": "2026-04-26T15:50:37.492543+00:00",
@@ -130,7 +130,7 @@
         "all_time_high": 50987,
         "total_drop_pct": -8.94,
         "n_observations": 17,
-        "days_observed": 127
+        "days_observed": 128
       }
     },
     "W1KLH6FB1SA114903": {
@@ -173,7 +173,7 @@
         "all_time_high": 73998,
         "total_drop_pct": -6.76,
         "n_observations": 5,
-        "days_observed": 123
+        "days_observed": 124
       }
     },
     "W1KLH6FB2TA196545": {
@@ -577,7 +577,7 @@
         "all_time_high": 72158,
         "total_drop_pct": -1.2,
         "n_observations": 4,
-        "days_observed": 51
+        "days_observed": 52
       }
     },
     "W1KZH6AB3NB059242": {
@@ -739,7 +739,7 @@
         "all_time_high": 78939,
         "total_drop_pct": 0.0,
         "n_observations": 3,
-        "days_observed": 43
+        "days_observed": 44
       }
     },
     "W1KLH6FB5SA106366": {
@@ -1029,7 +1029,7 @@
         "all_time_high": 57894,
         "total_drop_pct": -1.73,
         "n_observations": 2,
-        "days_observed": 30
+        "days_observed": 31
       }
     },
     "W1KZH6AB3PB148201": {
@@ -1834,7 +1834,7 @@
       "trim": "E450S4",
       "dealer": "Mercedes-Benz of Akron",
       "first_seen_at": "2026-10-12T22:39:27.640948+00:00",
-      "current_price": 57911,
+      "current_price": 57998,
       "current_mileage": 27312,
       "status": "active",
       "observations": [
@@ -1867,13 +1867,18 @@
           "observed_at": "2026-10-19T05:22:32.527963+00:00",
           "price": 57911,
           "mileage": 27312
+        },
+        {
+          "observed_at": "2026-10-19T13:39:41.210068+00:00",
+          "price": 57998,
+          "mileage": 27312
         }
       ],
       "stats": {
         "all_time_low": 57911,
         "all_time_high": 57998,
-        "total_drop_pct": -0.15,
-        "n_observations": 6,
+        "total_drop_pct": 0.0,
+        "n_observations": 7,
         "days_observed": 6
       }
     },
