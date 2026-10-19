@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-19T02:36:57.120097+00:00",
+  "generated_at": "2026-10-19T02:56:57.933369+00:00",
   "schema_version": 1,
   "vins": {
     "W1KLH6FB4SA129881": {
@@ -1684,7 +1684,7 @@
       "trim": "E450S4",
       "dealer": "Mercedes-Benz of Los Angeles",
       "first_seen_at": "2026-10-12T15:49:10.816277+00:00",
-      "current_price": 74900,
+      "current_price": 75081,
       "current_mileage": 2907,
       "status": "active",
       "observations": [
@@ -1712,13 +1712,18 @@
           "observed_at": "2026-10-18T23:16:31.906049+00:00",
           "price": 74900,
           "mileage": 2907
+        },
+        {
+          "observed_at": "2026-10-19T02:56:57.430952+00:00",
+          "price": 75081,
+          "mileage": 2907
         }
       ],
       "stats": {
         "all_time_low": 74900,
         "all_time_high": 75081,
-        "total_drop_pct": 0.0,
-        "n_observations": 5,
+        "total_drop_pct": 0.24,
+        "n_observations": 6,
         "days_observed": 6
       }
     },
