@@ -5,6 +5,23 @@ so a later re-read doesn't relitigate a settled question. Newest entries
 on top. Spec changes themselves live in criteria.md; this file records the
 reasoning around them.
 
+## 2026-10-19 — Exception to the $68k cap for MB Edison W1KLH6FB0RA056051
+
+- **Car:** MB Edison NJ 2024, 5,562 mi, black/black, with P34 leather,
+  ventilated seats and the surround camera.
+- **Ceiling: $70,500 all-in.** That's about $68,500 asking plus about $2k
+  shipping from NJ to LA. Target a free 1-year CPO extension as part of
+  the deal.
+- **Reasoning:** the spec and color beat the benchmark config, worth about
+  +$3k. The 2024 car's shorter remaining warranty takes off about $1.5k.
+  Fair value is about $69.5k all-in.
+- **Scope: this VIN only.** The $68k cap in criteria.md is unchanged for
+  every other car.
+- **State when logged:** $73,995 asking (cut from $74,995 on Oct 12, after
+  weeks of flip-flopping between $74,4xx and $74,9xx), listed since Aug 1
+  (79 days), strict percentile 38. It needs about $5.5k off asking to reach
+  the ceiling.
+
 ## 2026-10-15 — BMW sell-side: LIST on Cars & Bids, never trade in
 
 - **Offers collected 2026-10-15:**
