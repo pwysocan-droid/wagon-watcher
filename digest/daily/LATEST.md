@@ -1,20 +1,20 @@
 # mb-wagon-watcher · daily digest
 
-**2026-10-18** · 05:00 PT snapshot
+**2026-10-19** · 05:00 PT snapshot
 
-`Generated: 2026-10-18T15:24:51Z`
+`Generated: 2026-10-19T18:21:36Z`
 
 ---
 
 ## § Population
 
-**Population:** 31 active (-1 net since yesterday) · 0 watchlist matches · 0 actionable
+**Population:** 30 active (-2 net since yesterday) · 0 watchlist matches · 0 actionable
 
 ---
 
 ## § Movers
 
-_No price moves vs. start of today (UTC)._
+- W1KZH6AB8PB110575 — MB Akron, OH — $57,911 (-$87 / -0.15%)
 
 ---
 
@@ -23,8 +23,8 @@ _No price moves vs. start of today (UTC)._
 - W1KZH6AB0PB118184 — R B M of Atlanta, Inc., GA — $46,428 (down from $50,987 floor)
 - W1KLH6FB1SA114903 — MB Hoffman Estates, IL — $68,999 (down from $73,998 floor)
 - W1KLH6FB0RA056051 — MB Edison, NJ — $73,995 (down from $74,997 floor)
-- W1KZH6ABXPB125367 — MB Riverside, CA — $53,891 (down from $56,761 floor)
 - W1KLH6FB1SA137310 — MB Barrington, IL — $61,900 (down from $69,900 floor)
+- W1KLH6FB6SA164745 — R B M of Atlanta, Inc., GA — $73,114 (down from $73,900 floor)
 
 _… and 8 more at floor._
 
@@ -32,7 +32,10 @@ _… and 8 more at floor._
 
 ## § Anomalies
 
-- VIN `W1KLH6FB0RA056051` toggled status 14 times (feed instability or price-testing)
+- VIN `W1KLH6FB4SA129881` toggled status 5 times (feed instability or price-testing)
+- VIN `W1KZH6AB3PB111794` toggled status 6 times (feed instability or price-testing)
+- VIN `W1KZH6AB7PB116786` toggled status 5 times (feed instability or price-testing)
+- 1 cron run returned <30 listings (min 29) — possible API cap
 
 ---
 
@@ -66,7 +69,7 @@ Open decisions today:
 
 ---
 
-`mb-wagon-watcher · digest_daily.py · 2026-10-18T15:24:51Z`
+`mb-wagon-watcher · digest_daily.py · 2026-10-19T18:21:36Z`
 
 _To annotate a VIN: edit `config/vin_annotations.json`._  
 _To disqualify a VIN: edit `config/disqualified_vins.json`._  
