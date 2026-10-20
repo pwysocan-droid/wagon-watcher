@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-20T22:58:04.611078+00:00",
+  "generated_at": "2026-10-20T23:18:08.871764+00:00",
   "schema_version": 1,
   "vins": {
     "W1KLH6FB4SA129881": {
@@ -2067,7 +2067,7 @@
       "first_seen_at": "2026-10-14T20:49:27.992873+00:00",
       "current_price": 56990,
       "current_mileage": 30720,
-      "status": "active",
+      "status": "gone",
       "observations": [
         {
           "observed_at": "2026-10-14T20:49:27.992873+00:00",
