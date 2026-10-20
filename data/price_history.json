@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-20T04:44:28.600939+00:00",
+  "generated_at": "2026-10-20T05:04:31.012820+00:00",
   "schema_version": 1,
   "vins": {
     "W1KLH6FB4SA129881": {
@@ -1640,7 +1640,7 @@
       "first_seen_at": "2026-10-09T15:24:06.874344+00:00",
       "current_price": 69000,
       "current_mileage": 15321,
-      "status": "reappeared",
+      "status": "active",
       "observations": [
         {
           "observed_at": "2026-10-09T15:24:06.874344+00:00",
@@ -1834,7 +1834,7 @@
       "trim": "E450S4",
       "dealer": "Mercedes-Benz of Akron",
       "first_seen_at": "2026-10-12T22:39:27.640948+00:00",
-      "current_price": 57911,
+      "current_price": 57998,
       "current_mileage": 27312,
       "status": "active",
       "observations": [
@@ -1897,13 +1897,18 @@
           "observed_at": "2026-10-20T04:04:32.805760+00:00",
           "price": 57911,
           "mileage": 27312
+        },
+        {
+          "observed_at": "2026-10-20T05:04:30.612658+00:00",
+          "price": 57998,
+          "mileage": 27312
         }
       ],
       "stats": {
         "all_time_low": 57911,
         "all_time_high": 57998,
-        "total_drop_pct": -0.15,
-        "n_observations": 12,
+        "total_drop_pct": 0.0,
+        "n_observations": 13,
         "days_observed": 7
       }
     },
@@ -1937,7 +1942,7 @@
       "first_seen_at": "2026-10-13T10:50:32.484601+00:00",
       "current_price": 83845,
       "current_mileage": 3025,
-      "status": "reappeared",
+      "status": "active",
       "observations": [
         {
           "observed_at": "2026-10-13T10:50:32.484601+00:00",
