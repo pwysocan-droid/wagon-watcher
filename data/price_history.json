@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-20T00:03:56.384047+00:00",
+  "generated_at": "2026-10-20T00:23:56.374516+00:00",
   "schema_version": 1,
   "vins": {
     "W1KLH6FB4SA129881": {
@@ -1378,7 +1378,7 @@
       "first_seen_at": "2026-09-28T16:32:18.964338+00:00",
       "current_price": 63584,
       "current_mileage": 44811,
-      "status": "active",
+      "status": "gone",
       "observations": [
         {
           "observed_at": "2026-09-28T16:32:18.964338+00:00",
@@ -1500,7 +1500,7 @@
       "first_seen_at": "2026-10-06T00:29:17.166580+00:00",
       "current_price": 52680,
       "current_mileage": 64696,
-      "status": "gone",
+      "status": "reappeared",
       "observations": [
         {
           "observed_at": "2026-10-06T23:09:34.670158+00:00",
@@ -1640,7 +1640,7 @@
       "first_seen_at": "2026-10-09T15:24:06.874344+00:00",
       "current_price": 69000,
       "current_mileage": 15321,
-      "status": "reappeared",
+      "status": "active",
       "observations": [
         {
           "observed_at": "2026-10-09T15:24:06.874344+00:00",
@@ -1917,7 +1917,7 @@
       "first_seen_at": "2026-10-13T10:50:32.484601+00:00",
       "current_price": 83845,
       "current_mileage": 3025,
-      "status": "reappeared",
+      "status": "active",
       "observations": [
         {
           "observed_at": "2026-10-13T10:50:32.484601+00:00",
