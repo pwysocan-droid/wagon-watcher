@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-21T15:31:58.474996+00:00",
+  "generated_at": "2026-10-21T15:51:55.984343+00:00",
   "schema_version": 1,
   "vins": {
     "W1KLH6FB4SA129881": {
@@ -27,7 +27,7 @@
         "all_time_high": 80345,
         "total_drop_pct": 0.0,
         "n_observations": 2,
-        "days_observed": 177
+        "days_observed": 178
       }
     },
     "W1KZH6AB0PB118184": {
@@ -317,7 +317,7 @@
       "trim": "E450S4",
       "dealer": "Mercedes-Benz of Edison",
       "first_seen_at": "2026-08-01T01:56:33.151955+00:00",
-      "current_price": 75225,
+      "current_price": 73995,
       "current_mileage": 5562,
       "status": "active",
       "observations": [
@@ -395,13 +395,18 @@
           "observed_at": "2026-10-21T15:11:47.533665+00:00",
           "price": 75225,
           "mileage": 5562
+        },
+        {
+          "observed_at": "2026-10-21T15:51:53.842671+00:00",
+          "price": 73995,
+          "mileage": 5562
         }
       ],
       "stats": {
         "all_time_low": 73995,
         "all_time_high": 75225,
-        "total_drop_pct": 0.31,
-        "n_observations": 15,
+        "total_drop_pct": -1.33,
+        "n_observations": 16,
         "days_observed": 81
       }
     },
@@ -1253,7 +1258,7 @@
       "first_seen_at": "2026-09-24T17:27:33.514676+00:00",
       "current_price": 72900,
       "current_mileage": 7003,
-      "status": "reappeared",
+      "status": "gone",
       "observations": [
         {
           "observed_at": "2026-09-24T17:27:33.514676+00:00",
@@ -1609,7 +1614,7 @@
       "first_seen_at": "2026-10-06T13:47:07.426243+00:00",
       "current_price": 59995,
       "current_mileage": 28360,
-      "status": "reappeared",
+      "status": "gone",
       "observations": [
         {
           "observed_at": "2026-10-06T13:47:07.426243+00:00",
@@ -1754,7 +1759,7 @@
         "all_time_high": 75081,
         "total_drop_pct": 0.0,
         "n_observations": 7,
-        "days_observed": 8
+        "days_observed": 9
       }
     },
     "W1KZH6AB4PB178727": {
@@ -1763,7 +1768,7 @@
       "dealer": "Knauz Continental Autos, Inc.",
       "first_seen_at": "2026-10-12T15:49:10.816277+00:00",
       "current_price": 57990,
-      "current_mileage": 29466,
+      "current_mileage": 29465,
       "status": "active",
       "observations": [
         {
@@ -1775,14 +1780,19 @@
           "observed_at": "2026-10-21T15:11:47.533665+00:00",
           "price": 57990,
           "mileage": 29466
+        },
+        {
+          "observed_at": "2026-10-21T15:51:53.842671+00:00",
+          "price": 57990,
+          "mileage": 29465
         }
       ],
       "stats": {
         "all_time_low": 57990,
         "all_time_high": 57990,
         "total_drop_pct": 0.0,
-        "n_observations": 2,
-        "days_observed": 8
+        "n_observations": 3,
+        "days_observed": 9
       }
     },
     "W1KLH6FB1RA026122": {
@@ -1805,7 +1815,7 @@
         "all_time_high": 76849,
         "total_drop_pct": 0.0,
         "n_observations": 1,
-        "days_observed": 8
+        "days_observed": 9
       }
     },
     "W1KLH6FB8SA101288": {
@@ -1828,7 +1838,7 @@
         "all_time_high": 68988,
         "total_drop_pct": 0.0,
         "n_observations": 1,
-        "days_observed": 8
+        "days_observed": 9
       }
     },
     "W1KZH6ABXPB183379": {
@@ -1851,7 +1861,7 @@
         "all_time_high": 55477,
         "total_drop_pct": 0.0,
         "n_observations": 1,
-        "days_observed": 8
+        "days_observed": 9
       }
     },
     "W1KZH6AB8PB110575": {
@@ -1947,7 +1957,7 @@
       "trim": "E450S4",
       "dealer": "Mercedes-Benz of Manhattan",
       "first_seen_at": "2026-10-12T22:39:27.640948+00:00",
-      "current_price": 75900,
+      "current_price": 77900,
       "current_mileage": 4786,
       "status": "active",
       "observations": [
@@ -1960,13 +1970,18 @@
           "observed_at": "2026-10-21T15:11:47.533665+00:00",
           "price": 75900,
           "mileage": 4786
+        },
+        {
+          "observed_at": "2026-10-21T15:51:53.842671+00:00",
+          "price": 77900,
+          "mileage": 4786
         }
       ],
       "stats": {
         "all_time_low": 75900,
         "all_time_high": 77900,
-        "total_drop_pct": -2.57,
-        "n_observations": 2,
+        "total_drop_pct": 0.0,
+        "n_observations": 3,
         "days_observed": 8
       }
     },
