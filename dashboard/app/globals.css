@@ -127,3 +127,16 @@ table {
 
 /* Out-of-criteria rows are greyed without losing readability */
 .greyed { color: var(--muted); }
+
+/* /shortlist cards: two columns on desktop, stacked on phones. */
+.shortlist-card {
+  border: 1px solid var(--rule);
+  padding: 16px;
+  font-size: 11px;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 16px;
+}
+@media (max-width: 720px) {
+  .shortlist-card { grid-template-columns: minmax(0, 1fr); }
+}
