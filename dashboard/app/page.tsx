@@ -162,6 +162,15 @@ export default async function Page() {
           </div>
           <div>
             <a
+              href="/shortlist"
+              className="vin-link"
+              style={{ borderBottomColor: "currentColor", color: "var(--signal)", fontWeight: 700 }}
+            >
+              → shortlist
+            </a>
+          </div>
+          <div>
+            <a
               href="/v2"
               className="vin-link"
               style={{ borderBottomColor: "currentColor" }}
