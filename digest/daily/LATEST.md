@@ -1,66 +1,70 @@
 # mb-wagon-watcher · daily digest
 
-**2026-10-21** · 05:00 PT snapshot
+**2026-10-22** · 05:00 PT snapshot
 
-`Generated: 2026-10-21T16:39:01Z`
+`Generated: 2026-10-22T16:40:00Z`
 
 ---
 
 ## § Population
 
-**Population:** 21 active (-11 net since yesterday) · 0 watchlist matches · 0 actionable
+**Population:** 32 active (-6 net since yesterday) · 1 watchlist match · 1 actionable
 
 ---
 
 ## § Movers
 
-_No price moves vs. start of today (UTC)._
+- W1KZH6AB7PB116786 — MB Hilton Head, SC — $60,084 (-$3,500 / -5.50%)
 
 ---
 
 ## § Floor watch
 
 - W1KZH6AB0PB118184 — R B M of Atlanta, Inc., GA — $46,428 (down from $50,987 floor)
-- W1KLH6FB1SA114903 — MB Hoffman Estates, IL — $68,999 (down from $73,998 floor)
-- W1KLH6FB0RA056051 — MB Edison, NJ — $73,995 (down from $75,225 floor)
-- W1KLH6FB1SA137310 — MB Barrington, IL — $61,900 (down from $69,900 floor)
 - W1KLH6FB6SA164745 — R B M of Atlanta, Inc., GA — $73,114 (down from $73,900 floor)
+- W1KZH6AB5PB118889 — Fletcher Jones Motorc…, CA — $50,892 (down from $52,894 floor)
+- W1KZH6AB4NB056172 — MB Elmbrook, WI — $52,900 (down from $54,494 floor)
+- W1KZH6AB7PB116786 — MB Hilton Head, SC — $60,084 (down from $65,584 floor)
 
-_… and 5 more at floor._
+_… and 8 more at floor._
 
 ---
 
 ## § Anomalies
 
-- VIN `W1KLH6FB0SA155958` toggled status 3 times (feed instability or price-testing)
-- VIN `W1KLH6FB2SA159333` toggled status 4 times (feed instability or price-testing)
-- VIN `W1KLH6FB2TA196545` toggled status 4 times (feed instability or price-testing)
-- VIN `W1KLH6FB4RA056120` toggled status 3 times (feed instability or price-testing)
-- VIN `W1KLH6FB4SA129881` toggled status 3 times (feed instability or price-testing)
-- VIN `W1KLH6FB5RA026219` toggled status 3 times (feed instability or price-testing)
-- VIN `W1KLH6FB5SA134071` toggled status 3 times (feed instability or price-testing)
-- VIN `W1KLH6FB6RA026262` toggled status 3 times (feed instability or price-testing)
-- VIN `W1KLH6FB8TA197277` toggled status 4 times (feed instability or price-testing)
-- VIN `W1KLH6FB9SA152900` toggled status 3 times (feed instability or price-testing)
-- VIN `W1KLH6FB9SA163752` toggled status 5 times (feed instability or price-testing)
-- VIN `W1KLH6FBXRA026247` toggled status 3 times (feed instability or price-testing)
-- VIN `W1KZH6AB3PB111794` toggled status 24 times (feed instability or price-testing)
-- VIN `W1KZH6AB4NB056172` toggled status 4 times (feed instability or price-testing)
-- VIN `W1KZH6AB5PB178834` toggled status 5 times (feed instability or price-testing)
-- VIN `W1KZH6AB6PB147527` toggled status 4 times (feed instability or price-testing)
-- VIN `W1KZH6AB7PB116786` toggled status 4 times (feed instability or price-testing)
-- VIN `W1KZH6ABXPB101554` toggled status 24 times (feed instability or price-testing)
-- 1 cron run took >60s (max 62.7s) — API slowness
-- 56 cron runs returned <30 listings (min 21) — possible API cap
-- New dealer first-seen: Park Place Motorcars Dallas
-- New dealer first-seen: Mercedes-Benz of Coral Gables
-- New dealer first-seen: Mercedes-Benz of Shrewsbury
+- VIN `W1KLH6FB0SA155958` toggled status 13 times (feed instability or price-testing)
+- VIN `W1KLH6FB1RA026170` toggled status 14 times (feed instability or price-testing)
+- VIN `W1KLH6FB1SA137310` toggled status 3 times (feed instability or price-testing)
+- VIN `W1KLH6FB2SA159333` toggled status 15 times (feed instability or price-testing)
+- VIN `W1KLH6FB2TA196545` toggled status 16 times (feed instability or price-testing)
+- VIN `W1KLH6FB4RA056120` toggled status 15 times (feed instability or price-testing)
+- VIN `W1KLH6FB5RA026219` toggled status 13 times (feed instability or price-testing)
+- VIN `W1KLH6FB5SA134071` toggled status 16 times (feed instability or price-testing)
+- VIN `W1KLH6FB6RA026262` toggled status 15 times (feed instability or price-testing)
+- VIN `W1KLH6FB6SA164745` toggled status 4 times (feed instability or price-testing)
+- VIN `W1KLH6FB8SA101288` toggled status 3 times (feed instability or price-testing)
+- VIN `W1KLH6FB8TA197277` toggled status 15 times (feed instability or price-testing)
+- VIN `W1KLH6FB9SA151505` toggled status 4 times (feed instability or price-testing)
+- VIN `W1KLH6FB9SA152900` toggled status 13 times (feed instability or price-testing)
+- VIN `W1KLH6FB9SA163752` toggled status 18 times (feed instability or price-testing)
+- VIN `W1KLH6FBXRA026247` toggled status 15 times (feed instability or price-testing)
+- VIN `W1KZH6AB0PB118184` toggled status 4 times (feed instability or price-testing)
+- VIN `W1KZH6AB3PB111794` toggled status 15 times (feed instability or price-testing)
+- VIN `W1KZH6AB4NB056172` toggled status 13 times (feed instability or price-testing)
+- VIN `W1KZH6AB5PB149060` toggled status 4 times (feed instability or price-testing)
+- VIN `W1KZH6AB5PB178834` toggled status 4 times (feed instability or price-testing)
+- VIN `W1KZH6AB6PB147527` toggled status 15 times (feed instability or price-testing)
+- VIN `W1KZH6AB7PB116786` toggled status 15 times (feed instability or price-testing)
+- VIN `W1KZH6ABXPB101554` toggled status 15 times (feed instability or price-testing)
+- 17 cron runs returned <30 listings (min 21) — possible API cap
+- New dealer first-seen: Mercedes-Benz of West Chester
+- New dealer first-seen: Mercedes-Benz of Goldens Bridge
 
 ---
 
 ## § Watchlist matches
 
-_No active watchlist matches._
+- W1KLH6FB9SA152900 — MB Rochester, MN — $65,095
 
 ---
 
@@ -68,17 +72,17 @@ _No active watchlist matches._
 
 _Fails exactly one hard criterion, priced ≤15th pct. Surface only — criteria stand._
 
-- `…137310` · MB Barrington, IL · $61,900 · 23,197 mi · fails: miles > 15,000 · pct 8s
+- `…155958` · Park Place Motorcars …, TX · $70,577 · 5,343 mi · fails: price > $68,000 · pct 15s
 
 ---
 
 ## § Decision queue
 
 Open decisions today:
-- `…056051` · Mercedes-Benz of Edison, NJ (Ray Catena) · $73,995 · next: dealer's written itemized out-the-door quote + in-service date; then within 48h of the next lot sweep (every 4-10 days) · active; cap exception granted 2026-10-19 — best spec; strategy: negotiate now, not wait (dealer cuts unlikely to reach walk number)
-- `…114903` · Mercedes-Benz of Hoffman Estates, IL · $68,999 · next: dealer call result (same day) · vanished from consumer surfaces 2026-10-15, feed still active; dealer call pending
-- `…212378` · Mercedes-Benz of Los Angeles, CA (Lithia) · $74,900 · next: within 48h of the first CarGurus batch cut on this VIN (check every 2-3 days from Oct 29) · active; no real cut (price flips between $74,900 and $75,081 as fees are shown or hidden)
-- `…163752` · Mercedes-Benz of Manhattan, NY · $72,900 (gone from feed) · next: day-45 mark ~Nov 8, or any price cut before then · active; uncut since listing Sep 24
+- `…056051` · Mercedes-Benz of Edison, NJ (Ray Catena) · $75,225 · next: dealer's written itemized out-the-door quote + in-service date; then within 48h of the next lot sweep (every 4-10 days) · active; cap exception granted 2026-10-19 — best spec; strategy: negotiate now, not wait (dealer cuts unlikely to reach walk number)
+- `…114903` · Mercedes-Benz of Hoffman Estates, IL · $68,999 (gone from feed) · next: dealer call result (same day) · vanished from consumer surfaces 2026-10-15, feed still active; dealer call pending
+- `…212378` · Mercedes-Benz of Los Angeles, CA (Lithia) · $75,081 · next: within 48h of the first CarGurus batch cut on this VIN (check every 2-3 days from Oct 29) · active; no real cut (price flips between $74,900 and $75,081 as fees are shown or hidden)
+- `…163752` · Mercedes-Benz of Manhattan, NY · $72,400 (gone from feed) · next: day-45 mark ~Nov 8, or any price cut before then · active; uncut since listing Sep 24
 - `…164745` · R B M of Atlanta, GA · $73,114 · next: mid-Nov (~day 70), or a second price cut · active; one small cut
 - `…133447` · Mercedes-Benz of Georgetown, TX · $62,999 (manual) · next: first call · found off-feed 2026-10-15; not called
 - `…129436` · Mercedes-Benz of Youngstown, OH · $60,778 (manual) · next: first call · found off-feed 2026-10-15; not called
@@ -89,7 +93,7 @@ Open decisions today:
 
 ---
 
-`mb-wagon-watcher · digest_daily.py · 2026-10-21T16:39:01Z`
+`mb-wagon-watcher · digest_daily.py · 2026-10-22T16:40:00Z`
 
 _To annotate a VIN: edit `config/vin_annotations.json`._  
 _To disqualify a VIN: edit `config/disqualified_vins.json`._  
