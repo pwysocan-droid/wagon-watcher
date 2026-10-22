@@ -38,6 +38,36 @@
     "closed_at": null
   },
   {
+    "vin": "W1KLH6FB8RA053835",
+    "year": 2024,
+    "miles": 4786,
+    "dealer": "Mercedes-Benz of Manhattan, NY (MBUSA factory store)",
+    "dealer_phone": null,
+    "source": "cpo_feed",
+    "status": "active; cut twice in 3 weeks; spec twin of Edison; added 2026-10-22",
+    "biography": "Stock 710615. 2024 CPO, black over black leather with ventilated seats, memory seats, Blind Spot and Burmester sound personalization; 1 owner, clean. Same feed-visible option set as Edison W1KLH6FB0RA056051, with 776 fewer miles and no 'non-personal use' flag. Cars.com history: listed Oct 1 at $79,900; Oct 3 −$2,000; Oct 17 −$2,000, to $75,900. No additional dealer fees (confirmed on Cars.com), so $75,900 is the real price before tax. Edison's real price is $75,225–76,124 with its $899 doc fee, so this car is now at or below Edison all-in. It is over the $68k cap, and the Edison cap exception covers that VIN only. Shipping NY→LA ~$2k; no NY sales tax with out-of-state delivery. No trade-in.",
+    "dealer_archetype": "batch_repricer",
+    "repricing_cadence": "Factory-owned store. Reprices the whole lot about every 2 weeks (Oct 3, Oct 17-18) in round $1,000/$2,000 steps; prices end in $X,900. Next sweep likely ~Oct 31 (inferred); this car was cut in both recent sweeps.",
+    "verification": {
+      "cpo_sheet": "pending",
+      "carfax": "pending",
+      "autocheck": "pending",
+      "video_walkaround": "pending",
+      "in_service_date": "pending"
+    },
+    "pricing": {
+      "current_ask": 75900,
+      "target_close": null,
+      "walk_number": null,
+      "standing_offer": null
+    },
+    "next_action": "Get the in-service date (2024 warranty gap), Carfax, CPO sheet and a video walkaround. Watch the ~Oct 31 sweep (expected −$2,000 to $73,900). Use it as the comparison in the Edison negotiation and vice versa. Decide whether it gets a cap exception like Edison's.",
+    "next_trigger": "next lot sweep ~Oct 31 (watch for a cut to ~$73,900), or an Edison stall",
+    "call_log": [],
+    "opened_at": "2026-10-22T00:00:00+00:00",
+    "closed_at": null
+  },
+  {
     "vin": "W1KLH6FB1SA114903",
     "year": 2025,
     "miles": 8802,
