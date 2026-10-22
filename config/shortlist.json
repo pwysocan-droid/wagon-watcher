@@ -2,17 +2,104 @@
   "_doc": "Drives the dashboard /shortlist page. Live cars matching `rule` show automatically; `pinned` VINs always show (as gone once they leave the feed); `excluded` VINs never show. `cars` holds per-VIN dealer listing links and notes; `dealers` holds per-dealer pricing behavior keyed by the feed's dealer_name.",
   "rule": {
     "max_miles": 10000,
-    "exclude_color_contains": ["white"]
+    "exclude_color_contains": [
+      "white"
+    ]
   },
-  "pinned": ["W1KLH6FB1SA114903"],
+  "pinned": [
+    "W1KLH6FB1SA114903"
+  ],
   "excluded": {
     "W1KLH6FB9SA152900": "Rochester 2025: Sonoran Brown / Macchiato Beige color combo is a no-go (2026-10-22)"
   },
-  "cars": {},
+  "cars": {
+    "W1KLH6FB5SA134071": {
+      "dealer_listing_url": "https://www.mbofscarborough.com/inventory/pre-owned-2025-mercedes-benz-e-450-e-450-awd-4matic-station-wagon-w1klh6fb5sa134071/",
+      "url_kind": "dealer_vdp",
+      "stock": "SA134071",
+      "fees_note": "$695 doc fee: $71,266 all-in on Cars.com, but $71,166 on the dealer site ($100 discrepancy across their listings).",
+      "car_price_history": "Cars.com: listed Oct 20 at $71,266; no changes.",
+      "flags": "CPO status unclear: the dealer site labels it 'Pre-Owned', and the seller notes describe a 1-month/1,000-mi warranty and a 3-day exchange, which aren't CPO terms. MBUSA and Cars.com say CPO. Get CPO status in writing."
+    },
+    "W1KLH6FB0SA155958": {
+      "dealer_listing_url": "https://www.mercedesdallas.com/certified/Mercedes-Benz/2025-Mercedes-Benz-E-Class-f3a18ddbac1843033c35bae52593ed43.htm",
+      "url_kind": "dealer_vdp",
+      "stock": "PMDTSA155958",
+      "fees_note": "$225 doc fee ($70,802). Disclaimer mentions a 'Preferred Package' of dealer add-ons and addendums, so ask what's on this car.",
+      "car_price_history": "On the dealer site since Sep 27; Cars.com since Oct 18 at $70,802, no changes.",
+      "flags": "1 owner, clean AutoCheck."
+    },
+    "W1KLH6FB0RA056051": {
+      "dealer_listing_url": "https://www.raycatenaedison.com/inventory/certified-used-2024-mercedes-benz-e-class-e-450-4matic%c2%ae-4d-wagon-w1klh6fb0ra056051/",
+      "url_kind": "dealer_vdp",
+      "stock": "P07364",
+      "fees_note": "$899 doc fee, folded into advertised prices since Oct 16 ($75,225 on Cars.com). The dealer site shows $76,124, which may count the fee twice. Get an itemized out-the-door quote.",
+      "car_price_history": "Cars.com: listed Jul 26 $74,995; Aug 11 −$500; Sep 28 −$107; Oct 6 −$393 ($73,995); Oct 14 +$331; Oct 16 +$899 (fee folded in).",
+      "flags": "AutoCheck flags 'non-personal use' (loaner or demo?), so the in-service date is critical. Email of Oct 20 unanswered.",
+      "notes": "Case file: cap exception, ceiling $70,500 all-in. Best spec: P34 + ventilated seats."
+    },
+    "W1KLH6FB8RA053835": {
+      "dealer_listing_url": "https://www.mbmanhattan.com/inventory/certified-used-2024-mercedes-benz-e-450-4matic%c2%ae-4d-wagon-w1klh6fb8ra053835/",
+      "url_kind": "dealer_vdp",
+      "stock": "710615",
+      "fees_note": "No additional dealer fees (confirmed on Cars.com): $75,900 is the price before tax.",
+      "car_price_history": "Cars.com: listed Oct 1 $79,900; Oct 3 −$2,000; Oct 17 −$2,000 ($75,900).",
+      "flags": "1 owner, clean. Spec twin of Edison (black/black leather, ventilated seats)."
+    },
+    "W1KLH6FB1RA026170": {
+      "dealer_listing_url": "https://www.mbofwestchester.com/inventory/certified-used-2024-mercedes-benz-e-class-e-450-4matic%c2%ae-4d-wagon-w1klh6fb1ra026170/",
+      "url_kind": "dealer_vdp",
+      "stock": "RA026170",
+      "fees_note": "$490 doc fee on top ($76,471 all-in).",
+      "car_price_history": "Cars.com: listed Sep 16 $76,471; Sep 30 −$500; Oct 13 +$500 (back to start).",
+      "flags": "1 owner, clean, original MSRP $93,490. Dealer also has CPO wagons W1KLH6FB0SA137606 (2025, $74,471) and W1KLH6FB2RA026131 (2024, $78,471)."
+    },
+    "W1KLH6FB2SA159333": {
+      "dealer_listing_url": "https://www.mbmanhattan.com/inventory/certified-used-2025-mercedes-benz-e-450-4matic%c2%ae-4d-wagon-w1klh6fb2sa159333/",
+      "url_kind": "dealer_vdp",
+      "stock": "710494A",
+      "fees_note": "No additional dealer fees: $79,900 is the price before tax.",
+      "car_price_history": "Cars.com: listed Sep 19 $81,900; Oct 3 −$2,000. Skipped in the Oct 17 sweep.",
+      "flags": "632 mi, MANUFAKTUR Alpine Grey. Cars.com rates it above market."
+    },
+    "W1KLH6FB8TA197277": {
+      "flags": "NOT on the dealer's own site (all 350 vehicles checked Oct 22) or on Cars.com, despite MBUSA listing it at $83,245. It may be sold, pending, or a loaner not yet released."
+    },
+    "W1KLH6FB9SA152900": {
+      "dealer_listing_url": "https://www.mbofrochester.com/certified/Mercedes-Benz/2025-Mercedes-Benz-E-Class-f4fa01f0ac180b5a8d6e7471430b5d93.htm",
+      "url_kind": "dealer_vdp",
+      "stock": "PJR1760",
+      "notes": "Excluded: color combo."
+    }
+  },
   "dealers": {
+    "Mercedes-Benz of Scarborough": {
+      "group": "Group 1 Automotive (formerly Prime)",
+      "behavior": "Pricing looks software-driven, with odd-dollar prices: small ± moves around the 1st–4th of the month, rare large cuts (a GLS took one −$4,665 cut on Aug 7, then sat 2.5 months unchanged). Slow and unpredictable. (Hard data from 3 cars; the cadence is inferred.)"
+    },
+    "Park Place Motorcars Dallas": {
+      "group": "Park Place (Asbury Automotive)",
+      "behavior": "Thin data: Cars.com histories reset when cars are relisted. The only visible cut was −$637 (~1%) on day 41. Prices mostly end in 98; many CPO cars are ex-loaners. Expect small, infrequent moves."
+    },
     "Mercedes-Benz of Edison": {
       "group": "Ray Catena (private NJ group)",
       "behavior": "Reprices the whole lot in sweeps every 4–10 days, mostly $500 nudges; deeper cuts Jun 25 and Oct 10–17. The group's verified out-the-door quotes average 0.4% above list. $899 doc fee, folded into advertised prices since Oct 16, so the feed now flips between $73,995 and $75,225."
+    },
+    "Mercedes-Benz of Manhattan": {
+      "group": "Mercedes-Benz USA (factory-owned)",
+      "behavior": "Reprices the whole lot about every 2 weeks (Oct 3, Oct 17–18) in round $1,000/$2,000 steps; prices end in $X,900; no extra dealer fees. The first cut comes at the next sweep. Next sweep likely ~Oct 31 (inferred)."
+    },
+    "Mercedes-Benz of West Chester": {
+      "group": "Piazza Auto Group",
+      "behavior": "Prices move BOTH ways on shared dates: Sep 30 cuts of $500–1,000, then Oct 13 increases of $500; another wagon was raised $3k within 4 days of listing. This looks like market-tracking software that raises prices when supply tightens, so waiting isn't guaranteed to pay. $490 doc fee."
+    },
+    "Mercedes-Benz of Easton": {
+      "group": "Germain Motor Company",
+      "behavior": "Frequent car-by-car repricing every 1–13 days, $700–1,800 steps at odd prices (an S580 was cut 6 times in 6 weeks). Loaner-stock cars were moved into CPO retail on Oct 22. $398 doc + $50 filing fees."
+    },
+    "Mercedes-Benz of Rochester": {
+      "group": "Ed Napleton Automotive Group",
+      "behavior": "Lot-wide sweeps every ~5–9 days, $200–2,000 steps; first cut 5–11 days after listing; prices end in $X,095 or $X,595. $400 in fees."
     }
   }
 }
