@@ -5,6 +5,17 @@ so a later re-read doesn't relitigate a settled question. Newest entries
 on top. Spec changes themselves live in criteria.md; this file records the
 reasoning around them.
 
+## 2026-10-22 — Rochester 2025 W1KLH6FB9SA152900: REJECTED on color
+
+- **Car:** MB Rochester MN 2025, Sonoran Brown over Macchiato Beige/black
+  MB-Tex, 5,731 mi.
+- **Price:** $65,095, at the 3rd percentile. It's the only car under the
+  $68k cap and a watchlist match since Oct 21.
+- **Decision: rejected.** The color combo is a no-go, whatever the price.
+- **Where it's recorded:** marked in `config/disqualified_vins.json`, so
+  the digest shows it as DISQUALIFIED, and excluded from the dashboard
+  shortlist.
+
 ## 2026-10-19 — Exception to the $68k cap for MB Edison W1KLH6FB0RA056051
 
 - **Car:** MB Edison NJ 2024, 5,562 mi, black/black, with P34 leather,

@@ -22,6 +22,16 @@ Newest entries on top within each dealer.
 
 ---
 
+## Mercedes-Benz of Edison (Ray Catena), W1KLH6FB0RA056051
+
+### 2026-10-20 · Mercedes-Benz of Edison · …056051 · email
+- Spoke to: (email; recipient not recorded)
+- Quoted: none
+- Docs promised: none
+- Red flags: no reply after 48h (as of 2026-10-22)
+- Next step: phone follow-up; ask for the used-car or internet sales manager by name
+- Confirmed in writing? n/a
+
 ## Mercedes-Benz of Los Angeles (Lithia), W1KLH6FB3TA212378
 
 _No contact yet._

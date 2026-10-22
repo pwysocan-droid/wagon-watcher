@@ -1,0 +1,18 @@
+{
+  "_doc": "Drives the dashboard /shortlist page. Live cars matching `rule` show automatically; `pinned` VINs always show (as gone once they leave the feed); `excluded` VINs never show. `cars` holds per-VIN dealer listing links and notes; `dealers` holds per-dealer pricing behavior keyed by the feed's dealer_name.",
+  "rule": {
+    "max_miles": 10000,
+    "exclude_color_contains": ["white"]
+  },
+  "pinned": ["W1KLH6FB1SA114903"],
+  "excluded": {
+    "W1KLH6FB9SA152900": "Rochester 2025: Sonoran Brown / Macchiato Beige color combo is a no-go (2026-10-22)"
+  },
+  "cars": {},
+  "dealers": {
+    "Mercedes-Benz of Edison": {
+      "group": "Ray Catena (private NJ group)",
+      "behavior": "Reprices the whole lot in sweeps every 4–10 days, mostly $500 nudges; deeper cuts Jun 25 and Oct 10–17. The group's verified out-the-door quotes average 0.4% above list. $899 doc fee, folded into advertised prices since Oct 16, so the feed now flips between $73,995 and $75,225."
+    }
+  }
+}
