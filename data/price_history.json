@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-22T14:13:23.810988+00:00",
+  "generated_at": "2026-10-22T14:33:20.368204+00:00",
   "schema_version": 1,
   "vins": {
     "W1KLH6FB4SA129881": {
@@ -675,7 +675,7 @@
       "first_seen_at": "2026-09-04T07:19:29.045797+00:00",
       "current_price": 61900,
       "current_mileage": 23212,
-      "status": "reappeared",
+      "status": "active",
       "observations": [
         {
           "observed_at": "2026-09-04T07:19:29.045797+00:00",
@@ -2557,6 +2557,29 @@
       "stats": {
         "all_time_low": 75981,
         "all_time_high": 75981,
+        "total_drop_pct": 0.0,
+        "n_observations": 1,
+        "days_observed": 0
+      }
+    },
+    "W1KZH6AB5PB179983": {
+      "year": 2023,
+      "trim": "E450S4",
+      "dealer": "Mercedes-Benz of Goldens Bridge",
+      "first_seen_at": "2026-10-22T12:29:37.482737+00:00",
+      "current_price": 64174,
+      "current_mileage": 12457,
+      "status": "active",
+      "observations": [
+        {
+          "observed_at": "2026-10-22T14:33:15.346670+00:00",
+          "price": 64174,
+          "mileage": 12457
+        }
+      ],
+      "stats": {
+        "all_time_low": 64174,
+        "all_time_high": 64174,
         "total_drop_pct": 0.0,
         "n_observations": 1,
         "days_observed": 0
