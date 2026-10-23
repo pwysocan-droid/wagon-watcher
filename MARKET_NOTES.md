@@ -26,7 +26,7 @@ case file. Three manual routines fill the gap.
 - Also check off-feed cars already in the queue for price changes. Cars.com
   detail pages show full price history.
 
-**2. MB LA batch-cut watch (from Oct 29).**
+**2. MB LA batch-cut watch (from Oct 29). STOPPED 2026-10-23:** MB LA is excluded on color (white). Kept here as the method for any batch-repricing dealer.
 - Every 2–3 days, check W1KLH6FB3TA212378 on CarGurus for a real price
   change, ignoring the $74,900 ↔ $75,081 fee flapping. CarGurus' per-listing
   JSON (`detailListingJson.action?inventoryListing=460915753`) has the

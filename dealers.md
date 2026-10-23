@@ -22,7 +22,20 @@ Newest entries on top within each dealer.
 
 ---
 
+## Mercedes-Benz of Manhattan (MBUSA factory store), W1KLH6FB8RA053835
+
+### 2026-10-22 · Mercedes-Benz of Manhattan · …053835 · phone/email
+- Spoke to: Jason Rehklau, 347-978-5218
+- Quoted: fees $225 doc + $95 gas surcharge. The standing offer sent was $67,000.
+- Docs promised (and by when): none yet
+- Red flags: Cars.com says "the seller has confirmed no additional dealership fees apply", but $320 in fees was quoted.
+- Next step: awaiting the pre-owned manager (Joe); dealer wants to close by Oct 31. Walk away above $68,500.
+- Confirmed in writing? (record when done)
+
 ## Mercedes-Benz of Edison (Ray Catena), W1KLH6FB0RA056051
+
+_Paused 2026-10-23: superseded by Manhattan 2024._
+
 
 ### 2026-10-20 · Mercedes-Benz of Edison · …056051 · email
 - Spoke to: (email; recipient not recorded)
@@ -34,8 +47,8 @@ Newest entries on top within each dealer.
 
 ## Mercedes-Benz of Los Angeles (Lithia), W1KLH6FB3TA212378
 
-_No contact yet._
+_Closed 2026-10-23: excluded on color (white). No contact made._
 
 ## Mercedes-Benz of Hoffman Estates, W1KLH6FB1SA114903
 
-_Called 2026-10-15; outcome not yet logged._
+_Closed 2026-10-23: gone from feed Oct 22. The dealer was never called (the Oct 15 call was never made); outcome unknown._

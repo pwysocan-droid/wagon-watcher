@@ -6,7 +6,7 @@
     "dealer": "Mercedes-Benz of Edison, NJ (Ray Catena)",
     "dealer_phone": null,
     "source": "cpo_feed",
-    "status": "active; initial email 2026-10-20 unanswered after 48h; cap exception granted 2026-10-19",
+    "status": "paused — superseded by Manhattan 2024 (same spec/color, cleaner history, responsive dealer); email unanswered since Oct 20.",
     "biography": "Stock P07364. 2024 CPO, black over black, 5,562 mi, original MSRP $95,155. Equipment: P34 leather, ventilated seats, surround camera, Winter pkg, Burmester, panoramic roof, 19in wheels, OFFROAD transparent hood, Active Parking Assist; best spec on the market as of 2026-10-19. On Cars.com since Jul 26 (day 85 on Oct 19). Cuts: $74,995 → $74,495 (Aug 11) → $74,388 (Sep 28) → $73,995 (Oct 6; MBUSA feed still shows this). Then Oct 14 $74,326 and Oct 16 $75,225 on Cars.com, when an $899 lot-wide jump looks like the doc fee being folded into advertised prices. CarEdge shows $76,124, possibly double-counting the fee. AutoCheck: clean title, 1 owner, no accidents, but marked NON-PERSONAL USE (possibly a loaner or demo), so the factory warranty may have started before the car was sold; the in-service date is critical. Dealer notes say 'Clean CARFAX' and 'priced below KBB Fair Purchase Price'. The dealer doesn't list on CarGurus. On CarEdge, the group's verified out-the-door quotes average 0.4% ABOVE list: they price to market and rarely give a discount. Cap exception (decision-log.md, 2026-10-19): ceiling $70,500 all-in, which is ~$68,500 asking + ~$2k shipping. No trade-in.",
     "dealer_archetype": "batch_repricer",
     "repricing_cadence": "Ray Catena (private NJ group) reprices the whole lot in sweeps every 4-10 days (Aug 3/11/25-31, Sep 3/19/27-28, Oct 2/5-7/10-13/16-17), mostly $500 nudges. Deeper cuts came Jun 25 and Oct 10-17, and the odd-dollar endings from Oct 17 suggest an algorithmic pricing tool has switched on. This car was skipped in the Oct 17 sweep. Aged-lot benchmarks (Cars.com, 23 cars): about -2% by day 60, -1 to -5% by day 90, -4 to -6% by day 120; only 2 of 23 reached -8% or more (days 81-300). No month-end effect; deep cuts fell mid-month. Estimates: ~60% chance of a step to ~$72.5-73.5k within 1-3 sweeps; ~35-40% of reaching $70.5k by day 120; ~15% of reaching $68.5k by year-end through the dealer's own cuts.",
@@ -24,7 +24,7 @@
       "standing_offer": null
     },
     "next_action": "1) Email first, no number yet: itemized out-the-door price for out-of-state delivery (ST-10, no NJ sales tax, dealer-arranged transport), the in-service date and what 'non-personal use' means (loaner? demo?), Carfax, CPO inspection sheet, and a photo of the CA emissions label (the car is 'new' under the CA under-7,500-mi rule). 2) If any fee beyond the doc fee appears, cite N.J.A.C. 13:45A-26A.5 (advertised price must include all dealer charges). 3) Open around $66,500 for the vehicle, anchored on day 85+, the loaner/demo history if confirmed, the ~$69k Hoffman Estates and North Palm Beach cars, and the dealer's own aged-lot discounts of 4-6% by day 120. 4) Order of asks: price first, then the free 1-year CPO extension as the condition for signing. 5) Walk if the out-the-door total before tax, doc fee included, exceeds the ceiling. Fallbacks: Hoffman Estates, MB LA.",
-    "next_trigger": "today: phone follow-up on the unanswered 10-20 email; then the dealer's written itemized out-the-door quote + in-service date",
+    "next_trigger": "only if the Manhattan 2024 deal fails",
     "call_log": [
       {
         "date": "2026-10-20",
@@ -42,9 +42,9 @@
     "year": 2024,
     "miles": 4786,
     "dealer": "Mercedes-Benz of Manhattan, NY (MBUSA factory store)",
-    "dealer_phone": null,
+    "dealer_phone": "347-978-5218 (Jason Rehklau)",
     "source": "cpo_feed",
-    "status": "active; cut twice in 3 weeks; spec twin of Edison; added 2026-10-22",
+    "status": "standing offer $67,000 sent Oct 22 via Jason Rehklau (347-978-5218); fees $225 doc + $95 gas surcharge; awaiting pre-owned manager (Joe); dealer wants close by Oct 31; walk number $68,500.",
     "biography": "Stock 710615. 2024 CPO, black over black leather with ventilated seats, memory seats, Blind Spot and Burmester sound personalization; 1 owner, clean. Same feed-visible option set as Edison W1KLH6FB0RA056051, with 776 fewer miles and no 'non-personal use' flag. Cars.com history: listed Oct 1 at $79,900; Oct 3 −$2,000; Oct 17 −$2,000, to $75,900. No additional dealer fees (confirmed on Cars.com), so $75,900 is the real price before tax. Edison's real price is $75,225–76,124 with its $899 doc fee, so this car is now at or below Edison all-in. It is over the $68k cap, and the Edison cap exception covers that VIN only. Shipping NY→LA ~$2k; no NY sales tax with out-of-state delivery. No trade-in.",
     "dealer_archetype": "batch_repricer",
     "repricing_cadence": "Factory-owned store. Reprices the whole lot about every 2 weeks (Oct 3, Oct 17-18) in round $1,000/$2,000 steps; prices end in $X,900. Next sweep likely ~Oct 31 (inferred); this car was cut in both recent sweeps.",
@@ -58,14 +58,27 @@
     "pricing": {
       "current_ask": 75900,
       "target_close": null,
-      "walk_number": null,
-      "standing_offer": null
+      "walk_number": 68500,
+      "standing_offer": 67000
     },
-    "next_action": "Get the in-service date (2024 warranty gap), Carfax, CPO sheet and a video walkaround. Watch the ~Oct 31 sweep (expected −$2,000 to $73,900). Use it as the comparison in the Edison negotiation and vice versa. Decide whether it gets a cap exception like Edison's.",
-    "next_trigger": "next lot sweep ~Oct 31 (watch for a cut to ~$73,900), or an Edison stall",
-    "call_log": [],
+    "next_action": "Wait for Joe (pre-owned manager) on the $67,000 standing offer. Walk above $68,500. Before signing, get the in-service date, Carfax, CPO sheet and walkaround. Raise the fees: Cars.com says the seller confirmed no additional dealership fees, but $320 in fees has now been quoted. No trade-in.",
+    "next_trigger": "Joe's response to the $67,000 offer; dealer wants to close by Oct 31",
+    "call_log": [
+      {
+        "date": "2026-10-22",
+        "channel": "phone/email",
+        "direction": "out",
+        "with": "Jason Rehklau, 347-978-5218",
+        "summary": "Standing offer $67,000 sent. Fees quoted: $225 doc + $95 gas surcharge. Escalated to the pre-owned manager (Joe). Dealer wants to close by Oct 31.",
+        "outcome": "awaiting Joe"
+      }
+    ],
     "opened_at": "2026-10-22T00:00:00+00:00",
-    "closed_at": null
+    "closed_at": null,
+    "fees": {
+      "doc": 225,
+      "gas_surcharge": 95
+    }
   },
   {
     "vin": "W1KLH6FB1SA114903",
@@ -74,7 +87,7 @@
     "dealer": "Mercedes-Benz of Hoffman Estates, IL",
     "dealer_phone": null,
     "source": "cpo_feed",
-    "status": "vanished from consumer surfaces 2026-10-15, feed still active; dealer call pending",
+    "status": "closed — gone from feed Oct 22; dealer never called; outcome unknown.",
     "biography": "First listed at MB Wichita on Jun 17 at $73,998 with 7,394 mi. Gone Jun 28, which v1 scored as a sale. Reappeared Aug 28 at MB Hoffman Estates at $68,999 with 8,755 mi (+1,361), a confirmed dealer transfer. Flat at $68,999 since, at strict percentile 4. On 2026-10-15 it disappeared from consumer listing surfaces while remaining in the MBUSA feed. Because the prior gone event was a transfer, another transfer is a live explanation. Cars.com also shows a Hoffman Estates 2025 at $68,376 with 5,806 mi; confirm on the call whether that is this car.",
     "dealer_archetype": "frozen",
     "repricing_cadence": "One 6.2% cut, folded into the Aug 28 transfer re-list; no change in 48+ days since.",
@@ -94,11 +107,12 @@
       "walk_number": 67000,
       "standing_offer": null
     },
-    "next_action": "Log the dealer call outcome: sold / transferred / glitch. If still available, get the CPO sheet plus Carfax and AutoCheck, and ask about the Wichita trade history.",
-    "next_trigger": "dealer call result (same day)",
+    "next_action": null,
+    "next_trigger": null,
     "call_log": [],
     "opened_at": "2026-10-15T00:00:00+00:00",
-    "closed_at": null
+    "closed_at": "2026-10-23T00:00:00+00:00",
+    "outcome": "unknown"
   },
   {
     "vin": "W1KLH6FB3TA212378",
@@ -107,7 +121,7 @@
     "dealer": "Mercedes-Benz of Los Angeles, CA (Lithia)",
     "dealer_phone": null,
     "source": "cpo_feed",
-    "status": "active; no real cut (price flips between $74,900 and $75,081 as fees are shown or hidden)",
+    "status": "closed — excluded: white (color veto 2026-10-15). Oct 29 batch-cut watch stopped.",
     "biography": "Local 2026 CPO in Polar White with black MB-Tex, stock 22815P, 20 mi from 90210. Arrived around Oct 8 at $74,900 selling price plus $181 fees. Has Winter pkg, Burmester 4D, panoramic roof, 20in AMG wheels and air suspension; lacks P34 leather. Dealer and CarGurus show a 1-owner, no-accident Carfax. CarGurus' expected price is $78,872, so it is listed about $4k under and rated Good. The same lot has a new 2027 at $84,727. Lithia store: lot-wide repricing sweeps (see repricing_cadence). CarEdge out-the-door quotes for this dealer show used cars closing about 2% under list, but one deal carried $11.7k of add-ons not marked optional, so get the add-on sheet in writing.",
     "dealer_archetype": "batch_repricer",
     "repricing_cadence": "CarGurus histories show lot-wide round-$1,000 cuts every 2-4 weeks (recent sweeps Sep 17-18, Oct 1-2, Oct 5-6). First real cut on CPO cars came around day 21-68, typically 1.5-4%; cars past day 90 are down 7-14%. Expected first cut for this car: an early-to-mid November sweep, to $72,900-73,900.",
@@ -124,11 +138,12 @@
       "walk_number": null,
       "standing_offer": null
     },
-    "next_action": "This week: get the in-service date and the add-on sheet in writing. Before Oct 31: place a standing written offer of $70,500. Video walkaround is n/a because the car is local and can be inspected in person.",
-    "next_trigger": "within 48h of the first CarGurus batch cut on this VIN (check every 2-3 days from Oct 29)",
+    "next_action": null,
+    "next_trigger": null,
     "call_log": [],
     "opened_at": "2026-10-15T00:00:00+00:00",
-    "closed_at": null
+    "closed_at": "2026-10-23T00:00:00+00:00",
+    "outcome": "excluded (color)"
   },
   {
     "vin": "W1KLH6FB9SA163752",
@@ -137,7 +152,7 @@
     "dealer": "Mercedes-Benz of Manhattan, NY",
     "dealer_phone": null,
     "source": "cpo_feed",
-    "status": "active; uncut since listing Sep 24",
+    "status": "closed — gone from feed Oct 22, likely sold (cut to $72,400 same day).",
     "biography": "2025 CPO with 7,003 mi at $72,900, strict percentile 21. Fairly priced for its comps but $5k over the cap. No cuts in its first 3 weeks.",
     "dealer_archetype": "unknown",
     "repricing_cadence": "No observed cuts yet (listed Sep 24).",
@@ -154,11 +169,12 @@
       "walk_number": null,
       "standing_offer": null
     },
-    "next_action": "Phone negotiation at the day-45 mark if it hasn't been cut or sold.",
-    "next_trigger": "day-45 mark ~Nov 8, or any price cut before then",
+    "next_action": null,
+    "next_trigger": null,
     "call_log": [],
     "opened_at": "2026-10-15T00:00:00+00:00",
-    "closed_at": null
+    "closed_at": "2026-10-23T00:00:00+00:00",
+    "outcome": "likely sold"
   },
   {
     "vin": "W1KLH6FB6SA164745",
@@ -197,7 +213,7 @@
     "dealer": "Mercedes-Benz of Georgetown, TX",
     "dealer_phone": null,
     "source": "manual",
-    "status": "found off-feed 2026-10-15; not called",
+    "status": "deprioritized — call only if Manhattan and Scarborough both fail.",
     "biography": "Found on Cars.com, stock SA133447, Obsidian Black over black. AutoCheck: 1 owner, 0 accidents, clean title. Listed Sep 23 at $65,108; cut Oct 2, Oct 7 and Oct 12 to $62,999 all-in ($62,774 plus a $225 doc fee). Seller notes say Mercedes-Benz Certified, but the MBUSA CPO API does not list it, and the dealer's E-Class sedans are in the feed (analysis/api_cap_probe.md). Treat the certified claim as unverified.",
     "dealer_archetype": "aggressive",
     "repricing_cadence": "Three cuts in 19 days (~$1,000 steps every 5 days).",
@@ -215,7 +231,7 @@
       "standing_offer": null
     },
     "next_action": "Call about mileage, Carfax, and whether they will certify as part of the sale (~$1.5-2.5k) or why it isn't in the MBUSA CPO locator. If certifiable, clean and 15k mi or less, it is in-band all-in, even with shipping.",
-    "next_trigger": "first call",
+    "next_trigger": "only if Manhattan and Scarborough both fail",
     "call_log": [],
     "opened_at": "2026-10-15T00:00:00+00:00",
     "closed_at": null
@@ -227,7 +243,7 @@
     "dealer": "Mercedes-Benz of Youngstown, OH",
     "dealer_phone": null,
     "source": "manual",
-    "status": "found off-feed 2026-10-15; not called",
+    "status": "deprioritized — call only if Manhattan and Scarborough both fail.",
     "biography": "Found on Cars.com, stock 4800237, Obsidian Black over black. AutoCheck: 1 owner, 0 accidents, clean title. On the market since May 1 at $69,990, about 167 days. Eleven cuts since, the latest on Oct 15 ($62,298 to $60,778 all-in, including a $398 doc fee); the last three were roughly $1.5-1.8k each. Seller notes use certified-program language, but the MBUSA CPO API does not list it. That long on the lot suggests a motivated seller.",
     "dealer_archetype": "aggressive",
     "repricing_cadence": "Cuts every 1-4 weeks since May, accelerating since mid-September (Sep 15, 23, 29, Oct 15).",
@@ -245,7 +261,7 @@
       "standing_offer": null
     },
     "next_action": "Call about mileage, Carfax, and whether they will certify as part of the sale (~$1.5-2.5k); also ask why it has been unsold since May. If certifiable, clean and 15k mi or less, it is in-band all-in, even with shipping.",
-    "next_trigger": "first call",
+    "next_trigger": "only if Manhattan and Scarborough both fail",
     "call_log": [],
     "opened_at": "2026-10-15T00:00:00+00:00",
     "closed_at": null
@@ -287,7 +303,7 @@
     "dealer": "Valley Imports (Porsche), Fargo, ND",
     "dealer_phone": null,
     "source": "manual",
-    "status": "feed scored it sold 2026-09-24, but Cars.com still lists it as Manufacturer CPO at $66,590; availability unconfirmed",
+    "status": "deprioritized — call only if Manhattan and Scarborough both fail.",
     "biography": "In the MBUSA feed Aug 26 - Sep 24: listed at $69,048 and cut to $66,590 on Sep 10. Graphite Grey over black MB-Tex, stock DB3731. The feed scored it sold on Sep 24, yet Cars.com still shows it as Manufacturer Certified Pre-Owned at $66,590, inside the clearing band. Mileage conflict: 6,505 in our feed and in the Cars.com seller notes, 12,618 in the Cars.com listing. Either the listing is stale, the car dropped out of the MBUSA locator while still for sale, or it was driven and de-listed. It is the only certified car at an in-band ask.",
     "dealer_archetype": "unknown",
     "repricing_cadence": "One cut of $2,458 after 21 days.",
@@ -305,7 +321,7 @@
       "standing_offer": null
     },
     "next_action": "One call: is it still for sale? What is the actual mileage, 6,505 or 12,618? Is it still certified in MBUSA's system?",
-    "next_trigger": "first call",
+    "next_trigger": "only if Manhattan and Scarborough both fail",
     "call_log": [],
     "opened_at": "2026-10-15T00:00:00+00:00",
     "closed_at": null

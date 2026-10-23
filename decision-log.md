@@ -5,6 +5,24 @@ so a later re-read doesn't relitigate a settled question. Newest entries
 on top. Spec changes themselves live in criteria.md; this file records the
 reasoning around them.
 
+## 2026-10-23 — Case-file cleanup; Manhattan 2024 becomes the primary target
+
+- **Primary: Manhattan 2024 black W1KLH6FB8RA053835.**
+  - Standing offer of $67,000 sent Oct 22.
+  - **Walk away above $68,500.** That's over the $68k cap, so it's a
+    one-VIN exception, the same as Edison's.
+  - Chosen over Edison for the same spec and color, a cleaner history (no
+    "non-personal use" flag), and a dealer that answers.
+- **Edison paused.** Superseded by Manhattan; its Oct 20 email is still
+  unanswered.
+- **MB LA 2026 closed.** It's white, and the color veto has applied since
+  2026-10-15. The Oct 29 batch-cut watch is stopped.
+- **Closed as gone from the feed on Oct 22:**
+  - Manhattan 2025 white: likely sold, the same day it was cut to $72,400.
+  - Hoffman Estates: the dealer was never called; outcome unknown.
+- **Youngstown, Georgetown, Valley Imports deprioritized.** Call them only
+  if Manhattan and Scarborough both fail.
+
 ## 2026-10-22 — Rochester 2025 W1KLH6FB9SA152900: REJECTED on color
 
 - **Car:** MB Rochester MN 2025, Sonoran Brown over Macchiato Beige/black
