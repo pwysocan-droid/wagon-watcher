@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-24T13:52:55.130478+00:00",
+  "generated_at": "2026-10-24T14:22:38.377344+00:00",
   "schema_version": 1,
   "vins": {
     "W1KLH6FB4SA129881": {
@@ -214,7 +214,7 @@
       "trim": "E450S4",
       "dealer": "Benzel-Busch Motor Car Corp.",
       "first_seen_at": "2026-07-25T09:28:35.139701+00:00",
-      "current_price": 49987,
+      "current_price": 48987,
       "current_mileage": 51923,
       "status": "active",
       "observations": [
@@ -302,13 +302,18 @@
           "observed_at": "2026-10-17T11:11:59.399562+00:00",
           "price": 49987,
           "mileage": 51923
+        },
+        {
+          "observed_at": "2026-10-24T14:22:33.157546+00:00",
+          "price": 48987,
+          "mileage": 51923
         }
       ],
       "stats": {
         "all_time_low": 48985,
         "all_time_high": 51983,
-        "total_drop_pct": 0.0,
-        "n_observations": 17,
+        "total_drop_pct": -2.0,
+        "n_observations": 18,
         "days_observed": 91
       }
     },
@@ -1018,7 +1023,7 @@
       "trim": "E450S4",
       "dealer": "Fletcher Jones Motorcars",
       "first_seen_at": "2026-09-24T17:27:33.514676+00:00",
-      "current_price": 50892,
+      "current_price": 49591,
       "current_mileage": 47501,
       "status": "active",
       "observations": [
@@ -1036,13 +1041,18 @@
           "observed_at": "2026-10-16T12:29:19.002466+00:00",
           "price": 50892,
           "mileage": 47501
+        },
+        {
+          "observed_at": "2026-10-24T14:22:33.157546+00:00",
+          "price": 49591,
+          "mileage": 47501
         }
       ],
       "stats": {
-        "all_time_low": 50892,
+        "all_time_low": 49591,
         "all_time_high": 52894,
-        "total_drop_pct": -3.78,
-        "n_observations": 3,
+        "total_drop_pct": -6.24,
+        "n_observations": 4,
         "days_observed": 29
       }
     },
@@ -1224,7 +1234,7 @@
         "all_time_high": 73498,
         "total_drop_pct": 0.0,
         "n_observations": 1,
-        "days_observed": 28
+        "days_observed": 29
       }
     },
     "W1KZH6AB4NB056172": {
@@ -1445,7 +1455,7 @@
         "all_time_high": 40995,
         "total_drop_pct": -1.21,
         "n_observations": 2,
-        "days_observed": 20
+        "days_observed": 21
       }
     },
     "W1KZH6AB3PB111794": {
@@ -2406,7 +2416,7 @@
       "first_seen_at": "2026-10-21T17:32:08.447265+00:00",
       "current_price": 75981,
       "current_mileage": 7496,
-      "status": "reappeared",
+      "status": "active",
       "observations": [
         {
           "observed_at": "2026-10-21T17:32:08.447265+00:00",
