@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-24T15:42:50.707476+00:00",
+  "generated_at": "2026-10-24T16:02:45.158907+00:00",
   "schema_version": 1,
   "vins": {
     "W1KLH6FB4SA129881": {
@@ -27,7 +27,7 @@
         "all_time_high": 80345,
         "total_drop_pct": 0.0,
         "n_observations": 2,
-        "days_observed": 180
+        "days_observed": 181
       }
     },
     "W1KZH6AB0PB118184": {
@@ -1774,7 +1774,7 @@
         "all_time_high": 75081,
         "total_drop_pct": 0.24,
         "n_observations": 14,
-        "days_observed": 11
+        "days_observed": 12
       }
     },
     "W1KZH6AB4PB178727": {
@@ -1852,7 +1852,7 @@
         "all_time_high": 57990,
         "total_drop_pct": 0.0,
         "n_observations": 12,
-        "days_observed": 11
+        "days_observed": 12
       }
     },
     "W1KLH6FB1RA026122": {
@@ -1875,7 +1875,7 @@
         "all_time_high": 76849,
         "total_drop_pct": 0.0,
         "n_observations": 1,
-        "days_observed": 11
+        "days_observed": 12
       }
     },
     "W1KLH6FB8SA101288": {
@@ -1898,7 +1898,7 @@
         "all_time_high": 68988,
         "total_drop_pct": 0.0,
         "n_observations": 1,
-        "days_observed": 11
+        "days_observed": 12
       }
     },
     "W1KZH6ABXPB183379": {
@@ -1921,7 +1921,7 @@
         "all_time_high": 55477,
         "total_drop_pct": 0.0,
         "n_observations": 1,
-        "days_observed": 11
+        "days_observed": 12
       }
     },
     "W1KZH6AB8PB110575": {
@@ -2416,7 +2416,7 @@
       "first_seen_at": "2026-10-21T17:32:08.447265+00:00",
       "current_price": 75981,
       "current_mileage": 7496,
-      "status": "reappeared",
+      "status": "gone",
       "observations": [
         {
           "observed_at": "2026-10-21T17:32:08.447265+00:00",
@@ -2462,7 +2462,7 @@
       "first_seen_at": "2026-10-24T15:42:42.777012+00:00",
       "current_price": 77981,
       "current_mileage": 10093,
-      "status": "active",
+      "status": "gone",
       "observations": [
         {
           "observed_at": "2026-10-24T15:42:42.777012+00:00",
