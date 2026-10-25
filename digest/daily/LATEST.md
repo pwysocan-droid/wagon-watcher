@@ -1,22 +1,20 @@
 # mb-wagon-watcher · daily digest
 
-**2026-10-24** · 05:00 PT snapshot
+**2026-10-25** · 05:00 PT snapshot
 
-`Generated: 2026-10-24T15:25:13Z`
+`Generated: 2026-10-25T15:35:19Z`
 
 ---
 
 ## § Population
 
-**Population:** 33 active (-2 net since yesterday) · 1 watchlist match · 0 actionable
+**Population:** 34 active (no change since yesterday) · 1 watchlist match · 0 actionable
 
 ---
 
 ## § Movers
 
-- W1KZH6AB5PB118889 — Fletcher Jones Motorc…, CA — $49,591 (-$1,301 / -2.56%)
-- W1KZH6AB9NB055261 — Benzel-Busch Motor Ca…, NJ — $48,987 (-$1,000 / -2.00%)
-- W1KLH6FB4RA056120 — MB Shrewsbury, MA — $77,905 (-$190 / -0.24%)
+_No price moves vs. start of today (UTC)._
 
 ---
 
@@ -26,18 +24,19 @@
 - W1KLH6FB6SA164745 — R B M of Atlanta, Inc., GA — $73,114 (down from $73,900 floor)
 - W1KZH6AB5PB118889 — Fletcher Jones Motorc…, CA — $49,591 (down from $52,894 floor)
 - W1KZH6AB4NB056172 — MB Elmbrook, WI — $52,900 (down from $54,494 floor)
-- W1KZH6AB7PB116786 — MB Hilton Head, SC — $60,084 (down from $65,584 floor)
+- W1KLH6FB2SA159333 — MB Manhattan, NY — $79,900 (down from $81,900 floor)
 
-_… and 9 more at floor._
+_… and 7 more at floor._
 
 ---
 
 ## § Anomalies
 
-- VIN `W1KLH6FB1RA026170` toggled status 3 times (feed instability or price-testing)
-- VIN `W1KLH6FB5SA134071` toggled status 12 times (feed instability or price-testing)
-- VIN `W1KLH6FB8TA197277` toggled status 4 times (feed instability or price-testing)
-- VIN `W1KLH6FBXRA026247` toggled status 12 times (feed instability or price-testing)
+- VIN `W1KLH6FB1RA026170` toggled status 21 times (feed instability or price-testing)
+- VIN `W1KLH6FB2RA026131` toggled status 20 times (feed instability or price-testing)
+- VIN `W1KLH6FB3TA197445` toggled status 8 times (feed instability or price-testing)
+- VIN `W1KZH6AB7PB116786` toggled status 3 times (feed instability or price-testing)
+- New dealer first-seen: Mercedes-Benz of Chantilly
 
 ---
 
@@ -71,7 +70,7 @@ Open decisions today:
 
 ---
 
-`mb-wagon-watcher · digest_daily.py · 2026-10-24T15:25:13Z`
+`mb-wagon-watcher · digest_daily.py · 2026-10-25T15:35:19Z`
 
 _To annotate a VIN: edit `config/vin_annotations.json`._  
 _To disqualify a VIN: edit `config/disqualified_vins.json`._  
