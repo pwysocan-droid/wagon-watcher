@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-27T06:11:57.333953+00:00",
+  "generated_at": "2026-10-27T06:29:01.226289+00:00",
   "schema_version": 1,
   "vins": {
     "W1KLH6FB4SA129881": {
@@ -500,7 +500,7 @@
         "all_time_high": 81215,
         "total_drop_pct": -7.65,
         "n_observations": 4,
-        "days_observed": 68
+        "days_observed": 69
       }
     },
     "W1KLH6FB4RA070115": {
@@ -538,7 +538,7 @@
         "all_time_high": 70790,
         "total_drop_pct": -1.72,
         "n_observations": 4,
-        "days_observed": 68
+        "days_observed": 69
       }
     },
     "W1KZH6ABXPB125367": {
@@ -2194,7 +2194,7 @@
         "all_time_high": 84995,
         "total_drop_pct": 0.0,
         "n_observations": 1,
-        "days_observed": 12
+        "days_observed": 13
       }
     },
     "W1KZH6ABXPB101554": {
@@ -2227,7 +2227,7 @@
       "first_seen_at": "2026-10-21T14:51:44.908745+00:00",
       "current_price": 70577,
       "current_mileage": 5343,
-      "status": "active",
+      "status": "gone",
       "observations": [
         {
           "observed_at": "2026-10-21T14:51:44.908745+00:00",
@@ -2304,7 +2304,7 @@
       "trim": "E450S4",
       "dealer": "Mercedes-Benz of Coral Gables",
       "first_seen_at": "2026-10-21T14:51:44.908745+00:00",
-      "current_price": 76950,
+      "current_price": 75980,
       "current_mileage": 15901,
       "status": "active",
       "observations": [
@@ -2322,13 +2322,18 @@
           "observed_at": "2026-10-27T06:08:55.485553+00:00",
           "price": 76950,
           "mileage": 15901
+        },
+        {
+          "observed_at": "2026-10-27T06:29:00.142939+00:00",
+          "price": 75980,
+          "mileage": 15901
         }
       ],
       "stats": {
         "all_time_low": 75980,
         "all_time_high": 76950,
-        "total_drop_pct": 0.0,
-        "n_observations": 3,
+        "total_drop_pct": -1.26,
+        "n_observations": 4,
         "days_observed": 5
       }
     },
@@ -2510,7 +2515,7 @@
       "first_seen_at": "2026-10-26T12:28:31.591834+00:00",
       "current_price": 39995,
       "current_mileage": 59120,
-      "status": "reappeared",
+      "status": "active",
       "observations": [
         {
           "observed_at": "2026-10-26T12:28:31.591834+00:00",
@@ -2533,7 +2538,7 @@
       "first_seen_at": "2026-10-26T14:18:12.145189+00:00",
       "current_price": 60798,
       "current_mileage": 11135,
-      "status": "reappeared",
+      "status": "active",
       "observations": [
         {
           "observed_at": "2026-10-26T14:18:12.145189+00:00",
