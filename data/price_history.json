@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-28T14:32:37.561488+00:00",
+  "generated_at": "2026-10-28T14:34:22.889774+00:00",
   "schema_version": 1,
   "vins": {
     "W1KLH6FB4SA129881": {
@@ -327,7 +327,7 @@
       "trim": "E450S4",
       "dealer": "Mercedes-Benz of Edison",
       "first_seen_at": "2026-08-01T01:56:33.151955+00:00",
-      "current_price": 74995,
+      "current_price": 74888,
       "current_mileage": 5562,
       "status": "active",
       "observations": [
@@ -470,13 +470,18 @@
           "observed_at": "2026-10-28T08:01:32.709238+00:00",
           "price": 74995,
           "mileage": 5562
+        },
+        {
+          "observed_at": "2026-10-28T14:34:21.917610+00:00",
+          "price": 74888,
+          "mileage": 5562
         }
       ],
       "stats": {
         "all_time_low": 73995,
         "all_time_high": 75225,
-        "total_drop_pct": 0.0,
-        "n_observations": 28,
+        "total_drop_pct": -0.14,
+        "n_observations": 29,
         "days_observed": 88
       }
     },
