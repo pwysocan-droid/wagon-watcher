@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-28T07:41:24.515988+00:00",
+  "generated_at": "2026-10-28T08:01:33.936061+00:00",
   "schema_version": 1,
   "vins": {
     "W1KLH6FB4SA129881": {
@@ -327,7 +327,7 @@
       "trim": "E450S4",
       "dealer": "Mercedes-Benz of Edison",
       "first_seen_at": "2026-08-01T01:56:33.151955+00:00",
-      "current_price": 74888,
+      "current_price": 74995,
       "current_mileage": 5562,
       "status": "active",
       "observations": [
@@ -465,13 +465,18 @@
           "observed_at": "2026-10-28T07:29:50.412654+00:00",
           "price": 74888,
           "mileage": 5562
+        },
+        {
+          "observed_at": "2026-10-28T08:01:32.709238+00:00",
+          "price": 74995,
+          "mileage": 5562
         }
       ],
       "stats": {
         "all_time_low": 73995,
         "all_time_high": 75225,
-        "total_drop_pct": -0.14,
-        "n_observations": 27,
+        "total_drop_pct": 0.0,
+        "n_observations": 28,
         "days_observed": 88
       }
     },
@@ -771,44 +776,6 @@
         "days_observed": 51
       }
     },
-    "W1KZH6AB8NB046826": {
-      "year": 2022,
-      "trim": "E450S4",
-      "dealer": "Mercedes-Benz of Jacksonville",
-      "first_seen_at": "2026-09-14T15:06:48.747634+00:00",
-      "current_price": 56891,
-      "current_mileage": 21506,
-      "status": "gone",
-      "observations": [
-        {
-          "observed_at": "2026-09-14T15:06:48.747634+00:00",
-          "price": 59891,
-          "mileage": 21502
-        },
-        {
-          "observed_at": "2026-09-18T19:19:06.425604+00:00",
-          "price": 59891,
-          "mileage": 21506
-        },
-        {
-          "observed_at": "2026-09-25T02:35:12.922413+00:00",
-          "price": 57891,
-          "mileage": 21506
-        },
-        {
-          "observed_at": "2026-09-25T18:18:46.387129+00:00",
-          "price": 56891,
-          "mileage": 21506
-        }
-      ],
-      "stats": {
-        "all_time_low": 56891,
-        "all_time_high": 59891,
-        "total_drop_pct": -5.01,
-        "n_observations": 4,
-        "days_observed": 43
-      }
-    },
     "W1KLH6FB2RA069447": {
       "year": 2024,
       "trim": "E450S4",
@@ -862,29 +829,6 @@
         "all_time_high": 72649,
         "total_drop_pct": -2.75,
         "n_observations": 2,
-        "days_observed": 40
-      }
-    },
-    "W1KLH6FB1SA104758": {
-      "year": 2025,
-      "trim": "E450S4",
-      "dealer": "Mercedes-Benz of Rochester",
-      "first_seen_at": "2026-09-17T21:32:51.939535+00:00",
-      "current_price": 70578,
-      "current_mileage": 9077,
-      "status": "gone",
-      "observations": [
-        {
-          "observed_at": "2026-09-17T21:32:51.939535+00:00",
-          "price": 70578,
-          "mileage": 9077
-        }
-      ],
-      "stats": {
-        "all_time_low": 70578,
-        "all_time_high": 70578,
-        "total_drop_pct": 0.0,
-        "n_observations": 1,
         "days_observed": 40
       }
     },
@@ -2293,7 +2237,7 @@
       "first_seen_at": "2026-10-21T14:51:44.908745+00:00",
       "current_price": 77545,
       "current_mileage": 10047,
-      "status": "gone",
+      "status": "reappeared",
       "observations": [
         {
           "observed_at": "2026-10-21T14:51:44.908745+00:00",
@@ -2331,7 +2275,7 @@
       "first_seen_at": "2026-10-21T14:51:44.908745+00:00",
       "current_price": 63054,
       "current_mileage": 33646,
-      "status": "gone",
+      "status": "reappeared",
       "observations": [
         {
           "observed_at": "2026-10-21T14:51:44.908745+00:00",
@@ -2423,7 +2367,7 @@
       "first_seen_at": "2026-10-24T15:42:42.777012+00:00",
       "current_price": 77981,
       "current_mileage": 10101,
-      "status": "reappeared",
+      "status": "gone",
       "observations": [
         {
           "observed_at": "2026-10-24T15:42:42.777012+00:00",
