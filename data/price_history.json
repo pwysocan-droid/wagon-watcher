@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-29T01:09:54.772240+00:00",
+  "generated_at": "2026-10-29T01:29:55.269943+00:00",
   "schema_version": 1,
   "vins": {
     "W1KLH6FB4SA129881": {
@@ -188,7 +188,7 @@
       "first_seen_at": "2026-07-13T22:45:03.922551+00:00",
       "current_price": 81232,
       "current_mileage": 5669,
-      "status": "reappeared",
+      "status": "gone",
       "observations": [
         {
           "observed_at": "2026-07-13T22:45:03.922551+00:00",
@@ -1776,7 +1776,7 @@
       "trim": "E450S4",
       "dealer": "Mercedes-Benz of Hanover",
       "first_seen_at": "2026-10-12T15:49:10.816277+00:00",
-      "current_price": 55477,
+      "current_price": 55144,
       "current_mileage": 27215,
       "status": "active",
       "observations": [
@@ -1819,13 +1819,18 @@
           "observed_at": "2026-10-29T00:09:52.319367+00:00",
           "price": 55477,
           "mileage": 27215
+        },
+        {
+          "observed_at": "2026-10-29T01:29:54.411513+00:00",
+          "price": 55144,
+          "mileage": 27215
         }
       ],
       "stats": {
         "all_time_low": 55144,
         "all_time_high": 55477,
-        "total_drop_pct": 0.0,
-        "n_observations": 8,
+        "total_drop_pct": -0.6,
+        "n_observations": 9,
         "days_observed": 16
       }
     },
@@ -2310,7 +2315,7 @@
       "first_seen_at": "2026-10-21T14:51:44.908745+00:00",
       "current_price": 63054,
       "current_mileage": 33646,
-      "status": "gone",
+      "status": "reappeared",
       "observations": [
         {
           "observed_at": "2026-10-21T14:51:44.908745+00:00",
@@ -2519,7 +2524,7 @@
       "first_seen_at": "2026-10-28T16:54:43.421813+00:00",
       "current_price": 54990,
       "current_mileage": 31022,
-      "status": "reappeared",
+      "status": "gone",
       "observations": [
         {
           "observed_at": "2026-10-28T22:22:23.687126+00:00",
