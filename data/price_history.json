@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-29T19:08:38.918127+00:00",
+  "generated_at": "2026-10-29T19:28:49.198425+00:00",
   "schema_version": 1,
   "vins": {
     "W1KLH6FB4SA129881": {
@@ -857,7 +857,7 @@
         "all_time_high": 54995,
         "total_drop_pct": 0.0,
         "n_observations": 1,
-        "days_observed": 40
+        "days_observed": 41
       }
     },
     "W1KLH6FB7SA114047": {
@@ -1417,7 +1417,7 @@
       "trim": "E450S4",
       "dealer": "Mercedes-Benz of El Cajon",
       "first_seen_at": "2026-10-09T15:24:06.874344+00:00",
-      "current_price": 77621,
+      "current_price": 77778,
       "current_mileage": 14707,
       "status": "active",
       "observations": [
@@ -1485,13 +1485,18 @@
           "observed_at": "2026-10-29T15:48:10.247747+00:00",
           "price": 77621,
           "mileage": 14707
+        },
+        {
+          "observed_at": "2026-10-29T19:28:48.804055+00:00",
+          "price": 77778,
+          "mileage": 14707
         }
       ],
       "stats": {
         "all_time_low": 77621,
         "all_time_high": 82121,
-        "total_drop_pct": -5.48,
-        "n_observations": 13,
+        "total_drop_pct": -5.29,
+        "n_observations": 14,
         "days_observed": 20
       }
     },
