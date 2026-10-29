@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-29T02:10:04.075852+00:00",
+  "generated_at": "2026-10-29T02:30:05.093446+00:00",
   "schema_version": 1,
   "vins": {
     "W1KLH6FB4SA129881": {
@@ -2433,7 +2433,7 @@
       "trim": "E450S4",
       "dealer": "Mercedes-Benz of Chantilly",
       "first_seen_at": "2026-10-24T18:43:05.622848+00:00",
-      "current_price": 74890,
+      "current_price": 77879,
       "current_mileage": 2301,
       "status": "active",
       "observations": [
@@ -2461,13 +2461,18 @@
           "observed_at": "2026-10-29T00:09:52.319367+00:00",
           "price": 74890,
           "mileage": 2301
+        },
+        {
+          "observed_at": "2026-10-29T02:30:04.786400+00:00",
+          "price": 77879,
+          "mileage": 2301
         }
       ],
       "stats": {
         "all_time_low": 74890,
         "all_time_high": 77879,
-        "total_drop_pct": 0.0,
-        "n_observations": 5,
+        "total_drop_pct": 3.99,
+        "n_observations": 6,
         "days_observed": 4
       }
     },
