@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-29T11:47:53.943923+00:00",
+  "generated_at": "2026-10-29T12:28:59.505195+00:00",
   "schema_version": 1,
   "vins": {
     "W1KLH6FB4SA129881": {
@@ -135,7 +135,7 @@
         "all_time_high": 50987,
         "total_drop_pct": -10.07,
         "n_observations": 18,
-        "days_observed": 137
+        "days_observed": 138
       }
     },
     "W1KLH6FB1SA114903": {
@@ -178,7 +178,7 @@
         "all_time_high": 73998,
         "total_drop_pct": -6.76,
         "n_observations": 5,
-        "days_observed": 133
+        "days_observed": 134
       }
     },
     "W1KLH6FB2TA196545": {
@@ -1748,7 +1748,7 @@
       "trim": "E450S4",
       "dealer": "Mercedes-Benz of Hanover",
       "first_seen_at": "2026-10-12T15:49:10.816277+00:00",
-      "current_price": 55477,
+      "current_price": 55144,
       "current_mileage": 27215,
       "status": "active",
       "observations": [
@@ -1811,13 +1811,18 @@
           "observed_at": "2026-10-29T06:53:07.543625+00:00",
           "price": 55477,
           "mileage": 27215
+        },
+        {
+          "observed_at": "2026-10-29T12:28:58.380766+00:00",
+          "price": 55144,
+          "mileage": 27215
         }
       ],
       "stats": {
         "all_time_low": 55144,
         "all_time_high": 55477,
-        "total_drop_pct": 0.0,
-        "n_observations": 12,
+        "total_drop_pct": -0.6,
+        "n_observations": 13,
         "days_observed": 16
       }
     },
@@ -2420,7 +2425,7 @@
       "trim": "E450S4",
       "dealer": "Mercedes-Benz of Chantilly",
       "first_seen_at": "2026-10-24T18:43:05.622848+00:00",
-      "current_price": 74890,
+      "current_price": 77879,
       "current_mileage": 2301,
       "status": "active",
       "observations": [
@@ -2458,13 +2463,18 @@
           "observed_at": "2026-10-29T03:50:10.579015+00:00",
           "price": 74890,
           "mileage": 2301
+        },
+        {
+          "observed_at": "2026-10-29T12:28:58.380766+00:00",
+          "price": 77879,
+          "mileage": 2301
         }
       ],
       "stats": {
         "all_time_low": 74890,
         "all_time_high": 77879,
-        "total_drop_pct": 0.0,
-        "n_observations": 7,
+        "total_drop_pct": 3.99,
+        "n_observations": 8,
         "days_observed": 4
       }
     },
@@ -2488,7 +2498,7 @@
         "all_time_high": 39995,
         "total_drop_pct": 0.0,
         "n_observations": 1,
-        "days_observed": 2
+        "days_observed": 3
       }
     },
     "W1KZH6AB8PB169688": {
@@ -2521,7 +2531,7 @@
       "first_seen_at": "2026-10-28T16:54:43.421813+00:00",
       "current_price": 54990,
       "current_mileage": 31022,
-      "status": "reappeared",
+      "status": "active",
       "observations": [
         {
           "observed_at": "2026-10-28T22:22:23.687126+00:00",
