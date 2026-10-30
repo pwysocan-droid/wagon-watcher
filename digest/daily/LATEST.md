@@ -1,20 +1,20 @@
 # mb-wagon-watcher · daily digest
 
-**2026-10-29** · 05:00 PT snapshot
+**2026-10-30** · 05:00 PT snapshot
 
-`Generated: 2026-10-29T18:02:54Z`
+`Generated: 2026-10-30T17:43:53Z`
 
 ---
 
 ## § Population
 
-**Population:** 29 active (-2 net since yesterday) · 1 watchlist match · 0 actionable
+**Population:** 29 active (no change since yesterday) · 1 watchlist match · 0 actionable
 
 ---
 
 ## § Movers
 
-- W1KLH6FB3RA026199 — MB El Cajon, CA — $77,621 (-$157 / -0.20%)
+_No price moves vs. start of today (UTC)._
 
 ---
 
@@ -32,10 +32,8 @@ _… and 7 more at floor._
 
 ## § Anomalies
 
-- VIN `W1KLH6FB2TA196545` toggled status 12 times (feed instability or price-testing)
-- VIN `W1KLH6FBXRA026247` toggled status 14 times (feed instability or price-testing)
-- VIN `W1KZH6AB9NB031459` toggled status 13 times (feed instability or price-testing)
-- 46 cron runs returned <30 listings (min 29) — possible API cap
+- VIN `W1KZH6AB9NB055261` toggled status 6 times (feed instability or price-testing)
+- 36 cron runs returned <30 listings (min 28) — possible API cap
 
 ---
 
@@ -68,7 +66,7 @@ Open decisions today:
 
 ---
 
-`mb-wagon-watcher · digest_daily.py · 2026-10-29T18:02:54Z`
+`mb-wagon-watcher · digest_daily.py · 2026-10-30T17:43:53Z`
 
 _To annotate a VIN: edit `config/vin_annotations.json`._  
 _To disqualify a VIN: edit `config/disqualified_vins.json`._  
