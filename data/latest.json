@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-10-30T17:45:02.425832+00:00",
+  "generated_at": "2026-10-30T18:52:07.213817+00:00",
   "count": 29,
   "kpis": {
     "national_pool": 29,
     "within_criteria": 1,
     "median_asking": 70571,
-    "tier1_alerts_7d": 172
+    "tier1_alerts_7d": 173
   },
   "listings": [
     {
@@ -471,7 +471,7 @@
       "tier1_count": 4,
       "is_watchlist_match": false,
       "watchlist_labels": [],
-      "days_on_lot": 5,
+      "days_on_lot": 6,
       "mbusa_listing_url": "https://www.mbusa.com/en/cpo/inventory/details/W1KLH6FB3TA197445"
     },
     {
@@ -616,7 +616,7 @@
       "tier1_count": 16,
       "is_watchlist_match": false,
       "watchlist_labels": [],
-      "days_on_lot": 16,
+      "days_on_lot": 17,
       "mbusa_listing_url": "https://www.mbusa.com/en/cpo/inventory/details/W1KLH6FB4RA026101"
     },
     {
