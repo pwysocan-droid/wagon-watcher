@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-10-30T09:38:58.847888+00:00",
+  "generated_at": "2026-10-30T14:11:52.224661+00:00",
   "count": 29,
   "kpis": {
     "national_pool": 29,
     "within_criteria": 1,
     "median_asking": 70571,
-    "tier1_alerts_7d": 178
+    "tier1_alerts_7d": 175
   },
   "listings": [
     {
@@ -239,7 +239,7 @@
       "tier1_count": 9,
       "is_watchlist_match": false,
       "watchlist_labels": [],
-      "days_on_lot": 23,
+      "days_on_lot": 24,
       "mbusa_listing_url": "https://www.mbusa.com/en/cpo/inventory/details/WDDZH6JB3LA707763"
     },
     {
@@ -268,7 +268,7 @@
       "tier1_count": 75,
       "is_watchlist_match": false,
       "watchlist_labels": [],
-      "days_on_lot": 138,
+      "days_on_lot": 139,
       "mbusa_listing_url": "https://www.mbusa.com/en/cpo/inventory/details/W1KZH6AB0PB118184"
     },
     {
@@ -355,7 +355,7 @@
       "tier1_count": 6,
       "is_watchlist_match": false,
       "watchlist_labels": [],
-      "days_on_lot": 54,
+      "days_on_lot": 55,
       "mbusa_listing_url": "https://www.mbusa.com/en/cpo/inventory/details/W1KLH6FB9SA151505"
     },
     {
@@ -529,7 +529,7 @@
       "tier1_count": 14,
       "is_watchlist_match": false,
       "watchlist_labels": [],
-      "days_on_lot": 16,
+      "days_on_lot": 17,
       "mbusa_listing_url": "https://www.mbusa.com/en/cpo/inventory/details/W1KZH6AB6PB147527"
     },
     {
@@ -587,7 +587,7 @@
       "tier1_count": 3,
       "is_watchlist_match": false,
       "watchlist_labels": [],
-      "days_on_lot": 3,
+      "days_on_lot": 4,
       "mbusa_listing_url": "https://www.mbusa.com/en/cpo/inventory/details/W1KZH6AB4MA953013"
     },
     {
