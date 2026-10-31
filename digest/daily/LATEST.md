@@ -1,8 +1,8 @@
 # mb-wagon-watcher · daily digest
 
-**2026-10-30** · 05:00 PT snapshot
+**2026-10-31** · 05:00 PT snapshot
 
-`Generated: 2026-10-30T17:43:53Z`
+`Generated: 2026-10-31T16:51:03Z`
 
 ---
 
@@ -32,8 +32,7 @@ _… and 7 more at floor._
 
 ## § Anomalies
 
-- VIN `W1KZH6AB9NB055261` toggled status 6 times (feed instability or price-testing)
-- 36 cron runs returned <30 listings (min 28) — possible API cap
+_No anomalies detected in the last 24h._
 
 ---
 
@@ -66,7 +65,7 @@ Open decisions today:
 
 ---
 
-`mb-wagon-watcher · digest_daily.py · 2026-10-30T17:43:53Z`
+`mb-wagon-watcher · digest_daily.py · 2026-10-31T16:51:03Z`
 
 _To annotate a VIN: edit `config/vin_annotations.json`._  
 _To disqualify a VIN: edit `config/disqualified_vins.json`._  
