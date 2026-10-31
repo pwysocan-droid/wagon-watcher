@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-31T00:14:55.299972+00:00",
+  "generated_at": "2026-10-31T03:58:46.525197+00:00",
   "schema_version": 1,
   "vins": {
     "W1KLH6FB4SA129881": {
@@ -482,7 +482,7 @@
         "all_time_high": 75225,
         "total_drop_pct": -0.14,
         "n_observations": 29,
-        "days_observed": 90
+        "days_observed": 91
       }
     },
     "W1KLH6FB4TA236530": {
@@ -806,7 +806,7 @@
         "all_time_high": 71780,
         "total_drop_pct": -0.42,
         "n_observations": 2,
-        "days_observed": 44
+        "days_observed": 45
       }
     },
     "W1KLH6FB5RA058801": {
@@ -918,34 +918,6 @@
         "all_time_high": 52894,
         "total_drop_pct": -6.24,
         "n_observations": 4,
-        "days_observed": 36
-      }
-    },
-    "W1KLH6FB7SA096827": {
-      "year": 2025,
-      "trim": "E450S4",
-      "dealer": "Mercedes-Benz of Austin",
-      "first_seen_at": "2026-09-24T17:27:33.514676+00:00",
-      "current_price": 63900,
-      "current_mileage": 20533,
-      "status": "gone",
-      "observations": [
-        {
-          "observed_at": "2026-09-24T17:27:33.514676+00:00",
-          "price": 63900,
-          "mileage": 20414
-        },
-        {
-          "observed_at": "2026-09-29T23:49:47.431046+00:00",
-          "price": 63900,
-          "mileage": 20533
-        }
-      ],
-      "stats": {
-        "all_time_low": 63900,
-        "all_time_high": 63900,
-        "total_drop_pct": 0.0,
-        "n_observations": 2,
         "days_observed": 36
       }
     },
@@ -1244,29 +1216,6 @@
         "days_observed": 32
       }
     },
-    "W1KLH6FB0SA086396": {
-      "year": 2025,
-      "trim": "E450S4",
-      "dealer": "Mercedes-Benz of Lynnfield",
-      "first_seen_at": "2026-09-30T09:52:24.161928+00:00",
-      "current_price": 72497,
-      "current_mileage": 7543,
-      "status": "gone",
-      "observations": [
-        {
-          "observed_at": "2026-09-30T09:52:24.161928+00:00",
-          "price": 72497,
-          "mileage": 7543
-        }
-      ],
-      "stats": {
-        "all_time_low": 72497,
-        "all_time_high": 72497,
-        "total_drop_pct": 0.0,
-        "n_observations": 1,
-        "days_observed": 30
-      }
-    },
     "W1KZH6JB3LA856240": {
       "year": 2020,
       "trim": "E450S4",
@@ -1325,7 +1274,7 @@
         "all_time_high": 53216,
         "total_drop_pct": -3.32,
         "n_observations": 3,
-        "days_observed": 24
+        "days_observed": 25
       }
     },
     "WDDZH6JB3LA707763": {
