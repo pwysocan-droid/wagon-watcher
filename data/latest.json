@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-10-31T10:32:57.940368+00:00",
+  "generated_at": "2026-10-31T10:52:59.100156+00:00",
   "count": 29,
   "kpis": {
     "national_pool": 29,
     "within_criteria": 1,
     "median_asking": 70571,
-    "tier1_alerts_7d": 190
+    "tier1_alerts_7d": 191
   },
   "listings": [
     {
@@ -529,7 +529,7 @@
       "tier1_count": 14,
       "is_watchlist_match": false,
       "watchlist_labels": [],
-      "days_on_lot": 17,
+      "days_on_lot": 18,
       "mbusa_listing_url": "https://www.mbusa.com/en/cpo/inventory/details/W1KZH6AB6PB147527"
     },
     {
