@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-31T05:52:22.112736+00:00",
+  "generated_at": "2026-10-31T07:12:31.885211+00:00",
   "schema_version": 1,
   "vins": {
     "W1KLH6FB4SA129881": {
@@ -520,7 +520,7 @@
         "all_time_high": 81215,
         "total_drop_pct": -7.65,
         "n_observations": 4,
-        "days_observed": 72
+        "days_observed": 73
       }
     },
     "W1KLH6FB4RA070115": {
@@ -558,7 +558,7 @@
         "all_time_high": 70790,
         "total_drop_pct": -1.72,
         "n_observations": 4,
-        "days_observed": 72
+        "days_observed": 73
       }
     },
     "W1KZH6ABXPB125367": {
@@ -860,29 +860,6 @@
         "days_observed": 42
       }
     },
-    "W1KLH6FB7SA114047": {
-      "year": 2025,
-      "trim": "E450S4",
-      "dealer": "Mercedes-Benz of Annapolis",
-      "first_seen_at": "2026-09-20T17:32:34.644370+00:00",
-      "current_price": 71790,
-      "current_mileage": 15088,
-      "status": "gone",
-      "observations": [
-        {
-          "observed_at": "2026-09-20T17:32:34.644370+00:00",
-          "price": 71790,
-          "mileage": 15088
-        }
-      ],
-      "stats": {
-        "all_time_low": 71790,
-        "all_time_high": 71790,
-        "total_drop_pct": 0.0,
-        "n_observations": 1,
-        "days_observed": 40
-      }
-    },
     "W1KZH6AB5PB118889": {
       "year": 2023,
       "trim": "E450S4",
@@ -1021,29 +998,6 @@
         "total_drop_pct": -0.69,
         "n_observations": 2,
         "days_observed": 36
-      }
-    },
-    "W1KLH6FB7TA219768": {
-      "year": 2026,
-      "trim": "E450S4",
-      "dealer": "Mercedes-Benz of Asheville",
-      "first_seen_at": "2026-09-25T13:59:32.420086+00:00",
-      "current_price": 73498,
-      "current_mileage": 7199,
-      "status": "gone",
-      "observations": [
-        {
-          "observed_at": "2026-09-25T13:59:32.420086+00:00",
-          "price": 73498,
-          "mileage": 7199
-        }
-      ],
-      "stats": {
-        "all_time_low": 73498,
-        "all_time_high": 73498,
-        "total_drop_pct": 0.0,
-        "n_observations": 1,
-        "days_observed": 35
       }
     },
     "W1KZH6AB4NB056172": {
@@ -2093,7 +2047,7 @@
         "all_time_high": 84995,
         "total_drop_pct": 0.0,
         "n_observations": 1,
-        "days_observed": 16
+        "days_observed": 17
       }
     },
     "W1KZH6ABXPB101554": {
