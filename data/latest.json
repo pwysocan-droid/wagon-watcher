@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-31T13:23:48.416722+00:00",
+  "generated_at": "2026-10-31T14:03:52.534908+00:00",
   "count": 29,
   "kpis": {
     "national_pool": 29,
@@ -239,7 +239,7 @@
       "tier1_count": 9,
       "is_watchlist_match": false,
       "watchlist_labels": [],
-      "days_on_lot": 24,
+      "days_on_lot": 25,
       "mbusa_listing_url": "https://www.mbusa.com/en/cpo/inventory/details/WDDZH6JB3LA707763"
     },
     {
