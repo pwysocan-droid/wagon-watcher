@@ -1,11 +1,11 @@
 # mb-wagon-watcher · weekly digest
 
-**Week 43 — 2026**  
-October 18 → October 25, 2026
+**Week 44 — 2026**  
+October 25 → November 1, 2026
 
-`Snapshot range: 2026-10-18T18:37Z → 2026-10-25T18:37Z · 351 runs · 351 OK`  
+`Snapshot range: 2026-10-25T19:58Z → 2026-11-01T19:58Z · 299 runs · 184 OK`  
 `Source: nafta-service.mbusa.com/api/inv/v1/en_us/used/vehicles/search`  
-`Generated: 2026-10-25T18:37:48Z`
+`Generated: 2026-11-01T19:58:45Z`
 
 ---
 
@@ -13,22 +13,15 @@ October 18 → October 25, 2026
 
 | New listings | Price changes | Sold / gone | Reappeared | Watchlist hits |
 |:-:|:-:|:-:|:-:|:-:|
-| 11 | 71 | 350 | 342 | 1 |
+| 3 | 35 | 121 | 116 | 0 |
 
-Total **$43,736** in price reductions across 15 listings. Pool: `34 (unchanged)`; median asking moved `$67,286 → $74,002` wk/wk and `$69,788 → $74,002` over 4 weeks.
+Total **$15,546** in price reductions across 8 listings. Pool: `37 → 29`; median asking moved `$73,114 → $70,571` wk/wk and `$68,894 → $70,571` over 4 weeks.
 
 ---
 
 ## § 02 — Watchlist hits
 
-> **Watchlist hit: 2025 E450S4 · $65,095 · 5,731 mi · Mercedes-Benz of Rochester**
->
-> Asking: $65,095
-> Mileage: 5,731
-> Dealer: Mercedes-Benz of Rochester (MN · 1556 mi from 90210)
-> Color: Sonoran Brown metallic / Macchiato Beige/Black MB-Tex
-> Fair price: fair price: 4th percentile (strict comps) — cheaper than 96% of comparable cars
-> Body: Matches: Within criteria.md
+_No watchlist matches this week._
 
 ---
 
@@ -36,11 +29,11 @@ Total **$43,736** in price reductions across 15 listings. Pool: `34 (unchanged)`
 
 | Year | Dealer | VIN | Was | Now | Δ |
 | ---- | ------ | --- | --: | --: | --: |
-| 2023 | MB Hilton Head | [`W1KZH6AB7PB116786`](https://www.mbusa.com/en/cpo/inventory/details/W1KZH6AB7PB116786) | $63,584 | **$60,084** | **−5.50%** |
-| 2023 | MB Hilton Head | [`W1KZH6AB7PB116786`](https://www.mbusa.com/en/cpo/inventory/details/W1KZH6AB7PB116786) | $65,584 | **$63,584** | **−3.05%** |
-| 2023 | MB Hilton Head | [`W1KZH6AB7PB116786`](https://www.mbusa.com/en/cpo/inventory/details/W1KZH6AB7PB116786) | $65,584 | **$63,584** | **−3.05%** |
-| 2024 | MB Manhattan | [`W1KLH6FB8RA053835`](https://www.mbusa.com/en/cpo/inventory/details/W1KLH6FB8RA053835) | $77,900 | **$75,900** | **−2.57%** |
-| 2024 | MB Manhattan | [`W1KLH6FB8RA053835`](https://www.mbusa.com/en/cpo/inventory/details/W1KLH6FB8RA053835) | $77,900 | **$75,900** | **−2.57%** |
+| 2026 | MB Chantilly | [`W1KLH6FB3TA197445`](https://www.mbusa.com/en/cpo/inventory/details/W1KLH6FB3TA197445) | $77,879 | **$74,890** | **−3.84%** |
+| 2026 | MB Chantilly | [`W1KLH6FB3TA197445`](https://www.mbusa.com/en/cpo/inventory/details/W1KLH6FB3TA197445) | $77,879 | **$74,890** | **−3.84%** |
+| 2026 | MB Chantilly | [`W1KLH6FB3TA197445`](https://www.mbusa.com/en/cpo/inventory/details/W1KLH6FB3TA197445) | $77,879 | **$74,890** | **−3.84%** |
+| 2024 | MB Coral Gables | [`W1KLH6FB6RA026262`](https://www.mbusa.com/en/cpo/inventory/details/W1KLH6FB6RA026262) | $76,950 | **$75,980** | **−1.26%** |
+| 2024 | MB Coral Gables | [`W1KLH6FB6RA026262`](https://www.mbusa.com/en/cpo/inventory/details/W1KLH6FB6RA026262) | $76,950 | **$75,980** | **−1.26%** |
 
 ---
 
@@ -48,20 +41,20 @@ Total **$43,736** in price reductions across 15 listings. Pool: `34 (unchanged)`
 
 | DoL | Year | Dealer | VIN | Asking | Drops |
 | --: | ---- | ------ | --- | --: | --: |
-| **182** | 2025 | MB Hampton | [`W1KLH6FB4SA129881`](https://www.mbusa.com/en/cpo/inventory/details/W1KLH6FB4SA129881) | $80,345 | 0 |
-| **134** | 2023 | R B M of Atlanta, Inc. | [`W1KZH6AB0PB118184`](https://www.mbusa.com/en/cpo/inventory/details/W1KZH6AB0PB118184) | $46,428 | 8 |
-| **92** | 2022 | Benzel-Busch Motor Ca… | [`W1KZH6AB9NB055261`](https://www.mbusa.com/en/cpo/inventory/details/W1KZH6AB9NB055261) | $48,987 | 9 |
-| **85** | 2024 | MB Edison | [`W1KLH6FB0RA056051`](https://www.mbusa.com/en/cpo/inventory/details/W1KLH6FB0RA056051) | $75,225 | 14 |
-| **51** | 2025 | R B M of Atlanta, Inc. | [`W1KLH6FB6SA164745`](https://www.mbusa.com/en/cpo/inventory/details/W1KLH6FB6SA164745) | $73,114 | 1 |
+| **189** | 2025 | MB Hampton | [`W1KLH6FB4SA129881`](https://www.mbusa.com/en/cpo/inventory/details/W1KLH6FB4SA129881) | $80,345 | 0 |
+| **141** | 2023 | R B M of Atlanta, Inc. | [`W1KZH6AB0PB118184`](https://www.mbusa.com/en/cpo/inventory/details/W1KZH6AB0PB118184) | $45,855 | 9 |
+| **99** | 2022 | Benzel-Busch Motor Ca… | [`W1KZH6AB9NB055261`](https://www.mbusa.com/en/cpo/inventory/details/W1KZH6AB9NB055261) | $48,987 | 9 |
+| **92** | 2024 | MB Edison | [`W1KLH6FB0RA056051`](https://www.mbusa.com/en/cpo/inventory/details/W1KLH6FB0RA056051) | $74,888 | 17 |
+| **58** | 2025 | R B M of Atlanta, Inc. | [`W1KLH6FB6SA164745`](https://www.mbusa.com/en/cpo/inventory/details/W1KLH6FB6SA164745) | $73,114 | 1 |
 
 ---
 
 ## § 05 — Trend
 
-4-week median asking trend: `$68,894 → $65,584 → $67,286 → $74,002`.
+4-week median asking trend: `$65,584 → $67,286 → $73,114 → $70,571`.
 
 ---
 
 ---
 
-`mb-wagon-watcher · digest.py · 2026-10-25T18:37:48Z · github.com/pwysocan-droid/wagon-watcher`
+`mb-wagon-watcher · digest.py · 2026-11-01T19:58:45Z · github.com/pwysocan-droid/wagon-watcher`
