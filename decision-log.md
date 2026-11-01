@@ -5,6 +5,14 @@ so a later re-read doesn't relitigate a settled question. Newest entries
 on top. Spec changes themselves live in criteria.md; this file records the
 reasoning around them.
 
+## 2026-11-01 — Bought the Manhattan 2024; watcher paused
+
+- **Car:** W1KLH6FB8RA053835, MB Manhattan, 2024, black/black, 4,786 mi. It
+  left the feed on Oct 27.
+- **Paused:** the launchd trigger is removed, and the watch, heartbeat,
+  fairprice and both digest workflows are disabled. Last good data is Oct 30.
+- **Summary:** LEARNINGS.md, including how to resume.
+
 ## 2026-10-23 — Case-file cleanup; Manhattan 2024 becomes the primary target
 
 - **Primary: Manhattan 2024 black W1KLH6FB8RA053835.**
