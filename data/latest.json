@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-11-01T15:20:49.878696+00:00",
+  "generated_at": "2026-11-01T15:39:48.298121+00:00",
   "count": 29,
   "kpis": {
     "national_pool": 29,
     "within_criteria": 1,
     "median_asking": 70571,
-    "tier1_alerts_7d": 225
+    "tier1_alerts_7d": 224
   },
   "listings": [
     {
@@ -92,7 +92,7 @@
       "tier1_count": 3,
       "is_watchlist_match": false,
       "watchlist_labels": [],
-      "days_on_lot": 22,
+      "days_on_lot": 23,
       "mbusa_listing_url": "https://www.mbusa.com/en/cpo/inventory/details/W1KLH6FB3RA026199"
     },
     {
