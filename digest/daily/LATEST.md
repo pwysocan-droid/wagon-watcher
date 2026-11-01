@@ -1,8 +1,8 @@
 # mb-wagon-watcher · daily digest
 
-**2026-10-31** · 05:00 PT snapshot
+**2026-11-01** · 05:00 PT snapshot
 
-`Generated: 2026-10-31T16:51:03Z`
+`Generated: 2026-11-01T17:39:57Z`
 
 ---
 
@@ -65,7 +65,7 @@ Open decisions today:
 
 ---
 
-`mb-wagon-watcher · digest_daily.py · 2026-10-31T16:51:03Z`
+`mb-wagon-watcher · digest_daily.py · 2026-11-01T17:39:57Z`
 
 _To annotate a VIN: edit `config/vin_annotations.json`._  
 _To disqualify a VIN: edit `config/disqualified_vins.json`._  
