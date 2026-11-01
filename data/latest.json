@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-11-01T21:16:01.542924+00:00",
+  "generated_at": "2026-11-01T21:36:05.836626+00:00",
   "count": 29,
   "kpis": {
     "national_pool": 29,
     "within_criteria": 1,
     "median_asking": 70571,
-    "tier1_alerts_7d": 228
+    "tier1_alerts_7d": 227
   },
   "listings": [
     {
