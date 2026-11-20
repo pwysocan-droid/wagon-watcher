@@ -120,12 +120,9 @@ Other dealer lessons:
 
 ## If this is ever resumed
 
-The API has reported `totalCount: 12` since Oct 30, down from 29, using the
-same query. The cause is unknown: find it before re-enabling anything.
-
-```sh
-for w in watch heartbeat digest_daily digest fairprice; do gh workflow enable $w.yml; done
-```
-
-Then reinstall the launchd trigger using the steps in
-`scripts/launchd/dispatch_watch.sh`, or use an always-on scheduler instead.
+The search was turned back on 2026-11-20. The API is healthy again
+(`totalCount` 33, normal paging). Triggers run on Vercel Cron, not on a local
+machine: `dashboard/vercel.json` calls `/api/cron/watch` every 20 minutes, and
+that route fires the watch workflow. The GitHub `schedule` cron stays on as a
+backup. Pushover notifications are paused (`PUSHOVER_ENABLED: "false"` in the
+workflows). Alerts are still logged.

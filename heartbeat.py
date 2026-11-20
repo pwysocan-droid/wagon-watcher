@@ -155,8 +155,8 @@ def check_cadence(
         "Runs in last 24h": f"{n} (threshold {min_runs})",
         "Body": ("The watcher is running but too rarely to catch new listings "
                  "or sales quickly. GitHub `schedule` triggers are being "
-                 "dropped — check that the launchd dispatch agent "
-                 "(scripts/launchd/) is loaded, or trigger manually with "
+                 "dropped — check the Vercel cron job (/api/cron/watch) and its "
+                 "GITHUB_DISPATCH_TOKEN, or trigger manually with "
                  "`gh workflow run watch.yml`."),
     }
     notify.send(
