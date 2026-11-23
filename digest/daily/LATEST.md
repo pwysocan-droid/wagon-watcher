@@ -1,20 +1,21 @@
 # mb-wagon-watcher · daily digest
 
-**2026-11-22** · 05:00 PT snapshot
+**2026-11-23** · 05:00 PT snapshot
 
-`Generated: 2026-11-22T19:13:24Z`
+`Generated: 2026-11-23T23:35:32Z`
 
 ---
 
 ## § Population
 
-**Population:** 31 active (-4 net since yesterday) · 1 watchlist match · 1 actionable
+**Population:** 32 active (-4 net since yesterday) · 1 watchlist match · 1 actionable
 
 ---
 
 ## § Movers
 
-_No price moves vs. start of today (UTC)._
+- W1KLH6FB3TA197445 — — — $77,903 (+$500 / +0.65%)
+- W1KZH6AB4NB035791 — Park Place Motorcars …, TX — $53,775 (-$140 / -0.26%)
 
 ---
 
@@ -22,9 +23,9 @@ _No price moves vs. start of today (UTC)._
 
 - W1KZH6AB0PB118184 — R B M of Atlanta, Inc., GA — $45,276 (down from $50,987 floor)
 - W1KLH6FB9SA151505 — R B M of Alpharetta, GA — $73,797 (down from $78,939 floor)
-- W1KZH6AB4NB056172 — MB Elmbrook, WI — $51,380 (down from $54,494 floor)
+- W1KZH6AB4NB056172 — — — $51,380 (down from $54,494 floor)
 - WDDZH6JB3LA707763 — MB Columbus, GA — $43,390 (down from $43,690 floor)
-- W1KLH6FB3RA026199 — MB El Cajon, CA — $77,621 (down from $82,121 floor)
+- W1KZH6AB4PB178727 — Knauz Continental Aut…, IL — $56,517 (down from $57,990 floor)
 
 _… and 7 more at floor._
 
@@ -32,8 +33,11 @@ _… and 7 more at floor._
 
 ## § Anomalies
 
-- VIN `W1KZH6ABXPB183379` toggled status 3 times (feed instability or price-testing)
-- 2 cron runs returned <30 listings (min 29) — possible API cap
+- VIN `W1KLH6FB4SA129881` moved between dealers (intra-network transfer)
+- VIN `W1KLH6FBXSA157314` moved between dealers (intra-network transfer)
+- VIN `W1KLH6FB2RA026193` moved between dealers (intra-network transfer)
+- VIN `W1KLH6FB3TA197445` moved between dealers (intra-network transfer)
+- VIN `W1KZH6AB4NB056172` moved between dealers (intra-network transfer)
 
 ---
 
@@ -47,8 +51,9 @@ _… and 7 more at floor._
 
 _Fails exactly one hard criterion, priced ≤15th pct. Surface only — criteria stand._
 
-- `…083959` · MB Farmington, UT · $62,951 · 28,662 mi · fails: miles > 15,000 · pct 8s
-- `…136418` · MB West Covina, CA · $69,885 · 7,920 mi · fails: price > $68,000 · pct 11s
+- `…157314` · — · $68,990 · 7,061 mi · fails: price > $68,000 · pct 9s
+- `…035791` · Park Place Motorcars …, TX · $53,775 · 4,808 mi · fails: year 2022 < 2024 · pct 12l
+- `…136418` · MB West Covina, CA · $69,885 · 7,920 mi · fails: price > $68,000 · pct 15s
 
 ---
 
@@ -66,7 +71,7 @@ Open decisions today:
 
 ---
 
-`mb-wagon-watcher · digest_daily.py · 2026-11-22T19:13:24Z`
+`mb-wagon-watcher · digest_daily.py · 2026-11-23T23:35:32Z`
 
 _To annotate a VIN: edit `config/vin_annotations.json`._  
 _To disqualify a VIN: edit `config/disqualified_vins.json`._  
