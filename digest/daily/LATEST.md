@@ -1,21 +1,29 @@
 # mb-wagon-watcher · daily digest
 
-**2026-11-23** · 05:00 PT snapshot
+**2026-11-24** · 05:00 PT snapshot
 
-`Generated: 2026-11-23T23:35:32Z`
+`Generated: 2026-11-24T22:04:42Z`
 
 ---
 
 ## § Population
 
-**Population:** 32 active (-4 net since yesterday) · 1 watchlist match · 1 actionable
+**Population:** 33 active (+1 net since yesterday) · 1 watchlist match · 1 actionable
 
 ---
 
 ## § Movers
 
-- W1KLH6FB3TA197445 — — — $77,903 (+$500 / +0.65%)
-- W1KZH6AB4NB035791 — Park Place Motorcars …, TX — $53,775 (-$140 / -0.26%)
+- W1KZH6AB7PB172971 — MB Atlanta Northeast, GA — $56,813 (-$3,154 / -5.26%)
+- W1KLH6FB5SA107386 — MB North Haven, CT — $72,370 (-$1,619 / -2.19%)
+- W1KLH6FB4RA004485 — MB Birmingham, AL — $76,998 (-$1,000 / -1.28%)
+- W1KLH6FB6RA026262 — MB Coral Gables, FL — $73,899 (-$955 / -1.28%)
+- W1KZH6ABXPB101554 — MB Willoughby, OH — $53,390 (-$600 / -1.11%)
+- W1KZH6AB4NB056172 — — — $50,900 (-$480 / -0.93%)
+- W1KZH6AB5PB170393 — MB Latham, NY — $54,500 (-$485 / -0.88%)
+- W1KLH6FBXSA113569 — MB Northlake, NC — $70,552 (-$438 / -0.62%)
+- W1KZH6AB3PB125128 — MB Palm Springs, CA — $52,558 (-$240 / -0.45%)
+- W1KZH6AB4MA953013 — MB Caldwell, NJ — $39,795 (-$150 / -0.38%)
 
 ---
 
@@ -23,21 +31,17 @@
 
 - W1KZH6AB0PB118184 — R B M of Atlanta, Inc., GA — $45,276 (down from $50,987 floor)
 - W1KLH6FB9SA151505 — R B M of Alpharetta, GA — $73,797 (down from $78,939 floor)
-- W1KZH6AB4NB056172 — — — $51,380 (down from $54,494 floor)
+- W1KZH6AB4NB056172 — — — $50,900 (down from $54,494 floor)
 - WDDZH6JB3LA707763 — MB Columbus, GA — $43,390 (down from $43,690 floor)
 - W1KZH6AB4PB178727 — Knauz Continental Aut…, IL — $56,517 (down from $57,990 floor)
 
-_… and 7 more at floor._
+_… and 13 more at floor._
 
 ---
 
 ## § Anomalies
 
-- VIN `W1KLH6FB4SA129881` moved between dealers (intra-network transfer)
-- VIN `W1KLH6FBXSA157314` moved between dealers (intra-network transfer)
-- VIN `W1KLH6FB2RA026193` moved between dealers (intra-network transfer)
-- VIN `W1KLH6FB3TA197445` moved between dealers (intra-network transfer)
-- VIN `W1KZH6AB4NB056172` moved between dealers (intra-network transfer)
+_No anomalies detected in the last 24h._
 
 ---
 
@@ -51,9 +55,8 @@ _… and 7 more at floor._
 
 _Fails exactly one hard criterion, priced ≤15th pct. Surface only — criteria stand._
 
-- `…157314` · — · $68,990 · 7,061 mi · fails: price > $68,000 · pct 9s
 - `…035791` · Park Place Motorcars …, TX · $53,775 · 4,808 mi · fails: year 2022 < 2024 · pct 12l
-- `…136418` · MB West Covina, CA · $69,885 · 7,920 mi · fails: price > $68,000 · pct 15s
+- `…136418` · MB West Covina, CA · $69,756 · 7,920 mi · fails: price > $68,000 · pct 15s
 
 ---
 
@@ -71,7 +74,7 @@ Open decisions today:
 
 ---
 
-`mb-wagon-watcher · digest_daily.py · 2026-11-23T23:35:32Z`
+`mb-wagon-watcher · digest_daily.py · 2026-11-24T22:04:42Z`
 
 _To annotate a VIN: edit `config/vin_annotations.json`._  
 _To disqualify a VIN: edit `config/disqualified_vins.json`._  
