@@ -1,29 +1,20 @@
 # mb-wagon-watcher · daily digest
 
-**2026-11-24** · 05:00 PT snapshot
+**2026-11-25** · 05:00 PT snapshot
 
-`Generated: 2026-11-24T22:04:42Z`
+`Generated: 2026-11-25T21:20:57Z`
 
 ---
 
 ## § Population
 
-**Population:** 33 active (+1 net since yesterday) · 1 watchlist match · 1 actionable
+**Population:** 36 active (-1 net since yesterday) · 1 watchlist match · 1 actionable
 
 ---
 
 ## § Movers
 
-- W1KZH6AB7PB172971 — MB Atlanta Northeast, GA — $56,813 (-$3,154 / -5.26%)
-- W1KLH6FB5SA107386 — MB North Haven, CT — $72,370 (-$1,619 / -2.19%)
-- W1KLH6FB4RA004485 — MB Birmingham, AL — $76,998 (-$1,000 / -1.28%)
-- W1KLH6FB6RA026262 — MB Coral Gables, FL — $73,899 (-$955 / -1.28%)
-- W1KZH6ABXPB101554 — MB Willoughby, OH — $53,390 (-$600 / -1.11%)
-- W1KZH6AB4NB056172 — — — $50,900 (-$480 / -0.93%)
-- W1KZH6AB5PB170393 — MB Latham, NY — $54,500 (-$485 / -0.88%)
-- W1KLH6FBXSA113569 — MB Northlake, NC — $70,552 (-$438 / -0.62%)
-- W1KZH6AB3PB125128 — MB Palm Springs, CA — $52,558 (-$240 / -0.45%)
-- W1KZH6AB4MA953013 — MB Caldwell, NJ — $39,795 (-$150 / -0.38%)
+_No price moves vs. start of today (UTC)._
 
 ---
 
@@ -74,7 +65,7 @@ Open decisions today:
 
 ---
 
-`mb-wagon-watcher · digest_daily.py · 2026-11-24T22:04:42Z`
+`mb-wagon-watcher · digest_daily.py · 2026-11-25T21:20:57Z`
 
 _To annotate a VIN: edit `config/vin_annotations.json`._  
 _To disqualify a VIN: edit `config/disqualified_vins.json`._  
