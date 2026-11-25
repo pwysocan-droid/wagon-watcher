@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-24T20:44:18.762646+00:00",
+  "generated_at": "2026-11-25T03:47:13.997605+00:00",
   "schema_version": 1,
   "vins": {
     "W1KLH6FBXSA157314": {
@@ -216,7 +216,7 @@
         "all_time_high": 86332,
         "total_drop_pct": -5.91,
         "n_observations": 3,
-        "days_observed": 133
+        "days_observed": 134
       }
     },
     "W1KZH6AB9NB055261": {
@@ -487,7 +487,7 @@
         "all_time_high": 75225,
         "total_drop_pct": -0.14,
         "n_observations": 29,
-        "days_observed": 115
+        "days_observed": 116
       }
     },
     "W1KLH6FB6SA164745": {
@@ -720,7 +720,7 @@
         "all_time_high": 54494,
         "total_drop_pct": -6.6,
         "n_observations": 6,
-        "days_observed": 59
+        "days_observed": 60
       }
     },
     "W1KZH6AB7PB116786": {
@@ -834,7 +834,7 @@
         "all_time_high": 53216,
         "total_drop_pct": -3.32,
         "n_observations": 3,
-        "days_observed": 49
+        "days_observed": 50
       }
     },
     "WDDZH6JB3LA707763": {
@@ -1355,7 +1355,7 @@
         "all_time_high": 57998,
         "total_drop_pct": -2.77,
         "n_observations": 15,
-        "days_observed": 42
+        "days_observed": 43
       }
     },
     "W1KLH6FB8RA053835": {
@@ -1433,7 +1433,7 @@
         "all_time_high": 77900,
         "total_drop_pct": -2.57,
         "n_observations": 12,
-        "days_observed": 42
+        "days_observed": 43
       }
     },
     "W1KLH6FB8TA197277": {
@@ -1596,7 +1596,7 @@
         "all_time_high": 56990,
         "total_drop_pct": -6.32,
         "n_observations": 3,
-        "days_observed": 40
+        "days_observed": 41
       }
     },
     "W1KLH6FB0SA155958": {
@@ -1736,9 +1736,9 @@
       "trim": "E450S4",
       "dealer": "Mercedes-Benz of Shrewsbury",
       "first_seen_at": "2026-10-21T14:51:44.908745+00:00",
-      "current_price": 77095,
+      "current_price": 76895,
       "current_mileage": 10047,
-      "status": "gone",
+      "status": "reappeared",
       "observations": [
         {
           "observed_at": "2026-10-21T14:51:44.908745+00:00",
@@ -1764,13 +1764,18 @@
           "observed_at": "2026-11-21T15:38:35.880313+00:00",
           "price": 77095,
           "mileage": 10047
+        },
+        {
+          "observed_at": "2026-11-25T03:47:13.179266+00:00",
+          "price": 76895,
+          "mileage": 10047
         }
       ],
       "stats": {
-        "all_time_low": 77095,
+        "all_time_low": 76895,
         "all_time_high": 78095,
-        "total_drop_pct": -1.28,
-        "n_observations": 5,
+        "total_drop_pct": -1.54,
+        "n_observations": 6,
         "days_observed": 34
       }
     },
@@ -2423,7 +2428,7 @@
         "all_time_high": 70990,
         "total_drop_pct": -0.62,
         "n_observations": 2,
-        "days_observed": 1
+        "days_observed": 2
       }
     },
     "W1KZH6AB9PB179128": {
@@ -2474,7 +2479,7 @@
         "all_time_high": 56667,
         "total_drop_pct": 0.0,
         "n_observations": 1,
-        "days_observed": 0
+        "days_observed": 1
       }
     },
     "W1KZH6AB2PB177513": {
@@ -2497,7 +2502,7 @@
         "all_time_high": 56587,
         "total_drop_pct": 0.0,
         "n_observations": 1,
-        "days_observed": 0
+        "days_observed": 1
       }
     },
     "W1KLH6FB6SA156998": {
@@ -2507,7 +2512,7 @@
       "first_seen_at": "2026-11-24T00:09:13.050336+00:00",
       "current_price": 69744,
       "current_mileage": 16079,
-      "status": "gone",
+      "status": "reappeared",
       "observations": [
         {
           "observed_at": "2026-11-24T00:09:13.050336+00:00",
@@ -2520,7 +2525,53 @@
         "all_time_high": 69744,
         "total_drop_pct": 0.0,
         "n_observations": 1,
-        "days_observed": 0
+        "days_observed": 1
+      }
+    },
+    "W1KLH6FB0SA140179": {
+      "year": 2025,
+      "trim": "E450S4",
+      "dealer": "Mercedes-Benz of Wappingers Falls",
+      "first_seen_at": "2026-11-24T00:09:13.050336+00:00",
+      "current_price": 74338,
+      "current_mileage": 1330,
+      "status": "reappeared",
+      "observations": [
+        {
+          "observed_at": "2026-11-25T03:47:13.179266+00:00",
+          "price": 74338,
+          "mileage": 1330
+        }
+      ],
+      "stats": {
+        "all_time_low": 74338,
+        "all_time_high": 74338,
+        "total_drop_pct": 0.0,
+        "n_observations": 1,
+        "days_observed": 1
+      }
+    },
+    "W1KZH6AB2MA971042": {
+      "year": 2021,
+      "trim": "E450S4",
+      "dealer": "Mercedes-Benz of Burlington",
+      "first_seen_at": "2026-11-24T00:09:13.050336+00:00",
+      "current_price": 45998,
+      "current_mileage": 58823,
+      "status": "reappeared",
+      "observations": [
+        {
+          "observed_at": "2026-11-25T03:47:13.179266+00:00",
+          "price": 45998,
+          "mileage": 58823
+        }
+      ],
+      "stats": {
+        "all_time_low": 45998,
+        "all_time_high": 45998,
+        "total_drop_pct": 0.0,
+        "n_observations": 1,
+        "days_observed": 1
       }
     },
     "W1KZH6AB8PB099562": {
