@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-25T03:47:13.997605+00:00",
+  "generated_at": "2026-11-25T13:37:51.851042+00:00",
   "schema_version": 1,
   "vins": {
     "W1KLH6FBXSA157314": {
@@ -183,7 +183,7 @@
         "all_time_high": 50987,
         "total_drop_pct": -11.2,
         "n_observations": 19,
-        "days_observed": 164
+        "days_observed": 165
       }
     },
     "W1KLH6FB2TA196545": {
@@ -324,7 +324,7 @@
         "all_time_high": 51983,
         "total_drop_pct": -2.0,
         "n_observations": 18,
-        "days_observed": 122
+        "days_observed": 123
       }
     },
     "W1KLH6FB0RA056051": {
@@ -540,7 +540,7 @@
         "all_time_high": 73900,
         "total_drop_pct": -1.06,
         "n_observations": 7,
-        "days_observed": 81
+        "days_observed": 82
       }
     },
     "W1KLH6FB9SA151505": {
@@ -578,7 +578,7 @@
         "all_time_high": 78939,
         "total_drop_pct": -6.51,
         "n_observations": 4,
-        "days_observed": 80
+        "days_observed": 81
       }
     },
     "W1KZH6AB5PB118889": {
@@ -1436,34 +1436,6 @@
         "days_observed": 43
       }
     },
-    "W1KLH6FB8TA197277": {
-      "year": 2026,
-      "trim": "E450S4",
-      "dealer": "Mercedes-Benz of Easton",
-      "first_seen_at": "2026-10-13T10:50:32.484601+00:00",
-      "current_price": 83245,
-      "current_mileage": 3043,
-      "status": "gone",
-      "observations": [
-        {
-          "observed_at": "2026-10-13T10:50:32.484601+00:00",
-          "price": 83845,
-          "mileage": 3025
-        },
-        {
-          "observed_at": "2026-10-21T15:11:47.533665+00:00",
-          "price": 83245,
-          "mileage": 3043
-        }
-      ],
-      "stats": {
-        "all_time_low": 83245,
-        "all_time_high": 83845,
-        "total_drop_pct": -0.72,
-        "n_observations": 2,
-        "days_observed": 42
-      }
-    },
     "W1KZH6AB6PB147527": {
       "year": 2023,
       "trim": "E450S4",
@@ -1489,7 +1461,7 @@
         "all_time_high": 55783,
         "total_drop_pct": -1.05,
         "n_observations": 2,
-        "days_observed": 42
+        "days_observed": 43
       }
     },
     "W1KLH6FB8RA026151": {
@@ -1517,7 +1489,7 @@
         "all_time_high": 65490,
         "total_drop_pct": -1.53,
         "n_observations": 2,
-        "days_observed": 42
+        "days_observed": 43
       }
     },
     "W1KLH6FB4RA026101": {
@@ -1563,7 +1535,7 @@
         "all_time_high": 84995,
         "total_drop_pct": 0.0,
         "n_observations": 1,
-        "days_observed": 41
+        "days_observed": 42
       }
     },
     "W1KZH6ABXPB101554": {
@@ -1738,7 +1710,7 @@
       "first_seen_at": "2026-10-21T14:51:44.908745+00:00",
       "current_price": 76895,
       "current_mileage": 10047,
-      "status": "reappeared",
+      "status": "gone",
       "observations": [
         {
           "observed_at": "2026-10-21T14:51:44.908745+00:00",
@@ -1820,29 +1792,6 @@
       "stats": {
         "all_time_low": 70571,
         "all_time_high": 70571,
-        "total_drop_pct": 0.0,
-        "n_observations": 1,
-        "days_observed": 34
-      }
-    },
-    "W1KLH6FB1RA026170": {
-      "year": 2024,
-      "trim": "E450S4",
-      "dealer": "Mercedes-Benz of West Chester",
-      "first_seen_at": "2026-10-21T17:32:08.447265+00:00",
-      "current_price": 75981,
-      "current_mileage": 7496,
-      "status": "gone",
-      "observations": [
-        {
-          "observed_at": "2026-10-21T17:32:08.447265+00:00",
-          "price": 75981,
-          "mileage": 7496
-        }
-      ],
-      "stats": {
-        "all_time_low": 75981,
-        "all_time_high": 75981,
         "total_drop_pct": 0.0,
         "n_observations": 1,
         "days_observed": 34
@@ -1974,7 +1923,7 @@
         "all_time_high": 39995,
         "total_drop_pct": -0.5,
         "n_observations": 3,
-        "days_observed": 29
+        "days_observed": 30
       }
     },
     "W1KZH6AB8PB169688": {
@@ -2456,7 +2405,7 @@
         "all_time_high": 56790,
         "total_drop_pct": 0.0,
         "n_observations": 2,
-        "days_observed": 1
+        "days_observed": 2
       }
     },
     "W1KZH6AB1PB138234": {
@@ -2512,7 +2461,7 @@
       "first_seen_at": "2026-11-24T00:09:13.050336+00:00",
       "current_price": 69744,
       "current_mileage": 16079,
-      "status": "reappeared",
+      "status": "active",
       "observations": [
         {
           "observed_at": "2026-11-24T00:09:13.050336+00:00",
@@ -2535,7 +2484,7 @@
       "first_seen_at": "2026-11-24T00:09:13.050336+00:00",
       "current_price": 74338,
       "current_mileage": 1330,
-      "status": "reappeared",
+      "status": "active",
       "observations": [
         {
           "observed_at": "2026-11-25T03:47:13.179266+00:00",
@@ -2558,7 +2507,7 @@
       "first_seen_at": "2026-11-24T00:09:13.050336+00:00",
       "current_price": 45998,
       "current_mileage": 58823,
-      "status": "reappeared",
+      "status": "gone",
       "observations": [
         {
           "observed_at": "2026-11-25T03:47:13.179266+00:00",
@@ -2569,6 +2518,29 @@
       "stats": {
         "all_time_low": 45998,
         "all_time_high": 45998,
+        "total_drop_pct": 0.0,
+        "n_observations": 1,
+        "days_observed": 1
+      }
+    },
+    "W1KZH6AB3PB173020": {
+      "year": 2023,
+      "trim": "E450S4",
+      "dealer": "Betten Imports, Inc.",
+      "first_seen_at": "2026-11-24T10:11:21.704143+00:00",
+      "current_price": 57995,
+      "current_mileage": 35715,
+      "status": "active",
+      "observations": [
+        {
+          "observed_at": "2026-11-25T13:37:46.670165+00:00",
+          "price": 57995,
+          "mileage": 35715
+        }
+      ],
+      "stats": {
+        "all_time_low": 57995,
+        "all_time_high": 57995,
         "total_drop_pct": 0.0,
         "n_observations": 1,
         "days_observed": 1
@@ -2592,6 +2564,29 @@
       "stats": {
         "all_time_low": 52000,
         "all_time_high": 52000,
+        "total_drop_pct": 0.0,
+        "n_observations": 1,
+        "days_observed": 1
+      }
+    },
+    "W1KZH6AB9PB123187": {
+      "year": 2023,
+      "trim": "E450S4",
+      "dealer": "Mercedes-Benz of New Rochelle",
+      "first_seen_at": "2026-11-25T13:37:46.670165+00:00",
+      "current_price": 57991,
+      "current_mileage": 26872,
+      "status": "active",
+      "observations": [
+        {
+          "observed_at": "2026-11-25T13:37:46.670165+00:00",
+          "price": 57991,
+          "mileage": 26872
+        }
+      ],
+      "stats": {
+        "all_time_low": 57991,
+        "all_time_high": 57991,
         "total_drop_pct": 0.0,
         "n_observations": 1,
         "days_observed": 0
