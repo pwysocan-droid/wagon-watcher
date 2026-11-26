@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-25T22:49:24.917238+00:00",
+  "generated_at": "2026-11-26T04:57:15.313930+00:00",
   "schema_version": 1,
   "vins": {
     "W1KLH6FBXSA157314": {
@@ -487,7 +487,7 @@
         "all_time_high": 75225,
         "total_drop_pct": -0.14,
         "n_observations": 29,
-        "days_observed": 116
+        "days_observed": 117
       }
     },
     "W1KLH6FB6SA164745": {
@@ -844,7 +844,7 @@
         "all_time_high": 53216,
         "total_drop_pct": -3.32,
         "n_observations": 3,
-        "days_observed": 50
+        "days_observed": 51
       }
     },
     "WDDZH6JB3LA707763": {
@@ -2448,7 +2448,7 @@
         "all_time_high": 56667,
         "total_drop_pct": 0.0,
         "n_observations": 1,
-        "days_observed": 1
+        "days_observed": 2
       }
     },
     "W1KZH6AB2PB177513": {
@@ -2471,7 +2471,7 @@
         "all_time_high": 56587,
         "total_drop_pct": 0.0,
         "n_observations": 1,
-        "days_observed": 1
+        "days_observed": 2
       }
     },
     "W1KLH6FB6SA156998": {
@@ -2494,7 +2494,7 @@
         "all_time_high": 69744,
         "total_drop_pct": 0.0,
         "n_observations": 1,
-        "days_observed": 1
+        "days_observed": 2
       }
     },
     "W1KLH6FB0SA140179": {
@@ -2522,7 +2522,7 @@
         "all_time_high": 74338,
         "total_drop_pct": 0.0,
         "n_observations": 2,
-        "days_observed": 1
+        "days_observed": 2
       }
     },
     "W1KZH6AB2MA971042": {
@@ -2545,7 +2545,7 @@
         "all_time_high": 45998,
         "total_drop_pct": 0.0,
         "n_observations": 1,
-        "days_observed": 1
+        "days_observed": 2
       }
     },
     "W1KZH6AB3PB173020": {
@@ -2612,6 +2612,29 @@
       "stats": {
         "all_time_low": 57991,
         "all_time_high": 57991,
+        "total_drop_pct": 0.0,
+        "n_observations": 1,
+        "days_observed": 0
+      }
+    },
+    "W1KLH6FB0SA168886": {
+      "year": 2025,
+      "trim": "E450S4",
+      "dealer": "Mercedes-Benz of Nanuet",
+      "first_seen_at": "2026-11-26T04:57:09.240265+00:00",
+      "current_price": 74609,
+      "current_mileage": 11284,
+      "status": "active",
+      "observations": [
+        {
+          "observed_at": "2026-11-26T04:57:09.240265+00:00",
+          "price": 74609,
+          "mileage": 11284
+        }
+      ],
+      "stats": {
+        "all_time_low": 74609,
+        "all_time_high": 74609,
         "total_drop_pct": 0.0,
         "n_observations": 1,
         "days_observed": 0
