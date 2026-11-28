@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-27T23:39:24.584680+00:00",
+  "generated_at": "2026-11-28T04:59:42.795898+00:00",
   "schema_version": 1,
   "vins": {
     "W1KLH6FBXSA157314": {
@@ -184,39 +184,6 @@
         "total_drop_pct": -11.2,
         "n_observations": 19,
         "days_observed": 167
-      }
-    },
-    "W1KLH6FB2TA196545": {
-      "year": 2026,
-      "trim": "E450S4",
-      "dealer": "Mercedes-Benz of Madison",
-      "first_seen_at": "2026-07-13T22:45:03.922551+00:00",
-      "current_price": 81232,
-      "current_mileage": 5669,
-      "status": "gone",
-      "observations": [
-        {
-          "observed_at": "2026-07-13T22:45:03.922551+00:00",
-          "price": 86332,
-          "mileage": 5669
-        },
-        {
-          "observed_at": "2026-09-03T21:50:33.058912+00:00",
-          "price": 83600,
-          "mileage": 5669
-        },
-        {
-          "observed_at": "2026-09-28T22:21:19.055199+00:00",
-          "price": 81232,
-          "mileage": 5669
-        }
-      ],
-      "stats": {
-        "all_time_low": 81232,
-        "all_time_high": 86332,
-        "total_drop_pct": -5.91,
-        "n_observations": 3,
-        "days_observed": 137
       }
     },
     "W1KZH6AB9NB055261": {
@@ -487,7 +454,7 @@
         "all_time_high": 75225,
         "total_drop_pct": -0.14,
         "n_observations": 29,
-        "days_observed": 118
+        "days_observed": 119
       }
     },
     "W1KLH6FB6SA164745": {
@@ -763,7 +730,7 @@
         "all_time_high": 53216,
         "total_drop_pct": -3.32,
         "n_observations": 3,
-        "days_observed": 52
+        "days_observed": 53
       }
     },
     "WDDZH6JB3LA707763": {
@@ -2217,7 +2184,7 @@
         "all_time_high": 56667,
         "total_drop_pct": -1.39,
         "n_observations": 2,
-        "days_observed": 3
+        "days_observed": 4
       }
     },
     "W1KZH6AB2PB177513": {
@@ -2240,7 +2207,7 @@
         "all_time_high": 56587,
         "total_drop_pct": 0.0,
         "n_observations": 1,
-        "days_observed": 3
+        "days_observed": 4
       }
     },
     "W1KLH6FB6SA156998": {
@@ -2263,7 +2230,7 @@
         "all_time_high": 69744,
         "total_drop_pct": 0.0,
         "n_observations": 1,
-        "days_observed": 3
+        "days_observed": 4
       }
     },
     "W1KLH6FB0SA140179": {
@@ -2291,7 +2258,7 @@
         "all_time_high": 74338,
         "total_drop_pct": 0.0,
         "n_observations": 2,
-        "days_observed": 3
+        "days_observed": 4
       }
     },
     "W1KZH6AB2MA971042": {
@@ -2314,7 +2281,7 @@
         "all_time_high": 45998,
         "total_drop_pct": 0.0,
         "n_observations": 1,
-        "days_observed": 3
+        "days_observed": 4
       }
     },
     "W1KZH6AB3PB173020": {
@@ -2411,7 +2378,7 @@
         "all_time_high": 74609,
         "total_drop_pct": 0.0,
         "n_observations": 1,
-        "days_observed": 1
+        "days_observed": 2
       }
     },
     "W1KLH6FB6SA128201": {
@@ -2455,6 +2422,52 @@
       "stats": {
         "all_time_low": 71991,
         "all_time_high": 71991,
+        "total_drop_pct": 0.0,
+        "n_observations": 1,
+        "days_observed": 0
+      }
+    },
+    "W1KLH6FB6SA161036": {
+      "year": 2025,
+      "trim": "E450S4",
+      "dealer": "Mercedes-Benz of Palm Beach",
+      "first_seen_at": "2026-11-28T04:59:30.317519+00:00",
+      "current_price": 72995,
+      "current_mileage": 5839,
+      "status": "active",
+      "observations": [
+        {
+          "observed_at": "2026-11-28T04:59:30.317519+00:00",
+          "price": 72995,
+          "mileage": 5839
+        }
+      ],
+      "stats": {
+        "all_time_low": 72995,
+        "all_time_high": 72995,
+        "total_drop_pct": 0.0,
+        "n_observations": 1,
+        "days_observed": 0
+      }
+    },
+    "W1KZH6AB4PB170787": {
+      "year": 2023,
+      "trim": "E450S4",
+      "dealer": "Mercedes-Benz of Warwick",
+      "first_seen_at": "2026-11-28T04:59:30.317519+00:00",
+      "current_price": 50895,
+      "current_mileage": 50118,
+      "status": "active",
+      "observations": [
+        {
+          "observed_at": "2026-11-28T04:59:30.317519+00:00",
+          "price": 50895,
+          "mileage": 50118
+        }
+      ],
+      "stats": {
+        "all_time_low": 50895,
+        "all_time_high": 50895,
         "total_drop_pct": 0.0,
         "n_observations": 1,
         "days_observed": 0
